@@ -21,7 +21,8 @@ mkdir -p "$KOPIE" && chmod 700 "$HOMEDIR"
 # kandydaci: ~/Gabinet/.env, .env w tym folderze i w sąsiednich folderach Gabinetu (najnowsze najpierw)
 kandydaci() {
   { [ -s "$HOMEDIR/.env" ] && echo "$HOMEDIR/.env"; [ -s .env ] && echo "$DIR/.env"
-    ls -1t ../gabinet*/.env ../gabinet*/.env.poprzedni-* 2>/dev/null | while read -r f; do echo "$(cd "$(dirname "$f")" && pwd)/$(basename "$f")"; done; } | awk '!x[$0]++'
+    ls -1t ../gabinet*/.env ../gabinet*/.env.poprzedni-* "$HOME"/Downloads/gabinet*/.env "$HOME"/Desktop/gabinet*/.env "$HOME"/Documents/gabinet*/.env \
+      "$HOME"/Downloads/*/gabinet*/.env "$HOME"/.Trash/gabinet*/.env 2>/dev/null </dev/null | while read -r f; do echo "$(cd "$(dirname "$f")" && pwd)/$(basename "$f")"; done; } | awk '!x[$0]++'
 }
 wartosc() { grep -m1 "^$2=" "$1" 2>/dev/null | cut -d= -f2-; }
 if docker volume inspect gabinet_dane_bazy >/dev/null 2>&1; then
@@ -35,11 +36,22 @@ if docker volume inspect gabinet_dane_bazy >/dev/null 2>&1; then
   while read -r f; do
     pw="$(wartosc "$f" DB_ADMIN_PASSWORD)"; [ -n "$pw" ] || continue
     # -h db: połączenie przez sieć Dockera (sprawdza hasło); połączenia lokalne w kontenerze bazy nie wymagają hasła
-    if dc exec -T -e PGPASSWORD="$pw" db psql -h db -U migrator -d gabinet -Atc 'select 1' >/dev/null 2>&1; then dobry="$f"; break; fi
+    # </dev/null: docker exec nie może „zjeść” listy kandydatów z wejścia pętli
+    if dc exec -T -e PGPASSWORD="$pw" db psql -h db -U migrator -d gabinet -Atc 'select 1' >/dev/null 2>&1 </dev/null; then dobry="$f"; break; fi
   done < <(kandydaci)
+  if [ -z "$dobry" ]; then
+    # żaden plik nie pasuje: jeśli nikt nie ma włączonego 2FA, klucze AUTH_SECRET/APP_ENC_KEY nie chronią żadnych zapisanych danych –
+    # ustawiamy hasło bazy zgodne z wybranym plikiem (połączenie lokalne w kontenerze bazy, bez zmiany danych)
+    mfa="$(dc exec -T db psql -U migrator -d gabinet -Atc 'select count(*) from app.profiles where mfa_secret_enc is not null' 2>/dev/null </dev/null | tr -d '[:space:]')"
+    f="$(kandydaci | head -1)"; pw="$(wartosc "$f" DB_ADMIN_PASSWORD)"
+    if [ "$mfa" = "0" ] && [ -n "$f" ] && [[ "$pw" =~ ^[A-Za-z0-9]{16,}$ ]]; then
+      dc exec -T db pg_dump -U migrator -d gabinet -Fc > "$KOPIE/przed-zmiana-hasla-bazy-$(date +%Y-%m-%d_%H%M).dump" </dev/null
+      dc exec -T db psql -U migrator -d gabinet -qc "ALTER ROLE migrator PASSWORD '$pw'" </dev/null >/dev/null \
+        && { dobry="$f"; echo "   ✔ hasło bazy ustawione zgodnie z: $f (nikt nie ma włączonego 2FA – dane bez zmian, kopia bazy w ~/Gabinet/kopie)"; }
+    fi
+  else echo "   ✔ pasują klucze z: $dobry"; fi
   rm -f "$TMPENV"
-  [ -n "$dobry" ] || stop "Żaden plik .env nie pasuje do hasła Twojej bazy. Nic nie zmieniono. Prześlij mi ten komunikat – znajdziemy klucze razem."
-  echo "   ✔ pasują klucze z: $dobry"
+  [ -n "$dobry" ] || stop "Żaden plik .env nie pasuje do hasła Twojej bazy (a na koncie jest włączone 2FA). Nic nie zmieniono. Prześlij mi ten komunikat."
   if [ "$dobry" != "$HOMEDIR/.env" ]; then
     [ -s "$HOMEDIR/.env" ] && mv "$HOMEDIR/.env" "$HOMEDIR/.env.niepasujacy-$(date +%Y%m%d%H%M%S)"
     cp "$dobry" "$HOMEDIR/.env"
