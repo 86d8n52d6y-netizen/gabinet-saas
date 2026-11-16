@@ -3,7 +3,8 @@
 - Komunikacja po polsku. Repozytorium **prywatne** – kodu SaaS nie publikuj w publicznych repozytoriach.
 - Pracuj fazami (plan: `docs/AUDYT_SAAS.md`). Po każdej fazie: testy → commit → push → wpis w `POSTEP.md` → raport ze statusami WDROŻONE / WYMAGA MOJEGO DZIAŁANIA / WYMAGA KONFIGURACJI ZEWNĘTRZNEJ / NIE WDROŻONO. Nie zaczynaj kolejnej fazy bez potwierdzenia poprzedniej.
 - Po przerwie zacznij od `POSTEP.md` i `git log --oneline -10`.
-- Testy przed commitem: `npm run typecheck`, `npm test` (vitest), `python3 db/test_izolacja.py` (izolacja SQL, tworzy własną świeżą bazę).
+- Testy przed commitem: `npm run typecheck`, `npm test` (vitest), `python3 db/test_izolacja.py` (izolacja SQL, tworzy własną świeżą bazę), po `npx next build`: `bash tests/e2e/uruchom.sh` (przeglądarka, świeża baza).
+- Sekrety `.env`: `AUTH_SECRET` (HMAC: rejestr triali, limity, kody zapasowe) i `APP_ENC_KEY` (szyfrowanie 2FA) – NIE zmieniać po uruchomieniu (utrata działania 2FA i rejestru triali); w produkcji kopia zapasowa w bezpiecznym miejscu.
 - Prywatność (decyzje Patryka): w chmurze NIE przechowujemy danych pacjentów ani treści opisów – tylko procedury, kody, kwoty, datę i gabinet. Bez inicjałów, PESEL, adresów, zdjęć.
 - Izolacja: każda tabela z danymi użytkownika ma FORCE RLS; aplikacja łączy się jako `gabinet_web` i przełącza rolę przez `withUser` / `withRole` z `src/lib/db.ts`. Nie dodawaj dostępu z pominięciem tych funkcji.
 - Zmiany schematu tylko nową migracją `db/migrations/NNNN_*.sql` – nigdy nie edytuj wykonanej migracji.

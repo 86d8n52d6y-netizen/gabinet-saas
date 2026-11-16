@@ -3,14 +3,15 @@
 # Za każdym razem tworzy od zera osobną bazę gabinet_test_izolacja, więc wynik nie zależy od wcześniejszych danych.
 import os, subprocess, sys
 TESTDB = 'gabinet_test_izolacja'
-MIGR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'migrations', '0001_init.sql')
+MDIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'migrations')
+MIGR = sorted(os.path.join(MDIR, f) for f in os.listdir(MDIR) if f.endswith('.sql'))   # wszystkie migracje po kolei
 ENV = dict(os.environ, PGHOST=os.environ.get('PGHOST', '/tmp/pgtest'), PGPORT=os.environ.get('PGPORT', '55432'),
            PGUSER=os.environ.get('PGUSER', 'migrator'), PGDATABASE=TESTDB)
 def _psql(args, db):
     r = subprocess.run(['psql', '-X', '-q', '-v', 'ON_ERROR_STOP=1', '-d', db] + args, capture_output=True, text=True, env=ENV)
     if r.returncode: sys.exit('Nie udało się przygotować bazy testowej: ' + r.stderr.strip())
 _psql(['-c', f'DROP DATABASE IF EXISTS {TESTDB} WITH (FORCE)', '-c', f'CREATE DATABASE {TESTDB}'], 'postgres')
-_psql(['-f', MIGR], TESTDB)
+for _m in MIGR: _psql(['-f', _m], TESTDB)
 ok = bad = 0
 def sql(q):
     r = subprocess.run(['psql', '-X', '-At', '-q', '-v', 'ON_ERROR_STOP=1', '-c', q], capture_output=True, text=True, env=ENV)
@@ -80,4 +81,25 @@ r = sql("SELECT string_agg(table_name||'.'||column_name, ', ') FROM information_
 chk('w schemacie nie ma kolumn na dane pacjentów (PESEL, pacjent, adres, telefon, data urodzenia)', r == (True, ''), r)
 r = sql("SELECT string_agg(table_name||'.'||column_name, ', ') FROM information_schema.columns WHERE table_schema='app' AND table_name='saved_descriptions' AND data_type='text' AND column_name NOT IN ('module','status')")
 chk('zapisana wizyta nie ma pola na treść opisu (decyzja 1)', r == (True, ''), r)
+# ---- konta (migracja 0002) ----
+r = as_('gabinet_app', A, "SELECT count(*) FROM app.rate_limits"); chk('użytkownik nie czyta tabeli limitów prób', denied(r), r)
+r = as_('gabinet_app', A, "SELECT count(*) FROM app.mfa_recovery_codes"); chk('użytkownik nie czyta kodów zapasowych 2FA (nawet skrótów)', denied(r), r)
+r = as_('gabinet_admin', None, "SELECT count(*) FROM app.mfa_recovery_codes"); chk('administrator nie czyta kodów zapasowych 2FA', denied(r), r)
+r = as_('gabinet_app', A, "SELECT password_hash FROM app.profiles"); chk('użytkownik nie odczyta nawet własnego skrótu hasła', denied(r), r)
+r = as_('gabinet_app', A, "SELECT mfa_secret_enc FROM app.profiles"); chk('użytkownik nie odczyta zaszyfrowanego sekretu 2FA', denied(r), r)
+r = as_('gabinet_app', A, "UPDATE app.profiles SET email_verified_at = now()"); chk('użytkownik nie potwierdzi sam adresu e-mail', denied(r), r)
+r = as_('gabinet_app', A, "UPDATE app.profiles SET role = 'admin'"); chk('użytkownik nie nada sobie roli administratora', denied(r), r)
+r = as_('gabinet_app', A, "SELECT token_hash FROM app.sessions"); chk('użytkownik nie odczyta skrótów tokenów sesji', denied(r), r)
+r = as_('gabinet_app', A, "SELECT app.rate_hit('login:ip', '\\x" + '00'*32 + "', interval '1 minute')"); chk('użytkownik nie wywoła licznika limitów', denied(r), r)
+r = as_('gabinet_app', A, "SELECT app.auth_cleanup()"); chk('użytkownik nie wywoła sprzątania', denied(r), r)
+k = "'\\x" + 'ab'*32 + "'"
+r = [as_('gabinet_auth', None, f"SELECT app.rate_hit('login:email', {k}, interval '15 minutes')")[1] for _ in range(3)]
+chk('licznik prób rośnie w oknie czasowym', r == ['1', '2', '3'], r)
+sql(f"UPDATE app.rate_limits SET window_start = now() - interval '16 minutes' WHERE key_hash = {k}")
+r = as_('gabinet_auth', None, f"SELECT app.rate_hit('login:email', {k}, interval '15 minutes')"); chk('po upływie okna licznik startuje od 1', r == (True, '1'), r)
+sql(f"INSERT INTO app.security_events(user_id,type,ip_prefix,created_at) VALUES ('{A}','login_ok','83.21.140.0/24', now() - interval '91 days'), ('{A}','login_ok','83.21.141.0/24', now() - interval '10 days')")
+r = as_('gabinet_auth', None, "SELECT app.auth_cleanup()")
+r2 = sql(f"SELECT string_agg(coalesce(host(ip_prefix),'-'), ',' ORDER BY created_at) FROM app.security_events WHERE user_id='{A}' AND type='login_ok'")
+chk('sprzątanie: skrócone IP usuwane po 90 dniach, nowsze zostają', r[0] and r2 == (True, '-,83.21.141.0'), (r, r2))
+r = as_('gabinet_auth', None, f"INSERT INTO app.security_events(user_id,type) VALUES ('{A}','nieznany_typ')"); chk('nieznany typ zdarzenia odrzucony', not r[0], r)
 print(f'--- izolacja i uprawnienia: {ok} OK, {bad} błędów'); sys.exit(1 if bad else 0)

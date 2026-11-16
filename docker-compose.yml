@@ -38,7 +38,11 @@ services:
       DATABASE_URL: postgresql://gabinet_web:${DB_APP_PASSWORD}@db:5432/gabinet
       SMTP_HOST: mailpit
       SMTP_PORT: "1025"
+      MAIL_FROM: "Gabinet <no-reply@gabinet.local>"
       APP_URL: http://localhost:3000
+      AUTH_SECRET: ${AUTH_SECRET:?Brak AUTH_SECRET w .env – uruchom skrypt uruchom-… ponownie}
+      APP_ENC_KEY: ${APP_ENC_KEY:?Brak APP_ENC_KEY w .env – uruchom skrypt uruchom-… ponownie}
+      STATUS_DETAILS: "1"          # strona /stan – tylko lokalnie
     ports:
       - "127.0.0.1:3000:3000"
 

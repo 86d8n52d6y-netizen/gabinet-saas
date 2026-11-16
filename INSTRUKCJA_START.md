@@ -21,33 +21,39 @@ Docker Desktop jest darmowy do użytku prywatnego i w małych firmach (do 250 os
 
 ## 3. Uruchom
 
-| System | Plik do kliknięcia (2×) |
-|---|---|
-| macOS | `uruchom-mac.command` (za pierwszym razem: prawy klik → **Otwórz** → **Otwórz**, bo macOS blokuje pliki z internetu) |
-| Windows | `uruchom-windows.bat` (jeśli pojawi się „System Windows ochronił komputer”: **Więcej informacji → Uruchom mimo to**) |
+**macOS (zalecane – przez Terminal, omija blokadę „Apple nie może zweryfikować…”):**
+
+1. Otwórz **Terminal** (Cmd + Spacja → „Terminal”).
+2. Wpisz `cd ` (ze spacją), przeciągnij rozpakowany folder do okna Terminala, Enter.
+3. Wpisz `bash uruchom-mac.command` i Enter.
+
+**Windows:** kliknij dwa razy `uruchom-windows.bat` (przy „System Windows ochronił komputer”: **Więcej informacji → Uruchom mimo to**).
 
 Skrypt sam:
 1. sprawdzi, czy Docker działa,
-2. utworzy plik `.env` z **losowymi** hasłami do bazy (tylko na Twoim komputerze),
-3. zbuduje aplikację (pierwszy raz 3–10 minut, kolejne kilka sekund),
+2. utworzy albo uzupełni plik `.env` losowymi hasłami i kluczami (tylko na Twoim komputerze; istniejących wartości nie zmienia),
+3. zbuduje aplikację i zaktualizuje bazę (pierwszy raz 3–10 minut, kolejne zwykle 1–2 minuty),
 4. otworzy przeglądarkę na **http://localhost:3000**.
 
-## 4. Co powinieneś zobaczyć
+**Aktualizacja do nowej wersji:** pobierz nowy ZIP, rozpakuj, **skopiuj plik `.env` ze starego folderu do nowego**
+(na Macu ukryte pliki pokazuje Cmd + Shift + kropka), uruchom skrypt. Dane testowe w bazie zostają.
 
-Stronę „Gabinet” z tabelą **Stan środowiska: wszystko działa** i sześcioma wierszami „OK”:
+## 4. Co sprawdzić (faza 3 – konta i logowanie)
 
-| Sprawdzenie | Co oznacza |
-|---|---|
-| Połączenie z bazą PostgreSQL | baza działa |
-| Aplikacja łączy się jako rola bez uprawnień do tabel | aplikacja nie ma „klucza do wszystkiego” |
-| Tabele schematu (migracje) | baza została utworzona |
-| Wymuszona izolacja wierszy (RLS) | każdy użytkownik widzi tylko swoje dane |
-| Bez wybranej roli odczyt tabel zablokowany | dodatkowa blokada |
-| Rola administratora: tylko statystyki liczbowe | admin nie widzi treści użytkowników |
+| Krok | Co zrobić | Czego oczekiwać |
+|---|---|---|
+| 1 | **Załóż konto** (http://localhost:3000 → „Załóż konto”) | strona „Sprawdź skrzynkę e-mail” |
+| 2 | Otwórz **testową pocztę** http://localhost:8025 | wiadomość „potwierdź adres e-mail” |
+| 3 | Kliknij link w wiadomości → „Potwierdzam adres e-mail” | „Adres e-mail potwierdzony” |
+| 4 | Zaloguj się | strona „Konto”: okres próbny do daty za 3 miesiące |
+| 5 | Zaloguj się w **drugiej przeglądarce** na tym komputerze (np. Safari i Chrome). Telefon nie połączy się z wersją lokalną – działa ona tylko na tym komputerze | w „Bezpieczeństwo” dwa urządzenia; e-mail „logowanie z nowego urządzenia” |
+| 6 | „Bezpieczeństwo” → wyloguj drugie urządzenie | w drugiej przeglądarce po odświeżeniu – strona logowania |
+| 7 | **Weryfikacja dwuetapowa**: włącz, zeskanuj kod QR telefonem (Google/Microsoft Authenticator), wpisz kod | 10 kodów zapasowych |
+| 8 | Wyloguj i zaloguj ponownie | pytanie o kod z telefonu |
+| 9 | „Nie pamiętam hasła” → link z Mailpit → nowe hasło | logowanie nowym hasłem; stare nie działa |
+| 10 | 6 razy złe hasło | „Zbyt wiele prób” (blokada 15 minut) |
 
-Testowa skrzynka pocztowa (przyda się od fazy 3): **http://localhost:8025**. Wszystkie maile aplikacji trafiają tylko tam.
-
-**Proszę o zrzut ekranu tej strony** albo informację, który wiersz nie ma „OK”.
+Stan techniczny środowiska (tylko lokalnie): http://localhost:3000/stan
 
 ## 5. Zatrzymanie i usunięcie
 

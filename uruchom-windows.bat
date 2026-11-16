@@ -7,10 +7,9 @@ if errorlevel 1 (
   echo Docker Desktop nie jest uruchomiony. Otworz Docker Desktop, poczekaj az sie uruchomi i sprobuj ponownie.
   pause & exit /b 1
 )
-if not exist .env (
-  echo Tworze plik .env z losowymi haslami...
-  powershell -NoProfile -Command "'DB_ADMIN_PASSWORD='+[guid]::NewGuid().ToString('N') | Out-File -Encoding ascii .env; 'DB_APP_PASSWORD='+[guid]::NewGuid().ToString('N') | Out-File -Encoding ascii -Append .env"
-)
+if not exist .env type nul > .env
+REM brakujace wartosci sa dopisywane - istniejacych nie zmieniamy
+powershell -NoProfile -Command "$e=Get-Content .env -ErrorAction SilentlyContinue; function D($k,$n){ if(-not ($e -match ('^'+$k+'='))){ $b=New-Object byte[] $n; [Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($b); Add-Content -Encoding ascii .env ($k+'='+(($b|%%{$_.ToString('x2')}) -join '')); Write-Host ('Dopisuje '+$k) } }; D 'DB_ADMIN_PASSWORD' 16; D 'DB_APP_PASSWORD' 16; D 'AUTH_SECRET' 32; D 'APP_ENC_KEY' 32"
 echo Buduje i uruchamiam Gabinet (pierwszy raz kilka minut)...
 docker compose up --build -d
 if errorlevel 1 ( echo Blad uruchamiania - skopiuj komunikat i przeslij go. & pause & exit /b 1 )

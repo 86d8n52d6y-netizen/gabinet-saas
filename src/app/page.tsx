@@ -1,20 +1,19 @@
-import { health } from '@/lib/health';
+import Link from 'next/link';
+import { redirect } from 'next/navigation';
+import { getSession } from '@/lib/session';
 export const dynamic = 'force-dynamic';
 
 export default async function Home() {
-  const checks = await health();
-  const ok = checks.every(c => c.ok);
+  const s = await getSession();
+  if (s?.mfaPassed) redirect('/konto');
   return (
     <main className="wrap">
       <h1>Gabinet</h1>
-      <p className="muted">Wersja deweloperska – faza 2: architektura lokalna. Logowanie i moduły pojawią się w kolejnych fazach.</p>
-      <section className="card" aria-labelledby="st">
-        <h2 id="st" style={{ marginTop: 0 }}>Stan środowiska: <span className={ok ? 'ok' : 'err'}>{ok ? 'wszystko działa' : 'wymaga uwagi'}</span></h2>
-        <table><tbody>
-          {checks.map(c => (
-            <tr key={c.name}><td>{c.name}</td><td className={c.ok ? 'ok' : 'err'}>{c.ok ? 'OK' : 'BŁĄD'}</td><td className="muted">{c.info}</td></tr>
-          ))}
-        </tbody></table>
+      <p className="muted">Opisy zabiegów NFZ i prywatnych, procedury, zestawy, zarobki i kalendarz dyżurów – na każdym urządzeniu.</p>
+      <section className="card">
+        <p><strong>Wersja testowa (faza 3: konta i logowanie).</strong> Moduły pracy pojawią się w fazie 4.</p>
+        <p className="muted">Gabinet nie przechowuje danych pacjentów. Treść opisów zostaje na Twoim urządzeniu.</p>
+        <div className="row"><Link className="btn" href="/rejestracja">Załóż konto – 3 miesiące za darmo</Link><Link className="btn ghost" href="/logowanie">Zaloguj się</Link></div>
       </section>
     </main>
   );
