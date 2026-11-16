@@ -37,6 +37,7 @@ export default async function Konto({ searchParams }: { searchParams: Promise<{ 
           <a className="tile" href="/opisy-prywatne"><b>Opisy prywatne</b><span className="muted">{dzis.pv ? `Dziś: ${wiz(dzis.pv)} · ${fmtC(dzis.e2)}` : 'Dziś brak zapisanych wizyt'}</span></a>
           <Link className="tile" href="/zarobki"><b>Zarobki</b><span className="muted">{dzis.sum ? `Dziś razem: ${fmtC(dzis.sum)}` : 'Wszystkie gabinety, okresy, CSV'}</span></Link>
         </nav>)}
+      {dzis && <p className="hint">Masz dane w starej aplikacji? <a href="/import">Przenieś dane ze starej aplikacji</a> (plik „Kopia całości”).</p>}
       {!s.emailVerified && (
         <section className="card" aria-labelledby="ver">
           <h2 id="ver" style={{ marginTop: 0 }}>Potwierdź adres e-mail</h2>
@@ -50,7 +51,7 @@ export default async function Konto({ searchParams }: { searchParams: Promise<{ 
           {sub.status === 'trial_active' && <>do <strong>{fmt(sub.trial_end)}</strong></>}
           {sub.status === 'annual_active' && <>do <strong>{fmt(sub.period_end)}</strong></>}</p>)
           : <p>Brak aktywnej licencji – okres próbny dla tego adresu e-mail został już wykorzystany.</p>}
-        <p className="muted">{access ? 'Masz pełny dostęp.' : 'Zakup licencji będzie dostępny w kolejnej wersji (faza 5).'}</p>
+        <p className="muted">{access ? 'Masz pełny dostęp.' : 'Wersja testowa: okres próbny trwa 3 miesiące. Zakup licencji zostanie dodany po zakończeniu testów.'}</p>
       </section>
       <section className="card" aria-labelledby="dane">
         <h2 id="dane" style={{ marginTop: 0 }}>Twoje dane</h2>

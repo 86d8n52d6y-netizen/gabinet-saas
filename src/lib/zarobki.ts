@@ -37,12 +37,40 @@ export type Report = {
   pryw: { val: number; cost: number; pay: number };
   series: { key: string; nfz: number; pryw: number }[]; seriesBy: 'day' | 'month';
   topNfz: { code: string; n: number }[]; topPryw: { name: string; n: number; pay: number }[];
+  kind: string; categories: string[];
+  weekdays: { dow: number; days: number; nfz: number; pryw: number }[];
+  avg: { days: number; perDay: number; perVisit: number; perMonth: number | null };
+  prev: Range & { sum: number; nv: number; pv: number };
 };
 
-export async function report(c: PoolClient, r: Range, clinic: string | null): Promise<Report> {
+/** Poprzedni okres do porównania: poprzedni dzień / tydzień / miesiąc / rok; własny zakres – tyle samo dni bezpośrednio wcześniej. */
+export function prevRange(r: Range): Range {
+  const d = (s: string) => new Date(s + 'T00:00:00Z'), f = (x: Date) => isoD(x);
+  const [y, m] = r.from.split('-').map(Number);
+  if (r.key === 'month' || r.key === 'prev') return { from: f(new Date(Date.UTC(y, m - 2, 1))), to: f(new Date(Date.UTC(y, m - 1, 0))), label: 'miesiąc wcześniej', key: 'own' };
+  if (r.key === 'year') return { from: `${y - 1}-01-01`, to: `${y - 1}-12-31`, label: 'rok wcześniej', key: 'own' };
+  const n = Math.round((d(r.to).getTime() - d(r.from).getTime()) / 864e5) + 1;
+  const to = new Date(d(r.from).getTime() - 864e5), from = new Date(to.getTime() - (n - 1) * 864e5);
+  return { from: f(from), to: f(to), label: r.key === 'today' ? 'dzień wcześniej' : r.key === 'week' ? 'tydzień wcześniej' : `${n} dni wcześniej`, key: 'own' };
+}
+
+/** Filtr rodzaju: '' wszystko, 'nfz', 'pryw', 'kat:<kategoria procedur prywatnych>'. */
+function kindSql(kind: string, next: number): { ef: string; vf: string; arg: unknown[]; onlyNfz: boolean; onlyPryw: boolean } {
+  if (kind === 'nfz') return { ef: ` AND e.source IN ('nfz_points','nfz_review','nfz_extra')`, vf: ` AND s.module = 'nfz'`, arg: [], onlyNfz: true, onlyPryw: false };
+  if (kind === 'pryw') return { ef: ` AND e.source = 'private_procedure'`, vf: ` AND s.module = 'private'`, arg: [], onlyNfz: false, onlyPryw: true };
+  if (kind.startsWith('kat:') && kind.length > 4) return { ef: ` AND e.source = 'private_procedure' AND e.category_name = $${next}`,
+    vf: ` AND s.module = 'private' AND EXISTS (SELECT 1 FROM app.earnings_entries x WHERE x.description_id = s.id AND x.deleted_at IS NULL AND x.category_name = $${next})`, arg: [kind.slice(4)], onlyNfz: false, onlyPryw: true };
+  return { ef: '', vf: '', arg: [], onlyNfz: false, onlyPryw: false };
+}
+
+export async function report(c: PoolClient, r: Range, clinic: string | null, kind = ''): Promise<Report> {
   const basis = (await c.query(`SELECT settings->'nfz'->>'basis' AS b FROM app.user_settings`)).rows[0]?.b === 'share' ? 'share' : 'full';
-  const cf = clinic ? ' AND s.clinic_id = $3' : '';
-  const args: unknown[] = [r.from, r.to, ...(clinic ? [clinic] : [])];
+  const categories = (await c.query(`SELECT DISTINCT category_name AS k FROM app.earnings_entries WHERE source = 'private_procedure' AND deleted_at IS NULL AND coalesce(category_name,'') <> '' ORDER BY 1`)).rows.map(x => x.k as string);
+  if (kind.startsWith('kat:') && !categories.includes(kind.slice(4))) kind = '';
+  if (!['', 'nfz', 'pryw'].includes(kind) && !kind.startsWith('kat:')) kind = '';
+  const K = kindSql(kind, clinic ? 4 : 3);
+  const cf = (clinic ? ' AND s.clinic_id = $3' : '') + K.vf, ef = K.ef;
+  const args: unknown[] = [r.from, r.to, ...(clinic ? [clinic] : []), ...K.arg];
   const nfzE = basis === 'share'
     ? `sum(CASE e.source WHEN 'nfz_points' THEN e.doctor_pay_gr WHEN 'nfz_review' THEN e.value_gr WHEN 'nfz_extra' THEN e.value_gr ELSE 0 END)`
     : `sum(CASE WHEN e.source IN ('nfz_points','nfz_review','nfz_extra') THEN e.value_gr ELSE 0 END)`;
@@ -53,7 +81,7 @@ export async function report(c: PoolClient, r: Range, clinic: string | null): Pr
                 FROM app.saved_descriptions s WHERE s.deleted_at IS NULL AND s.visit_date BETWEEN $1 AND $2${cf} GROUP BY s.clinic_id),
           k AS (SELECT s.clinic_id, ${nfzE} AS e1, sum(CASE WHEN e.source = 'private_procedure' THEN e.doctor_pay_gr ELSE 0 END) AS e2
                 FROM app.earnings_entries e JOIN app.saved_descriptions s ON s.id = e.description_id
-                WHERE e.deleted_at IS NULL AND s.deleted_at IS NULL AND s.visit_date BETWEEN $1 AND $2${cf} GROUP BY s.clinic_id)
+                WHERE e.deleted_at IS NULL AND s.deleted_at IS NULL AND s.visit_date BETWEEN $1 AND $2${cf}${ef} GROUP BY s.clinic_id)
      SELECT coalesce(v.clinic_id, k.clinic_id) AS id, coalesce(v.nv,0)::int AS nv, coalesce(v.pv,0)::int AS pv, coalesce(k.e1,0)::bigint AS e1, coalesce(k.e2,0)::bigint AS e2
        FROM v FULL JOIN k ON coalesce(v.clinic_id, '00000000-0000-0000-0000-000000000000'::uuid) = coalesce(k.clinic_id, '00000000-0000-0000-0000-000000000000'::uuid)`, args)).rows;
   const clinics = (await c.query(`SELECT id, name, color, active FROM app.clinics WHERE deleted_at IS NULL ORDER BY sort, created_at`)).rows;
@@ -62,7 +90,7 @@ export async function report(c: PoolClient, r: Range, clinic: string | null): Pr
   const kalDoc = ((await c.query(`SELECT data FROM app.calendar_docs WHERE doc = 'sumy'`)).rows[0]?.data ?? {}) as Record<string, Record<string, { inc?: number }>>;
   const kal = new Map<string, number>();
   for (const [d, g] of Object.entries(kalDoc)) if (d >= r.from && d <= r.to) for (const [id, v] of Object.entries(g ?? {}))
-    if (!clinic || id === clinic) kal.set(id, (kal.get(id) ?? 0) + (Number(v?.inc) || 0));
+    if ((!clinic || id === clinic) && !kind) kal.set(id, (kal.get(id) ?? 0) + (Number(v?.inc) || 0));
   const known = new Set(clinics.map(k => k.id as string));
   const ids = [...clinics.filter(k => (!clinic || k.id === clinic) && (k.active || byId.has(k.id) || kal.has(k.id))).map(k => k.id as string),
     ...[...new Set([...byId.keys(), ...kal.keys()])].filter(id => id && !known.has(id)),   // gabinet usunięty, a wizyty/dyżury zostały
@@ -81,7 +109,7 @@ export async function report(c: PoolClient, r: Range, clinic: string | null): Pr
             coalesce(sum(e.value_gr) FILTER (WHERE e.source='private_procedure'),0)::bigint AS val, coalesce(sum(e.cost_gr) FILTER (WHERE e.source='private_procedure'),0)::bigint AS cost,
             coalesce(sum(e.doctor_pay_gr) FILTER (WHERE e.source='private_procedure'),0)::bigint AS pay
        FROM app.earnings_entries e JOIN app.saved_descriptions s ON s.id = e.description_id
-      WHERE e.deleted_at IS NULL AND s.deleted_at IS NULL AND s.visit_date BETWEEN $1 AND $2${cf}`, args)).rows[0];
+      WHERE e.deleted_at IS NULL AND s.deleted_at IS NULL AND s.visit_date BETWEEN $1 AND $2${cf}${ef}`, args)).rows[0];
   const minutes = Number((await c.query(`SELECT coalesce(sum(minutes),0)::int AS m FROM app.saved_descriptions s
       WHERE s.module='nfz' AND s.deleted_at IS NULL AND s.visit_date BETWEEN $1 AND $2${cf}`, args)).rows[0].m);
 
@@ -91,7 +119,7 @@ export async function report(c: PoolClient, r: Range, clinic: string | null): Pr
   const ser = (await c.query(
     `SELECT ${bucket} AS k, ${nfzE}::bigint AS nfz, sum(CASE WHEN e.source='private_procedure' THEN e.doctor_pay_gr ELSE 0 END)::bigint AS pryw
        FROM app.earnings_entries e JOIN app.saved_descriptions s ON s.id = e.description_id
-      WHERE e.deleted_at IS NULL AND s.deleted_at IS NULL AND s.visit_date BETWEEN $1 AND $2${cf} GROUP BY 1 ORDER BY 1`, args)).rows;
+      WHERE e.deleted_at IS NULL AND s.deleted_at IS NULL AND s.visit_date BETWEEN $1 AND $2${cf}${ef} GROUP BY 1 ORDER BY 1`, args)).rows;
   const map = new Map(ser.map(x => [x.k, { nfz: Number(x.nfz), pryw: Number(x.pryw) }]));
   const series: Report['series'] = [];
   if (seriesBy === 'day') for (let t = Date.parse(r.from); t <= Date.parse(r.to); t += 864e5) { const k = isoD(new Date(t)); series.push({ key: k, ...(map.get(k) ?? { nfz: 0, pryw: 0 }) }); }
@@ -103,7 +131,30 @@ export async function report(c: PoolClient, r: Range, clinic: string | null): Pr
   const topPryw = (await c.query(`SELECT e.label AS name, sum(e.qty)::int AS n, sum(e.doctor_pay_gr)::bigint AS pay FROM app.earnings_entries e JOIN app.saved_descriptions s ON s.id = e.description_id
       WHERE e.source='private_procedure' AND e.deleted_at IS NULL AND s.deleted_at IS NULL AND s.visit_date BETWEEN $1 AND $2${cf} GROUP BY e.label ORDER BY n DESC, e.label LIMIT 10`, args)).rows
     .map(x => ({ name: x.name, n: x.n, pay: Number(x.pay) }));
+  // dni tygodnia (pon.–niedz.): suma zarobków i liczba dni pracy (dni z zapisanymi kwotami)
+  const wd = (await c.query(
+    `SELECT extract(isodow FROM s.visit_date)::int AS dow, count(DISTINCT s.visit_date)::int AS days, ${nfzE}::bigint AS nfz,
+            sum(CASE WHEN e.source='private_procedure' THEN e.doctor_pay_gr ELSE 0 END)::bigint AS pryw
+       FROM app.earnings_entries e JOIN app.saved_descriptions s ON s.id = e.description_id
+      WHERE e.deleted_at IS NULL AND s.deleted_at IS NULL AND s.visit_date BETWEEN $1 AND $2${cf}${ef} GROUP BY 1`, args)).rows;
+  const weekdays = [1, 2, 3, 4, 5, 6, 7].map(dow => { const x = wd.find(w => w.dow === dow); return { dow, days: x?.days ?? 0, nfz: Number(x?.nfz ?? 0), pryw: Number(x?.pryw ?? 0) }; });
+  const workDays = Number((await c.query(`SELECT count(DISTINCT s.visit_date)::int AS n FROM app.earnings_entries e JOIN app.saved_descriptions s ON s.id = e.description_id
+      WHERE e.deleted_at IS NULL AND s.deleted_at IS NULL AND s.visit_date BETWEEN $1 AND $2${cf}${ef}`, args)).rows[0].n);
+  const curMonth = todayPL().slice(0, 7), months = seriesBy === 'month' ? series.filter(x => x.key <= curMonth).length : 0;
+  const visits = total.nv + total.pv;
+  const avg = { days: workDays, perDay: workDays ? Math.round(total.sum / workDays) : 0, perVisit: visits ? Math.round(total.sum / visits) : 0,
+    perMonth: months >= 2 ? Math.round(total.sum / months) : null };
+  // porównanie z poprzednim okresem (te same filtry)
+  const pr = prevRange(r), pargs = [pr.from, pr.to, ...args.slice(2)];
+  const pt = (await c.query(
+    `SELECT coalesce(${nfzE},0)::bigint AS e1, coalesce(sum(CASE WHEN e.source='private_procedure' THEN e.doctor_pay_gr ELSE 0 END),0)::bigint AS e2
+       FROM app.earnings_entries e JOIN app.saved_descriptions s ON s.id = e.description_id
+      WHERE e.deleted_at IS NULL AND s.deleted_at IS NULL AND s.visit_date BETWEEN $1 AND $2${cf}${ef}`, pargs)).rows[0];
+  const pv = (await c.query(`SELECT count(*) FILTER (WHERE s.module = 'nfz' AND (s.meta->>'src' = 'gen' OR (s.rates->>'pts')::numeric > 0 OR s.minutes > 0))::int AS nv,
+      count(*) FILTER (WHERE s.module = 'private')::int AS pv FROM app.saved_descriptions s WHERE s.deleted_at IS NULL AND s.visit_date BETWEEN $1 AND $2${cf}`, pargs)).rows[0];
+  const prev = { ...pr, sum: Number(pt.e1) + Number(pt.e2), nv: pv.nv, pv: pv.pv };
   return {
+    kind, categories, weekdays, avg, prev,
     basis, rows, total,
     nfz: { pc: Number(det.pc), sh: Number(det.sh), rv: Number(det.rv), ex: Number(det.ex), pts: Math.round(Number(det.pts) * 100) / 100, minutes },
     pryw: { val: Number(det.val), cost: Number(det.cost), pay: Number(det.pay) }, series, seriesBy, topNfz, topPryw,
@@ -111,12 +162,14 @@ export async function report(c: PoolClient, r: Range, clinic: string | null): Pr
 }
 
 /** Wiersze do pliku CSV (jedna kwota = jeden wiersz). Bez danych pacjentów – są tylko pozycje i kwoty. */
-export async function csvRows(c: PoolClient, r: Range, clinic: string | null) {
-  const cf = clinic ? ' AND s.clinic_id = $3' : '';
+export async function csvRows(c: PoolClient, r: Range, clinic: string | null, kind = '') {
+  if (!['', 'nfz', 'pryw'].includes(kind) && !kind.startsWith('kat:')) kind = '';
+  const K = kindSql(kind, clinic ? 4 : 3);
+  const cf = (clinic ? ' AND s.clinic_id = $3' : '') + K.vf + K.ef;
   return (await c.query(
     `SELECT s.visit_date::text AS data, coalesce(k.name,'Bez gabinetu') AS gabinet, s.module, s.seq_no, e.source, e.label, e.category_name, e.qty,
             e.points::float8 AS points, e.value_gr, e.cost_gr, e.doctor_pay_gr, array_to_string(s.codes, ' ') AS codes
        FROM app.earnings_entries e JOIN app.saved_descriptions s ON s.id = e.description_id LEFT JOIN app.clinics k ON k.id = s.clinic_id
       WHERE e.deleted_at IS NULL AND s.deleted_at IS NULL AND s.visit_date BETWEEN $1 AND $2${cf}
-      ORDER BY s.visit_date, s.module, s.seq_no, e.line_no`, [r.from, r.to, ...(clinic ? [clinic] : [])])).rows;
+      ORDER BY s.visit_date, s.module, s.seq_no, e.line_no`, [r.from, r.to, ...(clinic ? [clinic] : []), ...K.arg])).rows;
 }

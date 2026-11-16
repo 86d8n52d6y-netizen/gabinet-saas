@@ -14,10 +14,11 @@ const gr = (v: unknown) => { const x = n(v); return x === null || x < 0 || x > 1
 const zl = (g: unknown) => g === null || g === undefined ? 0 : Number(g) / 100;
 const txt = (s: unknown, max: number) => String(s ?? '').replace(/[\u0000-\u001f<>]/g, ' ').trim().slice(0, max);
 
-/** Dokumenty Kalendarza dla strony: 'settings' z gabinetami z tabeli (tabela ma pierwszeństwo dla pól wspólnych). */
+/** Dokumenty Kalendarza dla strony: 'settings' z gabinetami z tabeli (tabela ma pierwszeństwo dla pól wspólnych) + wersje dokumentów. */
 export async function loadDocs(c: PoolClient) {
-  const rows = (await c.query(`SELECT doc, data FROM app.calendar_docs WHERE doc <> 'sumy'`)).rows;
+  const rows = (await c.query(`SELECT doc, data, version FROM app.calendar_docs WHERE doc <> 'sumy'`)).rows;
   const docs: Record<string, Record<string, unknown>> = Object.fromEntries(rows.map(r => [r.doc, r.data]));
+  const ver: Record<string, number> = Object.fromEntries(rows.map(r => [r.doc, r.version]));
   const cl = (await c.query(`SELECT id, name, short, color, active, model, pct::float8, lab_share::float8, hourly_gr, daily_gr, min_daily_gr, extra
                                FROM app.clinics WHERE deleted_at IS NULL ORDER BY sort, created_at`)).rows;
   if (cl.length) {
@@ -30,19 +31,60 @@ export async function loadDocs(c: PoolClient) {
       address: k.extra?.address ?? '',
     }));
   }
-  return docs;
+  return { docs, ver };
 }
 
-/** Zapis dokumentów z urządzenia. Ustawienia: gabinety → tabela clinics (nowe z UUID nadanym w Kalendarzu, zmienione, usunięte). */
-export async function saveDocs(c: PoolClient, owner: string, put: Record<string, unknown>, del: string[]) {
+type Conflict = Record<string, { data: unknown; version: number }>;
+/** Zapis dokumentów z urządzenia z kontrolą wersji (base: wersja, od której urządzenie zaczynało; 0 = nowy dokument).
+ *  Dokument zmieniony w międzyczasie na innym urządzeniu nie jest nadpisywany – wraca jako konflikt (urządzenie scala zmiany i wysyła ponownie). */
+export async function saveDocs(c: PoolClient, owner: string, put: Record<string, unknown>, del: string[], base?: Record<string, unknown>) {
+  const ver: Record<string, number> = {}, conflict: Conflict = {};
+  const check = (doc: string) => base && Object.prototype.hasOwnProperty.call(base, doc) ? Math.max(0, Math.floor(Number(base[doc]) || 0)) : null;
   for (const [doc, data] of Object.entries(put)) {
     if (!DOC.test(doc) || !data || typeof data !== 'object' || Array.isArray(data)) throw new Error('Nieprawidłowy dokument: ' + doc);
+    const b = check(doc);
+    const cur = (await c.query('SELECT version FROM app.calendar_docs WHERE doc = $1 FOR UPDATE', [doc])).rows[0]?.version ?? 0;
+    if (b !== null && cur !== b) { conflict[doc] = await current(c, doc); continue; }
     if (doc === 'settings') await syncClinics(c, owner, (data as { clinics?: unknown }).clinics);
-    await c.query(`INSERT INTO app.calendar_docs(owner_id, doc, data) VALUES ($1, $2, $3::jsonb)
-                   ON CONFLICT (owner_id, doc) DO UPDATE SET data = EXCLUDED.data`, [owner, doc, JSON.stringify(data)]);
+    ver[doc] = (await c.query(`INSERT INTO app.calendar_docs(owner_id, doc, data) VALUES ($1, $2, $3::jsonb)
+                   ON CONFLICT (owner_id, doc) DO UPDATE SET data = EXCLUDED.data RETURNING version`, [owner, doc, JSON.stringify(data)])).rows[0].version;
   }
-  for (const doc of del) if (/^(courses|m[0-9]{4}-[0-9]{2})$/.test(doc))   // ustawień (z gabinetami) nie usuwamy – Kalendarz zapisuje nowe
-      await c.query('DELETE FROM app.calendar_docs WHERE doc = $1', [doc]);
+  for (const doc of del) {
+    if (!/^(courses|m[0-9]{4}-[0-9]{2})$/.test(doc)) continue;                   // ustawień (z gabinetami) nie usuwamy – Kalendarz zapisuje nowe
+    const b = check(doc);
+    const cur = (await c.query('SELECT version FROM app.calendar_docs WHERE doc = $1 FOR UPDATE', [doc])).rows[0]?.version ?? 0;
+    if (b !== null && cur && cur !== b) { conflict[doc] = await current(c, doc); continue; }
+    await c.query('DELETE FROM app.calendar_docs WHERE doc = $1', [doc]); ver[doc] = 0;
+  }
+  return { ver, conflict };
+}
+async function current(c: PoolClient, doc: string) {
+  if (doc === 'settings') { const { docs, ver } = await loadDocs(c); return { data: docs.settings ?? null, version: ver.settings ?? 0 }; }
+  const r = (await c.query('SELECT data, version FROM app.calendar_docs WHERE doc = $1', [doc])).rows[0];
+  return { data: r?.data ?? null, version: r?.version ?? 0 };
+}
+/** Dokumenty zmienione względem wersji znanych urządzeniu (odświeżenie po powrocie do karty). */
+export async function changedDocs(c: PoolClient, known: Record<string, unknown>) {
+  const rows = (await c.query(`SELECT doc, version FROM app.calendar_docs WHERE doc <> 'sumy'`)).rows as { doc: string; version: number }[];
+  const out: Conflict = {};
+  const changed = rows.filter(r => Number(known[r.doc] ?? 0) !== r.version);
+  for (const r of changed) out[r.doc] = await current(c, r.doc);
+  for (const k of Object.keys(known)) if (Number(known[k]) > 0 && !rows.some(r => r.doc === k)) out[k] = { data: null, version: 0 };
+  return out;
+}
+
+/** Gabinet w formacie Kalendarza → wiersz app.clinics (UPDATE albo INSERT z identyfikatorem nadanym na urządzeniu). */
+async function upsertClinic(c: PoolClient, owner: string, k: Record<string, unknown>, sort: number) {
+  const model = MODELS.includes(String(k.model)) ? String(k.model) : 'pct_lab';
+  const pct = n(k.pct), ls = n(k.labShare), color = Math.min(8, Math.max(1, Math.round(n(k.color) ?? 1)));
+  const kal = Object.fromEntries(Object.entries(k).filter(([key]) => !BASE.includes(key)));
+  const vals = [txt(k.name, 80) || 'Gabinet', txt(k.short, 6).toUpperCase().replace(/[^A-Z0-9ĄĆĘŁŃÓŚŹŻ]/g, '') || null, color, k.active !== false, model,
+    model.startsWith('pct') && pct !== null && pct >= 0 && pct <= 100 ? pct : null, model === 'pct_share' && ls !== null && ls >= 0 && ls <= 100 ? ls : null,
+    gr(k.hourly), gr(k.daily), gr(k.minDaily) || null, JSON.stringify({ address: txt(k.address, 200), kal }), sort];
+  const u = await c.query(`UPDATE app.clinics SET name=$2, short=$3, color=$4, active=$5, model=$6, pct=$7, lab_share=$8, hourly_gr=$9, daily_gr=$10,
+      min_daily_gr=$11, extra = extra || $12::jsonb, sort=$13, deleted_at=NULL WHERE id=$1`, [k.id, ...vals]);
+  if (!u.rowCount) await c.query(`INSERT INTO app.clinics(id, owner_id, name, short, color, active, model, pct, lab_share, hourly_gr, daily_gr, min_daily_gr, extra, sort)
+      VALUES ($1,$14,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12::jsonb,$13)`, [k.id, ...vals, owner]);   // cudzy UUID → błąd klucza (RLS ukrywa wiersz) – odrzucone
 }
 
 async function syncClinics(c: PoolClient, owner: string, list: unknown) {
@@ -57,22 +99,27 @@ async function syncClinics(c: PoolClient, owner: string, list: unknown) {
     if (!raw || typeof raw !== 'object') continue;
     const k = raw as Record<string, unknown>;
     if (typeof k.id !== 'string' || !UUID.test(k.id)) continue;           // identyfikatory gabinetów z Kalendarza: UUID (poprawka K5)
-    const model = MODELS.includes(String(k.model)) ? String(k.model) : 'pct_lab';
-    const pct = n(k.pct), ls = n(k.labShare), color = Math.min(8, Math.max(1, Math.round(n(k.color) ?? 1)));
-    const kal = Object.fromEntries(Object.entries(k).filter(([key]) => !BASE.includes(key)));
-    const vals = [txt(k.name, 80) || 'Gabinet', txt(k.short, 6).toUpperCase().replace(/[^A-Z0-9ĄĆĘŁŃÓŚŹŻ]/g, '') || null, color, k.active !== false, model,
-      model.startsWith('pct') && pct !== null && pct >= 0 && pct <= 100 ? pct : null, model === 'pct_share' && ls !== null && ls >= 0 && ls <= 100 ? ls : null,
-      gr(k.hourly), gr(k.daily), gr(k.minDaily) || null, JSON.stringify({ address: txt(k.address, 200), kal }), sort++];
-    const u = await c.query(`UPDATE app.clinics SET name=$2, short=$3, color=$4, active=$5, model=$6, pct=$7, lab_share=$8, hourly_gr=$9, daily_gr=$10,
-        min_daily_gr=$11, extra = extra || $12::jsonb, sort=$13, deleted_at=NULL WHERE id=$1`, [k.id, ...vals]);
-    if (!u.rowCount) await c.query(`INSERT INTO app.clinics(id, owner_id, name, short, color, active, model, pct, lab_share, hourly_gr, daily_gr, min_daily_gr, extra, sort)
-        VALUES ($1,$14,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12::jsonb,$13)`, [k.id, ...vals, owner]);   // cudzy UUID → błąd klucza (RLS ukrywa wiersz) – odrzucone
+    await upsertClinic(c, owner, k, sort++);
     seen.push(k.id);
   }
   // gabinet usunięty w Kalendarzu (możliwe tylko bez dyżurów w historii): ukrywamy; z wizytami w opisach – tylko wyłączamy
   const gone = (await c.query(`SELECT id, EXISTS (SELECT 1 FROM app.saved_descriptions s WHERE s.clinic_id = k.id) AS used
                                  FROM app.clinics k WHERE deleted_at IS NULL AND NOT (id = ANY($1::uuid[])) AND id = ANY($2::uuid[])`, [seen, known])).rows;
   for (const g of gone) await c.query(g.used ? 'UPDATE app.clinics SET active = false WHERE id = $1' : 'UPDATE app.clinics SET deleted_at = now() WHERE id = $1', [g.id]);
+}
+
+/** Import kopii ze starej aplikacji: dodanie gabinetów (format Kalendarza, nowe UUID). Istniejących gabinetów nie zmienia ani nie usuwa. */
+export async function addClinics(c: PoolClient, owner: string, list: unknown) {
+  if (!Array.isArray(list)) return 0;
+  const n0 = Number((await c.query('SELECT count(*) AS n FROM app.clinics WHERE deleted_at IS NULL')).rows[0].n);
+  if (n0 + list.length > 30) throw new Error('Nieprawidłowy import: za dużo gabinetów (limit 30).');
+  let sort = n0, added = 0;
+  for (const raw of list) {
+    if (!raw || typeof raw !== 'object' || typeof (raw as { id?: unknown }).id !== 'string' || !UUID.test((raw as { id: string }).id)) throw new Error('Nieprawidłowy gabinet w imporcie.');
+    if ((await c.query('SELECT 1 FROM app.clinics WHERE id = $1', [(raw as { id: string }).id])).rowCount) continue;
+    await upsertClinic(c, owner, raw as Record<string, unknown>, sort++); added++;
+  }
+  return added;
 }
 
 /** Przychód z odbytych dyżurów (wylicza Kalendarz): data → gabinet → {inc} w groszach. */
@@ -116,4 +163,16 @@ export async function todayShifts(c: PoolClient, today: string) {
   const cl = new Map((await c.query(`SELECT id::text, coalesce(nullif(short,''), name) AS s FROM app.clinics`)).rows.map(r => [r.id, r.s]));
   return list.sort((a, b) => String(a.start).localeCompare(String(b.start)))
     .map(x => `${cl.get(String(x.clinicId)) ?? 'Gabinet'} ${String(x.start ?? '').replace(/^0/, '')}–${String(x.end ?? '').replace(/^0/, '')}`);
+}
+
+/** Dyżury (bez odwołanych) w oknie dat – do automatycznego wyboru gabinetu w Opisach („gabinet z dyżuru”): data → [[gabinet, od, do]]. */
+export async function shiftsByDay(c: PoolClient, from: string, to: string) {
+  const rows = (await c.query(`SELECT data FROM app.calendar_docs WHERE doc ~ '^m[0-9]{4}-[0-9]{2}$' AND doc BETWEEN $1 AND $2`, ['m' + from.slice(0, 7), 'm' + to.slice(0, 7)])).rows;
+  const out: Record<string, [string, string, string][]> = {};
+  for (const r of rows) for (const x of (Array.isArray(r.data?.shifts) ? r.data.shifts : []) as Record<string, unknown>[]) {
+    const d = String(x?.date ?? '');
+    if (x?.status === 'cancelled' || d < from || d > to || typeof x.clinicId !== 'string') continue;
+    (out[d] ??= []).push([x.clinicId, String(x.start ?? ''), String(x.end ?? '')]);
+  }
+  return out;
 }

@@ -1,6 +1,6 @@
 # Etap 4d: Zarobki i statystyki ze wszystkich gabinetów – kwoty zgodne z wyliczeniami modułów (grosze), okresy, gabinety,
 # podstawa „pełna wartość / udział lekarza”, CSV (format, ochrona przed formułami), izolacja kont.
-import csv, datetime, io, json, urllib.request
+import urllib.parse, csv, datetime, io, json, urllib.request
 from pomoc import *
 t = T(); chk = t.chk
 
@@ -87,6 +87,25 @@ with sync_playwright() as p:
     pg.goto(URL + '/zarobki?o=year'); chk('Rok: wykres miesięczny (12 słupków-miesięcy)', 'Miesiąc po miesiącu' in pg.content() and pg.locator('svg[role=img] text').count() == 12)
     pg.goto(URL + '/zarobki?o=month'); chk('Miesiąc: wykres dzienny', 'Dzień po dniu' in pg.content())
     chk('Najczęstsze kody NFZ i procedury prywatne', 'Najczęstsze kody' in pg.content() and 'Najczęstsze procedury' in pg.content())
+
+    # ---- 5.6: porównanie okresów, średnie, dni tygodnia, filtr rodzaju/kategorii
+    pg.goto(URL + '/zarobki?o=month')
+    exp_prev = sum(v['k']['pc'] + v['k']['rv'] + v['k']['ex'] for v in V if v['date'][:7] == prev[:7])
+    chk('Porównanie: „Poprzedni okres” (miesiąc wcześniej) = zarobki z poprzedniego miesiąca', money(pg.inner_text('[data-testid=poprz]')) == exp_prev and exp_prev > 0, (pg.inner_text('[data-testid=poprz]'), exp_prev))
+    chk('Porównanie: różnica kwotowa i procentowa', '%' in pg.inner_text('[data-testid=zmiana]'), pg.inner_text('[data-testid=zmiana]'))
+    pg.goto(URL + '/zarobki?o=today'); razem = money(pg.inner_text('[data-testid=razem]'))
+    dni = pg.locator('[data-testid=dni] tbody tr').all_inner_texts()
+    import datetime as _dt
+    dow = _dt.date.fromisoformat(T0).isoweekday()
+    chk('Dni tygodnia: 7 wierszy, dzisiejszy dzień = „Razem”, 1 dzień pracy', len(dni) == 7 and money(dni[dow - 1].split('\t')[2]) == razem and dni[dow - 1].split('\t')[1] == '1', dni)
+    sr = pg.locator('[data-testid=srednie] tr').all_inner_texts()
+    chk('Średnie: 1 dzień pracy, średnio na dzień = „Razem”, na wizytę = Razem / 5 wizyt', sr[0].endswith('1') and money(sr[1].split('\t')[1]) == razem and money(sr[2].split('\t')[1]) == round(razem / 5), sr)
+    pg.goto(URL + '/zarobki?o=today&k=nfz'); got = table(pg)
+    chk('Filtr „NFZ”: bez wizyt i kwot prywatnych', all(v['pv'] == 0 and v['e2'] == 0 for v in got.values()) and sum(v['e1'] for v in got.values()) == sum(x['e1'] for x in e.values()), got)
+    kat = sql("SELECT category_name FROM app.earnings_entries WHERE label ILIKE '%kompozyt%' LIMIT 1")
+    pg.goto(URL + '/zarobki?o=today&k=' + urllib.parse.quote('kat:' + kat)); got = table(pg)
+    chk(f'Filtr kategorii „{kat}”: tylko wypełnienia (A 160 zł + B 122,50 zł), bez NFZ', sum(v['e2'] for v in got.values()) == 28250 and all(v['nv'] == 0 and v['e1'] == 0 for v in got.values()), got)
+    chk('Filtr widoczny i do wyłączenia', 'pokaż wszystko' in pg.content())
 
     # ---- podstawa: udział lekarza
     pg.goto(URL + '/ustawienia'); pg.select_option('#basis', 'share'); submit(pg, 'Zapisz ustawienia')

@@ -6,9 +6,10 @@ import { RANGES, rangeOf, report, type Report } from '@/lib/zarobki';
 export const metadata = { title: 'Zarobki – Gabinet' };
 export const dynamic = 'force-dynamic';
 
-type SP = { o?: string; od?: string; do?: string; g?: string };
+type SP = { o?: string; od?: string; do?: string; g?: string; k?: string };
 const z = (c: number) => (c ? fmtC(c) : '—');
 const dd = (s: string) => s.split('-').reverse().join('.');
+const DOW = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela'];
 const MON = ['sty', 'lut', 'mar', 'kwi', 'maj', 'cze', 'lip', 'sie', 'wrz', 'paź', 'lis', 'gru'];
 const qs = (sp: SP, over: Partial<SP>) => { const o = { ...sp, ...over }; return '?' + Object.entries(o).filter(([, v]) => v).map(([k, v]) => `${k}=${encodeURIComponent(v!)}`).join('&'); };
 
@@ -40,7 +41,7 @@ export default async function Zarobki({ searchParams }: { searchParams: Promise<
   const { r, clinics } = await withUser(s.userId, async c => {
     const clinics = (await c.query(`SELECT id, name FROM app.clinics WHERE deleted_at IS NULL ORDER BY sort, created_at`)).rows as { id: string; name: string }[];
     const g = sp.g && clinics.some(k => k.id === sp.g) ? sp.g : null;
-    return { r: await report(c, range, g), clinics, g };
+    return { r: await report(c, range, g, (sp.k ?? '').slice(0, 130)), clinics, g };
   });
   const T = r.total;
   return (
@@ -54,15 +55,20 @@ export default async function Zarobki({ searchParams }: { searchParams: Promise<
         <label>od <input type="date" name="od" defaultValue={range.from} required /></label>
         <label>do <input type="date" name="do" defaultValue={range.to} required /></label>
         <label>gabinet <select name="g" defaultValue={sp.g ?? ''}><option value="">wszystkie</option>{clinics.map(k => <option key={k.id} value={k.id}>{k.name}</option>)}</select></label>
+        <label>rodzaj <select name="k" defaultValue={r.kind}><option value="">wszystko</option><option value="nfz">NFZ</option><option value="pryw">prywatne</option>
+          {r.categories.map(k => <option key={k} value={'kat:' + k}>prywatne: {k}</option>)}</select></label>
         <button type="submit" className="ghost">Pokaż</button>
-        <a className="btn ghost" href={`/zarobki/csv${qs({}, { od: range.from, do: range.to, g: sp.g })}`} download>Pobierz CSV</a>
+        <a className="btn ghost" href={`/zarobki/csv${qs({}, { od: range.from, do: range.to, g: sp.g, k: r.kind })}`} download>Pobierz CSV</a>
       </form>
       <p className="muted" data-testid="okres">{range.label}: {dd(range.from)} – {dd(range.to)}</p>
 
+      {r.kind && <p className="msg" role="status">Filtr: {r.kind === 'nfz' ? 'tylko NFZ' : r.kind === 'pryw' ? 'tylko prywatne' : 'prywatne – kategoria „' + r.kind.slice(4) + '”'} · <Link href={qs(sp, { k: '' })}>pokaż wszystko</Link></p>}
       <section className="card tiles" aria-label="Podsumowanie">
         <div><span className="muted">Razem z wizyt</span><b data-testid="razem">{fmtC(T.sum)}</b></div>
         <div><span className="muted">Zarobek NFZ</span><b>{fmtC(T.e1)}</b><span className="hint">{T.nv} wizyt · {fmtP(r.nfz.pts)} pkt</span></div>
         <div><span className="muted">Zarobek prywatny</span><b>{fmtC(T.e2)}</b><span className="hint">{T.pv} wizyt</span></div>
+        <div><span className="muted">Poprzedni okres ({r.prev.label})</span><b data-testid="poprz">{fmtC(r.prev.sum)}</b>
+          <span className="hint" data-testid="zmiana">{r.prev.sum ? `${T.sum >= r.prev.sum ? '+' : '−'}${fmtC(Math.abs(T.sum - r.prev.sum))} (${T.sum >= r.prev.sum ? '+' : '−'}${Math.abs(Math.round((T.sum - r.prev.sum) / r.prev.sum * 1000) / 10).toLocaleString('pl-PL')}%)` : 'brak zarobków w poprzednim okresie'} · {dd(r.prev.from)} – {dd(r.prev.to)}</span></div>
         <div><span className="muted">Dyżury wg Kalendarza</span><b data-testid="kal">{fmtC(T.kal)}</b><span className="hint">do porównania, poza „Razem”</span></div>
       </section>
 
@@ -84,6 +90,24 @@ export default async function Zarobki({ searchParams }: { searchParams: Promise<
         <h2 id="wyk" style={{ marginTop: 0 }}>{r.seriesBy === 'day' ? 'Dzień po dniu' : 'Miesiąc po miesiącu'}</h2>
         <Chart r={r} />
       </section>
+
+      <div className="grid2 plain">
+        <section className="card" aria-labelledby="sre">
+          <h2 id="sre" style={{ marginTop: 0 }}>Średnie</h2>
+          <table className="num" data-testid="srednie"><tbody>
+            <tr><td>Dni pracy (z zapisanymi kwotami)</td><td>{r.avg.days}</td></tr>
+            <tr><td>Średnio na dzień pracy</td><td>{z(r.avg.perDay)}</td></tr>
+            <tr><td>Średnio na wizytę</td><td>{z(r.avg.perVisit)}</td></tr>
+            {r.avg.perMonth !== null && <tr><td>Średnio na miesiąc</td><td>{z(r.avg.perMonth)}</td></tr>}
+          </tbody></table>
+        </section>
+        <section className="card" aria-labelledby="sdt">
+          <h2 id="sdt" style={{ marginTop: 0 }}>Dni tygodnia</h2>
+          <table className="num" data-testid="dni"><thead><tr><th>Dzień</th><th>Dni pracy</th><th>Zarobek</th><th>Średnio na dzień</th></tr></thead><tbody>
+            {r.weekdays.map(w => { const t = w.nfz + w.pryw; return <tr key={w.dow}><td>{DOW[w.dow - 1]}</td><td>{w.days || '—'}</td><td>{z(t)}</td><td>{w.days ? z(Math.round(t / w.days)) : '—'}</td></tr>; })}
+          </tbody></table>
+        </section>
+      </div>
 
       <div className="grid2 plain">
         <section className="card" aria-labelledby="snfz">

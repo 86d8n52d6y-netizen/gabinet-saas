@@ -11,7 +11,7 @@ export default async function Home() {
       <h1>Gabinet</h1>
       <p className="muted">Opisy zabiegów NFZ i prywatnych, procedury, zestawy, zarobki i kalendarz dyżurów – na każdym urządzeniu.</p>
       <section className="card">
-        <p><strong>Wersja testowa (faza 3: konta i logowanie).</strong> Moduły pracy pojawią się w fazie 4.</p>
+        <p><strong>Wersja testowa</strong> – działa na tym komputerze.</p>
         <p className="muted">Gabinet nie przechowuje danych pacjentów. Treść opisów zostaje na Twoim urządzeniu.</p>
         <div className="row"><Link className="btn" href="/rejestracja">Załóż konto – 3 miesiące za darmo</Link><Link className="btn ghost" href="/logowanie">Zaloguj się</Link></div>
       </section>

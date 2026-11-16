@@ -1343,6 +1343,12 @@ var Store = {
   }
 };
 function setSync(s) { Store.sync = s; renderHeader(); }
+window.addEventListener('gabinet:grafik', function (e) {
+  var d = e.detail || {};
+  Object.keys(d).forEach(function (k) { if (Store.isDirty(k)) return; if (d[k]) Store.docs[k] = d[k]; else delete Store.docs[k]; });
+  if (Store.docs.settings) normalizeSettings(Store.docs.settings);
+  invalidate(); renderWhenIdle();
+});
 /* przychód z odbytych dyżurów: data → gabinet → kwota (grosze) – dla okna Zarobki na stronie głównej */
 var kalT = null;
 function publishKal() {

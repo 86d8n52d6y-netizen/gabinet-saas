@@ -70,6 +70,9 @@ PATCHES_KAL = [
    "'reset-do': function () { var keep = S().clinics; Object.keys(Store.docs).forEach(function (k) { Store.remove(k); }); var ns = defaultSettings(); ns.clinics = keep; Store.docs.settings = normalizeSettings(ns); Store.touch('settings'); UI.ask = null;"),
   ('K11 pytanie przed usunięciem danych Kalendarza: gabinety zostają',
    "'<span class=\"confirm\">Usunąć wszystkie dyżury i ustawienia? ", "'<span class=\"confirm\">Usunąć wszystkie dyżury, kursy i ustawienia Kalendarza? Gabinety zostają. "),
+  ('K12 zmiany z innego urządzenia (scalone na koncie) od razu w otwartym Kalendarzu – bez nadpisywania pola, które właśnie edytujesz',
+   'function setSync(s) { Store.sync = s; renderHeader(); }',
+   'function setSync(s) { Store.sync = s; renderHeader(); }\nwindow.addEventListener(\'gabinet:grafik\', function (e) {\n  var d = e.detail || {};\n  Object.keys(d).forEach(function (k) { if (Store.isDirty(k)) return; if (d[k]) Store.docs[k] = d[k]; else delete Store.docs[k]; });\n  if (Store.docs.settings) normalizeSettings(Store.docs.settings);\n  invalidate(); renderWhenIdle();\n});'),
 ]
 
 def przenies(plik, patches):

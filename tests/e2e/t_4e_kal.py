@@ -89,6 +89,23 @@ with sync_playwright() as p:
     got = wait_sql(f"SELECT name||'|'||color FROM app.clinics WHERE id='{nid}'", 'Gabinet K|4')
     chk('nowy gabinet dodany w Kalendarzu → pojawia się w tabeli gabinetów', got == 'Gabinet K|4', got)
 
+    # konflikt: dwa urządzenia zmieniają ten sam miesiąc niezależnie → zmiany z obu zostają (scalanie)
+    pg.goto(URL + '/kalendarz'); ready(pg); p2.goto(URL + '/kalendarz'); ready(p2)
+    K(pg, f"M('{MK}',true).shifts.push({{id:'c1',date:'{MK}-03',clinicId:'{A}',start:'08:00',end:'12:00',status:'planned'}});saveMonth('{MK}');render();")
+    pg.wait_for_timeout(1500); synced(pg)
+    K(p2, f"M('{MK}',true).shifts.push({{id:'c2',date:'{MK}-04',clinicId:'{B}',start:'09:00',end:'13:00',status:'planned'}});saveMonth('{MK}');render();")
+    p2.wait_for_timeout(2500); synced(p2)
+    ids = sorted(x.get('id') for x in month().get('shifts', []))
+    chk('konflikt dwóch urządzeń: na koncie są dyżury z obu (c1 i c2) i wcześniejszy t1', {'c1', 'c2', 't1'} <= set(ids), ids)
+    chk('urządzenie 2 po scaleniu widzi dyżur z urządzenia 1 bez odświeżania', K(p2, f"return M('{MK}').shifts.some(s=>s.id==='c1')"))
+    pg.evaluate("document.dispatchEvent(new Event('visibilitychange'))"); pg.wait_for_timeout(1200)
+    chk('urządzenie 1 po powrocie do karty widzi dyżur z urządzenia 2', K(pg, f"return M('{MK}').shifts.some(s=>s.id==='c2')"))
+    K(p2, f"const s=M('{MK}').shifts.find(s=>s.id==='c1');s.end='12:30';saveMonth('{MK}');")
+    K(pg, f"M('{MK}').shifts=M('{MK}').shifts.filter(s=>s.id!=='c2');saveMonth('{MK}');")
+    p2.wait_for_timeout(1500); pg.wait_for_timeout(1500)
+    sh = {x['id']: x for x in month().get('shifts', [])}
+    chk('scalanie: zmiana godziny na urządzeniu 2 i usunięcie innego dyżuru na urządzeniu 1 – oba zachowane', sh.get('c1', {}).get('end') == '12:30' and 'c2' not in sh, list(sh))
+
     # zmiana w „Gabinety” → Kalendarz po odświeżeniu
     p2.goto(URL + f'/gabinety?id={B}'); fill(p2, name='Gabinet B2'); submit(p2, 'Zapisz zmiany')
     pg.goto(URL + '/kalendarz'); ready(pg)

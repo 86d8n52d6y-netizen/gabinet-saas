@@ -85,3 +85,7 @@ export async function getBlobs(c: PoolClient, keys: readonly string[]) {
   const r = await c.query('SELECT key, data FROM app.user_blobs WHERE key = ANY($1)', [keys]);
   return Object.fromEntries(r.rows.map(x => [x.key, x.data]));
 }
+export async function getBlobVers(c: PoolClient, keys: readonly string[]) {
+  const r = await c.query('SELECT key, version FROM app.user_blobs WHERE key = ANY($1)', [keys]);
+  return Object.fromEntries(r.rows.map(x => [x.key, x.version as number])) as Record<string, number>;
+}

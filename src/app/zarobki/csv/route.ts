@@ -17,7 +17,7 @@ export async function GET(req: Request) {
   const rows = await withUser(s.userId, async c => {
     if (!(await c.query('SELECT app.has_access() AS a')).rows[0].a) return null;
     const gid = g && /^[0-9a-f-]{36}$/i.test(g) && (await c.query('SELECT 1 FROM app.clinics WHERE id = $1', [g])).rowCount ? g : null;
-    return csvRows(c, r, gid);
+    return csvRows(c, r, gid, (u.searchParams.get('k') ?? '').slice(0, 130));
   });
   if (!rows) return new Response('Brak aktywnej licencji', { status: 403 });
   const head = ['Data', 'Gabinet', 'Moduł', 'Nr wpisu', 'Rodzaj', 'Pozycja', 'Kategoria', 'Ilość', 'Punkty', 'Kody NFZ', 'Wartość (zł)', 'Koszty (zł)', 'Dla lekarza (zł)'];

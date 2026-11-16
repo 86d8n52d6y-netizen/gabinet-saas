@@ -23,7 +23,7 @@ export default async function Gabinety({ searchParams }: { searchParams: Promise
     <main className="wrap">
       <h1>Gabinety</h1>
       {sp.ok && <p className="msg ok" role="status">{sp.ok === 'dodano' ? 'Dodano gabinet.' : 'Zapisano zmiany gabinetu.'}</p>}
-      <p className="muted">Gabinety, w których pracujesz. Model rozliczenia wykorzysta Kalendarz (etap 4e); nazwa i kolor – opisy, zarobki i wykresy.</p>
+      <p className="muted">Gabinety, w których pracujesz. Wspólne dla całej aplikacji: model rozliczenia liczy przychód z dyżurów w Kalendarzu, nazwa i kolor – w opisach, zarobkach i wykresach.</p>
       <section className="card">
         {list.length === 0 ? <p>Nie masz jeszcze gabinetów. Dodaj pierwszy poniżej.</p> : (
           <table>

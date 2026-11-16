@@ -1,0 +1,243 @@
+<!doctype html>
+<!-- Gabinet SaaS: przeniesienie danych ze starej aplikacji (plik „Kopia całości”, opisy-nfz/wspolne.js → G.backup.export).
+     Plik odszyfrowuje się WYŁĄCZNIE w tej przeglądarce (hasło nie jest wysyłane). Treść opisów i inicjały zostają na tym urządzeniu
+     (zaszyfrowane kluczem urządzenia, jak w modułach); na konto trafiają gabinety, Kalendarz, materiały i historia bez danych pacjentów. -->
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Przenieś dane ze starej aplikacji – Gabinet</title>
+<link rel="stylesheet" href="/opisy-nfz/zasoby/fonts.css">
+<link rel="stylesheet" href="/opisy-nfz/zasoby/wspolne.css">
+<style>
+  .imp-map td select{font:inherit;font-size:14.5px;padding:6px 8px;border:1px solid var(--g-line);border-radius:8px;background:var(--g-surface);color:inherit;max-width:100%}
+  .imp-map td{text-align:left!important;white-space:normal!important}
+  .imp-steps{margin:0;padding-left:20px;line-height:1.6}
+  #log{font-size:14px;line-height:1.6;margin:8px 0 0;padding-left:20px}
+</style>
+</head>
+<body>
+<!--GABINET_DANE--><script src="/opisy-nfz/zasoby/gabinet-saas.js"></script>
+<main class="g-narrow" style="max-width:760px">
+  <section class="g-card">
+    <h1>Przenieś dane ze starej aplikacji</h1>
+    <p class="g-muted">W starej aplikacji: strona główna → <b>Kopia całości</b> → „Pobierz kopię całości”. Tutaj wskaż ten plik i wpisz hasło, którym był zaszyfrowany.</p>
+    <ol class="imp-steps g-small">
+      <li>Plik odszyfrowuje się <b>tylko w tej przeglądarce</b> – hasło nie jest nigdzie wysyłane.</li>
+      <li>Treść opisów i inicjały pacjentów zostają <b>na tym urządzeniu</b> (zaszyfrowane), jak przy zwykłej pracy.</li>
+      <li>Na konto trafiają: gabinety, Kalendarz, cenniki, szablony, zestawy i historia wizyt <b>bez danych pacjentów</b>.</li>
+      <li>Nic nie jest kasowane: brakujące wpisy są dodawane, istniejące zastępuje tylko nowsza wersja; ustawienia, które już masz, zostają.</li>
+    </ol>
+    <form id="f1" autocomplete="off">
+      <div class="g-field"><label for="plik">Plik kopii (.json)</label><input id="plik" class="g-in" type="file" accept=".json,application/json" required></div>
+      <div class="g-field"><label for="haslo">Hasło użyte przy tworzeniu kopii</label><input id="haslo" class="g-in" type="password" autocomplete="off" required></div>
+      <div id="m1" role="alert"></div>
+      <button class="g-btn" type="submit" id="b1">Odczytaj kopię</button>
+    </form>
+  </section>
+  <section class="g-card" id="krok2" hidden>
+    <h2>Co jest w kopii</h2>
+    <p id="podsum" class="g-small"></p>
+    <h3>Gabinety</h3>
+    <p class="g-small g-muted">Wybierz, do którego gabinetu na koncie trafią wpisy z każdego gabinetu z kopii. Gabinety o tej samej nazwie są dopasowane automatycznie.</p>
+    <table class="g-tbl imp-map"><thead><tr><th>Gabinet w kopii</th><th>Wpisy</th><th>Na koncie</th></tr></thead><tbody id="mapa"></tbody></table>
+    <div id="m2" role="alert" style="margin-top:12px"></div>
+    <div class="g-row" style="margin-top:14px"><button class="g-btn" id="b2" type="button">Przenieś dane</button><button class="g-btn ghost" id="b0" type="button">Wybierz inny plik</button></div>
+  </section>
+  <section class="g-card" id="krok3" hidden>
+    <h2 id="h3">Przenoszę dane…</h2>
+    <ul id="log"></ul>
+    <p class="g-row" style="margin-top:14px" id="dalej" hidden><a class="g-btn" href="/kalendarz">Otwórz Kalendarz</a><a class="g-btn ghost" href="/opisy-nfz">Opisy NFZ</a><a class="g-btn ghost" href="/opisy-prywatne">Opisy prywatne</a><a class="g-btn ghost" href="/zarobki">Zarobki</a></p>
+  </section>
+</main>
+<script>
+(function () {
+  'use strict';
+  const C = window.__GABINET, TE = new TextEncoder(), TD = new TextDecoder(), $ = s => document.querySelector(s), esc = G.esc;
+  G.bar('import');
+  const unb64 = s => { const b = atob(s), u = new Uint8Array(b.length); for (let i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; };
+  const msg = (el, t, cls) => { el.innerHTML = t ? '<p class="' + (cls || 'g-err') + '">' + esc(t) + '</p>' : ''; };
+  const log = (t, ok) => { const li = document.createElement('li'); li.innerHTML = (ok === false ? '⚠ ' : '') + esc(t); $('#log').appendChild(li); };
+  const wiz = n => n + ' ' + (n === 1 ? 'wizyta' : (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 'wizyty' : 'wizyt');
+  const merge = (cur, imp) => cur === undefined || cur === null ? imp : G._merge3(undefined, cur, imp);   // to, co już jest na koncie, ma pierwszeństwo
+  let DATA = null, OLD = [];
+
+  async function decrypt(text, pwd) {
+    let f; try { f = JSON.parse(text); } catch (e) { f = null; }
+    if (!f || f.app !== 'gabinet-kopia' || !f.kdf || !f.iv || !f.ct) throw new Error('To nie jest plik „kopii całości” aplikacji Gabinet.');
+    let d;
+    try {
+      const base = await crypto.subtle.importKey('raw', TE.encode(String(pwd).normalize('NFC')), 'PBKDF2', false, ['deriveKey']);
+      const key = await crypto.subtle.deriveKey({ name: 'PBKDF2', salt: unb64(f.kdf.salt), iterations: +f.kdf.iter || 600000, hash: 'SHA-256' }, base, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
+      d = JSON.parse(TD.decode(await crypto.subtle.decrypt({ name: 'AES-GCM', iv: unb64(f.iv), additionalData: TE.encode('gabinet-kopia') }, key, unb64(f.ct))));
+    } catch (e) { throw new Error('Nieprawidłowe hasło do kopii albo uszkodzony plik.'); }
+    if (!d || d.app !== 'gabinet' || typeof d.g !== 'object') throw new Error('Plik kopii ma nieznany układ.');
+    d.nfz = d.nfz || {}; d.ls = d.ls || {};
+    return d;
+  }
+  const kvOf = d => new Map(d.g.kv || []);
+
+  /* gabinety z kopii: z ustawień Kalendarza + identyfikatory użyte w wizytach i cenniku */
+  function oldClinics(d) {
+    const kv = kvOf(d), gr = kv.get('grafik') || {}, list = ((gr.settings && gr.settings.clinics) || []).filter(c => c && c.id);
+    const out = new Map(list.map(c => [String(c.id), { id: String(c.id), name: c.name || String(c.id), src: c, n: 0 }]));
+    const hit = id => { if (!id || id === 'auto') return; id = String(id); if (!out.has(id)) out.set(id, { id, name: 'Gabinet z kopii (' + id + ')', src: null, n: 0 }); out.get(id).n++; };
+    (d.g.wizyty || []).forEach(([, m]) => hit(m && m.gab));
+    (d.nfz.visits || []).forEach(([, m]) => hit(m && m.gab));
+    Object.values(gr).forEach(doc => { if (doc && Array.isArray(doc.shifts)) doc.shifts.forEach(s => hit(s && s.clinicId)); });
+    Object.keys(((kv.get('pryw:cennik') || {}).gab) || {}).forEach(id => { if (!out.has(id)) out.set(id, { id, name: 'Gabinet z kopii (' + id + ')', src: null, n: 0 }); });
+    return [...out.values()];
+  }
+  /* zamiana identyfikatorów gabinetów (klucze i wartości równe identyfikatorowi) */
+  function remap(x, map) {
+    if (typeof x === 'string') return Object.prototype.hasOwnProperty.call(map, x) ? map[x] : x;
+    if (Array.isArray(x)) return x.map(v => remap(v, map));
+    if (x && typeof x === 'object') { const o = {}; Object.keys(x).forEach(k => { o[Object.prototype.hasOwnProperty.call(map, k) ? map[k] : k] = remap(x[k], map); }); return o; }
+    return x;
+  }
+
+  $('#f1').addEventListener('submit', async ev => {
+    ev.preventDefault(); msg($('#m1'), ''); $('#b1').disabled = true;
+    try {
+      const f = $('#plik').files[0]; if (!f) throw new Error('Wybierz plik kopii.');
+      if (f.size > 200 * 1024 * 1024) throw new Error('Plik jest za duży (ponad 200 MB).');
+      DATA = await decrypt(await f.text(), $('#haslo').value); $('#haslo').value = '';
+      await G.ready('import');
+      OLD = oldClinics(DATA);
+      const kv = kvOf(DATA), gr = kv.get('grafik') || {}, months = Object.keys(gr).filter(k => /^m\d{4}-\d{2}$/.test(k));
+      const shifts = months.reduce((s, k) => s + ((gr[k].shifts || []).length), 0);
+      $('#podsum').innerHTML = 'Kopia z <b>' + esc(String(DATA.at || '').slice(0, 10)) + '</b>' + (DATA.name ? ' (konto „' + esc(DATA.name) + '”)' : '') + ': ' +
+        'Opisy NFZ – <b>' + wiz((DATA.nfz.visits || []).length) + '</b> · Opisy prywatne – <b>' + wiz((DATA.g.wizyty || []).length) + '</b> · ' +
+        'Kalendarz – <b>' + months.length + '</b> mies., <b>' + shifts + '</b> dyżurów' + (kv.has('pryw:cennik') ? ' · cennik' : '') + (kv.has('pryw:zestawy') ? ' · zestawy' : '') + (kv.has('pryw:katalog') ? ' · własne szablony' : '') + '.';
+      const opts = cur => '<option value="new">utwórz nowy gabinet</option>' + C.clinics.map(k => '<option value="' + esc(k.id) + '"' + (k.id === cur ? ' selected' : '') + '>' + esc(k.name) + '</option>').join('') + '<option value="">bez gabinetu</option>';
+      $('#mapa').innerHTML = OLD.map((o, i) => {
+        const same = C.clinics.find(k => k.name.trim().toLowerCase() === String(o.name).trim().toLowerCase());
+        return '<tr><td>' + esc(o.name) + '</td><td>' + (o.n || '—') + '</td><td><select data-i="' + i + '" aria-label="Gabinet na koncie dla: ' + esc(o.name) + '">' + opts(same ? same.id : 'new') + '</select></td></tr>';
+      }).join('') || '<tr><td colspan="3" class="g-muted">W kopii nie ma gabinetów.</td></tr>';
+      $('#krok2').hidden = false; $('#krok2').scrollIntoView({ behavior: 'smooth' });
+    } catch (e) { msg($('#m1'), e.message || String(e)); }
+    finally { $('#b1').disabled = false; }
+  });
+  $('#b0').addEventListener('click', () => { DATA = null; $('#krok2').hidden = true; $('#plik').value = ''; $('#plik').focus(); });
+
+  $('#b2').addEventListener('click', async () => {
+    if (!DATA) return;
+    $('#b2').disabled = true; $('#b0').disabled = true; msg($('#m2'), '');
+    $('#krok3').hidden = false; $('#log').innerHTML = ''; $('#h3').textContent = 'Przenoszę dane…';
+    let bad = 0;
+    const step = async (name, fn) => { try { const t = await fn(); if (t) log(t); } catch (e) { bad++; log(name + ': ' + (e && e.message || e), false); } };
+    try {
+      /* 1. gabinety */
+      const map = {}, created = [];
+      document.querySelectorAll('#mapa select').forEach(sel => {
+        const o = OLD[+sel.dataset.i];
+        if (sel.value === 'new') { const id = crypto.randomUUID(); map[o.id] = id; created.push(Object.assign({ name: o.name, model: 'pct_lab', pct: 0, color: 1 + created.length % 8 }, o.src || {}, { id })); }
+        else map[o.id] = sel.value;
+      });
+      const newCl = created.map(c => remap(c, map));
+      if (newCl.length) { const r = await G._post('/api/import/gabinety', { clinics: newCl }); log('Gabinety: dodane ' + r.added + (r.added === 1 ? ' nowy' : ' nowe') + '.'); }
+      else log('Gabinety: wszystkie przypisane do istniejących.');
+      const kv = kvOf(DATA);
+
+      /* 2. Kalendarz */
+      await step('Kalendarz', async () => {
+        const gr = remap(kv.get('grafik') || {}, map); if (!Object.keys(gr).length) return 'Kalendarz: brak danych w kopii.';
+        const put = {}, base = {}, cur = C.docs || {}, ver = C.ver || {};
+        if (gr.settings) {
+          const s = Object.assign({}, gr.settings); delete s.clinics;
+          const st = merge(cur.settings ? Object.assign({}, cur.settings) : undefined, s); delete st.clinics;
+          const oldById = new Map(((gr.settings.clinics) || []).map(c => [c.id, c]));
+          const table = (cur.settings && cur.settings.clinics) || [];
+          st.clinics = table.map(c => oldById.has(c.id) ? merge(c, oldById.get(c.id)) : c).concat(newCl.filter(c => !table.some(t => t.id === c.id)));
+          put.settings = st; base.settings = ver.settings || 0;
+        }
+        Object.keys(gr).filter(k => /^(courses|m\d{4}-\d{2})$/.test(k) && gr[k]).forEach(k => { put[k] = merge(cur[k], gr[k]); base[k] = ver[k] || 0; });
+        const r = await G._post('/api/kal/dokumenty', { put, base });
+        const cf = Object.keys(r.conflict || {});
+        if (cf.length) throw new Error('dane Kalendarza zmieniły się w trakcie przenoszenia (' + cf.join(', ') + ') – odśwież stronę i spróbuj ponownie.');
+        const n = Object.keys(put).filter(k => k[0] === 'm').length;
+        return 'Kalendarz: ' + n + ' mies. z dyżurami' + (put.settings ? ', ustawienia (ZUS, podatek, dni pracy)' : '') + (put.courses ? ', kursy' : '') + '.';
+      });
+
+      /* 3. materiały Opisów prywatnych */
+      for (const [k, nm] of [['pryw:cennik', 'cennik'], ['pryw:katalog', 'własne szablony'], ['pryw:zestawy', 'zestawy'], ['pryw:ust', 'ustawienia Opisów prywatnych']]) {
+        if (!kv.has(k)) continue;
+        await step(nm, async () => {
+          const imp = remap(kv.get(k), map), cur = (C.blobs || {})[k];
+          const data = merge(cur, imp);
+          await G._post('/api/dane', { key: k, data, base: (C.blobVer || {})[k] || 0 });
+          return 'Opisy prywatne: ' + nm + (cur !== undefined ? ' (dołączone do istniejących)' : '') + '.';
+        });
+      }
+
+      /* 4. Opisy NFZ: ustawienia (ulubione, zestawy kodów, ukryte), własne teksty */
+      await step('Ustawienia Opisów NFZ', async () => {
+        const out = [];
+        const lk = Object.keys(DATA.ls).find(k => /^opisyNFZ@[^.]*\.cfg$/.test(k));
+        if (lk) {
+          let old = null; try { old = JSON.parse(DATA.ls[lk]); } catch (e) { }
+          if (old && typeof old === 'object') {
+            const cur = C.cfg || {}, uni = (a, b) => [...new Set([...(Array.isArray(a) ? a : []), ...(Array.isArray(b) ? b : [])])];
+            const cfg = Object.assign({}, cur, { fav: uni(cur.fav, old.fav), hid: uni(cur.hid, old.hid), sets: merge(Array.isArray(cur.sets) && cur.sets.length ? cur.sets : undefined, Array.isArray(old.sets) ? old.sets : []) });
+            if (cur.auto === undefined && old.auto !== undefined) cfg.auto = old.auto;
+            await G._post('/api/nfz/ustawienia', { cfg }); out.push('ulubione i zestawy kodów');
+          }
+        }
+        if (kv.has('nfz:seg') && !C.seg) { await G._post('/api/nfz/ustawienia', { seg: kv.get('nfz:seg') }); out.push('własne stałe teksty'); }
+        Object.entries(DATA.ls).forEach(([k, v]) => {                                  // widoki modułów – tylko gdy na tym urządzeniu ich nie ma
+          const m = /^(pryw|grafik)@[^.]*\.(ui)$/.exec(k); if (!m || typeof v !== 'string') return;
+          const nk = m[1] + '@' + C.uid + '.' + m[2]; try { if (localStorage.getItem(nk) === null) localStorage.setItem(nk, v); } catch (e) { }
+        });
+        return out.length ? 'Opisy NFZ: ' + out.join(', ') + '.' : '';
+      });
+
+      /* 5. wizyty prywatne: urządzenie (z treścią) + konto (bez danych pacjentów) */
+      await step('Wizyty prywatne', async () => {
+        const vis = DATA.g.wizyty || []; if (!vis.length) return '';
+        const bodies = new Map(DATA.g.opisy || []), send = [];
+        let n = 0, skip = 0;
+        for (const [k, m0] of vis) {
+          if (!m0 || typeof m0 !== 'object') continue;
+          const m = remap(m0, map), cur = await G.store('wizyty').get(k).catch(() => undefined);
+          if (cur && String(cur.at || '') >= String(m.at || '')) { skip++; continue; }
+          if (bodies.has(k)) await G.store('opisy').put(k, bodies.get(k));
+          await G.store('wizyty').put(k, m); send.push(G._cloudMeta(m)); n++;
+        }
+        for (let i = 0; i < send.length; i += 400) await G._post('/api/pryw/wizyty', { put: send.slice(i, i + 400) });
+        return 'Opisy prywatne: ' + wiz(n) + (skip ? ' (pominięte ' + skip + ' – na tym urządzeniu jest nowsza wersja)' : '') + '.';
+      });
+
+      /* 6. wizyty NFZ: baza modułu na tym urządzeniu (szyfrowana kluczem urządzenia) + historia na koncie */
+      await step('Wizyty NFZ', async () => {
+        const vis = DATA.nfz.visits || []; if (!vis.length) return '';
+        const ST = ['visits', 'bodies', 'segs'], db = await G._idbOpen('opisyNFZ@' + C.uid, ST, 1);
+        const have = new Map();
+        for (const [k, v] of await G._readAll(db, 'visits')) { try { have.set(k, await G.dec(v, 'nfz:visits:' + k)); } catch (e) { } }
+        const haveSeg = new Set((await G._readAll(db, 'segs')).map(x => x[0]));
+        const bodies = new Map(DATA.nfz.bodies || []), ops = [], send = [];
+        let n = 0, skip = 0;
+        for (const [k, m0] of vis) {
+          if (!m0 || typeof m0 !== 'object') continue;
+          const m = remap(m0, map), cur = have.get(k);
+          if (cur && String(cur.at || '') >= String(m.at || '')) { skip++; continue; }
+          ops.push(['visits', k, m]); if (bodies.has(k)) ops.push(['bodies', k, bodies.get(k)]); send.push(G._cloudMeta(m)); n++;
+        }
+        for (const [k, v] of (DATA.nfz.segs || [])) if (!haveSeg.has(k)) ops.push(['segs', k, v]);
+        const encd = await Promise.all(ops.map(([st, k, v]) => G.enc(v, 'nfz:' + st + ':' + k).then(x => [st, k, x])));
+        if (encd.length) await G._run(db, ST, 'readwrite', t => { encd.forEach(([st, k, x]) => t.objectStore(st).put(x, k)); });
+        try { db.close(); } catch (e) { }
+        for (let i = 0; i < send.length; i += 400) await G._post('/api/nfz/wizyty', { put: send.slice(i, i + 400) });
+        return 'Opisy NFZ: ' + wiz(n) + (skip ? ' (pominięte ' + skip + ' – na tym urządzeniu jest nowsza wersja)' : '') + '.';
+      });
+      $('#h3').textContent = bad ? 'Przeniesiono z błędami (' + bad + ')' : 'Gotowe – dane przeniesione';
+      if (!bad) log('Otwórz raz Kalendarz – przeliczy przychód z dyżurów do Zarobków. Plik kopii zachowaj jako zabezpieczenie.');
+      $('#dalej').hidden = false;
+    } catch (e) {
+      $('#h3').textContent = 'Nie udało się przenieść danych'; log((e && e.message) || String(e), false);
+      msg($('#m2'), 'Nic nie zostało usunięte. Sprawdź połączenie i spróbuj ponownie – ponowne przeniesienie nie zdubluje wpisów.');
+    } finally { $('#b2').disabled = false; $('#b0').disabled = false; }
+  });
+})();
+</script>
+</body>
+</html>

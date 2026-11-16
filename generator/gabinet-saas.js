@@ -4,7 +4,9 @@
    - dane na urządzeniu (treść opisów, odpowiedzi, szkice) szyfrowane AES-GCM 256 kluczem urządzenia: niewyciągalny CryptoKey
      w IndexedDB, osobny dla każdego konta; serwer nigdy go nie widzi,
    - do chmury trafia tylko historia bez treści: data, gabinet, kody, punkty, stawki, kwoty, czas – bez inicjałów i opisu (decyzja 1),
-   - konflikty między urządzeniami: wygrywa wpis o nowszym czasie zmiany; usunięcia jako znaczniki czasu. */
+   - konflikty między urządzeniami: wizyty – wygrywa wpis o nowszym czasie zmiany, usunięcia jako znaczniki czasu;
+     dokumenty Kalendarza i materiały (cennik, szablony, zestawy) – kontrola wersji na serwerze i scalanie trójstronne
+     (zmiany z obu urządzeń zostają; ta sama wartość zmieniona w obu miejscach – wygrywa to urządzenie). */
 (function () {
   'use strict';
   const C = window.__GABINET;
@@ -14,7 +16,7 @@
   function b64(u8) { let s = ''; for (let i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000)); return btoa(s); }
   function unb64(s) { const b = atob(s), u = new Uint8Array(b.length); for (let i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; }
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const MOD = C.mod === 'prywatne' || C.mod === 'kalendarz' ? C.mod : 'nfz';
+  const MOD = C.mod === 'prywatne' || C.mod === 'kalendarz' || C.mod === 'import' ? C.mod : 'nfz';
   const G = window.G = { user: { id: C.uid, name: C.name }, key: null, mod: null, esc };
   G.zl = c => (Math.round(c) / 100).toLocaleString('pl-PL', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' zł';
   G.today = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
@@ -79,12 +81,7 @@
       G.key = await deviceKey();
       if (C.seg && typeof C.seg === 'object') await kvPutLocal('nfz:seg', C.seg);          // własne wersje tekstów – z konta
       if (MOD === 'kalendarz') await kalSeed();
-      const pend = pendingBlobs();
-      for (const [k, v] of Object.entries(C.blobs || {})) {                                 // cennik, ustawienia, szablony, zestawy – z konta
-        if (pend.includes(k)) { const loc = await G.store('kv').get(k).catch(() => undefined); if (loc !== undefined) { postBlob(k, loc); continue; } }
-        await kvPutLocal(k, v);
-      }
-      pend.filter(k => !(k in (C.blobs || {}))).forEach(k => G.store('kv').get(k).then(v => v !== undefined && postBlob(k, v), () => { }));
+      await blobSeed();
       try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => { }); } catch (e) { }
       return G.user;
     })();
@@ -106,7 +103,12 @@
   let syncErr = '';
   function syncStatus() {
     const s = document.getElementById('gsync'); if (!s) return;
-    const n = pendingDel().length + dirty.size + (kalBusy ? 1 : 0);
+    const n = pendingDel().length + dirty.size + (kalBusy ? 1 : 0) + Object.values(bBusy).filter(Boolean).length;
+    if (stale && !syncErr && !n) {                                                         // materiały zmienione na innym urządzeniu (scalone na koncie)
+      s.innerHTML = 'Zmiany z innego urządzenia – <a href="" id="greload">odśwież</a>'; s.className = 'gbar-sync';
+      const a = document.getElementById('greload'); if (a) a.onclick = ev => { ev.preventDefault(); location.reload(); };
+      return;
+    }
     s.textContent = syncErr ? '⚠ ' + syncErr : n ? 'Zapisuję w chmurze…' : MOD === 'kalendarz' ? 'Kalendarz zsynchronizowany' : 'Historia zsynchronizowana';
     s.className = 'gbar-sync' + (syncErr ? ' err' : '');
   }
@@ -119,9 +121,75 @@
   const PB_KEY = 'gabinet-saas.bloby@' + C.uid;
   const pendingBlobs = () => { try { const a = JSON.parse(localStorage.getItem(PB_KEY) || '[]'); return Array.isArray(a) ? a : []; } catch (e) { return []; } };
   const setPendingBlobs = a => { try { localStorage.setItem(PB_KEY, JSON.stringify([...new Set(a)])); } catch (e) { } };
+  /* scalanie trójstronne: baza (ostatnia wersja z konta znana urządzeniu), zmiany tutaj, zmiany na koncie */
+  const J = x => x === undefined ? undefined : JSON.stringify(x);
+  const clone = x => x === undefined ? undefined : JSON.parse(JSON.stringify(x));      // kopia: strona modułu modyfikuje swoje obiekty w miejscu
+  const isObj = x => !!x && typeof x === 'object' && !Array.isArray(x);
+  const idArr = a => Array.isArray(a) && a.every(x => isObj(x) && (typeof x.id === 'string' || typeof x.id === 'number'));
+  function merge3(b, l, s) {
+    const jl = J(l), js = J(s), jb = J(b);
+    if (jl === js) return l;
+    if (jl === jb) return s;                                                              // zmiana tylko na koncie
+    if (js === jb) return l;                                                              // zmiana tylko tutaj
+    if (l === undefined || l === null) return s;                                          // usunięte tutaj, zmienione gdzie indziej → zostaje
+    if (s === undefined || s === null) return l;
+    if (isObj(l) && isObj(s)) {
+      const bb = isObj(b) ? b : {}, out = {};
+      new Set([...Object.keys(s), ...Object.keys(l)]).forEach(k => { const m = merge3(bb[k], l[k], s[k]); if (m !== undefined) out[k] = m; });
+      return out;
+    }
+    if (idArr(l) && idArr(s)) {                                                           // listy z identyfikatorami (dyżury, koszty, gabinety, zestawy…)
+      const bm = new Map((idArr(b) ? b : []).map(x => [x.id, x])), lm = new Map(l.map(x => [x.id, x])), sm = new Map(s.map(x => [x.id, x]));
+      const ids = [...l.map(x => x.id), ...s.map(x => x.id).filter(id => !lm.has(id))], out = [];
+      ids.forEach(id => { const m = merge3(bm.get(id), lm.get(id), sm.get(id)); if (m !== undefined) out.push(m); });
+      return out;
+    }
+    return l;
+  }
+  G._merge3 = merge3;
+  G._kal = () => ({ base: Object.fromEntries(Object.entries(kBase).map(([k, v]) => [k, v.ver])), pend: kalPend() });
+  async function kvGetLocal(k) { const db = await userDb(); const v = await run(db, ['kv'], 'readonly', t => t.objectStore('kv').get(k)); return v === undefined ? undefined : dec(v, 'g:kv:' + k); }
+
+  /* materiały (cennik, ustawienia, szablony, zestawy) ↔ konto z kontrolą wersji */
+  const bBase = {}, bBusy = {}, bNext = {};
+  let stale = false;
+  async function blobSeed() {
+    const pend = pendingBlobs(), srv = C.blobs || {}, ver = C.blobVer || {};
+    for (const k of BLOBS) {
+      const sv = { ver: ver[k] || 0, data: clone(srv[k]) };
+      const loc = pend.includes(k) ? await kvGetLocal(k).catch(() => undefined) : undefined;
+      if (loc !== undefined) {                                                            // zmiana z tego urządzenia jeszcze niewysłana
+        bBase[k] = (await kvGetLocal('base:' + k).catch(() => undefined)) || sv;
+        postBlob(k, loc);
+      } else if (k in srv) { await kvPutLocal(k, srv[k]); bBase[k] = sv; kvPutLocal('base:' + k, sv).catch(() => { }); }
+      else bBase[k] = sv;
+    }
+  }
   function postBlob(k, v) {
+    if (bBusy[k]) { bNext[k] = v; return; }
+    bBusy[k] = true;
     setPendingBlobs(pendingBlobs().concat(k));
-    post('/api/dane', { key: k, data: v }).then(() => { setPendingBlobs(pendingBlobs().filter(x => x !== k)); syncErr = ''; syncStatus(); }, fail);
+    const b = bBase[k] || { ver: 0 };
+    post('/api/dane', { key: k, data: v, base: b.ver }).then(j => {
+      bBase[k] = { ver: j.version, data: clone(v) }; kvPutLocal('base:' + k, bBase[k]).catch(() => { });
+      if (!bNext[k]) setPendingBlobs(pendingBlobs().filter(x => x !== k));
+      syncErr = '';
+    }, async e => {
+      if (e.status === 409 && e.data && e.data.conflict) {                                 // zmienione na innym urządzeniu – scal i wyślij ponownie
+        const c = e.data.conflict, m = merge3(b.data, bNext[k] !== undefined ? bNext[k] : v, c.data);
+        bBase[k] = { ver: c.version, data: clone(c.data) }; kvPutLocal('base:' + k, bBase[k]).catch(() => { });
+        await kvPutLocal(k, m).catch(() => { });
+        bNext[k] = m; stale = true;
+      } else { fail(e); setTimeout(() => { if (!bBusy[k]) postBlob(k, v); }, 30000); }
+    }).finally(() => {
+      bBusy[k] = false; syncStatus();
+      if (bNext[k] !== undefined) { const n = bNext[k]; delete bNext[k]; postBlob(k, n); }
+    });
+  }
+  async function blobRefresh() {                                                         // po powrocie do karty: czy materiały zmieniły się gdzie indziej
+    if (MOD !== 'prywatne' || document.hidden) return;
+    const since = {}; BLOBS.forEach(k => { since[k] = (bBase[k] || {}).ver || 0; });
+    try { const j = await post('/api/dane', { since }); if (Object.keys(j.changed || {}).length) { stale = true; syncStatus(); } } catch (e) { }
   }
   let prywMerged = false;
   async function kvPutLocal(k, v) { const s = await enc(v, 'g:kv:' + k); const db = await userDb(); await run(db, ['kv'], 'readwrite', t => { t.objectStore('kv').put(s, k); }); }
@@ -134,7 +202,7 @@
         if (name === 'kv' && k === 'nfz:seg') postSettings({ seg: v });           // własne wersje stałych tekstów → konto (bez danych pacjentów)
         if (name === 'kv' && BLOBS.includes(k)) postBlob(k, v);                   // cennik, ustawienia, szablony, zestawy → konto
         if (name === 'wizyty' && MOD === 'prywatne' && v && v.id === k) queue([v], []);
-        if (name === 'kv' && k === 'grafik' && MOD === 'kalendarz') kalPush(v);
+        if (name === 'kv' && k === 'grafik' && MOD === 'kalendarz') kalPush();
       },
       async del(k) {
         const db = await userDb(); await run(db, [name], 'readwrite', t => { t.objectStore(name).delete(k); });
@@ -158,44 +226,74 @@
     get: kind => Promise.resolve(C.sums && C.sums[kind] ? C.sums[kind] : undefined)
   };
 
-  /* ---------- Kalendarz: dokumenty (ustawienia, miesiące, kursy) ↔ konto ---------- */
+  /* ---------- Kalendarz: dokumenty (ustawienia, miesiące, kursy) ↔ konto, z kontrolą wersji ---------- */
   const KP_KEY = 'gabinet-saas.kalendarz.niewyslane@' + C.uid;
-  let kalSent = {}, kalBusy = false, kalNext = null;
+  const KDOC = /^(settings|courses|m\d{4}-\d{2})$/;
+  let kBase = {}, kalBusy = false, kalAgain = false;                                       // kBase: dokument → {ver, data} ostatnio uzgodniony z kontem
   const kalPend = () => { try { const x = JSON.parse(localStorage.getItem(KP_KEY) || '[]'); return Array.isArray(x) ? x : []; } catch (e) { return []; } };
-  const kalPendSet = l => { try { l.length ? localStorage.setItem(KP_KEY, JSON.stringify(l)) : localStorage.removeItem(KP_KEY); } catch (e) { } };
+  const kalPendSet = l => { try { l.length ? localStorage.setItem(KP_KEY, JSON.stringify([...new Set(l)])) : localStorage.removeItem(KP_KEY); } catch (e) { } };
+  const saveBase = () => kvPutLocal('base:grafik', kBase).catch(() => { });
+  const kalShow = changed => { try { window.dispatchEvent(new CustomEvent('gabinet:grafik', { detail: changed })); } catch (e) { } };
   async function kalSeed() {                                                             // konto = źródło prawdy; niewysłane dokumenty z tego urządzenia mają pierwszeństwo
-    const docs = Object.assign({}, C.docs || {}), pend = kalPend();
-    Object.keys(docs).forEach(k => { kalSent[k] = JSON.stringify(docs[k]); });
-    if (pend.length) {
-      const loc = (await G.store('kv').get('grafik').catch(() => undefined)) || {};
-      pend.forEach(k => { if (loc[k]) docs[k] = loc[k]; else delete docs[k]; });
-    }
-    await kvPutLocal('grafik', docs);
-    if (pend.length) kalPush(docs);
+    const docs = Object.assign({}, C.docs || {}), ver = C.ver || {}, pend = kalPend();
+    const old = pend.length ? ((await kvGetLocal('base:grafik').catch(() => undefined)) || {}) : {};
+    const loc = pend.length ? ((await kvGetLocal('grafik').catch(() => undefined)) || {}) : {};
+    Object.keys(docs).forEach(k => { kBase[k] = { ver: ver[k] || 0, data: clone(docs[k]) }; });
+    pend.forEach(k => { if (old[k]) kBase[k] = old[k]; if (loc[k]) docs[k] = loc[k]; else delete docs[k]; });
+    await kvPutLocal('grafik', docs); saveBase();
+    if (pend.length) kalPush();
+    document.addEventListener('visibilitychange', kalRefresh);
   }
-  function kalPush(docs) {
-    if (!docs || typeof docs !== 'object') return;
-    if (kalBusy) { kalNext = docs; return; }
-    const put = {}, del = [];
-    Object.keys(docs).forEach(k => { if (!/^(settings|courses|m\d{4}-\d{2})$/.test(k) || !docs[k]) return; const j = JSON.stringify(docs[k]); if (kalSent[k] !== j) put[k] = docs[k]; });
-    Object.keys(kalSent).forEach(k => { if (!(k in docs) || !docs[k]) del.push(k); });
-    if (!Object.keys(put).length && !del.length) return;
+  async function kalPush() {
+    if (kalBusy) { kalAgain = true; return; }
+    const docs = (await kvGetLocal('grafik').catch(() => undefined)) || {};
+    const put = {}, del = [], base = {};
+    Object.keys(docs).forEach(k => { if (KDOC.test(k) && docs[k] && J(docs[k]) !== J((kBase[k] || {}).data)) { put[k] = docs[k]; base[k] = (kBase[k] || {}).ver || 0; } });
+    Object.keys(kBase).forEach(k => { if (kBase[k].ver && !docs[k] && KDOC.test(k)) { del.push(k); base[k] = kBase[k].ver; } });
+    if (!Object.keys(put).length && !del.length) { kalPendSet([]); return; }
     kalBusy = true; syncStatus();
-    kalPendSet([...new Set([...kalPend(), ...Object.keys(put), ...del])]);
-    post('/api/kal/dokumenty', { put, del }).then(() => {
-      Object.keys(put).forEach(k => { kalSent[k] = JSON.stringify(put[k]); }); del.forEach(k => { delete kalSent[k]; });
-      const done = new Set([...Object.keys(put), ...del]); kalPendSet(kalPend().filter(k => !done.has(k) || (k in docs ? JSON.stringify(docs[k]) !== kalSent[k] : false)));
-      syncErr = '';
-    }, e => { fail(e); setTimeout(() => kalPush(docs), 30000); }).finally(() => {
-      kalBusy = false; syncStatus(); if (kalNext) { const n = kalNext; kalNext = null; kalPush(n); }
+    kalPendSet(kalPend().concat(Object.keys(put), del));
+    try {
+      const j = await post('/api/kal/dokumenty', { put, del, base });
+      Object.entries(j.ver || {}).forEach(([k, v]) => { if (v) kBase[k] = { ver: v, data: clone(put[k]) }; else delete kBase[k]; });
+      const cf = j.conflict || {};
+      if (Object.keys(cf).length) {                                                       // zmienione na innym urządzeniu: scal i wyślij ponownie
+        const cur = (await kvGetLocal('grafik').catch(() => undefined)) || {}, shown = {};
+        Object.entries(cf).forEach(([k, c]) => {
+          const m = merge3((kBase[k] || {}).data, cur[k], c.data === null ? undefined : c.data);
+          if (c.version) kBase[k] = { ver: c.version, data: clone(c.data) }; else delete kBase[k];
+          if (m === undefined || m === null) delete cur[k]; else cur[k] = m;
+          shown[k] = clone(cur[k]) || null;
+        });
+        await kvPutLocal('grafik', cur); kalShow(shown); kalAgain = true;
+      } else kalPendSet([]);
+      saveBase(); syncErr = '';
+    } catch (e) { fail(e); setTimeout(kalPush, 30000); }
+    finally { kalBusy = false; syncStatus(); if (kalAgain) { kalAgain = false; kalPush(); } }
+  }
+  async function kalRefresh() {                                                          // po powrocie do karty: zmiany z innych urządzeń
+    if (document.hidden || kalBusy || kalPend().length) return;
+    const since = {}; Object.keys(kBase).forEach(k => { since[k] = kBase[k].ver; });
+    let j; try { j = await post('/api/kal/dokumenty', { since }); } catch (e) { return; }
+    const ch = j.changed || {}; if (!Object.keys(ch).length || kalBusy || kalPend().length) return;
+    const cur = (await kvGetLocal('grafik').catch(() => undefined)) || {}, shown = {};
+    Object.entries(ch).forEach(([k, c]) => {
+      if (c.version) { kBase[k] = { ver: c.version, data: clone(c.data) }; cur[k] = c.data; } else { delete kBase[k]; delete cur[k]; }
+      shown[k] = clone(cur[k]) || null;
     });
+    await kvPutLocal('grafik', cur); saveBase(); kalShow(shown);
   }
   const prywLocal = {                                                                   // zapis lokalny wizyt prywatnych bez wysyłania (scalanie)
     async write(ops) { const db = await userDb(); const e2 = await Promise.all(ops.map(o => o.del ? o : enc(o.val, 'g:' + o.s + ':' + o.key).then(x => ({ s: o.s, key: o.key, val: x }))));
       await run(db, [...new Set(e2.map(o => o.s))], 'readwrite', t => { e2.forEach(o => { const st = t.objectStore(o.s); if (o.del) st.delete(o.key); else st.put(o.val, o.key); }); }); }
   };
   G.clinics = async (all) => (C.clinics || []).filter(c => all || c.active !== false).map(c => ({ id: c.id, name: c.name, short: c.short, color: c.color, active: c.active !== false }));
-  G.dayClinic = async () => '';                                                        // gabinet z dyżuru – po przeniesieniu Kalendarza (etap 4e)
+  G.dayClinic = async (date, hhmm) => {                                                 // gabinet z dyżuru w Kalendarzu (jak w obecnej aplikacji)
+    const sh = ((C.shifts || {})[date] || []).map(x => ({ c: x[0], s: x[1], e: x[2] }));
+    if (!sh.length) return '';
+    if (hhmm) { const hit = sh.find(x => x.s <= hhmm && hhmm < x.e); if (hit) return hit.c; }
+    return sh.slice().sort((a, b) => String(a.s).localeCompare(String(b.s)))[0].c;
+  };
 
   /* ---------- ustawienia generatora → konto ---------- */
   const CFG_KEY = 'opisyNFZ@' + C.uid + '.cfg';
@@ -220,7 +318,7 @@
     const data = JSON.stringify(body);                                                   // keepalive: zapis dokończy się przy przejściu do innej strony (limit 64 KB)
     const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'same-origin', body: data, keepalive: data.length < 60000 });
     const j = await r.json().catch(() => ({}));
-    if (!r.ok) { const e = new Error(j.error || ('błąd serwera ' + r.status)); e.login = !!j.login; throw e; }
+    if (!r.ok) { const e = new Error(j.error || ('błąd serwera ' + r.status)); e.login = !!j.login; e.status = r.status; e.data = j; throw e; }
     return j;
   }
   function fail(e) { syncErr = e && e.login ? 'sesja wygasła – zaloguj się ponownie (dane są zapisane na tym urządzeniu)' : 'brak połączenia – zapisano na tym urządzeniu, wyślę później'; syncStatus(); }
@@ -236,6 +334,7 @@
     if (Array.isArray(o.items)) o.items = o.items.map(i => { const x = Object.assign({}, i); delete x.vals; delete x.def; delete x.snap; return x; });
     return o;
   };
+  G._cloudMeta = cloudMeta; G._post = post; G._idbOpen = idbOpen; G._run = run; G._readAll = readAll;   // dla przeniesienia danych ze starej aplikacji (import.html)
   const dirty = new Map();                                                               // id → wpis do wysłania
   let flushT = null, flushing = false;
   function queue(puts, dels) {
@@ -258,7 +357,8 @@
     } catch (e) { fail(e); setTimeout(flush, 30000); }
     finally { flushing = false; syncStatus(); }
   }
-  addEventListener('online', () => flush());
+  addEventListener('online', () => { flush(); if (MOD === 'kalendarz') kalPush(); BLOBS.forEach(k => { if (pendingBlobs().includes(k) && !bBusy[k]) kvGetLocal(k).then(v => v !== undefined && postBlob(k, v), () => { }); }); });
+  document.addEventListener('visibilitychange', blobRefresh);
   addEventListener('pagehide', () => {                                                   // ostatnie zmiany przy zamknięciu karty
     const put = [...dirty.values()].map(cloudMeta), del = pendingDel();
     if ((put.length || del.length) && navigator.sendBeacon) navigator.sendBeacon(API, new Blob([JSON.stringify({ put: put.slice(0, 200), del })], { type: 'application/json' }));
