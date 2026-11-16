@@ -30,7 +30,7 @@ export function rangeOf(key: string, od?: string, doo?: string, now = new Date()
   return { from: D(y, m, 1), to: D(y, m + 1, 0), label: RANGES.month, key: 'month' };
 }
 
-export type ClinicRow = { id: string | null; name: string; color: number | null; nv: number; e1: number; pv: number; e2: number; sum: number };
+export type ClinicRow = { id: string | null; name: string; color: number | null; nv: number; e1: number; pv: number; e2: number; sum: number; kal: number };
 export type Report = {
   basis: 'full' | 'share'; rows: ClinicRow[]; total: Omit<ClinicRow, 'id' | 'name' | 'color'>;
   nfz: { pc: number; sh: number; rv: number; ex: number; pts: number; minutes: number };
@@ -58,16 +58,21 @@ export async function report(c: PoolClient, r: Range, clinic: string | null): Pr
        FROM v FULL JOIN k ON coalesce(v.clinic_id, '00000000-0000-0000-0000-000000000000'::uuid) = coalesce(k.clinic_id, '00000000-0000-0000-0000-000000000000'::uuid)`, args)).rows;
   const clinics = (await c.query(`SELECT id, name, color, active FROM app.clinics WHERE deleted_at IS NULL ORDER BY sort, created_at`)).rows;
   const byId = new Map(per.map(x => [x.id ?? '', x]));
+  // „Dyżury wg Kalendarza”: przychód z odbytych dyżurów wyliczony przez Kalendarz (dzień → gabinet → grosze); nie wchodzi do „Razem”
+  const kalDoc = ((await c.query(`SELECT data FROM app.calendar_docs WHERE doc = 'sumy'`)).rows[0]?.data ?? {}) as Record<string, Record<string, { inc?: number }>>;
+  const kal = new Map<string, number>();
+  for (const [d, g] of Object.entries(kalDoc)) if (d >= r.from && d <= r.to) for (const [id, v] of Object.entries(g ?? {}))
+    if (!clinic || id === clinic) kal.set(id, (kal.get(id) ?? 0) + (Number(v?.inc) || 0));
   const known = new Set(clinics.map(k => k.id as string));
-  const ids = [...clinics.filter(k => (!clinic || k.id === clinic) && (k.active || byId.has(k.id))).map(k => k.id as string),
-    ...[...byId.keys()].filter(id => id && !known.has(id)),                  // gabinet usunięty, a wizyty zostały
+  const ids = [...clinics.filter(k => (!clinic || k.id === clinic) && (k.active || byId.has(k.id) || kal.has(k.id))).map(k => k.id as string),
+    ...[...new Set([...byId.keys(), ...kal.keys()])].filter(id => id && !known.has(id)),   // gabinet usunięty, a wizyty/dyżury zostały
     ...(byId.has('') && !clinic ? [''] : [])];
   const rows: ClinicRow[] = ids.map(id => {
     const x = byId.get(id), k = clinics.find(z => z.id === id);
     const e1 = Number(x?.e1 ?? 0), e2 = Number(x?.e2 ?? 0);
-    return { id: id || null, name: k ? k.name : id ? 'Gabinet usunięty' : 'Bez gabinetu', color: k?.color ?? null, nv: x?.nv ?? 0, e1, pv: x?.pv ?? 0, e2, sum: e1 + e2 };
+    return { id: id || null, name: k ? k.name : id ? 'Gabinet usunięty' : 'Bez gabinetu', color: k?.color ?? null, nv: x?.nv ?? 0, e1, pv: x?.pv ?? 0, e2, sum: e1 + e2, kal: kal.get(id) ?? 0 };
   });
-  const total = rows.reduce((s, x) => ({ nv: s.nv + x.nv, e1: s.e1 + x.e1, pv: s.pv + x.pv, e2: s.e2 + x.e2, sum: s.sum + x.sum }), { nv: 0, e1: 0, pv: 0, e2: 0, sum: 0 });
+  const total = rows.reduce((s, x) => ({ nv: s.nv + x.nv, e1: s.e1 + x.e1, pv: s.pv + x.pv, e2: s.e2 + x.e2, sum: s.sum + x.sum, kal: s.kal + x.kal }), { nv: 0, e1: 0, pv: 0, e2: 0, sum: 0, kal: 0 });
 
   const det = (await c.query(
     `SELECT coalesce(sum(e.value_gr) FILTER (WHERE e.source='nfz_points'),0)::bigint AS pc, coalesce(sum(e.doctor_pay_gr) FILTER (WHERE e.source='nfz_points'),0)::bigint AS sh,

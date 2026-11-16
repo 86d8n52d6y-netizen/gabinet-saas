@@ -16,6 +16,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <Link href={inside ? '/konto' : '/'} className="brand">Gabi<span>net</span></Link>
         <nav className="nav" aria-label="Menu">
           {inside ? (<>
+            <a href="/kalendarz">Kalendarz</a>
             <a href="/opisy-nfz">Opisy NFZ</a>
             <a href="/opisy-prywatne">Opisy prywatne</a>
             <Link href="/zarobki">Zarobki</Link>

@@ -9,6 +9,7 @@ import { cleanNfz } from '../settings';
 import { cleanUi } from './ui';
 import { listVisits } from './wizyty';
 import { BLOB_KEYS, getBlobs, listPryw } from '../pryw/wizyty';
+import { descSums, loadDocs } from '../kal';
 
 const DIR = path.join(process.cwd(), 'generator');
 const TYPES: Record<string, string> = { js: 'text/javascript; charset=utf-8', css: 'text/css; charset=utf-8', woff2: 'font/woff2', html: 'text/html; charset=utf-8' };
@@ -42,14 +43,18 @@ export async function asset(name: string, ifNoneMatch: string | null): Promise<R
 }
 
 /** Strona modułu z danymi startowymi konta (bez treści opisów – tych w chmurze nie ma). */
-export async function page(uid: string, name: string, mod: 'nfz' | 'prywatne' = 'nfz'): Promise<Response> {
+export async function page(uid: string, name: string, mod: 'nfz' | 'prywatne' | 'kalendarz' = 'nfz'): Promise<Response> {
   const data = await withUser(uid, async c => {
     const st = (await c.query('SELECT settings FROM app.user_settings')).rows[0]?.settings ?? {};
     const clinics = (await c.query(`SELECT id, name, short, color, active FROM app.clinics WHERE deleted_at IS NULL ORDER BY active DESC, sort, created_at`)).rows;
+    if (mod === 'kalendarz') {
+      const from = new Date(Date.now() - 400 * 864e5).toISOString().slice(0, 10);       // podpowiedzi z opisów: ostatnie ~13 miesięcy
+      return { uid, name, mod, docs: await loadDocs(c), sums: await descSums(c, from) };
+    }
     if (mod === 'prywatne') return { uid, name, mod, clinics, blobs: await getBlobs(c, BLOB_KEYS), visits: await listPryw(c) };
     return { uid, name, mod, clinics, cfg: { ...cleanNfz(st.nfz), ...cleanUi(st.nfzUi) }, seg: st.nfzSeg ?? null, visits: await listVisits(c) };
   });
   const json = JSON.stringify(data).replace(/</g, '\\u003c').replace(/\u2028/g, '\\u2028').replace(/\u2029/g, '\\u2029');
-  const html = (await file(mod === 'prywatne' ? 'prywatne.html' : 'nfz.html')).buf.toString('utf8').replace('<!--GABINET_DANE-->', `<script>window.__GABINET=${json};</script>`);
+  const html = (await file(mod === 'prywatne' ? 'prywatne.html' : mod === 'kalendarz' ? 'kalendarz.html' : 'nfz.html')).buf.toString('utf8').replace('<!--GABINET_DANE-->', `<script>window.__GABINET=${json};</script>`);
   return new Response(html, { headers: { 'Content-Type': TYPES.html, 'Cache-Control': 'no-store', 'Referrer-Policy': 'same-origin' } });
 }

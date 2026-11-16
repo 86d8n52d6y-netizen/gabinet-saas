@@ -14,7 +14,7 @@
   function b64(u8) { let s = ''; for (let i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000)); return btoa(s); }
   function unb64(s) { const b = atob(s), u = new Uint8Array(b.length); for (let i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; }
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const MOD = C.mod === 'prywatne' ? 'prywatne' : 'nfz';
+  const MOD = C.mod === 'prywatne' || C.mod === 'kalendarz' ? C.mod : 'nfz';
   const G = window.G = { user: { id: C.uid, name: C.name }, key: null, mod: null, esc };
   G.zl = c => (Math.round(c) / 100).toLocaleString('pl-PL', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' zł';
   G.today = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
@@ -78,6 +78,7 @@
     G._ready = (async () => {
       G.key = await deviceKey();
       if (C.seg && typeof C.seg === 'object') await kvPutLocal('nfz:seg', C.seg);          // własne wersje tekstów – z konta
+      if (MOD === 'kalendarz') await kalSeed();
       const pend = pendingBlobs();
       for (const [k, v] of Object.entries(C.blobs || {})) {                                 // cennik, ustawienia, szablony, zestawy – z konta
         if (pend.includes(k)) { const loc = await G.store('kv').get(k).catch(() => undefined); if (loc !== undefined) { postBlob(k, loc); continue; } }
@@ -92,7 +93,7 @@
 
   /* ---------- pasek aplikacji ---------- */
   const LOGO = '<svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path d="M16 4c-3 0-4.4 1.6-7 1.6C5.8 5.6 4 8 4 11.6c0 5.6 2.3 15.4 5.6 15.4 2.3 0 2.2-6.6 6.4-6.6s4.1 6.6 6.4 6.6c3.3 0 5.6-9.8 5.6-15.4C28 8 26.2 5.6 23 5.6 20.4 5.6 19 4 16 4z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>';
-  const NAV = [['/opisy-nfz', 'Opisy NFZ', 'nfz'], ['/opisy-prywatne', 'Opisy prywatne', 'prywatne'], ['/zarobki', 'Zarobki'], ['/katalog-nfz', 'Katalog NFZ'], ['/gabinety', 'Gabinety'], ['/ustawienia', 'Ustawienia'], ['/konto', 'Konto']];
+  const NAV = [['/kalendarz', 'Kalendarz', 'kalendarz'], ['/opisy-nfz', 'Opisy NFZ', 'nfz'], ['/opisy-prywatne', 'Opisy prywatne', 'prywatne'], ['/zarobki', 'Zarobki'], ['/katalog-nfz', 'Katalog NFZ'], ['/gabinety', 'Gabinety'], ['/ustawienia', 'Ustawienia'], ['/konto', 'Konto']];
   G.bar = function (mod) {
     let el = document.getElementById('gbar');
     if (!el) { el = document.createElement('header'); el.id = 'gbar'; document.body.insertBefore(el, document.body.firstChild); }
@@ -105,8 +106,8 @@
   let syncErr = '';
   function syncStatus() {
     const s = document.getElementById('gsync'); if (!s) return;
-    const n = pendingDel().length + dirty.size;
-    s.textContent = syncErr ? '⚠ ' + syncErr : n ? 'Zapisuję w chmurze…' : 'Historia zsynchronizowana';
+    const n = pendingDel().length + dirty.size + (kalBusy ? 1 : 0);
+    s.textContent = syncErr ? '⚠ ' + syncErr : n ? 'Zapisuję w chmurze…' : MOD === 'kalendarz' ? 'Kalendarz zsynchronizowany' : 'Historia zsynchronizowana';
     s.className = 'gbar-sync' + (syncErr ? ' err' : '');
   }
 
@@ -133,6 +134,7 @@
         if (name === 'kv' && k === 'nfz:seg') postSettings({ seg: v });           // własne wersje stałych tekstów → konto (bez danych pacjentów)
         if (name === 'kv' && BLOBS.includes(k)) postBlob(k, v);                   // cennik, ustawienia, szablony, zestawy → konto
         if (name === 'wizyty' && MOD === 'prywatne' && v && v.id === k) queue([v], []);
+        if (name === 'kv' && k === 'grafik' && MOD === 'kalendarz') kalPush(v);
       },
       async del(k) {
         const db = await userDb(); await run(db, [name], 'readwrite', t => { t.objectStore(name).delete(k); });
@@ -151,7 +153,43 @@
     load: mod => G.store('szkice').get(mod).catch(() => undefined),
     clear: mod => G.store('szkice').del(mod).catch(() => { })
   };
-  G.sums = { put: () => Promise.resolve(), get: () => Promise.resolve(undefined) };   // sumy liczy serwer z historii w chmurze
+  G.sums = {                                                                           // sumy z opisów liczy serwer; przychód z dyżurów – Kalendarz
+    put: (kind, map) => kind === 'kal' ? post('/api/kal/sumy', { map }).then(() => { }, () => { }) : Promise.resolve(),
+    get: kind => Promise.resolve(C.sums && C.sums[kind] ? C.sums[kind] : undefined)
+  };
+
+  /* ---------- Kalendarz: dokumenty (ustawienia, miesiące, kursy) ↔ konto ---------- */
+  const KP_KEY = 'gabinet-saas.kalendarz.niewyslane@' + C.uid;
+  let kalSent = {}, kalBusy = false, kalNext = null;
+  const kalPend = () => { try { const x = JSON.parse(localStorage.getItem(KP_KEY) || '[]'); return Array.isArray(x) ? x : []; } catch (e) { return []; } };
+  const kalPendSet = l => { try { l.length ? localStorage.setItem(KP_KEY, JSON.stringify(l)) : localStorage.removeItem(KP_KEY); } catch (e) { } };
+  async function kalSeed() {                                                             // konto = źródło prawdy; niewysłane dokumenty z tego urządzenia mają pierwszeństwo
+    const docs = Object.assign({}, C.docs || {}), pend = kalPend();
+    Object.keys(docs).forEach(k => { kalSent[k] = JSON.stringify(docs[k]); });
+    if (pend.length) {
+      const loc = (await G.store('kv').get('grafik').catch(() => undefined)) || {};
+      pend.forEach(k => { if (loc[k]) docs[k] = loc[k]; else delete docs[k]; });
+    }
+    await kvPutLocal('grafik', docs);
+    if (pend.length) kalPush(docs);
+  }
+  function kalPush(docs) {
+    if (!docs || typeof docs !== 'object') return;
+    if (kalBusy) { kalNext = docs; return; }
+    const put = {}, del = [];
+    Object.keys(docs).forEach(k => { if (!/^(settings|courses|m\d{4}-\d{2})$/.test(k) || !docs[k]) return; const j = JSON.stringify(docs[k]); if (kalSent[k] !== j) put[k] = docs[k]; });
+    Object.keys(kalSent).forEach(k => { if (!(k in docs) || !docs[k]) del.push(k); });
+    if (!Object.keys(put).length && !del.length) return;
+    kalBusy = true; syncStatus();
+    kalPendSet([...new Set([...kalPend(), ...Object.keys(put), ...del])]);
+    post('/api/kal/dokumenty', { put, del }).then(() => {
+      Object.keys(put).forEach(k => { kalSent[k] = JSON.stringify(put[k]); }); del.forEach(k => { delete kalSent[k]; });
+      const done = new Set([...Object.keys(put), ...del]); kalPendSet(kalPend().filter(k => !done.has(k) || (k in docs ? JSON.stringify(docs[k]) !== kalSent[k] : false)));
+      syncErr = '';
+    }, e => { fail(e); setTimeout(() => kalPush(docs), 30000); }).finally(() => {
+      kalBusy = false; syncStatus(); if (kalNext) { const n = kalNext; kalNext = null; kalPush(n); }
+    });
+  }
   const prywLocal = {                                                                   // zapis lokalny wizyt prywatnych bez wysyłania (scalanie)
     async write(ops) { const db = await userDb(); const e2 = await Promise.all(ops.map(o => o.del ? o : enc(o.val, 'g:' + o.s + ':' + o.key).then(x => ({ s: o.s, key: o.key, val: x }))));
       await run(db, [...new Set(e2.map(o => o.s))], 'readwrite', t => { e2.forEach(o => { const st = t.objectStore(o.s); if (o.del) st.delete(o.key); else st.put(o.val, o.key); }); }); }
@@ -179,7 +217,8 @@
 
   /* ---------- komunikacja z serwerem ---------- */
   async function post(url, body) {
-    const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'same-origin', body: JSON.stringify(body) });
+    const data = JSON.stringify(body);                                                   // keepalive: zapis dokończy się przy przejściu do innej strony (limit 64 KB)
+    const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'same-origin', body: data, keepalive: data.length < 60000 });
     const j = await r.json().catch(() => ({}));
     if (!r.ok) { const e = new Error(j.error || ('błąd serwera ' + r.status)); e.login = !!j.login; throw e; }
     return j;

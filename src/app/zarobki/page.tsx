@@ -63,20 +63,21 @@ export default async function Zarobki({ searchParams }: { searchParams: Promise<
         <div><span className="muted">Razem z wizyt</span><b data-testid="razem">{fmtC(T.sum)}</b></div>
         <div><span className="muted">Zarobek NFZ</span><b>{fmtC(T.e1)}</b><span className="hint">{T.nv} wizyt · {fmtP(r.nfz.pts)} pkt</span></div>
         <div><span className="muted">Zarobek prywatny</span><b>{fmtC(T.e2)}</b><span className="hint">{T.pv} wizyt</span></div>
+        <div><span className="muted">Dyżury wg Kalendarza</span><b data-testid="kal">{fmtC(T.kal)}</b><span className="hint">do porównania, poza „Razem”</span></div>
       </section>
 
       <section className="card" aria-labelledby="gab">
         <h2 id="gab" style={{ marginTop: 0 }}>Wszystkie gabinety</h2>
         {r.rows.length ? (
           <div style={{ overflowX: 'auto' }}><table className="num" data-testid="tabela">
-            <thead><tr><th>Gabinet</th><th>Wizyty NFZ</th><th>Zarobek NFZ</th><th>Wizyty prywatne</th><th>Zarobek prywatny</th><th>Razem z wizyt</th></tr></thead>
+            <thead><tr><th>Gabinet</th><th>Wizyty NFZ</th><th>Zarobek NFZ</th><th>Wizyty prywatne</th><th>Zarobek prywatny</th><th>Razem z wizyt</th><th>Dyżury wg Kalendarza</th></tr></thead>
             <tbody>{r.rows.map(x => (
               <tr key={x.id ?? '-'}><td>{x.color && <span className="dot" style={{ ['--cc' as string]: `var(--c${x.color})` }} />} {x.name}</td>
-                <td>{x.nv || '—'}</td><td>{z(x.e1)}</td><td>{x.pv || '—'}</td><td>{z(x.e2)}</td><td><b>{z(x.sum)}</b></td></tr>))}
+                <td>{x.nv || '—'}</td><td>{z(x.e1)}</td><td>{x.pv || '—'}</td><td>{z(x.e2)}</td><td><b>{z(x.sum)}</b></td><td>{z(x.kal)}</td></tr>))}
             </tbody>
-            <tfoot><tr><td>Razem</td><td>{T.nv || '—'}</td><td>{z(T.e1)}</td><td>{T.pv || '—'}</td><td>{z(T.e2)}</td><td>{z(T.sum)}</td></tr></tfoot>
+            <tfoot><tr><td>Razem</td><td>{T.nv || '—'}</td><td>{z(T.e1)}</td><td>{T.pv || '—'}</td><td>{z(T.e2)}</td><td>{z(T.sum)}</td><td>{z(T.kal)}</td></tr></tfoot>
           </table></div>) : <p className="muted">Brak gabinetów i wizyt w tym okresie.</p>}
-        <p className="hint">Zarobek NFZ: {r.basis === 'share' ? 'udział lekarza w wartości punktów' : 'pełna wartość punktów'} + przeglądy + kwoty dodatkowe (zmienisz w <Link href="/ustawienia">Ustawieniach</Link>). Zarobek prywatny: wynagrodzenie lekarza z cennika. Przychód z dyżurów (Kalendarz) – etap 4e.</p>
+        <p className="hint">Zarobek NFZ: {r.basis === 'share' ? 'udział lekarza w wartości punktów' : 'pełna wartość punktów'} + przeglądy + kwoty dodatkowe (zmienisz w <Link href="/ustawienia">Ustawieniach</Link>). Zarobek prywatny: wynagrodzenie lekarza z cennika. „Dyżury wg Kalendarza” to przychód z rozliczeń gabinetów (odbyte dyżury w <a href="/kalendarz">Kalendarzu</a>) – pokazany do porównania i <b>nie</b> doliczany do „Razem”, bo dotyczy tych samych wizyt.</p>
       </section>
 
       <section className="card" aria-labelledby="wyk">

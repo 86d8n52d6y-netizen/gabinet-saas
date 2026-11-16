@@ -40,7 +40,7 @@ with sync_playwright() as p:
     for n in ['Gabinet A', 'Gabinet B']:
         p0.goto(URL + '/gabinety?nowy=1'); fill(p0, name=n, pct='30'); submit(p0, 'Dodaj gabinet')
     A = sql("SELECT id FROM app.clinics WHERE name='Gabinet A'"); B = sql("SELECT id FROM app.clinics WHERE name='Gabinet B'")
-    p0.goto(URL + '/konto'); chk('Konto: kafelki „Dziś” (brak wizyt)', 'Dziś brak zapisanych wizyt' in p0.content() and p0.locator('a.tile').count() == 3)
+    p0.goto(URL + '/konto'); chk('Konto: kafelki „Dziś” (brak wizyt)', 'Dziś brak zapisanych wizyt' in p0.content() and p0.locator('a.tile').count() == 4 and 'Dziś bez dyżuru' in p0.content())
     c0.close()
     ctx = br.new_context(bypass_csp=True, accept_downloads=True); pg = ctx.new_page()
     errs = []; pg.on('pageerror', lambda e: errs.append(str(e)))
@@ -113,7 +113,7 @@ with sync_playwright() as p:
 
     # ---- Konto: kafelki „Dziś”
     pg.goto(URL + '/konto'); tiles = pg.locator('a.tile').all_inner_texts()
-    chk('Konto: kafelki „Dziś” z liczbą wizyt i kwotą (wpis z samą kwotą dodatkową nie jest wizytą – jak w obecnej aplikacji)', 'Dziś: 3 wizyty' in tiles[0] and 'Dziś: 2 wizyty' in tiles[1] and 'Dziś razem' in tiles[2], tiles)
+    chk('Konto: kafelki „Dziś” z liczbą wizyt i kwotą (wpis z samą kwotą dodatkową nie jest wizytą – jak w obecnej aplikacji)', 'Dziś bez dyżuru' in tiles[0] and 'Dziś: 3 wizyty' in tiles[1] and 'Dziś: 2 wizyty' in tiles[2] and 'Dziś razem' in tiles[3], tiles)
 
     # ---- izolacja
     cb, pb = konto(br, 'Lekarz B', 'b.4d@example.com', 'niebieska-lampa-w-oknie')

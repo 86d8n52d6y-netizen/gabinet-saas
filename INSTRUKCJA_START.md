@@ -38,7 +38,22 @@ Skrypt sam:
 **Aktualizacja do nowej wersji:** pobierz nowy ZIP, rozpakuj, **skopiuj plik `.env` ze starego folderu do nowego**
 (na Macu ukryte pliki pokazuje Cmd + Shift + kropka), uruchom skrypt. Dane testowe w bazie zostają.
 
-## 4. Co sprawdzić (etap 4d – Zarobki)
+## 4. Co sprawdzić (etap 4e-1 – Kalendarz)
+
+| Krok | Co zrobić | Czego oczekiwać |
+|---|---|---|
+| 1 | Menu → **Kalendarz** | Kalendarz jak w obecnej aplikacji; na liście gabinetów są gabinety z zakładki **Gabinety** |
+| 2 | Dodaj dyżur dziś (status „Odbyty”, obrót, lab) | przychód wyliczony jak w obecnej aplikacji; **Konto** → kafelek „Kalendarz: Dziś: …” |
+| 3 | Zapisz wizytę w Opisach NFZ / prywatnych w tym gabinecie dziś, potem otwórz edycję dyżuru | podpowiedź „Z opisów tego dnia…” i przycisk **Wpisz jako obrót** |
+| 4 | **Zarobki** → Dziś | kafelek i kolumna „Dyżury wg Kalendarza” (nie doliczane do „Razem”) |
+| 5 | Zmień w Kalendarzu nazwę lub % gabinetu → **Gabinety** | zmiana widoczna; i odwrotnie: zmiana w Gabinetach → odśwież Kalendarz |
+| 6 | Druga przeglądarka (np. Safari) → zaloguj się → Kalendarz | te same dyżury, kursy i ustawienia |
+| 7 | Kalendarz → Ustawienia → **Usuń wszystkie dane** | dyżury i ustawienia Kalendarza znikają, **gabinety zostają** |
+
+**Nowe konto bez gabinetów:** przy pierwszym zapisie w Kalendarzu powstaną 4 gabinety przykładowe „Gabinet 1–4” (jak w obecnej aplikacji) – zmienisz je w Kalendarzu albo w „Gabinety”.
+**Notatki dyżurów, opisy kosztów i kursy zapisują się na koncie** – pole notatki ma dopisek „bez danych pacjentów”.
+
+## Etap 4d – Zarobki
 
 | Krok | Co zrobić | Czego oczekiwać |
 |---|---|---|
