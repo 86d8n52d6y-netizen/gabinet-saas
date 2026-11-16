@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Przenieś dane ze starej aplikacji – Gabinet</title>
+<title>Kopie i przenoszenie danych – Gabinet</title>
 <link rel="stylesheet" href="/opisy-nfz/zasoby/fonts.css">
 <link rel="stylesheet" href="/opisy-nfz/zasoby/wspolne.css">
 <style>
@@ -19,9 +19,20 @@
 <body>
 <!--GABINET_DANE--><script src="/opisy-nfz/zasoby/gabinet-saas.js"></script>
 <main class="g-narrow" style="max-width:760px">
+  <section class="g-card" id="kopia">
+    <h1>Kopia danych z tego urządzenia</h1>
+    <p class="g-muted">Treść opisów i inicjały są tylko na tym urządzeniu (w przeglądarce). Pobierz co jakiś czas plik kopii – gdy wyczyścisz dane przeglądarki albo zmienisz komputer, wczytasz go niżej. Plik jest zaszyfrowany hasłem, które teraz ustalisz.</p>
+    <form id="f0" autocomplete="off">
+      <div class="g-field"><label for="h1">Hasło do pliku kopii (min. 10 znaków)</label><input id="h1" class="g-in" type="password" autocomplete="new-password" minlength="10" required></div>
+      <div class="g-field"><label for="h2">Powtórz hasło</label><input id="h2" class="g-in" type="password" autocomplete="new-password" minlength="10" required></div>
+      <div id="m0" role="alert"></div>
+      <button class="g-btn" type="submit" id="b9">Pobierz kopię danych</button>
+    </form>
+    <p class="g-small g-muted" id="ost"></p>
+  </section>
   <section class="g-card">
-    <h1>Przenieś dane ze starej aplikacji</h1>
-    <p class="g-muted">W starej aplikacji: strona główna → <b>Kopia całości</b> → „Pobierz kopię całości”. Tutaj wskaż ten plik i wpisz hasło, którym był zaszyfrowany.</p>
+    <h1>Wczytaj kopię lub przenieś dane ze starej aplikacji</h1>
+    <p class="g-muted">Plik kopii z tej aplikacji (powyżej) albo ze starej: strona główna → <b>Kopia całości</b> → „Pobierz kopię całości”.</p>
     <ol class="imp-steps g-small">
       <li>Plik odszyfrowuje się <b>tylko w tej przeglądarce</b> – hasło nie jest nigdzie wysyłane.</li>
       <li>Treść opisów i inicjały pacjentów zostają <b>na tym urządzeniu</b> (zaszyfrowane), jak przy zwykłej pracy.</li>
@@ -111,13 +122,46 @@
         'Kalendarz – <b>' + months.length + '</b> mies., <b>' + shifts + '</b> dyżurów' + (kv.has('pryw:cennik') ? ' · cennik' : '') + (kv.has('pryw:zestawy') ? ' · zestawy' : '') + (kv.has('pryw:katalog') ? ' · własne szablony' : '') + '.';
       const opts = cur => '<option value="new">utwórz nowy gabinet</option>' + C.clinics.map(k => '<option value="' + esc(k.id) + '"' + (k.id === cur ? ' selected' : '') + '>' + esc(k.name) + '</option>').join('') + '<option value="">bez gabinetu</option>';
       $('#mapa').innerHTML = OLD.map((o, i) => {
-        const same = C.clinics.find(k => k.name.trim().toLowerCase() === String(o.name).trim().toLowerCase());
+        const same = C.clinics.find(k => k.id === o.id) || C.clinics.find(k => k.name.trim().toLowerCase() === String(o.name).trim().toLowerCase());
         return '<tr><td>' + esc(o.name) + '</td><td>' + (o.n || '—') + '</td><td><select data-i="' + i + '" aria-label="Gabinet na koncie dla: ' + esc(o.name) + '">' + opts(same ? same.id : 'new') + '</select></td></tr>';
       }).join('') || '<tr><td colspan="3" class="g-muted">W kopii nie ma gabinetów.</td></tr>';
       $('#krok2').hidden = false; $('#krok2').scrollIntoView({ behavior: 'smooth' });
     } catch (e) { msg($('#m1'), e.message || String(e)); }
     finally { $('#b1').disabled = false; }
   });
+  /* kopia z tego urządzenia – ten sam układ co „Kopia całości” starej aplikacji (wczytuje się powyższym formularzem) */
+  const b64 = u8 => { let x = ''; for (let i = 0; i < u8.length; i += 0x8000) x += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000)); return btoa(x); };
+  const OST = 'gabinet-saas.kopia@' + C.uid;
+  const ostatnia = () => { try { const d = localStorage.getItem(OST); $('#ost').textContent = d ? 'Ostatnia kopia z tego urządzenia: ' + new Date(d).toLocaleString('pl-PL') + '.' : 'Z tego urządzenia nie pobrano jeszcze kopii.'; } catch (e) { } };
+  ostatnia();
+  $('#f0').addEventListener('submit', async ev => {
+    ev.preventDefault(); msg($('#m0'), '');
+    const p1 = $('#h1').value, p2 = $('#h2').value;
+    if (p1.length < 10) return msg($('#m0'), 'Hasło musi mieć co najmniej 10 znaków.');
+    if (p1 !== p2) return msg($('#m0'), 'Hasła się różnią.');
+    $('#b9').disabled = true;
+    try {
+      await G.ready('import');
+      const data = { app: 'gabinet', v: 1, at: new Date().toISOString(), uid: C.uid, name: C.name, g: {}, nfz: {}, ls: {} };
+      for (const st of ['kv', 'wizyty', 'opisy']) data.g[st] = (await G.store(st).all()).filter(([k]) => !/^base:/.test(k));
+      const ST = ['visits', 'bodies', 'segs'], db = await G._idbOpen('opisyNFZ@' + C.uid, ST, 1);
+      for (const st of ST) { const out = []; for (const [k, v] of await G._readAll(db, st)) { try { out.push([k, await G.dec(v, 'nfz:' + st + ':' + k)]); } catch (e) { } } data.nfz[st] = out; }
+      try { db.close(); } catch (e) { }
+      for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (/^(opisyNFZ|pryw|grafik)@/.test(k) && k.indexOf('@' + C.uid + '.') > 0) data.ls[k] = localStorage.getItem(k); }
+      const salt = crypto.getRandomValues(new Uint8Array(16)), iv = crypto.getRandomValues(new Uint8Array(12));
+      const base = await crypto.subtle.importKey('raw', TE.encode(p1.normalize('NFC')), 'PBKDF2', false, ['deriveKey']);
+      const key = await crypto.subtle.deriveKey({ name: 'PBKDF2', salt, iterations: 600000, hash: 'SHA-256' }, base, { name: 'AES-GCM', length: 256 }, false, ['encrypt']);
+      const ct = await crypto.subtle.encrypt({ name: 'AES-GCM', iv, additionalData: TE.encode('gabinet-kopia') }, key, TE.encode(JSON.stringify(data)));
+      const file = JSON.stringify({ app: 'gabinet-kopia', v: 1, at: data.at, kdf: { salt: b64(salt), iter: 600000 }, iv: b64(iv), ct: b64(new Uint8Array(ct)) });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([file], { type: 'application/json' }));
+      a.download = 'gabinet-kopia-' + data.at.slice(0, 10) + '.json'; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+      try { localStorage.setItem(OST, data.at); } catch (e) { }
+      $('#h1').value = ''; $('#h2').value = ''; ostatnia();
+      msg($('#m0'), 'Pobrano kopię: Opisy NFZ – ' + wiz(data.nfz.visits.length) + ', Opisy prywatne – ' + wiz(data.g.wizyty.length) + '. Zapamiętaj hasło – bez niego pliku nie da się odczytać.', 'g-ok');
+    } catch (e) { msg($('#m0'), 'Nie udało się utworzyć kopii: ' + (e && e.message || e)); }
+    finally { $('#b9').disabled = false; }
+  });
+
   $('#b0').addEventListener('click', () => { DATA = null; $('#krok2').hidden = true; $('#plik').value = ''; $('#plik').focus(); });
 
   $('#b2').addEventListener('click', async () => {
@@ -199,7 +243,7 @@
         for (const [k, m0] of vis) {
           if (!m0 || typeof m0 !== 'object') continue;
           const m = remap(m0, map), cur = await G.store('wizyty').get(k).catch(() => undefined);
-          if (cur && String(cur.at || '') >= String(m.at || '')) { skip++; continue; }
+          if (cur && String(cur.at || '') > String(m.at || '')) { skip++; continue; }   // ta sama wersja – wczytujemy (uzupełnia treść i inicjały)
           if (bodies.has(k)) await G.store('opisy').put(k, bodies.get(k));
           await G.store('wizyty').put(k, m); send.push(G._cloudMeta(m)); n++;
         }
@@ -219,7 +263,7 @@
         for (const [k, m0] of vis) {
           if (!m0 || typeof m0 !== 'object') continue;
           const m = remap(m0, map), cur = have.get(k);
-          if (cur && String(cur.at || '') >= String(m.at || '')) { skip++; continue; }
+          if (cur && String(cur.at || '') > String(m.at || '')) { skip++; continue; }   // ta sama wersja – wczytujemy (uzupełnia treść i inicjały)
           ops.push(['visits', k, m]); if (bodies.has(k)) ops.push(['bodies', k, bodies.get(k)]); send.push(G._cloudMeta(m)); n++;
         }
         for (const [k, v] of (DATA.nfz.segs || [])) if (!haveSeg.has(k)) ops.push(['segs', k, v]);

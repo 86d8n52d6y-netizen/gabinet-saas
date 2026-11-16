@@ -19,24 +19,15 @@ Docker Desktop jest darmowy do użytku prywatnego i w małych firmach (do 250 os
 2. Zielony przycisk **Code → Download ZIP**.
 3. Rozpakuj ZIP i wejdź do rozpakowanego folderu (tam są pliki `uruchom-…`).
 
-## 3. Uruchom
+## 3. Uruchom / zaktualizuj
 
-**macOS (zalecane – przez Terminal, omija blokadę „Apple nie może zweryfikować…”):**
+Pełna instrukcja obsługi: **`INSTRUKCJA_OBSLUGI.md`**.
 
-1. Otwórz **Terminal** (Cmd + Spacja → „Terminal”).
-2. Wpisz `cd ` (ze spacją), przeciągnij rozpakowany folder do okna Terminala, Enter.
-3. Wpisz `bash uruchom-mac.command` i Enter.
+**macOS:** Terminal → `cd ` (ze spacją) → przeciągnij folder → Enter → `bash zainstaluj-mac.command`.
+Skrypt przenosi klucze do `~/Gabinet/.env` (przy kolejnych wersjach nie trzeba kopiować `.env`), robi kopię bazy przed aktualizacją,
+uruchamia aplikację i tworzy aplikację **Gabinet** w `~/Applications` (start jednym kliknięciem).
 
 **Windows:** kliknij dwa razy `uruchom-windows.bat` (przy „System Windows ochronił komputer”: **Więcej informacji → Uruchom mimo to**).
-
-Skrypt sam:
-1. sprawdzi, czy Docker działa,
-2. utworzy albo uzupełni plik `.env` losowymi hasłami i kluczami (tylko na Twoim komputerze; istniejących wartości nie zmienia),
-3. zbuduje aplikację i zaktualizuje bazę (pierwszy raz 3–10 minut, kolejne zwykle 1–2 minuty),
-4. otworzy przeglądarkę na **http://localhost:3000**.
-
-**Aktualizacja do nowej wersji:** pobierz nowy ZIP, rozpakuj, **skopiuj plik `.env` ze starego folderu do nowego**
-(na Macu ukryte pliki pokazuje Cmd + Shift + kropka), uruchom skrypt. Dane testowe w bazie zostają.
 
 ## 4. Co sprawdzić (etap 4e-1 – Kalendarz)
 

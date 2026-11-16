@@ -117,6 +117,26 @@ with sync_playwright() as p:
     chk('ponowny import: bez duplikatów (2 gabinety, 2+1 wizyty, dyżur s1 raz)', sql("SELECT count(*) FROM app.clinics WHERE deleted_at IS NULL") == '2'
         and sql("SELECT count(*) FROM app.saved_descriptions WHERE deleted_at IS NULL") == '3'
         and [x['id'] for x in json.loads(sql(f"SELECT data::text FROM app.calendar_docs WHERE doc='m{MK}'"))['shifts']].count('s1') == 1, pg.inner_text('#log'))
+
+    # kopia z tego urządzenia → nowe urządzenie (pusta przeglądarka) → wczytanie: treść opisów i inicjały wracają
+    ctx.set_default_timeout(30000)
+    pg.goto(URL + '/import'); pg.fill('#h1', 'haslo-kopii-urzadzenia'); pg.fill('#h2', 'haslo-kopii-urzadzenia')
+    with pg.expect_download() as d: pg.click('#b9')
+    kop2 = open(d.value.path()).read()
+    chk('kopia z urządzenia: plik zaszyfrowany (bez inicjałów i nazw)', json.loads(kop2).get('app') == 'gabinet-kopia' and set(json.loads(kop2)) == {'app', 'v', 'at', 'kdf', 'iv', 'ct'} and 'Gabinet Alfa' not in kop2)
+    chk('kopia z urządzenia: komunikat z liczbą wizyt i data ostatniej kopii', '2 wizyty' in pg.inner_text('#m0') and 'Ostatnia kopia' in pg.inner_text('#ost'), pg.inner_text('#m0'))
+    path2 = '/tmp/gabinet-kopia-saas.json'; open(path2, 'w').write(kop2)
+    c3 = br.new_context(bypass_csp=True); p3 = c3.new_page(); p3.goto(URL + '/logowanie'); fill(p3, email='imp@example.com', password='zielony-kubek-na-biurku'); submit(p3, 'Zaloguj')
+    p3.goto(URL + '/opisy-nfz'); ready_nfz(p3)
+    chk('nowe urządzenie przed wczytaniem: wizyty z konta bez inicjałów', sorted((x or '') for x in p3.evaluate("dbList().map(m=>m.ini||'')")) == ['', ''])
+    p3.goto(URL + '/import'); p3.set_input_files('#plik', path2); p3.fill('#haslo', 'haslo-kopii-urzadzenia'); p3.click('#b1'); p3.wait_for_selector('#krok2:not([hidden])', timeout=30000)
+    chk('własna kopia: gabinety dopasowane do tych samych (identyfikator)', sorted(p3.locator('#mapa select').nth(i).input_value() for i in range(p3.locator('#mapa select').count())) == sorted([ALFA, BETA]))
+    p3.click('#b2'); p3.wait_for_function("document.getElementById('h3').textContent.startsWith('Gotowe')", timeout=30000)
+    p3.goto(URL + '/opisy-nfz'); ready_nfz(p3)
+    chk('nowe urządzenie po wczytaniu: inicjały KW, MN wróciły', sorted(p3.evaluate("dbList().map(m=>m.ini)")) == ['KW', 'MN'])
+    p3.goto(URL + '/opisy-prywatne'); ready_pr(p3)
+    chk('nowe urządzenie: wizyta prywatna „PR”', [m['ini'] for m in p3.evaluate("[...S.visits.values()]")] == ['PR'])
+    chk('konto bez zmian po wczytaniu własnej kopii (2 gabinety, 3 wizyty)', sql("SELECT count(*) FROM app.clinics WHERE deleted_at IS NULL") == '2' and sql("SELECT count(*) FROM app.saved_descriptions WHERE deleted_at IS NULL") == '3')
     chk('brak błędów JavaScript', not errs, errs[:5])
     br.close()
 if srv: srv.terminate()

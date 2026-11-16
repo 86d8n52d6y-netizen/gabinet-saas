@@ -124,6 +124,29 @@ Projekt bazy: `saas/db/SCHEMAT_BAZY.md` (czeka na akceptację przed utworzeniem 
 | 6 | R6: zestawienia **w ramach jednego konta** (konto = jeden lekarz; podział wg gabinetu, okresu, rodzaju zabiegu). Funkcja „zespół” – nie w tej wersji. |
 | 7 | R5: własne procedury NFZ **tak**, z widocznym oznaczeniem „niesprawdzane przez zasady NFZ”; punkty wpisuje użytkownik; reguły łączenia i limitów NFZ ich nie obejmują. |
 
+### Zmiana kolejności prac (Patryk, 16.11.2026, decyzja 8)
+| Etap | Zakres | Stan |
+|---|---|---|
+| 1 | Dokończenie sekcji 5 specyfikacji (FUNKCJE APLIKACJI 5.1–5.7). Licencje i płatności (sekcje 8–9), panel administratora (10) – **po testach**. | zrealizowane (przegląd niżej) |
+| 2 | Wersja do 7 dni pracy **tylko na Macu Patryka**: Docker + aplikacja „Gabinet”, automatyczne kopie bazy, kopia treści z urządzenia, instrukcja obsługi | zrealizowane |
+| 3 | 7 dni testów Patryka, poprawki zgłoszeń, podsumowanie | czeka na Patryka |
+| 4 | Kompleksowe zabezpieczenie (kod, autorstwo, backend/API, uwierzytelnianie, dane, ataki, kopie) + audyt i testy bezpieczeństwa | po etapie 3 |
+| 5 | Hosting i publikacja – **tylko po wyraźnej zgodzie**, z wcześniejszą specyfikacją, kosztami i planem migracji | odłożony |
+
+#### Przegląd sekcji 5 specyfikacji (stan 16.11.2026)
+| Punkt | Wymaganie | Realizacja |
+|---|---|---|
+| 5.1 | Generator NFZ i prywatny, wybór i łączenie procedur, własne procedury, edycja, kopiowanie | Moduły 1:1 z obecnej aplikacji (testy: tekst = stara aplikacja); własne kody NFZ z oznaczeniem |
+| 5.2 | Własna baza procedur: dodawanie, edycja, usuwanie, kategorie, wyszukiwanie, ulubione, kwoty, własne opisy | Opisy prywatne (katalog, kategorie, szukaj, ulubione, cennik, szablony) + Katalog NFZ; dane tylko w koncie (RLS) |
+| 5.3 | Zestawy: zapis, nazwa, edycja, usuwanie, kolejność, kopiowanie, wstawianie | Opisy prywatne (zestawy: zup/zdown, zdup, zuse) i Opisy NFZ (zestawy kodów: setmv, setdup, setapply) |
+| 5.4 | Cena, kwota lekarza, %, parametry; automatyczne wyliczenie | Cennik z % per gabinet, kwoty stałe, koszty; NFZ: punkty × stawka, udział 40/35%, przeglądy 350 zł/h |
+| 5.5 | Autozapis, synchronizacja, odporność na odświeżenie, status, błędy połączenia, ochrona przed utratą, konflikty | Wizyty: nowszy czas zmiany wygrywa + znaczniki usunięcia; Kalendarz i materiały: **kontrola wersji + scalanie trójstronne** (dodane), kolejka offline, keepalive, status w pasku |
+| 5.6 | Dzień/tydzień/miesiąc/rok, dni tygodnia, zestawienia wg lekarza, porównanie okresów, średnie, filtr dat i kategorii, wykresy, bez podwójnego liczenia | /zarobki: okresy, własny zakres, **dni tygodnia, średnie, poprzedni okres, filtr NFZ/prywatne/kategoria** (dodane), wykres, CSV; jedno źródło kwot (earnings_entries). „Wg lekarza” = konto (decyzja 6) |
+| 5.7 | Historia: wyszukiwanie, filtr, przegląd, ponowne użycie, edycja, korekta, bez danych pacjentów | Historia w modułach (szukaj, filtry, otwórz/edytuj, użyj ponownie); na koncie bez inicjałów i treści |
+| – | Import danych ze starej aplikacji (4e-2) | /import: „Kopia całości” + kopia z urządzenia (ten sam format) |
+| – | Atrapy | „gabinet z dyżuru” (G.dayClinic) zwracał zawsze pusty wynik – naprawione; nieaktualne napisy „faza/etap” usunięte; test klikający wszystkie przyciski modułów (t_5_przyciski.py) |
+
+
 ### Etap 4b – rozwiązanie techniczne generatora NFZ (16.11.2026)
 | Kwestia | Rozwiązanie |
 |---|---|

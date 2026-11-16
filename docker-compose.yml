@@ -1,5 +1,5 @@
 # Gabinet – środowisko LOKALNE (komputer dewelopera). Nie służy do produkcji.
-# Start: docker compose up --build   →   http://localhost:3000
+# Start: docker compose up --build   →   http://localhost:3000   (na Macu: bash zainstaluj-mac.command)
 # Porty są dostępne tylko z tego komputera (127.0.0.1).
 name: gabinet
 
@@ -13,6 +13,7 @@ services:
       POSTGRES_PASSWORD: ${DB_ADMIN_PASSWORD:?Ustaw DB_ADMIN_PASSWORD w pliku .env}
     volumes:
       - dane_bazy:/var/lib/postgresql/data
+      - ${GABINET_KOPIE:-./kopie}:/kopie
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U migrator -d gabinet"]
       interval: 3s
@@ -46,9 +47,23 @@ services:
     ports:
       - "127.0.0.1:3000:3000"
 
+  # Automatyczna kopia bazy na dysk komputera (folder GABINET_KOPIE z .env, domyślnie ./kopie): codziennie, 30 ostatnich.
+  kopie:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    depends_on:
+      db: { condition: service_healthy }
+    environment:
+      PGPASSWORD: ${DB_ADMIN_PASSWORD}
+      TZ: Europe/Warsaw
+    volumes:
+      - ${GABINET_KOPIE:-./kopie}:/kopie
+      - ./scripts/kopia-bazy.sh:/kopia-bazy.sh:ro
+    entrypoint: ["/bin/sh", "/kopia-bazy.sh"]
+
   # Testowa skrzynka pocztowa – przechwytuje WSZYSTKIE maile (nic nie wychodzi do internetu). Podgląd: http://localhost:8025
   mailpit:
-    image: axllent/mailpit:latest   # tylko lokalnie; konkretną wersję przypniemy w fazie 7
+    image: axllent/mailpit:latest   # tylko lokalnie (testowa skrzynka)
     restart: unless-stopped
     ports:
       - "127.0.0.1:8025:8025"

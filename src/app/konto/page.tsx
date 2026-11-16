@@ -37,7 +37,7 @@ export default async function Konto({ searchParams }: { searchParams: Promise<{ 
           <a className="tile" href="/opisy-prywatne"><b>Opisy prywatne</b><span className="muted">{dzis.pv ? `Dziś: ${wiz(dzis.pv)} · ${fmtC(dzis.e2)}` : 'Dziś brak zapisanych wizyt'}</span></a>
           <Link className="tile" href="/zarobki"><b>Zarobki</b><span className="muted">{dzis.sum ? `Dziś razem: ${fmtC(dzis.sum)}` : 'Wszystkie gabinety, okresy, CSV'}</span></Link>
         </nav>)}
-      {dzis && <p className="hint">Masz dane w starej aplikacji? <a href="/import">Przenieś dane ze starej aplikacji</a> (plik „Kopia całości”).</p>}
+      {dzis && <p className="hint"><a href="/import">Kopia danych z tego urządzenia</a> (treść opisów i inicjały są tylko w tej przeglądarce) · <a href="/import">Przenieś dane ze starej aplikacji</a>.</p>}
       {!s.emailVerified && (
         <section className="card" aria-labelledby="ver">
           <h2 id="ver" style={{ marginTop: 0 }}>Potwierdź adres e-mail</h2>
