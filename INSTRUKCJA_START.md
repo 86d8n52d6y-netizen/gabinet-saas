@@ -38,7 +38,19 @@ Skrypt sam:
 **Aktualizacja do nowej wersji:** pobierz nowy ZIP, rozpakuj, **skopiuj plik `.env` ze starego folderu do nowego**
 (na Macu ukryte pliki pokazuje Cmd + Shift + kropka), uruchom skrypt. Dane testowe w bazie zostają.
 
-## 4. Co sprawdzić (etap 4b – Opisy NFZ)
+## 4. Co sprawdzić (etap 4c – Opisy prywatne)
+
+| Krok | Co zrobić | Czego oczekiwać |
+|---|---|---|
+| 1 | Menu → **Opisy prywatne** | ten sam moduł co w obecnej aplikacji (19 procedur, cenniki, szablony, zestawy, zarobki) |
+| 2 | **Cennik** → wybierz gabinet → ceny i % | ceny pojawiają się przy dodawaniu procedur w tym gabinecie |
+| 3 | Zrób wizytę (procedury, pola, opcjonalnie e-ZLA) → **Zapisz** | **identyczny tekst** jak w obecnej aplikacji; u góry „Historia zsynchronizowana” |
+| 4 | Druga przeglądarka → Opisy prywatne → **Historia** | wizyta (procedury, kwoty, gabinet), komunikat „treść opisu jest tylko na urządzeniu, na którym zapisano wizytę”; ten sam cennik |
+| 5 | **Szablony** → zmień szablon albo dodaj ulubioną procedurę | to samo w drugiej przeglądarce po odświeżeniu |
+
+Przeniesienie historii prywatnej i Kalendarza ze starej aplikacji („Kopia całości”) – etap 4e.
+
+## Etap 4b – Opisy NFZ
 
 | Krok | Co zrobić | Czego oczekiwać |
 |---|---|---|

@@ -17,6 +17,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <nav className="nav" aria-label="Menu">
           {inside ? (<>
             <a href="/opisy-nfz">Opisy NFZ</a>
+            <a href="/opisy-prywatne">Opisy prywatne</a>
             <Link href="/katalog-nfz">Katalog NFZ</Link>
             <Link href="/gabinety">Gabinety</Link>
             <Link href="/ustawienia">Ustawienia</Link>

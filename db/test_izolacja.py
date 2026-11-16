@@ -114,4 +114,10 @@ r = as_('gabinet_app', A, f"INSERT INTO app.saved_descriptions(owner_id,client_i
 chk('client_key: tylko identyfikator (litery, cyfry, - _ ; bez spacji i polskich znaków)', not r[0] and 'check' in r[1].lower(), r)
 r = as_('gabinet_app', A, f"INSERT INTO app.saved_descriptions(owner_id,client_id,client_key,module,visit_date,seq_no,meta) VALUES ('{A}',gen_random_uuid(),'v1','nfz',current_date,1,jsonb_build_object('x',repeat('a',9000)))")
 chk('meta wpisu: limit 8 KB (nie zmieści treści opisu)', not r[0], r)
+# ---- materiały gabinetowe (migracja 0005) ----
+r = as_('gabinet_app', A, f"INSERT INTO app.user_blobs(owner_id,key,data) VALUES ('{A}','pryw:cennik','{{\"a\":1}}')"); chk('materiały gabinetowe: zapis własnych', r[0], r)
+r = as_('gabinet_app', B, "SELECT count(*) FROM app.user_blobs"); chk('materiały gabinetowe: B nie widzi materiałów A', r == (True, '0'), r)
+r = as_('gabinet_app', B, f"UPDATE app.user_blobs SET data='{{}}' WHERE owner_id='{A}' RETURNING 1"); chk('materiały gabinetowe: B nie zmieni materiałów A', r[0] and r[1] == '', r)
+r = as_('gabinet_app', A, f"INSERT INTO app.user_blobs(owner_id,key,data) VALUES ('{A}','Pacjenci Lista','{{}}')"); chk('materiały gabinetowe: tylko klucze w formacie modułu', not r[0], r)
+r = as_('gabinet_admin', None, "SELECT count(*) FROM app.user_blobs"); chk('administrator nie czyta materiałów gabinetowych', denied(r), r)
 print(f'--- izolacja i uprawnienia: {ok} OK, {bad} błędów'); sys.exit(1 if bad else 0)

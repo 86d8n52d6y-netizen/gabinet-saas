@@ -27,17 +27,41 @@ PATCHES = [
    "gab:typeof x.gab==='string'&&/^[A-Za-z0-9_-]{1,40}$/.test(x.gab)?x.gab:''};"),
 ]
 
-src = open(os.path.join(OLD, 'nfz.html'), encoding='utf-8').read()
-for name, old, new in PATCHES:
-    n = src.count(old)
-    if n != 1: sys.exit(f'Poprawka „{name}” pasuje {n} razy (oczekiwano 1) – sprawdź zmiany w opisy-nfz/nfz.html')
-    src = src.replace(old, new)
-head = f'<!-- Gabinet SaaS: generator przeniesiony z opisy-nfz@{commit} (nfz.html) przez tests/tools/przenies_generator.py; poprawki: generator/ZMIANY.md -->\n'
-open(os.path.join(OUT, 'nfz.html'), 'w', encoding='utf-8').write(head + src)
+PATCHES_PRYW = [
+  ('R1 bez manifestu i ikon wersji statycznej',
+   '<link rel="manifest" href="manifest.webmanifest">\n<link rel="icon" href="favicon.svg" type="image/svg+xml">\n<link rel="apple-touch-icon" href="apple-touch-icon.png">\n', ''),
+  ('R2 czcionki lokalnie zamiast Google Fonts',
+   '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">',
+   '<link rel="stylesheet" href="/opisy-nfz/zasoby/fonts.css">'),
+  ('R3 wspólne style z zasobów chronionych logowaniem',
+   '<link rel="stylesheet" href="wspolne.css?v=1">', '<link rel="stylesheet" href="/opisy-nfz/zasoby/wspolne.css">'),
+  ('R4 wspolne.js → gabinet-saas.js (konto SaaS, klucz urządzenia, synchronizacja bez treści, pól szablonu, e-ZLA i inicjałów)',
+   '<script src="wspolne.js?v=1"></script>', '<!--GABINET_DANE--><script src="/opisy-nfz/zasoby/gabinet-saas.js"></script>'),
+  ('R5 katalog procedur z zasobów chronionych logowaniem',
+   '<script src="prywatne-katalog.js?v=1"></script>', '<script src="/opisy-nfz/zasoby/prywatne-katalog.js"></script>'),
+  ('R6 historia: wpis z innego urządzenia (z chmury) – komunikat, że treść jest na urządzeniu zapisu (zamiast „usunięta”)',
+   "'<span class=\"pw-note\">treść opisu usunięta (ustawienie prywatności)</span>'",
+   "'<span class=\"pw-note\">' + (m.cloud ? 'treść opisu jest tylko na urządzeniu, na którym zapisano wizytę' : 'treść opisu usunięta (ustawienie prywatności)') + '</span>'"),
+]
+
+def przenies(plik, patches):
+    src = open(os.path.join(OLD, plik), encoding='utf-8').read()
+    for name, old, new in patches:
+        n = src.count(old)
+        if n != 1: sys.exit(f'Poprawka „{name}” pasuje {n} razy (oczekiwano 1) – sprawdź zmiany w opisy-nfz/{plik}')
+        src = src.replace(old, new)
+    head = f'<!-- Gabinet SaaS: przeniesione z opisy-nfz@{commit} ({plik}) przez tests/tools/przenies_generator.py; poprawki: generator/ZMIANY.md -->\n'
+    open(os.path.join(OUT, plik), 'w', encoding='utf-8').write(head + src)
+
+przenies('nfz.html', PATCHES)
+przenies('prywatne.html', PATCHES_PRYW)
+shutil.copy(os.path.join(OLD, 'prywatne-katalog.js'), os.path.join(OUT, 'prywatne-katalog.js'))
 shutil.copy(os.path.join(OLD, 'szablony.js'), os.path.join(OUT, 'szablony.js'))
 shutil.copy(os.path.join(OLD, 'wspolne.css'), os.path.join(OUT, 'wspolne.css'))
 with open(os.path.join(OUT, 'ZMIANY.md'), 'w', encoding='utf-8') as f:
-    f.write(f'# Generator Opisów NFZ – zmiany względem obecnej aplikacji\n\nŹródło: repo `opisy-nfz`, commit `{commit}` – pliki `nfz.html`, `szablony.js`, `wspolne.css` (logika, pytania, reguły NFZ i teksty bez zmian).\n'
-            'Plik `wspolne.js` (sejf z hasłem w przeglądarce) zastąpiony przez `gabinet-saas.js`.\n\n| # | Poprawka |\n|---|---|\n')
+    f.write(f'# Moduły Opisy NFZ i Opisy prywatne – zmiany względem obecnej aplikacji\n\nŹródło: repo `opisy-nfz`, commit `{commit}` – pliki `nfz.html`, `szablony.js`, `prywatne.html`, `prywatne-katalog.js`, `wspolne.css` (logika, pytania, reguły NFZ, szablony i teksty bez zmian).\n'
+            'Plik `wspolne.js` (sejf z hasłem w przeglądarce) zastąpiony przez `gabinet-saas.js`.\n\n## Opisy NFZ (`nfz.html`)\n\n| # | Poprawka |\n|---|---|\n')
     for name, _, _ in PATCHES: f.write(f'| {name.split(" ", 1)[0]} | {name.split(" ", 1)[1]} |\n')
-print(f'generator przeniesiony z opisy-nfz@{commit}: {len(PATCHES)} poprawek')
+    f.write('\n## Opisy prywatne (`prywatne.html`)\n\n| # | Poprawka |\n|---|---|\n')
+    for name, _, _ in PATCHES_PRYW: f.write(f'| {name.split(" ", 1)[0]} | {name.split(" ", 1)[1]} |\n')
+print(f'przeniesiono z opisy-nfz@{commit}: nfz.html ({len(PATCHES)} poprawek), prywatne.html ({len(PATCHES_PRYW)} poprawek)')

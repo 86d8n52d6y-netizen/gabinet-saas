@@ -14,7 +14,10 @@
   function b64(u8) { let s = ''; for (let i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000)); return btoa(s); }
   function unb64(s) { const b = atob(s), u = new Uint8Array(b.length); for (let i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; }
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const MOD = C.mod === 'prywatne' ? 'prywatne' : 'nfz';
   const G = window.G = { user: { id: C.uid, name: C.name }, key: null, mod: null, esc };
+  G.zl = c => (Math.round(c) / 100).toLocaleString('pl-PL', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' zł';
+  G.today = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
 
   /* ---------- IndexedDB ---------- */
   function idbOpen(name, stores, ver) {
@@ -75,6 +78,12 @@
     G._ready = (async () => {
       G.key = await deviceKey();
       if (C.seg && typeof C.seg === 'object') await kvPutLocal('nfz:seg', C.seg);          // własne wersje tekstów – z konta
+      const pend = pendingBlobs();
+      for (const [k, v] of Object.entries(C.blobs || {})) {                                 // cennik, ustawienia, szablony, zestawy – z konta
+        if (pend.includes(k)) { const loc = await G.store('kv').get(k).catch(() => undefined); if (loc !== undefined) { postBlob(k, loc); continue; } }
+        await kvPutLocal(k, v);
+      }
+      pend.filter(k => !(k in (C.blobs || {}))).forEach(k => G.store('kv').get(k).then(v => v !== undefined && postBlob(k, v), () => { }));
       try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => { }); } catch (e) { }
       return G.user;
     })();
@@ -83,7 +92,7 @@
 
   /* ---------- pasek aplikacji ---------- */
   const LOGO = '<svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path d="M16 4c-3 0-4.4 1.6-7 1.6C5.8 5.6 4 8 4 11.6c0 5.6 2.3 15.4 5.6 15.4 2.3 0 2.2-6.6 6.4-6.6s4.1 6.6 6.4 6.6c3.3 0 5.6-9.8 5.6-15.4C28 8 26.2 5.6 23 5.6 20.4 5.6 19 4 16 4z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>';
-  const NAV = [['/opisy-nfz', 'Opisy NFZ', 'nfz'], ['/katalog-nfz', 'Katalog NFZ'], ['/gabinety', 'Gabinety'], ['/ustawienia', 'Ustawienia'], ['/konto', 'Konto']];
+  const NAV = [['/opisy-nfz', 'Opisy NFZ', 'nfz'], ['/opisy-prywatne', 'Opisy prywatne', 'prywatne'], ['/katalog-nfz', 'Katalog NFZ'], ['/gabinety', 'Gabinety'], ['/ustawienia', 'Ustawienia'], ['/konto', 'Konto']];
   G.bar = function (mod) {
     let el = document.getElementById('gbar');
     if (!el) { el = document.createElement('header'); el.id = 'gbar'; document.body.insertBefore(el, document.body.firstChild); }
@@ -102,9 +111,18 @@
   }
 
   /* ---------- magazyn konta na urządzeniu (kv: ustawienia tekstów, sumy; szkice) ---------- */
-  const STORES = ['kv', 'szkice'];
+  const STORES = ['kv', 'szkice', 'wizyty', 'opisy'];                                   // wizyty/opisy – Opisy prywatne (wersja 2 bazy)
   let udb = null;
-  async function userDb() { if (!udb) udb = await idbOpen('gabinet-saas@' + C.uid, STORES); return udb; }
+  async function userDb() { if (!udb) udb = await idbOpen('gabinet-saas@' + C.uid, STORES, 2); return udb; }
+  const BLOBS = ['pryw:cennik', 'pryw:ust', 'pryw:katalog', 'pryw:zestawy'];
+  const PB_KEY = 'gabinet-saas.bloby@' + C.uid;
+  const pendingBlobs = () => { try { const a = JSON.parse(localStorage.getItem(PB_KEY) || '[]'); return Array.isArray(a) ? a : []; } catch (e) { return []; } };
+  const setPendingBlobs = a => { try { localStorage.setItem(PB_KEY, JSON.stringify([...new Set(a)])); } catch (e) { } };
+  function postBlob(k, v) {
+    setPendingBlobs(pendingBlobs().concat(k));
+    post('/api/dane', { key: k, data: v }).then(() => { setPendingBlobs(pendingBlobs().filter(x => x !== k)); syncErr = ''; syncStatus(); }, fail);
+  }
+  let prywMerged = false;
   async function kvPutLocal(k, v) { const s = await enc(v, 'g:kv:' + k); const db = await userDb(); await run(db, ['kv'], 'readwrite', t => { t.objectStore('kv').put(s, k); }); }
   G.store = function (name) {
     const aad = k => 'g:' + name + ':' + k;
@@ -113,9 +131,19 @@
       async put(k, v) {
         const s = await enc(v, aad(k)); const db = await userDb(); await run(db, [name], 'readwrite', t => { t.objectStore(name).put(s, k); });
         if (name === 'kv' && k === 'nfz:seg') postSettings({ seg: v });           // własne wersje stałych tekstów → konto (bez danych pacjentów)
+        if (name === 'kv' && BLOBS.includes(k)) postBlob(k, v);                   // cennik, ustawienia, szablony, zestawy → konto
+        if (name === 'wizyty' && MOD === 'prywatne' && v && v.id === k) queue([v], []);
       },
-      async del(k) { const db = await userDb(); await run(db, [name], 'readwrite', t => { t.objectStore(name).delete(k); }); },
-      async all() { const rows = await readAll(await userDb(), name); return (await Promise.all(rows.map(([k, v]) => dec(v, aad(k)).then(x => [k, x], () => null)))).filter(Boolean); }
+      async del(k) {
+        const db = await userDb(); await run(db, [name], 'readwrite', t => { t.objectStore(name).delete(k); });
+        if (name === 'wizyty' && MOD === 'prywatne') queue([], [{ id: k, at: new Date().toISOString() }]);
+      },
+      async all() {
+        const rows = await readAll(await userDb(), name);
+        const out = (await Promise.all(rows.map(([k, v]) => dec(v, aad(k)).then(x => [k, x], () => null)))).filter(Boolean);
+        if (name === 'wizyty' && MOD === 'prywatne' && !prywMerged) { prywMerged = true; return reconcile(prywLocal, out); }
+        return out;
+      }
     };
   };
   G.draft = {
@@ -124,6 +152,10 @@
     clear: mod => G.store('szkice').del(mod).catch(() => { })
   };
   G.sums = { put: () => Promise.resolve(), get: () => Promise.resolve(undefined) };   // sumy liczy serwer z historii w chmurze
+  const prywLocal = {                                                                   // zapis lokalny wizyt prywatnych bez wysyłania (scalanie)
+    async write(ops) { const db = await userDb(); const e2 = await Promise.all(ops.map(o => o.del ? o : enc(o.val, 'g:' + o.s + ':' + o.key).then(x => ({ s: o.s, key: o.key, val: x }))));
+      await run(db, [...new Set(e2.map(o => o.s))], 'readwrite', t => { e2.forEach(o => { const st = t.objectStore(o.s); if (o.del) st.delete(o.key); else st.put(o.val, o.key); }); }); }
+  };
   G.clinics = async (all) => (C.clinics || []).filter(c => all || c.active !== false).map(c => ({ id: c.id, name: c.name, short: c.short, color: c.color, active: c.active !== false }));
   G.dayClinic = async () => '';                                                        // gabinet z dyżuru – po przeniesieniu Kalendarza (etap 4e)
 
@@ -156,10 +188,15 @@
   function postSettings(b) { post('/api/nfz/ustawienia', b).then(() => { syncErr = ''; syncStatus(); }, fail); }
 
   /* ---------- historia wizyt: urządzenie ↔ chmura ---------- */
-  const DEL_KEY = 'gabinet-saas.nfz.usuniete@' + C.uid;
+  const DEL_KEY = 'gabinet-saas.' + MOD + '.usuniete@' + C.uid;
   const pendingDel = () => { try { const a = JSON.parse(localStorage.getItem(DEL_KEY) || '[]'); return Array.isArray(a) ? a : []; } catch (e) { return []; } };
   const setPendingDel = a => { try { localStorage.setItem(DEL_KEY, JSON.stringify(a.slice(-2000))); } catch (e) { } };
-  const cloudMeta = m => { const o = Object.assign({}, m); delete o.ini; delete o.body; delete o.cloud; return o; };   // bez inicjałów
+  const API = MOD === 'prywatne' ? '/api/pryw/wizyty' : '/api/nfz/wizyty';
+  const cloudMeta = m => {                                                              // do chmury: bez inicjałów, treści, pól szablonu, e-ZLA
+    const o = Object.assign({}, m); delete o.ini; delete o.body; delete o.cloud; delete o.ezla;
+    if (Array.isArray(o.items)) o.items = o.items.map(i => { const x = Object.assign({}, i); delete x.vals; delete x.def; delete x.snap; return x; });
+    return o;
+  };
   const dirty = new Map();                                                               // id → wpis do wysłania
   let flushT = null, flushing = false;
   function queue(puts, dels) {
@@ -174,7 +211,7 @@
     flushing = true;
     try {
       for (let i = 0; i < put.length || (i === 0 && del.length); i += 400) {
-        await post('/api/nfz/wizyty', { put: put.slice(i, i + 400).map(cloudMeta), del: i === 0 ? del : [] });
+        await post(API, { put: put.slice(i, i + 400).map(cloudMeta), del: i === 0 ? del : [] });
       }
       put.forEach(m => { if (dirty.get(m.id) === m) dirty.delete(m.id); });
       setPendingDel(pendingDel().filter(d => !del.some(x => x.id === d.id && x.at === d.at)));
@@ -185,10 +222,11 @@
   addEventListener('online', () => flush());
   addEventListener('pagehide', () => {                                                   // ostatnie zmiany przy zamknięciu karty
     const put = [...dirty.values()].map(cloudMeta), del = pendingDel();
-    if ((put.length || del.length) && navigator.sendBeacon) navigator.sendBeacon('/api/nfz/wizyty', new Blob([JSON.stringify({ put: put.slice(0, 200), del })], { type: 'application/json' }));
+    if ((put.length || del.length) && navigator.sendBeacon) navigator.sendBeacon(API, new Blob([JSON.stringify({ put: put.slice(0, 200), del })], { type: 'application/json' }));
   });
 
   /* scalenie przy starcie: chmura (stan z chwili otwarcia strony) + urządzenie; nowszy czas zmiany wygrywa */
+  const VST = MOD === 'prywatne' ? 'wizyty' : 'visits', BST = MOD === 'prywatne' ? 'opisy' : 'bodies';   // nazwy sekcji magazynu modułu
   async function reconcile(be, rows) {
     const loc = new Map(rows.map(([k, v]) => [k, v]));
     const live = (C.visits && C.visits.live) || [], gone = new Map(((C.visits && C.visits.gone) || []).map(g => [g.id, g.at]));
@@ -197,14 +235,18 @@
     for (const m of live) {
       if (myDel.has(m.id) && myDel.get(m.id) >= m.at) continue;                           // usunięte tu, czeka na wysłanie
       const L = loc.get(m.id);
-      if (!L) { ops.push({ s: 'visits', key: m.id, val: m }); loc.set(m.id, m); }       // wpis z innego urządzenia (bez treści)
-      else if (m.at > L.at) { const v = Object.assign({}, m, { ini: L.ini || '', body: L.body }); ops.push({ s: 'visits', key: m.id, val: v }); loc.set(m.id, v); }
+      if (!L) { ops.push({ s: VST, key: m.id, val: m }); loc.set(m.id, m); }           // wpis z innego urządzenia (bez treści)
+      else if (m.at > L.at) {
+        const v = Object.assign({}, m, { ini: L.ini || '', body: L.body }, L.ezla !== undefined ? { ezla: L.ezla } : {});
+        if (Array.isArray(v.items) && Array.isArray(L.items)) v.items = v.items.map((it, i) => { const li = L.items[i]; return li && li.pid === it.pid ? Object.assign({}, it, { vals: li.vals || {}, def: li.def }) : it; });
+        ops.push({ s: VST, key: m.id, val: v }); loc.set(m.id, v);
+      }
       else if (L.at > m.at) push.push(L);
     }
     const liveIds = new Set(live.map(m => m.id));
     for (const [id, L] of [...loc]) {
       if (liveIds.has(id)) continue;
-      if (gone.has(id) && gone.get(id) >= L.at) { ops.push({ s: 'visits', key: id, del: true }, { s: 'bodies', key: id, del: true }); loc.delete(id); }
+      if (gone.has(id) && gone.get(id) >= L.at) { ops.push({ s: VST, key: id, del: true }, { s: BST, key: id, del: true }); loc.delete(id); }
       else push.push(L);                                                                   // zapisane offline albo przed założeniem chmury
     }
     if (ops.length) await be.write(ops);
