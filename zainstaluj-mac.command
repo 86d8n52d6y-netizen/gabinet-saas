@@ -18,9 +18,33 @@ fi
 
 # 2. klucze (.env): jeden plik w ~/Gabinet – kolejne wersje aplikacji używają tych samych kluczy i hasła bazy
 mkdir -p "$KOPIE" && chmod 700 "$HOMEDIR"
-if [ ! -f "$HOMEDIR/.env" ]; then
-  if [ -s .env ]; then cp .env "$HOMEDIR/.env"; echo "🔑 Zapisuję klucze z tego folderu w ~/Gabinet/.env"
-  else for d in ../gabinet-saas-main*/ ../gabinet-saas*/; do [ -s "$d.env" ] && [ "$d" != "./" ] && { cp "$d.env" "$HOMEDIR/.env"; echo "🔑 Znalazłem klucze w $d – zapisuję w ~/Gabinet/.env"; break; }; done; fi
+# kandydaci: ~/Gabinet/.env, .env w tym folderze i w sąsiednich folderach Gabinetu (najnowsze najpierw)
+kandydaci() {
+  { [ -s "$HOMEDIR/.env" ] && echo "$HOMEDIR/.env"; [ -s .env ] && echo "$DIR/.env"
+    ls -1t ../gabinet*/.env ../gabinet*/.env.poprzedni-* 2>/dev/null | while read -r f; do echo "$(cd "$(dirname "$f")" && pwd)/$(basename "$f")"; done; } | awk '!x[$0]++'
+}
+wartosc() { grep -m1 "^$2=" "$1" 2>/dev/null | cut -d= -f2-; }
+if docker volume inspect gabinet_dane_bazy >/dev/null 2>&1; then
+  # baza już istnieje: klucze MUSZĄ pasować do jej hasła – sprawdzamy kolejnych kandydatów na działającej bazie
+  echo "🔎 Szukam kluczy pasujących do Twojej bazy…"
+  TMPENV="$(mktemp)"; printf 'DB_ADMIN_PASSWORD=x\nDB_APP_PASSWORD=xxxxxxxxxxxxxxxx\nAUTH_SECRET=x\nAPP_ENC_KEY=x\nGABINET_KOPIE=%s\n' "$KOPIE" > "$TMPENV"
+  dc() { docker compose --env-file "$TMPENV" "$@"; }     # tylko do sprawdzenia hasła – istniejąca baza i tak ma swoje hasło
+  dc up -d db >/dev/null 2>&1
+  for i in $(seq 1 30); do dc exec -T db pg_isready -U migrator -d gabinet >/dev/null 2>&1 && break; sleep 2; done
+  dobry=""
+  while read -r f; do
+    pw="$(wartosc "$f" DB_ADMIN_PASSWORD)"; [ -n "$pw" ] || continue
+    if dc exec -T -e PGPASSWORD="$pw" db psql -h 127.0.0.1 -U migrator -d gabinet -Atc 'select 1' >/dev/null 2>&1; then dobry="$f"; break; fi
+  done < <(kandydaci)
+  rm -f "$TMPENV"
+  [ -n "$dobry" ] || stop "Żaden plik .env nie pasuje do hasła Twojej bazy. Nic nie zmieniono. Prześlij mi ten komunikat – znajdziemy klucze razem."
+  echo "   ✔ pasują klucze z: $dobry"
+  if [ "$dobry" != "$HOMEDIR/.env" ]; then
+    [ -s "$HOMEDIR/.env" ] && mv "$HOMEDIR/.env" "$HOMEDIR/.env.niepasujacy-$(date +%Y%m%d%H%M%S)"
+    cp "$dobry" "$HOMEDIR/.env"
+  fi
+elif [ ! -s "$HOMEDIR/.env" ]; then
+  f="$(kandydaci | head -1)"; [ -n "$f" ] && { cp "$f" "$HOMEDIR/.env"; echo "🔑 Klucze z: $f"; }
 fi
 touch "$HOMEDIR/.env"; chmod 600 "$HOMEDIR/.env"
 [ -s "$HOMEDIR/.env" ] && [ -n "$(tail -c1 "$HOMEDIR/.env")" ] && echo >> "$HOMEDIR/.env"
