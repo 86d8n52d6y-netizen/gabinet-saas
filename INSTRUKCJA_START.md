@@ -38,7 +38,20 @@ Skrypt sam:
 **Aktualizacja do nowej wersji:** pobierz nowy ZIP, rozpakuj, **skopiuj plik `.env` ze starego folderu do nowego**
 (na Macu ukryte pliki pokazuje Cmd + Shift + kropka), uruchom skrypt. Dane testowe w bazie zostają.
 
-## 4. Co sprawdzić (etap 4a – gabinety, ustawienia, katalog NFZ)
+## 4. Co sprawdzić (etap 4b – Opisy NFZ)
+
+| Krok | Co zrobić | Czego oczekiwać |
+|---|---|---|
+| 1 | Menu → **Opisy NFZ** | ten sam generator co w obecnej aplikacji; u góry pasek Gabinetu i napis „Historia zsynchronizowana” |
+| 2 | Zrób wizytę jak zwykle (kody → pytania → opis) | **identyczny tekst** jak w obecnej aplikacji przy tych samych odpowiedziach |
+| 3 | Zakładka **Historia** | wizyta z inicjałami (inicjały i treść zostają tylko na tym komputerze) |
+| 4 | Zaloguj się w **drugiej przeglądarce** → Opisy NFZ → Historia | ta sama wizyta jako „Anonim” – data, kody, kwoty; **bez treści i bez inicjałów** |
+| 5 | **Przeniesienie historii**: w generatorze zakładka **Ustawienia → Wczytaj kopię** – wybierz plik `.json` pobrany z obecnej aplikacji | wizyty z treścią na tym komputerze; w chmurze tylko kody i kwoty |
+| 6 | Wyłącz Wi-Fi, zapisz wizytę, włącz Wi-Fi | najpierw „zapisano na tym urządzeniu, wyślę później”, potem „zsynchronizowana” |
+
+Uwaga do kroku 5: wizyty z kopii nie mają przypisanego gabinetu (stara aplikacja ma inne identyfikatory gabinetów) – dopasowanie gabinetów zrobię przy imporcie Kalendarza (etap 4e).
+
+## Etap 4a – gabinety, ustawienia, katalog NFZ
 
 | Krok | Co zrobić | Czego oczekiwać |
 |---|---|---|

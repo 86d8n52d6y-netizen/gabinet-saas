@@ -123,3 +123,14 @@ Projekt bazy: `saas/db/SCHEMAT_BAZY.md` (czeka na akceptację przed utworzeniem 
 | 5 | Faza 4 w etapach 4a–4e (4a: gabinety, ustawienia, katalog i silnik NFZ; 4b: Opisy NFZ; 4c: Opisy prywatne; 4d: zarobki, statystyki, synchronizacja; 4e: Kalendarz i import), test po każdym. |
 | 6 | R6: zestawienia **w ramach jednego konta** (konto = jeden lekarz; podział wg gabinetu, okresu, rodzaju zabiegu). Funkcja „zespół” – nie w tej wersji. |
 | 7 | R5: własne procedury NFZ **tak**, z widocznym oznaczeniem „niesprawdzane przez zasady NFZ”; punkty wpisuje użytkownik; reguły łączenia i limitów NFZ ich nie obejmują. |
+
+### Etap 4b – rozwiązanie techniczne generatora NFZ (16.11.2026)
+| Kwestia | Rozwiązanie |
+|---|---|
+| Przeniesienie generatora | Ten sam kod (`nfz.html`, `szablony.js`) z 7 opisanymi poprawkami (`generator/ZMIANY.md`, skrypt `tests/tools/przenies_generator.py`) – teksty i reguły bez zmian; zgodność sprawdzana testem (14 kombinacji wieku i planu: tekst identyczny co do znaku). Przepisanie na nowo groziłoby różnicami w opisach. |
+| Treść opisu, odpowiedzi, wiek, inicjały | **Tylko na urządzeniu**, zaszyfrowane AES-GCM kluczem urządzenia (niewyciągalny CryptoKey w IndexedDB, osobny dla konta). Serwer ich nie otrzymuje – API odrzuca dodatkowe pola. |
+| Chmura (decyzja 1) | Data, gabinet, kody, punkty, stawki z dnia zapisu, kwoty (do statystyk), czas wizyty, numer wpisu. |
+| Inne urządzenie | Historia bez treści („Anonim #n”, kody, kwoty, „Edytuj kwoty”, „usuń”). |
+| Konflikty | Nowszy czas zmiany wygrywa; usunięcie = znacznik czasu (starsze usunięcie nie kasuje nowszej zmiany). Praca bez internetu – wysyłka po powrocie połączenia. |
+| Kod generatora | Poza katalogiem publicznym: strona i pliki tylko dla zalogowanych z licencją (ochrona pracy autorskiej). |
+| Ograniczenie | Utrata urządzenia / wyczyszczenie danych przeglądarki = utrata treści opisów z tego urządzenia (kwoty i kody zostają w chmurze). Kopia zapasowa `.json` z generatora nadal działa. |

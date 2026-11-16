@@ -79,7 +79,7 @@ r2 = as_('gabinet_app', A, f"UPDATE app.procedures SET name='stare urządzenie' 
 chk('konflikt dwóch urządzeń: druga zmiana na starej wersji nie nadpisuje (0 wierszy → komunikat w aplikacji)', r == (True, '2') and r2 == (True, ''), (r, r2))
 r = sql("SELECT string_agg(table_name||'.'||column_name, ', ') FROM information_schema.columns WHERE table_schema='app' AND column_name ~* '(pesel|patient|pacjent|address|adres|birth|phone|telefon)'")
 chk('w schemacie nie ma kolumn na dane pacjentów (PESEL, pacjent, adres, telefon, data urodzenia)', r == (True, ''), r)
-r = sql("SELECT string_agg(table_name||'.'||column_name, ', ') FROM information_schema.columns WHERE table_schema='app' AND table_name='saved_descriptions' AND data_type='text' AND column_name NOT IN ('module','status')")
+r = sql("SELECT string_agg(table_name||'.'||column_name, ', ') FROM information_schema.columns WHERE table_schema='app' AND table_name='saved_descriptions' AND data_type='text' AND column_name NOT IN ('module','status','client_key')")
 chk('zapisana wizyta nie ma pola na treść opisu (decyzja 1)', r == (True, ''), r)
 # ---- konta (migracja 0002) ----
 r = as_('gabinet_app', A, "SELECT count(*) FROM app.rate_limits"); chk('użytkownik nie czyta tabeli limitów prób', denied(r), r)
@@ -109,4 +109,9 @@ r = as_('gabinet_app', A, "INSERT INTO app.nfz_catalog(code,name,points,source,v
 r = as_('gabinet_admin', None, "UPDATE app.nfz_catalog SET points = 1 WHERE code = 'ST01'"); chk('administrator też nie zmieni katalogu z aplikacji', denied(r), r)
 r = sql("SELECT count(*) FROM app.nfz_catalog WHERE source !~ 'Zarządzenie Prezesa NFZ nr (95/2026|44/2025)/DSOZ'"); chk('każdy kod ma źródło (zarządzenie DSOZ)', r == (True, '0'), r)
 r = sql("INSERT INTO app.nfz_catalog(code,name,points,verified_at,definition) VALUES ('ZZ98','x',1,current_date,'{}')"); chk('kod bez źródła odrzucony przez bazę', not r[0], r)
+# ---- historia wizyt (migracja 0004): identyfikator z urządzenia nie pomieści tekstu ----
+r = as_('gabinet_app', A, f"INSERT INTO app.saved_descriptions(owner_id,client_id,client_key,module,visit_date,seq_no) VALUES ('{A}',gen_random_uuid(),'Pacjent Jan Kowalski ząb 16','nfz',current_date,1)")
+chk('client_key: tylko identyfikator (litery, cyfry, - _ ; bez spacji i polskich znaków)', not r[0] and 'check' in r[1].lower(), r)
+r = as_('gabinet_app', A, f"INSERT INTO app.saved_descriptions(owner_id,client_id,client_key,module,visit_date,seq_no,meta) VALUES ('{A}',gen_random_uuid(),'v1','nfz',current_date,1,jsonb_build_object('x',repeat('a',9000)))")
+chk('meta wpisu: limit 8 KB (nie zmieści treści opisu)', not r[0], r)
 print(f'--- izolacja i uprawnienia: {ok} OK, {bad} błędów'); sys.exit(1 if bad else 0)

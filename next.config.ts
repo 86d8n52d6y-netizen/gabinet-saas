@@ -19,6 +19,8 @@ const security = [
 
 const config: NextConfig = {
   output: 'standalone',
+  // generator Opisów NFZ czytany z dysku w trasach /opisy-nfz – dołączany do wersji produkcyjnej
+  outputFileTracingIncludes: { '/opisy-nfz': ['./generator/**/*'], '/opisy-nfz/zasoby/[plik]': ['./generator/**/*'] },
   poweredByHeader: false,
   reactStrictMode: true,
   async headers() { return [{ source: '/:path*', headers: security }]; },
