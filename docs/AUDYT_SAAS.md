@@ -134,3 +134,9 @@ Projekt bazy: `saas/db/SCHEMAT_BAZY.md` (czeka na akceptację przed utworzeniem 
 | Konflikty | Nowszy czas zmiany wygrywa; usunięcie = znacznik czasu (starsze usunięcie nie kasuje nowszej zmiany). Praca bez internetu – wysyłka po powrocie połączenia. |
 | Kod generatora | Poza katalogiem publicznym: strona i pliki tylko dla zalogowanych z licencją (ochrona pracy autorskiej). |
 | Ograniczenie | Utrata urządzenia / wyczyszczenie danych przeglądarki = utrata treści opisów z tego urządzenia (kwoty i kody zostają w chmurze). Kopia zapasowa `.json` z generatora nadal działa. |
+
+### Otwarta sprawa na później: treść opisów w chmurze (zgłoszona przez Patryka 16.11.2026)
+Patryk chce w przyszłości przenieść treść opisów z przeglądarki do chmury (po uruchomieniu hostingu) – **osobny krok, nie teraz**.
+Przed realizacją: osobna analiza i wyraźna zgoda (prompt: „nie dodawaj funkcji wymagających danych pacjentów bez osobnej analizy”).
+Do porównania wtedy: (A) kopia treści zaszyfrowana na urządzeniu kluczem znanym tylko użytkownikowi (serwer nie odczyta; reset hasła = utrata kopii),
+(B) przechowywanie treści na serwerze (dane o zdrowiu – art. 9 RODO: umowa powierzenia z hostingiem, rejestr czynności, ocena skutków, opinia prawnika).
