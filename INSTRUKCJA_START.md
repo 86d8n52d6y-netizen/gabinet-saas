@@ -38,7 +38,18 @@ Skrypt sam:
 **Aktualizacja do nowej wersji:** pobierz nowy ZIP, rozpakuj, **skopiuj plik `.env` ze starego folderu do nowego**
 (na Macu ukryte pliki pokazuje Cmd + Shift + kropka), uruchom skrypt. Dane testowe w bazie zostają.
 
-## 4. Co sprawdzić (etap 4c – Opisy prywatne)
+## 4. Co sprawdzić (etap 4d – Zarobki)
+
+| Krok | Co zrobić | Czego oczekiwać |
+|---|---|---|
+| 1 | Zapisz kilka wizyt NFZ i prywatnych w różnych gabinetach | — |
+| 2 | **Konto** | kafelki „Dziś: N wizyt · kwota” dla NFZ i prywatnych |
+| 3 | Menu → **Zarobki** → Dziś / Ten tydzień / Ten miesiąc / Poprzedni miesiąc / Ten rok | tabela gabinetów jak w oknie „Zarobki – wszystkie gabinety” obecnej aplikacji, wykres, szczegóły NFZ i prywatne |
+| 4 | Własny zakres dat i filtr gabinetu → **Pokaż** | tylko wybrany okres / gabinet |
+| 5 | **Pobierz CSV** → otwórz w Excelu / Numbers | polskie kolumny, kwoty z przecinkiem, każda kwota w osobnym wierszu |
+| 6 | Ustawienia → „Zarobek z punktów: udział lekarza” | Zarobek NFZ liczony od udziału lekarza |
+
+## Etap 4c – Opisy prywatne
 
 | Krok | Co zrobić | Czego oczekiwać |
 |---|---|---|

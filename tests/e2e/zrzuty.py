@@ -8,7 +8,7 @@ with sync_playwright() as p:
     pg.goto(URL + '/gabinety'); fill(pg, name='Happy Smile', short='HS', pct='30'); submit(pg, 'Dodaj gabinet')
     for w, n in [(1280, 'desktop'), (390, 'telefon')]:
         pg.set_viewport_size({'width': w, 'height': 900})
-        for path in ['ustawienia', 'gabinety?nowy=1', 'katalog-nfz']:
+        for path in ['ustawienia', 'gabinety?nowy=1', 'katalog-nfz', 'zarobki?o=year', 'konto']:
             pg.goto(URL + '/' + path); pg.screenshot(path=f"{OUT}/{path.split('?')[0]}-{n}.png", full_page=True)
     br.close()
 print('zrzuty w', OUT)

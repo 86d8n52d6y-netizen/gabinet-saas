@@ -18,6 +18,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           {inside ? (<>
             <a href="/opisy-nfz">Opisy NFZ</a>
             <a href="/opisy-prywatne">Opisy prywatne</a>
+            <Link href="/zarobki">Zarobki</Link>
             <Link href="/katalog-nfz">Katalog NFZ</Link>
             <Link href="/gabinety">Gabinety</Link>
             <Link href="/ustawienia">Ustawienia</Link>
