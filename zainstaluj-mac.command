@@ -34,7 +34,8 @@ if docker volume inspect gabinet_dane_bazy >/dev/null 2>&1; then
   dobry=""
   while read -r f; do
     pw="$(wartosc "$f" DB_ADMIN_PASSWORD)"; [ -n "$pw" ] || continue
-    if dc exec -T -e PGPASSWORD="$pw" db psql -h 127.0.0.1 -U migrator -d gabinet -Atc 'select 1' >/dev/null 2>&1; then dobry="$f"; break; fi
+    # -h db: połączenie przez sieć Dockera (sprawdza hasło); połączenia lokalne w kontenerze bazy nie wymagają hasła
+    if dc exec -T -e PGPASSWORD="$pw" db psql -h db -U migrator -d gabinet -Atc 'select 1' >/dev/null 2>&1; then dobry="$f"; break; fi
   done < <(kandydaci)
   rm -f "$TMPENV"
   [ -n "$dobry" ] || stop "Żaden plik .env nie pasuje do hasła Twojej bazy. Nic nie zmieniono. Prześlij mi ten komunikat – znajdziemy klucze razem."
@@ -72,7 +73,7 @@ fi
 
 # 4. budowa i start
 echo "🐳 Buduję i uruchamiam Gabinet (pierwszy raz kilka minut, kolejne 1–2 minuty)…"
-docker compose up --build -d --remove-orphans || stop "Błąd uruchamiania – skopiuj komunikat powyżej i prześlij go."
+docker compose up --build -d --remove-orphans || { echo ""; echo "──── szczegóły (migracja bazy) ────"; docker compose logs --no-log-prefix --tail=8 migrate; stop "Błąd uruchamiania – zrób zrzut ekranu całego okna i prześlij go."; }
 echo "⏳ Czekam aż aplikacja odpowie…"
 ok=""; for i in $(seq 1 60); do curl -fs http://localhost:3000/api/zdrowie >/dev/null && { ok=1; break; }; sleep 2; done
 [ -n "$ok" ] || { docker compose logs --tail=40 app migrate; stop "Aplikacja nie odpowiada (logi powyżej)."; }
