@@ -24,14 +24,16 @@ export default async function Ustawienia() {
             <div><label htmlFor="price">Stawka za punkt (zł)</label>
               <input id="price" name="price" type="text" inputMode="decimal" defaultValue={num(n.price)} required />
               <p className="hint">np. 100 pkt = {fmtC(centsPts(100, n.price))}</p></div>
-            <div><label htmlFor="rev">Stawka za godzinę przeglądów (zł)</label>
+            <div><label htmlFor="rev">Przeglądy – stawka za godzinę (zł)</label>
               <input id="rev" name="rev" type="text" inputMode="decimal" defaultValue={num(n.rev)} required />
               <p className="hint">np. 1,5 h = {fmtC(centsHours(1.5, n.rev))}</p></div>
             <div><label htmlFor="pct">Udział lekarza</label>
-              <select id="pct" name="pct" defaultValue={n.pct}>{PCT_OPTS.map(p => <option key={p} value={p}>{p}%</option>)}</select></div>
-            <div><label htmlFor="basis">Zarobek z punktów licz jako</label>
+              <select id="pct" name="pct" defaultValue={n.pct}>{PCT_OPTS.map(p => <option key={p} value={p}>{p}%</option>)}</select>
+              <p className="hint">procent wartości punktów dla lekarza</p></div>
+            <div><label htmlFor="basis">Zarobek z punktów</label>
               <select id="basis" name="basis" defaultValue={n.basis}>
-                <option value="full">pełna wartość punktów</option><option value="share">udział lekarza (%)</option></select></div>
+                <option value="full">pełna wartość punktów</option><option value="share">udział lekarza (%)</option></select>
+              <p className="hint">jak liczyć zarobek w statystykach</p></div>
           </div>
           <p className="hint">Domyślnie: 1,84 zł/pkt, 40%, 350 zł/h. Pakiet higienizacyjny z ekstrakcją lub leczeniem zachowawczym: +10 min do czasu wizyty (zasada bez zmian).</p>
         </ActionForm>

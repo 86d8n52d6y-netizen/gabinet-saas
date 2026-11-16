@@ -60,11 +60,11 @@ export default async function Gabinety({ searchParams }: { searchParams: Promise
             <label htmlFor="model">Rozliczenie</label>
             <select id="model" name="model" defaultValue={ed?.model ?? 'pct_lab'}>{Object.entries(MODELS).map(([k, v]) => <option key={k} value={k}>{v}</option>)}</select>
             <div className="grid2">
-              <div><label htmlFor="pct">Twój % (modele procentowe)</label><input id="pct" name="pct" type="text" inputMode="decimal" defaultValue={ed ? num(ed.pct) : '30'} /></div>
-              <div><label htmlFor="lab_share">Twój udział w labie % („lab dzielony”)</label><input id="lab_share" name="lab_share" type="text" inputMode="decimal" defaultValue={ed ? num(ed.lab_share) : '50'} /></div>
-              <div><label htmlFor="hourly">Stawka za godzinę (zł)</label><input id="hourly" name="hourly" type="text" inputMode="decimal" defaultValue={zl(ed?.hourly_gr ?? null)} /></div>
-              <div><label htmlFor="daily">Stawka za dzień (zł)</label><input id="daily" name="daily" type="text" inputMode="decimal" defaultValue={zl(ed?.daily_gr ?? null)} /></div>
-              <div><label htmlFor="min_daily">Minimum za dzień (zł, puste = brak)</label><input id="min_daily" name="min_daily" type="text" inputMode="decimal" defaultValue={zl(ed?.min_daily_gr ?? null)} /></div>
+              <div><label htmlFor="pct">Twój %</label><input id="pct" name="pct" type="text" inputMode="decimal" defaultValue={ed ? num(ed.pct) : '30'} /><p className="hint">modele procentowe</p></div>
+              <div><label htmlFor="lab_share">Twój udział w labie %</label><input id="lab_share" name="lab_share" type="text" inputMode="decimal" defaultValue={ed ? num(ed.lab_share) : '50'} /><p className="hint">model „lab dzielony”</p></div>
+              <div><label htmlFor="hourly">Stawka za godzinę (zł)</label><input id="hourly" name="hourly" type="text" inputMode="decimal" defaultValue={zl(ed?.hourly_gr ?? null)} /><p className="hint">model „stawka godzinowa”</p></div>
+              <div><label htmlFor="daily">Stawka za dzień (zł)</label><input id="daily" name="daily" type="text" inputMode="decimal" defaultValue={zl(ed?.daily_gr ?? null)} /><p className="hint">model „stawka za dzień”</p></div>
+              <div><label htmlFor="min_daily">Minimum za dzień (zł)</label><input id="min_daily" name="min_daily" type="text" inputMode="decimal" defaultValue={zl(ed?.min_daily_gr ?? null)} /><p className="hint">puste = brak minimum</p></div>
             </div>
           </ActionForm>
           {ed && <p><Link href="/gabinety">Anuluj</Link></p>}
