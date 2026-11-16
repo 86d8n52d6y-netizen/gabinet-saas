@@ -1,0 +1,16 @@
+node_modules
+.next
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+tests
+db/test_izolacja.py
+Dockerfile
+docker-compose.yml
+uruchom-*
+docs
+README.md
+POSTEP.md
+CLAUDE.md
+INSTRUKCJA_START.md

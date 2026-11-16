@@ -1,0 +1,8 @@
+# Postęp prac – Gabinet SaaS
+
+| Data | Gdzie | Co zrobiono |
+|---|---|---|
+| 2026-11-16 | `opisy-nfz@saas` | SaaS FAZA 1: audyt i plan (`AUDYT_SAAS.md`), decyzje Patryka 1–4 (bez treści opisów w chmurze, szyfrowanie po stronie serwera, Kalendarz od razu, „ja buduję, Ty testujesz”); projekt bazy zaakceptowany |
+| 2026-11-16 | `opisy-nfz@saas` | SaaS FAZA 2: projekt katalog główny (Next.js 16, TypeScript, PostgreSQL 16 z RLS), migracje (`npm run migrate`), warstwa bazy z rolami, strona i `/api/zdrowie`, Dockerfile + docker-compose (db, migrate, app, Mailpit), skrypty startowe Mac/Windows, `INSTRUKCJA_START.md`. Testy: izolacja SQL 38/38 (świeża baza przy każdym uruchomieniu), aplikacja 9/9, typecheck, build, npm audit 0. Obraz Dockera NIE zbudowany w środowisku Claude (Docker Hub zablokowany) – etapy kontenerów odtworzone natywnie i działają; pełny test w Docker Desktop po stronie Patryka |
+| 2026-11-16 | `gabinet-saas` | Przeniesienie kodu SaaS z publicznego `opisy-nfz` (gałąź `saas`, commit `5612894`) do prywatnego repo; gałąź `saas` usunięta z `opisy-nfz` przez Patryka. Układ: aplikacja w katalogu głównym, dokumenty w `docs/`. Dodane `CLAUDE.md`, `README.md`, `LICENSE` (wszelkie prawa zastrzeżone). Pełna historia git zachowana w pliku `gabinet-saas-kopia.bundle` u Patryka |
+| 2026-11-16 | `gabinet-saas` | Poprawka: `scripts/migrate.mjs` przy ponawianiu połączenia używał ponownie tego samego klienta (awaria, gdy baza startuje wolniej). Teraz każda próba to nowe połączenie; sprawdzone z bazą uruchomioną z opóźnieniem 4 s. Testy: izolacja 38/38, vitest 9/9, typecheck, build OK |
