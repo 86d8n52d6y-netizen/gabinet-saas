@@ -1,6 +1,10 @@
 'use client';
 // Włączanie weryfikacji dwuetapowej: 1) hasło → kod QR, 2) kod z aplikacji → kody zapasowe (pokazywane jeden raz).
-import { useActionState } from 'react';
+import { startTransition, useActionState } from 'react';
+
+const keep = (run: (fd: FormData) => void) => (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault(); const fd = new FormData(e.currentTarget); startTransition(() => run(fd));
+};
 import { mfaConfirm, mfaStart } from '@/lib/auth/actions';
 import type { State } from '@/lib/auth/core';
 
@@ -17,7 +21,7 @@ export default function MfaSetup() {
     </div>
   );
   if (!a.qr) return (
-    <form action={start}>
+    <form action={start} onSubmit={keep(start)}>
       <p className="muted">Po włączeniu przy logowaniu podasz też 6-cyfrowy kod z aplikacji w telefonie (Google Authenticator, Microsoft Authenticator, 1Password, Bitwarden…).</p>
       <label htmlFor="mfa-cur">Obecne hasło</label>
       <input id="mfa-cur" name="current" type="password" autoComplete="current-password" required maxLength={128} />
@@ -26,7 +30,7 @@ export default function MfaSetup() {
     </form>
   );
   return (
-    <form action={confirm}>
+    <form action={confirm} onSubmit={keep(confirm)}>
       <p>1. Zeskanuj kod aplikacją w telefonie:</p>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img className="qr" src={a.qr} alt="Kod QR do aplikacji uwierzytelniającej" />

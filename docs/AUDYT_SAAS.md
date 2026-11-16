@@ -116,3 +116,10 @@ Obecna aplikacja na GitHub Pages działa dalej bez zmian przez cały Etap A.
 | 4 | Buduję i testuję u siebie; Patryk testuje gotowe wersje (Docker Desktop + jedna komenda). |
 
 Projekt bazy: `saas/db/SCHEMAT_BAZY.md` (czeka na akceptację przed utworzeniem bazy aplikacji).
+
+### Decyzje Patryka przed fazą 4 (16.11.2026)
+| # | Decyzja |
+|---|---|
+| 5 | Faza 4 w etapach 4a–4e (4a: gabinety, ustawienia, katalog i silnik NFZ; 4b: Opisy NFZ; 4c: Opisy prywatne; 4d: zarobki, statystyki, synchronizacja; 4e: Kalendarz i import), test po każdym. |
+| 6 | R6: zestawienia **w ramach jednego konta** (konto = jeden lekarz; podział wg gabinetu, okresu, rodzaju zabiegu). Funkcja „zespół” – nie w tej wersji. |
+| 7 | R5: własne procedury NFZ **tak**, z widocznym oznaczeniem „niesprawdzane przez zasady NFZ”; punkty wpisuje użytkownik; reguły łączenia i limitów NFZ ich nie obejmują. |

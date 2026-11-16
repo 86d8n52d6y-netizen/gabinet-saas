@@ -38,7 +38,20 @@ Skrypt sam:
 **Aktualizacja do nowej wersji:** pobierz nowy ZIP, rozpakuj, **skopiuj plik `.env` ze starego folderu do nowego**
 (na Macu ukryte pliki pokazuje Cmd + Shift + kropka), uruchom skrypt. Dane testowe w bazie zostają.
 
-## 4. Co sprawdzić (faza 3 – konta i logowanie)
+## 4. Co sprawdzić (etap 4a – gabinety, ustawienia, katalog NFZ)
+
+| Krok | Co zrobić | Czego oczekiwać |
+|---|---|---|
+| 1 | Zaloguj się; w menu: **Katalog NFZ · Gabinety · Ustawienia** | strony otwierają się (wymagają okresu próbnego / licencji) |
+| 2 | **Gabinety** → dodaj swoje gabinety (nazwa, skrót, kolor, sposób rozliczenia, %) | lista z kolorami i modelem rozliczenia |
+| 3 | Wpisz błędne dane (np. model „Stawka godzinowa” bez stawki) | komunikat, **wpisane pola zostają** |
+| 4 | Otwórz edycję tego samego gabinetu w **dwóch kartach**, zapisz w obu | druga karta: „zmieniono w międzyczasie na innym urządzeniu” |
+| 5 | **Ustawienia** → stawki NFZ | domyślnie 1,84 zł/pkt, 350 zł/h, 40% |
+| 6 | **Katalog NFZ** → tabela kodów | 23 pozycje ze źródłem (95/2026/DSOZ, 44/2025/DSOZ) |
+| 7 | **Sprawdź wycenę**: wybierz te same kody, ilości i wiek co w obecnej aplikacji (Opisy NFZ) | **ta sama liczba punktów i kwota** |
+| 8 | Dodaj **własny kod** (np. 2301, nazwa, punkty) | oznaczenie „niesprawdzane przez zasady NFZ”; kod z katalogu (np. ST01) odrzucony |
+
+## Wcześniejsza faza 3 – konta i logowanie
 
 | Krok | Co zrobić | Czego oczekiwać |
 |---|---|---|

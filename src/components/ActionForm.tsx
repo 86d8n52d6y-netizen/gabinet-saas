@@ -1,6 +1,6 @@
 'use client';
 // Formularz akcji serwera z komunikatem błędu/sukcesu i blokadą przycisku podczas wysyłania (działa też bez JavaScriptu).
-import { useActionState } from 'react';
+import { startTransition, useActionState } from 'react';
 import type { State } from '@/lib/auth/core';
 
 type Props = {
@@ -11,7 +11,9 @@ type Props = {
 export default function ActionForm({ action, submit, pending = 'Proszę czekać…', children, danger, ghost, after }: Props) {
   const [state, run, busy] = useActionState(action, {} as State);
   return (
-    <form action={run} noValidate={false}>
+    // onSubmit zamiast samego action: React 19 czyści formularz po akcji – przy błędzie wpisane dane muszą zostać.
+    // Bez JavaScriptu formularz nadal działa (atrybut action).
+    <form action={run} onSubmit={e => { e.preventDefault(); const fd = new FormData(e.currentTarget); startTransition(() => run(fd)); }}>
       {children}
       {state.error && <p className="msg err" role="alert">{state.error}</p>}
       {state.ok && <p className="msg ok" role="status">{state.ok}</p>}

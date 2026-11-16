@@ -12,7 +12,7 @@ const STATUS: Record<string, string> = {
   suspended: 'Zawieszona', payment_pending: 'Oczekuje na płatność', payment_failed: 'Płatność nieudana',
 };
 
-export default async function Konto({ searchParams }: { searchParams: Promise<{ potwierdzono?: string }> }) {
+export default async function Konto({ searchParams }: { searchParams: Promise<{ potwierdzono?: string; dostep?: string }> }) {
   const s = await requireUser();
   const sp = await searchParams;
   // dane konta odczytywane rolą użytkownika – RLS zwraca wyłącznie jego własne wiersze
@@ -24,6 +24,7 @@ export default async function Konto({ searchParams }: { searchParams: Promise<{ 
     <main className="wrap">
       <h1>Dzień dobry, {s.displayName}</h1>
       {sp.potwierdzono && <p className="msg ok" role="status">Adres e-mail potwierdzony.</p>}
+      {sp.dostep === 'brak' && <p className="msg err" role="alert">Ta część aplikacji wymaga aktywnej licencji lub okresu próbnego.</p>}
       {!s.emailVerified && (
         <section className="card" aria-labelledby="ver">
           <h2 id="ver" style={{ marginTop: 0 }}>Potwierdź adres e-mail</h2>
@@ -47,6 +48,9 @@ export default async function Konto({ searchParams }: { searchParams: Promise<{ 
           <input id="name" name="name" type="text" defaultValue={s.displayName} required maxLength={80} />
         </ActionForm>
       </section>
+      {access && <section className="card"><h2 style={{ marginTop: 0 }}>Na początek</h2>
+        <p>1. <Link href="/gabinety">Dodaj gabinety</Link>, w których pracujesz. 2. Sprawdź <Link href="/ustawienia">stawki rozliczeń</Link>. 3. Zobacz <Link href="/katalog-nfz">katalog NFZ i wycenę</Link>.</p>
+        <p className="muted">Generator opisów NFZ i prywatnych, zarobki i Kalendarz pojawią się w kolejnych etapach.</p></section>}
       <p><Link href="/konto/bezpieczenstwo">Bezpieczeństwo: hasło, weryfikacja dwuetapowa, urządzenia →</Link></p>
     </main>
   );

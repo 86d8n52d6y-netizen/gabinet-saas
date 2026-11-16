@@ -16,8 +16,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <Link href={inside ? '/konto' : '/'} className="brand">Gabi<span>net</span></Link>
         <nav className="nav" aria-label="Menu">
           {inside ? (<>
+            <Link href="/katalog-nfz">Katalog NFZ</Link>
+            <Link href="/gabinety">Gabinety</Link>
+            <Link href="/ustawienia">Ustawienia</Link>
             <Link href="/konto">Konto</Link>
-            <Link href="/konto/bezpieczenstwo">Bezpieczeństwo</Link>
             <form action={logout}><button className="ghost" type="submit">Wyloguj</button></form>
           </>) : (<>
             <Link href="/logowanie">Zaloguj</Link>
