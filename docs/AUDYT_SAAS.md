@@ -127,11 +127,24 @@ Projekt bazy: `saas/db/SCHEMAT_BAZY.md` (czeka na akceptację przed utworzeniem 
 ### Zmiana kolejności prac (Patryk, 16.11.2026, decyzja 8)
 | Etap | Zakres | Stan |
 |---|---|---|
-| 1 | Dokończenie sekcji 5 specyfikacji (FUNKCJE APLIKACJI 5.1–5.7). Licencje i płatności (sekcje 8–9), panel administratora (10) – **po testach**. | zrealizowane (przegląd niżej) |
+| 1 | Dokończenie sekcji 5 specyfikacji (FUNKCJE APLIKACJI 5.1–5.7). Licencje i płatności (sekcje 8–9), panel administratora (10) – **odłożone bez terminu (decyzja 9)**. | zrealizowane (przegląd niżej) |
 | 2 | Wersja do 7 dni pracy **tylko na Macu Patryka**: Docker + aplikacja „Gabinet”, automatyczne kopie bazy, kopia treści z urządzenia, instrukcja obsługi | zrealizowane |
 | 3 | 7 dni testów Patryka, poprawki zgłoszeń, podsumowanie | czeka na Patryka |
 | 4 | Kompleksowe zabezpieczenie (kod, autorstwo, backend/API, uwierzytelnianie, dane, ataki, kopie) + audyt i testy bezpieczeństwa | po etapie 3 |
 | 5 | Hosting i publikacja – **tylko po wyraźnej zgodzie**, z wcześniejszą specyfikacją, kosztami i planem migracji | odłożony |
+
+#### Decyzja 9 (Patryk, 20.11.2026): kolejność dalszych prac, licencje i płatności odłożone
+| # | Etap | Zakres |
+|---|---|---|
+| 0 | Test 7 dni | praca Patryka, poprawki zgłoszeń |
+| 1 | Podsumowanie testów | błędy, poprawki, co zostało, gotowość |
+| 2 | Dyktowanie | okno „Notatka” + parser w przeglądarce (notatka nie trafia na serwer); MacWhisper / Claude / Ollama – osobna decyzja (decyzja 1, koszty) |
+| 3 | Kompleksowe zabezpieczenie | ochrona kodu, autorstwa i IP, backend/API, logowanie, dane, ataki, kopie + audyt i testy bezpieczeństwa |
+| 4 | Konfiguracja produkcyjna (bez uruchomienia) | serwer, domena, certyfikaty, kopie, monitoring – przygotowane, nie włączone |
+| 5 | Koszty i zgoda | specyfikacja, koszt (≤ 30 USD/mies.), plan migracji, pytanie o zgodę |
+| 6 | Hosting | tylko po wyraźnej zgodzie |
+
+**Licencje, płatności (Stripe) i panel administratora – odłożone bez terminu** (Patryk doda je w osobnym kroku). Nic z tego nie było zbudowane poza istniejącym okresem próbnym (3 miesiące od rejestracji, sprawdzany na serwerze) – ten mechanizm zostaje bez zmian, dopóki Patryk nie zdecyduje inaczej (bez zgody nie usuwamy funkcji).
 
 #### Przegląd sekcji 5 specyfikacji (stan 16.11.2026)
 | Punkt | Wymaganie | Realizacja |
