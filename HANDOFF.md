@@ -213,3 +213,31 @@ Treść promptu: 7 etapów (materiały, automatyzacja formularzy, zarobki i rozl
 
 **Skutek:** domyślny tekst opisów NFZ zmieni się (6.1, 6.5, 2.1) – testy porównawcze ze starą aplikacją dostosować: porównanie przy wyłączonych nowościach + osobne sprawdzenie nowych fragmentów.
 **Kolejność:** 1.2 → 2.1 → 6.3 → 6.2 → 6.5 → 6.4 → 6.1; po każdym etapie testy; commit + PR po całości (Patryk scala).
+
+## 10. Zlecenia protetyczne – stan na 21.11.2026 (przekazanie do nowej sesji)
+
+Prompt Patryka: „Inteligentne zlecenia protetyczne dla technika dentystycznego”. Specyfikacja i decyzje: **`docs/ZLECENIA_PROTETYCZNE.md`** (na `main`, PR #8).
+
+### Stan etapów
+| Etap | Zakres | Stan |
+|---|---|---|
+| E0 | research + specyfikacja pól (W/Z/O) | ✅ na `main` |
+| E1 | moduł `/zlecenia` (`generator/zlecenia.html`, ręcznie pisany – nie z `przenies_generator.py`): lista, nowe zlecenie, rodzaje prac A–F, własne wartości, kontrola kompletności, statusy, historia zmian, kopiowanie, usuwanie; zapis tylko na urządzeniu (`G.store('zlecenia')`, baza przeglądarki v3) | ✅ test `t_8_zlecenia.py` 29/29 (przed dopisaniem E2); **tylko na gałęzi roboczej** |
+| E2 | sekcje zależne od rodzaju pracy: most, implanty, All-on-X, proteza, szyna, kolor (skale Vita), preparacja, zgryz (VDO, rejestracja, Angle, TMD) | **napisane, NIEPRZETESTOWANE** – testy dopisane w `t_8_zlecenia.py`; przebudować (`npx next build` – pliki `generator/` kopiują się przy budowie!) i uruchomić |
+| E3 | schemat zębów FDI z rolami (korona, przęsło, implant, brak, filar, uwaga, kontakt) – dziś pole tekstowe | do zrobienia |
+| E4–E6 | moduły szczegółowe (dopracowanie), zdjęcia na urządzeniu, wydruk / PDF | do zrobienia |
+| E7 | chmura dla zleceń | **czeka na decyzję – patrz niżej** |
+| E8 | testy końcowe wg promptu (korona, most, korona na implancie, All-on-4/6/X, protezy, licówka, szyna, izolacja, druk, responsywność) | do zrobienia |
+
+Pełna regresja e2e po E1 (zmiana wersji bazy przeglądarki 2→3, nowa pozycja menu „Zlecenia”, `t_4b` liczy 9 linków) **nie została dokończona** – uruchomić przed scaleniem.
+
+### Decyzja otwarta (najpierw zapytać Patryka – pytania do klikania)
+21.11 Patryk najpierw wybrał **chmurę szyfrowaną swoim kluczem**, a potem napisał: „numery zębów mogą być, pozwalam na przechowywanie wszystkich danych, aby nie było imienia i nazwiska”. To **zmiana zasady nr 1 `CLAUDE.md`** – nie zapisano jej jeszcze. Ustalić: (1) które dane czytelnie na serwerze (zęby/zgryz/kolory, inicjały, treść opisów, zdjęcia), (2) tylko Zlecenia czy też Opisy, (3) czy zmienić zasadę nr 1 w `CLAUDE.md` i dopisać decyzję w `docs/AUDYT_SAAS.md`. Uwaga dla Patryka: bez imienia i nazwiska to nadal dane o zdrowiu (RODO) – przed hostingiem umowa powierzenia, DPIA, opinia prawna; Claude nie deklaruje zgodności z RODO. Do decyzji – E7 nie zaczynać; nowa tabela = migracja do pokazania przed wykonaniem (zasada 12).
+
+### Zgody Patryka na sposób pracy (21.11.2026)
+Commit + PR + **scalenie przez Claude bez pytania** dla gotowych, przetestowanych etapów modułu Zleceń (oprócz migracji bazy – pokazać przed wykonaniem). Pozycje [W] w specyfikacji Patryk przejrzy sam.
+
+### Inne otwarte sprawy z tej sesji
+- Opisy prywatne „Wczytuję…” w Safari – zabezpieczenia wdrożone (PR #6), czeka na potwierdzenie Patryka.
+- „Inne kwoty” tego samego gabinetu w Kalendarzu i Zarobkach – czeka na przykład od Patryka (gabinet, miesiąc, obie kwoty).
+- Rozliczenia i Podsumowanie przeniesione do Zarobków (PR #7) – do sprawdzenia na Macu.

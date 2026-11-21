@@ -1,0 +1,295 @@
+<!doctype html>
+<!-- Gabinet SaaS: Zlecenia protetyczne dla technika (docs/ZLECENIA_PROTETYCZNE.md). Moduł napisany dla wersji SaaS (nie ma go w starej aplikacji).
+     Treść zleceń (inicjały, zęby, zgryz, kolory, zdjęcia) TYLKO na tym urządzeniu – zaszyfrowana kluczem urządzenia (G.store, jak treść opisów);
+     na serwer nic z tego nie trafia (zasada nr 1). Formularz sterowany katalogiem (KAT / POLA) – nowy rodzaj pracy = nowy wpis w katalogu. -->
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zlecenia protetyczne – Gabinet</title>
+<link rel="stylesheet" href="/opisy-nfz/zasoby/fonts.css">
+<link rel="stylesheet" href="/opisy-nfz/zasoby/wspolne.css">
+<style>
+  .zl-wrap{max-width:1180px;margin:0 auto;padding:20px 16px 80px}
+  .zl-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+  .zl-head h1{margin:0;font-size:24px}
+  .zl-list{display:grid;gap:8px}
+  .zl-item{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;padding:12px 14px;border:1px solid var(--g-line);border-radius:12px;background:var(--g-surface)}
+  .zl-item b{font-size:15px}.zl-item .r{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+  .zl-st{font-size:12.5px;font-weight:600;padding:2px 9px;border-radius:999px;background:var(--g-accent-soft);color:var(--g-accent)}
+  .zl-st.braki{background:var(--g-warn-soft);color:var(--g-warn)}.zl-st.gotowe{background:var(--g-ok);color:#fff}
+  .zl-sec{border:1px solid var(--g-line);border-radius:12px;background:var(--g-surface);margin:0 0 10px}
+  .zl-sec>summary{cursor:pointer;padding:12px 14px;font-weight:700;font-size:16px;list-style:none;display:flex;gap:8px;align-items:center}
+  .zl-sec>summary::-webkit-details-marker{display:none}
+  .zl-sec>summary::before{content:'▸';color:var(--g-muted)}.zl-sec[open]>summary::before{content:'▾'}
+  .zl-sec .in{padding:0 14px 14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px 18px}
+  .zl-f{display:grid;gap:5px;min-width:0}.zl-f.w{grid-column:1/-1}
+  .zl-f>label,.zl-f>.lb{font-size:13.5px;font-weight:600}
+  .zl-tag{font-size:11px;font-weight:700;padding:1px 6px;border-radius:6px;margin-left:6px;vertical-align:1px}
+  .zl-tag.W{background:var(--g-warn-soft);color:var(--g-warn)}.zl-tag.Z{background:var(--g-accent-soft);color:var(--g-accent)}
+  .zl-ch{display:flex;flex-wrap:wrap;gap:6px}
+  .zl-ch button{font:inherit;font-size:13.5px;border:1px solid var(--g-line);background:var(--g-surface);color:var(--g-ink);border-radius:999px;padding:5px 11px;cursor:pointer;min-height:32px}
+  .zl-ch button[aria-pressed="true"]{background:var(--g-accent);border-color:var(--g-accent);color:var(--g-accent-ink)}
+  .zl-in{font:inherit;font-size:15px;padding:8px 10px;border:1px solid var(--g-line);border-radius:9px;background:var(--g-surface);color:var(--g-ink);width:100%}
+  textarea.zl-in{min-height:64px;resize:vertical}
+  .zl-hint{font-size:12.5px;color:var(--g-muted)}
+  .zl-chk{border-radius:12px;padding:10px 14px;margin:0 0 10px;font-size:14px}
+  .zl-chk.ok{background:var(--g-accent-soft)}.zl-chk.warn{background:var(--g-warn-soft);color:var(--g-warn)}
+  .zl-chk ul{margin:6px 0 0;padding-left:18px}
+  .zl-bar{position:sticky;bottom:0;background:var(--g-surface);border-top:1px solid var(--g-line);padding:10px 0;display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;z-index:5}
+  .zl-hist{font-size:13px;color:var(--g-muted);margin:6px 0 0;padding-left:18px}
+  @media print{.gbar,.zl-bar,.zl-noprint{display:none!important}}
+</style>
+</head>
+<body class="gp">
+<!--GABINET_DANE--><script src="/opisy-nfz/zasoby/gabinet-saas.js"></script>
+<div class="zl-wrap"><main id="main" aria-live="polite"><p class="g-muted">Wczytuję…</p></main></div>
+<datalist id="dl-lab"></datalist><datalist id="dl-impl"></datalist><datalist id="dl-kolor"></datalist>
+<script>
+'use strict';
+G.bar('zlecenia');
+const $ = s => document.querySelector(s), esc = G.esc;
+
+/* ---------- katalog rodzajów prac (docs/ZLECENIA_PROTETYCZNE.md §6) – rozszerzalny ---------- */
+const GRUPY = [['A', 'Korony'], ['B', 'Mosty'], ['C', 'Implantoprotetyka'], ['D', 'Prace pełnołukowe (All-on-X)'], ['E', 'Prace ruchome'], ['F', 'Pozostałe']];
+const M_STALE = ['cyrkon', 'e.max', 'ceramika', 'metaloceramika (CoCr)', 'PMMA', 'kompozyt'];
+const KAT = [
+  ['kor-pelnocer', 'A', 'Korona pełnoceramiczna', ['e.max', 'ceramika', 'cyrkon'], ['kolor', 'prep']],
+  ['kor-cyrk-mono', 'A', 'Korona cyrkonowa monolityczna', ['cyrkon'], ['kolor', 'prep']],
+  ['kor-cyrk-warst', 'A', 'Korona – cyrkon warstwowy', ['cyrkon'], ['kolor', 'prep']],
+  ['kor-mc', 'A', 'Korona metaloceramiczna', ['metaloceramika (CoCr)'], ['kolor', 'prep']],
+  ['kor-emax', 'A', 'Korona e.max', ['e.max'], ['kolor', 'prep']],
+  ['kor-tymcz', 'A', 'Korona tymczasowa', ['PMMA', 'kompozyt'], ['kolor']],
+  ['kor-impl', 'A', 'Korona na implancie', ['cyrkon', 'e.max', 'metaloceramika (CoCr)', 'PMMA'], ['kolor', 'impl']],
+  ['most-klas', 'B', 'Most klasyczny', M_STALE, ['kolor', 'prep', 'most']],
+  ['most-adh', 'B', 'Most adhezyjny', ['e.max', 'cyrkon', 'kompozyt'], ['kolor', 'prep', 'most']],
+  ['most-impl', 'B', 'Most na implantach', ['cyrkon', 'metaloceramika (CoCr)', 'PMMA', 'tytan'], ['kolor', 'most', 'impl']],
+  ['most-luk', 'B', 'Most pełnołukowy', M_STALE, ['kolor', 'prep', 'most', 'zgryzW']],
+  ['most-tymcz', 'B', 'Most tymczasowy', ['PMMA', 'kompozyt'], ['kolor', 'most']],
+  ['impl-lacznik', 'C', 'Łącznik indywidualny', ['tytan', 'cyrkon'], ['impl']],
+  ['impl-tibase', 'C', 'Ti-base', ['tytan', 'cyrkon'], ['impl']],
+  ['impl-przykr', 'C', 'Konstrukcja przykręcana', ['cyrkon', 'tytan', 'CoCr', 'PMMA'], ['kolor', 'impl']],
+  ['impl-cem', 'C', 'Konstrukcja cementowana', ['cyrkon', 'metaloceramika (CoCr)', 'e.max'], ['kolor', 'impl']],
+  ['aox-4', 'D', 'All-on-4', ['PMMA', 'kompozyt', 'tytan + akryl/kompozyt', 'CoCr + akryl/kompozyt', 'cyrkon'], ['kolor', 'impl', 'aox', 'zgryzW']],
+  ['aox-6', 'D', 'All-on-6', ['PMMA', 'kompozyt', 'tytan + akryl/kompozyt', 'CoCr + akryl/kompozyt', 'cyrkon'], ['kolor', 'impl', 'aox', 'zgryzW']],
+  ['aox-x', 'D', 'All-on-X', ['PMMA', 'kompozyt', 'tytan + akryl/kompozyt', 'CoCr + akryl/kompozyt', 'cyrkon'], ['kolor', 'impl', 'aox', 'zgryzW']],
+  ['aox-hybr', 'D', 'Konstrukcja hybrydowa', ['tytan + akryl/kompozyt', 'CoCr + akryl/kompozyt'], ['kolor', 'impl', 'aox', 'zgryzW']],
+  ['rem-calk', 'E', 'Proteza całkowita', ['akryl'], ['kolor', 'rem', 'zgryzW']],
+  ['rem-czesc', 'E', 'Proteza częściowa', ['akryl'], ['kolor', 'rem']],
+  ['rem-szkiel', 'E', 'Proteza szkieletowa', ['CoCr + akryl'], ['kolor', 'rem']],
+  ['rem-elast', 'E', 'Proteza elastyczna', ['nylon (termoplast)'], ['kolor', 'rem']],
+  ['rem-napr', 'E', 'Naprawa / podścielenie protezy', ['akryl'], ['rem']],
+  ['inne-licowka', 'F', 'Licówki', ['e.max', 'ceramika', 'kompozyt'], ['kolor', 'prep']],
+  ['inne-inlay', 'F', 'Inlay / onlay / overlay', ['e.max', 'kompozyt', 'cyrkon'], ['kolor', 'prep']],
+  ['inne-endo', 'F', 'Endokorona', ['e.max', 'cyrkon', 'kompozyt'], ['kolor', 'prep']],
+  ['inne-szyna', 'F', 'Szyna relaksacyjna / ochronna', ['akryl twardy', 'akryl twardo-miękki', 'termoplast'], ['szyna']],
+].map(x => ({ id: x[0], grp: x[1], name: x[2], mats: x[3], secs: x[4] }));
+const KOLORY = { 'Vita Classic': ['A1', 'A2', 'A3', 'A3,5', 'A4', 'B1', 'B2', 'B3', 'B4', 'C1', 'C2', 'C3', 'C4', 'D2', 'D3', 'D4'],
+  'Vita 3D-Master': ['0M1', '0M2', '0M3', '1M1', '1M2', '2L1.5', '2L2.5', '2M1', '2M2', '2M3', '2R1.5', '2R2.5', '3L1.5', '3L2.5', '3M1', '3M2', '3M3', '3R1.5', '3R2.5', '4L1.5', '4L2.5', '4M1', '4M2', '4M3', '4R1.5', '4R2.5', '5M1', '5M2', '5M3'],
+  'Bleach': ['BL1', 'BL2', 'BL3', 'BL4'] };
+function typOf(z) { return KAT.find(k => k.id === z.typ) || (z.typ ? { id: z.typ, grp: 'F', name: z.typ, mats: M_STALE, secs: ['kolor'] } : null); }
+function allTypes() { return KAT.concat(G.mat('praca', []).map(n => ({ id: n, grp: 'F', name: n, mats: M_STALE, secs: ['kolor'], own: true }))); }
+
+/* ---------- pola (status: W – wymagane, Z – zalecane, O – opcjonalne) ---------- */
+const STATUSY = ['wersja robocza', 'wysłane', 'przyjęte', 'do uzupełnienia', 'gotowe'];
+function sekcje(z) {
+  const t = typOf(z), s = t ? t.secs : [];
+  const out = [{ id: 'pod', tyt: 'Dane podstawowe', open: true, pola: [
+    { k: 'nr', l: 'Numer przypadku', t: 'text', st: 'W', hint: 'ten sam numer w nazwach plików i zdjęć' },
+    { k: 'ini', l: 'Inicjały pacjenta', t: 'text', st: 'W', hint: 'tylko na tym urządzeniu' },
+    { k: 'zeby', l: 'Zęby (FDI)', t: 'text', st: 'W', hint: 'np. 11, 21 albo 14–16' },
+    { k: 'mat', l: 'Materiał', t: 'chips1', opts: t ? G.mat(t.grp === 'C' || t.grp === 'D' ? ['kompozyt', 'inne'] : ['kompozyt'], t.mats) : [], st: 'W', own: true },
+    { k: 'lab', l: 'Laboratorium / technik', t: 'text', dl: 'dl-lab', st: 'Z' },
+    { k: 'termin', l: 'Termin odbioru', t: 'date', st: 'W' },
+    { k: 'prio', l: 'Priorytet', t: 'chips1', opts: ['zwykły', 'pilny'], st: 'O' },
+    { k: 'antag', l: 'Antagoniści i zęby sąsiednie', t: 'chips1', opts: ['skan / wycisk dołączony', 'model przeciwstawny', 'bez antagonisty'], st: 'W' },
+    { k: 'etapy', l: 'Etapy', t: 'chipsN', opts: ['akceptacja projektu przed produkcją', 'przymiarka konstrukcji', 'przymiarka zębów / biskwit', 'praca gotowa bez przymiarki'], st: 'Z' },
+    { k: 'pliki', l: 'Pliki wysłane osobno (skany, rejestracja zwarcia)', t: 'text', st: 'Z', hint: 'nazwy / wersje plików, np. ZP-2026-001_gora_v2.stl' },
+    { k: 'uwagi', l: 'Uwagi i instrukcje szczególne', t: 'area', st: 'O', w: 1 }] }];
+  const a = z.a || {}, grp = t ? t.grp : '';
+  if (s.includes('most')) out.push({ id: 'most', tyt: 'Most: filary i przęsła', open: true, pola: [
+    { k: 'filary', l: 'Zęby filarowe / implanty filarowe', t: 'text', st: 'W', hint: 'np. 14, 16' },
+    { k: 'przesla', l: 'Przęsła (brakujące zęby)', t: 'text', st: 'W', hint: 'np. 15' },
+    { k: 'przeslo', l: 'Kształt przęsła', t: 'chips1', opts: ['siodłowe', 'modyfikowane siodłowe', 'owalne (ovate)', 'higieniczne'], st: 'Z' }] });
+  if (s.includes('impl')) out.push({ id: 'impl', tyt: 'Implanty – komponenty', open: true, pola: [
+    { k: 'implSys', l: 'Producent i system implantu', t: 'text', dl: 'dl-impl', st: 'W' },
+    { k: 'platf', l: 'Platforma / średnica połączenia', t: 'text', st: 'Z' },
+    { k: 'polacz', l: 'Typ połączenia', t: 'chips1', opts: ['wewnętrzne stożkowe', 'wewnętrzne sześciokątne', 'zewnętrzne sześciokątne'], st: 'W' },
+    { k: 'mocow', l: 'Mocowanie', t: 'chips1', opts: ['przykręcana', 'cementowana'], st: 'W', own: false },
+    { k: 'lacznik', l: 'Łącznik', t: 'chips1', opts: ['Ti-base', 'łącznik indywidualny', 'multi-unit (MUA)', 'standardowy'], st: 'Z' },
+    { k: 'scanbody', l: 'Scanbody (producent / kod)', t: 'text', st: 'Z' },
+    { k: 'implWym', l: 'Średnica × długość implantu (jeśli znane)', t: 'text', st: 'O' },
+    { k: 'implKat', l: 'Kąt nachylenia / dywergencja', t: 'text', st: 'O' },
+    { k: 'kanal', l: 'Kanał śruby', t: 'chips1', opts: ['od strony podniebiennej / językowej', 'kanał kątowy (ASC)', 'przez powierzchnię żującą – akceptuję'], st: 'Z' },
+    { k: 'profil', l: 'Profil wyłaniania', t: 'chips1', opts: ['naturalny, wg tkanek', 'kształtowanie dziąsła (podparcie)', 'wklęsły'], st: 'Z' },
+    { k: 'tkanki', l: 'Tkanki miękkie – uwagi', t: 'text', st: 'O' }] });
+  if (s.includes('aox')) out.push({ id: 'aox', tyt: 'All-on-X: plan pracy', open: true, pola: [
+    { k: 'aoxEtap', l: 'Etap', t: 'chips1', opts: ['tymczasowa natychmiastowa', 'tymczasowa (po wygojeniu)', 'ostateczna'], st: 'W', own: false },
+    { k: 'aoxLuk', l: 'Łuk', t: 'chips1', opts: ['szczęka', 'żuchwa', 'szczęka i żuchwa'], st: 'W', own: false },
+    { k: 'aoxLiczba', l: 'Liczba implantów', t: 'chips1', opts: ['4', '5', '6', '8'], st: 'W' },
+    { k: 'aoxPoz', l: 'Pozycje implantów (FDI)', t: 'text', st: 'W', hint: 'np. 15, 12, 22, 25' },
+    { k: 'aoxMua', l: 'Multi-unit: wysokości i kąty', t: 'text', st: 'W', hint: 'np. 15: 30° 3 mm; 12: 0° 2 mm' },
+    { k: 'aoxPodparcie', l: 'Podparcie wargi', t: 'chips1', opts: ['zachować', 'zwiększyć', 'zmniejszyć'], st: 'Z' },
+    { k: 'aoxEksp', l: 'Ekspozycja siekaczy (mm w spoczynku / w uśmiechu)', t: 'text', st: 'Z' },
+    { k: 'aoxKsztalt', l: 'Kształt i ustawienie zębów', t: 'chips1', opts: ['owalny', 'kwadratowy', 'trójkątny', 'wg zdjęć / wax-upu / starej protezy'], st: 'Z' },
+    { k: 'aoxFonet', l: 'Fonetyka – uwagi', t: 'text', st: 'O' },
+    { k: 'aoxPrzym', l: 'Oczekiwane przymiarki', t: 'chipsN', opts: ['ustawienie zębów w wosku', 'próba konstrukcji (pasywne dopasowanie)', 'próba estetyczna'], st: 'Z' }] });
+  if (s.includes('rem')) out.push({ id: 'rem', tyt: 'Proteza', open: true, pola: [
+    { k: 'remEtap', l: 'Etap', t: 'chips1', opts: ['łyżka indywidualna', 'wzorniki zwarciowe', 'ustawienie zębów (próba)', 'proteza gotowa', 'naprawa', 'podścielenie'], st: 'W' },
+    { k: 'remLuk', l: 'Łuk', t: 'chips1', opts: ['szczęka', 'żuchwa', 'obie'], st: 'W', own: false },
+    { k: 'remKlamry', l: 'Klamry / elementy retencyjne (zęby)', t: 'text', st: z.typ === 'rem-calk' ? 'O' : 'Z' },
+    { k: 'remZeby', l: 'Zęby sztuczne (rodzaj / numer formy)', t: 'text', st: 'O' }] });
+  if (s.includes('szyna')) out.push({ id: 'szyna', tyt: 'Szyna', open: true, pola: [
+    { k: 'szLuk', l: 'Łuk', t: 'chips1', opts: ['szczęka', 'żuchwa'], st: 'W', own: false },
+    { k: 'szRodzaj', l: 'Rodzaj', t: 'chips1', opts: ['relaksacyjna (stabilizacyjna)', 'ochronna / sportowa', 'retencyjna', 'wybielająca'], st: 'W' },
+    { k: 'szGrub', l: 'Grubość (mm)', t: 'text', st: 'Z' }] });
+  if (s.includes('kolor')) { const est = grp !== 'C' || z.typ === 'impl-przykr' || z.typ === 'impl-cem';
+    out.push({ id: 'kolor', tyt: 'Kolor i estetyka', open: true, pola: [
+      { k: 'skala', l: 'Skala kolorów', t: 'chips1', opts: ['Vita Classic', 'Vita 3D-Master', 'Bleach'], st: est ? 'W' : 'Z', hint: '„A2” bez skali jest niejednoznaczne' },
+      { k: 'kolor', l: 'Kolor główny', t: 'text', dl: 'dl-kolor', st: est ? 'W' : 'Z' },
+      { k: 'zabStan', l: 'Ząb / podłoże', t: 'chips1', opts: ['ząb żywy', 'ząb martwy / przebarwiony', 'implant / łącznik', 'wkład metalowy'], st: grp === 'A' || grp === 'F' ? 'Z' : 'O' },
+      { k: 'kikut', l: 'Kolor kikuta / podłoża', t: 'text', st: a.zabStan === 'ząb martwy / przebarwiony' || a.zabStan === 'wkład metalowy' ? 'W' : 'O', hint: 'przy zębach martwych – krytyczny' },
+      { k: 'mapa', l: 'Mapa koloru: szyjka / korona / brzeg sieczny', t: 'text', st: 'O', hint: 'np. A3 / A2 / transparentny' },
+      { k: 'przez', l: 'Przezierność', t: 'chips1', opts: ['niska', 'średnia', 'wysoka'], st: 'O' },
+      { k: 'charakt', l: 'Charakteryzacja', t: 'chipsN', opts: ['opalescencja', 'fluorescencja', 'mamelony', 'pęknięcia szkliwa', 'białe plamy', 'przebarwienia', 'halo brzegu siecznego'], st: 'O' },
+      { k: 'dziaslo', l: 'Kolor dziąsła', t: 'text', st: grp === 'D' || grp === 'E' ? 'Z' : 'O' },
+      { k: 'zdjKol', l: 'Zdjęcia z kolornikiem', t: 'chips1', opts: ['dołączone', 'wyślę osobno', 'bez zdjęć'], st: grp === 'A' || grp === 'F' || grp === 'D' ? 'Z' : 'O', own: false }] }); }
+  if (s.includes('prep')) out.push({ id: 'prep', tyt: 'Preparacja i kontakty', pola: [
+    { k: 'granica', l: 'Granica preparacji', t: 'chips1', opts: ['stopień', 'schodek zaokrąglony (chamfer)', 'styczna (knife edge)', 'bez preparacji'], st: 'O' },
+    { k: 'kontakty', l: 'Punkty styczne', t: 'chips1', opts: ['jak zęby sąsiednie', 'mocne', 'lekkie'], st: 'Z' }] });
+  if (t) { const W = s.includes('zgryzW');
+    out.push({ id: 'zgryz', tyt: 'Zgryz i warunki zwarciowe', open: W, pola: [
+      { k: 'rejestr', l: 'Rejestracja zwarcia', t: 'chips1', opts: ['MIC (zwarcie nawykowe)', 'CR (relacja centralna)', 'skan zwarcia bocznego', 'rejestrat zgryzowy dołączony'], st: W ? 'W' : 'Z' },
+      { k: 'vdo', l: 'Wymiar pionowy (VDO)', t: 'chips1', opts: ['zachować', 'zwiększyć', 'zmniejszyć'], st: W ? 'Z' : 'O' },
+      { k: 'vdoMm', l: 'Zmiana VDO (mm)', t: 'text', st: 'O' },
+      { k: 'angle', l: 'Klasa Angle\'a', t: 'chips1', opts: ['I', 'II/1', 'II/2', 'III'], st: 'O', own: false },
+      { k: 'wady', l: 'Wady zgryzu', t: 'chipsN', opts: ['zgryz głęboki', 'zgryz otwarty', 'zgryz krzyżowy', 'zgryz przewieszony'], st: 'O' },
+      { k: 'oj', l: 'Overjet (mm)', t: 'text', st: 'O' }, { k: 'ob', l: 'Overbite (mm)', t: 'text', st: 'O' },
+      { k: 'linia', l: 'Linia pośrodkowa', t: 'chips1', opts: ['zgodna z twarzą', 'przesunięta w prawo', 'przesunięta w lewo'], st: W ? 'Z' : 'O' },
+      { k: 'plaszcz', l: 'Płaszczyzna zgryzowa – uwagi', t: 'text', st: 'O' },
+      { k: 'prowadz', l: 'Prowadzenie', t: 'chips1', opts: ['kłowe', 'grupowe', 'przednie (siekacze)'], st: 'O' },
+      { k: 'bruks', l: 'Bruksizm / parafunkcje', t: 'chips1', opts: ['nie', 'tak', 'tak – planowana szyna'], st: W ? 'Z' : 'O', own: false },
+      { k: 'tmd', l: 'Zaburzenia SSSŻ (TMD) – uwagi', t: 'text', st: 'O' }] }); }
+  return out;
+}
+/* ---------- stan ---------- */
+const S = { ready: false, list: [], cur: null, dirty: false, open: {} };   // open: rozwinięte sekcje (zostają po przerysowaniu)
+const isOpen = (id, def) => id in S.open ? S.open[id] : !!def;
+function newNr() { const y = new Date().getFullYear(), n = S.list.filter(z => String(z.nr || '').startsWith('ZP-' + y)).length + 1; return 'ZP-' + y + '-' + String(n).padStart(3, '0'); }
+function nowe(typ) { return { id: 'z' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6), nr: newNr(), typ: typ || '', status: 'wersja robocza', data: G.today(), a: {}, hist: [{ at: new Date().toISOString(), co: 'utworzono' }] }; }
+const val = (z, k) => k === 'nr' || k === 'typ' || k === 'status' ? z[k] : (z.a || {})[k];
+
+/* ---------- kontrola kompletności (§7) ---------- */
+function braki(z) {
+  const out = [], t = typOf(z);
+  if (!t) out.push(['W', 'Wybierz rodzaj pracy']);
+  for (const sec of sekcje(z)) for (const f of sec.pola) {
+    const v = val(z, f.k), pusty = v === undefined || v === null || v === '' || (Array.isArray(v) && !v.length);
+    if (pusty && f.st !== 'O') out.push([f.st, f.l + ' (' + sec.tyt.toLowerCase() + ')']);
+  }
+  return out;
+}
+
+/* ---------- zapis (tylko urządzenie, zaszyfrowane) ---------- */
+async function zapisz(co) {
+  const z = S.cur; if (!z) return;
+  z.at = new Date().toISOString(); if (co) { z.hist = (z.hist || []).concat([{ at: z.at, co }]).slice(-100); }
+  await G.store('zlecenia').put(z.id, z);
+  const i = S.list.findIndex(x => x.id === z.id); if (i >= 0) S.list[i] = JSON.parse(JSON.stringify(z)); else S.list.unshift(JSON.parse(JSON.stringify(z)));
+  S.dirty = false;
+}
+let sT = null;
+function autosave() { S.dirty = true; clearTimeout(sT); sT = setTimeout(() => zapisz().catch(() => toast('Nie udało się zapisać na tym urządzeniu.')), 600); }
+function toast(t) { let el = $('#zl-toast'); if (!el) { el = document.createElement('div'); el.id = 'zl-toast'; el.className = 'g-warn'; el.setAttribute('role', 'status'); el.style.cssText = 'position:fixed;left:50%;bottom:70px;transform:translateX(-50%);z-index:20;padding:8px 14px;border-radius:10px'; document.body.appendChild(el); }
+  el.textContent = t; el.hidden = false; clearTimeout(el._t); el._t = setTimeout(() => { el.hidden = true; }, 2600); }
+
+/* ---------- widoki ---------- */
+function stCls(s) { return s === 'do uzupełnienia' ? ' braki' : s === 'gotowe' ? ' gotowe' : ''; }
+function lista() {
+  const rows = S.list.slice().sort((a, b) => String(b.at || '').localeCompare(String(a.at || '')));
+  return '<div class="zl-head"><h1>Zlecenia protetyczne</h1><button type="button" class="g-btn" data-a="nowe">+ Nowe zlecenie</button></div>' +
+    '<p class="g-muted" style="margin-top:0">Zlecenia są zapisane tylko na tym urządzeniu (zaszyfrowane). Gotowe zlecenie drukujesz albo zapisujesz jako PDF i przekazujesz technikowi.</p>' +
+    (rows.length ? '<div class="zl-list">' + rows.map(z => { const t = typOf(z), b = braki(z).filter(x => x[0] === 'W').length;
+      return '<div class="zl-item" data-id="' + z.id + '"><b>' + esc(z.nr) + '</b><span>' + esc((z.a || {}).ini || '—') + '</span><span>' + esc(t ? t.name : 'rodzaj nieokreślony') + '</span>' +
+        ((z.a || {}).zeby ? '<span class="g-muted">zęby ' + esc(z.a.zeby) + '</span>' : '') + ((z.a || {}).termin ? '<span class="g-muted">termin ' + esc(z.a.termin) + '</span>' : '') +
+        '<span class="zl-st' + stCls(z.status) + '">' + esc(z.status) + '</span>' + (b ? '<span class="zl-st braki">' + b + ' do uzupełnienia</span>' : '') +
+        '<span class="r"><button type="button" class="g-btn sm" data-a="otworz" data-id="' + z.id + '">Otwórz</button><button type="button" class="g-btn ghost sm" data-a="kopiuj" data-id="' + z.id + '">Kopiuj</button></span></div>'; }).join('') + '</div>'
+      : '<p class="g-muted">Nie ma jeszcze zleceń.</p>');
+}
+function poleHTML(z, f) {
+  const v = val(z, f.k), id = 'f_' + f.k, tag = f.st !== 'O' ? '<span class="zl-tag ' + f.st + '" title="' + (f.st === 'W' ? 'wymagane' : 'zalecane') + '">' + (f.st === 'W' ? 'wymagane' : 'zalecane') + '</span>' : '';
+  let h;
+  if (f.t === 'chips1' || f.t === 'chipsN') {
+    const cur = f.t === 'chipsN' ? (Array.isArray(v) ? v : []) : v;
+    const opts = f.opts.concat(f.t === 'chips1' && v && !f.opts.includes(v) ? [v] : []).concat(f.t === 'chipsN' ? cur.filter(x => !f.opts.includes(x)) : []);
+    h = '<span class="lb">' + esc(f.l) + tag + '</span><div class="zl-ch" role="group" aria-label="' + esc(f.l) + '">' + opts.map(o => { const on = f.t === 'chipsN' ? cur.includes(o) : cur === o;
+      return '<button type="button" data-a="ch" data-k="' + f.k + '" data-m="' + (f.t === 'chipsN' ? 'N' : '1') + '" data-v="' + esc(o) + '" aria-pressed="' + on + '">' + esc(o) + '</button>'; }).join('') + '</div>' +
+      (f.own !== false ? '<input class="zl-in" data-own="' + f.k + '" data-m="' + (f.t === 'chipsN' ? 'N' : '1') + '" placeholder="inne – wpisz i Enter" aria-label="' + esc(f.l) + ' – inna wartość">' : '');
+  } else if (f.t === 'area') h = '<label for="' + id + '">' + esc(f.l) + tag + '</label><textarea class="zl-in" id="' + id + '" data-k="' + f.k + '">' + esc(v || '') + '</textarea>';
+  else h = '<label for="' + id + '">' + esc(f.l) + tag + '</label><input class="zl-in" id="' + id + '" data-k="' + f.k + '" type="' + (f.t === 'date' ? 'date' : 'text') + '" value="' + esc(v || '') + '"' + (f.dl ? ' list="' + f.dl + '"' : '') + ' autocomplete="off">';
+  return '<div class="zl-f' + (f.w ? ' w' : '') + '">' + h + (f.hint ? '<span class="zl-hint">' + esc(f.hint) + '</span>' : '') + '</div>';
+}
+function edytor() {
+  const z = S.cur, t = typOf(z), br = braki(z), w = br.filter(x => x[0] === 'W'), zal = br.filter(x => x[0] === 'Z');
+  const typy = GRUPY.map(g => { const ks = allTypes().filter(k => k.grp === g[0]); return '<div class="zl-f w"><span class="lb">' + esc(g[1]) + '</span><div class="zl-ch">' +
+    ks.map(k => '<button type="button" data-a="typ" data-v="' + esc(k.id) + '" aria-pressed="' + (z.typ === k.id) + '">' + esc(k.name) + '</button>').join('') + '</div></div>'; }).join('') +
+    '<div class="zl-f w"><input class="zl-in" data-owntyp="1" placeholder="inny rodzaj pracy – wpisz i Enter (zapisze się w „Moich materiałach” po dodaniu w Ustawieniach)"></div>';
+  return '<div class="zl-head"><h1>' + esc(z.nr) + (t ? ' · ' + esc(t.name) : '') + '</h1><div class="zl-noprint"><button type="button" class="g-btn ghost sm" data-a="lista">← Lista zleceń</button></div></div>' +
+    '<div class="zl-chk ' + (w.length ? 'warn' : 'ok') + '" id="zl-chk">' + (w.length ? '<b>Do uzupełnienia (wymagane): ' + w.length + '</b><ul>' + w.map(x => '<li>' + esc(x[1]) + '</li>').join('') + '</ul>' : '<b>Wszystkie wymagane informacje są uzupełnione.</b>') +
+      (zal.length ? '<div class="zl-hint" style="margin-top:4px">Zalecane: ' + zal.map(x => esc(x[1])).join(' · ') + '</div>' : '') + '</div>' +
+    '<details class="zl-sec"' + (isOpen('typ', !z.typ) ? ' open' : '') + ' data-sec="typ"><summary>Rodzaj pracy' + (t ? ': ' + esc(t.name) : '') + '</summary><div class="in">' + typy + '</div></details>' +
+    sekcje(z).map(sec => '<details class="zl-sec"' + (isOpen(sec.id, sec.open) ? ' open' : '') + ' data-sec="' + sec.id + '"><summary>' + esc(sec.tyt) + '</summary><div class="in">' + sec.pola.map(f => poleHTML(z, f)).join('') + '</div></details>').join('') +
+    '<details class="zl-sec"' + (isOpen('status', false) ? ' open' : '') + ' data-sec="status"><summary>Status i historia</summary><div class="in"><div class="zl-f w"><span class="lb">Status</span><div class="zl-ch">' +
+      STATUSY.map(s => '<button type="button" data-a="status" data-v="' + esc(s) + '" aria-pressed="' + (z.status === s) + '">' + esc(s) + '</button>').join('') + '</div></div>' +
+      '<div class="zl-f w"><label for="f_brakiLab">Braki zgłoszone przez technika / notatki z rozmów</label><textarea class="zl-in" id="f_brakiLab" data-k="brakiLab">' + esc((z.a || {}).brakiLab || '') + '</textarea></div>' +
+      '<div class="zl-f w"><span class="lb">Historia zmian</span><ul class="zl-hist">' + (z.hist || []).slice().reverse().map(h => '<li>' + esc(new Date(h.at).toLocaleString('pl-PL')) + ' – ' + esc(h.co) + '</li>').join('') + '</ul></div></div></details>' +
+    '<div class="zl-bar zl-noprint"><button type="button" class="g-btn ghost" data-a="usun">Usuń</button><button type="button" class="g-btn ghost" data-a="kopiuj" data-id="' + z.id + '">Kopiuj jako nowe</button><button type="button" class="g-btn" data-a="zapisz">Zapisz</button></div>';
+}
+document.addEventListener('toggle', e => { const d = e.target; if (d.dataset && d.dataset.sec) S.open[d.dataset.sec] = d.open; }, true);
+function render() {
+  const opt = l => l.map(n => '<option value="' + esc(n) + '">').join('');
+  $('#dl-lab').innerHTML = opt(G.mat('lab', [])); $('#dl-impl').innerHTML = opt(G.mat('implant', []));
+  $('#dl-kolor').innerHTML = opt(G.mat('kolor', KOLORY[((S.cur || {}).a || {}).skala] || KOLORY['Vita Classic'].concat(KOLORY['Vita 3D-Master'])));
+  $('#main').innerHTML = S.cur ? edytor() : lista();
+}
+function odswiezKontrole() { const el = $('#zl-chk'); if (!el || !S.cur) return; const t = document.createElement('div'); t.innerHTML = edytor(); const n = t.querySelector('#zl-chk'); if (n) el.replaceWith(n); }
+
+/* ---------- zdarzenia ---------- */
+document.addEventListener('click', async e => {
+  const b = e.target.closest('button[data-a]'); if (!b || !S.ready) return;
+  const a = b.dataset.a, z = S.cur;
+  if (a === 'nowe') { S.open = {}; S.cur = nowe(); await zapisz(); render(); window.scrollTo(0, 0); return; }
+  if (a === 'otworz') { const x = S.list.find(q => q.id === b.dataset.id); if (x) { S.cur = JSON.parse(JSON.stringify(x)); render(); window.scrollTo(0, 0); } return; }
+  if (a === 'kopiuj') { const x = S.list.find(q => q.id === b.dataset.id) || z; if (!x) return; const n = nowe(x.typ); n.a = JSON.parse(JSON.stringify(x.a || {})); delete n.a.brakiLab;
+    n.hist = [{ at: new Date().toISOString(), co: 'skopiowano z ' + x.nr }]; S.cur = n; await zapisz(); render(); window.scrollTo(0, 0); toast('Utworzono kopię ' + n.nr + ' – sprawdź zęby, inicjały i termin.'); return; }
+  if (a === 'lista') { if (S.dirty) await zapisz(); S.cur = null; render(); return; }
+  if (a === 'zapisz') { await zapisz('zapisano'); toast('Zapisano na tym urządzeniu.'); render(); return; }
+  if (a === 'usun') { if (b.dataset.arm !== '1') { b.dataset.arm = '1'; b.textContent = 'Na pewno usunąć? Kliknij ponownie'; return; }
+    await G.store('zlecenia').del(z.id); S.list = S.list.filter(x => x.id !== z.id); S.cur = null; render(); toast('Zlecenie usunięte z tego urządzenia.'); return; }
+  if (!z) return;
+  if (a === 'typ') { S.open.typ = false; z.typ = b.dataset.v; await zapisz('rodzaj pracy: ' + (typOf(z) || {}).name); render(); return; }
+  if (a === 'status') { z.status = b.dataset.v; await zapisz('status: ' + z.status); render(); return; }
+  if (a === 'ch') { const k = b.dataset.k, v = b.dataset.v; z.a = z.a || {};
+    if (b.dataset.m === 'N') { const cur = Array.isArray(z.a[k]) ? z.a[k] : []; z.a[k] = cur.includes(v) ? cur.filter(x => x !== v) : cur.concat([v]); } else z.a[k] = z.a[k] === v ? '' : v;
+    autosave(); render(); return; }
+});
+document.addEventListener('input', e => { const t = e.target; if (!S.cur || !t.dataset.k) return; S.cur.a = S.cur.a || {}; if (t.dataset.k === 'nr') S.cur.nr = t.value; else S.cur.a[t.dataset.k] = t.value; autosave(); odswiezKontrole(); });
+document.addEventListener('keydown', e => {
+  const t = e.target; if (e.key !== 'Enter' || !S.cur) return;
+  if (t.dataset.own) { e.preventDefault(); const v = t.value.trim(); if (!v) return; const k = t.dataset.own; S.cur.a = S.cur.a || {};
+    if (t.dataset.m === 'N') { const cur = Array.isArray(S.cur.a[k]) ? S.cur.a[k] : []; if (!cur.includes(v)) S.cur.a[k] = cur.concat([v]); } else S.cur.a[k] = v; autosave(); render(); return; }
+  if (t.dataset.owntyp) { e.preventDefault(); const v = t.value.trim(); if (!v) return; S.cur.typ = v; zapisz('rodzaj pracy: ' + v).then(render); }
+});
+addEventListener('pagehide', () => { if (S.dirty) zapisz(); });
+
+/* ---------- start ---------- */
+(async () => {
+  try {
+    await G.ready('zlecenia');
+    S.list = (await G.store('zlecenia').all()).map(([, v]) => v).filter(z => z && z.id);
+    S.ready = true; render();
+  } catch (e) { $('#main').innerHTML = '<div class="g-err" role="alert">Nie udało się uruchomić modułu: ' + esc(e && e.message || e) + ' <button type="button" class="g-btn sm" onclick="location.reload()">Odśwież</button></div>'; }
+})();
+</script>
+</body>
+</html>
