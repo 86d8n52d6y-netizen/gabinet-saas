@@ -84,3 +84,4 @@ h1{font-size:24px;font-weight:700}
 .wrap.narrow{max-width:440px}
 .wrap.wide{max-width:1180px}
 textarea{width:100%;padding:10px 12px;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;resize:vertical}
+.subnav{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 14px}.subnav a{text-decoration:none}

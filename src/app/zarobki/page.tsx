@@ -61,6 +61,7 @@ export default async function Zarobki({ searchParams }: { searchParams: Promise<
   return (
     <main className="wrap wide">
       <h1>Zarobki</h1>
+        <nav className="subnav" aria-label="Zarobki"><a href="/zarobki" className="chip on" aria-current="page">Zarobki</a><a href="/zarobki/rozliczenia" className="chip">Rozliczenia</a><a href="/zarobki/podatki" className="chip">Podatki i ZUS</a></nav>
       <nav className="tabs-row" aria-label="Okres">
         {Object.entries(RANGES).map(([k, v]) => <Link key={k} href={qs(sp, { o: k, od: '', do: '' })} className={'chip' + (range.key === k ? ' on' : '')} aria-current={range.key === k ? 'page' : undefined}>{v}</Link>)}
       </nav>

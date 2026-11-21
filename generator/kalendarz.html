@@ -1180,7 +1180,9 @@ var E = (function () {
 <script id="app">
 /* Kalendarz w aplikacji Gabinet: dane użytkownika w jego zaszyfrowanej przestrzeni (wspolne.js), pasek modułów. */
 if (!G.hint()) G.goLogin('kalendarz');
-G.bar('kalendarz');
+var WIDOK = (window.__GABINET && window.__GABINET.widok) || '', WIDOK_TAB = { rozliczenia: 'inv', podatki: 'sum' }[WIDOK] || '';
+var ZAR_URL = { inv: '/zarobki/rozliczenia', sum: '/zarobki/podatki' };
+G.bar(WIDOK_TAB ? 'zarobki' : 'kalendarz');
 
 (function () {
 'use strict';
@@ -1201,6 +1203,7 @@ var ZUSV = { custom: 'Kwota z eZUS (wpisz)', pref: 'Preferencyjny – 30% minima
 var REGIMES = { skala: 'Skala 12% / 32%', ryczalt: 'Ryczałt', liniowy: 'Liniowy 19%' };
 var TABS = [['cal', 'Kalendarz', 'kalendarz'], ['sum', 'Podsumowanie', 'podsumowanie'], ['inv', 'Rozliczenia', 'rozliczenia'],
   ['dl', 'Terminy', 'terminy'], ['cmp', 'Porównaj formy', 'porownaj'], ['set', 'Ustawienia', 'ustawienia']];
+var TABS_ALL = TABS; TABS = WIDOK_TAB ? TABS.filter(function (t) { return t[0] === WIDOK_TAB; }) : TABS.filter(function (t) { return t[0] !== 'sum' && t[0] !== 'inv'; });
 
 var nf2 = new Intl.NumberFormat('pl-PL', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 var nf0 = new Intl.NumberFormat('pl-PL', { maximumFractionDigits: 0 });
@@ -1464,6 +1467,9 @@ function renderHeader() {
   if (db) db.innerHTML = Store.mode === 'demo' ? '<div class="demo-bar gut"><div class="shell"><span>Oglądasz przykładowe dane – nic się nie zapisuje i nie miesza z Twoimi.</span><button class="btn sm" data-a="demo-off">Wróć do moich danych</button></div></div>' : '';
 }
 function renderTabs() {
+  if (WIDOK_TAB) { var h1 = document.querySelector('.brand h1'); if (h1) h1.textContent = 'Zarobki'; document.title = (WIDOK_TAB === 'inv' ? 'Rozliczenia' : 'Podatki i ZUS') + ' – Zarobki – Gabinet';
+    document.getElementById('tabs').innerHTML = [['/zarobki', 'Zarobki', ''], [ZAR_URL.inv, 'Rozliczenia', 'inv'], [ZAR_URL.sum, 'Podatki i ZUS', 'sum']].map(function (x) {
+      return '<a class="tab" href="' + x[0] + '"' + (x[2] === WIDOK_TAB ? ' aria-current="page" aria-selected="true"' : '') + ' style="text-decoration:none">' + x[1] + '</a>'; }).join(''); return; }
   var todo = UI.loaded ? todoShifts().length : 0;
   document.getElementById('tabs').innerHTML = TABS.map(function (t) {
     var b = t[0] === 'cal' && todo ? ' <span class="badge" aria-label="do uzupełnienia">' + todo + '</span>' : '';
@@ -2351,7 +2357,7 @@ function viewInvoices() {
     });
   });
   return '<div class="stack"><div class="toolbar">' + monthNav() + '</div>' + (over.length ? '<div class="alert-list">' + over.join('') + '</div>' : '') +
-    '<div class="card"><h3>Rozliczenia za ' + MONTHS[+mk.slice(5) - 1] + ' ' + mk.slice(0, 4) + '</h3><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Gabinet</th><th class="r">Z Twojego kalendarza</th><th>Kwota z rozliczenia</th><th class="r">Różnica</th><th>Nr faktury</th><th>Wystawiona</th><th>Termin</th><th>Zapłacona</th><th>Status</th></tr></thead><tbody>' + rows + '</tbody></table></div>' +
+    '<div class="card"><h3>Rozliczenia za ' + MONTHS[+mk.slice(5) - 1] + ' ' + mk.slice(0, 4) + '</h3><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Gabinet</th><th class="r">Zarobek lekarza (z dyżurów)</th><th>Kwota z rozliczenia</th><th class="r">Różnica</th><th>Nr faktury</th><th>Wystawiona</th><th>Termin</th><th>Zapłacona</th><th>Status</th></tr></thead><tbody>' + rows + '</tbody></table></div>' +
     '<ul class="plain small" style="margin-top:12px"><li>Wpisz kwotę z miesięcznego rozliczenia gabinetu – aplikacja porówna ją z Twoim zapisem dzień po dniu. Różnica to sygnał, żeby sprawdzić zestawienie (np. brakujący zabieg, inny koszt labu).</li>' +
     '<li>Gdy kwota z rozliczenia jest wpisana, to ona liczy się do podatku (trafia na fakturę). Bez niej – suma z kalendarza.</li><li>Termin płatności = data wystawienia + dni z ustawień gabinetu.</li></ul></div></div>';
 }
@@ -2759,7 +2765,10 @@ function stepPeriod(dir) {
   tipHide(); render();
 }
 var ACT = {
-  'tab': function (el) { UI.tab = el.dataset.v; UI.edit = null; UI.ask = null; tipHide(); render(); window.scrollTo(0, 0); },
+  'tab': function (el) { var v = el.dataset.v;
+    if (!WIDOK_TAB && ZAR_URL[v]) { location.href = ZAR_URL[v]; return; }
+    if (WIDOK_TAB && v !== WIDOK_TAB) { var t = TABS_ALL.filter(function (x) { return x[0] === v; })[0]; location.href = ZAR_URL[v] || ('/kalendarz' + (t ? '#' + t[2] : '')); return; }
+    UI.tab = v; UI.edit = null; UI.ask = null; tipHide(); render(); window.scrollTo(0, 0); },
   'goto': function (el) { UI.tab = el.dataset.v; UI.edit = null; render(); if (el.dataset.anchor) scrollToId(el.dataset.anchor); },
   'mk-prev': function () { stepPeriod(-1); },
   'mk-next': function () { stepPeriod(1); },
@@ -2963,7 +2972,9 @@ function afterLoad() {
 }
 function boot() {
   var h = (location.hash || '').slice(1);
+  if (!WIDOK_TAB && (h === 'podsumowanie' || h === 'rozliczenia')) { location.replace(h === 'rozliczenia' ? ZAR_URL.inv : ZAR_URL.sum); return; }
   TABS.forEach(function (t) { if (t[2] === h) UI.tab = t[0]; });
+  if (WIDOK_TAB) UI.tab = WIDOK_TAB; else if (UI.tab === 'sum' || UI.tab === 'inv') UI.tab = 'cal';
   render();
   var onMq = function () { render(); };
   if (mqWide.addEventListener) mqWide.addEventListener('change', onMq); else if (mqWide.addListener) mqWide.addListener(onMq);
