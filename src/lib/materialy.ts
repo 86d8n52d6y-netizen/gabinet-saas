@@ -5,6 +5,10 @@ export const MAT_KINDS = {
   lakier: 'Lakiery fluorkowe',
   podklad: 'Materiały podkładowe',
   inne: 'Inne materiały',
+  kolor: 'Kolory (zlecenia protetyczne)',
+  lab: 'Laboratoria / technicy',
+  implant: 'Systemy implantów',
+  praca: 'Własne rodzaje prac protetycznych',
 } as const;
 export type MatKind = keyof typeof MAT_KINDS;
 export type Mat = Record<MatKind, string[]>;

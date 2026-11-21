@@ -156,6 +156,7 @@ Projekt bazy: `saas/db/SCHEMAT_BAZY.md` (czeka na akceptację przed utworzeniem 
 | 14 | Licencje – bez terminu (podtrzymanie decyzji 9). Okres próbny jest bez limitu czasu (migracja 0007, nowsza niż zapis przy decyzji 9). |
 | 15 | 2FA – włączanie zostaje wyłączone. |
 | 16 | Numeracja: obowiązują etapy 0–6 z decyzji 9. |
+| 17 | **Zmiana decyzji 1 (Patryk, 21.11.2026, pytania do klikania):** na serwerze dozwolone treść opisów NFZ i prywatnych, treść zleceń protetycznych i inicjały pacjenta; nigdy imię i nazwisko, PESEL, adres ani zdjęcia (zdjęcia tylko na urządzeniu). Wcześniejszy wybór „chmura szyfrowana kluczem użytkownika” dla zleceń zastąpiony tą decyzją. Wdrożenie etapami (synchronizacja, migracje – do pokazania). Przed hostingiem: umowa powierzenia, rejestr czynności, DPIA, opinia prawnika. |
 
 #### Przegląd sekcji 5 specyfikacji (stan 16.11.2026)
 | Punkt | Wymaganie | Realizacja |

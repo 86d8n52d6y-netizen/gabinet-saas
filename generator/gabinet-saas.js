@@ -16,7 +16,7 @@
   function b64(u8) { let s = ''; for (let i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000)); return btoa(s); }
   function unb64(s) { const b = atob(s), u = new Uint8Array(b.length); for (let i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; }
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const MOD = C.mod === 'prywatne' || C.mod === 'kalendarz' || C.mod === 'import' ? C.mod : 'nfz';
+  const MOD = C.mod === 'prywatne' || C.mod === 'kalendarz' || C.mod === 'import' || C.mod === 'zlecenia' ? C.mod : 'nfz';
   const G = window.G = { user: { id: C.uid, name: C.name }, key: null, mod: null, esc };
   // Własne materiały z konta (Ustawienia → Moje materiały; pkt 1.2): podpowiedzi = lista wbudowana + własne, bez powtórzeń.
   G.mat = (kinds, base) => { const out = [], seen = new Set();
@@ -99,7 +99,7 @@
 
   /* ---------- pasek aplikacji ---------- */
   const LOGO = '<svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path d="M16 4c-3 0-4.4 1.6-7 1.6C5.8 5.6 4 8 4 11.6c0 5.6 2.3 15.4 5.6 15.4 2.3 0 2.2-6.6 6.4-6.6s4.1 6.6 6.4 6.6c3.3 0 5.6-9.8 5.6-15.4C28 8 26.2 5.6 23 5.6 20.4 5.6 19 4 16 4z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>';
-  const NAV = [['/kalendarz', 'Kalendarz', 'kalendarz'], ['/opisy-nfz', 'Opisy NFZ', 'nfz'], ['/opisy-prywatne', 'Opisy prywatne', 'prywatne'], ['/zarobki', 'Zarobki', 'zarobki'], ['/katalog-nfz', 'Katalog NFZ'], ['/gabinety', 'Gabinety'], ['/ustawienia', 'Ustawienia'], ['/konto', 'Konto']];
+  const NAV = [['/kalendarz', 'Kalendarz', 'kalendarz'], ['/opisy-nfz', 'Opisy NFZ', 'nfz'], ['/opisy-prywatne', 'Opisy prywatne', 'prywatne'], ['/zlecenia', 'Zlecenia', 'zlecenia'], ['/zarobki', 'Zarobki', 'zarobki'], ['/katalog-nfz', 'Katalog NFZ'], ['/gabinety', 'Gabinety'], ['/ustawienia', 'Ustawienia'], ['/konto', 'Konto']];
   G.bar = function (mod) {
     let el = document.getElementById('gbar');
     if (!el) { el = document.createElement('header'); el.id = 'gbar'; document.body.insertBefore(el, document.body.firstChild); }
@@ -123,9 +123,9 @@
   }
 
   /* ---------- magazyn konta na urządzeniu (kv: ustawienia tekstów, sumy; szkice) ---------- */
-  const STORES = ['kv', 'szkice', 'wizyty', 'opisy'];                                   // wizyty/opisy – Opisy prywatne (wersja 2 bazy)
+  const STORES = ['kv', 'szkice', 'wizyty', 'opisy', 'zlecenia', 'zdjecia'];             // zlecenia/zdjecia – Zlecenia protetyczne (wersja 3 bazy; tylko na urządzeniu)                                   // wizyty/opisy – Opisy prywatne (wersja 2 bazy)
   let udb = null;
-  async function userDb() { if (!udb) udb = await idbOpen('gabinet-saas@' + C.uid, STORES, 2); return udb; }
+  async function userDb() { if (!udb) udb = await idbOpen('gabinet-saas@' + C.uid, STORES, 3); return udb; }
   // Safari zachowuje poprzednią stronę w pamięci „wstecz/naprzód” razem z otwartym połączeniem do bazy, co potrafi
   // zablokować bazę na następnej stronie (np. Opisy NFZ → Opisy prywatne). Przy wyjściu zamykamy połączenie (po zapisach
   // z pagehide), a stronę przywróconą z tej pamięci przeładowujemy na świeżo. Zgłoszenie Patryka 21.11.2026.

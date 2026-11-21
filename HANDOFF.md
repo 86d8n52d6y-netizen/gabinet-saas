@@ -213,3 +213,34 @@ Treść promptu: 7 etapów (materiały, automatyzacja formularzy, zarobki i rozl
 
 **Skutek:** domyślny tekst opisów NFZ zmieni się (6.1, 6.5, 2.1) – testy porównawcze ze starą aplikacją dostosować: porównanie przy wyłączonych nowościach + osobne sprawdzenie nowych fragmentów.
 **Kolejność:** 1.2 → 2.1 → 6.3 → 6.2 → 6.5 → 6.4 → 6.1; po każdym etapie testy; commit + PR po całości (Patryk scala).
+
+## 10. Zlecenia protetyczne – stan na 21.11.2026 (przekazanie do nowej sesji)
+
+Prompt Patryka: „Inteligentne zlecenia protetyczne dla technika dentystycznego”. Specyfikacja i decyzje: **`docs/ZLECENIA_PROTETYCZNE.md`** (na `main`, PR #8).
+
+### Stan etapów
+| Etap | Zakres | Stan |
+|---|---|---|
+| E0 | research + specyfikacja pól (W/Z/O) | ✅ na `main` |
+| E1 | moduł `/zlecenia` (`generator/zlecenia.html`, ręcznie pisany – nie z `przenies_generator.py`): lista, nowe zlecenie, rodzaje prac A–F, własne wartości, kontrola kompletności, statusy, historia zmian, kopiowanie, usuwanie; zapis tylko na urządzeniu (`G.store('zlecenia')`, baza przeglądarki v3) | ✅ na `main` |
+| E2 | sekcje zależne od rodzaju pracy: most, implanty, All-on-X, proteza, szyna, kolor (skale Vita), preparacja, zgryz (VDO, rejestracja, Angle, TMD) | ✅ na `main` (test 64/64 razem z E3, E5, E6) |
+| E3 | schemat zębów FDI z rolami (korona, przęsło, implant, brak, filar, uwaga, kontakt) | ✅ na `main` |
+| E4 | dopracowanie modułów szczegółowych (po przeglądzie [W] przez Patryka) | do zrobienia |
+| E5–E6 | zdjęcia na urządzeniu, wydruk / PDF | ✅ na `main` |
+| E7 | chmura dla zleceń | decyzja podjęta (decyzja 17); **projekt migracji `docs/E7_PROJEKT_MIGRACJI_0008.sql` czeka na akceptację Patryka** |
+| E8 | testy końcowe wg promptu (korona, most, korona na implancie, All-on-4/6/X, protezy, licówka, szyna, izolacja, druk, responsywność) | do zrobienia |
+
+Pełna regresja e2e po E1–E6: wszystkie pliki bez błędów (21.11.2026). Uwaga: pełny `uruchom.sh` trwa > 30 min – w Claude Code uruchamiać plik po pliku w tle.
+
+### Decyzja otwarta (najpierw zapytać Patryka – pytania do klikania)
+21.11 Patryk najpierw wybrał **chmurę szyfrowaną swoim kluczem**, a potem napisał: „numery zębów mogą być, pozwalam na przechowywanie wszystkich danych, aby nie było imienia i nazwiska”. To **zmiana zasady nr 1 `CLAUDE.md`** – nie zapisano jej jeszcze. Ustalić: (1) które dane czytelnie na serwerze (zęby/zgryz/kolory, inicjały, treść opisów, zdjęcia), (2) tylko Zlecenia czy też Opisy, (3) czy zmienić zasadę nr 1 w `CLAUDE.md` i dopisać decyzję w `docs/AUDYT_SAAS.md`. Uwaga dla Patryka: bez imienia i nazwiska to nadal dane o zdrowiu (RODO) – przed hostingiem umowa powierzenia, DPIA, opinia prawna; Claude nie deklaruje zgodności z RODO. Do decyzji – E7 nie zaczynać; nowa tabela = migracja do pokazania przed wykonaniem (zasada 12).
+
+**Odpowiedź częściowa (21.11.2026, pytanie do klikania):** zgoda na dane w chmurze (bez imienia i nazwiska) ma objąć **także treść Opisów NFZ i prywatnych** – osobny, większy etap po Zleceniach (przebudowa synchronizacji, migracja). **Rozstrzygnięte (21.11.2026):** inicjały – tak, zdjęcia – nie (tylko urządzenie); zasada nr 1 w `CLAUDE.md` zmieniona, decyzja 17 w `docs/AUDYT_SAAS.md`. E7 dla zleceń = zwykła synchronizacja (bez osobnego klucza użytkownika) – nowa tabela + migracja do pokazania Patrykowi przed wykonaniem; potem osobny etap: treść opisów i inicjały w chmurze.
+
+### Zgody Patryka na sposób pracy (21.11.2026)
+Commit + PR + **scalenie przez Claude bez pytania** dla gotowych, przetestowanych etapów modułu Zleceń (oprócz migracji bazy – pokazać przed wykonaniem). Pozycje [W] w specyfikacji Patryk przejrzy sam.
+
+### Inne otwarte sprawy z tej sesji
+- Opisy prywatne „Wczytuję…” w Safari – zabezpieczenia wdrożone (PR #6), czeka na potwierdzenie Patryka.
+- „Inne kwoty” tego samego gabinetu w Kalendarzu i Zarobkach – czeka na przykład od Patryka (gabinet, miesiąc, obie kwoty).
+- Rozliczenia i Podsumowanie przeniesione do Zarobków (PR #7) – do sprawdzenia na Macu.

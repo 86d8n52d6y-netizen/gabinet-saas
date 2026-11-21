@@ -1,0 +1,164 @@
+# Zlecenia protetyczne (docs/ZLECENIA_PROTETYCZNE.md): moduł na urządzeniu – lista, nowe zlecenie, rodzaje prac, pola zależne,
+# kontrola kompletności, statusy, historia zmian, kopiowanie, usuwanie; prywatność (treść nie trafia na serwer).
+from pomoc import *
+t = T(); chk = t.chk
+
+def ready(pg): pg.wait_for_function("typeof S!=='undefined'&&S.ready===true", timeout=20000); pg.wait_for_timeout(150)
+def ch(pg, k, v): pg.click(f'button[data-a="ch"][data-k="{k}"][data-v="{v}"]'); pg.wait_for_timeout(120)
+def typ(pg, v):
+    if not pg.locator(f'button[data-a="typ"][data-v="{v}"]').is_visible(): pg.click('details[data-sec="typ"] > summary'); pg.wait_for_timeout(100)
+    pg.click(f'button[data-a="typ"][data-v="{v}"]'); pg.wait_for_timeout(200)
+def wymagane(pg): return pg.evaluate("braki(S.cur).filter(x=>x[0]==='W').map(x=>x[1])")
+
+with sync_playwright() as p:
+    br = p.chromium.launch(executable_path=CHROME, args=['--no-sandbox'])
+    ctx, pg = konto(br, 'Lekarz Z', 'zl.8@example.com', 'zielony-kubek-na-biurku', bypass_csp=True)
+    errs = []; pg.on('pageerror', lambda e: errs.append(str(e)))
+    sent = []; pg.on('request', lambda r: sent.append((r.url, r.post_data or '')) if r.method == 'POST' else None)
+    r = pg.goto(URL + '/zlecenia'); ready(pg)
+    chk('moduł Zlecenia otwiera się (menu: „Zlecenia” aktywne)', r.status == 200 and pg.inner_text('#gbar a.on') == 'Zlecenia')
+    chk('pusta lista', 'Nie ma jeszcze zleceń' in pg.inner_text('#main'))
+
+    # ---- nowe zlecenie: korona e.max
+    pg.click('button[data-a="nowe"]'); pg.wait_for_timeout(300)
+    nr = pg.evaluate("S.cur.nr")
+    chk('numer przypadku nadany automatycznie (ZP-RRRR-NNN)', nr.startswith('ZP-') and nr.endswith('-001'), nr)
+    chk('bez rodzaju pracy: ostrzeżenie „Wybierz rodzaj pracy”', 'Wybierz rodzaj pracy' in pg.inner_text('#zl-chk'))
+    typ(pg, 'kor-emax')
+    chk('materiały zależne od rodzaju pracy (korona e.max → e.max)', pg.locator('button[data-a="ch"][data-k="mat"]').count() >= 1 and pg.locator('button[data-k="mat"][data-v="e.max"]').count() == 1)
+    chk('kontrola: korona bez materiału → ostrzeżenie', any('Materiał' in x for x in wymagane(pg)))
+    pg.fill('#f_ini', 'AB'); pg.fill('#f_zeby', '11, 21'); pg.fill('#f_termin', '2026-12-10'); ch(pg, 'mat', 'e.max'); ch(pg, 'antag', 'skan / wycisk dołączony')
+    ch(pg, 'skala', 'Vita Classic'); pg.fill('#f_kolor', 'A2')   # E2: korona e.max = praca estetyczna → skala i kolor wymagane
+    pg.wait_for_timeout(800)
+    chk('kontrola: komplet danych podstawowych → brak wymaganych braków', wymagane(pg) == [], wymagane(pg))
+    pg.fill('[data-own="mat"]', 'IPS e.max Press HT'); pg.press('[data-own="mat"]', 'Enter'); pg.wait_for_timeout(200)
+    chk('własny materiał wpisany ręcznie (nie blokuje zlecenia)', pg.evaluate("S.cur.a.mat") == 'IPS e.max Press HT')
+    ch(pg, 'etapy', 'akceptacja projektu przed produkcją'); ch(pg, 'etapy', 'przymiarka konstrukcji')
+    chk('wybór wielu etapów', pg.evaluate("S.cur.a.etapy.length") == 2)
+    pg.click('details[data-sec="status"] > summary'); pg.wait_for_timeout(100)
+    pg.click('button[data-a="status"][data-v="wysłane"]'); pg.wait_for_timeout(200)
+    chk('status „wysłane” + wpis w historii', pg.evaluate("S.cur.status") == 'wysłane' and 'status: wysłane' in pg.inner_text('.zl-hist'))
+    pg.click('button[data-a="zapisz"]'); pg.wait_for_timeout(300)
+
+    # ---- zapis na urządzeniu, odczyt po odświeżeniu, prywatność
+    pg.goto(URL + '/zlecenia'); ready(pg)
+    chk('zlecenie zostaje po odświeżeniu (zapis na urządzeniu)', nr in pg.inner_text('#main') and 'Korona e.max' in pg.inner_text('#main'))
+    raw = pg.evaluate("""async()=>{const db=await new Promise((res,rej)=>{const q=indexedDB.open('gabinet-saas@'+G.user.id);q.onsuccess=()=>res(q.result);q.onerror=rej;});
+      return await new Promise(res=>{const t=db.transaction(['zlecenia'],'readonly');const r=t.objectStore('zlecenia').getAll();r.onsuccess=()=>res(JSON.stringify(r.result));});}""")
+    chk('w bazie przeglądarki treść zaszyfrowana (brak „AB” i „11, 21” jawnym tekstem)', '"AB"' not in raw and '11, 21' not in raw and 'e.max' not in raw)
+    leak = [u for u, d in sent if ('AB' in d and 'zeby' in d) or '11, 21' in d or 'IPS e.max' in d]
+    chk('na serwer nie trafiła treść zlecenia (inicjały, zęby, materiał)', not leak, leak)
+    chk('w bazie serwera brak danych zlecenia', sql("SELECT count(*) FROM app.user_blobs WHERE data::text LIKE '%IPS e.max%'") in ('0', ''))
+
+    # ---- kopiowanie, rodzaje prac, usuwanie
+    pg.click(f'.zl-item button[data-a="kopiuj"]'); pg.wait_for_timeout(300)
+    chk('kopia zlecenia: nowy numer, te same dane, historia „skopiowano z …”', pg.evaluate("S.cur.nr").endswith('-002') and pg.evaluate("S.cur.a.mat") == 'IPS e.max Press HT'
+        and pg.evaluate("S.cur.hist.some(h=>h.co==='skopiowano z '+arguments[0])".replace('arguments[0]', repr(nr))))
+    for k, nazwa in [('most-klas', 'Most klasyczny'), ('kor-impl', 'Korona na implancie'), ('aox-4', 'All-on-4'), ('aox-6', 'All-on-6'), ('aox-x', 'All-on-X'),
+                     ('rem-calk', 'Proteza całkowita'), ('rem-czesc', 'Proteza częściowa'), ('inne-licowka', 'Licówki'), ('inne-szyna', 'Szyna relaksacyjna / ochronna')]:
+        typ(pg, k)
+        chk(f'rodzaj pracy: {nazwa} – formularz z materiałami', nazwa in pg.inner_text('h1') and pg.locator('button[data-k="mat"]').count() >= 1)
+    # ---- E2: pola zależne od rodzaju pracy + kontrola kompletności (przykłady z promptu, §10)
+    def secs(): return pg.evaluate("sekcje(S.cur).map(s=>s.id).join(',')")
+    def W(): return ' | '.join(wymagane(pg))
+    typ(pg, 'most-klas')
+    chk('most: sekcja „filary i przęsła”, bez sekcji implantów', 'most' in secs() and 'impl' not in secs())
+    chk('most bez oznaczenia przęseł → ostrzeżenie', 'Przęsła' in W(), W())
+    pg.fill('#f_przesla', '15'); pg.fill('#f_filary', '14, 16'); pg.wait_for_timeout(300)
+    chk('most z przęsłami i filarami → bez tego ostrzeżenia', 'Przęsła' not in W() and 'filarowe' not in W())
+    pg.fill('#f_kolor', ''); pg.evaluate("delete S.cur.a.skala"); pg.wait_for_timeout(300)   # zlecenie skopiowane z korony miało kolor – czyścimy
+    chk('praca estetyczna bez koloru (i bez skali) → ostrzeżenie', 'Kolor główny' in W() and 'Skala kolorów' in W())
+    typ(pg, 'kor-impl')
+    chk('korona na implancie bez systemu → ostrzeżenie (system, połączenie, mocowanie)', 'Producent i system implantu' in W() and 'Typ połączenia' in W() and 'Mocowanie' in W(), W())
+    typ(pg, 'aox-x')
+    chk('All-on-X: sekcja planu + komponenty; brak MUA i pozycji → ostrzeżenie', 'aox' in secs() and 'Multi-unit' in W() and 'Pozycje implantów' in W(), W())
+    chk('All-on-X: rejestracja zwarcia wymagana', 'Rejestracja zwarcia' in W())
+    typ(pg, 'kor-emax')
+    chk('korona: rejestracja zwarcia tylko zalecana (nie wymagana)', 'Rejestracja zwarcia' not in W())
+    pg.click('details[data-sec="kolor"] > summary') if not pg.locator('button[data-k="zabStan"]').first.is_visible() else None
+    ch(pg, 'zabStan', 'ząb martwy / przebarwiony')
+    chk('ząb martwy → kolor kikuta wymagany', 'Kolor kikuta' in W(), W())
+    typ(pg, 'rem-czesc'); chk('proteza częściowa: etap i łuk wymagane, klamry zalecane', 'Etap' in W() and 'Łuk' in W() and 'rem' in secs())
+    typ(pg, 'inne-szyna'); chk('szyna: łuk i rodzaj wymagane, bez sekcji koloru', 'Rodzaj' in W() and 'kolor' not in secs())
+    typ(pg, 'impl-tibase'); chk('Ti-base: bez sekcji koloru, z komponentami implantu', 'kolor' not in secs() and 'impl' in secs())
+
+    # ---- E3: schemat zębów FDI z rolami
+    def rola(r): pg.click(f'button[data-a="rola"][data-v="{r}"]'); pg.wait_for_timeout(80)
+    def zab(n): pg.click(f'[data-testid="zab-{n}"]'); pg.wait_for_timeout(120)
+    def A(k): return pg.evaluate(f"S.cur.a[{k!r}]")
+    typ(pg, 'most-klas'); pg.fill('#f_filary', ''); pg.fill('#f_przesla', ''); pg.wait_for_timeout(200)
+    chk('schemat: 32 zęby stałe (11–48)', pg.locator('[data-testid^="zab-"]').count() == 32)
+    rola('filar'); zab(14); zab(16); rola('przęsło'); zab(15)
+    chk('most ze schematu: filary 14, 16, przęsło 15, zęby 14, 15, 16', A('filary') == '14, 16' and A('przesla') == '15' and A('zeby') == '14, 15, 16', (A('filary'), A('przesla'), A('zeby')))
+    chk('most ze schematu → bez ostrzeżeń o filarach i przęsłach', 'Przęsła' not in W() and 'filarowe' not in W(), W())
+    chk('ząb pokazuje rolę (P na 15)', pg.get_attribute('[data-testid="zab-15"]', 'data-r') == 'przęsło' and 'P' in pg.inner_text('[data-testid="zab-15"]'))
+    zab(15); chk('ponowne kliknięcie usuwa rolę → ostrzeżenie o przęsłach wraca', A('przesla') == '' and 'Przęsła' in W())
+    rola('przęsło'); zab(15)
+    rola('uwaga'); zab(13); pg.fill('[data-zuw="13"]', 'abfrakcja – nie dociskać'); pg.wait_for_timeout(700)
+    chk('rola „uwaga” z opisem zęba', pg.evaluate("S.cur.a.zUw['13']") == 'abfrakcja – nie dociskać' and A('zeby') == '14, 15, 16')
+    rola('kontakt'); zab(45); chk('rola „kontakt” zapisana, nie trafia do listy zębów pracy', pg.evaluate("S.cur.a.schemat['45']") == 'kontakt' and '45' not in A('zeby'))
+    pg.click('button[data-a="mlecz"]'); pg.wait_for_timeout(150)
+    chk('zęby mleczne: 20 zębów (51–85)', pg.locator('[data-testid^="zab-"]').count() == 20 and pg.locator('[data-testid="zab-85"]').count() == 1)
+    pg.click('button[data-a="mlecz"]'); pg.wait_for_timeout(150)
+    pg.click('button[data-a="zapisz"]'); pg.wait_for_timeout(400); pg.reload(); ready(pg)
+    pg.click(f'button[data-a="otworz"][data-id="{pg.evaluate("S.list.find(z=>z.typ===\'most-klas\').id")}"]'); pg.wait_for_timeout(300)
+    chk('schemat zostaje po odświeżeniu', pg.get_attribute('[data-testid="zab-16"]', 'data-r') == 'filar' and pg.get_attribute('[data-testid="zab-13"]', 'data-r') == 'uwaga')
+    typ(pg, 'aox-x'); rola('implant'); zab(15); zab(12); zab(22); zab(25)
+    chk('All-on-X: pozycje implantów ze schematu', '12, 15, 22, 25' == A('aoxPoz') and 'Pozycje implantów' not in W(), A('aoxPoz'))
+    vis = pg.evaluate("[...document.querySelectorAll('[data-testid^=\"zab-\"]')].every(b=>b.getBoundingClientRect().width>=30)")
+    chk('przyciski zębów dość duże do kliknięcia (≥ 30 px)', vis)
+
+    # ---- E5: zdjęcia tylko na urządzeniu
+    import base64, os
+    png = os.path.join(os.path.dirname(os.path.abspath(__file__)), '_zl_test.png')
+    open(png, 'wb').write(base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAIAAAD91JpzAAAAFklEQVR4nGP8z8DAwMDAxMDAwMDAAAANHQEDasKb6QAAAABJRU5ErkJggg=='))
+    pg.click('details[data-sec="foto"] > summary'); pg.wait_for_timeout(100)
+    n0 = len(sent)
+    pg.set_input_files('[data-testid="foto-input"]', [png]); pg.wait_for_timeout(1200)
+    chk('zdjęcie dodane (miniatura w zleceniu)', pg.locator('.zl-foto img').count() == 1)
+    chk('zdjęcie zapisane w bazie urządzenia (zaszyfrowane)', pg.evaluate("G.store('zdjecia').all().then(l=>l.length)") == 1)
+    chk('zdjęcie NIE wysłane na serwer', not any('image/jpeg' in d or 'data:image' in d for _, d in sent[n0:]))
+    pg.fill('[data-fopis]', 'kolornik A2'); pg.wait_for_timeout(800)
+    pg.reload(); ready(pg)
+    zid = pg.evaluate("S.list.find(z=>z.typ==='aox-x').id")
+    pg.click(f'button[data-a="otworz"][data-id="{zid}"]'); pg.wait_for_timeout(400)
+    chk('zdjęcie i opis zostają po odświeżeniu', pg.locator('.zl-foto img').count() == 1 and pg.input_value('[data-fopis]') == 'kolornik A2')
+    os.remove(png)
+
+    # ---- E6: wydruk / PDF
+    pg.click('details[data-sec="druk"] > summary'); pg.wait_for_timeout(100)
+    pg.fill('[data-testid="druk-pacjent"]', 'Jan Testowy')
+    pg.evaluate("window.print=()=>{window.__druk=document.querySelector('#druk').innerHTML}")
+    n0 = len(sent)
+    pg.click('[data-testid="drukuj"]'); pg.wait_for_timeout(500)
+    d = pg.evaluate("window.__druk||''")
+    chk('wydruk: numer, rodzaj pracy, imię i nazwisko na wydruku', nr[:8] in d and 'All-on-X' in d and 'Jan Testowy' in d)
+    chk('wydruk: schemat zębów, sekcje, zdjęcie z opisem, miejsce na podpis', 'Schemat zębów' in d and 'All-on-X: plan pracy' in d and 'Implanty – komponenty' not in d and 'kolornik A2' in d and '<img' in d and 'Podpis' in d)
+    chk('wydruk: lista braków przy niekompletnym zleceniu', 'Zlecenie niekompletne' in d)
+    chk('imię i nazwisko nie zapisane na urządzeniu', 'Jan Testowy' not in pg.evaluate("JSON.stringify(S.cur)+JSON.stringify(S.list)"))
+    chk('imię i nazwisko nie wysłane na serwer', not any('Jan Testowy' in d2 for _, d2 in sent[n0:]))
+    pg.emulate_media(media='print'); pg.evaluate("document.querySelector('#druk').innerHTML=window.__druk")
+    chk('w trybie druku widoczny tylko wydruk (bez menu i formularza)', pg.is_visible('#druk') and not pg.is_visible('#main'))
+    pg.emulate_media(media='screen'); pg.evaluate("document.querySelector('#druk').innerHTML=''")
+    pg.set_viewport_size({'width': 390, 'height': 844}); pg.wait_for_timeout(200)
+    chk('telefon (390 px): strona bez przewijania w poziomie', pg.evaluate("document.documentElement.scrollWidth<=window.innerWidth+1"), pg.evaluate("document.documentElement.scrollWidth"))
+    pg.set_viewport_size({'width': 1280, 'height': 900})
+
+    pg.click('details[data-sec="typ"] > summary'); pg.wait_for_timeout(100)
+    pg.fill('[data-owntyp="1"]', 'Maska dziąsłowa'); pg.press('[data-owntyp="1"]', 'Enter'); pg.wait_for_timeout(300)
+    chk('inny rodzaj pracy wpisany ręcznie', 'Maska dziąsłowa' in pg.inner_text('h1'))
+    pg.click('button[data-a="usun"]'); pg.click('button[data-a="usun"]'); pg.wait_for_timeout(300)
+    chk('usunięcie zlecenia (z potwierdzeniem)', pg.locator('.zl-item').count() == 1)
+    chk('usunięcie zlecenia usuwa też jego zdjęcia z urządzenia', pg.evaluate("G.store('zdjecia').all().then(l=>l.length)") == 0)
+
+    # ---- izolacja: inne konto na tym samym komputerze nie widzi zleceń
+    c2, p2 = konto(br, 'Lekarz Y', 'zl2.8@example.com', 'zielony-kubek-na-biurku', bypass_csp=True)
+    p2.goto(URL + '/zlecenia'); ready(p2)
+    chk('inne konto: nie widzi zleceń pierwszego lekarza', 'Nie ma jeszcze zleceń' in p2.inner_text('#main'))
+    c2.close()
+    anon = br.new_context(); pa = anon.new_page(); pa.goto(URL + '/zlecenia')
+    chk('bez logowania: przekierowanie do logowania', '/logowanie' in pa.url); anon.close()
+
+    chk('brak błędów JavaScript', not errs, errs)
+    br.close()
+t.done('zlecenia protetyczne: moduł na urządzeniu')
