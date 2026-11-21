@@ -37,18 +37,19 @@ Skrypt:
 
 1. **Załóż konto** (min. 12 znaków hasła) → potwierdź e-mail w poczcie testowej (`localhost:8025`).
 2. (Weryfikacja dwuetapowa 2FA jest w tej wersji wyłączona.)
-3. **Gabinety** – dodaj gabinety (nazwa, kolor, model rozliczenia, %). Te same gabinety są w Kalendarzu, Opisach i Zarobkach.
+3. **Gabinety** – dodaj gabinety (nazwa, kolor, model rozliczenia, %). Te same gabinety są w Kalendarzu, Opisach i Zarobkach. Nowe konto nie ma żadnych gabinetów – Kalendarz pokaże „Dodaj pierwszy gabinet”.
 4. **Ustawienia** – stawki NFZ (1,84 zł/pkt, 350 zł/h przeglądów, udział 40/35%) i podstawa zarobku z punktów.
-5. **Masz dane w starej aplikacji?** W starej: strona główna → **Kopia całości** → pobierz plik. W nowej: **Konto → „Przenieś dane ze starej aplikacji”** → wskaż plik, wpisz hasło kopii, sprawdź dopasowanie gabinetów → **Przenieś dane**. Ponowne przeniesienie nie dubluje wpisów.
+5. **Kalendarz → „Ustaw podatki i ZUS”** – kreator otwiera się przy pierwszym wejściu (3 pytania: start działalności, forma opodatkowania, ZUS; nic nie jest wpisane z góry). Możesz kliknąć „Pomiń na razie” i wrócić później. Bez tych ustawień Kalendarz i Zarobki nie liczą netto.
+6. **Masz dane w starej aplikacji?** W starej: strona główna → **Kopia całości** → pobierz plik. W nowej: **Konto → „Przenieś dane ze starej aplikacji”** → wskaż plik, wpisz hasło kopii, sprawdź dopasowanie gabinetów → **Przenieś dane**. Ponowne przeniesienie nie dubluje wpisów.
 
 ## 4. Moduły
 
 | Moduł | Do czego | Uwagi |
 |---|---|---|
-| **Kalendarz** | Dyżury, dni pracy, kursy, rozliczenia gabinetów, ZUS i podatek, porównanie form opodatkowania | Jak w obecnej aplikacji. Przy edycji dyżuru – podpowiedź „Wpisz jako obrót” z opisów tego dnia. Notatka dyżuru: **bez danych pacjentów**. |
+| **Kalendarz** | Dyżury, dni pracy, kursy, rozliczenia gabinetów, ZUS i podatek, porównanie form opodatkowania | Jak w obecnej aplikacji. Przy edycji dyżuru – podpowiedź „Wpisz jako obrót” z opisów tego dnia. Notatka dyżuru: **bez danych pacjentów**. Podatki i ZUS: kreator „Ustaw podatki i ZUS”; **Ustawienia → Działalność i podatek → „Ustaw od nowa (wyczyść)”** czyści tylko ustawienia podatków i ZUS (po potwierdzeniu) – dyżury, gabinety, koszty i kursy zostają. |
 | **Opisy NFZ** | Generator opisów, kody, punkty, przeglądy, historia, statystyki | Gabinet wybiera się sam według dyżuru w Kalendarzu. |
 | **Opisy prywatne** | Procedury, cennik z % lekarza, własne szablony, zestawy, historia | Wynagrodzenie liczone automatycznie (np. 500 zł × 40% = 200 zł). |
-| **Zarobki** | Kafelki: „Razem z wizyt”, „Razem punktów”, „Zarobek lekarza (%)”, poprzedni okres; tabela „Wszystkie gabinety”: liczba wizyt, zarobek lekarza, zarobek na godzinę; przełącznik brutto/netto; wykres, średnie, dni tygodnia, filtr, **CSV** | Zarobek lekarza i godziny – z odbytych dyżurów w Kalendarzu wg zasad gabinetu (wpisz obrót przy dyżurze). Netto – po skonfigurowaniu Twoich zasad rozliczenia. |
+| **Zarobki** | Kafelki: „Razem z wizyt”, „Razem punktów”, „Zarobek lekarza (%)”, poprzedni okres; tabela „Wszystkie gabinety”: liczba wizyt, zarobek lekarza, zarobek na godzinę; przełącznik brutto/netto; wykres, średnie, dni tygodnia, filtr, **CSV** | Zarobek lekarza i godziny – z odbytych dyżurów w Kalendarzu wg zasad gabinetu (wpisz obrót przy dyżurze). Netto – wg ustawień podatków i ZUS z Kalendarza (ten sam sposób liczenia co w Kalendarzu); to **szacunek** (podatek rozlicza się rocznie) i dotyczy tylko zarobku lekarza z dyżurów – kwoty z wizyt i CSV są brutto. Bez ustawień w Kalendarzu netto nie jest liczone. |
 | **Katalog NFZ** | Kody z punktami i źródłem (zarządzenie DSOZ) | Tylko do podglądu. |
 | **Konto** | Imię, hasło, urządzenia (wylogowanie zdalne), dziennik bezpieczeństwa, kopie danych | Wersja testowa – dostęp bez limitu czasu. |
 
@@ -95,7 +96,7 @@ Napisz w czacie, najlepiej w tej formie:
 
 | Element | Stan |
 |---|---|
-| Dostęp z telefonu / innego komputera | Niedostępny – aplikacja działa tylko na tym Macu (hosting dopiero po Twojej zgodzie, etap 5) |
+| Dostęp z telefonu / innego komputera | Niedostępny – aplikacja działa tylko na tym Macu (hosting tylko po Twojej zgodzie – etapy 5–6) |
 | Płatności, licencje, panel administratora | Odłożone (dostęp bez limitu czasu) |
 | E-maile | Tylko do poczty testowej `localhost:8025` |
 | Treść opisów na innych urządzeniach | Tylko przez plik kopii (decyzja: treść nie trafia do chmury) |

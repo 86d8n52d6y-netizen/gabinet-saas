@@ -107,7 +107,7 @@ with sync_playwright() as p:
     kc.close()
 
     # ---- nowe konto bez gabinetów: Kalendarz nie tworzy przykładowych gabinetów (K23–K25)
-    c2, p2 = konto(br, 'Lekarz Y', 'y.6@example.com', 'zielony-kubek-na-biurku')
+    c2, p2 = konto(br, 'Lekarz Y', 'y.6@example.com', 'zielony-kubek-na-biurku', bypass_csp=True)
     e2 = []; p2.on('pageerror', lambda e: e2.append(str(e)))
     p2.goto(URL + '/kalendarz'); p2.wait_for_function("window.Kal&&Kal.UI.loaded===true", timeout=20000); p2.wait_for_timeout(400)
     chk('nowe konto: Kalendarz bez przykładowych gabinetów', p2.evaluate("Kal.S().clinics.length") == 0)
@@ -123,6 +123,18 @@ with sync_playwright() as p:
         and p2.locator('[data-first-clinic]').count() == 0)
     c2.close()
 
+    # ---- ponowna rejestracja tym samym e-mailem po usunięciu konta → dostęp (decyzja Patryka 21.11.2026, pytanie 2)
+    R = 'r.6@example.com'
+    c3, p3 = konto(br, 'Lekarz R', R, 'zielony-kubek-na-biurku'); c3.close()
+    sql(f"DELETE FROM app.profiles WHERE email='{R}'")
+    chk('konto usunięte, wpis w rejestrze okresu próbnego zostaje', sql(f"SELECT count(*) FROM app.profiles WHERE email='{R}'") == '0'
+        and sql("SELECT count(*) FROM app.trial_registry") != '0')
+    c3, p3 = konto(br, 'Lekarz R', R, 'zielony-kubek-na-biurku')
+    chk('ponowna rejestracja: wersja testowa aktywna', sql(f"SELECT s.status FROM app.subscriptions s JOIN app.profiles p ON p.id=s.user_id WHERE p.email='{R}'") == 'trial_active')
+    p3.goto(URL + '/zarobki')
+    chk('ponowna rejestracja: moduły dostępne (bez „wymaga aktywnej licencji”)', 'dostep=brak' not in p3.url and '/zarobki' in p3.url, p3.url)
+    c3.close()
+
     # ---- katalog i nazwa modelu
     pg.goto(URL + '/katalog-nfz')
     chk('Katalog NFZ: bez „Własne kody” i „Sprawdź wycenę”', 'Własne kody' not in pg.content() and 'Sprawdź wycenę' not in pg.content())
@@ -130,4 +142,4 @@ with sync_playwright() as p:
     chk('Gabinety: „% po odjęciu kosztów własnych”, bez starej nazwy', '% po odjęciu kosztów własnych' in pg.content() and 'labu/implantów' not in pg.content())
     chk('brak błędów JavaScript', not errs, errs)
     br.close()
-t.done('zmiany 21.11.2026: 2FA, brutto/netto, katalog, nazwa modelu')
+t.done('zmiany 21.11.2026: 2FA, brutto/netto, katalog, nazwa modelu, ponowna rejestracja')

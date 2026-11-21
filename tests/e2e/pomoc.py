@@ -33,9 +33,10 @@ def submit(pg, text=None, scope=None):
 def msg(pg):
     pg.wait_for_timeout(150)
     return ' '.join(pg.locator('.msg').all_inner_texts())
-def konto(br, name, email, pwd, ua=None):
-    """Nowe konto (rejestracja przez formularz) i zalogowany kontekst przeglądarki."""
-    ctx = br.new_context(user_agent=ua) if ua else br.new_context(); pg = ctx.new_page()
+def konto(br, name, email, pwd, ua=None, bypass_csp=False):
+    """Nowe konto (rejestracja przez formularz) i zalogowany kontekst przeglądarki.
+    bypass_csp=True – tylko dla narzędzia testowego (wait_for_function); CSP aplikacji sprawdzane osobno."""
+    ctx = br.new_context(**({'user_agent': ua} if ua else {}), bypass_csp=bypass_csp); pg = ctx.new_page()
     pg.goto(URL + '/rejestracja'); fill(pg, name=name, email=email, password=pwd, password2=pwd); pg.check('[name="zgoda"]')
     submit(pg, 'Załóż konto')
     pg.goto(URL + '/logowanie'); fill(pg, email=email, password=pwd); submit(pg, 'Zaloguj')

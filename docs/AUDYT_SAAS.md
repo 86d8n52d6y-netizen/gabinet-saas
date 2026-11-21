@@ -146,6 +146,17 @@ Projekt bazy: `saas/db/SCHEMAT_BAZY.md` (czeka na akceptację przed utworzeniem 
 
 **Licencje, płatności (Stripe) i panel administratora – odłożone bez terminu** (Patryk doda je w osobnym kroku). Nic z tego nie było zbudowane poza istniejącym okresem próbnym (3 miesiące od rejestracji, sprawdzany na serwerze) – ten mechanizm zostaje bez zmian, dopóki Patryk nie zdecyduje inaczej (bez zgody nie usuwamy funkcji).
 
+#### Decyzje Patryka 21.11.2026 (pytania otwarte z HANDOFF.md §7)
+| # | Decyzja |
+|---|---|
+| 10 | Ponowna rejestracja tym samym e-mailem daje dostęp (wersja testowa); rejestr HMAC zostaje na ewentualny powrót zasady „okres próbny raz na e-mail”. |
+| 11 | Fikcyjne „Gabinet 1–4” sprzed K23 – usuwane ręcznie, bez migracji. |
+| 12 | Własne kody NFZ – zakładka zostaje ukryta (dane w bazie zostają). |
+| 13 | Dyktowanie – wybór silnika odłożony; przed etapem 2 porównanie opcji. |
+| 14 | Licencje – bez terminu (podtrzymanie decyzji 9). Okres próbny jest bez limitu czasu (migracja 0007, nowsza niż zapis przy decyzji 9). |
+| 15 | 2FA – włączanie zostaje wyłączone. |
+| 16 | Numeracja: obowiązują etapy 0–6 z decyzji 9. |
+
 #### Przegląd sekcji 5 specyfikacji (stan 16.11.2026)
 | Punkt | Wymaganie | Realizacja |
 |---|---|---|

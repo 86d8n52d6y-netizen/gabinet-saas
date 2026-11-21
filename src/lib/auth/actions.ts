@@ -50,15 +50,15 @@ export async function register(_: State, fd: FormData): Promise<State> {
       id = (await c.query(`INSERT INTO app.profiles(email, password_hash, display_name) VALUES ($1, $2, $3) RETURNING id`, [email, hash, name])).rows[0].id;
     } catch (e) { if (pgUnique(e)) return { exists: true as const }; throw e; }
     await c.query('INSERT INTO app.user_settings(user_id) VALUES ($1)', [id]);
-    // okres próbny 3 miesiące – jeden na adres e-mail (rejestr skrótów HMAC, przechowywany 3 lata)
+    // Wersja testowa (bez limitu czasu – migracja 0007) dla każdego nowego konta, także przy ponownej rejestracji
+    // tym samym e-mailem po usunięciu konta (decyzja Patryka 21.11.2026). Rejestr skrótów HMAC nadal zapisujemy
+    // (pierwsza rejestracja), żeby przy powrocie licencji dało się przywrócić zasadę „okres próbny raz na e-mail”.
     const tk = trialKey(email);
     const had = await c.query('SELECT 1 FROM app.trial_registry WHERE email_hmac = $1', [tk]);
-    if (!had.rowCount) {
-      await c.query('INSERT INTO app.trial_registry(email_hmac) VALUES ($1)', [tk]);
-      await c.query(`INSERT INTO app.subscriptions(user_id, plan, status, trial_start, trial_end, updated_by)
-                     VALUES ($1, 'trial', 'trial_active', now(), now() + interval '3 months', 'system')`, [id]);
-    }
-    await ev(c, 'register', id, ip, device, { trial: !had.rowCount });
+    if (!had.rowCount) await c.query('INSERT INTO app.trial_registry(email_hmac) VALUES ($1)', [tk]);
+    await c.query(`INSERT INTO app.subscriptions(user_id, plan, status, trial_start, trial_end, updated_by)
+                   VALUES ($1, 'trial', 'trial_active', now(), now() + interval '3 months', 'system')`, [id]);
+    await ev(c, 'register', id, ip, device, { trial: true, ponowna: !!had.rowCount });
     return { exists: false as const, token: await newEmailToken(c, id, 'verify', '24 hours') };
   });
   const m = out.exists ? mails.alreadyRegistered() : mails.verify(name, out.token);
