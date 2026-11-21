@@ -222,14 +222,15 @@ Prompt Patryka: „Inteligentne zlecenia protetyczne dla technika dentystycznego
 | Etap | Zakres | Stan |
 |---|---|---|
 | E0 | research + specyfikacja pól (W/Z/O) | ✅ na `main` |
-| E1 | moduł `/zlecenia` (`generator/zlecenia.html`, ręcznie pisany – nie z `przenies_generator.py`): lista, nowe zlecenie, rodzaje prac A–F, własne wartości, kontrola kompletności, statusy, historia zmian, kopiowanie, usuwanie; zapis tylko na urządzeniu (`G.store('zlecenia')`, baza przeglądarki v3) | ✅ test `t_8_zlecenia.py` 29/29 (przed dopisaniem E2); **tylko na gałęzi roboczej** |
-| E2 | sekcje zależne od rodzaju pracy: most, implanty, All-on-X, proteza, szyna, kolor (skale Vita), preparacja, zgryz (VDO, rejestracja, Angle, TMD) | **napisane, NIEPRZETESTOWANE** – testy dopisane w `t_8_zlecenia.py`; przebudować (`npx next build` – pliki `generator/` kopiują się przy budowie!) i uruchomić |
-| E3 | schemat zębów FDI z rolami (korona, przęsło, implant, brak, filar, uwaga, kontakt) – dziś pole tekstowe | do zrobienia |
-| E4–E6 | moduły szczegółowe (dopracowanie), zdjęcia na urządzeniu, wydruk / PDF | do zrobienia |
-| E7 | chmura dla zleceń | **czeka na decyzję – patrz niżej** |
+| E1 | moduł `/zlecenia` (`generator/zlecenia.html`, ręcznie pisany – nie z `przenies_generator.py`): lista, nowe zlecenie, rodzaje prac A–F, własne wartości, kontrola kompletności, statusy, historia zmian, kopiowanie, usuwanie; zapis tylko na urządzeniu (`G.store('zlecenia')`, baza przeglądarki v3) | ✅ na `main` |
+| E2 | sekcje zależne od rodzaju pracy: most, implanty, All-on-X, proteza, szyna, kolor (skale Vita), preparacja, zgryz (VDO, rejestracja, Angle, TMD) | ✅ na `main` (test 64/64 razem z E3, E5, E6) |
+| E3 | schemat zębów FDI z rolami (korona, przęsło, implant, brak, filar, uwaga, kontakt) | ✅ na `main` |
+| E4 | dopracowanie modułów szczegółowych (po przeglądzie [W] przez Patryka) | do zrobienia |
+| E5–E6 | zdjęcia na urządzeniu, wydruk / PDF | ✅ na `main` |
+| E7 | chmura dla zleceń | decyzja podjęta (decyzja 17); **projekt migracji `docs/E7_PROJEKT_MIGRACJI_0008.sql` czeka na akceptację Patryka** |
 | E8 | testy końcowe wg promptu (korona, most, korona na implancie, All-on-4/6/X, protezy, licówka, szyna, izolacja, druk, responsywność) | do zrobienia |
 
-Pełna regresja e2e po E1 (zmiana wersji bazy przeglądarki 2→3, nowa pozycja menu „Zlecenia”, `t_4b` liczy 9 linków) **nie została dokończona** – uruchomić przed scaleniem.
+Pełna regresja e2e po E1–E6: wszystkie pliki bez błędów (21.11.2026). Uwaga: pełny `uruchom.sh` trwa > 30 min – w Claude Code uruchamiać plik po pliku w tle.
 
 ### Decyzja otwarta (najpierw zapytać Patryka – pytania do klikania)
 21.11 Patryk najpierw wybrał **chmurę szyfrowaną swoim kluczem**, a potem napisał: „numery zębów mogą być, pozwalam na przechowywanie wszystkich danych, aby nie było imienia i nazwiska”. To **zmiana zasady nr 1 `CLAUDE.md`** – nie zapisano jej jeszcze. Ustalić: (1) które dane czytelnie na serwerze (zęby/zgryz/kolory, inicjały, treść opisów, zdjęcia), (2) tylko Zlecenia czy też Opisy, (3) czy zmienić zasadę nr 1 w `CLAUDE.md` i dopisać decyzję w `docs/AUDYT_SAAS.md`. Uwaga dla Patryka: bez imienia i nazwiska to nadal dane o zdrowiu (RODO) – przed hostingiem umowa powierzenia, DPIA, opinia prawna; Claude nie deklaruje zgodności z RODO. Do decyzji – E7 nie zaczynać; nowa tabela = migracja do pokazania przed wykonaniem (zasada 12).
