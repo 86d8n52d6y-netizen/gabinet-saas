@@ -107,7 +107,7 @@ with sync_playwright() as p:
     kc.close()
 
     # ---- nowe konto bez gabinetów: Kalendarz nie tworzy przykładowych gabinetów (K23–K25)
-    c2, p2 = konto(br, 'Lekarz Y', 'y.6@example.com', 'zielony-kubek-na-biurku')
+    c2, p2 = konto(br, 'Lekarz Y', 'y.6@example.com', 'zielony-kubek-na-biurku', bypass_csp=True)
     e2 = []; p2.on('pageerror', lambda e: e2.append(str(e)))
     p2.goto(URL + '/kalendarz'); p2.wait_for_function("window.Kal&&Kal.UI.loaded===true", timeout=20000); p2.wait_for_timeout(400)
     chk('nowe konto: Kalendarz bez przykładowych gabinetów', p2.evaluate("Kal.S().clinics.length") == 0)
