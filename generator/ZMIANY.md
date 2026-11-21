@@ -60,3 +60,11 @@ Plik `wspolne.js` (sejf z hasłem w przeglądarce) zastąpiony przez `gabinet-sa
 | K20 | koszty firmowe: opis ogólny zamiast planu jednej osoby (skala do końca 2026) |
 | K21 | „+ Dodaj okres” ZUS przy pustej liście: od startu JDG (albo bieżącego miesiąca), wariant do wyboru |
 | K22 | przykład (demo) z własnymi, oznaczonymi wartościami podatków – domyślne są puste |
+| K23 | domyślnie zero gabinetów (decyzja Patryka 21.11.2026): wcześniej puste konto dostawało 4 przykładowe gabinety z UUID, które przy pierwszym zapisie ustawień trafiały do tabeli gabinetów konta |
+| K23a | pusta lista gabinetów zostaje pusta (bez dopełniania przykładowymi) |
+| K23b | przykład (demo) tworzy własne 4 gabinety przykładowe |
+| K24 | zachęta „Dodaj pierwszy gabinet” (Gabinety w aplikacji) zamiast „Ustaw dni pracy”, gdy konto nie ma gabinetów |
+| K25 | bez gabinetu: nowy dyżur prosi o dodanie gabinetu (zamiast błędu) |
+| K25a | bez gabinetu: „Dodaj dyżury” prosi o dodanie gabinetu |
+| K25b | bez gabinetu: nowy wzór dni pracy prosi o dodanie gabinetu |
+| K25c | bez gabinetu: klik w siatkę tygodnia nie odwołuje się do nieistniejącego gabinetu |

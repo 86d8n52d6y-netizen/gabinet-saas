@@ -106,6 +106,23 @@ with sync_playwright() as p:
     chk('„Pomiń na razie”: kreator chowa się, zostaje przycisk „Ustaw podatki i ZUS”', kp.locator('#wiz').count() == 0 and kp.locator('button.nudge[data-a=wiz-open]').count() == 1)
     kc.close()
 
+    # ---- nowe konto bez gabinetów: Kalendarz nie tworzy przykładowych gabinetów (K23–K25)
+    c2, p2 = konto(br, 'Lekarz Y', 'y.6@example.com', 'zielony-kubek-na-biurku')
+    e2 = []; p2.on('pageerror', lambda e: e2.append(str(e)))
+    p2.goto(URL + '/kalendarz'); p2.wait_for_function("window.Kal&&Kal.UI.loaded===true", timeout=20000); p2.wait_for_timeout(400)
+    chk('nowe konto: Kalendarz bez przykładowych gabinetów', p2.evaluate("Kal.S().clinics.length") == 0)
+    chk('zachęta „Dodaj pierwszy gabinet” → Gabinety', p2.get_attribute('[data-first-clinic]', 'href') == '/gabinety?nowy=1')
+    p2.click('[data-a=wiz-skip]'); p2.wait_for_timeout(1500)
+    chk('zapis ustawień Kalendarza nie tworzy gabinetów na koncie', sql("SELECT count(*) FROM app.clinics k JOIN app.profiles p ON p.id=k.owner_id WHERE p.email='y.6@example.com'") == '0'
+        and sql("SELECT count(*) FROM app.calendar_docs d JOIN app.profiles p ON p.id=d.owner_id WHERE p.email='y.6@example.com' AND d.doc='settings'") == '1')
+    p2.click('[data-a=shift-new]'); p2.wait_for_timeout(300)
+    chk('„+ Dyżur” bez gabinetu: prośba o dodanie gabinetu, bez błędu', 'Najpierw dodaj gabinet' in p2.inner_text('#toast') and p2.evaluate("Kal.UI.tab") == 'set' and not e2, e2)
+    p2.goto(URL + '/gabinety?nowy=1'); fill(p2, name='Pierwszy', pct='40'); submit(p2, 'Dodaj gabinet')
+    p2.goto(URL + '/kalendarz'); p2.wait_for_function("window.Kal&&Kal.UI.loaded===true", timeout=20000); p2.wait_for_timeout(400)
+    chk('po dodaniu gabinetu: Kalendarz ma dokładnie ten jeden gabinet, zachęta znika', p2.evaluate("Kal.S().clinics.map(c=>c.name).join(',')") == 'Pierwszy'
+        and p2.locator('[data-first-clinic]').count() == 0)
+    c2.close()
+
     # ---- katalog i nazwa modelu
     pg.goto(URL + '/katalog-nfz')
     chk('Katalog NFZ: bez „Własne kody” i „Sprawdź wycenę”', 'Własne kody' not in pg.content() and 'Sprawdź wycenę' not in pg.content())

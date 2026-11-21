@@ -1221,7 +1221,7 @@ function defClinic(i) {
 function defPresets() { return [{ id: 'p1', name: 'Rano', start: '08:00', end: '14:00' }, { id: 'p2', name: 'Popołudnie', start: '14:00', end: '20:00' }]; }
 function firstPreset(c) { return (c && c.presets && c.presets[0]) || { name: 'Rano', start: '08:00', end: '14:00' }; }
 function defaultSettings() {
-  return { v: 1, clinics: [0, 1, 2, 3].map(defClinic), jdgStart: '', regimes: {}, ryczaltRate: 14,
+  return { v: 1, clinics: [], jdgStart: '', regimes: {}, ryczaltRate: 14,
     uop: {}, kwotaJDG: true, zus: [],
     wakacje: {}, healthMode: 'auto', annualOverride: {}, goalNet: 0, params: {}, templates: [], travelMin: 30, done: {}, setup: {},
     autoMonths: 3, autoSkip: {}, cme: { from: '', target: 200, months: 48 }, ics: { alarm: 60, deadlines: true, amounts: false, offDays: true, range: 'month' } };
@@ -1229,7 +1229,7 @@ function defaultSettings() {
 function normalizeSettings(s) {
   var d = defaultSettings();
   Object.keys(d).forEach(function (k) { if (s[k] === undefined) s[k] = d[k]; });
-  if (!Array.isArray(s.clinics) || !s.clinics.length) s.clinics = d.clinics;
+  if (!Array.isArray(s.clinics)) s.clinics = [];
   s.clinics.forEach(function (c, i) {
     if (!Array.isArray(c.presets) || !c.presets.length) {
       c.presets = defPresets();
@@ -1615,7 +1615,9 @@ function dayPanel() {
     (dayInc > 0 ? '<div class="note tn">Dzień: przychód <b>' + zl(dayInc) + '</b>' + (ratio != null ? ' · odłóż ≈ <b>' + zl0(dayInc * ratio) + '</b> · netto ≈ <b>' + zl0(dayInc * (1 - ratio)) + '</b>' : '') + '</div>' : '');
   return (wide ? '' : '<div class="scrim" data-a="dp-close"></div>') + '<aside class="day-panel' + (wide ? '' : ' sheet') + '" aria-label="Wybrany dzień">' + (wide ? '' : '<div class="sheet-grip"></div>') + body + '</aside>';
 }
+function noClinic() { if (clinics().length) return false; toast('Najpierw dodaj gabinet – Ustawienia → Gabinety albo „Gabinety” w menu'); UI.tab = 'set'; UI.edit = null; UI.modal = null; renderModal(); render(); scrollToId('sec-clinics'); return true; }
 function openEditor(id, date, pre) {
+  if (!id && noClinic()) return;
   var d;
   if (id) {
     var s = allShifts().filter(function (x) { return x.id === id; })[0]; if (!s) return;
@@ -1914,7 +1916,8 @@ function nudges() {
   var out = [], todo = todoShifts();
   if (Store.mode !== 'demo' && (UI.wiz || (!taxReady() && !S().setup.wizSkip))) out.push(wizard());
   else if (Store.mode !== 'demo' && !taxReady()) out.push('<button class="nudge accent" data-a="wiz-open"><b>Ustaw podatki i ZUS</b> – wtedy policzę netto i kwoty do odłożenia</button>');
-  if (Store.mode !== 'demo' && !activeClinics().some(hasWeek)) out.push('<button class="nudge accent" data-a="tpl-open"><b>Ustaw dni pracy</b> – zaznacz, kiedy pracujesz w każdym gabinecie (np. pn rano, czw popołudnie), a kalendarz wypełni się sam</button>');
+  if (Store.mode !== 'demo' && !clinics().length) out.push('<a class="nudge accent" data-first-clinic href="/gabinety?nowy=1"><b>Dodaj pierwszy gabinet</b> – nazwa i zasady rozliczenia; potem zaznaczysz dni pracy, a kalendarz wypełni się sam</a>');
+  else if (Store.mode !== 'demo' && !activeClinics().some(hasWeek)) out.push('<button class="nudge accent" data-a="tpl-open"><b>Ustaw dni pracy</b> – zaznacz, kiedy pracujesz w każdym gabinecie (np. pn rano, czw popołudnie), a kalendarz wypełni się sam</button>');
   /* zaplanowane dyżury bez żadnej podstawy do prognozy (brak historii i „spodziewanego przychodu”) liczą się jako 0 zł */
   var rates = results().rates, blind = activeClinics().filter(function (c) {
     return hasWeek(c) && /^(pct|manual)/.test(c.model) && !rates[c.id] && !(num(c.expected) > 0) && !(num(c.minDaily) > 0);
@@ -2691,7 +2694,7 @@ function applyImport() {
 
 /* ---------- przykładowe dane ---------- */
 function demoDocs() {
-  var s = defaultSettings(), names = [['Przykład: Gabinet A', 'GA', 35], ['Przykład: Gabinet B', 'GB', 30], ['Przykład: Centrum implantologii C', 'GC', 40], ['Przykład: Gabinet D', 'GD', 32]];
+  var s = defaultSettings(); s.clinics = [0, 1, 2, 3].map(defClinic); var names = [['Przykład: Gabinet A', 'GA', 35], ['Przykład: Gabinet B', 'GB', 30], ['Przykład: Centrum implantologii C', 'GC', 40], ['Przykład: Gabinet D', 'GD', 32]];
   s.clinics.forEach(function (c, i) { c.name = names[i][0]; c.short = names[i][1]; c.pct = names[i][2]; c.expected = 1600; });
   /* dni pracy: dzień tygodnia (0 = pn) × zmiana (p1 rano, p2 popołudnie, p3 cały dzień) */
   s.clinics[2].presets.push({ id: 'p3', name: 'Cały dzień', start: '08:00', end: '20:00' }); s.clinics[1].presets[1].start = '15:00';
@@ -3126,7 +3129,7 @@ function weekdayDates(mk, wd) {
   return out;
 }
 Object.assign(ACT, {
-  'shift-new': function () { UI.modal = 'bulk'; UI.bulk = newBulk(); UI.ask = null; renderModal(); },
+  'shift-new': function () { if (noClinic()) return; UI.modal = 'bulk'; UI.bulk = newBulk(); UI.ask = null; renderModal(); },
   'bk-clinic': function (el) { UI.bulk.clinicId = el.dataset.v; var c = clinic(el.dataset.v); if (UI.bulk.brush !== 'custom' && !(c.presets && c.presets[+UI.bulk.brush])) UI.bulk.brush = 0; renderModal(); },
   'bk-brush': function (el) { UI.bulk.brush = el.dataset.v === 'custom' ? 'custom' : +el.dataset.v; renderModal(); },
   'bk-prev': function () { UI.bulk.mk = mkAdd(UI.bulk.mk, -1); renderModal(); },
@@ -3184,6 +3187,7 @@ Object.assign(ACT, {
     S().setup.clinics = true; saveSettings(); render();
   },
   'tpl-new': function () {
+    if (noClinic()) return;
     var c = activeClinics()[0] || clinics()[0];
     UI.tpl = { id: null, clinicId: c.id, slots: [], freq: 'weekly', anchor: E.mondayOf(todayStr()), nth: '1', brush: 0, cstart: '08:00', cend: '14:00' };
     renderModal();
@@ -3505,7 +3509,7 @@ function slotDefaults(d, min) {
     ((c.week && c.week.slots) || []).forEach(function (s) { var p = presetById(c, s.pid); if (!hit && s.day === wd && p && inP(p)) hit = { clinicId: c.id, start: p.start, end: p.end }; });
   });
   if (hit) return hit;
-  var c0 = activeClinics()[0] || clinics()[0], p0 = (c0.presets || []).filter(inP)[0];
+  var c0 = activeClinics()[0] || clinics()[0] || { id: null, presets: [] }, p0 = (c0.presets || []).filter(inP)[0];
   if (p0) return { clinicId: c0.id, start: p0.start, end: p0.end };
   return { clinicId: c0.id, start: minToHm(min), end: minToHm(Math.min(min + 360, 23 * 60 + 30)) };
 }
