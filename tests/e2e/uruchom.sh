@@ -3,6 +3,7 @@
 # poczta zapisywana do plików. Użycie: bash tests/e2e/uruchom.sh [tests/e2e/t_plik.py ...]
 # Wymaga: `npx next build`, PostgreSQL testowego (bash tests/pg-start.sh), python3 + playwright, Google Chrome.
 cd "$(dirname "$0")/../.."
+export TZ=${TZ:-Europe/Warsaw}   # przeglądarka testowa w strefie użytkowników (w UTC „dziś” między 0:00 a 1:00 różni się od daty polskiej)
 export PGHOST=${PGHOST:-/tmp/pgtest} PGPORT=${PGPORT:-55432} PGUSER=${PGUSER:-migrator}
 DB=gabinet_e2e PORT=${E2E_PORT:-3990} MAILS=/tmp/gabinet-e2e-mail PIDF=/tmp/gabinet-e2e.pid
 rm -rf .next/standalone/.next/static && cp -r .next/static .next/standalone/.next/static
