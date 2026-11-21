@@ -108,11 +108,48 @@ with sync_playwright() as p:
     vis = pg.evaluate("[...document.querySelectorAll('[data-testid^=\"zab-\"]')].every(b=>b.getBoundingClientRect().width>=30)")
     chk('przyciski zębów dość duże do kliknięcia (≥ 30 px)', vis)
 
+    # ---- E5: zdjęcia tylko na urządzeniu
+    import base64, os
+    png = os.path.join(os.path.dirname(os.path.abspath(__file__)), '_zl_test.png')
+    open(png, 'wb').write(base64.b64decode('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAIAAAD91JpzAAAAFklEQVR4nGP8z8DAwMDAxMDAwMDAAAANHQEDasKb6QAAAABJRU5ErkJggg=='))
+    pg.click('details[data-sec="foto"] > summary'); pg.wait_for_timeout(100)
+    n0 = len(sent)
+    pg.set_input_files('[data-testid="foto-input"]', [png]); pg.wait_for_timeout(1200)
+    chk('zdjęcie dodane (miniatura w zleceniu)', pg.locator('.zl-foto img').count() == 1)
+    chk('zdjęcie zapisane w bazie urządzenia (zaszyfrowane)', pg.evaluate("G.store('zdjecia').all().then(l=>l.length)") == 1)
+    chk('zdjęcie NIE wysłane na serwer', not any('image/jpeg' in d or 'data:image' in d for _, d in sent[n0:]))
+    pg.fill('[data-fopis]', 'kolornik A2'); pg.wait_for_timeout(800)
+    pg.reload(); ready(pg)
+    zid = pg.evaluate("S.list.find(z=>z.typ==='aox-x').id")
+    pg.click(f'button[data-a="otworz"][data-id="{zid}"]'); pg.wait_for_timeout(400)
+    chk('zdjęcie i opis zostają po odświeżeniu', pg.locator('.zl-foto img').count() == 1 and pg.input_value('[data-fopis]') == 'kolornik A2')
+    os.remove(png)
+
+    # ---- E6: wydruk / PDF
+    pg.click('details[data-sec="druk"] > summary'); pg.wait_for_timeout(100)
+    pg.fill('[data-testid="druk-pacjent"]', 'Jan Testowy')
+    pg.evaluate("window.print=()=>{window.__druk=document.querySelector('#druk').innerHTML}")
+    n0 = len(sent)
+    pg.click('[data-testid="drukuj"]'); pg.wait_for_timeout(500)
+    d = pg.evaluate("window.__druk||''")
+    chk('wydruk: numer, rodzaj pracy, imię i nazwisko na wydruku', nr[:8] in d and 'All-on-X' in d and 'Jan Testowy' in d)
+    chk('wydruk: schemat zębów, sekcje, zdjęcie z opisem, miejsce na podpis', 'Schemat zębów' in d and 'All-on-X: plan pracy' in d and 'Implanty – komponenty' not in d and 'kolornik A2' in d and '<img' in d and 'Podpis' in d)
+    chk('wydruk: lista braków przy niekompletnym zleceniu', 'Zlecenie niekompletne' in d)
+    chk('imię i nazwisko nie zapisane na urządzeniu', 'Jan Testowy' not in pg.evaluate("JSON.stringify(S.cur)+JSON.stringify(S.list)"))
+    chk('imię i nazwisko nie wysłane na serwer', not any('Jan Testowy' in d2 for _, d2 in sent[n0:]))
+    pg.emulate_media(media='print'); pg.evaluate("document.querySelector('#druk').innerHTML=window.__druk")
+    chk('w trybie druku widoczny tylko wydruk (bez menu i formularza)', pg.is_visible('#druk') and not pg.is_visible('#main'))
+    pg.emulate_media(media='screen'); pg.evaluate("document.querySelector('#druk').innerHTML=''")
+    pg.set_viewport_size({'width': 390, 'height': 844}); pg.wait_for_timeout(200)
+    chk('telefon (390 px): strona bez przewijania w poziomie', pg.evaluate("document.documentElement.scrollWidth<=window.innerWidth+1"), pg.evaluate("document.documentElement.scrollWidth"))
+    pg.set_viewport_size({'width': 1280, 'height': 900})
+
     pg.click('details[data-sec="typ"] > summary'); pg.wait_for_timeout(100)
     pg.fill('[data-owntyp="1"]', 'Maska dziąsłowa'); pg.press('[data-owntyp="1"]', 'Enter'); pg.wait_for_timeout(300)
     chk('inny rodzaj pracy wpisany ręcznie', 'Maska dziąsłowa' in pg.inner_text('h1'))
     pg.click('button[data-a="usun"]'); pg.click('button[data-a="usun"]'); pg.wait_for_timeout(300)
     chk('usunięcie zlecenia (z potwierdzeniem)', pg.locator('.zl-item').count() == 1)
+    chk('usunięcie zlecenia usuwa też jego zdjęcia z urządzenia', pg.evaluate("G.store('zdjecia').all().then(l=>l.length)") == 0)
 
     # ---- izolacja: inne konto na tym samym komputerze nie widzi zleceń
     c2, p2 = konto(br, 'Lekarz Y', 'zl2.8@example.com', 'zielony-kubek-na-biurku', bypass_csp=True)

@@ -47,12 +47,25 @@
   .zl-fdi button[data-r]{background:var(--rc);border-color:var(--rc);color:#fff}
   .zl-leg{display:flex;flex-wrap:wrap;gap:6px;font-size:12.5px}
   .zl-ch button[data-rola]{border-left:6px solid var(--rc)}
-  @media print{.gbar,.zl-bar,.zl-noprint{display:none!important}}
+  .zl-foto{display:flex;flex-wrap:wrap;gap:8px}
+  .zl-foto figure{margin:0;width:132px;display:grid;gap:4px;font-size:12px}
+  .zl-foto img{width:132px;height:100px;object-fit:cover;border-radius:8px;border:1px solid var(--g-line);background:#000}
+  #druk{display:none}
+  #druk h2{font-size:18px;margin:0 0 4px}#druk h3{font-size:14px;margin:12px 0 4px;border-bottom:1px solid #999}
+  #druk table{border-collapse:collapse;width:100%;font-size:12.5px}#druk td{border:1px solid #bbb;padding:3px 6px;vertical-align:top}#druk td:first-child{width:34%;font-weight:600}
+  #druk .fdi-p{display:grid;gap:2px;justify-content:start}#druk .fdi-p .rz{display:flex;gap:2px}
+  #druk .fdi-p span{width:30px;height:30px;border:1px solid #999;display:grid;place-items:center;font-size:11px;line-height:1}
+  #druk .fdi-p span.on{border:2px solid #000;font-weight:700}#druk .fdi-p .mid{width:8px;border:0}
+  #druk .zl-foto img{width:220px;height:165px;border:1px solid #999}
+  #druk .braki{border:2px solid #b3263b;padding:6px 10px;margin:8px 0}
+  @media print{.gbar,.zl-bar,.zl-noprint,#main{display:none!important}#druk{display:block!important;color:#000;background:#fff;font-size:12.5px}body{background:#fff}
+    #druk h3,#druk table,#druk figure{break-inside:avoid}@page{margin:12mm}}
 </style>
 </head>
 <body class="gp">
 <!--GABINET_DANE--><script src="/opisy-nfz/zasoby/gabinet-saas.js"></script>
 <div class="zl-wrap"><main id="main" aria-live="polite"><p class="g-muted">Wczytuję…</p></main></div>
+<div id="druk" aria-hidden="true"></div>
 <datalist id="dl-lab"></datalist><datalist id="dl-impl"></datalist><datalist id="dl-kolor"></datalist>
 <script>
 'use strict';
@@ -243,6 +256,68 @@ function autosave() { S.dirty = true; clearTimeout(sT); sT = setTimeout(() => za
 function toast(t) { let el = $('#zl-toast'); if (!el) { el = document.createElement('div'); el.id = 'zl-toast'; el.className = 'g-warn'; el.setAttribute('role', 'status'); el.style.cssText = 'position:fixed;left:50%;bottom:70px;transform:translateX(-50%);z-index:20;padding:8px 14px;border-radius:10px'; document.body.appendChild(el); }
   el.textContent = t; el.hidden = false; clearTimeout(el._t); el._t = setTimeout(() => { el.hidden = true; }, 2600); }
 
+/* ---------- zdjęcia (E5): tylko na tym urządzeniu, zaszyfrowane; nigdy na serwer (zasada nr 1) ---------- */
+const FOTO_MAX = 1600, FOTO_Q = 0.85, FOTO_LIMIT = 12;
+async function fotoLoad(zid) { S.foto = (await G.store('zdjecia').all()).map(([k, v]) => Object.assign({ k }, v)).filter(f => f && f.zid === zid).sort((a, b) => String(a.at).localeCompare(String(b.at))); }
+function fotoSkaluj(file) {
+  return new Promise((ok, no) => { const url = URL.createObjectURL(file), im = new Image();
+    im.onload = () => { const r = Math.min(1, FOTO_MAX / Math.max(im.width, im.height)), c = document.createElement('canvas'); c.width = Math.round(im.width * r); c.height = Math.round(im.height * r);
+      c.getContext('2d').drawImage(im, 0, 0, c.width, c.height); URL.revokeObjectURL(url); ok(c.toDataURL('image/jpeg', FOTO_Q)); };
+    im.onerror = () => { URL.revokeObjectURL(url); no(new Error('To nie jest obraz')); }; im.src = url; });
+}
+async function fotoDodaj(files) {
+  const z = S.cur; if (!z) return; let n = 0;
+  for (const f of Array.from(files || [])) {
+    if ((S.foto || []).length >= FOTO_LIMIT) { toast('Najwyżej ' + FOTO_LIMIT + ' zdjęć w zleceniu.'); break; }
+    if (!/^image\//.test(f.type)) { toast('Pominięto plik, który nie jest zdjęciem: ' + f.name); continue; }
+    try { const data = await fotoSkaluj(f), k = z.id + ':' + Date.now().toString(36) + Math.random().toString(36).slice(2, 5);
+      await G.store('zdjecia').put(k, { zid: z.id, name: f.name.slice(0, 120), data, at: new Date().toISOString() }); n++;
+    } catch (e) { toast('Nie udało się dodać zdjęcia ' + f.name); }
+  }
+  await fotoLoad(z.id); if (n) await zapisz('dodano zdjęcia: ' + n); render();
+}
+async function fotoUsunWszystkie(zid) { for (const [k, v] of await G.store('zdjecia').all()) if (v && v.zid === zid) await G.store('zdjecia').del(k); }
+function fotoHTML() {
+  const l = S.foto || [];
+  return '<details class="zl-sec"' + (isOpen('foto', false) ? ' open' : '') + ' data-sec="foto"><summary>Zdjęcia (' + l.length + ')</summary><div class="in"><div class="zl-f w">' +
+    '<span class="zl-hint">Zdjęcia są tylko na tym urządzeniu (zaszyfrowane) i trafiają do wydruku / PDF. Nie zapisują się w chmurze. Skany (STL/PLY/OBJ) wysyłasz osobno – wpisz ich nazwy w „Pliki wysłane osobno”.</span>' +
+    '<label class="g-btn ghost sm" style="justify-self:start;cursor:pointer">+ Dodaj zdjęcia<input type="file" accept="image/*" multiple data-foto="1" data-testid="foto-input" hidden></label>' +
+    (l.length ? '<div class="zl-foto">' + l.map(f => '<figure><img src="' + f.data + '" alt="' + esc(f.name) + '"><figcaption>' + esc(f.name) +
+      ' <input class="zl-in" data-fopis="' + esc(f.k) + '" value="' + esc(f.opis || '') + '" placeholder="opis (np. kolornik A2)" aria-label="opis zdjęcia"></figcaption>' +
+      '<button type="button" class="g-btn ghost sm" data-a="fusun" data-v="' + esc(f.k) + '">Usuń</button></figure>').join('') + '</div>' : '<span class="g-muted">Brak zdjęć.</span>') +
+    '<label style="font-size:13px"><input type="checkbox" data-fdruk="1"' + ((S.cur.a || {}).fotoDruk === false ? '' : ' checked') + '> dołącz zdjęcia do wydruku</label></div></div></details>';
+}
+
+/* ---------- wydruk / PDF (E6) ---------- */
+function drukFdi(z) {
+  const sc = (z.a || {}).schemat || {}, M = Object.keys(sc).some(n => +n > 50), Q = M ? FDI.m : FDI.s;
+  const cell = n => { const r = ROLA[sc[n]]; return '<span' + (r ? ' class="on"' : '') + '>' + n + (r ? '<br>' + r[1] : '') + '</span>'; };
+  const rz = (a, b) => '<div class="rz">' + a.map(cell).join('') + '<span class="mid"></span>' + b.map(cell).join('') + '</div>';
+  return '<div class="fdi-p">' + rz(Q[0], Q[1]) + rz(Q[2], Q[3]) + '</div><div style="font-size:11px">' + ROLE.map(r => r[1] + ' = ' + r[0]).join(' · ') + '</div>';
+}
+function drukHTML(z, pacjent) {
+  const t = typOf(z), br = braki(z).filter(x => x[0] === 'W'), a = z.a || {}, wiersz = (l, v) => '<tr><td>' + esc(l) + '</td><td>' + esc(v) + '</td></tr>';
+  const fmt = v => Array.isArray(v) ? v.join(', ') : String(v);
+  const secs = sekcje(z).map(sec => { const rows = sec.pola.filter(f => f.t !== 'fdi').map(f => { const v = val(z, f.k); return v === undefined || v === '' || (Array.isArray(v) && !v.length) ? '' : wiersz(f.l, fmt(v)); }).join('');
+    return rows ? '<h3>' + esc(sec.tyt) + '</h3><table>' + rows + '</table>' : ''; }).join('');
+  const uw = Object.keys(a.zUw || {}).filter(n => a.zUw[n]).map(n => n + ': ' + a.zUw[n]);
+  const fot = a.fotoDruk === false ? [] : (S.foto || []);
+  const lek = G.user ? (G.user.name || '') + (G.user.email ? ' · ' + G.user.email : '') : '';
+  return '<h2>Zlecenie protetyczne ' + esc(z.nr) + (t ? ' – ' + esc(t.name) : '') + '</h2>' +
+    '<div>Data: ' + esc(z.data || '') + ' · status: ' + esc(z.status) + (lek ? ' · lekarz: ' + esc(lek) : '') + '</div>' +
+    '<div>Pacjent: ' + esc(pacjent || a.ini || '—') + (pacjent && a.ini ? ' (' + esc(a.ini) + ')' : '') + '</div>' +
+    (br.length ? '<div class="braki"><b>Zlecenie niekompletne – brakuje:</b> ' + br.map(x => esc(x[1])).join('; ') + '</div>' : '') +
+    (Object.keys(a.schemat || {}).length ? '<h3>Schemat zębów (FDI)</h3>' + drukFdi(z) + (uw.length ? '<div>Uwagi do zębów: ' + esc(uw.join(' · ')) + '</div>' : '') : '') +
+    secs + (fot.length ? '<h3>Zdjęcia</h3><div class="zl-foto">' + fot.map(f => '<figure><img src="' + f.data + '" alt=""><figcaption>' + esc(f.opis || f.name) + '</figcaption></figure>').join('') + '</div>' : '') +
+    '<div style="margin-top:18px;display:flex;justify-content:space-between;gap:20px"><span>Podpis i pieczątka lekarza: ____________________</span><span>Przyjęto w laboratorium (data, podpis): ____________________</span></div>';
+}
+async function drukuj() {
+  const z = S.cur; if (!z) return; if (S.dirty) await zapisz();
+  const p = ($('#f_pacjent') || {}).value || '';            // imię i nazwisko – tylko do wydruku, NIE zapisywane
+  $('#druk').innerHTML = drukHTML(z, p.trim());
+  await zapisz('wydrukowano / PDF'); window.print();
+}
+
 /* ---------- widoki ---------- */
 function stCls(s) { return s === 'do uzupełnienia' ? ' braki' : s === 'gotowe' ? ' gotowe' : ''; }
 function lista() {
@@ -284,14 +359,19 @@ function edytor() {
       STATUSY.map(s => '<button type="button" data-a="status" data-v="' + esc(s) + '" aria-pressed="' + (z.status === s) + '">' + esc(s) + '</button>').join('') + '</div></div>' +
       '<div class="zl-f w"><label for="f_brakiLab">Braki zgłoszone przez technika / notatki z rozmów</label><textarea class="zl-in" id="f_brakiLab" data-k="brakiLab">' + esc((z.a || {}).brakiLab || '') + '</textarea></div>' +
       '<div class="zl-f w"><span class="lb">Historia zmian</span><ul class="zl-hist">' + (z.hist || []).slice().reverse().map(h => '<li>' + esc(new Date(h.at).toLocaleString('pl-PL')) + ' – ' + esc(h.co) + '</li>').join('') + '</ul></div></div></details>' +
-    '<div class="zl-bar zl-noprint"><button type="button" class="g-btn ghost" data-a="usun">Usuń</button><button type="button" class="g-btn ghost" data-a="kopiuj" data-id="' + z.id + '">Kopiuj jako nowe</button><button type="button" class="g-btn" data-a="zapisz">Zapisz</button></div>';
+    fotoHTML() +
+    '<details class="zl-sec"' + (isOpen('druk', false) ? ' open' : '') + ' data-sec="druk"><summary>Wydruk / PDF</summary><div class="in"><div class="zl-f w"><label for="f_pacjent">Imię i nazwisko pacjenta – tylko na wydruk</label>' +
+      '<input class="zl-in" id="f_pacjent" autocomplete="off" data-testid="druk-pacjent"><span class="zl-hint">Nie zapisuje się nigdzie (ani na urządzeniu, ani w chmurze). Puste = na wydruku inicjały. PDF: w oknie drukowania wybierz „Zapisz jako PDF”.</span></div></div></details>' +
+    '<div class="zl-bar zl-noprint"><button type="button" class="g-btn ghost" data-a="usun">Usuń</button><button type="button" class="g-btn ghost" data-a="kopiuj" data-id="' + z.id + '">Kopiuj jako nowe</button><button type="button" class="g-btn ghost" data-a="drukuj" data-testid="drukuj">Drukuj / PDF</button><button type="button" class="g-btn" data-a="zapisz">Zapisz</button></div>';
 }
 document.addEventListener('toggle', e => { const d = e.target; if (d.dataset && d.dataset.sec) S.open[d.dataset.sec] = d.open; }, true);
 function render() {
   const opt = l => l.map(n => '<option value="' + esc(n) + '">').join('');
   $('#dl-lab').innerHTML = opt(G.mat('lab', [])); $('#dl-impl').innerHTML = opt(G.mat('implant', []));
   $('#dl-kolor').innerHTML = opt(G.mat('kolor', KOLORY[((S.cur || {}).a || {}).skala] || KOLORY['Vita Classic'].concat(KOLORY['Vita 3D-Master'])));
+  const pac = ($('#f_pacjent') || {}).value || '';
   $('#main').innerHTML = S.cur ? edytor() : lista();
+  if (pac && $('#f_pacjent')) $('#f_pacjent').value = pac;
 }
 function odswiezKontrole() { const el = $('#zl-chk'); if (!el || !S.cur) return; const t = document.createElement('div'); t.innerHTML = edytor(); const n = t.querySelector('#zl-chk'); if (n) el.replaceWith(n); }
 
@@ -299,16 +379,18 @@ function odswiezKontrole() { const el = $('#zl-chk'); if (!el || !S.cur) return;
 document.addEventListener('click', async e => {
   const b = e.target.closest('button[data-a]'); if (!b || !S.ready) return;
   const a = b.dataset.a, z = S.cur;
-  if (a === 'nowe') { S.open = {}; S.cur = nowe(); await zapisz(); render(); window.scrollTo(0, 0); return; }
-  if (a === 'otworz') { const x = S.list.find(q => q.id === b.dataset.id); if (x) { S.cur = JSON.parse(JSON.stringify(x)); render(); window.scrollTo(0, 0); } return; }
+  if (a === 'nowe') { S.open = {}; S.foto = []; S.cur = nowe(); await zapisz(); render(); window.scrollTo(0, 0); return; }
+  if (a === 'otworz') { const x = S.list.find(q => q.id === b.dataset.id); if (x) { S.cur = JSON.parse(JSON.stringify(x)); await fotoLoad(x.id); render(); window.scrollTo(0, 0); } return; }
   if (a === 'kopiuj') { const x = S.list.find(q => q.id === b.dataset.id) || z; if (!x) return; const n = nowe(x.typ); n.a = JSON.parse(JSON.stringify(x.a || {})); delete n.a.brakiLab;
-    n.hist = [{ at: new Date().toISOString(), co: 'skopiowano z ' + x.nr }]; S.cur = n; await zapisz(); render(); window.scrollTo(0, 0); toast('Utworzono kopię ' + n.nr + ' – sprawdź zęby, inicjały i termin.'); return; }
+    n.hist = [{ at: new Date().toISOString(), co: 'skopiowano z ' + x.nr }]; S.cur = n; S.foto = []; await zapisz(); render(); window.scrollTo(0, 0); toast('Utworzono kopię ' + n.nr + ' – sprawdź zęby, inicjały i termin.'); return; }
   if (a === 'lista') { if (S.dirty) await zapisz(); S.cur = null; render(); return; }
   if (a === 'zapisz') { await zapisz('zapisano'); toast('Zapisano na tym urządzeniu.'); render(); return; }
   if (a === 'usun') { if (b.dataset.arm !== '1') { b.dataset.arm = '1'; b.textContent = 'Na pewno usunąć? Kliknij ponownie'; return; }
-    await G.store('zlecenia').del(z.id); S.list = S.list.filter(x => x.id !== z.id); S.cur = null; render(); toast('Zlecenie usunięte z tego urządzenia.'); return; }
+    await fotoUsunWszystkie(z.id); await G.store('zlecenia').del(z.id); S.list = S.list.filter(x => x.id !== z.id); S.cur = null; render(); toast('Zlecenie usunięte z tego urządzenia.'); return; }
   if (!z) return;
   if (a === 'typ') { S.open.typ = false; z.typ = b.dataset.v; if (Object.keys((z.a || {}).schemat || {}).length) zSync(z); await zapisz('rodzaj pracy: ' + (typOf(z) || {}).name); render(); return; }
+  if (a === 'drukuj') { await drukuj(); return; }
+  if (a === 'fusun') { await G.store('zdjecia').del(b.dataset.v); await fotoLoad(z.id); await zapisz('usunięto zdjęcie'); render(); return; }
   if (a === 'rola') { S.rola = b.dataset.v; render(); return; }
   if (a === 'mlecz') { S.mlecz = !S.mlecz; render(); return; }
   if (a === 'zab') { const n = b.dataset.v, r = S.rola || 'korona'; if (!FDI_ALL.has(n)) return; z.a = z.a || {}; const sc = z.a.schemat = Object.assign({}, z.a.schemat);
@@ -319,6 +401,9 @@ document.addEventListener('click', async e => {
     autosave(); render(); return; }
 });
 document.addEventListener('input', e => { const t = e.target; if (!S.cur) return;
+  if (t.dataset.fopis) { const f = (S.foto || []).find(x => x.k === t.dataset.fopis); if (f) { f.opis = t.value.slice(0, 200); clearTimeout(f._t);
+    f._t = setTimeout(() => { const { k, _t, ...v } = f; G.store('zdjecia').put(k, v); }, 500); } return; }
+  if (t.id === 'f_pacjent') return;
   if (t.dataset.zuw) { S.cur.a.zUw = Object.assign({}, S.cur.a.zUw, { [t.dataset.zuw]: t.value }); autosave(); return; }
   if (!t.dataset.k) return; S.cur.a = S.cur.a || {}; if (t.dataset.k === 'nr') S.cur.nr = t.value; else S.cur.a[t.dataset.k] = t.value; autosave(); odswiezKontrole(); });
 document.addEventListener('keydown', e => {
@@ -327,6 +412,12 @@ document.addEventListener('keydown', e => {
     if (t.dataset.m === 'N') { const cur = Array.isArray(S.cur.a[k]) ? S.cur.a[k] : []; if (!cur.includes(v)) S.cur.a[k] = cur.concat([v]); } else S.cur.a[k] = v; autosave(); render(); return; }
   if (t.dataset.owntyp) { e.preventDefault(); const v = t.value.trim(); if (!v) return; S.cur.typ = v; zapisz('rodzaj pracy: ' + v).then(render); }
 });
+document.addEventListener('change', e => { const t = e.target; if (!S.cur) return;
+  if (t.dataset.foto) { fotoDodaj(t.files); t.value = ''; }
+  if (t.dataset.fdruk) { S.cur.a.fotoDruk = t.checked; autosave(); }
+});
+addEventListener('beforeprint', () => { if (S.cur && !$('#druk').innerHTML) $('#druk').innerHTML = drukHTML(S.cur, (($('#f_pacjent') || {}).value || '').trim()); });
+addEventListener('afterprint', () => { $('#druk').innerHTML = ''; });
 addEventListener('pagehide', () => { if (S.dirty) zapisz(); });
 
 /* ---------- start ---------- */

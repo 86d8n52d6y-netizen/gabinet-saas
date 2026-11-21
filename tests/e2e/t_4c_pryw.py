@@ -77,7 +77,7 @@ with sync_playwright() as p:
     chk('w chmurze BRAK pól szablonu (ząb, rozpoznanie, znieczulenie)', '"vals"' not in dump and 'K02.1' not in dump and 'artykaina' not in dump and '"def"' not in dump)
     chk('w chmurze BRAK zwolnienia e-ZLA', 'ezla' not in dump and '2026-11-18' not in dump)
     chk('w chmurze BRAK treści opisu', all(line.strip()[:40] not in dump for line in txt.split('\n') if len(line.strip()) > 25))
-    loc = pg.evaluate("""async()=>{const db=await new Promise(r=>{const q=indexedDB.open('gabinet-saas@'+G.user.id,2);q.onsuccess=()=>r(q.result)});
+    loc = pg.evaluate("""async()=>{const db=await new Promise(r=>{const q=indexedDB.open('gabinet-saas@'+G.user.id);q.onsuccess=()=>r(q.result);q.onerror=()=>r(null)});
         return await new Promise(r=>{const t=db.transaction('opisy').objectStore('opisy').getAll();t.onsuccess=()=>r(JSON.stringify(t.result))})}""")
     chk('treść opisu na urządzeniu zaszyfrowana', 'K02.1' not in loc and 'v1:' in loc)
 
