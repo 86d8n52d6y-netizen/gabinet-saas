@@ -108,6 +108,7 @@ export default async function Zarobki({ searchParams }: { searchParams: Promise<
             <tfoot><tr><td>Razem</td><td>{T.vis || '—'}</td><td>{r.kind ? '—' : z(drT)}</td><td>{r.kind ? '—' : perHour(drT, T.h)}</td></tr></tfoot>
           </table></div>) : <p className="muted">Brak gabinetów i wizyt w tym okresie.</p>}
         <p className="hint">Liczba wizyt: wszystkie zapisane (odbyte) wizyty z Opisów NFZ i prywatnych. Zarobek lekarza: kwota należna z danego gabinetu wg jego zasad rozliczenia (<Link href="/gabinety">Gabinety</Link>), z odbytych dyżurów w <a href="/kalendarz">Kalendarzu</a> – obrót wpisujesz przy dyżurze (np. „Wpisz jako obrót”). Zarobek na godzinę: zarobek lekarza ÷ godziny odbytych dyżurów; w podsumowaniu – łączny zarobek ÷ łączne godziny.</p>
+        {r.stmt > 0 && <p className="hint" data-testid="wg-rozliczenia">W pełnych miesiącach, w których w <a href="/kalendarz">Kalendarzu → Rozliczenia</a> wpisano <b>kwotę z rozliczenia gabinetu</b>, zarobek lekarza to ta kwota (jak w Kalendarzu), a nie suma z dyżurów ({r.stmt} {r.stmt === 1 ? 'rozliczenie' : 'rozliczenia'}).</p>}
       </section>
 
       <section className="card" aria-labelledby="wyk">

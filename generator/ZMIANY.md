@@ -14,6 +14,21 @@ Plik `wspolne.js` (sejf z hasłem w przeglądarce) zastąpiony przez `gabinet-sa
 | P5 | wspolne.js (sejf lokalny z hasłem) → gabinet-saas.js (konto SaaS: klucz urządzenia, synchronizacja danych bez treści opisów); dane startowe wstawia serwer w miejsce znacznika |
 | P6 | szablony.js z zasobów chronionych logowaniem |
 | P7 | identyfikator gabinetu: UUID z bazy (36 znaków) zamiast „c1”…„c24” z Kalendarza |
+| P8 | pasek dolny (Historia, Statystyki, Ustawienia): bez kwoty „Dziś: … zł” – zarobki tylko w statystykach (prompt Patryka 21.11.2026, pkt 3.1; obliczenia bez zmian) |
+| P9 | pasek dolny (Kody): bez kwoty „Dziś: … zł” (pkt 3.1) |
+| P10 | pasek dolny (Pytania, Opis): bez wyceny wizyty w zł – wycena zostaje w karcie „Cały opis” i „Rozliczenie wizyty” (pkt 3.1) |
+| P11 | badanie po urazie (ST28): przyczyna „nagryzienie na twardy przedmiot” jako osobna opcja (pkt 7.1; trafia do opisu jak pozostałe przyczyny) |
+| P12 | leczenie zachowawcze: opcjonalna informacja o niepewnym rokowaniu (pkt 7.2) – domyślnie nic nie dodaje; wybór użytkownika, tekst edytowalny w kroku 3 |
+| P13 | niepewne rokowanie: zdanie na końcu opisu ostatniego zabiegu zachowawczego (tylko po wyborze w P12) |
+| P14 | Statystyki – dni: bez kolumn „Z punktów” i „Z przeglądów” (prompt Patryka 21.11.2026, pkt 3.2; „Razem”, punkty i godziny przeglądów zostają) |
+| P15 | Statystyki – dni: wiersze bez kwot „z punktów” i „z przeglądów” |
+| P16 | Statystyki – tygodnie: bez kolumn „Z punktów” i „Z przeglądów” (pkt 3.2) |
+| P17 | Statystyki – tygodnie: wiersze bez tych kwot |
+| P18 | Statystyki – miesiące: bez kolumn „Z punktów” i „Z przeglądów” (pkt 3.2) |
+| P19 | Statystyki – miesiące: wiersze bez tych kwot |
+| P20 | lakiery fluorkowe (1101): lista podpowiedzi rozszerzona – Duraphat, Fluor Protector (decyzja Patryka 21.11.2026, pkt 1.1); własna nazwa nadal wpisywana ręcznie |
+| P21 | lakierowanie zębów (1006): opcjonalny wybór preparatu – dopisywany do opisu tylko po wybraniu (pkt 1.1); Elmex jako żel (nie lakier) |
+| P22 | lista preparatów fluorkowych (wspólna dla 1101 i 1006) |
 
 ## Opisy prywatne (`prywatne.html`)
 
@@ -25,6 +40,10 @@ Plik `wspolne.js` (sejf z hasłem w przeglądarce) zastąpiony przez `gabinet-sa
 | R4 | wspolne.js → gabinet-saas.js (konto SaaS, klucz urządzenia, synchronizacja bez treści, pól szablonu, e-ZLA i inicjałów) |
 | R5 | katalog procedur z zasobów chronionych logowaniem |
 | R6 | historia: wpis z innego urządzenia (z chmury) – komunikat, że treść jest na urządzeniu zapisu (zamiast „usunięta”) |
+| R7 | historia: brak treści opisu na tym urządzeniu – czytelny komunikat zamiast „Wczytuję…” bez końca (prompt Patryka 21.11.2026, etap 5: „opisy nie zawsze się wyświetlają”) |
+| R7a | odczyt treści: zapamiętanie, że treści nie ma (zamiast ponownego „Wczytuję…”) |
+| R7b | „Pokaż opis”: komunikat o braku treści na tym urządzeniu |
+| R7c | „Kopiuj opis” bez treści na urządzeniu: konkretny komunikat zamiast „Nie udało się skopiować” |
 
 ## Kalendarz (`kalendarz.html`)
 

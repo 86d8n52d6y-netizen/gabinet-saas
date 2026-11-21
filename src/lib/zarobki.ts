@@ -41,6 +41,8 @@ export type Report = {
   series: { key: string; nfz: number; pryw: number }[]; seriesBy: 'day' | 'month';
   topNfz: { code: string; n: number }[]; topPryw: { name: string; n: number; pay: number }[];
   kind: string; categories: string[];
+  /** ile par gabinet–miesiąc liczonych z kwoty z rozliczenia gabinetu (Kalendarz → Rozliczenia) zamiast sumy z dyżurów */
+  stmt: number;
   weekdays: { dow: number; days: number; nfz: number; pryw: number }[];
   avg: { days: number; perDay: number; perVisit: number; perMonth: number | null };
   prev: Range & { sum: number; nv: number; pv: number };
@@ -91,7 +93,7 @@ export async function report(c: PoolClient, r: Range, clinic: string | null, kin
   const byId = new Map(per.map(x => [x.id ?? '', x]));
   // Zarobek lekarza i czas pracy: odbyte dyżury w Kalendarzu wg zasad rozliczenia gabinetu (decyzja Patryka 21.11.2026, opcja A).
   // Kalendarz nie dzieli dyżuru na NFZ i prywatne – przy filtrze rodzaju (NFZ / prywatne / kategoria) tych wartości nie pokazujemy.
-  const praca = kind ? new Map<string, { gr: number; h: number; n: number }>() : await kalPraca(c, r.from, r.to);
+  const praca = kind ? new Map<string, { gr: number; h: number; n: number; st: number }>() : await kalPraca(c, r.from, r.to);
   const kal = new Map([...praca].filter(([id]) => !clinic || id === clinic));
   const known = new Set(clinics.map(k => k.id as string));
   const ids = [...clinics.filter(k => (!clinic || k.id === clinic) && (k.active || byId.has(k.id) || kal.has(k.id))).map(k => k.id as string),
@@ -159,7 +161,7 @@ export async function report(c: PoolClient, r: Range, clinic: string | null, kin
   const prev = { ...pr, sum: Number(pt.e1) + Number(pt.e2), nv: pv.nv, pv: pv.pv };
   return {
     kind, categories, weekdays, avg, prev,
-    basis, rows, total,
+    basis, rows, total, stmt: [...kal.values()].reduce((a, x) => a + x.st, 0),
     nfz: { pc: Number(det.pc), sh: Number(det.sh), rv: Number(det.rv), ex: Number(det.ex), pts: Math.round(Number(det.pts) * 100) / 100, minutes },
     pryw: { val: Number(det.val), cost: Number(det.cost), pay: Number(det.pay) }, series, seriesBy, topNfz, topPryw,
   };

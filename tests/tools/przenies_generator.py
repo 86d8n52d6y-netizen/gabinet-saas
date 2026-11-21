@@ -25,6 +25,55 @@ PATCHES = [
   ('P7 identyfikator gabinetu: UUID z bazy (36 znaków) zamiast „c1”…„c24” z Kalendarza',
    "gab:typeof x.gab==='string'&&/^[A-Za-z0-9_-]{1,24}$/.test(x.gab)?x.gab:''};",
    "gab:typeof x.gab==='string'&&/^[A-Za-z0-9_-]{1,40}$/.test(x.gab)?x.gab:''};"),
+  ('P8 pasek dolny (Historia, Statystyki, Ustawienia): bez kwoty „Dziś: … zł” – zarobki tylko w statystykach (prompt Patryka 21.11.2026, pkt 3.1; obliczenia bez zmian)',
+   '<span class="miss">${todayLine()}</span>', '<span class="miss"></span>'),
+  ('P9 pasek dolny (Kody): bez kwoty „Dziś: … zł” (pkt 3.1)',
+   "const tl=DB.ready&&dbList().some(m=>m.date===todayISO())?' · '+todayLine():'';", "const tl='';"),
+  ('P10 pasek dolny (Pytania, Opis): bez wyceny wizyty w zł – wycena zostaje w karcie „Cały opis” i „Rozliczenie wizyty” (pkt 3.1)',
+   '+(P.rows.length?` · <span style="color:var(--accent);font-weight:600">${esc(moneyLine(P))}</span>`:\'\')', ''),
+  ('P11 badanie po urazie (ST28): przyczyna „nagryzienie na twardy przedmiot” jako osobna opcja (pkt 7.1; trafia do opisu jak pozostałe przyczyny)',
+   "opts:['upadek','uderzenie','upadek i nagryzienie na twardy przedmiot']",
+   "opts:['upadek','uderzenie','nagryzienie na twardy przedmiot','upadek i nagryzienie na twardy przedmiot']"),
+  ('P12 leczenie zachowawcze: opcjonalna informacja o niepewnym rokowaniu (pkt 7.2) – domyślnie nic nie dodaje; wybór użytkownika, tekst edytowalny w kroku 3',
+   "  if(ex) f.push(...examFields()); else if(hig){f.push({k:'sh.api',label:'API',type:'num',unit:'%',w:'s'},{k:'sh.gi',label:'GI (Löe–Silness)',type:'num',w:'s'});}\n",
+   "  if(ex) f.push(...examFields()); else if(hig){f.push({k:'sh.api',label:'API',type:'num',unit:'%',w:'s'},{k:'sh.gi',label:'GI (Löe–Silness)',type:'num',w:'s'});}\n"
+   "  if(state.codes.some(c=>ZACH_CODES.includes(c))) f.push({k:'sh.rok',label:'Niepewne rokowanie zęba (tylko jeśli pacjent został poinformowany)',type:'seg',opts:ROK_OPTS,opt:true,full:true,rer:'shared'});\n"),
+  ('P13 niepewne rokowanie: zdanie na końcu opisu ostatniego zabiegu zachowawczego (tylko po wyborze w P12)',
+   "function buildOut(){return state.codes.map(c=>({code:c,text:D[c].render()}));}",
+   "const ZACH_CODES=GROUPS.find(g=>g[0]==='Leczenie zachowawcze')[1];\n"
+   "const ROK_TXT={'pełna informacja':'Pacjent został poinformowany o niepewnym rokowaniu dotyczącym dalszego utrzymania zęba oraz o możliwych dalszych konsekwencjach leczenia.','krótka informacja':'Pacjenta poinformowano o niepewnym rokowaniu leczonego zęba.'};\n"
+   "const ROK_OPTS=['nie dotyczy','pełna informacja','krótka informacja'];\n"
+   "function buildOut(){const o=state.codes.map(c=>({code:c,text:D[c].render()}));const r=ROK_TXT[str(state.a['sh.rok'])];\n"
+   "  if(r){for(let i=o.length-1;i>=0;i--){if(ZACH_CODES.includes(o[i].code)){o[i]={code:o[i].code,text:o[i].text+'\\n'+r};break;}}}\n"
+   "  return o;}"),
+  ('P14 Statystyki – dni: bez kolumn „Z punktów” i „Z przeglądów” (prompt Patryka 21.11.2026, pkt 3.2; „Razem”, punkty i godziny przeglądów zostają)',
+   "{h:'Punkty',r:1},{h:'Z punktów',r:1},{h:'Przeglądy',r:1},{h:'Z przeglądów',r:1},{h:'Dodatkowe',r:1},{h:'Czas wizyt',r:1}];",
+   "{h:'Punkty',r:1},{h:'Przeglądy',r:1},{h:'Dodatkowe',r:1},{h:'Czas wizyt',r:1}];"),
+  ('P15 Statystyki – dni: wiersze bez kwot „z punktów” i „z przeglądów”',
+   "fmtP(A.ptsC/100),fmtC(A.pe),fmtH(A.revHc/100),fmtC(A.rv),fmtC(A.ex),fmtMin(A.min)];",
+   "fmtP(A.ptsC/100),fmtH(A.revHc/100),fmtC(A.ex),fmtMin(A.min)];"),
+  ('P16 Statystyki – tygodnie: bez kolumn „Z punktów” i „Z przeglądów” (pkt 3.2)',
+   "{h:'Wizyty',r:1},{h:'Punkty',r:1},{h:'Z punktów',r:1},{h:'Z przeglądów',r:1},{h:'Dodatkowe',r:1}];",
+   "{h:'Wizyty',r:1},{h:'Punkty',r:1},{h:'Dodatkowe',r:1}];"),
+  ('P17 Statystyki – tygodnie: wiersze bez tych kwot',
+   "A.vis,fmtP(A.ptsC/100),fmtC(A.pe),fmtC(A.rv),fmtC(A.ex)];",
+   "A.vis,fmtP(A.ptsC/100),fmtC(A.ex)];"),
+  ('P18 Statystyki – miesiące: bez kolumn „Z punktów” i „Z przeglądów” (pkt 3.2)',
+   "{h:'Punkty',r:1},{h:'Z punktów',r:1},{h:'Z przeglądów',r:1},{h:'Dodatkowe',r:1},{h:'Czas pracy',r:1}];",
+   "{h:'Punkty',r:1},{h:'Dodatkowe',r:1},{h:'Czas pracy',r:1}];"),
+  ('P19 Statystyki – miesiące: wiersze bez tych kwot',
+   "fmtP(A.ptsC/100),fmtC(A.pe),fmtC(A.rv),fmtC(A.ex),fmtMin(A.work)];",
+   "fmtP(A.ptsC/100),fmtC(A.ex),fmtMin(A.work)];"),
+  ('P20 lakiery fluorkowe (1101): lista podpowiedzi rozszerzona – Duraphat, Fluor Protector (decyzja Patryka 21.11.2026, pkt 1.1); własna nazwa nadal wpisywana ręcznie',
+   "dl:['VOCO Profluorid Varnish']",
+   "dl:FLUOR_PREPS"),
+  ('P21 lakierowanie zębów (1006): opcjonalny wybór preparatu – dopisywany do opisu tylko po wybraniu (pkt 1.1); Elmex jako żel (nie lakier)',
+   "   render:()=>['LAKIEROWANIE ZĘBÓW (1006)',SEG.T1006].join('\\n')},",
+   "   fields:()=>[{k:'1006.prep',label:'Preparat (opcjonalnie – trafi do opisu)',type:'text',dl:FLUOR_PREPS,w:'l',opt:true}],\n"
+   "   render:()=>['LAKIEROWANIE ZĘBÓW (1006)',SEG.T1006].concat(str(state.a['1006.prep'])?['Zastosowany preparat: '+str(state.a['1006.prep'])+'.']:[]).join('\\n')},"),
+  ('P22 lista preparatów fluorkowych (wspólna dla 1101 i 1006)',
+   "const GROUPS=[",
+   "const FLUOR_PREPS=['VOCO Profluorid Varnish','Duraphat (Colgate)','Fluor Protector (Ivoclar)','Elmex gelée (żel fluorkowy)'];\nconst GROUPS=["),
 ]
 
 PATCHES_PRYW = [
@@ -42,6 +91,18 @@ PATCHES_PRYW = [
   ('R6 historia: wpis z innego urządzenia (z chmury) – komunikat, że treść jest na urządzeniu zapisu (zamiast „usunięta”)',
    "'<span class=\"pw-note\">treść opisu usunięta (ustawienie prywatności)</span>'",
    "'<span class=\"pw-note\">' + (m.cloud ? 'treść opisu jest tylko na urządzeniu, na którym zapisano wizytę' : 'treść opisu usunięta (ustawienie prywatności)') + '</span>'"),
+  ('R7 historia: brak treści opisu na tym urządzeniu – czytelny komunikat zamiast „Wczytuję…” bez końca (prompt Patryka 21.11.2026, etap 5: „opisy nie zawsze się wyświetlają”)',
+   "const S = { ready: false, tab: 'wiz', visits: new Map(), bodies: new Map(), allBodies: false,",
+   "const S = { ready: false, tab: 'wiz', visits: new Map(), bodies: new Map(), bodyMiss: new Set(), allBodies: false,"),
+  ('R7a odczyt treści: zapamiętanie, że treści nie ma (zamiast ponownego „Wczytuję…”)',
+   "  if (b) S.bodies.set(id, b); return b;",
+   "  if (b) { S.bodies.set(id, b); S.bodyMiss.delete(id); } else S.bodyMiss.add(id); return b;"),
+  ('R7b „Pokaż opis”: komunikat o braku treści na tym urządzeniu',
+   "esc(b ? b.txt : 'Wczytuję…')",
+   "esc(b ? b.txt : S.bodyMiss.has(m.id) ? 'Treści tego opisu nie ma na tym urządzeniu (zapisano ją w innej przeglądarce albo usunięto dane witryny). Kwoty i procedury są zachowane; treść przywrócisz z „Kopii danych z tego urządzenia” (Konto).' : 'Wczytuję…')"),
+  ('R7c „Kopiuj opis” bez treści na urządzeniu: konkretny komunikat zamiast „Nie udało się skopiować”',
+   "toast(ok ? 'Skopiowano opis: ' + whoOf(m) : 'Nie udało się skopiować.')",
+   "toast(ok ? 'Skopiowano opis: ' + whoOf(m) : b ? 'Nie udało się skopiować.' : 'Treści tego opisu nie ma na tym urządzeniu.')"),
 ]
 
 PATCHES_KAL = [
