@@ -7,3 +7,5 @@ next-env.d.ts
 !.env.example
 kopie/
 *.dump
+__pycache__/
+*.pyc

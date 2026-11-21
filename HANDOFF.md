@@ -10,7 +10,7 @@ Przekazanie projektu z czatu Claude do Claude Code. Źródło prawdy: **kod w re
 | Kompletność | ZIP = wszystkie pliki śledzone przez git w `97165c3` (pełny kod, nie fragmenty) + ten plik + nowy `CLAUDE.md`. Pominięte: `node_modules/`, `.next/`, `.env` (sekrety), `tsconfig.tsbuildinfo`, `next-env.d.ts` (generowane), `tests/e2e/__pycache__/*.pyc` (śmieć śledzony w repo). |
 | `CLAUDE.md` | **Zastępuje** dotychczasowy `CLAUDE.md` z repo (wszystkie jego zasady przeniesione + nowe sekcje). |
 | Testy w chwili pakowania | wszystkie zielone (szczegóły w sekcji 2). **Na Macu Patryka nie sprawdzone są zmiany z 21.11.** |
-| Nieaktualne dokumenty | `INSTRUKCJA_OBSLUGI.md` (Zarobki: „Netto – po skonfigurowaniu Twoich zasad rozliczenia” – od 21.11 netto liczy się z ustawień Kalendarza; brak opisu kreatora podatków i „Ustaw od nowa”); `INSTRUKCJA_START.md` sekcja 4 (lista kontrolna z etapu 4e-1); `README.md` („z licencjami” – licencje odłożone). Nie poprawiane – do zrobienia za zgodą. |
+| Nieaktualne dokumenty | `INSTRUKCJA_OBSLUGI.md` (Zarobki: „Netto – po skonfigurowaniu Twoich zasad rozliczenia” – od 21.11 netto liczy się z ustawień Kalendarza; brak opisu kreatora podatków i „Ustaw od nowa”); `INSTRUKCJA_START.md` sekcja 4 (lista kontrolna z etapu 4e-1); `README.md` („z licencjami” – licencje odłożone). **Zaktualizowane 21.11.2026** (odpowiedź na pytanie 7, sekcja 7). |
 
 ## 1. Numeracja etapów (dwie równoległe – nie mieszać)
 
@@ -140,3 +140,18 @@ Funkcje: konta i bezpieczeństwo, Gabinety, Ustawienia NFZ, Katalog NFZ, Opisy N
 8. 2FA: przywrócić włączanie przed produkcją?
 9. Wyniki testu 7-dniowego – lista uwag do podsumowania.
 10. Którą numerację etapów stosować dalej: fazy 1–9 (audyt) czy etapy 0–6 (decyzja 9)?
+
+### Odpowiedzi Patryka (21.11.2026, Claude Code)
+
+| # | Odpowiedź | Stan |
+|---|---|---|
+| 2 | **Dawać dostęp** przy ponownej rejestracji | zrobione: każde nowe konto dostaje wersję testową; rejestr HMAC nadal zapisywany (na ewentualny powrót licencji). Konta zarejestrowane ponownie przed poprawką nadal nie mają subskrypcji. |
+| 3 | Fikcyjne „Gabinet 1–4” – **ręcznie** | Patryk usuwa w „Gabinety” |
+| 4 | Własne kody NFZ – **zostają ukryte** | bez zmian |
+| 5 | Dyktowanie – **odłożone** | przed etapem 2 porównanie (koszt, jakość PL, prywatność) |
+| 6 | Licencje – **bez terminu** | jak decyzja 9 |
+| 7 | Porządki – **wszystko** | zrobione: 3 instrukcje zaktualizowane, `__pycache__` usunięty z repo i w `.gitignore`, skrypty Windows usunięte |
+| 8 | 2FA – **zostaje wyłączone** | przypomnieć przed hostingiem |
+| 9 | Test 7-dniowy – **w toku** | czekamy na uwagi |
+| 10 | Numeracja – **etapy 0–6** (decyzja 9) | obowiązuje |
+| 11 | Test `t_6_zmiany.py` przerywał się po 36/41 (konto bez `bypass_csp`) | naprawiony (`9f107e8`) |
