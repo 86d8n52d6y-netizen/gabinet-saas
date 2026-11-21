@@ -155,3 +155,30 @@ Funkcje: konta i bezpieczeństwo, Gabinety, Ustawienia NFZ, Katalog NFZ, Opisy N
 | 9 | Test 7-dniowy – **w toku** | czekamy na uwagi |
 | 10 | Numeracja – **etapy 0–6** (decyzja 9) | obowiązuje |
 | 11 | Test `t_6_zmiany.py` przerywał się po 36/41 (konto bez `bypass_csp`) | naprawiony (`9f107e8`) |
+
+## 8. Narzędzia dla Claude Code (ustalone z Patrykiem 21.11.2026)
+
+Zasada: narzędzia uruchamiane **lokalnie, bez wysyłania danych na zewnątrz**; instalowane poza repo (bez dopisywania do `package.json`) – stałe dodanie do repo tylko za zgodą. Przy konflikcie instrukcji wtyczki z `CLAUDE.md` wygrywa `CLAUDE.md`.
+
+| Narzędzie | Do czego | Etap (numeracja 0–6) |
+|---|---|---|
+| Context7 | aktualna dokumentacja Next.js 16 / React 19 zamiast pisania z pamięci | każdy |
+| `/code-review` (wbudowany) + wtyczka `code-review` | przegląd zmian przed PR | każdy |
+| wtyczka `playwright` | ręczne „przeklikanie” aplikacji, odtwarzanie zgłoszeń Patryka, zrzuty | 0–1 |
+| `engineering:debug` | szukanie przyczyny przy zgłoszeniach | 0–1 |
+| `engineering:architecture` | decyzja o silniku dyktowania (porównanie opcji) | 2 |
+| `security-review`, `engineering:testing-strategy`, shellcheck, gitleaks, ESLint, semgrep/osv-scanner, axe-core + Lighthouse, autocannon/k6 | audyt i testy bezpieczeństwa, dostępności, obciążenia (20 użytkowników) | 3 |
+| `engineering:deploy-checklist`, `operations:runbook`, hadolint | konfiguracja produkcyjna, kopie i odtwarzanie, `Dockerfile` | 4 |
+| `operations:risk-assessment` | ryzyka przed pytaniem o zgodę | 5 |
+| wtyczka `frontend-design` | tylko nowe ekrany (np. okno „Notatka”); istniejący wygląd i moduły 1:1 bez zmian | 2+ |
+
+**Nie używać w Gabinecie:** `product-tracking-skills` (analityka wysyła dane na zewnątrz), `brightdata` (zewnętrzna usługa). Wyłączone: `superpowers` (wymusza skille przy każdej odpowiedzi), `github` z marketplace (wymaga tokena; wystarcza wbudowany dostęp do GitHuba). Wtyczki instalowane w sesji znikają z kontenerem – na stałe tylko w ustawieniach konta.
+
+**Ograniczenia środowiska w chmurze:** pobieranie gotowych programów z GitHub Releases (np. gitleaks) zablokowane przez kontrolę uprawnień; Docker Hub zablokowany (ZAP, Trivy, budowa obrazu – tylko na Macu).
+
+### Pierwszy raport (21.11.2026, `main` @ `dd29862`, tylko odczyt)
+
+| Sprawdzenie | Wynik |
+|---|---|
+| shellcheck 0.9.0 (8 skryptów `.sh`/`.command`) | **0 błędów**, 6 ostrzeżeń, 11 uwag stylu. Ostrzeżenia: `tests/e2e/uruchom.sh` (`cd` bez `|| exit`, brak cudzysłowów przy `$(cat $PIDF)`, nieużyta zmienna pętli); `zainstaluj-mac.command:24` (`ls … </dev/null` – celowe, poprawka `f37b14a`; fałszywy alarm), `:90` (nieużyta zmienna pętli). Nic krytycznego – do ewentualnej poprawki w etapie 3. |
+| Sekrety w historii git (28 commitów; zamiast gitleaks – wyszukiwanie wzorców: klucze prywatne, tokeny GitHub/Stripe/AWS, 64-znakowe klucze hex przypisane do `AUTH_SECRET`/`APP_ENC_KEY`/haseł) | **nic nie znaleziono**; w historii tylko `.env.example` z tekstami zastępczymi. Drobiazg: komentarz w `.env.example` wspomina „skrypty uruchom-*” (dziś `zainstaluj-mac.command`). |
