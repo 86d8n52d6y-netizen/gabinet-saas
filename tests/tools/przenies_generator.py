@@ -66,14 +66,116 @@ PATCHES = [
    "fmtP(A.ptsC/100),fmtC(A.ex),fmtMin(A.work)];"),
   ('P20 lakiery fluorkowe (1101): lista podpowiedzi rozszerzona – Duraphat, Fluor Protector (decyzja Patryka 21.11.2026, pkt 1.1); własna nazwa nadal wpisywana ręcznie',
    "dl:['VOCO Profluorid Varnish']",
-   "dl:FLUOR_PREPS"),
+   "dl:G.mat('lakier',FLUOR_PREPS)"),
   ('P21 lakierowanie zębów (1006): opcjonalny wybór preparatu – dopisywany do opisu tylko po wybraniu (pkt 1.1); Elmex jako żel (nie lakier)',
    "   render:()=>['LAKIEROWANIE ZĘBÓW (1006)',SEG.T1006].join('\\n')},",
-   "   fields:()=>[{k:'1006.prep',label:'Preparat (opcjonalnie – trafi do opisu)',type:'text',dl:FLUOR_PREPS,w:'l',opt:true}],\n"
+   "   fields:()=>[{k:'1006.prep',label:'Preparat (opcjonalnie – trafi do opisu)',type:'text',dl:G.mat('lakier',FLUOR_PREPS),w:'l',opt:true}],\n"
    "   render:()=>['LAKIEROWANIE ZĘBÓW (1006)',SEG.T1006].concat(str(state.a['1006.prep'])?['Zastosowany preparat: '+str(state.a['1006.prep'])+'.']:[]).join('\\n')},"),
   ('P22 lista preparatów fluorkowych (wspólna dla 1101 i 1006)',
    "const GROUPS=[",
    "const FLUOR_PREPS=['VOCO Profluorid Varnish','Duraphat (Colgate)','Fluor Protector (Ivoclar)','Elmex gelée (żel fluorkowy)'];\nconst GROUPS=["),
+  ('P23 nazwa kompozytu: podpowiedzi z „Moich materiałów” (Ustawienia; prompt Patryka 21.11.2026, pkt 1.2) – nadal można wpisać dowolną nazwę',
+   "if(m==='kompozyt') f.push({k:p+'name',label:'Nazwa kompozytu',type:'text'});",
+   "if(m==='kompozyt') f.push({k:p+'name',label:'Nazwa kompozytu',type:'text',dl:G.mat('kompozyt')});"),
+  ('P24 materiał podkładowy (głęboka próchnica): pole przy leczeniu zachowawczym i urazie – domyślnie Ionosit (tekst bez zmian), podpowiedzi z „Moich materiałów” (pkt 1.2)',
+   "  if(state.codes.some(c=>ZACH_CODES.includes(c))) f.push({k:'sh.rok',",
+   "  if(state.codes.some(c=>ZACH_CODES.includes(c)||c==='ST28')) f.push({k:'sh.pod',label:'Materiał podkładowy (przy próchnicy głębokiej)',type:'text',dl:G.mat('podklad',['Ionosit']),ph:'Ionosit',opt:true});\n"
+   "  if(state.codes.some(c=>ZACH_CODES.includes(c))) f.push({k:'sh.rok',"),
+  ('P25 materiał podkładowy w opisie: wybrana nazwa zamiast „Ionosit” (puste pole = Ionosit, jak dotąd)',
+   "  if(r){for(let i=o.length-1;",
+   "  const pod=str(state.a['sh.pod']).trim();if(pod&&pod!=='Ionosit')o.forEach((x,i)=>{o[i]={code:x.code,text:x.text.split('materiał podkładowy Ionosit').join('materiał podkładowy '+pod)};});\n"
+   "  if(r){for(let i=o.length-1;"),
+  ('P26 wędzidełka: domyślnie „Typ I – śluzówkowy” (decyzja Patryka 21.11.2026, pkt 2.1); zmiana tylko, gdy jest inaczej',
+   "function examFields(){return [",
+   "function examFields(){['sh.wg','sh.wd'].forEach(k=>{if(state.a[k]===undefined)state.a[k]=WEDZ[0];});return ["),
+  ('P27 wywiad: opcjonalne pole „aktualnie przyjmowane leki” (pkt 2.1; tylko w treści opisu na urządzeniu)',
+   "  {k:'sh.lk',label:'Przyjmowane leki na stałe',type:'brak'}];}",
+   "  {k:'sh.lk',label:'Przyjmowane leki na stałe',type:'brak'},\n  {k:'sh.lka',label:'Aktualnie przyjmowane leki (doraźnie, opcjonalnie)',type:'text',opt:true,w:'l'}];}"),
+  ('P28 opis badania: wędzidełka domyślnie Typ I (P26)',
+   "'Wędzidełko warg górnej : '+V('sh.wg','wędzidełko górne'),",
+   "'Wędzidełko warg górnej : '+(str(state.a['sh.wg'])||WEDZ[0]),"),
+  ('P28a opis badania: wędzidełko dolne domyślnie Typ I (P26)',
+   "'Wędzidełko warg dolnej: '+V('sh.wd','wędzidełko dolne'),",
+   "'Wędzidełko warg dolnej: '+(str(state.a['sh.wd'])||WEDZ[0]),"),
+  ('P29 opis badania: linia „Aktualnie przyjmowane leki – …” tylko, gdy wpisano (P27)',
+   "'Przyjmowane leki na stałe – '+V('sh.lk','leki')].join('\\n');}",
+   "'Przyjmowane leki na stałe – '+V('sh.lk','leki')].concat(str(state.a['sh.lka'])?['Aktualnie przyjmowane leki – '+str(state.a['sh.lka'])]:[]).join('\\n');}"),
+  ('P30 przycisk „Wywiad bez obciążeń” – jednym kliknięciem brak alergii, chorób i leków; nie nadpisuje wpisanych (pkt 2.1)',
+   '<div class="grid">${f.map(fieldHTML).join(\'\')}</div>${insH}</section>',
+   '<div class="grid">${f.map(fieldHTML).join(\'\')}</div>${ex?\'<div class="row" style="margin-top:8px"><button type="button" class="btn ghost sm" data-act="wywbrak">Wywiad bez obciążeń – brak alergii, chorób i leków</button></div>\':\'\'}${insH}</section>'),
+  ('P30a obsługa przycisku „Wywiad bez obciążeń”: uzupełnia tylko puste pola',
+   "  if(a==='brak'){setVal(el.dataset.key,'brak');afterChange(el);return;}",
+   "  if(a==='wywbrak'){['sh.al','sh.ch','sh.lk'].forEach(k=>{if(!str(state.a[k]))setVal(k,'brak');});afterChange(el);return;}\n  if(a==='brak'){setVal(el.dataset.key,'brak');afterChange(el);return;}"),
+  ('P31 znieczulenie przy wypełnieniach, endo i ST30 (decyzja Patryka 21.11.2026, pkt 6.3): przyciski Dentocaine / Mark3 / bez znieczulenia + własny preparat; rodzaj i dawka (domyślnie 1 amp., do zmiany); nic nie wybrane = opis bez zmian',
+   "  if(state.codes.some(c=>ZACH_CODES.includes(c)||c==='ST28')) f.push({k:'sh.pod',",
+   "  if(state.codes.some(c=>AN_CODES.includes(c))){const anP=str(state.a['sh.anw'])||str(state.a['sh.an']);\n"
+   "    f.push({k:'sh.an',label:'Znieczulenie – preparat (opcjonalnie)',type:'seg',opts:AN_OPTS,opt:true,full:true,rer:'shared'},{k:'sh.anw',label:'Inny preparat (zamiast przycisku)',type:'text',dl:G.mat('inne',[]),opt:true,w:'l',rer:'shared'});\n"
+   "    if(anP&&anP!=='bez znieczulenia'){if(state.a['sh.and']===undefined)state.a['sh.and']=AN_DOSE[1];\n"
+   "      f.push({k:'sh.ant',label:'Rodzaj znieczulenia',type:'seg',opts:['nasiękowe','przewodowe','powierzchniowe'],opt:true},{k:'sh.and',label:'Dawka',type:'seg',opts:AN_DOSE,opt:true},{k:'sh.andw',label:'Inna dawka',type:'text',opt:true,w:'s'});}}\n"
+   "  if(state.codes.some(c=>ZACH_CODES.includes(c)||c==='ST28')) f.push({k:'sh.pod',"),
+  ('P32 znieczulenie w opisie: zdanie zaraz po tytule pierwszego zabiegu z listy (P31); ekstrakcje ST01/ST02 bez zmian (mają własne znieczulenie)',
+   "  const pod=str(state.a['sh.pod']).trim();",
+   "  {const anP=str(state.a['sh.anw']).trim()||str(state.a['sh.an']),fi=o.findIndex(x=>AN_CODES.includes(x.code));\n"
+   "   if(anP&&fi>=0){const ty=str(state.a['sh.ant']),dz=str(state.a['sh.andw']).trim()||str(state.a['sh.and'])||AN_DOSE[1];\n"
+   "     const ln=anP==='bez znieczulenia'?'Zabieg wykonano bez znieczulenia.':'Znieczulenie miejscowe'+(ty?' '+ty:'')+': '+anP+', '+dz+'.';\n"
+   "     const L=o[fi].text.split('\\n');L.splice(1,0,ln);o[fi]={code:o[fi].code,text:L.join('\\n')};}}\n"
+   "  const pod=str(state.a['sh.pod']).trim();"),
+  ('P33 stałe znieczuleń (P31–P32)',
+   "const ROK_OPTS=['nie dotyczy','pełna informacja','krótka informacja'];",
+   "const ROK_OPTS=['nie dotyczy','pełna informacja','krótka informacja'];\n"
+   "const AN_CODES=ZACH_CODES.concat(['ST30']);\nconst AN_OPTS=['Dentocaine (40 mg + 0,005 mg)/ml','Mark3 20% benzokaina','bez znieczulenia'];\nconst AN_DOSE=['½ amp. (0,85 ml)','1 amp. (1,7 ml)','2 amp. (3,4 ml)'];"),
+  ('P34 zalecenia: przełącznik „ustnie / ustnie i pisemnie” przy każdej wizycie, domyślnie „ustnie” (decyzja Patryka 21.11.2026, pkt 6.5)',
+   "  if(state.codes.some(c=>AN_CODES.includes(c))){const anP",
+   "  if(state.a['sh.zal']===undefined)state.a['sh.zal']=ZAL_OPTS[0];\n"
+   "  f.push({k:'sh.zal',label:'Zalecenia przekazano pacjentowi',type:'seg',opts:ZAL_OPTS,opt:true});\n"
+   "  if(state.codes.some(c=>AN_CODES.includes(c))){const anP"),
+  ('P35 zalecenia w opisie: przy „ustnie” fraza „ustnie i pisemnie” ze stałych tekstów zamieniona na „ustnie” (stałe teksty w Ustawieniach bez zmian)',
+   "  const pod=str(state.a['sh.pod']).trim();",
+   "  if((str(state.a['sh.zal'])||ZAL_OPTS[0])==='ustnie')o.forEach((x,i)=>{o[i]={code:x.code,text:x.text.split('ustnie i pisemnie').join('ustnie')};});\n"
+   "  const pod=str(state.a['sh.pod']).trim();"),
+  ('P36 stałe zaleceń (P34–P35)',
+   "const AN_CODES=ZACH_CODES.concat(['ST30']);",
+   "const AN_CODES=ZACH_CODES.concat(['ST30']);\nconst ZAL_OPTS=['ustnie','ustnie i pisemnie'];"),
+  ('P37 trzy szybkie opcje (decyzja Patryka 21.11.2026, pkt 6.4): kolor wypełnienia, nazwa kompozytu, lakier fluorkowy – 3 najczęściej używane (licznik na tym urządzeniu, bez danych pacjentów; na start: A1/A2/A3 i początek listy); nadal można wpisać własną wartość',
+   "${brak}</div>${dl}</div>`;",
+   "${brak}</div>${dl}${quickNfz(f)}</div>`;"),
+  ('P38 funkcje szybkich opcji NFZ (P37)',
+   "function buildOut(){",
+   "const QK='gabinet:nfz-szybkie';\n"
+   "function qGroup(k){return /[.|]color$/.test(k)?'color':/[.|]name$/.test(k)?'kompozyt':/^(1101|1006)\\.prep$/.test(k)?'lakier':'';}\n"
+   "function qCounts(){try{return JSON.parse(localStorage.getItem(QK)||'{}')||{};}catch(e){return {};}}\n"
+   "function quickLearn(){const c=qCounts();Object.keys(state.a).forEach(k=>{const g=qGroup(k),x=state.a[k];if(!g||typeof x!=='string'||!x.trim())return;const v=x.trim();c[g]=c[g]||{};c[g][v]=(c[g][v]||0)+1;});try{localStorage.setItem(QK,JSON.stringify(c));}catch(e){}}\n"
+   "function quickNfz(f){if(f.type!=='text')return '';const g=qGroup(f.k);if(!g)return '';const c=qCounts()[g]||{},base=g==='color'?['A1','A2','A3']:(f.dl||[]);\n"
+   "  const top=[...new Set(Object.keys(c).sort((a,b)=>c[b]-c[a]).concat(base))].slice(0,3);if(!top.length)return '';const cur=str(getVal(f.k));\n"
+   "  return '<div class=\"row\" style=\"margin-top:6px;gap:6px\">'+top.map(v=>`<button type=\"button\" class=\"mini${cur===v?' on':''}\" data-act=\"qv\" data-key=\"${esc(f.k)}\" data-v=\"${esc(v)}\" aria-pressed=\"${cur===v}\">${esc(v)}</button>`).join('')+'</div>';}\n"
+   "function buildOut(){"),
+  ('P39 obsługa szybkich opcji i nauka „najczęściej używanych” przy kopiowaniu opisu',
+   "  if(a==='wywbrak'){",
+   "  if(a==='qv'){setVal(el.dataset.key,el.dataset.v);afterChange(el);return;}\n  if(a==='wywbrak'){"),
+  ('P39a zapamiętanie użytych wartości (kolor, kompozyt, lakier) przy kopiowaniu opisu',
+   "  if(a==='copy'||a==='copyall'){const outs=buildOut(),",
+   "  if(a==='copy'||a==='copyall'){quickLearn();const outs=buildOut(),"),
+  ('P39b wygląd zaznaczonej szybkiej opcji',
+   ".mini{font:inherit;font-size:12px;",
+   ".mini.on{background:var(--accent);border-color:var(--accent);color:#fff}\n.mini{font:inherit;font-size:12px;"),
+  ('P40 podsumowanie na początku opisu (decyzja Patryka 21.11.2026, pkt 6.1): „Wykonano: …” z nazw zaznaczonych zabiegów, zębów i powierzchni; domyślnie włączone, wyłącznik w Ustawieniach; kopiowane razem z opisem',
+   "function genTxt(){return buildOut().map(o=>plain(o.text)).join('\\n\\n');}",
+   "function sumItem(c){const d=D[c];let s=d.name.charAt(0).toLowerCase()+d.name.slice(1);\n"
+   "  if(d.diag&&d.diag.mode!=='quad'){const ts=teethOf(c);if(ts.length)s+=' – '+(ts.length>1?'zęby ':'ząb ')+ts.map(t=>t+(d.diag.mode==='surf'&&surfOf(c,t).length?' ('+SORD.filter(x=>surfOf(c,t).includes(x)).join('')+')':'')).join(', ');}\n"
+   "  if(d.diag&&(d.diag.mode==='quad'||d.diag.mode==='mixed')){const q=(state.quads[c]||[]).slice().sort();if(q.length)s+=' – '+(q.length>1?'ćwiartki ':'ćwiartka ')+q.join(', ');}\n"
+   "  return s;}\n"
+   "function sumPrefix(){if(cfg.sum===false||!state.codes.length)return '';return 'Wykonano: '+state.codes.map(sumItem).join('; ')+'.\\n\\n';}\n"
+   "function genTxt(){return sumPrefix()+buildOut().map(o=>plain(o.text)).join('\\n\\n');}"),
+  ('P40a podsumowanie także w podglądzie „Cały opis”',
+   '<div class="out all">${htmlOut(outs.map(o=>o.text).join(\'\\n\\n\'))}</div>',
+   '<div class="out all">${htmlOut(sumPrefix()+outs.map(o=>o.text).join(\'\\n\\n\'))}</div>'),
+  ('P40b wyłącznik podsumowania w Ustawieniach modułu',
+   "    ${row('Tryb zapisu',",
+   "    ${row('Podsumowanie na początku opisu','<div class=\"seg\" role=\"group\"><button type=\"button\" data-act=\"sumopt\" data-v=\"on\" class=\"'+(cfg.sum!==false?'on':'')+'\" aria-pressed=\"'+(cfg.sum!==false)+'\">włączone</button><button type=\"button\" data-act=\"sumopt\" data-v=\"off\" class=\"'+(cfg.sum===false?'on':'')+'\" aria-pressed=\"'+(cfg.sum===false)+'\">wyłączone</button></div>','krótkie „Wykonano: …” z zaznaczonych zabiegów – kopiowane razem z opisem')}\n"
+   "    ${row('Tryb zapisu',"),
+  ('P40c obsługa wyłącznika podsumowania',
+   "  if(a==='basis'){",
+   "  if(a==='sumopt'){cfg.sum=el.dataset.v!=='off';cfgSave();render();return;}\n  if(a==='basis'){"),
 ]
 
 PATCHES_PRYW = [
@@ -103,6 +205,64 @@ PATCHES_PRYW = [
   ('R7c „Kopiuj opis” bez treści na urządzeniu: konkretny komunikat zamiast „Nie udało się skopiować”',
    "toast(ok ? 'Skopiowano opis: ' + whoOf(m) : 'Nie udało się skopiować.')",
    "toast(ok ? 'Skopiowano opis: ' + whoOf(m) : b ? 'Nie udało się skopiować.' : 'Treści tego opisu nie ma na tym urządzeniu.')"),
+  ('R8 podpowiedzi materiałów w szablonach: lista wbudowana + „Moje materiały” z konta (prompt Patryka 21.11.2026, pkt 1.2); pola: materiał wypełnienia, podkład, materiał w zębodole',
+   "  $('#dls').innerHTML = KAT.proc.map(p => (p.fields || []).filter(f => f.sug).map(f => '<datalist id=\"dl_' + p.id + '_' + f.k + '\">' + f.sug.map(",
+   "  const sugOf = qSug;\n"
+   "  $('#dls').innerHTML = KAT.proc.map(p => (p.fields || []).filter(f => sugOf(f).length).map(f => '<datalist id=\"dl_' + p.id + '_' + f.k + '\">' + sugOf(f).map("),
+  ('R8a pole „Materiał w zębodole” też z podpowiedziami „Moich materiałów”',
+   "(f.sug ? ' list=\"dl_' + esc(procOf(it).id) + '_' + f.k + '\"' : '')",
+   "(f.sug || f.k === 'matz' ? ' list=\"dl_' + esc(procOf(it).id) + '_' + f.k + '\"' : '')"),
+  ('R9 zalecenia ustne (decyzja Patryka 21.11.2026, pkt 6.5): „Zalecenia przekazano pacjentowi w formie ustnej.” na końcu opisu wizyty – domyślnie tak, do wyłączenia przy wizycie',
+   "  if (S.ust.podpis) parts.push(String(S.ust.podpis));",
+   "  if (v.items.length && v.zalUst !== false) parts.push('Zalecenia przekazano pacjentowi w formie ustnej.');\n  if (S.ust.podpis) parts.push(String(S.ust.podpis));"),
+  ('R9a pole wyboru przy wizycie (obok e-ZLA)',
+   "'<section class=\"g-card\"><label class=\"pw-bool\"><input type=\"checkbox\" id=\"ez_on\"'",
+   "'<section class=\"g-card\"><label class=\"pw-bool\"><input type=\"checkbox\" id=\"zal_ust\"' + (V.zalUst !== false ? ' checked' : '') + '> Zalecenia przekazano pacjentowi w formie ustnej (dopisz do opisu)</label><label class=\"pw-bool\"><input type=\"checkbox\" id=\"ez_on\"'"),
+  ('R9b obsługa pola „zalecenia ustne”',
+   "  if (t.id === 'ez_on') {",
+   "  if (t.id === 'zal_ust') { V.zalUst = t.checked; render(); draftSched(); return; }\n  if (t.id === 'ez_on') {"),
+  ('R10 szybkie opcje (pkt 6.2–6.4): 3 najczęściej używane wartości z historii jako przyciski (materiały, środek znieczulający); 5 dolegliwości do klikania przy wywiadzie (zachowawcze, endo, diagnostyka); dawka znieczulenia ½ / 1 / 2 amp. (domyślnie 1 amp. = 1,7 ml); zawsze można wpisać własną wartość',
+   "  return '<div class=\"pw-f' + wide + '\">' + h + '</div>';",
+   "  h += quickHTML(it, i, f);\n  return '<div class=\"pw-f' + wide + '\">' + h + '</div>';"),
+  ('R10a funkcje szybkich opcji i podpowiedzi (wspólne dla datalist i przycisków)',
+   "function fieldHTML(it, i, f) {",
+   "const QMAT = { mat: ['kompozyt', 'inne'], podklad: ['podklad'], matz: ['inne'] }, QBASE = { znprep: ['Dentocaine (artykaina 4% z adrenaliną 1:100 000)', 'Mark3 20% benzokaina (żel)'] };\n"
+   "const DOLEGL = ['ból samoistny', 'ból na zimno/ciepło', 'ból przy nagryzaniu', 'nadwrażliwość', 'ukruszenie/złamanie zęba (lub wypełnienia)'];\n"
+   "const ZN_DOSE = [['0,85', '½ amp. (0,85 ml)'], ['1,7', '1 amp. (1,7 ml)'], ['3,4', '2 amp. (3,4 ml)']];\n"
+   "function qSug(f) { const base = (QBASE[f.k] || []).concat(f.sug || []); const all = (QMAT[f.k] ? G.mat(QMAT[f.k], []) : []).concat(base); return all.filter((x, j) => all.indexOf(x) === j); }   // własne materiały przed wbudowanymi\n"
+   "function quickTop(k, list) { const c = new Map(); for (const m of S.visits.values()) for (const x of (m.items || [])) { const v = x.vals && x.vals[k]; if (typeof v === 'string' && v.trim()) c.set(v.trim(), (c.get(v.trim()) || 0) + 1); }\n"
+   "  return [...new Set([...c.keys()].sort((a, b) => c.get(b) - c.get(a)).concat(list))].slice(0, 3); }\n"
+   "function quickHTML(it, i, f) {\n"
+   "  const p = procOf(it), v = it.vals[f.k], b = (a, val, lab, on) => '<button type=\"button\" class=\"pw-ib pw-qb' + (on ? ' on' : '') + '\" data-a=\"' + a + '\" data-i=\"' + i + '\" data-k=\"' + esc(f.k) + '\" data-v=\"' + esc(val) + '\" aria-pressed=\"' + !!on + '\">' + esc(lab) + '</button>';\n"
+   "  let q = [];\n"
+   "  if (f.k === 'wywiad' && ['zach', 'endo', 'diag'].includes(p.kat)) { const cur = String(v || '').split(',').map(x => x.trim()); q = DOLEGL.map(d => b('qtog', d, d, cur.includes(d))); }\n"
+   "  else if (f.k === 'zndawka') { const zn = it.vals.zn; if (!zn || zn === 'nie stosowano') return ''; if (v === undefined || v === '') it.vals[f.k] = '1,7'; q = ZN_DOSE.map(d => b('qset', d[0], d[1], String(it.vals[f.k]) === d[0])); }\n"
+   "  else if (f.t !== 'area' && f.t !== 'multi' && f.t !== 'select' && f.t !== 'bool' && f.t !== 'rows' && f.t !== 'num' && f.t !== 'date' && f.t !== 'tooth' && f.t !== 'teeth') { const l = qSug(f); if (l.length) q = quickTop(f.k, l).map(x => b('qset', x, x, v === x)); }\n"
+   "  return q.length ? '<div class=\"pw-q\">' + q.join('') + '</div>' : ''; }\n"
+   "function fieldHTML(it, i, f) {"),
+  ('R10b obsługa przycisków szybkich opcji',
+   "  if (a === 'fold') { it.fold = !it.fold; rerenderItem(i); return; }",
+   "  if (a === 'qset' || a === 'qtog') { const k = t.dataset.k, val = t.dataset.v;\n"
+   "    if (a === 'qset') it.vals[k] = val; else { const cur = String(it.vals[k] || '').split(',').map(x => x.trim()).filter(Boolean), j = cur.indexOf(val); if (j >= 0) cur.splice(j, 1); else cur.push(val); it.vals[k] = cur.join(', '); }\n"
+   "    rerenderItem(i); refreshSide(); draftSched(); return; }\n"
+   "  if (a === 'fold') { it.fold = !it.fold; rerenderItem(i); return; }"),
+  ('R10c wygląd przycisków szybkich opcji',
+   ".pw-toast{",
+   ".pw-q{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}.pw-qb.on{background:var(--g-accent);border-color:var(--g-accent);color:var(--g-accent-ink)}\n.pw-toast{"),
+  ('R11 podsumowanie na początku opisu (decyzja Patryka 21.11.2026, pkt 6.1): „Wykonano: …” z procedur wizyty i zębów; domyślnie włączone, wyłącznik w Ustawieniach',
+   "function visitText(v) {\n  v = v || V; const parts = v.items.map(itemText).filter(Boolean);",
+   "function sumP(it) { const p = procOf(it), n = String(p.name || ''), z = fieldsOf(p); let s = n.charAt(0).toLowerCase() + n.slice(1);\n"
+   "  for (const f of z.values()) if ((f.t === 'tooth' || f.t === 'teeth') && it.vals[f.k]) { const ts = String(it.vals[f.k]); s += ' – ' + (/[,;]/.test(ts) ? 'zęby ' : 'ząb ') + ts; break; }\n"
+   "  return s + (it.qty > 1 ? ' ×' + it.qty : ''); }\n"
+   "function visitText(v) {\n  v = v || V; const parts = v.items.map(itemText).filter(Boolean);\n"
+   "  if (v.items.length && S.ust.sum !== false) parts.unshift('Wykonano: ' + v.items.map(sumP).join('; ') + '.');"),
+  ('R11a wyłącznik podsumowania w Ustawieniach (obok podpisu)',
+   "    '<input class=\"pw-in\" id=\"u_podpis\" maxlength=\"120\" value=\"' + esc(S.ust.podpis || '') + '\" style=\"max-width:480px\"></section>' +",
+   "    '<input class=\"pw-in\" id=\"u_podpis\" maxlength=\"120\" value=\"' + esc(S.ust.podpis || '') + '\" style=\"max-width:480px\"></section>' +\n"
+   "    '<section class=\"g-card\"><h2>Podsumowanie na początku opisu</h2><label class=\"pw-bool\"><input type=\"checkbox\" id=\"u_sum\"' + (S.ust.sum !== false ? ' checked' : '') + '> Dodawaj „Wykonano: …” (procedury i zęby) na początku każdego opisu</label></section>' +"),
+  ('R11b obsługa wyłącznika podsumowania',
+   "  if (t.id === 'zal_ust') {",
+   "  if (t.id === 'u_sum') { S.ust.sum = t.checked; ustSave(); render(); return; }\n  if (t.id === 'zal_ust') {"),
 ]
 
 PATCHES_KAL = [

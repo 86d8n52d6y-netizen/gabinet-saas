@@ -8,7 +8,8 @@ export function cleanUi(x: unknown) {
     .filter(z => typeof z.id === 'string' && typeof z.name === 'string' && Array.isArray(z.codes))
     .map(z => ({ id: String(z.id).replace(/[^a-z0-9]/gi, '').slice(0, 24), name: String(z.name).replace(/[<>\u0000-\u001f]/g, '').trim().slice(0, 60), codes: codes(z.codes, 30), fav: z.fav === true }))
     .filter(z => z.id && z.name && z.codes.length).slice(0, 60) : [];
-  return { fav: codes(c.fav, 60), hid: codes(c.hid, 80), sets, auto: c.auto === true };
+  // sum: podsumowanie na początku opisu (prompt Patryka 21.11.2026, pkt 6.1) – domyślnie włączone
+  return { fav: codes(c.fav, 60), hid: codes(c.hid, 80), sets, auto: c.auto === true, sum: c.sum !== false };
 }
 export function cleanSeg(x: unknown) {
   const c = (x && typeof x === 'object' ? x : {}) as { over?: unknown; hist?: unknown };

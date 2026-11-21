@@ -152,6 +152,10 @@ with sync_playwright() as p:
                 if int(age) < 5 and plan in ('III', 'IV'): continue
                 fresh(pg); fresh(po)
                 gen(pg, age=age, plan=plan, ini='ab'); gen(po, age=age, plan=plan, ini='ab')
+                # 21.11.2026 (P26): wędzidełka w SaaS domyślnie „Typ I” – w starej aplikacji ustawiamy to samo, reszta tekstu co do znaku
+                po.evaluate("['sh.wg','sh.wd'].forEach(k=>{if(state.a[k]===undefined)state.a[k]=WEDZ[0];})")
+                pg.evaluate("state.a['sh.zal']='ustnie i pisemnie'")   # P34: porównanie przy wariancie jak w starej aplikacji
+                pg.evaluate("cfg.sum=false")   # P40: podsumowanie wyłączone – reszta tekstu co do znaku jak w starej aplikacji
                 a, b = pg.evaluate("genTxt()"), po.evaluate("genTxt()")
                 ka, kb = pg.evaluate("JSON.stringify(nfzPoints())"), po.evaluate("JSON.stringify(nfzPoints())")
                 chk(f'tekst opisu = stara aplikacja (wiek {age}, plan {plan}, {len(a)} znaków)', a == b and len(a) > 200, (len(a), len(b)))
