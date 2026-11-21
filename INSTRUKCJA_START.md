@@ -90,7 +90,7 @@ Uwaga do kroku 5: wizyty z kopii nie mają przypisanego gabinetu (stara aplikacj
 | 4 | Otwórz edycję tego samego gabinetu w **dwóch kartach**, zapisz w obu | druga karta: „zmieniono w międzyczasie na innym urządzeniu” |
 | 5 | **Ustawienia** → stawki NFZ | domyślnie 1,84 zł/pkt, 350 zł/h, 40% |
 | 6 | **Katalog NFZ** → tabela kodów | 23 pozycje ze źródłem (95/2026/DSOZ, 44/2025/DSOZ) |
-| 7 | **Sprawdź wycenę**: wybierz te same kody, ilości i wiek co w obecnej aplikacji (Opisy NFZ) | **ta sama liczba punktów i kwota** |
+| 7 | (etap historyczny – „Sprawdź wycenę” usunięta 21.11.2026) | – |
 | 8 | Dodaj **własny kod** (np. 2301, nazwa, punkty) | oznaczenie „niesprawdzane przez zasady NFZ”; kod z katalogu (np. ST01) odrzucony |
 
 ## Wcześniejsza faza 3 – konta i logowanie

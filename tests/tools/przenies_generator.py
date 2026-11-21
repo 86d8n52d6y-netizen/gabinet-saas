@@ -73,6 +73,8 @@ PATCHES_KAL = [
   ('K12 zmiany z innego urządzenia (scalone na koncie) od razu w otwartym Kalendarzu – bez nadpisywania pola, które właśnie edytujesz',
    'function setSync(s) { Store.sync = s; renderHeader(); }',
    'function setSync(s) { Store.sync = s; renderHeader(); }\nwindow.addEventListener(\'gabinet:grafik\', function (e) {\n  var d = e.detail || {};\n  Object.keys(d).forEach(function (k) { if (Store.isDirty(k)) return; if (d[k]) Store.docs[k] = d[k]; else delete Store.docs[k]; });\n  if (Store.docs.settings) normalizeSettings(Store.docs.settings);\n  invalidate(); renderWhenIdle();\n});'),
+  ('K13 nazwa modelu rozliczenia: „% po odjęciu kosztów własnych” (decyzja Patryka 21.11.2026; logika bez zmian)',
+   "pct_lab: '% po odjęciu labu/implantów'", "pct_lab: '% po odjęciu kosztów własnych'"),
 ]
 
 def przenies(plik, patches):

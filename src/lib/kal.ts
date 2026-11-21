@@ -176,3 +176,60 @@ export async function shiftsByDay(c: PoolClient, from: string, to: string) {
   }
   return out;
 }
+
+/* ---------- Zarobek lekarza i czas pracy z Kalendarza (Zarobki → „Wszystkie gabinety”, decyzja Patryka 21.11.2026: opcja A) ----------
+   Port 1:1 funkcji Kalendarza: num, r2, hoursOf, shiftIncome (generator/kalendarz.html) – te same zasady gabinetu
+   (% po odjęciu kosztów własnych, % od obrotu z udziałem w labie, % od obrotu, stawka godzinowa, dzienna, kwota ręczna, minimum dzienne).
+   Liczone tylko dyżury „odbyte” (status done), jak w Kalendarzu i w „Wpisz jako obrót”. Liczone na serwerze z aktualnych danych,
+   więc nie zależą od tego, czy Kalendarz był ostatnio otwarty. */
+const kNum = (v: unknown): number | null => {
+  if (v === null || v === undefined || v === '') return null;
+  if (typeof v === 'number') return Number.isFinite(v) ? v : null;
+  const x = parseFloat(String(v).replace(/\s| /g, '').replace(',', '.'));
+  return Number.isFinite(x) ? x : null;
+};
+const kR2 = (x: number) => Math.round((x + (x >= 0 ? 1 : -1) * 1e-9) * 100) / 100;
+const kMin = (t: unknown) => { const s = String(t ?? ''); if (!s.includes(':')) return null; const [h, m] = s.split(':').map(Number); return h * 60 + m; };
+export function kalHours(sh: Record<string, unknown>) {
+  const a = kMin(sh.start), b = kMin(sh.end);
+  if (a === null || b === null || !Number.isFinite(a) || !Number.isFinite(b)) return 0;
+  let d = b - a; if (d < 0) d += 1440;
+  return d / 60;
+}
+export function kalIncome(sh: Record<string, unknown>, c: Record<string, unknown> | undefined) {
+  if (!c || sh.status === 'cancelled') return 0;
+  const ov = kNum(sh.override);
+  if (ov !== null) return kR2(ov);
+  const t = kNum(sh.turnover) ?? 0, lab = kNum(sh.lab) ?? 0, pct = (kNum(c.pct) ?? 0) / 100;
+  let inc = 0;
+  switch (c.model) {
+    case 'pct_lab': inc = Math.max(0, t - lab) * pct; break;
+    case 'pct_share': inc = t * pct - lab * ((kNum(c.labShare) ?? 0) / 100); break;
+    case 'pct': inc = t * pct; break;
+    case 'hourly': inc = kalHours(sh) * (kNum(c.hourly) ?? 0); break;
+    case 'daily': inc = kNum(c.daily) ?? 0; break;
+    default: inc = kNum(sh.amount) ?? 0;
+  }
+  const min = kNum(c.minDaily) ?? 0;
+  if (min > 0) inc = Math.max(inc, min);
+  return kR2(inc);
+}
+
+/** Odbyte dyżury w okresie: gabinet → { zarobek lekarza (grosze), godziny pracy, liczba dyżurów }. */
+export async function kalPraca(c: PoolClient, from: string, to: string) {
+  const { docs } = await loadDocs(c);
+  const clinics = new Map(((docs.settings as { clinics?: Record<string, unknown>[] } | undefined)?.clinics ?? []).map(k => [String(k.id), k]));
+  const out = new Map<string, { gr: number; h: number; n: number }>();
+  for (const [doc, data] of Object.entries(docs)) {
+    if (!/^m[0-9]{4}-[0-9]{2}$/.test(doc) || doc.slice(1) < from.slice(0, 7) || doc.slice(1) > to.slice(0, 7)) continue;
+    for (const sh of (Array.isArray((data as { shifts?: unknown }).shifts) ? (data as { shifts: Record<string, unknown>[] }).shifts : [])) {
+      const d = String(sh?.date ?? '');
+      if (!sh || sh.status !== 'done' || d < from || d > to || typeof sh.clinicId !== 'string') continue;
+      const k = clinics.get(sh.clinicId);
+      const o = out.get(sh.clinicId) ?? { gr: 0, h: 0, n: 0 };
+      o.gr += Math.round(kalIncome(sh, k) * 100); o.h += kalHours(sh); o.n++;
+      out.set(sh.clinicId, o);
+    }
+  }
+  return out;
+}

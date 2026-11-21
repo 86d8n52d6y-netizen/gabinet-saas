@@ -1,6 +1,6 @@
 // Gabinety użytkownika (tabela app.clinics, RLS: tylko własne). Modele rozliczeń jak w Kalendarzu obecnej aplikacji.
 export const MODELS = {
-  pct_lab: '% po odjęciu labu/implantów', pct_share: '% od obrotu, lab dzielony', pct: '% od całego obrotu',
+  pct_lab: '% po odjęciu kosztów własnych', pct_share: '% od obrotu, lab dzielony', pct: '% od całego obrotu',
   hourly: 'Stawka godzinowa', daily: 'Stawka za dzień', manual: 'Kwota wpisywana ręcznie',
 } as const;
 export type Model = keyof typeof MODELS;

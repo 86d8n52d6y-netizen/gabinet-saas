@@ -56,6 +56,8 @@ r = as_('gabinet_app', A, "SELECT count(*) FROM app.sessions"); chk('A widzi tyl
 r = as_('gabinet_app', A, f"UPDATE app.subscriptions SET status='lifetime_active', plan='lifetime', lifetime_since=now() WHERE user_id='{A}'"); chk('A nie zmieni sobie licencji (np. na lifetime)', denied(r), r)
 r = as_('gabinet_app', A, "SELECT status FROM app.subscriptions"); chk('A widzi tylko swoją licencję', r == (True, 'trial_active'), r)
 r = as_('gabinet_app', A, "SELECT app.has_access()"); chk('trial aktywny → dostęp (sprawdzenie na serwerze)', r == (True, 't'), r)
+r = as_('gabinet_billing', None, f"UPDATE app.subscriptions SET trial_start=now()-interval '1 year', trial_end=now()-interval '9 months', updated_by='system' WHERE user_id='{A}'")
+r2 = as_('gabinet_app', A, "SELECT app.has_access()"); chk('0007: wersja testowa po dacie końca dalej ma dostęp (bez limitu czasu)', r[0] and r2 == (True, 't'), (r, r2))
 r = as_('gabinet_billing', None, f"UPDATE app.subscriptions SET status='expired', updated_by='system' WHERE user_id='{A}'")
 r2 = as_('gabinet_app', A, "SELECT app.has_access()"); chk('licencja wygasła (zmiana przez serwer) → brak dostępu', r[0] and r2 == (True, 'f'), (r, r2))
 r = as_('gabinet_auth', None, f"INSERT INTO app.subscriptions(user_id,plan,status,lifetime_since,updated_by) VALUES ('{A}','lifetime','lifetime_active',now(),'x')"); chk('moduł logowania nie przyzna licencji lifetime', denied(r), r)

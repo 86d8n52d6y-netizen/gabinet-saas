@@ -11,6 +11,7 @@ import { sendMail } from '../mail';
 import { breachCount, hashPassword, passwordProblem, verifyPassword, MAX_LEN } from '../password';
 import { clientInfo } from '../request';
 import { blocked, clear, hit } from '../ratelimit';
+import { mfaEnrollEnabled } from '../env';
 import { base32, base32Decode, newTotpSecret, otpauthUri, verifyTotp } from '../totp';
 import { clearCookie, createSession, getSession, requireUser, sessionTokenHash } from '../session';
 import { mails } from './emails';
@@ -284,8 +285,10 @@ export async function updateName(_: State, fd: FormData): Promise<State> {
 }
 
 // ---------------- weryfikacja dwuetapowa (TOTP) ----------------
+const MFA_OFF = 'Weryfikacja dwuetapowa jest wyłączona w tej wersji aplikacji.';
 export async function mfaStart(_: State, fd: FormData): Promise<State> {
   const s = await requireUser();
+  if (!mfaEnrollEnabled()) return { error: MFA_OFF };
   if (s.mfaOn) return { error: 'Weryfikacja dwuetapowa jest już włączona.' };
   if (!(await checkCurrentPassword(s.userId, str(fd, 'current', MAX_LEN + 1)))) return { error: 'Hasło jest nieprawidłowe.' };
   const secret = newTotpSecret();
@@ -297,6 +300,7 @@ export async function mfaStart(_: State, fd: FormData): Promise<State> {
 
 export async function mfaConfirm(_: State, fd: FormData): Promise<State> {
   const s = await requireUser();
+  if (!mfaEnrollEnabled()) return { error: MFA_OFF };
   const code = str(fd, 'code', 20);
   const { ip, device } = await clientInfo();
   const codes = await withRole('auth', async c => {

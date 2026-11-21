@@ -1,4 +1,4 @@
-# Etap 4a: gabinety, ustawienia rozliczeń NFZ, katalog NFZ, własne kody, wycena – w przeglądarce.
+# Etap 4a: gabinety, ustawienia rozliczeń NFZ, katalog NFZ – w przeglądarce (własne kody i wycena usunięte 21.11.2026).
 import json, os, random
 from pomoc import *
 t = T(); chk = t.chk
@@ -64,36 +64,12 @@ with sync_playwright() as p:
     chk('katalog: 23 pozycje', kat.count() == 23, kat.count())
     chk('źródła: 95/2026/DSOZ i 44/2025/DSOZ', '95/2026/DSOZ' in pg.content() and '44/2025/DSOZ' in pg.content())
     chk('ST30E: bez ×1,5, bez ×0,8, min. 5 min', 'bez ×1,5 · bez ×0,8 · min. 5 min' in kat.filter(has_text='ST30E').inner_text())
-    fill(pg, code='ST01', name='Moja ekstrakcja', points='10'); submit(pg, 'Dodaj własny kod')
-    chk('własny kod: oficjalny kod odrzucony', 'oficjalnym katalogu' in msg(pg), msg(pg))
-    fill(pg, code='x 99', name='Świadczenie testowe', points='12,5'); submit(pg, 'Dodaj własny kod')
-    chk('własny kod dodany (X99, 12,5 pkt)', 'Dodano własny kod X99' in msg(pg), msg(pg))
-    pg.goto(URL + '/katalog-nfz'); fill(pg, code='X99', name='Duplikat', points='1'); submit(pg, 'Dodaj własny kod')
-    chk('własny kod: duplikat odrzucony', 'Masz już własny kod X99' in msg(pg), msg(pg))
-    chk('oznaczenie „niesprawdzane przez zasady NFZ”', 'niesprawdzane przez zasady NFZ' in pg.content())
-    chk('B nie widzi własnych kodów A', (pb.goto(URL + '/katalog-nfz') or True) and 'X99' not in pb.content())
-
-    # ---- wycena = stara aplikacja (przypadki ze wzorca) – przez interfejs
+    # „Własne kody” i „Sprawdź wycenę” usunięte z interfejsu (21.11.2026); zgodność silnika wyceny ze starą aplikacją sprawdza vitest (3000 przypadków)
+    chk('brak sekcji „Własne kody” i „Sprawdź wycenę”', 'Własne kody' not in pg.content() and 'Sprawdź wycenę' not in pg.content() and pg.locator('[data-testid=wycena]').count() == 0)
+    chk('brak formularza dodawania kodu', pg.get_by_role('button', name='Dodaj własny kod').count() == 0)
+    sql("INSERT INTO app.procedures(owner_id, kind, nfz_code, nfz_points, name) SELECT id, 'nfz_custom', 'X99', 12.5, 'Stary własny kod' FROM app.profiles WHERE email='a.4a@example.com'")
     pg.goto(URL + '/katalog-nfz')
-    random.seed(7); probki = random.sample([k for k in FX['punkty'] if k['age'] is not None], 6)
-    for i, k in enumerate(probki):
-        pg.goto(URL + '/katalog-nfz')
-        pg.fill('[aria-label="Wiek pacjenta"]', str(k['age']))
-        if k['preg']: pg.check('text=ciąża / połóg')
-        for c in k['codes']:
-            pg.check(f'[aria-label="Kod {c}"]'); pg.fill(f'[aria-label="Ilość {c}"]', str(k['qty'][c]))
-        for a, n in k['an'].items():
-            if n: pg.fill(f'[aria-label="Liczba {a}"]', str(n))
-        shown = pg.locator('[data-testid=wycena]').inner_text() if pg.locator('[data-testid=wycena]').count() else ''
-        exp = (('%.2f' % k['old']['total']).rstrip('0').rstrip('.')).replace('.', ',') + ' pkt'
-        chk(f'wycena w interfejsie = stara aplikacja (przypadek {i+1}: {"+".join(k["codes"])}, wiek {k["age"]})', shown.startswith(exp), (shown, exp))
-    pg.goto(URL + '/katalog-nfz'); pg.check('[aria-label="Kod ST01"]'); pg.fill('[aria-label="Ilość X99"]', '2')
-    w = pg.locator('[data-testid=wycena]').inner_text().replace('\xa0', ' ')
-    # ST01 93 pkt + X99 2×12,5 = 118 pkt; stawka 1,84 zł (zmieniona w karcie 1) → 217,12 zł; udział 35% → 75,99 zł
-    chk('wycena z własnym kodem i stawkami użytkownika: 118 pkt · 217,12 zł · 35%: 75,99 zł', w == '118 pkt · 217,12 zł · lekarz 35%: 75,99 zł', w)
-    pg.locator('section[aria-labelledby=wl]').locator('tr', has_text='Świadczenie testowe').get_by_role('button', name='Usuń').click()
-    pg.locator('section[aria-labelledby=wl]').locator('tr', has_text='Świadczenie testowe').wait_for(state='detached', timeout=5000)
-    chk('usunięcie własnego kodu (miękkie – zostaje w bazie)', sql("SELECT deleted_at IS NOT NULL FROM app.procedures WHERE nfz_code='X99'") == 't')
+    chk('wcześniej zapisany własny kod: nie pokazywany, ale zostaje w bazie (bez usuwania danych)', 'X99' not in pg.content() and sql("SELECT count(*) FROM app.procedures WHERE nfz_code='X99' AND deleted_at IS NULL") == '1')
 
     # ---- licencja: bez dostępu moduły zablokowane
     sql("DELETE FROM app.subscriptions WHERE user_id=(SELECT id FROM app.profiles WHERE email='b.4a@example.com')")

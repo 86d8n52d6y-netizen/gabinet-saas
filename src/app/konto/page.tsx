@@ -11,7 +11,7 @@ export const dynamic = 'force-dynamic';
 
 const fmt = (d: Date | null) => d ? new Date(d).toLocaleDateString('pl-PL', { timeZone: 'Europe/Warsaw', day: 'numeric', month: 'long', year: 'numeric' }) : '';
 const STATUS: Record<string, string> = {
-  trial_active: 'Okres próbny', annual_active: 'Licencja roczna', lifetime_active: 'Licencja dożywotnia', expired: 'Licencja wygasła',
+  trial_active: 'Wersja testowa', annual_active: 'Licencja roczna', lifetime_active: 'Licencja dożywotnia', expired: 'Licencja wygasła',
   suspended: 'Zawieszona', payment_pending: 'Oczekuje na płatność', payment_failed: 'Płatność nieudana',
 };
 
@@ -48,10 +48,10 @@ export default async function Konto({ searchParams }: { searchParams: Promise<{ 
       <section className="card" aria-labelledby="lic">
         <h2 id="lic" style={{ marginTop: 0 }}>Dostęp</h2>
         {sub ? (<p><span className="badge">{STATUS[sub.status] ?? sub.status}</span>{' '}
-          {sub.status === 'trial_active' && <>do <strong>{fmt(sub.trial_end)}</strong></>}
+          {sub.status === 'trial_active' && <>bez limitu czasu</>}
           {sub.status === 'annual_active' && <>do <strong>{fmt(sub.period_end)}</strong></>}</p>)
           : <p>Brak aktywnej licencji – okres próbny dla tego adresu e-mail został już wykorzystany.</p>}
-        <p className="muted">{access ? 'Masz pełny dostęp.' : 'Wersja testowa: okres próbny trwa 3 miesiące. Zakup licencji zostanie dodany po zakończeniu testów.'}</p>
+        <p className="muted">{access ? 'Masz pełny dostęp.' : 'Brak dostępu do modułów pracy.'}</p>
       </section>
       <section className="card" aria-labelledby="dane">
         <h2 id="dane" style={{ marginTop: 0 }}>Twoje dane</h2>
@@ -64,7 +64,7 @@ export default async function Konto({ searchParams }: { searchParams: Promise<{ 
       {access && <section className="card"><h2 style={{ marginTop: 0 }}>Na początek</h2>
         <p>1. <Link href="/gabinety">Dodaj gabinety</Link>, w których pracujesz. 2. Sprawdź <Link href="/ustawienia">stawki rozliczeń</Link>. 3. Wpisuj dyżury w <a href="/kalendarz">Kalendarzu</a>, pracuj w <a href="/opisy-nfz">Opisach NFZ</a> i <a href="/opisy-prywatne">Opisach prywatnych</a> – zarobki zbierają się w <Link href="/zarobki">Zarobkach</Link>.</p>
         <p className="muted">Kalendarz dyżurów i przeniesienie danych z obecnej aplikacji – w kolejnym etapie.</p></section>}
-      <p><Link href="/konto/bezpieczenstwo">Bezpieczeństwo: hasło, weryfikacja dwuetapowa, urządzenia →</Link></p>
+      <p><Link href="/konto/bezpieczenstwo">Bezpieczeństwo: hasło, urządzenia, historia logowań →</Link></p>
     </main>
   );
 }

@@ -36,7 +36,7 @@ Skrypt:
 ## 3. Pierwsze kroki
 
 1. **Załóż konto** (min. 12 znaków hasła) → potwierdź e-mail w poczcie testowej (`localhost:8025`).
-2. Zalecane: **Konto → Bezpieczeństwo → włącz 2FA** (aplikacja Authenticator, zapisz kody zapasowe).
+2. (Weryfikacja dwuetapowa 2FA jest w tej wersji wyłączona.)
 3. **Gabinety** – dodaj gabinety (nazwa, kolor, model rozliczenia, %). Te same gabinety są w Kalendarzu, Opisach i Zarobkach.
 4. **Ustawienia** – stawki NFZ (1,84 zł/pkt, 350 zł/h przeglądów, udział 40/35%) i podstawa zarobku z punktów.
 5. **Masz dane w starej aplikacji?** W starej: strona główna → **Kopia całości** → pobierz plik. W nowej: **Konto → „Przenieś dane ze starej aplikacji”** → wskaż plik, wpisz hasło kopii, sprawdź dopasowanie gabinetów → **Przenieś dane**. Ponowne przeniesienie nie dubluje wpisów.
@@ -48,9 +48,9 @@ Skrypt:
 | **Kalendarz** | Dyżury, dni pracy, kursy, rozliczenia gabinetów, ZUS i podatek, porównanie form opodatkowania | Jak w obecnej aplikacji. Przy edycji dyżuru – podpowiedź „Wpisz jako obrót” z opisów tego dnia. Notatka dyżuru: **bez danych pacjentów**. |
 | **Opisy NFZ** | Generator opisów, kody, punkty, przeglądy, historia, statystyki | Gabinet wybiera się sam według dyżuru w Kalendarzu. |
 | **Opisy prywatne** | Procedury, cennik z % lekarza, własne szablony, zestawy, historia | Wynagrodzenie liczone automatycznie (np. 500 zł × 40% = 200 zł). |
-| **Zarobki** | Wszystkie gabinety: dzień/tydzień/miesiąc/rok/własny zakres, wykres, średnie, dni tygodnia, porównanie z poprzednim okresem, filtr NFZ/prywatne/kategoria, **CSV** | Kolumna „Dyżury wg Kalendarza” – do porównania, nie wlicza się do „Razem”. |
-| **Katalog NFZ** | Kody z punktami i źródłem (zarządzenie DSOZ), własne kody, kalkulator wyceny | Własne kody oznaczone „niesprawdzane przez zasady NFZ”. |
-| **Konto** | Imię, hasło, 2FA, urządzenia (wylogowanie zdalne), dziennik bezpieczeństwa, kopie danych | Okres próbny 3 miesiące (wersja testowa – bez płatności). |
+| **Zarobki** | Kafelki: „Razem z wizyt”, „Razem punktów”, „Zarobek lekarza (%)”, poprzedni okres; tabela „Wszystkie gabinety”: liczba wizyt, zarobek lekarza, zarobek na godzinę; przełącznik brutto/netto; wykres, średnie, dni tygodnia, filtr, **CSV** | Zarobek lekarza i godziny – z odbytych dyżurów w Kalendarzu wg zasad gabinetu (wpisz obrót przy dyżurze). Netto – po skonfigurowaniu Twoich zasad rozliczenia. |
+| **Katalog NFZ** | Kody z punktami i źródłem (zarządzenie DSOZ) | Tylko do podglądu. |
+| **Konto** | Imię, hasło, urządzenia (wylogowanie zdalne), dziennik bezpieczeństwa, kopie danych | Wersja testowa – dostęp bez limitu czasu. |
 
 Zapis jest automatyczny. Status w prawym górnym rogu modułu: „zsynchronizowana” = zapisane na koncie; „brak połączenia – zapisano na tym urządzeniu” = wyśle się samo.
 
@@ -60,7 +60,7 @@ Zapis jest automatyczny. Status w prawym górnym rogu modułu: „zsynchronizowa
 |---|---|---|
 | Konto, gabinety, ustawienia, Kalendarz, cenniki, szablony, zestawy, historia wizyt **bez danych pacjentów** (data, gabinet, kody, procedury, kwoty) | Baza na Twoim Macu (Docker, wolumen `gabinet_dane_bazy`) | Automatyczna kopia codziennie do `~/Gabinet/kopie` (30 ostatnich) + kopia przed każdą aktualizacją |
 | **Treść opisów i inicjały pacjentów** | Tylko w przeglądarce, w której je zapisano (zaszyfrowane kluczem tego urządzenia) | **Twoja kopia:** Konto → „Kopia danych z tego urządzenia” → plik `.json` z hasłem |
-| Klucze aplikacji (`.env`) | `~/Gabinet/.env` | Nie usuwaj i nie zmieniaj. Zrób kopię (np. na pendrive). Bez nich nie zadziała 2FA. |
+| Klucze aplikacji (`.env`) | `~/Gabinet/.env` | Nie usuwaj i nie zmieniaj. Zrób kopię (np. na pendrive). Bez nich przestaną działać m.in. kody zabezpieczeń. |
 
 **Czego nie robić:** nie czyść danych witryny `localhost` w przeglądarce (usuwa treść opisów z tego urządzenia), nie używaj „Reset to factory defaults” / „Clean / Purge data” w Docker Desktop (usuwa bazę), nie usuwaj folderu `~/Gabinet`.
 
@@ -96,7 +96,7 @@ Napisz w czacie, najlepiej w tej formie:
 | Element | Stan |
 |---|---|
 | Dostęp z telefonu / innego komputera | Niedostępny – aplikacja działa tylko na tym Macu (hosting dopiero po Twojej zgodzie, etap 5) |
-| Płatności, licencje, panel administratora | Odłożone do czasu po testach (okres próbny działa) |
+| Płatności, licencje, panel administratora | Odłożone (dostęp bez limitu czasu) |
 | E-maile | Tylko do poczty testowej `localhost:8025` |
 | Treść opisów na innych urządzeniach | Tylko przez plik kopii (decyzja: treść nie trafia do chmury) |
 

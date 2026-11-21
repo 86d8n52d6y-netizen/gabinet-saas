@@ -100,7 +100,7 @@ with sync_playwright() as p:
     login(pg, 'nie.ma@example.com', PA); chk('nieistniejące konto: ten sam komunikat', 'Nieprawidłowy e-mail lub hasło' in msg(pg))
     login(pg, A, PA); chk('logowanie → /konto', pg.url.endswith('/konto'), pg.url)
     chk('baner „potwierdź adres e-mail”', 'Potwierdź adres e-mail' in pg.content())
-    chk('status: okres próbny z datą', 'Okres próbny' in pg.content() and 'Masz pełny dostęp' in pg.content())
+    chk('status: wersja testowa bez limitu czasu (0007), pełny dostęp', 'Wersja testowa' in pg.content() and 'bez limitu czasu' in pg.content() and 'Masz pełny dostęp' in pg.content())
     ck = [c for c in ctx.cookies() if c['name'].startswith('gabinet_sesja')]
     chk('ciasteczko sesji: HttpOnly, SameSite=Lax', len(ck) == 1 and ck[0]['httpOnly'] and ck[0]['sameSite'] == 'Lax', ck)
     chk('w bazie tylko skrót tokenu sesji', ck and sql("SELECT count(*) FROM app.sessions WHERE revoked_at IS NULL") == '1' and ck[0]['value'] not in sql("SELECT encode(token_hash,'hex') FROM app.sessions"))

@@ -3,11 +3,17 @@ import { requireAccess } from '@/lib/access';
 import { withUser } from '@/lib/db';
 import { fmtC, fmtP } from '@/lib/nfz/engine';
 import { RANGES, rangeOf, report, type Report } from '@/lib/zarobki';
+import { loadNetto, trybKwot } from '@/lib/netto';
 export const metadata = { title: 'Zarobki – Gabinet' };
 export const dynamic = 'force-dynamic';
 
-type SP = { o?: string; od?: string; do?: string; g?: string; k?: string };
+type SP = { o?: string; od?: string; do?: string; g?: string; k?: string; kw?: string };
 const z = (c: number) => (c ? fmtC(c) : '—');
+const fmtH = (h: number) => { const m = Math.round(h * 60); return `${Math.floor(m / 60)} h${m % 60 ? ` ${m % 60} min` : ''}`; };
+// zarobek na godzinę = zarobek ÷ godziny pracy (dla podsumowania: łączny zarobek ÷ łączne godziny, nie średnia z gabinetów)
+const perHour = (gr: number, h: number) => h > 0
+  ? <>{fmtC(Math.round(gr / h))}<span className="hint" style={{ display: 'block' }}>{fmtH(h)}</span></>
+  : <span className="muted" data-testid="brak-h">brak danych o czasie pracy</span>;
 const dd = (s: string) => s.split('-').reverse().join('.');
 const DOW = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela'];
 const MON = ['sty', 'lut', 'mar', 'kwi', 'maj', 'cze', 'lip', 'sie', 'wrz', 'paź', 'lis', 'gru'];
@@ -38,10 +44,12 @@ export default async function Zarobki({ searchParams }: { searchParams: Promise<
   const s = await requireAccess();
   const sp = await searchParams;
   const range = rangeOf(sp.o ?? 'month', sp.od, sp.do);
-  const { r, clinics } = await withUser(s.userId, async c => {
+  const tryb = trybKwot(sp.kw);
+  const { r, clinics, netto } = await withUser(s.userId, async c => {
+    const netto = await loadNetto(c);
     const clinics = (await c.query(`SELECT id, name FROM app.clinics WHERE deleted_at IS NULL ORDER BY sort, created_at`)).rows as { id: string; name: string }[];
     const g = sp.g && clinics.some(k => k.id === sp.g) ? sp.g : null;
-    return { r: await report(c, range, g, (sp.k ?? '').slice(0, 130)), clinics, g };
+    return { r: await report(c, range, g, (sp.k ?? '').slice(0, 130)), clinics, g, netto };
   });
   const T = r.total;
   return (
@@ -50,7 +58,13 @@ export default async function Zarobki({ searchParams }: { searchParams: Promise<
       <nav className="tabs-row" aria-label="Okres">
         {Object.entries(RANGES).map(([k, v]) => <Link key={k} href={qs(sp, { o: k, od: '', do: '' })} className={'chip' + (range.key === k ? ' on' : '')} aria-current={range.key === k ? 'page' : undefined}>{v}</Link>)}
       </nav>
+      <nav className="tabs-row" aria-label="Kwoty brutto lub netto">
+        <Link href={qs(sp, { kw: '' })} className={'chip' + (tryb === 'brutto' ? ' on' : '')} aria-current={tryb === 'brutto' ? 'true' : undefined}>Brutto</Link>
+        <Link href={qs(sp, { kw: 'netto' })} className={'chip' + (tryb === 'netto' ? ' on' : '')} aria-current={tryb === 'netto' ? 'true' : undefined}>Netto{netto ? '' : ' (wymaga konfiguracji)'}</Link>
+      </nav>
+      {tryb === 'netto' && !netto && <p className="msg" role="status" data-testid="netto-info">Kwoty <b>netto</b> wymagają konfiguracji Twoich zasad rozliczenia (składki, podatek, inne potrącenia) – zostaną dodane, gdy je przekażesz. Do tego czasu poniżej są kwoty <b>brutto</b>.</p>}
       <form className="row filters" method="get">
+        {tryb === 'netto' && <input type="hidden" name="kw" value="netto" />}
         <input type="hidden" name="o" value="own" />
         <label>od <input type="date" name="od" defaultValue={range.from} required /></label>
         <label>do <input type="date" name="do" defaultValue={range.to} required /></label>
@@ -64,26 +78,26 @@ export default async function Zarobki({ searchParams }: { searchParams: Promise<
 
       {r.kind && <p className="msg" role="status">Filtr: {r.kind === 'nfz' ? 'tylko NFZ' : r.kind === 'pryw' ? 'tylko prywatne' : 'prywatne – kategoria „' + r.kind.slice(4) + '”'} · <Link href={qs(sp, { k: '' })}>pokaż wszystko</Link></p>}
       <section className="card tiles" aria-label="Podsumowanie">
-        <div><span className="muted">Razem z wizyt</span><b data-testid="razem">{fmtC(T.sum)}</b></div>
-        <div><span className="muted">Zarobek NFZ</span><b>{fmtC(T.e1)}</b><span className="hint">{T.nv} wizyt · {fmtP(r.nfz.pts)} pkt</span></div>
-        <div><span className="muted">Zarobek prywatny</span><b>{fmtC(T.e2)}</b><span className="hint">{T.pv} wizyt</span></div>
+        <div><span className="muted">Razem z wizyt</span><b data-testid="razem">{fmtC(T.sum)}</b><span className="hint">{T.nv + T.pv} wizyt</span></div>
+        <div><span className="muted">Razem punktów</span><b data-testid="punkty">{fmtP(r.nfz.pts)} pkt</b><span className="hint">punkty NFZ z opisów</span></div>
+        <div><span className="muted">Zarobek lekarza (%)</span><b data-testid="zarobek">{r.kind ? '—' : fmtC(T.dr)}</b>
+          <span className="hint">{r.kind ? 'niedostępny przy filtrze rodzaju' : 'wg zasad rozliczenia gabinetów'}</span></div>
         <div><span className="muted">Poprzedni okres ({r.prev.label})</span><b data-testid="poprz">{fmtC(r.prev.sum)}</b>
           <span className="hint" data-testid="zmiana">{r.prev.sum ? `${T.sum >= r.prev.sum ? '+' : '−'}${fmtC(Math.abs(T.sum - r.prev.sum))} (${T.sum >= r.prev.sum ? '+' : '−'}${Math.abs(Math.round((T.sum - r.prev.sum) / r.prev.sum * 1000) / 10).toLocaleString('pl-PL')}%)` : 'brak zarobków w poprzednim okresie'} · {dd(r.prev.from)} – {dd(r.prev.to)}</span></div>
-        <div><span className="muted">Dyżury wg Kalendarza</span><b data-testid="kal">{fmtC(T.kal)}</b><span className="hint">do porównania, poza „Razem”</span></div>
       </section>
 
       <section className="card" aria-labelledby="gab">
         <h2 id="gab" style={{ marginTop: 0 }}>Wszystkie gabinety</h2>
         {r.rows.length ? (
           <div style={{ overflowX: 'auto' }}><table className="num" data-testid="tabela">
-            <thead><tr><th>Gabinet</th><th>Wizyty NFZ</th><th>Zarobek NFZ</th><th>Wizyty prywatne</th><th>Zarobek prywatny</th><th>Razem z wizyt</th><th>Dyżury wg Kalendarza</th></tr></thead>
+            <thead><tr><th>Gabinet</th><th>Liczba wizyt</th><th>Zarobek lekarza</th><th>Zarobek na godzinę</th></tr></thead>
             <tbody>{r.rows.map(x => (
               <tr key={x.id ?? '-'}><td>{x.color && <span className="dot" style={{ ['--cc' as string]: `var(--c${x.color})` }} />} {x.name}</td>
-                <td>{x.nv || '—'}</td><td>{z(x.e1)}</td><td>{x.pv || '—'}</td><td>{z(x.e2)}</td><td><b>{z(x.sum)}</b></td><td>{z(x.kal)}</td></tr>))}
+                <td>{x.vis || '—'}</td><td><b>{r.kind ? '—' : z(x.dr)}</b></td><td>{r.kind ? '—' : perHour(x.dr, x.h)}</td></tr>))}
             </tbody>
-            <tfoot><tr><td>Razem</td><td>{T.nv || '—'}</td><td>{z(T.e1)}</td><td>{T.pv || '—'}</td><td>{z(T.e2)}</td><td>{z(T.sum)}</td><td>{z(T.kal)}</td></tr></tfoot>
+            <tfoot><tr><td>Razem</td><td>{T.vis || '—'}</td><td>{r.kind ? '—' : z(T.dr)}</td><td>{r.kind ? '—' : perHour(T.dr, T.h)}</td></tr></tfoot>
           </table></div>) : <p className="muted">Brak gabinetów i wizyt w tym okresie.</p>}
-        <p className="hint">Zarobek NFZ: {r.basis === 'share' ? 'udział lekarza w wartości punktów' : 'pełna wartość punktów'} + przeglądy + kwoty dodatkowe (zmienisz w <Link href="/ustawienia">Ustawieniach</Link>). Zarobek prywatny: wynagrodzenie lekarza z cennika. „Dyżury wg Kalendarza” to przychód z rozliczeń gabinetów (odbyte dyżury w <a href="/kalendarz">Kalendarzu</a>) – pokazany do porównania i <b>nie</b> doliczany do „Razem”, bo dotyczy tych samych wizyt.</p>
+        <p className="hint">Liczba wizyt: wszystkie zapisane (odbyte) wizyty z Opisów NFZ i prywatnych. Zarobek lekarza: kwota należna z danego gabinetu wg jego zasad rozliczenia (<Link href="/gabinety">Gabinety</Link>), z odbytych dyżurów w <a href="/kalendarz">Kalendarzu</a> – obrót wpisujesz przy dyżurze (np. „Wpisz jako obrót”). Zarobek na godzinę: zarobek lekarza ÷ godziny odbytych dyżurów; w podsumowaniu – łączny zarobek ÷ łączne godziny.</p>
       </section>
 
       <section className="card" aria-labelledby="wyk">

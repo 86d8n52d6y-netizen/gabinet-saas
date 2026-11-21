@@ -1,5 +1,5 @@
 'use server';
-// Akcje modułów pracy (etap 4a): ustawienia rozliczeń NFZ, gabinety, własne kody NFZ.
+// Akcje modułów pracy (etap 4a): ustawienia rozliczeń NFZ, gabinety. (Własne kody NFZ usunięte z interfejsu 21.11.2026 – dane zostają w bazie.)
 // Każdy zapis: requireAccess() (sesja + licencja), rola użytkownika z RLS (withUser) i kontrola wersji –
 // gdy rekord zmieniono w międzyczasie na innym urządzeniu, zapis jest odrzucany z komunikatem (bez cichego nadpisania).
 import { revalidatePath } from 'next/cache';
@@ -81,45 +81,4 @@ export async function toggleClinic(fd: FormData): Promise<void> {
   const id = uuid(str(fd, 'id', 40));
   if (id) await withUser(s.userId, c => c.query('UPDATE app.clinics SET active = NOT active WHERE id = $1 AND deleted_at IS NULL', [id]));
   revalidatePath('/gabinety');
-}
-
-// ---------------- własne kody NFZ (niesprawdzane przez zasady NFZ) ----------------
-export async function saveCustomNfz(_: State, fd: FormData): Promise<State> {
-  const s = await requireAccess();
-  const id = uuid(str(fd, 'id', 40));
-  const code = str(fd, 'code', 20).trim().toUpperCase().replace(/\s/g, '');
-  const name = str(fd, 'name', 150).trim().replace(/[\u0000-\u001f<>]/g, '');
-  const pts = parseNum(str(fd, 'points', 20));
-  if (!/^[A-Z0-9.]{2,12}$/.test(code)) return { error: 'Kod: 2–12 znaków (litery, cyfry, kropka), np. 2301.' };
-  if (!name || name.length > 120) return { error: 'Podaj nazwę świadczenia (do 120 znaków).' };
-  if (!(pts >= 0 && pts < 100000) || Math.round(pts * 100) !== pts * 100) return { error: 'Punkty: liczba ≥ 0, najwyżej 2 miejsca po przecinku.' };
-  const r = await withUser(s.userId, async c => {
-    if ((await c.query('SELECT 1 FROM app.nfz_catalog WHERE code = $1', [code])).rowCount)
-      return 'official';
-    if ((await c.query(`SELECT 1 FROM app.procedures WHERE kind='nfz_custom' AND nfz_code=$1 AND deleted_at IS NULL AND id IS DISTINCT FROM $2::uuid`, [code, id || null])).rowCount)
-      return 'dup';
-    if (!id) {
-      const n = (await c.query(`SELECT count(*)::int AS n FROM app.procedures WHERE kind='nfz_custom' AND deleted_at IS NULL`)).rows[0].n;
-      if (n >= 100) return 'limit';
-      await c.query(`INSERT INTO app.procedures(owner_id, kind, nfz_code, nfz_points, name) VALUES ($1,'nfz_custom',$2,$3,$4)`, [s.userId, code, pts, name]);
-      return 'ok';
-    }
-    const u = await c.query(`UPDATE app.procedures SET nfz_code=$2, nfz_points=$3, name=$4 WHERE id=$1 AND kind='nfz_custom' AND version=$5 AND deleted_at IS NULL`,
-      [id, code, pts, name, ver(fd)]);
-    return u.rowCount ? 'ok' : 'conflict';
-  });
-  if (r === 'official') return { error: `Kod ${code} jest w oficjalnym katalogu NFZ – użyj go z katalogu (z zasadami NFZ).` };
-  if (r === 'dup') return { error: `Masz już własny kod ${code}.` };
-  if (r === 'limit') return { error: 'Można mieć najwyżej 100 własnych kodów.' };
-  if (r === 'conflict') return { error: CONFLICT };
-  revalidatePath('/katalog-nfz');
-  return { ok: id ? 'Zapisano zmiany.' : `Dodano własny kod ${code}.` };
-}
-
-/** Usunięcie własnego kodu – miękkie (deleted_at): zapisane wcześniej wizyty zachowują swoje dane. */
-export async function deleteCustomNfz(fd: FormData): Promise<void> {
-  const s = await requireAccess();
-  const id = uuid(str(fd, 'id', 40));
-  if (id) await withUser(s.userId, c => c.query(`UPDATE app.procedures SET deleted_at = now() WHERE id = $1 AND kind = 'nfz_custom' AND deleted_at IS NULL`, [id]));
-  revalidatePath('/katalog-nfz');
 }

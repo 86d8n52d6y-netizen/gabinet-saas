@@ -2,6 +2,7 @@ import ActionForm from '@/components/ActionForm';
 import MfaSetup from '@/components/MfaSetup';
 import PasswordFields from '@/components/PasswordFields';
 import { changePassword, logoutAll, mfaDisable, revokeSession } from '@/lib/auth/actions';
+import { mfaEnrollEnabled } from '@/lib/env';
 import { withUser } from '@/lib/db';
 import { requireUser } from '@/lib/session';
 export const metadata = { title: 'Bezpieczeństwo – Gabinet' };
@@ -43,7 +44,8 @@ export default async function Bezpieczenstwo({ searchParams }: { searchParams: P
         <form action={logoutAll}><div className="row"><button className="danger" type="submit">Wyloguj ze wszystkich urządzeń</button></div></form>
       </section>
 
-      <section className="card" aria-labelledby="mfa">
+      {/* 2FA: włączanie wyłączone (decyzja 21.11.2026, env MFA_ENROLL); konto, które już ma 2FA, widzi tylko jego wyłączenie */}
+      {(s.mfaOn || mfaEnrollEnabled()) && <section className="card" aria-labelledby="mfa">
         <h2 id="mfa" style={{ marginTop: 0 }}>Weryfikacja dwuetapowa {s.mfaOn && <span className="badge">włączona</span>}</h2>
         {s.mfaOn ? (
           <ActionForm action={mfaDisable} submit="Wyłącz weryfikację dwuetapową" pending="Wyłączam…" danger>
@@ -54,7 +56,7 @@ export default async function Bezpieczenstwo({ searchParams }: { searchParams: P
             <input id="d-code" name="code" type="text" inputMode="numeric" autoComplete="one-time-code" required maxLength={20} />
           </ActionForm>
         ) : <MfaSetup />}
-      </section>
+      </section>}
 
       <section className="card" aria-labelledby="pwd">
         <h2 id="pwd" style={{ marginTop: 0 }}>Zmiana hasła</h2>

@@ -65,11 +65,25 @@ with sync_playwright() as p:
     got = wait_sql(f"SELECT data->'{TODAY}'->'{A}'->>'inc' FROM app.calendar_docs WHERE doc='sumy'", str(inc))
     chk('przychód z dyżurów zapisany dla Zarobków (sumy)', got == str(inc), got)
 
-    # Zarobki: kolumna „Dyżury wg Kalendarza” (poza „Razem”)
+    # Zarobki (21.11.2026): „Zarobek lekarza” wg zasad gabinetu z odbytych dyżurów, zarobek na godzinę, podsumowanie ważone godzinami
+    K(pg, f"""M('{MK}',true).shifts.push({{id:'t0',date:'{TODAY}',clinicId:'{B}',start:'08:00',end:'14:00',status:'done',turnover:3000,lab:0}});saveMonth('{MK}');render();""")
+    pg.wait_for_timeout(1500); synced(pg)
+    incB = K(pg, f"return Math.round(E.shiftIncome(M('{MK}').shifts.find(s=>s.id==='t0'),clinic('{B}'))*100)")
     pg.goto(URL + '/zarobki?o=today')
-    chk('Zarobki: kafelek „Dyżury wg Kalendarza” 1 200,00 zł', '1200,00' in pg.inner_text('[data-testid=kal]').replace('\xa0', '').replace(' ', ''), pg.inner_text('[data-testid=kal]'))
-    chk('Zarobki: kolumna w tabeli gabinetów', 'Dyżury wg Kalendarza' in pg.inner_text('[data-testid=tabela]'))
-    chk('Zarobki: „Razem z wizyt” bez dyżurów (0 zł)', pg.inner_text('[data-testid=razem]').replace('\xa0', ' ').startswith('0,00'), pg.inner_text('[data-testid=razem]'))
+    rows = {tr.locator('td').nth(0).inner_text().strip(): [x.inner_text().replace('\xa0', ' ').strip() for x in tr.locator('td').all()] for tr in pg.locator('[data-testid=tabela] tbody tr').all()}
+    head = pg.locator('[data-testid=tabela] thead').inner_text()
+    chk('Tabela: kolumny Gabinet / Liczba wizyt / Zarobek lekarza / Zarobek na godzinę (bez NFZ/prywatne, „Razem z wizyt”, „Dyżury wg Kalendarza”)',
+        all(x in head for x in ['Liczba wizyt', 'Zarobek lekarza', 'Zarobek na godzinę']) and not any(x in head for x in ['NFZ', 'prywatn', 'Razem z wizyt', 'Dyżury']), head)
+    mz = lambda t: int(round(float(t.split('zł')[0].replace(' ', '').replace(',', '.')) * 100))
+    chk('Gabinet A: zarobek lekarza = Kalendarz (30% z 5000−1000 = 1200 zł), na godzinę 1200/7 h = 171,43 zł', mz(rows['Gabinet A'][2]) == inc == 120000 and mz(rows['Gabinet A'][3]) == round(120000 / 7) and '7 h' in rows['Gabinet A'][3], rows['Gabinet A'])
+    chk('Gabinet B: zarobek = Kalendarz (30% × 3000 = 900 zł), 6 h → 150 zł/h', mz(rows['Gabinet B'][2]) == incB == 90000 and mz(rows['Gabinet B'][3]) == 15000, rows['Gabinet B'])
+    foot = [x.inner_text().replace('\xa0', ' ').strip() for x in pg.locator('[data-testid=tabela] tfoot td').all()]
+    chk('Podsumowanie: 2100 zł, średnia = łączny zarobek ÷ łączne godziny (2100/13 h = 161,54 zł, nie średnia 160,71)', mz(foot[2]) == 210000 and mz(foot[3]) == round(210000 / 13), foot)
+    chk('Kafelek „Zarobek lekarza (%)” = suma gabinetów (2100 zł)', mz(pg.inner_text('[data-testid=zarobek]').replace('\xa0', ' ')) == 210000, pg.inner_text('[data-testid=zarobek]'))
+    chk('Kafelek „Razem z wizyt” bez zmian (0 zł – brak opisów)', pg.inner_text('[data-testid=razem]').replace('\xa0', ' ').startswith('0,00'), pg.inner_text('[data-testid=razem]'))
+    chk('serwer = Kalendarz: suma dzienna zapisana przez Kalendarz (sumy) = zarobek w tabeli', sql(f"SELECT data->'{TODAY}'->'{A}'->>'inc' FROM app.calendar_docs WHERE doc='sumy'") == str(inc))
+    pg.goto(URL + '/zarobki?o=prev')
+    chk('Gabinet bez dyżurów w okresie: „brak danych o czasie pracy” zamiast wyniku', pg.locator('[data-testid=brak-h]').count() >= 1)
     pg.goto(URL + '/konto')
     chk('kafelek Kalendarza na koncie: „Dziś: A 8:00–15:00”', 'Dziś:' in pg.inner_text('.g-tiles') and '8:00–15:00' in pg.inner_text('.g-tiles'), pg.inner_text('.g-tiles'))
 
@@ -169,7 +183,7 @@ with sync_playwright() as p:
         same = []
         for tb in ['sum', 'inv', 'dl', 'cmp']:
             for x in (pg, po): K(x, f"UI.tab='{tb}';UI.edit=null;render();"); x.wait_for_timeout(150)
-            a, b = pg.inner_text('#main'), po.inner_text('#main')
+            a, b = pg.inner_text('#main'), po.inner_text('#main').replace('% po odjęciu labu/implantów', '% po odjęciu kosztów własnych')   # K13: nowa nazwa modelu
             chk(f'zakładka „{tb}”: tekst = stara aplikacja ({len(a)} znaków)', a == b and len(a) > 100, (len(a), len(b), [l for l in a.split('\n') if l not in b.split('\n')][:3]))
         oc.close()
         if srv: srv.terminate()

@@ -17,3 +17,6 @@ export const appUrl = () => (process.env.APP_URL ?? 'http://localhost:3000').rep
 export const cookieSecure = () => appUrl().startsWith('https://');
 export const breachCheckEnabled = () => process.env.PASSWORD_BREACH_CHECK !== '0';
 export const statusDetails = () => process.env.STATUS_DETAILS === '1';
+/** Włączanie 2FA – wyłączone (decyzja Patryka 21.11.2026). Konta, które już mają 2FA, dalej logują się z kodem i mogą je wyłączyć.
+ *  MFA_ENROLL=1 przywraca możliwość włączania (np. w testach albo po zmianie decyzji). */
+export const mfaEnrollEnabled = () => process.env.MFA_ENROLL === '1';

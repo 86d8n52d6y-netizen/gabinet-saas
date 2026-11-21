@@ -28,8 +28,10 @@ def table(pg):
     out = {}
     for tr in pg.locator('[data-testid=tabela] tbody tr').all():
         c = [x.inner_text().strip() for x in tr.locator('td').all()]
-        out[c[0]] = {'nv': int(c[1]) if c[1] != '—' else 0, 'e1': money(c[2]), 'pv': int(c[3]) if c[3] != '—' else 0, 'e2': money(c[4]), 'sum': money(c[5])}
+        out[c[0]] = int(c[1]) if c[1] != '—' else 0      # tabela 21.11.2026: Gabinet | Liczba wizyt | Zarobek lekarza | Zarobek na godzinę
     return out
+def razem(pg, url):
+    pg.goto(URL + url); return money(pg.inner_text('[data-testid=razem]'))
 
 today = datetime.date.today()
 prev = (today.replace(day=1) - datetime.timedelta(days=1)).replace(day=10).isoformat()
@@ -73,17 +75,20 @@ with sync_playwright() as p:
         for r in rows.values(): r['sum'] = r['e1'] + r['e2']
         return rows
     names = {A: 'Gabinet A', B: 'Gabinet B', '': 'Bez gabinetu'}
+    vis = lambda rows: {names[k]: v['nv'] + v['pv'] for k, v in rows.items()}
     pg.goto(URL + '/zarobki?o=today'); got = table(pg)
-    e = {names[k]: v for k, v in exp('full', T0, T0).items()}
-    chk('Dziś: tabela gabinetów = wyliczenia modułów (wizyty i grosze)', got == e, (got, e))
-    tot = sum(v['sum'] for v in e.values())
-    chk('Dziś: „Razem z wizyt” = suma gabinetów', money(pg.inner_text('[data-testid=razem]')) == tot)
+    E = exp('full', T0, T0); e = vis(E)
+    chk('Dziś: liczba wizyt w gabinetach = wizyty z modułów (NFZ + prywatne razem)', got == e, (got, e))
+    tot = sum(v['sum'] for v in E.values())
+    chk('Dziś: „Razem z wizyt” = suma wyliczeń modułów (grosze)', razem(pg, '/zarobki?o=today') == tot)
+    for k in (A, B):
+        chk(f'Dziś, filtr {names[k]}: „Razem z wizyt” = wyliczenia modułów dla gabinetu (grosze)', razem(pg, f'/zarobki?o=today&g={k}') == E[k]['sum'], (razem(pg, f'/zarobki?o=today&g={k}'), E[k]['sum']))
     pg.goto(URL + '/zarobki?o=prev'); got = table(pg)
-    chk('Poprzedni miesiąc: tylko wizyta NFZ z tamtego okresu', got.get('Gabinet A', {}).get('nv') == 1 and got['Gabinet A']['pv'] == 0 and all(v['nv'] == 0 for k, v in got.items() if k != 'Gabinet A'), got)
+    chk('Poprzedni miesiąc: tylko wizyta NFZ z tamtego okresu', got.get('Gabinet A') == 1 and all(v == 0 for k, v in got.items() if k != 'Gabinet A'), got)
     pg.goto(URL + f'/zarobki?o=own&od={prev}&do={T0}'); got = table(pg)
-    chk('Własny zakres (poprzedni + bieżący): A ma 3 wizyty NFZ', got['Gabinet A']['nv'] == 3, got)
+    chk('Własny zakres (poprzedni + bieżący): wizyty = moduły', got == vis(exp('full', prev, T0)), (got, vis(exp('full', prev, T0))))
     pg.goto(URL + f'/zarobki?o=today&g={B}'); got = table(pg)
-    chk('Filtr gabinetu: tylko Gabinet B', list(got) == ['Gabinet B'] and got['Gabinet B']['e2'] == 12250, got)
+    chk('Filtr gabinetu: tylko Gabinet B', list(got) == ['Gabinet B'] and got['Gabinet B'] == e['Gabinet B'], got)
     pg.goto(URL + '/zarobki?o=year'); chk('Rok: wykres miesięczny (12 słupków-miesięcy)', 'Miesiąc po miesiącu' in pg.content() and pg.locator('svg[role=img] text').count() == 12)
     pg.goto(URL + '/zarobki?o=month'); chk('Miesiąc: wykres dzienny', 'Dzień po dniu' in pg.content())
     chk('Najczęstsze kody NFZ i procedury prywatne', 'Najczęstsze kody' in pg.content() and 'Najczęstsze procedury' in pg.content())
@@ -93,25 +98,27 @@ with sync_playwright() as p:
     exp_prev = sum(v['k']['pc'] + v['k']['rv'] + v['k']['ex'] for v in V if v['date'][:7] == prev[:7])
     chk('Porównanie: „Poprzedni okres” (miesiąc wcześniej) = zarobki z poprzedniego miesiąca', money(pg.inner_text('[data-testid=poprz]')) == exp_prev and exp_prev > 0, (pg.inner_text('[data-testid=poprz]'), exp_prev))
     chk('Porównanie: różnica kwotowa i procentowa', '%' in pg.inner_text('[data-testid=zmiana]'), pg.inner_text('[data-testid=zmiana]'))
-    pg.goto(URL + '/zarobki?o=today'); razem = money(pg.inner_text('[data-testid=razem]'))
+    pg.goto(URL + '/zarobki?o=today'); rz = money(pg.inner_text('[data-testid=razem]'))
     dni = pg.locator('[data-testid=dni] tbody tr').all_inner_texts()
     import datetime as _dt
     dow = _dt.date.fromisoformat(T0).isoweekday()
-    chk('Dni tygodnia: 7 wierszy, dzisiejszy dzień = „Razem”, 1 dzień pracy', len(dni) == 7 and money(dni[dow - 1].split('\t')[2]) == razem and dni[dow - 1].split('\t')[1] == '1', dni)
+    chk('Dni tygodnia: 7 wierszy, dzisiejszy dzień = „Razem”, 1 dzień pracy', len(dni) == 7 and money(dni[dow - 1].split('\t')[2]) == rz and dni[dow - 1].split('\t')[1] == '1', dni)
     sr = pg.locator('[data-testid=srednie] tr').all_inner_texts()
-    chk('Średnie: 1 dzień pracy, średnio na dzień = „Razem”, na wizytę = Razem / 5 wizyt', sr[0].endswith('1') and money(sr[1].split('\t')[1]) == razem and money(sr[2].split('\t')[1]) == round(razem / 5), sr)
+    chk('Średnie: 1 dzień pracy, średnio na dzień = „Razem”, na wizytę = Razem / 5 wizyt', sr[0].endswith('1') and money(sr[1].split('\t')[1]) == rz and money(sr[2].split('\t')[1]) == round(rz / 5), sr)
     pg.goto(URL + '/zarobki?o=today&k=nfz'); got = table(pg)
-    chk('Filtr „NFZ”: bez wizyt i kwot prywatnych', all(v['pv'] == 0 and v['e2'] == 0 for v in got.values()) and sum(v['e1'] for v in got.values()) == sum(x['e1'] for x in e.values()), got)
+    chk('Filtr „NFZ”: tylko wizyty NFZ i kwoty NFZ', {k: v for k, v in got.items() if v} == {names[k]: v['nv'] for k, v in E.items() if v['nv']} and money(pg.inner_text('[data-testid=razem]')) == sum(v['e1'] for v in E.values()), got)
+    chk('Filtr rodzaju: zarobek lekarza (Kalendarz) niedostępny – „—”', pg.inner_text('[data-testid=zarobek]').strip() == '—')
     kat = sql("SELECT category_name FROM app.earnings_entries WHERE label ILIKE '%kompozyt%' LIMIT 1")
     pg.goto(URL + '/zarobki?o=today&k=' + urllib.parse.quote('kat:' + kat)); got = table(pg)
-    chk(f'Filtr kategorii „{kat}”: tylko wypełnienia (A 160 zł + B 122,50 zł), bez NFZ', sum(v['e2'] for v in got.values()) == 28250 and all(v['nv'] == 0 and v['e1'] == 0 for v in got.values()), got)
+    chk(f'Filtr kategorii „{kat}”: tylko wypełnienia (A 160 zł + B 122,50 zł), bez NFZ', money(pg.inner_text('[data-testid=razem]')) == 28250 and got.get('Gabinet A') == 1 and got.get('Gabinet B') == 1 and sum(got.values()) == 2, got)
     chk('Filtr widoczny i do wyłączenia', 'pokaż wszystko' in pg.content())
 
     # ---- podstawa: udział lekarza
     pg.goto(URL + '/ustawienia'); pg.select_option('#basis', 'share'); submit(pg, 'Zapisz ustawienia')
-    pg.goto(URL + '/zarobki?o=today'); got = table(pg)
-    e2 = {names[k]: v for k, v in exp('share', T0, T0).items()}
-    chk('Podstawa „udział lekarza”: zarobek NFZ = udział + przeglądy + dodatkowe', got == e2, (got, e2))
+    E2 = exp('share', T0, T0)
+    chk('Podstawa „udział lekarza”: „Razem z wizyt” = udział + przeglądy + dodatkowe + prywatne', razem(pg, '/zarobki?o=today') == sum(v['sum'] for v in E2.values()))
+    chk('Podstawa „udział lekarza”: także dla gabinetu A', razem(pg, f'/zarobki?o=today&g={A}') == E2[A]['sum'])
+    pg.goto(URL + '/zarobki?o=today')
 
     # ---- CSV
     with pg.expect_download() as d: pg.click('a:has-text("Pobierz CSV")')
