@@ -416,7 +416,7 @@ const D={
  ST28:{name:'Badanie i kontrola po urazie zęba',icd:'Z01.2 + S02.5 Złamanie zęba',tips:['w kolejnych 6 mies. możliwe kontrole: 3× ST34 z badaniem żywotności','dodaj osobno kod leczenia (wypełnienie / ekstyrpacja / ekstrakcja)'],exam:true,
    diag:{mode:'teeth',label:'Zaznacz ząb po urazie i zęby sąsiednie badane chlorkiem etylu'},
    perTooth:t=>{const p='T|ST28|'+t+'|';return [{k:p+'role',label:'Ząb',type:'seg',opts:['po urazie','sąsiedni'],rer:'ST28'},{k:p+'re',label:'Reakcja na chlorek etylu',type:'seg',opts:['prawidłowa','wzmożona','brak reakcji miazgi'],rer:'ST28'}];},
-   fields:()=>[{k:'ST28.cause',label:'Przyczyna urazu',type:'seg',opts:['upadek','uderzenie','upadek i nagryzienie na twardy przedmiot'],rer:'ST28'},
+   fields:()=>[{k:'ST28.cause',label:'Przyczyna urazu',type:'seg',opts:['upadek','uderzenie','nagryzienie na twardy przedmiot','upadek i nagryzienie na twardy przedmiot'],rer:'ST28'},
       {k:'ST28.days',label:'Ile dni temu',type:'num',w:'s'}],
    fields2:()=>{const f=[{k:'ST28.tx',label:'Rodzaj leczenia',type:'seg',opts:['brak (tylko badanie)','ząb z wypełnieniem – obnażenie miazgi','ząb z próchnicą – odbudowa','ekstyrpacja / endodoncja','ekstrakcja'],rer:'ST28',full:true}];
       const tx=str(state.a['ST28.tx']);
@@ -480,13 +480,14 @@ const D={
      return o.concat(parts.length?[parts.join('\n\n')]:[]).join('\n');}},
  '1101':{name:'Leczenie próchnicy powierzchniowej',icd:'K02.0 Próchnica ograniczona do szkliwa',tips:['zaznacz leczone zęby (zwykle 4–10)','te same zęby można powtarzać max 6× co 2 tyg.'],
    diag:{mode:'teeth',label:'Zaznacz zęby, na które nałożono lakier fluorkowy'},
-   fields:()=>[{k:'1101.prep',label:'Lakier fluorkowy (preparat)',type:'text',dl:['VOCO Profluorid Varnish'],w:'l'}],
+   fields:()=>[{k:'1101.prep',label:'Lakier fluorkowy (preparat)',type:'text',dl:FLUOR_PREPS,w:'l'}],
    render:()=>['LECZENIE PRÓCHNICY POWIERZCHNIOWEJ (1101)','Próchnica początkowa na powierzchniach wargowych zębów '+teethTxt('1101','zęby leczone (diagram)')+' – zgodnie z diagramem.',SEG.T1101_A,
      'Pola zabiegowe osuszono i przystąpiono do procedury leczniczej. Uzyskano pełną hemostazę (brak krwawienia z brzegu dziąsłowego). Na zmiany w powierzchniach ww. zębów, na których to powierzchniach nie było ubytków próchnicowych wymagających opracowania wiertłem i wypełnienia, zastosowano lakier fluorkowy ('+V('1101.prep','preparat')+'). Zalecana częstotliwość: mniej więcej co 2–4 tygodnie przez 2–3 miesiące lub dłużej - aż do ustąpienia objawów i poprawy wyglądu plamy próchnicowej (utrata matowości, powrót połysku).',
      SEG.T1101_B,SEG.ZAL_BODY].join('\n')},
  '1006':{name:'Lakierowanie zębów',icd:'Z29.8 Inne określone środki profilaktyczne',tips:['co 3 mies. i 1 dzień','1 świadczenie = ¼ łuku (1 ćwiartka)'],
    diag:{mode:'quad',label:'Zaznacz lakierowane ćwiartki (każda = 1 × 1006 w wycenie; tekst opisu bez zmian)'},
-   render:()=>['LAKIEROWANIE ZĘBÓW (1006)',SEG.T1006].join('\n')},
+   fields:()=>[{k:'1006.prep',label:'Preparat (opcjonalnie – trafi do opisu)',type:'text',dl:FLUOR_PREPS,w:'l',opt:true}],
+   render:()=>['LAKIEROWANIE ZĘBÓW (1006)',SEG.T1006].concat(str(state.a['1006.prep'])?['Zastosowany preparat: '+str(state.a['1006.prep'])+'.']:[]).join('\n')},
  '1105':fillCode('1105',{name:'Bezpośrednie pokrycie miazgi',title:TITLE_1105,tips:['kontrola po 8 tyg., potem 3, 6, 12, 18 mies.'],
    body:t=>{const p='T|1105|'+t+'|';return 'Całkowite opracowanie rozległego, głębokiego ubytku zęba '+t+' na powierzchni '+surfTxt('1105',t)+'. Podczas mechanicznego opracowania próchnicy nastąpiło obnażenie próchnicowe miazgi na bardzo małym fragmencie powierzchni.\nPacjent nie podaje aby miał dolegliwości bólowe ze strony zęba. Przepłukano ubytek NaCl, założono Ca (OH)2 nietwardniejący Biopulp, potem twardniejący Ca (OH)2  Life, podkład Ionosit oraz materiał:\n'+matText(p,'docx')+'\nZalecana kontrola po 8 tygodniach, następnie 3,6,12,18 mc, w razie dolegliwości bólowych kontrola w gabinecie stomatologicznym.';}}),
  '1108':fillCode('1108',{name:'Wypełnienie zęba mlecznego',title:'Kod 1108 (wypełnienie ubytku korony zęba mlecznego)',depth:true,prim:true,tips:['zęby mleczne'],
@@ -580,6 +581,7 @@ function plansHTML(){const a=AGE();const match=a===null?null:(a<5?'u5':'o5');
   const order=match==='u5'?['u5','o5']:['o5','u5'];
   const warn=state.plan&&match&&state.plan.p!==match?`<div class="warn">Wybrany plan jest dla grupy „${PLANS[state.plan.p].label.toLowerCase()}”, a wpisany wiek to ${a} lat.</div>`:'';
   return `<div class="plans"><h3 class="plans-h">Która wizyta w roku? <span class="note">– kliknij, a procedury z tabeli zaznaczą się same</span></h3>${order.map(row).join('')}${warn}<p class="note" style="margin:6px 0 0">Wypełnienia, ekstrakcje i inne dodatkowe zabiegi dobierz niżej – zostaną dopisane po procedurach z wizyty.</p></div>`;}
+const FLUOR_PREPS=['VOCO Profluorid Varnish','Duraphat (Colgate)','Fluor Protector (Ivoclar)','Elmex gelée (żel fluorkowy)'];
 const GROUPS=[
  ['Badania',['ST33','ST34','ST28']],
  ['Profilaktyka i higienizacja',['ST30','ST30G','ST30E','1101','1006']],
@@ -1517,8 +1519,8 @@ function tabDays(list){
   const g=grp(list,m=>m.date),T=agg(list);
   const chart=barChart('d',g.map(x=>({l1:x.k.slice(8)+'.'+x.k.slice(5,7),l2:DOW3[dowOf(x.k)],vals:x.A,tot:x.A.total,aria:fmtDay(x.k)+': '+fmtC(x.A.total),
     tip:tipOf(DOW[dowOf(x.k)]+', '+fmtDate(x.k),x.A,x.A.vis+' '+plural(x.A.vis,'wizyta','wizyty','wizyt'))})),KEYS3,{title:'Zarobek dzienny – dni z wpisami'});
-  const cols=[{h:'Data'},{h:'Dzień'},{h:'Razem',r:1},{h:'Wizyty',r:1},{h:'Punkty',r:1},{h:'Z punktów',r:1},{h:'Przeglądy',r:1},{h:'Z przeglądów',r:1},{h:'Dodatkowe',r:1},{h:'Czas wizyt',r:1}];   // najważniejsza kwota zaraz po dacie – widoczna też na telefonie
-  const row=(a,b,A)=>[a,b,'<b>'+fmtC(A.total)+'</b>',A.vis,fmtP(A.ptsC/100),fmtC(A.pe),fmtH(A.revHc/100),fmtC(A.rv),fmtC(A.ex),fmtMin(A.min)];
+  const cols=[{h:'Data'},{h:'Dzień'},{h:'Razem',r:1},{h:'Wizyty',r:1},{h:'Punkty',r:1},{h:'Przeglądy',r:1},{h:'Dodatkowe',r:1},{h:'Czas wizyt',r:1}];   // najważniejsza kwota zaraz po dacie – widoczna też na telefonie
+  const row=(a,b,A)=>[a,b,'<b>'+fmtC(A.total)+'</b>',A.vis,fmtP(A.ptsC/100),fmtH(A.revHc/100),fmtC(A.ex),fmtMin(A.min)];
   return chart+tableHTML(cols,g.slice().reverse().map(x=>row(fmtDate(x.k),DOW[dowOf(x.k)],x.A)),row('Razem',g.length+' '+plural(g.length,'dzień','dni','dni'),T));
 }
 function tabWeeks(list,R){
@@ -1526,16 +1528,16 @@ function tabWeeks(list,R){
   const wk=x=>weekOf(x.from||x.items[0].date),lab=w=>w.from.slice(8)+'.'+w.from.slice(5,7)+'–'+w.to.slice(8)+'.'+w.to.slice(5,7);
   const chart=barChart('w',periodRows('w',list,R,g).map(x=>{const w=wk(x);return {l1:'tydz. '+w.w,l2:lab(w),vals:x.A,tot:x.A.total,aria:'Tydzień '+w.w+' ('+lab(w)+'): '+(x.empty?'brak wpisów':fmtC(x.A.total)),
     tip:tipOf('Tydzień '+w.w+' · '+fmtDate(w.from)+' – '+fmtDate(w.to),x.A,x.empty?'brak wpisów':x.A.days.size+' '+plural(x.A.days.size,'dzień pracy','dni pracy','dni pracy'))};}),KEYS3,{title:'Zarobek tygodniowy (poniedziałek–niedziela)'});
-  const cols=[{h:'Tydzień'},{h:'Razem',r:1},{h:'Dni pracy',r:1},{h:'Śr. na dzień pracy',r:1},{h:'Wizyty',r:1},{h:'Punkty',r:1},{h:'Z punktów',r:1},{h:'Z przeglądów',r:1},{h:'Dodatkowe',r:1}];
-  const row=(a,A)=>[a,'<b>'+fmtC(A.total)+'</b>',A.days.size,fmtC(avgC(A.total,A.days.size)),A.vis,fmtP(A.ptsC/100),fmtC(A.pe),fmtC(A.rv),fmtC(A.ex)];
+  const cols=[{h:'Tydzień'},{h:'Razem',r:1},{h:'Dni pracy',r:1},{h:'Śr. na dzień pracy',r:1},{h:'Wizyty',r:1},{h:'Punkty',r:1},{h:'Dodatkowe',r:1}];
+  const row=(a,A)=>[a,'<b>'+fmtC(A.total)+'</b>',A.days.size,fmtC(avgC(A.total,A.days.size)),A.vis,fmtP(A.ptsC/100),fmtC(A.ex)];
   return chart+tableHTML(cols,g.slice().reverse().map(x=>{const w=wk(x);return row(w.w+' · '+fmtDate(w.from)+' – '+fmtDate(w.to),x.A);}),row('Razem',T));
 }
 function tabMonths(list,R){
   const g=grp(list,m=>m.date.slice(0,7)),T=agg(list),nm=k=>MON[+k.slice(5)-1]+' '+k.slice(0,4);
   const chart=barChart('m',periodRows('m',list,R,g).map(x=>({l1:MON3[+x.k.slice(5)-1],l2:x.k.slice(0,4),vals:x.A,tot:x.A.total,aria:nm(x.k)+': '+(x.empty?'brak wpisów':fmtC(x.A.total)),
     tip:tipOf(nm(x.k),x.A,x.empty?'brak wpisów':x.A.days.size+' '+plural(x.A.days.size,'dzień pracy','dni pracy','dni pracy'))})),KEYS3,{title:'Zarobek miesięczny'});
-  const cols=[{h:'Miesiąc'},{h:'Razem',r:1},{h:'Zmiana do poprz. mies.',r:1},{h:'Dni pracy',r:1},{h:'Śr. na dzień pracy',r:1},{h:'Śr. na dzień kalend.',r:1},{h:'Wizyty',r:1},{h:'Śr. na wizytę',r:1},{h:'Punkty',r:1},{h:'Z punktów',r:1},{h:'Z przeglądów',r:1},{h:'Dodatkowe',r:1},{h:'Czas pracy',r:1}];
-  const row=(a,A,d,cd,vt)=>[a,'<b>'+fmtC(A.total)+'</b>',d,A.days.size,fmtC(avgC(A.total,A.days.size)),fmtC(avgC(A.total,cd)),A.vis,fmtC(avgC(vt,A.vis)),fmtP(A.ptsC/100),fmtC(A.pe),fmtC(A.rv),fmtC(A.ex),fmtMin(A.work)];
+  const cols=[{h:'Miesiąc'},{h:'Razem',r:1},{h:'Zmiana do poprz. mies.',r:1},{h:'Dni pracy',r:1},{h:'Śr. na dzień pracy',r:1},{h:'Śr. na dzień kalend.',r:1},{h:'Wizyty',r:1},{h:'Śr. na wizytę',r:1},{h:'Punkty',r:1},{h:'Dodatkowe',r:1},{h:'Czas pracy',r:1}];
+  const row=(a,A,d,cd,vt)=>[a,'<b>'+fmtC(A.total)+'</b>',d,A.days.size,fmtC(avgC(A.total,A.days.size)),fmtC(avgC(A.total,cd)),A.vis,fmtC(avgC(vt,A.vis)),fmtP(A.ptsC/100),fmtC(A.ex),fmtMin(A.work)];
   const rows=g.map((x,i)=>{const f=x.k+'-01',pv=g[i-1]&&g[i-1].k===monthShift(f,-1).slice(0,7)?g[i-1].A.total:null;
     const d=pv?((x.A.total>=pv?'▲ +':'▼ −')+fmtP(Math.abs(Math.round((x.A.total-pv)/pv*1000)/10))+'%'):'—';
     return row(nm(x.k),x.A,d,calDays(f,monthEnd(f),lastDate(x.items)),visTotal(x.items));});
@@ -1692,6 +1694,7 @@ function sharedCard(){
   const {ex,hig,ins}=needShared(); const f=[{k:'sh.age',label:'Wiek pacjenta',type:'num',unit:'lat',w:'s'}];
   {const a=AGE();if(a!==null&&a>=18)f.push({k:'sh.preg',label:'Ciąża lub połóg (wycena ×1,2)',type:'seg',opts:['tak','nie'],opt:true,rer:'shared'});}
   if(ex) f.push(...examFields()); else if(hig){f.push({k:'sh.api',label:'API',type:'num',unit:'%',w:'s'},{k:'sh.gi',label:'GI (Löe–Silness)',type:'num',w:'s'});}
+  if(state.codes.some(c=>ZACH_CODES.includes(c))) f.push({k:'sh.rok',label:'Niepewne rokowanie zęba (tylko jeśli pacjent został poinformowany)',type:'seg',opts:ROK_OPTS,opt:true,full:true,rer:'shared'});
   let insH='';
   if(ins){const g=ageGroup();
     const methH = g==='≥11'
@@ -1725,7 +1728,12 @@ function cardHTML(code){
 }
 
 /* ---------- wynik ---------- */
-function buildOut(){return state.codes.map(c=>({code:c,text:D[c].render()}));}
+const ZACH_CODES=GROUPS.find(g=>g[0]==='Leczenie zachowawcze')[1];
+const ROK_TXT={'pełna informacja':'Pacjent został poinformowany o niepewnym rokowaniu dotyczącym dalszego utrzymania zęba oraz o możliwych dalszych konsekwencjach leczenia.','krótka informacja':'Pacjenta poinformowano o niepewnym rokowaniu leczonego zęba.'};
+const ROK_OPTS=['nie dotyczy','pełna informacja','krótka informacja'];
+function buildOut(){const o=state.codes.map(c=>({code:c,text:D[c].render()}));const r=ROK_TXT[str(state.a['sh.rok'])];
+  if(r){for(let i=o.length-1;i>=0;i--){if(ZACH_CODES.includes(o[i].code)){o[i]={code:o[i].code,text:o[i].text+'\n'+r};break;}}}
+  return o;}
 const plain=s=>s.replace(/\u0001([^\u0002]*)\u0002/g,'[UZUPEŁNIJ: $1]');
 function genTxt(){return buildOut().map(o=>plain(o.text)).join('\n\n');}
 function fullTxt(){return state.ed?state.ed.txt:genTxt();}                 // tekst edytowany ręcznie ma pierwszeństwo przed wygenerowanym
@@ -1745,9 +1753,9 @@ function todayLine(){
 }
 function renderBar(){
   const b=$('#bar');
-  if(state.step>=4){b.innerHTML=`<div class="in"><span class="miss">${todayLine()}</span><button type="button" class="btn" data-act="step" data-n="${state.back||1}">← Wróć do generatora</button></div>`;return;}
-  if(state.step===1){const ne1=nfzIssues().err.length;const tl=DB.ready&&dbList().some(m=>m.date===todayISO())?' · '+todayLine():'';b.innerHTML=`<div class="in"><span class="miss">${state.codes.length?`Wybrano <b style="color:var(--accent)">${state.codes.length}</b> ${plural(state.codes.length,'kod','kody','kodów')}`:'Wybierz kody zabiegów'}${ne1?` · <b style="color:var(--fill)">Błędy NFZ: ${ne1}</b>`:''}${tl}</span><button type="button" class="btn" data-act="step" data-n="2" ${state.codes.length?'':'disabled'}>Dalej: pytania →</button></div>`;return;}
-  const m=missCount();refreshNfz();const ne=nfzIssues().err.length;const P=nfzPoints();const neTxt=(ne?` · <b style="color:var(--fill)">Błędy NFZ: ${ne}</b>`:'')+(P.rows.length?` · <span style="color:var(--accent);font-weight:600">${esc(moneyLine(P))}</span>`:'');
+  if(state.step>=4){b.innerHTML=`<div class="in"><span class="miss"></span><button type="button" class="btn" data-act="step" data-n="${state.back||1}">← Wróć do generatora</button></div>`;return;}
+  if(state.step===1){const ne1=nfzIssues().err.length;const tl='';b.innerHTML=`<div class="in"><span class="miss">${state.codes.length?`Wybrano <b style="color:var(--accent)">${state.codes.length}</b> ${plural(state.codes.length,'kod','kody','kodów')}`:'Wybierz kody zabiegów'}${ne1?` · <b style="color:var(--fill)">Błędy NFZ: ${ne1}</b>`:''}${tl}</span><button type="button" class="btn" data-act="step" data-n="2" ${state.codes.length?'':'disabled'}>Dalej: pytania →</button></div>`;return;}
+  const m=missCount();refreshNfz();const ne=nfzIssues().err.length;const P=nfzPoints();const neTxt=(ne?` · <b style="color:var(--fill)">Błędy NFZ: ${ne}</b>`:'');
   if(state.step===2){b.innerHTML=`<div class="in"><span class="miss${m?'':' okk'}">${m?`Do uzupełnienia: <b>${m}</b> ${plural(m,'pole','pola','pól')}`:'<b>Wszystko uzupełnione</b>'}${neTxt}</span><div class="row"><button type="button" class="btn ghost" data-act="step" data-n="1">← Kody</button><button type="button" class="btn" data-act="step" data-n="3">Generuj opis →</button></div></div>`;return;}
   const saved=!!(state.saveInfo&&state.saveInfo.ok);
   b.innerHTML=`<div class="in"><span class="miss${m?'':' okk'}">${m?`W opisie zostało <b>${m}</b> ${plural(m,'pole','pola','pól')} [UZUPEŁNIJ]`:'<b>Opis kompletny</b>'}${neTxt}</span><div class="row"><button type="button" class="btn ghost" data-act="step" data-n="2">← Pytania</button><button type="button" class="btn ghost" data-act="reset" id="resetBtn">${saved?'Następny pacjent':'Nowy pacjent'}</button><button type="button" class="btn" data-act="copyall">Kopiuj wszystko</button></div></div>`;

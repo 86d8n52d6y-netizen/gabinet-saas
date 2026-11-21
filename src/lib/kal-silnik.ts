@@ -95,13 +95,17 @@ export async function kalNettoZ(docs: Record<string, unknown>, from: string, to:
   const clinics = new Map((settings.clinics as Doc[]).map(k => [String(k.id), k]));
   for (const [mk, md] of months) {
     if (mk < from.slice(0, 7) || mk > to.slice(0, 7)) continue;
-    const r = ratio(mk);
+    const r = ratio(mk), month = new Map<string, number>();
     for (const sh of md.shifts) {
       const d = String(sh?.date ?? '');
       if (!sh || sh.status !== 'done' || d < from || d > to || typeof sh.clinicId !== 'string') continue;
-      const inc = E.shiftIncome(sh, clinics.get(sh.clinicId)) as number;
-      perClinic.set(sh.clinicId, (perClinic.get(sh.clinicId) ?? 0) + Math.round(inc * (1 - r) * 100));
+      month.set(sh.clinicId, (month.get(sh.clinicId) ?? 0) + (E.shiftIncome(sh, clinics.get(sh.clinicId)) as number));
     }
+    // kwota z rozliczenia gabinetu zamiast sumy z dyżurów – jak w Kalendarzu i w kalPraca (miesiąc w całości w okresie)
+    const whole = from <= `${mk}-01` && to >= new Date(Date.UTC(+mk.slice(0, 4), +mk.slice(5), 0)).toISOString().slice(0, 10);
+    const inv = md.inv as Record<string, { statement?: unknown } | undefined>;
+    if (whole) for (const id of Object.keys(inv)) { const st = E.num(inv[id]?.statement) as number | null; if (st !== null && clinics.has(id)) month.set(id, st); }
+    for (const [id, inc] of month) perClinic.set(id, (perClinic.get(id) ?? 0) + Math.round(inc * (1 - r) * 100));
   }
   const est = E.ESTIMATED as unknown as Record<string, unknown>;
   const ys: number[] = [];

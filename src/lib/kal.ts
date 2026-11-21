@@ -219,17 +219,28 @@ export function kalIncome(sh: Record<string, unknown>, c: Record<string, unknown
 export async function kalPraca(c: PoolClient, from: string, to: string) {
   const { docs } = await loadDocs(c);
   const clinics = new Map(((docs.settings as { clinics?: Record<string, unknown>[] } | undefined)?.clinics ?? []).map(k => [String(k.id), k]));
-  const out = new Map<string, { gr: number; h: number; n: number }>();
+  const out = new Map<string, { gr: number; h: number; n: number; st: number }>();
+  const get = (id: string) => { const o = out.get(id) ?? { gr: 0, h: 0, n: 0, st: 0 }; out.set(id, o); return o; };
   for (const [doc, data] of Object.entries(docs)) {
     if (!/^m[0-9]{4}-[0-9]{2}$/.test(doc) || doc.slice(1) < from.slice(0, 7) || doc.slice(1) > to.slice(0, 7)) continue;
+    const mk = doc.slice(1), whole = from <= `${mk}-01` && to >= monthEnd(mk);
+    const inv = ((data as { inv?: unknown }).inv ?? {}) as Record<string, { statement?: unknown } | undefined>;
+    const month = new Map<string, number>();                                          // zarobek z dyżurów w tym miesiącu (grosze)
     for (const sh of (Array.isArray((data as { shifts?: unknown }).shifts) ? (data as { shifts: Record<string, unknown>[] }).shifts : [])) {
       const d = String(sh?.date ?? '');
       if (!sh || sh.status !== 'done' || d < from || d > to || typeof sh.clinicId !== 'string') continue;
       const k = clinics.get(sh.clinicId);
-      const o = out.get(sh.clinicId) ?? { gr: 0, h: 0, n: 0 };
-      o.gr += Math.round(kalIncome(sh, k) * 100); o.h += kalHours(sh); o.n++;
-      out.set(sh.clinicId, o);
+      const o = get(sh.clinicId);
+      month.set(sh.clinicId, (month.get(sh.clinicId) ?? 0) + Math.round(kalIncome(sh, k) * 100)); o.h += kalHours(sh); o.n++;
     }
+    // Jak w Kalendarzu (monthCalc: p.revenue = kwota z rozliczenia, gdy wpisana; inaczej suma z dyżurów) – tylko dla miesięcy
+    // w całości w wybranym okresie (kwoty miesięcznej nie dzielimy na dni). Prompt Patryka 21.11.2026, pkt 3.3.
+    if (whole) for (const id of Object.keys(inv)) {
+      const st = kNum(inv[id]?.statement);
+      if (st !== null && clinics.has(id)) { month.set(id, Math.round(kR2(st) * 100)); get(id).st++; }
+    }
+    for (const [id, gr] of month) get(id).gr += gr;
   }
   return out;
 }
+const monthEnd = (mk: string) => { const [y, m] = mk.split('-').map(Number); return new Date(Date.UTC(y, m, 0)).toISOString().slice(0, 10); };

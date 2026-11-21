@@ -570,6 +570,16 @@ button.ebar{cursor:pointer;width:100%}
 .frow.bottom{align-items:end}
 .cform .cost-hint{margin-top:-6px}
 
+/* K39: wygląd jak w Opisach NFZ */
+:root{--font-body:"IBM Plex Sans","Segoe UI",system-ui,-apple-system,sans-serif;--font-display:"IBM Plex Sans","Segoe UI",system-ui,-apple-system,sans-serif}
+:root:not([data-theme]){--bg:var(--g-bg);--surface:var(--g-surface);--ink:var(--g-ink);--muted:var(--g-muted);--line:var(--g-line)}
+.brand .logo{display:none}.brand h1{font-size:24px;font-weight:700;font-variation-settings:normal}
+.tabs{gap:6px;padding:4px 0 8px}.tab{border:1px solid var(--line);border-radius:999px;padding:7px 14px;background:var(--surface)}.tab:hover{border-color:var(--g-accent)}
+.tab[aria-selected="true"]{background:var(--g-accent);border-color:var(--g-accent);color:var(--g-accent-ink)}
+.btn.primary,.nudge.accent{background:var(--g-accent);border-color:var(--g-accent);color:var(--g-accent-ink)}.btn.primary:hover{background:color-mix(in srgb,var(--g-accent) 86%,#000)}
+.cf[aria-pressed="true"]{border-color:var(--g-accent);box-shadow:inset 0 0 0 1px var(--g-accent)}
+.cell.today .dnum,.wk-hd.today b,.onb .ck.ok,.sb-now,.bk-num{background:var(--g-accent);border-color:var(--g-accent);color:var(--g-accent-ink)}
+.meter .m-d{background:var(--g-accent)}.yd.today{box-shadow:inset 0 0 0 2px var(--g-accent)}label.chk input{accent-color:var(--g-accent)}
 </style>
 
 <link rel="stylesheet" href="/opisy-nfz/zasoby/wspolne.css">

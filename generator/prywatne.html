@@ -159,7 +159,7 @@ function buildCatalog() {                                          // katalog ef
 }
 buildCatalog();
 const DOW = ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 'piątek', 'sobota'];
-const S = { ready: false, tab: 'wiz', visits: new Map(), bodies: new Map(), allBodies: false, clinics: [], gabAuto: '',
+const S = { ready: false, tab: 'wiz', visits: new Map(), bodies: new Map(), bodyMiss: new Set(), allBodies: false, clinics: [], gabAuto: '',
   cennik: { v: 1, gab: {} }, ust: { podpis: '', kasuj: 0 }, q: '', kat: '', pickOpen: false,
   hist: { q: '', gab: '*', kat: '', lim: 40, open: {} }, zar: { r: 'month', od: '', do: '', kat: '', gab: '*', per: 'd' }, cen: { gab: null } };
 let V = newVisit();
@@ -332,7 +332,7 @@ async function delVisit(id) {
 async function bodyOf(id) {
   if (S.bodies.has(id)) return S.bodies.get(id);
   let b = null; try { b = await G.store('opisy').get(id); } catch (e) { }
-  if (b) S.bodies.set(id, b); return b;
+  if (b) { S.bodies.set(id, b); S.bodyMiss.delete(id); } else S.bodyMiss.add(id); return b;
 }
 let sT = null;
 function sumsSched() { clearTimeout(sT); sT = setTimeout(() => { sT = null; sumsPublish(); }, 300); }
@@ -529,7 +529,7 @@ function htmlHist() {
       (m.miss ? '<div class="pw-note">Opis zapisano z ' + m.miss + ' ' + plural(m.miss, 'polem', 'polami', 'polami') + ' [UZUPEŁNIJ].</div>' : '') +
       '<div class="pw-btns">' + (m.body !== false ? '<button type="button" class="pw-ib" data-a="hcopy" data-id="' + m.id + '">Kopiuj opis</button><button type="button" class="pw-ib" data-a="hshow" data-id="' + m.id + '" aria-expanded="' + !!open + '">' + (open ? 'Ukryj opis' : 'Pokaż opis') + '</button>' : '<span class="pw-note">' + (m.cloud ? 'treść opisu jest tylko na urządzeniu, na którym zapisano wizytę' : 'treść opisu usunięta (ustawienie prywatności)') + '</span>') +
       '<button type="button" class="pw-ib" data-a="hopen" data-id="' + m.id + '">Otwórz i popraw</button><button type="button" class="pw-ib" data-a="huse" data-id="' + m.id + '">Użyj jako szablonu</button><button type="button" class="pw-ib danger" data-a="hdel" data-id="' + m.id + '">Usuń</button></div>' +
-      (open ? '<pre class="pw-txt" style="margin-top:8px">' + esc(b ? b.txt : 'Wczytuję…') + '</pre>' : '') + '</article>';
+      (open ? '<pre class="pw-txt" style="margin-top:8px">' + esc(b ? b.txt : S.bodyMiss.has(m.id) ? 'Treści tego opisu nie ma na tym urządzeniu (zapisano ją w innej przeglądarce albo usunięto dane witryny). Kwoty i procedury są zachowane; treść przywrócisz z „Kopii danych z tego urządzenia” (Konto).' : 'Wczytuję…') + '</pre>' : '') + '</article>';
   });
   if (all.length > list.length) out += '<div style="text-align:center"><button type="button" class="g-btn ghost sm" data-a="hmore">Pokaż kolejne (' + (all.length - list.length) + ')</button></div>';
   return out;
@@ -983,7 +983,7 @@ document.addEventListener('click', async e => {
   if (a === 'hmore') { S.hist.lim += 40; render(); return; }
   if (!m) return;
   if (a === 'hshow') { S.hist.open[id] = !S.hist.open[id]; render(); if (S.hist.open[id] && !S.bodies.has(id)) { await bodyOf(id); render(); } return; }
-  if (a === 'hcopy') { const b = await bodyOf(id); const ok = b && await copyText(b.txt); toast(ok ? 'Skopiowano opis: ' + whoOf(m) : 'Nie udało się skopiować.'); return; }
+  if (a === 'hcopy') { const b = await bodyOf(id); const ok = b && await copyText(b.txt); toast(ok ? 'Skopiowano opis: ' + whoOf(m) : b ? 'Nie udało się skopiować.' : 'Treści tego opisu nie ma na tym urządzeniu.'); return; }
   if (a === 'hopen' || a === 'huse') { if (dirty() && V.id !== id && !arm(t, 'Bieżąca wizyta niezapisana – kliknij ponownie')) return; if (a === 'hopen') await bodyOf(id); loadVisit(m, a === 'huse'); return; }
   if (a === 'hdel') { if (!arm(t, 'Usunąć? Kliknij ponownie')) return; await delVisit(id); return; }
 });
