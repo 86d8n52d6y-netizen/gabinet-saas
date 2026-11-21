@@ -263,6 +263,14 @@ PATCHES_PRYW = [
   ('R11b obsługa wyłącznika podsumowania',
    "  if (t.id === 'zal_ust') {",
    "  if (t.id === 'u_sum') { S.ust.sum = t.checked; ustSave(); render(); return; }\n  if (t.id === 'zal_ust') {"),
+  ('R12 bezpiecznik startu (zgłoszenie Patryka 21.11.2026: „czasem zostaje Wczytuję…”, zwłaszcza po przejściu z Opisów NFZ): po 8 s bez gotowości – informacja i „Odśwież”; za pierwszym razem samo odświeżenie (najwyżej raz na minutę)',
+   "async function init() {\n  await G.ready('prywatne');",
+   "function startGuard() {\n"
+   "  setTimeout(() => { if (S.ready) return; let last = 0; try { last = +sessionStorage.getItem('pryw:odswiez') || 0; } catch (e) { }\n"
+   "    if (Date.now() - last > 60000) { try { sessionStorage.setItem('pryw:odswiez', String(Date.now())); } catch (e) { } location.reload(); return; }\n"
+   "    $('#main').innerHTML = '<div class=\"g-err\" role=\"alert\">Wczytywanie Opisów prywatnych trwa dłużej niż zwykle (przeglądarka nie udostępnia lokalnej bazy). Dane są bezpieczne. <button type=\"button\" class=\"g-btn sm\" onclick=\"location.reload()\">Odśwież</button> – jeśli nie pomoże, zamknij inne karty z Gabinetem.</div>'; }, 8000);\n"
+   "}\n"
+   "async function init() {\n  startGuard();\n  await G.ready('prywatne');"),
 ]
 
 PATCHES_KAL = [
@@ -371,6 +379,12 @@ PATCHES_KAL = [
   ('K39 wygląd jak reszta aplikacji (prompt Patryka 21.11.2026, pkt 4.1; wzorzec: Opisy NFZ): czcionka IBM Plex, paleta Gabinetu, wyróżnienia (przyciski główne, aktywna zakładka, dziś, podpowiedzi) w kolorze morskim zamiast czarnego, zakładki jako „pigułki”; logika bez zmian; kolory gabinetów bez zmian',
    '</style>',
    '/* K39: wygląd jak w Opisach NFZ */\n:root{--font-body:"IBM Plex Sans","Segoe UI",system-ui,-apple-system,sans-serif;--font-display:"IBM Plex Sans","Segoe UI",system-ui,-apple-system,sans-serif}\n:root:not([data-theme]){--bg:var(--g-bg);--surface:var(--g-surface);--ink:var(--g-ink);--muted:var(--g-muted);--line:var(--g-line)}\n.brand .logo{display:none}.brand h1{font-size:24px;font-weight:700;font-variation-settings:normal}\n.tabs{gap:6px;padding:4px 0 8px}.tab{border:1px solid var(--line);border-radius:999px;padding:7px 14px;background:var(--surface)}.tab:hover{border-color:var(--g-accent)}\n.tab[aria-selected=\"true\"]{background:var(--g-accent);border-color:var(--g-accent);color:var(--g-accent-ink)}\n.btn.primary,.nudge.accent{background:var(--g-accent);border-color:var(--g-accent);color:var(--g-accent-ink)}.btn.primary:hover{background:color-mix(in srgb,var(--g-accent) 86%,#000)}\n.cf[aria-pressed=\"true\"]{border-color:var(--g-accent);box-shadow:inset 0 0 0 1px var(--g-accent)}\n.cell.today .dnum,.wk-hd.today b,.onb .ck.ok,.sb-now,.bk-num{background:var(--g-accent);border-color:var(--g-accent);color:var(--g-accent-ink)}\n.meter .m-d{background:var(--g-accent)}.yd.today{box-shadow:inset 0 0 0 2px var(--g-accent)}label.chk input{accent-color:var(--g-accent)}\n</style>'),
+  ('K40 strona nie przeskakuje po wejściu do Kalendarza (zgłoszenie Patryka 21.11.2026: „ucina zakładki u góry”): gdy strona jest na samej górze, przerysowanie (np. podpowiedzi po wczytaniu danych) nie przewija jej w dół',
+   "if (r.bottom > h + 48) return { key: bl[i].dataset.key, top: r.top }; }",
+   "if (r.bottom > h + 48) return { key: bl[i].dataset.key, top: r.top, y: window.scrollY }; }"),
+  ('K40a utrzymanie miejsca na ekranie tylko, gdy strona była przewinięta',
+   "function stackRestore(a) {\n  if (!a) return;",
+   "function stackRestore(a) {\n  if (!a || a.y < 1) return;"),
 ]
 
 def przenies(plik, patches):

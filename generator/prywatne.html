@@ -1016,7 +1016,13 @@ document.addEventListener('click', async e => {
 });
 
 /* ---------- start ---------- */
+function startGuard() {
+  setTimeout(() => { if (S.ready) return; let last = 0; try { last = +sessionStorage.getItem('pryw:odswiez') || 0; } catch (e) { }
+    if (Date.now() - last > 60000) { try { sessionStorage.setItem('pryw:odswiez', String(Date.now())); } catch (e) { } location.reload(); return; }
+    $('#main').innerHTML = '<div class="g-err" role="alert">Wczytywanie Opisów prywatnych trwa dłużej niż zwykle (przeglądarka nie udostępnia lokalnej bazy). Dane są bezpieczne. <button type="button" class="g-btn sm" onclick="location.reload()">Odśwież</button> – jeśli nie pomoże, zamknij inne karty z Gabinetem.</div>'; }, 8000);
+}
 async function init() {
+  startGuard();
   await G.ready('prywatne');
   uiLoad();
   const [vs, cen, ust, cls, uk, zes] = await Promise.all([G.store('wizyty').all().catch(() => []), G.store('kv').get('pryw:cennik').catch(() => null), G.store('kv').get('pryw:ust').catch(() => null), G.clinics(true).catch(() => []),
