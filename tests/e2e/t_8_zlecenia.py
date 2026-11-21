@@ -8,6 +8,7 @@ def ch(pg, k, v): pg.click(f'button[data-a="ch"][data-k="{k}"][data-v="{v}"]'); 
 def typ(pg, v):
     if not pg.locator(f'button[data-a="typ"][data-v="{v}"]').is_visible(): pg.click('details[data-sec="typ"] > summary'); pg.wait_for_timeout(100)
     pg.click(f'button[data-a="typ"][data-v="{v}"]'); pg.wait_for_timeout(200)
+def synced(pg): pg.wait_for_function("!localStorage.getItem('gabinet-saas.zlecenia.niewyslane@'+G.user.id)", timeout=15000); pg.wait_for_timeout(100)
 def wymagane(pg): return pg.evaluate("braki(S.cur).filter(x=>x[0]==='W').map(x=>x[1])")
 
 with sync_playwright() as p:
@@ -46,9 +47,13 @@ with sync_playwright() as p:
     raw = pg.evaluate("""async()=>{const db=await new Promise((res,rej)=>{const q=indexedDB.open('gabinet-saas@'+G.user.id);q.onsuccess=()=>res(q.result);q.onerror=rej;});
       return await new Promise(res=>{const t=db.transaction(['zlecenia'],'readonly');const r=t.objectStore('zlecenia').getAll();r.onsuccess=()=>res(JSON.stringify(r.result));});}""")
     chk('w bazie przeglądarki treść zaszyfrowana (brak „AB” i „11, 21” jawnym tekstem)', '"AB"' not in raw and '11, 21' not in raw and 'e.max' not in raw)
-    leak = [u for u, d in sent if ('AB' in d and 'zeby' in d) or '11, 21' in d or 'IPS e.max' in d]
-    chk('na serwer nie trafiła treść zlecenia (inicjały, zęby, materiał)', not leak, leak)
-    chk('w bazie serwera brak danych zlecenia', sql("SELECT count(*) FROM app.user_blobs WHERE data::text LIKE '%IPS e.max%'") in ('0', ''))
+    synced(pg)   # E7 (decyzja 17): treść zlecenia na koncie
+    _r = sql(f"SELECT data->'a'->>'ini' || '|' || (data->'a'->>'zeby') || '|' || (data->'a'->>'mat') || '|' || (data->>'status') FROM app.prosthetic_orders WHERE data->>'nr' = '{nr}'"); chk('E7: zlecenie zapisane na koncie (inicjały, zęby, materiał, status)', _r == 'AB|11, 21|IPS e.max Press HT|wysłane', _r)
+    chk('E7: pasek pokazuje „Zlecenia zsynchronizowane”', 'Zlecenia zsynchronizowane' in pg.inner_text('#gsync'), pg.inner_text('#gsync'))
+    r400 = pg.evaluate("""async()=>{const r=await fetch('/api/zlecenia',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({put:[{o:{id:'ztest00001',a:{pesel:'90010112345'}},base:0}],del:[]})});return r.status}""")
+    chk('E7: API odrzuca PESEL (pole spoza listy)', r400 == 400, r400)
+    r400 = pg.evaluate("""async()=>{const r=await fetch('/api/zlecenia',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({put:[{o:{id:'ztest00002',pacjent:'Jan Kowalski'},base:0}],del:[]})});return r.status}""")
+    chk('E7: API odrzuca imię i nazwisko (pole spoza listy)', r400 == 400 and sql("SELECT count(*) FROM app.prosthetic_orders WHERE data::text LIKE '%Kowalski%' OR data::text LIKE '%90010112345%'") == '0')
 
     # ---- kopiowanie, rodzaje prac, usuwanie
     pg.click(f'.zl-item button[data-a="kopiuj"]'); pg.wait_for_timeout(300)
@@ -144,11 +149,39 @@ with sync_playwright() as p:
     chk('telefon (390 px): strona bez przewijania w poziomie', pg.evaluate("document.documentElement.scrollWidth<=window.innerWidth+1"), pg.evaluate("document.documentElement.scrollWidth"))
     pg.set_viewport_size({'width': 1280, 'height': 900})
 
+    # ---- E7: drugie urządzenie (to samo konto)
+    pg.click('button[data-a="zapisz"]'); pg.wait_for_timeout(300); synced(pg)
+    chk('E7: na koncie brak zdjęć i imienia i nazwiska', sql("SELECT count(*) FROM app.prosthetic_orders WHERE data::text LIKE '%data:image%' OR data::text LIKE '%Jan Testowy%'") == '0')
+    c2, d2 = br.new_context(bypass_csp=True), None
+    d2 = c2.new_page(); d2.goto(URL + '/logowanie'); fill(d2, email='zl.8@example.com', password='zielony-kubek-na-biurku'); submit(d2, 'Zaloguj')
+    d2.goto(URL + '/zlecenia'); ready(d2)
+    chk('E7: drugie urządzenie widzi zlecenia (lista z konta)', nr in d2.inner_text('#main') and 'All-on-X' in d2.inner_text('#main'), d2.inner_text('#main')[:300])
+    d2.click(f'button[data-a="otworz"][data-id="{zid}"]'); d2.wait_for_timeout(300)
+    chk('E7: drugie urządzenie – schemat i pola zlecenia', d2.get_attribute('[data-testid="zab-15"]', 'data-r') == 'implant' and d2.evaluate("S.cur.a.aoxPoz") == '12, 15, 22, 25')
+    chk('E7: drugie urządzenie – zdjęcia nie przeszły (tylko pierwsze urządzenie)', d2.evaluate("S.foto.length") == 0 and 'Zdjęcia (0)' in d2.inner_text('#main'))
+    d2.click('details[data-sec="status"] > summary'); d2.wait_for_timeout(100)
+    d2.click('button[data-a="status"][data-v="przyjęte"]'); d2.wait_for_timeout(300); synced(d2)
+    pg.click('button[data-a="lista"]'); pg.wait_for_timeout(200)
+    pg.evaluate("document.dispatchEvent(new Event('visibilitychange'))"); pg.wait_for_timeout(1200)
+    chk('E7: zmiana statusu z drugiego urządzenia widoczna na pierwszym', pg.evaluate(f"S.list.find(z=>z.id==='{zid}').status") == 'przyjęte')
+    pg.click(f'button[data-a="otworz"][data-id="{zid}"]'); pg.wait_for_timeout(300)
+    # konflikt: oba urządzenia zmieniają to samo zlecenie – wygrywa nowsza zmiana, bez utraty działania
+    d2.fill('#f_uwagi', 'z drugiego urządzenia'); d2.wait_for_timeout(100); d2.click('button[data-a="zapisz"]'); d2.wait_for_timeout(200); synced(d2)
+    pg.fill('#f_uwagi', 'z pierwszego – później'); pg.wait_for_timeout(100); pg.click('button[data-a="zapisz"]'); pg.wait_for_timeout(300); synced(pg)
+    chk('E7: konflikt wersji – na koncie nowsza zmiana', sql(f"SELECT data->'a'->>'uwagi' FROM app.prosthetic_orders WHERE id='{zid}'") == 'z pierwszego – później')
+    d2.reload(); ready(d2)
+    chk('E7: po konflikcie drugie urządzenie ma nowszą wersję', d2.evaluate(f"S.list.find(z=>z.id==='{zid}').a.uwagi") == 'z pierwszego – później')
+
     pg.click('details[data-sec="typ"] > summary'); pg.wait_for_timeout(100)
     pg.fill('[data-owntyp="1"]', 'Maska dziąsłowa'); pg.press('[data-owntyp="1"]', 'Enter'); pg.wait_for_timeout(300)
     chk('inny rodzaj pracy wpisany ręcznie', 'Maska dziąsłowa' in pg.inner_text('h1'))
     pg.click('button[data-a="usun"]'); pg.click('button[data-a="usun"]'); pg.wait_for_timeout(300)
     chk('usunięcie zlecenia (z potwierdzeniem)', pg.locator('.zl-item').count() == 1)
+    synced(pg)
+    chk('E7: usunięcie – na koncie znacznik bez treści', sql(f"SELECT deleted::text || '|' || data::text FROM app.prosthetic_orders WHERE id='{zid}'") == 'true|{}')
+    d2.goto(URL + '/zlecenia'); ready(d2)
+    chk('E7: usunięte zlecenie znika z drugiego urządzenia', d2.evaluate(f"S.list.some(z=>z.id==='{zid}')") is False and d2.evaluate(f"G.store('zlecenia').get('{zid}')") is None)
+    c2.close()
     chk('usunięcie zlecenia usuwa też jego zdjęcia z urządzenia', pg.evaluate("G.store('zdjecia').all().then(l=>l.length)") == 0)
 
     # ---- izolacja: inne konto na tym samym komputerze nie widzi zleceń

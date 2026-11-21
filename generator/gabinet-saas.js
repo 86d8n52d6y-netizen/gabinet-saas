@@ -90,6 +90,7 @@
       G.key = await deviceKey();
       if (C.seg && typeof C.seg === 'object') await kvPutLocal('nfz:seg', C.seg);          // własne wersje tekstów – z konta
       if (MOD === 'kalendarz') await kalSeed();
+      if (MOD === 'zlecenia') await zlSeed();
       await blobSeed();
       try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => { }); } catch (e) { }
       return G.user;
@@ -112,18 +113,18 @@
   let syncErr = '';
   function syncStatus() {
     const s = document.getElementById('gsync'); if (!s) return;
-    const n = pendingDel().length + dirty.size + (kalBusy ? 1 : 0) + Object.values(bBusy).filter(Boolean).length;
+    const n = pendingDel().length + dirty.size + (kalBusy ? 1 : 0) + (MOD === 'zlecenia' ? Object.keys(zPend()).length : 0) + Object.values(bBusy).filter(Boolean).length;
     if (stale && !syncErr && !n) {                                                         // materiały zmienione na innym urządzeniu (scalone na koncie)
       s.innerHTML = 'Zmiany z innego urządzenia – <a href="" id="greload">odśwież</a>'; s.className = 'gbar-sync';
       const a = document.getElementById('greload'); if (a) a.onclick = ev => { ev.preventDefault(); location.reload(); };
       return;
     }
-    s.textContent = syncErr ? '⚠ ' + syncErr : n ? 'Zapisuję w chmurze…' : MOD === 'kalendarz' ? 'Kalendarz zsynchronizowany' : 'Historia zsynchronizowana';
+    s.textContent = syncErr ? '⚠ ' + syncErr : n ? 'Zapisuję w chmurze…' : MOD === 'kalendarz' ? 'Kalendarz zsynchronizowany' : MOD === 'zlecenia' ? 'Zlecenia zsynchronizowane' : 'Historia zsynchronizowana';
     s.className = 'gbar-sync' + (syncErr ? ' err' : '');
   }
 
   /* ---------- magazyn konta na urządzeniu (kv: ustawienia tekstów, sumy; szkice) ---------- */
-  const STORES = ['kv', 'szkice', 'wizyty', 'opisy', 'zlecenia', 'zdjecia'];             // zlecenia/zdjecia – Zlecenia protetyczne (wersja 3 bazy; tylko na urządzeniu)                                   // wizyty/opisy – Opisy prywatne (wersja 2 bazy)
+  const STORES = ['kv', 'szkice', 'wizyty', 'opisy', 'zlecenia', 'zdjecia'];             // zlecenia/zdjecia – Zlecenia protetyczne (wersja 3 bazy; zlecenia też w chmurze od E7, zdjęcia tylko na urządzeniu)                                   // wizyty/opisy – Opisy prywatne (wersja 2 bazy)
   let udb = null;
   async function userDb() { if (!udb) udb = await idbOpen('gabinet-saas@' + C.uid, STORES, 3); return udb; }
   // Safari zachowuje poprzednią stronę w pamięci „wstecz/naprzód” razem z otwartym połączeniem do bazy, co potrafi
@@ -217,10 +218,12 @@
         if (name === 'kv' && BLOBS.includes(k)) postBlob(k, v);                   // cennik, ustawienia, szablony, zestawy → konto
         if (name === 'wizyty' && MOD === 'prywatne' && v && v.id === k) queue([v], []);
         if (name === 'kv' && k === 'grafik' && MOD === 'kalendarz') kalPush();
+        if (name === 'zlecenia' && MOD === 'zlecenia') zMark(k, 'put');
       },
       async del(k) {
         const db = await userDb(); await run(db, [name], 'readwrite', t => { t.objectStore(name).delete(k); });
         if (name === 'wizyty' && MOD === 'prywatne') queue([], [{ id: k, at: new Date().toISOString() }]);
+        if (name === 'zlecenia' && MOD === 'zlecenia') zMark(k, 'del');
       },
       async all() {
         const rows = await readAll(await userDb(), name);
@@ -297,6 +300,72 @@
     });
     await kvPutLocal('grafik', cur); saveBase(); kalShow(shown);
   }
+  /* ---------- Zlecenia protetyczne ↔ konto (E7, decyzja 17): treść zlecenia z kontrolą wersji; zdjęcia NIGDY (tylko urządzenie) ---------- */
+  const ZP_KEY = 'gabinet-saas.zlecenia.niewyslane@' + C.uid;                            // id → [rodzaj, znacznik] (bez treści)
+  let zVer = {}, zBusy = false, zAgain = false, zT = null;
+  const zPend = () => { try { const x = JSON.parse(localStorage.getItem(ZP_KEY) || '{}'); return x && typeof x === 'object' && !Array.isArray(x) ? x : {}; } catch (e) { return {}; } };
+  const zPendSet = o => { try { Object.keys(o).length ? localStorage.setItem(ZP_KEY, JSON.stringify(o)) : localStorage.removeItem(ZP_KEY); } catch (e) { } };
+  const zSaveVer = () => kvPutLocal('zl:ver', zVer).catch(() => { });
+  const zShow = ids => { try { window.dispatchEvent(new CustomEvent('gabinet:zlecenia', { detail: ids })); } catch (e) { } };
+  function zMark(id, co) { const p = zPend(); p[id] = [co, Date.now() + Math.random()]; zPendSet(p); syncStatus(); clearTimeout(zT); zT = setTimeout(zlPush, 700); }
+  async function zLocalDel(id) {                                                         // zlecenie usunięte na innym urządzeniu: też jego zdjęcia z tego urządzenia
+    const keys = (await readAll(await userDb(), 'zdjecia')).map(([k]) => k).filter(k => String(k).startsWith(id + ':'));
+    await prywLocal.write([{ s: 'zlecenia', key: id, del: true }].concat(keys.map(k => ({ s: 'zdjecia', key: k, del: true }))));
+  }
+  async function zlSeed() {
+    zVer = (await kvGetLocal('zl:ver').catch(() => undefined)) || {};
+    const had = Object.keys(zVer).length;
+    await zlPull(true);
+    if (!had) {                                                                          // pierwsze połączenie: zlecenia zapisane wcześniej tylko na tym urządzeniu → do chmury
+      const p = zPend(); for (const [k] of await readAll(await userDb(), 'zlecenia')) if (!zVer[k] && !p[k]) p[k] = ['put', Date.now()];
+      zPendSet(p);
+    }
+    if (Object.keys(zPend()).length) zlPush();
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) zlPull(); });
+  }
+  async function zlPull(start) {
+    if (zBusy) return;
+    let j; try { j = await post('/api/zlecenia', { known: zVer }); } catch (e) { if (!start) return; fail(e); return; }
+    const ch = j.changed || {}, pend = zPend(), shown = [];
+    for (const [id, c] of Object.entries(ch)) {
+      if (pend[id]) continue;                                                            // niewysłana zmiana z tego urządzenia – rozstrzygnie zapis (konflikt wersji)
+      if (c.deleted || !c.version) { await zLocalDel(id); delete zVer[id]; }
+      else { await prywLocal.write([{ s: 'zlecenia', key: id, val: c.data }]); zVer[id] = c.version; }
+      shown.push(id);
+    }
+    if (shown.length) { await zSaveVer(); if (!start) zShow(shown); }
+  }
+  async function zlPush() {
+    if (zBusy) { zAgain = true; return; }
+    const pend = zPend(), ids = Object.keys(pend).slice(0, 100); if (!ids.length) { syncStatus(); return; }
+    zBusy = true; syncStatus();
+    try {
+      const put = [], del = [];
+      for (const id of ids) {
+        const o = pend[id][0] === 'del' ? undefined : await G.store('zlecenia').get(id).catch(() => undefined);
+        if (o) put.push({ o, base: zVer[id] || 0 }); else del.push({ id, base: zVer[id] || 0 });
+      }
+      const j = await post('/api/zlecenia', { put, del });
+      Object.entries(j.ver || {}).forEach(([id, v]) => { if (v) zVer[id] = v; else delete zVer[id]; });
+      const shown = [], keep = new Set(), cf = j.conflict || {};
+      for (const [id, c] of Object.entries(cf)) {                                         // zmienione na innym urządzeniu
+        const loc = put.find(p => p.o.id === id);
+        if (!loc && c.deleted) { delete zVer[id]; continue; }                                 // usuwane tu i tam – gotowe
+        zVer[id] = c.version || 0;
+        if (!loc) { keep.add(id); continue; }                              // usunięcie wygrywa – ponów z nową wersją
+        if (c.deleted || !c.data || String(loc.o.at || '') >= String(c.data.at || '')) { keep.add(id); continue; }   // nowsza wersja z tego urządzenia – ponów
+        await prywLocal.write([{ s: 'zlecenia', key: id, val: c.data }]); shown.push(id);   // nowsza wersja z innego urządzenia – przyjęta
+      }
+      const now = zPend();
+      ids.forEach(id => { if (!keep.has(id) && now[id] && now[id][1] === pend[id][1]) delete now[id]; });   // zmienione w trakcie wysyłania – zostaje w kolejce
+      zPendSet(now); await zSaveVer(); syncErr = '';
+      if (shown.length) zShow(shown);
+      if (Object.keys(now).length) zAgain = true;
+    } catch (e) {
+      if (e.status === 400) { syncErr = 'zlecenie odrzucone przez serwer: ' + e.message; const p = zPend(); ids.forEach(id => { delete p[id]; }); zPendSet(p); }
+      else { fail(e); setTimeout(zlPush, 30000); }
+    } finally { zBusy = false; syncStatus(); if (zAgain) { zAgain = false; setTimeout(zlPush, 50); } }
+  }
   const prywLocal = {                                                                   // zapis lokalny wizyt prywatnych bez wysyłania (scalanie)
     async write(ops) { const db = await userDb(); const e2 = await Promise.all(ops.map(o => o.del ? o : enc(o.val, 'g:' + o.s + ':' + o.key).then(x => ({ s: o.s, key: o.key, val: x }))));
       await run(db, [...new Set(e2.map(o => o.s))], 'readwrite', t => { e2.forEach(o => { const st = t.objectStore(o.s); if (o.del) st.delete(o.key); else st.put(o.val, o.key); }); }); }
@@ -371,7 +440,7 @@
     } catch (e) { fail(e); setTimeout(flush, 30000); }
     finally { flushing = false; syncStatus(); }
   }
-  addEventListener('online', () => { flush(); if (MOD === 'kalendarz') kalPush(); BLOBS.forEach(k => { if (pendingBlobs().includes(k) && !bBusy[k]) kvGetLocal(k).then(v => v !== undefined && postBlob(k, v), () => { }); }); });
+  addEventListener('online', () => { flush(); if (MOD === 'kalendarz') kalPush(); if (MOD === 'zlecenia') zlPush(); BLOBS.forEach(k => { if (pendingBlobs().includes(k) && !bBusy[k]) kvGetLocal(k).then(v => v !== undefined && postBlob(k, v), () => { }); }); });
   document.addEventListener('visibilitychange', blobRefresh);
   addEventListener('pagehide', () => {                                                   // ostatnie zmiany przy zamknięciu karty
     const put = [...dirty.values()].map(cloudMeta), del = pendingDel();
