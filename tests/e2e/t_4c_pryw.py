@@ -129,13 +129,14 @@ with sync_playwright() as p:
         pg.goto(URL + '/opisy-prywatne'); ready(pg)
         for x in (pg, po): x.evaluate("()=>{Object.assign(V,newVisit());render();}"); x.wait_for_timeout(100)
         wizyta(pg, ini='ab'); wizyta(po, ini='ab')
+        pg.evaluate("V.zalUst=false;S.ust.sum=false")   # R11: bez podsumowania; R9 (21.11.2026): zdanie o zaleceniach ustnych wyłączone – reszta tekstu co do znaku jak w starej aplikacji
         a, b = pg.evaluate("curText()"), po.evaluate("curText()")
         chk(f'tekst opisu (kompozyt + skaling + e-ZLA) = stara aplikacja ({len(a)} znaków)', a == b and len(a) > 300, (len(a), len(b)))
         ids = pg.evaluate("KAT.proc.map(p=>p.id)")
         same = 0
         for pid in ids:
             for x in (pg, po):
-                x.evaluate("(id)=>{V.items=[];V.ezla={on:false,od:'',do:''};V.items.push(newItem(id));render();}", pid); x.wait_for_timeout(40)
+                x.evaluate("(id)=>{V.items=[];V.ezla={on:false,od:'',do:''};V.zalUst=false;if(S.ust)S.ust.sum=false;V.items.push(newItem(id));render();}", pid); x.wait_for_timeout(40)
             if pg.evaluate("curText()") == po.evaluate("curText()"): same += 1
         chk(f'tekst każdej z {len(ids)} procedur katalogu = stara aplikacja', same == len(ids) == 19, f'{same}/{len(ids)}')
         if srv: srv.terminate()

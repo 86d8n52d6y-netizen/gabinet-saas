@@ -119,6 +119,7 @@ textarea.pw-txted{min-height:260px;font-size:14.5px}
 .pw-tiles span{display:block;font-size:12.5px;color:var(--g-muted)}
 .pw-tiles b{font-size:20px;font-variant-numeric:tabular-nums}
 .pw-tiles .hl b{color:var(--g-accent)}
+.pw-q{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}.pw-qb.on{background:var(--g-accent);border-color:var(--g-accent);color:var(--g-accent-ink)}
 .pw-toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--g-ink);color:var(--g-surface);padding:10px 16px;border-radius:10px;font-size:14.5px;z-index:90;opacity:0;pointer-events:none;transition:opacity .2s;max-width:min(92vw,560px)}
 .pw-toast.on{opacity:1}
 .pw-empty{color:var(--g-muted);text-align:center;padding:24px}
@@ -262,9 +263,14 @@ function itemText(it) {
     return f.req && visible(f, vals) ? '[UZUPEŁNIJ: ' + f.l + ']' : '';
   }));
 }
+function sumP(it) { const p = procOf(it), n = String(p.name || ''), z = fieldsOf(p); let s = n.charAt(0).toLowerCase() + n.slice(1);
+  for (const f of z.values()) if ((f.t === 'tooth' || f.t === 'teeth') && it.vals[f.k]) { const ts = String(it.vals[f.k]); s += ' – ' + (/[,;]/.test(ts) ? 'zęby ' : 'ząb ') + ts; break; }
+  return s + (it.qty > 1 ? ' ×' + it.qty : ''); }
 function visitText(v) {
   v = v || V; const parts = v.items.map(itemText).filter(Boolean);
+  if (v.items.length && S.ust.sum !== false) parts.unshift('Wykonano: ' + v.items.map(sumP).join('; ') + '.');
   if (v.ezla && v.ezla.on) parts.push('Wystawiono zwolnienie lekarskie (e-ZLA)' + (v.ezla.od ? ' od ' + fmtD(v.ezla.od) : '') + (v.ezla.do ? ' do ' + fmtD(v.ezla.do) : '') + '.');
+  if (v.items.length && v.zalUst !== false) parts.push('Zalecenia przekazano pacjentowi w formie ustnej.');
   if (S.ust.podpis) parts.push(String(S.ust.podpis));
   return parts.join('\n\n');
 }
@@ -409,7 +415,7 @@ function htmlWiz() {
     '<div class="g-row" style="margin-top:10px"><button type="button" class="pw-chip" data-a="quick" id="b_quick" aria-pressed="' + !!S.quick + '">⚡ Szybka wizyta</button><span class="pw-note" style="margin:0">' + (S.quick ? 'Widać tylko pola wymagane i wypełnione; ulubione i zestawy na górze.' : '') + '</span></div>' +
     '<div class="pw-st" id="v_st">' + st + '</div></section>' +
     '<div id="items">' + V.items.map(itemHTML).join('') + '</div>' +
-    (V.items.length ? '<section class="g-card"><label class="pw-bool"><input type="checkbox" id="ez_on"' + (V.ezla.on ? ' checked' : '') + '> Wystawiono zwolnienie lekarskie (e-ZLA)</label>' +
+    (V.items.length ? '<section class="g-card"><label class="pw-bool"><input type="checkbox" id="zal_ust"' + (V.zalUst !== false ? ' checked' : '') + '> Zalecenia przekazano pacjentowi w formie ustnej (dopisz do opisu)</label><label class="pw-bool"><input type="checkbox" id="ez_on"' + (V.ezla.on ? ' checked' : '') + '> Wystawiono zwolnienie lekarskie (e-ZLA)</label>' +
       (V.ezla.on ? '<div class="pw-hrow"><label class="pw-l">od<input class="pw-in" type="date" id="ez_od" value="' + esc(V.ezla.od) + '"></label><label class="pw-l">do<input class="pw-in" type="date" id="ez_do" value="' + esc(V.ezla.do) + '"></label></div>' : '') + '</section>' : '') + addCard;
   return '<div class="pw-grid"><div>' + left + '</div><aside class="pw-side g-card" id="side">' + sideHTML() + '</aside></div>';
 }
@@ -451,6 +457,19 @@ function teethGrid(it, i, f) {
   return '<div class="pw-teeth" role="group" aria-label="Wybór zęba"><div class="pw-trow">' + q(Q[0]) + q(Q[1]) + '</div><div class="pw-trow">' + q(Q[2]) + q(Q[3]) + '</div>' +
     '<div class="pw-trow"><button type="button" class="pw-ib" data-a="pickm" data-i="' + i + '">' + (ml ? 'Zęby stałe' : 'Zęby mleczne') + '</button><button type="button" class="pw-ib" data-a="pick" data-i="' + i + '" data-k="">Zamknij</button></div></div>';
 }
+const QMAT = { mat: ['kompozyt', 'inne'], podklad: ['podklad'], matz: ['inne'] }, QBASE = { znprep: ['Dentocaine (artykaina 4% z adrenaliną 1:100 000)', 'Mark3 20% benzokaina (żel)'] };
+const DOLEGL = ['ból samoistny', 'ból na zimno/ciepło', 'ból przy nagryzaniu', 'nadwrażliwość', 'ukruszenie/złamanie zęba (lub wypełnienia)'];
+const ZN_DOSE = [['0,85', '½ amp. (0,85 ml)'], ['1,7', '1 amp. (1,7 ml)'], ['3,4', '2 amp. (3,4 ml)']];
+function qSug(f) { const base = (QBASE[f.k] || []).concat(f.sug || []); const all = (QMAT[f.k] ? G.mat(QMAT[f.k], []) : []).concat(base); return all.filter((x, j) => all.indexOf(x) === j); }   // własne materiały przed wbudowanymi
+function quickTop(k, list) { const c = new Map(); for (const m of S.visits.values()) for (const x of (m.items || [])) { const v = x.vals && x.vals[k]; if (typeof v === 'string' && v.trim()) c.set(v.trim(), (c.get(v.trim()) || 0) + 1); }
+  return [...new Set([...c.keys()].sort((a, b) => c.get(b) - c.get(a)).concat(list))].slice(0, 3); }
+function quickHTML(it, i, f) {
+  const p = procOf(it), v = it.vals[f.k], b = (a, val, lab, on) => '<button type="button" class="pw-ib pw-qb' + (on ? ' on' : '') + '" data-a="' + a + '" data-i="' + i + '" data-k="' + esc(f.k) + '" data-v="' + esc(val) + '" aria-pressed="' + !!on + '">' + esc(lab) + '</button>';
+  let q = [];
+  if (f.k === 'wywiad' && ['zach', 'endo', 'diag'].includes(p.kat)) { const cur = String(v || '').split(',').map(x => x.trim()); q = DOLEGL.map(d => b('qtog', d, d, cur.includes(d))); }
+  else if (f.k === 'zndawka') { const zn = it.vals.zn; if (!zn || zn === 'nie stosowano') return ''; if (v === undefined || v === '') it.vals[f.k] = '1,7'; q = ZN_DOSE.map(d => b('qset', d[0], d[1], String(it.vals[f.k]) === d[0])); }
+  else if (f.t !== 'area' && f.t !== 'multi' && f.t !== 'select' && f.t !== 'bool' && f.t !== 'rows' && f.t !== 'num' && f.t !== 'date' && f.t !== 'tooth' && f.t !== 'teeth') { const l = qSug(f); if (l.length) q = quickTop(f.k, l).map(x => b('qset', x, x, v === x)); }
+  return q.length ? '<div class="pw-q">' + q.join('') + '</div>' : ''; }
 function fieldHTML(it, i, f) {
   const id = 'f_' + it.u + '_' + f.k, v = it.vals[f.k], d = ' data-i="' + i + '" data-k="' + f.k + '"';
   const lab = '<label for="' + id + '">' + esc(f.l) + (f.req ? ' <span class="req" title="wymagane">*</span>' : '') + '</label>';
@@ -472,8 +491,9 @@ function fieldHTML(it, i, f) {
         rows.map((r, j) => '<tr>' + f.cols.map(c => '<td><input class="pw-in" id="' + id + '_' + j + '_' + c.k + '"' + d + ' data-r="' + j + '" data-c="' + c.k + '"' + (c.num ? ' inputmode="decimal"' : '') + (c.ph ? ' placeholder="' + esc(c.ph) + '"' : '') + ' autocomplete="off" value="' + esc(r && r[c.k] || '') + '" aria-label="' + esc(c.l) + ' ' + (j + 1) + '"></td>').join('') +
           '<td><button type="button" class="pw-ib" data-a="rowdel"' + d + ' data-r="' + j + '" aria-label="Usuń wiersz">✕</button></td></tr>').join('') +
         '</tbody></table><div><button type="button" class="pw-ib" data-a="rowadd"' + d + '>+ dodaj</button></div>'; break; }
-    default: h = lab + '<input class="pw-in" id="' + id + '"' + d + ' autocomplete="off"' + (f.sug ? ' list="dl_' + esc(procOf(it).id) + '_' + f.k + '"' : '') + (f.ph ? ' placeholder="' + esc(f.ph) + '"' : '') + ' value="' + esc(v || '') + '">';
+    default: h = lab + '<input class="pw-in" id="' + id + '"' + d + ' autocomplete="off"' + (f.sug || f.k === 'matz' ? ' list="dl_' + esc(procOf(it).id) + '_' + f.k + '"' : '') + (f.ph ? ' placeholder="' + esc(f.ph) + '"' : '') + ' value="' + esc(v || '') + '">';
   }
+  h += quickHTML(it, i, f);
   return '<div class="pw-f' + wide + '">' + h + '</div>';
 }
 function itemHTML(it, i) {
@@ -499,7 +519,8 @@ function itemHTML(it, i) {
 }
 function payLine(r, it) { return 'wartość ' + zl(r.val) + (it.m !== 'kw' && it.cost ? ' − koszty ' + zl(it.cost) : '') + '<br>lekarz: <b>' + (r.pay == null ? '—' : zl(r.pay)) + '</b>'; }
 function datalists() {                                            // podpowiedzi pól tekstowych (jedna lista na pole procedury)
-  $('#dls').innerHTML = KAT.proc.map(p => (p.fields || []).filter(f => f.sug).map(f => '<datalist id="dl_' + p.id + '_' + f.k + '">' + f.sug.map(s => '<option value="' + esc(s) + '">').join('') + '</datalist>').join('')).join('');
+  const sugOf = qSug;
+  $('#dls').innerHTML = KAT.proc.map(p => (p.fields || []).filter(f => sugOf(f).length).map(f => '<datalist id="dl_' + p.id + '_' + f.k + '">' + sugOf(f).map(s => '<option value="' + esc(s) + '">').join('') + '</datalist>').join('')).join('');
 }
 
 /* ----- Historia ----- */
@@ -756,6 +777,7 @@ function htmlUst() {
   const nb = [...S.visits.values()].filter(m => m.body !== false).length;
   return '<section class="g-card"><h2>Podpis pod opisem</h2><p class="pw-note" style="margin-top:0">Dopisywany na końcu każdego opisu (np. „lek. dent. Imię Nazwisko”). Zostaw puste, jeśli system gabinetu dodaje autora sam.</p>' +
     '<input class="pw-in" id="u_podpis" maxlength="120" value="' + esc(S.ust.podpis || '') + '" style="max-width:480px"></section>' +
+    '<section class="g-card"><h2>Podsumowanie na początku opisu</h2><label class="pw-bool"><input type="checkbox" id="u_sum"' + (S.ust.sum !== false ? ' checked' : '') + '> Dodawaj „Wykonano: …” (procedury i zęby) na początku każdego opisu</label></section>' +
     '<section class="g-card"><h2>Prywatność</h2><label class="pw-l" style="max-width:480px">Usuwaj treść opisów starszych niż<select id="u_kasuj">' + [[0, 'nigdy'], [30, '30 dni'], [90, '90 dni'], [180, '180 dni'], [365, '1 rok']].map(x => '<option value="' + x[0] + '"' + (+S.ust.kasuj === x[0] ? ' selected' : '') + '>' + x[1] + '</option>').join('') + '</select></label>' +
     '<p class="pw-note">Kwoty, daty i lista procedur zostają (zarobki liczą się dalej). Dokumentacją medyczną jest wpis w systemie gabinetu – tu przechowujesz tylko kopię roboczą. Teraz zapisanych treści: ' + nb + '.</p></section>' +
     '<section class="g-card"><h2>Dane</h2><p class="pw-note" style="margin-top:0">Wizyty, opisy i cenniki są zaszyfrowane kluczem Twojego konta i zapisane tylko w tej przeglądarce. Kopia całości i eksport do CSV – w kolejnym etapie.</p></section>';
@@ -840,6 +862,8 @@ document.addEventListener('change', async e => {
   if (S.ed && (t.dataset.fe || t.id === 'e_kat')) { edInput(t, true); return; }
   if (t.id === 'zs_fav' && S.zed) { S.zed.fav = t.checked; return; }
   if (t.id === 'zs_gab') { S.zgab = t.value === 'auto' ? null : t.value === '-' ? '' : t.value; render(); return; }
+  if (t.id === 'u_sum') { S.ust.sum = t.checked; ustSave(); render(); return; }
+  if (t.id === 'zal_ust') { V.zalUst = t.checked; render(); draftSched(); return; }
   if (t.id === 'ez_on') { V.ezla.on = t.checked; render(); draftSched(); return; }
   if (t.id === 'ez_od' || t.id === 'ez_do') { V.ezla[t.id.slice(3)] = t.value; refreshSide(); draftSched(); return; }
   if (t.dataset.pr === 'm') { onPrice(t); return; }
@@ -966,6 +990,9 @@ document.addEventListener('click', async e => {
   if (await onEditorClick(a, t)) return;
   if (await onSetClick(a, t)) return;
   if (a === 'up' || a === 'down') { const j = a === 'up' ? i - 1 : i + 1; if (j < 0 || j >= V.items.length) return; [V.items[i], V.items[j]] = [V.items[j], V.items[i]]; render(); draftSched(); return; }
+  if (a === 'qset' || a === 'qtog') { const k = t.dataset.k, val = t.dataset.v;
+    if (a === 'qset') it.vals[k] = val; else { const cur = String(it.vals[k] || '').split(',').map(x => x.trim()).filter(Boolean), j = cur.indexOf(val); if (j >= 0) cur.splice(j, 1); else cur.push(val); it.vals[k] = cur.join(', '); }
+    rerenderItem(i); refreshSide(); draftSched(); return; }
   if (a === 'fold') { it.fold = !it.fold; rerenderItem(i); return; }
   if (a === 'rm') { if (!arm(t, 'Usunąć?')) return; V.items.splice(i, 1); render(); draftSched(); return; }
   if (a === 'pick') { it.pick = it.pick === t.dataset.k || !t.dataset.k ? null : t.dataset.k; rerenderItem(i); return; }

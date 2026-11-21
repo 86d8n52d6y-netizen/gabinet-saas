@@ -65,6 +65,7 @@ input:focus-visible,select:focus-visible,button:focus-visible{outline:2px solid 
 .btn{font:inherit;font-weight:600;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);border-radius:8px;padding:9px 16px;cursor:pointer}
 .btn.ghost{background:transparent;color:var(--accent)}
 .btn.sm{padding:5px 10px;font-size:13px;font-weight:500}
+.mini.on{background:var(--accent);border-color:var(--accent);color:#fff}
 .mini{font:inherit;font-size:12px;border:1px solid var(--line);background:var(--bg);color:var(--muted);border-radius:6px;padding:2px 8px;min-height:24px;cursor:pointer}   /* min. 24 px – wygodne dotknięcie na telefonie (WCAG 2.5.8) */
 .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
@@ -336,18 +337,19 @@ function tv(code,t,f,label){return V('T|'+code+'|'+t+'|'+f,label+' – ząb '+t)
 
 /* ---------- pola ---------- */
 const WEDZ=['Typ I – śluzówkowy','Typ II – dziąsłowy','Typ III – brodawkowy','Typ IV – przezbrodawkowy'];
-function examFields(){return [
+function examFields(){['sh.wg','sh.wd'].forEach(k=>{if(state.a[k]===undefined)state.a[k]=WEDZ[0];});return [
   {k:'sh.api',label:'API',type:'num',unit:'%',w:'s'},
   {k:'sh.gi',label:'GI (Löe–Silness)',type:'num',w:'s'},
   {k:'sh.wg',label:'Wędzidełko wargi górnej',type:'select',opts:WEDZ},
   {k:'sh.wd',label:'Wędzidełko wargi dolnej',type:'select',opts:WEDZ},
   {k:'sh.al',label:'Alergie',type:'brak'},
   {k:'sh.ch',label:'Choroby ogólnoustrojowe',type:'brak'},
-  {k:'sh.lk',label:'Przyjmowane leki na stałe',type:'brak'}];}
+  {k:'sh.lk',label:'Przyjmowane leki na stałe',type:'brak'},
+  {k:'sh.lka',label:'Aktualnie przyjmowane leki (doraźnie, opcjonalnie)',type:'text',opt:true,w:'l'}];}
 function matFields(p,code){
   const m=str(getVal(p+'mat'));
   const f=[{k:p+'mat',label:'Materiał',type:'seg',opts:['kompozyt','glassjonomer RIVA LC'],rer:code}];
-  if(m==='kompozyt') f.push({k:p+'name',label:'Nazwa kompozytu',type:'text'});
+  if(m==='kompozyt') f.push({k:p+'name',label:'Nazwa kompozytu',type:'text',dl:G.mat('kompozyt')});
   f.push({k:p+'color',label:'Kolor',type:'text',w:'s'});
   return f;
 }
@@ -369,9 +371,9 @@ function giLine(){
   return 'Wskaźnik stanu dziąseł – GI - '+it+'  '+num(g);
 }
 function examMid(){return [apiLine(),giLine(),
-  'Wędzidełko warg górnej : '+V('sh.wg','wędzidełko górne'),
-  'Wędzidełko warg dolnej: '+V('sh.wd','wędzidełko dolne'),
-  'Wywiad:','Alergie – '+V('sh.al','alergie'),'Choroby ogólnoustrojowe – '+V('sh.ch','choroby ogólne'),'Przyjmowane leki na stałe – '+V('sh.lk','leki')].join('\n');}
+  'Wędzidełko warg górnej : '+(str(state.a['sh.wg'])||WEDZ[0]),
+  'Wędzidełko warg dolnej: '+(str(state.a['sh.wd'])||WEDZ[0]),
+  'Wywiad:','Alergie – '+V('sh.al','alergie'),'Choroby ogólnoustrojowe – '+V('sh.ch','choroby ogólne'),'Przyjmowane leki na stałe – '+V('sh.lk','leki')].concat(str(state.a['sh.lka'])?['Aktualnie przyjmowane leki – '+str(state.a['sh.lka'])]:[]).join('\n');}
 function ageGroup(){const a=AGE();if(a===null)return null;return a<4?'1–3':a<7?'4–6':a<11?'7–10':'≥11';}
 function instr(){
   const g=ageGroup(); if(!g) return MISS('wiek pacjenta (wybór instruktażu)');
@@ -480,13 +482,13 @@ const D={
      return o.concat(parts.length?[parts.join('\n\n')]:[]).join('\n');}},
  '1101':{name:'Leczenie próchnicy powierzchniowej',icd:'K02.0 Próchnica ograniczona do szkliwa',tips:['zaznacz leczone zęby (zwykle 4–10)','te same zęby można powtarzać max 6× co 2 tyg.'],
    diag:{mode:'teeth',label:'Zaznacz zęby, na które nałożono lakier fluorkowy'},
-   fields:()=>[{k:'1101.prep',label:'Lakier fluorkowy (preparat)',type:'text',dl:FLUOR_PREPS,w:'l'}],
+   fields:()=>[{k:'1101.prep',label:'Lakier fluorkowy (preparat)',type:'text',dl:G.mat('lakier',FLUOR_PREPS),w:'l'}],
    render:()=>['LECZENIE PRÓCHNICY POWIERZCHNIOWEJ (1101)','Próchnica początkowa na powierzchniach wargowych zębów '+teethTxt('1101','zęby leczone (diagram)')+' – zgodnie z diagramem.',SEG.T1101_A,
      'Pola zabiegowe osuszono i przystąpiono do procedury leczniczej. Uzyskano pełną hemostazę (brak krwawienia z brzegu dziąsłowego). Na zmiany w powierzchniach ww. zębów, na których to powierzchniach nie było ubytków próchnicowych wymagających opracowania wiertłem i wypełnienia, zastosowano lakier fluorkowy ('+V('1101.prep','preparat')+'). Zalecana częstotliwość: mniej więcej co 2–4 tygodnie przez 2–3 miesiące lub dłużej - aż do ustąpienia objawów i poprawy wyglądu plamy próchnicowej (utrata matowości, powrót połysku).',
      SEG.T1101_B,SEG.ZAL_BODY].join('\n')},
  '1006':{name:'Lakierowanie zębów',icd:'Z29.8 Inne określone środki profilaktyczne',tips:['co 3 mies. i 1 dzień','1 świadczenie = ¼ łuku (1 ćwiartka)'],
    diag:{mode:'quad',label:'Zaznacz lakierowane ćwiartki (każda = 1 × 1006 w wycenie; tekst opisu bez zmian)'},
-   fields:()=>[{k:'1006.prep',label:'Preparat (opcjonalnie – trafi do opisu)',type:'text',dl:FLUOR_PREPS,w:'l',opt:true}],
+   fields:()=>[{k:'1006.prep',label:'Preparat (opcjonalnie – trafi do opisu)',type:'text',dl:G.mat('lakier',FLUOR_PREPS),w:'l',opt:true}],
    render:()=>['LAKIEROWANIE ZĘBÓW (1006)',SEG.T1006].concat(str(state.a['1006.prep'])?['Zastosowany preparat: '+str(state.a['1006.prep'])+'.']:[]).join('\n')},
  '1105':fillCode('1105',{name:'Bezpośrednie pokrycie miazgi',title:TITLE_1105,tips:['kontrola po 8 tyg., potem 3, 6, 12, 18 mies.'],
    body:t=>{const p='T|1105|'+t+'|';return 'Całkowite opracowanie rozległego, głębokiego ubytku zęba '+t+' na powierzchni '+surfTxt('1105',t)+'. Podczas mechanicznego opracowania próchnicy nastąpiło obnażenie próchnicowe miazgi na bardzo małym fragmencie powierzchni.\nPacjent nie podaje aby miał dolegliwości bólowe ze strony zęba. Przepłukano ubytek NaCl, założono Ca (OH)2 nietwardniejący Biopulp, potem twardniejący Ca (OH)2  Life, podkład Ionosit oraz materiał:\n'+matText(p,'docx')+'\nZalecana kontrola po 8 tygodniach, następnie 3,6,12,18 mc, w razie dolegliwości bólowych kontrola w gabinecie stomatologicznym.';}}),
@@ -1604,6 +1606,7 @@ function renderSettings(){
     ${row('Udział lekarza w wartości punktów','<div class="seg" role="group">'+PCT_OPTS.map(v=>`<button type="button" data-act="pct" data-v="${v}" class="${cfg.pct===v?'on':''}" aria-pressed="${cfg.pct===v}">${v}%</button>`).join('')+'</div>','dla nowych wizyt; zapisane wpisy zachowują swój %')}
     <p class="note" style="margin:10px 0 0">Zmiana stawek dotyczy nowych wpisów. Każdy zapisany wpis pamięta stawki, z którymi powstał – zmienisz je w „Edytuj kwoty”.</p></section>
    <section class="card"><h2>Zapis wizyt</h2>
+    ${row('Podsumowanie na początku opisu','<div class="seg" role="group"><button type="button" data-act="sumopt" data-v="on" class="'+(cfg.sum!==false?'on':'')+'" aria-pressed="'+(cfg.sum!==false)+'">włączone</button><button type="button" data-act="sumopt" data-v="off" class="'+(cfg.sum===false?'on':'')+'" aria-pressed="'+(cfg.sum===false)+'">wyłączone</button></div>','krótkie „Wykonano: …” z zaznaczonych zabiegów – kopiowane razem z opisem')}
     ${row('Tryb zapisu',switchHTML().replace('<span class="lab">Zapis wizyt w historii</span>',''),cfg.auto?'każda wygenerowana wizyta zapisuje się sama jako wpis anonimowy z numerem':'wizyta zapisuje się po wpisaniu inicjałów pacjenta')}
     ${row('Zarobek z punktów w statystykach','<div class="seg" role="group"><button type="button" data-act="basis" data-v="full" class="'+(cfg.basis==='full'?'on':'')+'" aria-pressed="'+(cfg.basis==='full')+'">pełna wartość punktów</button><button type="button" data-act="basis" data-v="share" class="'+(cfg.basis==='share'?'on':'')+'" aria-pressed="'+(cfg.basis==='share')+'">udział lekarza (%)</button></div>',cfg.basis==='share'?'do sum wchodzi % lekarza zapisany przy wizycie; przeglądy i kwoty dodatkowe w całości':'100 pkt = '+fmtC(centsPts(100,cfg.price))+'; udział lekarza jest pokazywany obok')}
    </section>
@@ -1661,7 +1664,7 @@ function fieldHTML(f){
   const dl=f.dl?`<datalist id="dl_${id}">${f.dl.map(o=>`<option value="${esc(o)}">`).join('')}</datalist>`:'';
   const inp=`<input type="text" id="${id}" data-key="${esc(f.k)}" value="${esc(s)}" ${f.type==='num'?'inputmode="decimal"':''} ${f.dl?`list="dl_${id}"`:''} placeholder="${esc(f.ph||'')}" class="${empty&&!f.ph&&!f.opt?'empty':''}" ${f.opt?'data-opt="1"':''} autocomplete="off">`;
   const brak=f.type==='brak'?`<button type="button" class="mini" data-act="brak" data-key="${esc(f.k)}">brak</button>`:'';
-  return `<div class="${cls}"><label for="${id}">${esc(f.label)}${empty&&!f.ph&&!f.opt?' <span class="need">· uzupełnij</span>':''}${empty&&f.ph?' <span class="note">(domyślnie: '+esc(f.ph)+')</span>':''}</label><div class="unit">${inp}${f.unit?`<span>${f.unit}</span>`:''}${brak}</div>${dl}</div>`;
+  return `<div class="${cls}"><label for="${id}">${esc(f.label)}${empty&&!f.ph&&!f.opt?' <span class="need">· uzupełnij</span>':''}${empty&&f.ph?' <span class="note">(domyślnie: '+esc(f.ph)+')</span>':''}</label><div class="unit">${inp}${f.unit?`<span>${f.unit}</span>`:''}${brak}</div>${dl}${quickNfz(f)}</div>`;
 }
 function sitesHTML(code,t){
   const row=(f,lab)=>`<div>${lab}</div>`+SITES.map(x=>{const k='T|'+code+'|'+t+'|'+f+x;const s=str(getVal(k));return `<input type="text" inputmode="decimal" data-key="${k}" value="${esc(s)}" aria-label="${lab} ${x} ząb ${t}" class="${s?'':'empty'}">`;}).join('');
@@ -1694,6 +1697,13 @@ function sharedCard(){
   const {ex,hig,ins}=needShared(); const f=[{k:'sh.age',label:'Wiek pacjenta',type:'num',unit:'lat',w:'s'}];
   {const a=AGE();if(a!==null&&a>=18)f.push({k:'sh.preg',label:'Ciąża lub połóg (wycena ×1,2)',type:'seg',opts:['tak','nie'],opt:true,rer:'shared'});}
   if(ex) f.push(...examFields()); else if(hig){f.push({k:'sh.api',label:'API',type:'num',unit:'%',w:'s'},{k:'sh.gi',label:'GI (Löe–Silness)',type:'num',w:'s'});}
+  if(state.a['sh.zal']===undefined)state.a['sh.zal']=ZAL_OPTS[0];
+  f.push({k:'sh.zal',label:'Zalecenia przekazano pacjentowi',type:'seg',opts:ZAL_OPTS,opt:true});
+  if(state.codes.some(c=>AN_CODES.includes(c))){const anP=str(state.a['sh.anw'])||str(state.a['sh.an']);
+    f.push({k:'sh.an',label:'Znieczulenie – preparat (opcjonalnie)',type:'seg',opts:AN_OPTS,opt:true,full:true,rer:'shared'},{k:'sh.anw',label:'Inny preparat (zamiast przycisku)',type:'text',dl:G.mat('inne',[]),opt:true,w:'l',rer:'shared'});
+    if(anP&&anP!=='bez znieczulenia'){if(state.a['sh.and']===undefined)state.a['sh.and']=AN_DOSE[1];
+      f.push({k:'sh.ant',label:'Rodzaj znieczulenia',type:'seg',opts:['nasiękowe','przewodowe','powierzchniowe'],opt:true},{k:'sh.and',label:'Dawka',type:'seg',opts:AN_DOSE,opt:true},{k:'sh.andw',label:'Inna dawka',type:'text',opt:true,w:'s'});}}
+  if(state.codes.some(c=>ZACH_CODES.includes(c)||c==='ST28')) f.push({k:'sh.pod',label:'Materiał podkładowy (przy próchnicy głębokiej)',type:'text',dl:G.mat('podklad',['Ionosit']),ph:'Ionosit',opt:true});
   if(state.codes.some(c=>ZACH_CODES.includes(c))) f.push({k:'sh.rok',label:'Niepewne rokowanie zęba (tylko jeśli pacjent został poinformowany)',type:'seg',opts:ROK_OPTS,opt:true,full:true,rer:'shared'});
   let insH='';
   if(ins){const g=ageGroup();
@@ -1703,7 +1713,7 @@ function sharedCard(){
     insH=`<div class="sub"><h4>Instruktaż higieny ${g?`– grupa wiekowa <span class="code">${g}</span>`:''}</h4>`+methH+
      `<div class="grid" style="margin-top:8px">${fieldHTML({k:'sh.ortho',label:'Aparat ortodontyczny (dodatkowe zalecenia)',type:'seg',opts:['tak','nie'],rer:'shared'})}</div></div>`;
   }
-  return `<section class="card" id="card-shared"><h2>Dane pacjenta i badanie</h2><p class="note" style="margin:0 0 10px">Wspólne dla wszystkich wybranych zabiegów – wpisujesz raz.</p><div class="grid">${f.map(fieldHTML).join('')}</div>${insH}</section>`;
+  return `<section class="card" id="card-shared"><h2>Dane pacjenta i badanie</h2><p class="note" style="margin:0 0 10px">Wspólne dla wszystkich wybranych zabiegów – wpisujesz raz.</p><div class="grid">${f.map(fieldHTML).join('')}</div>${ex?'<div class="row" style="margin-top:8px"><button type="button" class="btn ghost sm" data-act="wywbrak">Wywiad bez obciążeń – brak alergii, chorób i leków</button></div>':''}${insH}</section>`;
 }
 function cardHTML(code){
   const d=D[code];
@@ -1731,11 +1741,33 @@ function cardHTML(code){
 const ZACH_CODES=GROUPS.find(g=>g[0]==='Leczenie zachowawcze')[1];
 const ROK_TXT={'pełna informacja':'Pacjent został poinformowany o niepewnym rokowaniu dotyczącym dalszego utrzymania zęba oraz o możliwych dalszych konsekwencjach leczenia.','krótka informacja':'Pacjenta poinformowano o niepewnym rokowaniu leczonego zęba.'};
 const ROK_OPTS=['nie dotyczy','pełna informacja','krótka informacja'];
+const AN_CODES=ZACH_CODES.concat(['ST30']);
+const ZAL_OPTS=['ustnie','ustnie i pisemnie'];
+const AN_OPTS=['Dentocaine (40 mg + 0,005 mg)/ml','Mark3 20% benzokaina','bez znieczulenia'];
+const AN_DOSE=['½ amp. (0,85 ml)','1 amp. (1,7 ml)','2 amp. (3,4 ml)'];
+const QK='gabinet:nfz-szybkie';
+function qGroup(k){return /[.|]color$/.test(k)?'color':/[.|]name$/.test(k)?'kompozyt':/^(1101|1006)\.prep$/.test(k)?'lakier':'';}
+function qCounts(){try{return JSON.parse(localStorage.getItem(QK)||'{}')||{};}catch(e){return {};}}
+function quickLearn(){const c=qCounts();Object.keys(state.a).forEach(k=>{const g=qGroup(k),x=state.a[k];if(!g||typeof x!=='string'||!x.trim())return;const v=x.trim();c[g]=c[g]||{};c[g][v]=(c[g][v]||0)+1;});try{localStorage.setItem(QK,JSON.stringify(c));}catch(e){}}
+function quickNfz(f){if(f.type!=='text')return '';const g=qGroup(f.k);if(!g)return '';const c=qCounts()[g]||{},base=g==='color'?['A1','A2','A3']:(f.dl||[]);
+  const top=[...new Set(Object.keys(c).sort((a,b)=>c[b]-c[a]).concat(base))].slice(0,3);if(!top.length)return '';const cur=str(getVal(f.k));
+  return '<div class="row" style="margin-top:6px;gap:6px">'+top.map(v=>`<button type="button" class="mini${cur===v?' on':''}" data-act="qv" data-key="${esc(f.k)}" data-v="${esc(v)}" aria-pressed="${cur===v}">${esc(v)}</button>`).join('')+'</div>';}
 function buildOut(){const o=state.codes.map(c=>({code:c,text:D[c].render()}));const r=ROK_TXT[str(state.a['sh.rok'])];
+  {const anP=str(state.a['sh.anw']).trim()||str(state.a['sh.an']),fi=o.findIndex(x=>AN_CODES.includes(x.code));
+   if(anP&&fi>=0){const ty=str(state.a['sh.ant']),dz=str(state.a['sh.andw']).trim()||str(state.a['sh.and'])||AN_DOSE[1];
+     const ln=anP==='bez znieczulenia'?'Zabieg wykonano bez znieczulenia.':'Znieczulenie miejscowe'+(ty?' '+ty:'')+': '+anP+', '+dz+'.';
+     const L=o[fi].text.split('\n');L.splice(1,0,ln);o[fi]={code:o[fi].code,text:L.join('\n')};}}
+  if((str(state.a['sh.zal'])||ZAL_OPTS[0])==='ustnie')o.forEach((x,i)=>{o[i]={code:x.code,text:x.text.split('ustnie i pisemnie').join('ustnie')};});
+  const pod=str(state.a['sh.pod']).trim();if(pod&&pod!=='Ionosit')o.forEach((x,i)=>{o[i]={code:x.code,text:x.text.split('materiał podkładowy Ionosit').join('materiał podkładowy '+pod)};});
   if(r){for(let i=o.length-1;i>=0;i--){if(ZACH_CODES.includes(o[i].code)){o[i]={code:o[i].code,text:o[i].text+'\n'+r};break;}}}
   return o;}
 const plain=s=>s.replace(/\u0001([^\u0002]*)\u0002/g,'[UZUPEŁNIJ: $1]');
-function genTxt(){return buildOut().map(o=>plain(o.text)).join('\n\n');}
+function sumItem(c){const d=D[c];let s=d.name.charAt(0).toLowerCase()+d.name.slice(1);
+  if(d.diag&&d.diag.mode!=='quad'){const ts=teethOf(c);if(ts.length)s+=' – '+(ts.length>1?'zęby ':'ząb ')+ts.map(t=>t+(d.diag.mode==='surf'&&surfOf(c,t).length?' ('+SORD.filter(x=>surfOf(c,t).includes(x)).join('')+')':'')).join(', ');}
+  if(d.diag&&(d.diag.mode==='quad'||d.diag.mode==='mixed')){const q=(state.quads[c]||[]).slice().sort();if(q.length)s+=' – '+(q.length>1?'ćwiartki ':'ćwiartka ')+q.join(', ');}
+  return s;}
+function sumPrefix(){if(cfg.sum===false||!state.codes.length)return '';return 'Wykonano: '+state.codes.map(sumItem).join('; ')+'.\n\n';}
+function genTxt(){return sumPrefix()+buildOut().map(o=>plain(o.text)).join('\n\n');}
 function fullTxt(){return state.ed?state.ed.txt:genTxt();}                 // tekst edytowany ręcznie ma pierwszeństwo przed wygenerowanym
 const edMiss=()=>(String(state.ed.txt).match(/\[UZUPEŁNIJ/g)||[]).length;
 const htmlOut=s=>esc(s).replace(/\u0001([^\u0002]*)\u0002/g,'<mark>[UZUPEŁNIJ: $1]</mark>');
@@ -1798,7 +1830,7 @@ function setsHTML(){                                   // własne zestawy kodów
 }
 function renderStep2(){return linkBanner()+nfzBox()+sharedCard()+state.codes.map(cardHTML).join('')+ptsExtraCard();}
 function edBoxHTML(outs,m){                            // cały opis: podgląd wygenerowanego tekstu albo edycja ręczna przed zapisem
-  if(!state.ed)return `${m?`<div class="warn">Uwaga: w opisie ${m===1?'zostało':'zostały'} ${m} ${plural(m,'pole','pola','pól')} [UZUPEŁNIJ].</div>`:''}<div class="out all">${htmlOut(outs.map(o=>o.text).join('\n\n'))}</div><div class="row" style="margin-top:8px"><button type="button" class="btn ghost sm" data-act="edtxt" id="edTxtBtn">Edytuj tekst</button><span class="note">Poprawki ręczne zapiszą się w historii zamiast tekstu z formularza.</span></div>`;
+  if(!state.ed)return `${m?`<div class="warn">Uwaga: w opisie ${m===1?'zostało':'zostały'} ${m} ${plural(m,'pole','pola','pól')} [UZUPEŁNIJ].</div>`:''}<div class="out all">${htmlOut(sumPrefix()+outs.map(o=>o.text).join('\n\n'))}</div><div class="row" style="margin-top:8px"><button type="button" class="btn ghost sm" data-act="edtxt" id="edTxtBtn">Edytuj tekst</button><span class="note">Poprawki ręczne zapiszą się w historii zamiast tekstu z formularza.</span></div>`;
   const n=edMiss(),chg=genTxt()!==state.ed.gen;
   return `<div class="warn" id="ed-note">${chg?'Formularz zmienił się po edycji tekstu – Twój tekst nie został nadpisany.':'Tekst edytowany ręcznie – zmiany w formularzu go nie nadpiszą.'}${n?` W tekście ${n===1?'jest':'są'} ${n} ${plural(n,'pole','pola','pól')} [UZUPEŁNIJ].`:''}</div><textarea id="edTxt" class="edtxt" aria-label="Tekst opisu (edycja)">${esc(state.ed.txt)}</textarea><div class="row" style="margin-top:8px"><button type="button" class="btn ghost sm" data-act="regen" id="regenBtn">Wygeneruj tekst z formularza</button></div>`;
 }
@@ -1915,6 +1947,8 @@ document.addEventListener('click',e=>{
   if(a==='addcodes'){addCodes($('#codeIn').value);render();return;}
   if(a==='seg'){const k=el.dataset.key;const cur=str(getVal(k));setVal(k,cur===el.dataset.v?'':el.dataset.v);afterChange(el);return;}
   if(a==='chk'){const k=el.dataset.key;let arr=getVal(k);arr=Array.isArray(arr)?arr.slice():[];const v=el.dataset.v;const i=arr.indexOf(v);i>=0?arr.splice(i,1):arr.push(v);setVal(k,arr);afterChange(el);return;}
+  if(a==='qv'){setVal(el.dataset.key,el.dataset.v);afterChange(el);return;}
+  if(a==='wywbrak'){['sh.al','sh.ch','sh.lk'].forEach(k=>{if(!str(state.a[k]))setVal(k,'brak');});afterChange(el);return;}
   if(a==='brak'){setVal(el.dataset.key,'brak');afterChange(el);return;}
   if(a==='tooth'){if(e.target.closest('[data-act="surf"]'))return;toggleTooth(el.dataset.code,+el.dataset.t);rerenderCard(el.dataset.code);return;}
   if(a==='surf'){const c=el.dataset.code,t=+el.dataset.t,s=el.dataset.s;const d=D[c];
@@ -1925,12 +1959,13 @@ document.addEventListener('click',e=>{
   if(a==='quadset'){const c=el.dataset.code;state.quads[c]=el.dataset.q?el.dataset.q.split(',').map(Number):[];rerenderCard(c);return;}
   if(a==='addrow'){(state.a[el.dataset.key]=state.a[el.dataset.key]||[]).push({});rerenderCard(el.dataset.code);return;}
   if(a==='delrow'){const arr=state.a[el.dataset.key]||[];arr.splice(+el.dataset.i,1);if(!arr.length)arr.push({});rerenderCard('1206');return;}
-  if(a==='copy'||a==='copyall'){const outs=buildOut(),r=autoSave();refreshSave();
+  if(a==='copy'||a==='copyall'){quickLearn();const outs=buildOut(),r=autoSave();refreshSave();
     copyText(a==='copy'?plain(outs[+el.dataset.i].text):fullTxt(),r&&r.ok?'Skopiowano · wizyta zapisana w historii':(r&&(r.why==='diff'||r.why==='inichg')?'Skopiowano · zapis wizyty wstrzymany – wybierz u góry':'Skopiowano'));return;}
   /* rozliczenie i zapis wizyty */
   if(a==='pct'){cfg.pct=+el.dataset.v;cfgSave();if(state.vPct!=null)state.vPct=cfg.pct;render();return;}
   if(a==='usecur'){state.vPrice=null;state.vPct=null;state.vRev=null;render();return;}
   if(a==='automode'){cfg.auto=!cfg.auto;cfgSave();render();toast(cfg.auto?'Zapis automatyczny włączony – wizyty zapisują się bez inicjałów':'Zapis tylko po wpisaniu inicjałów');return;}
+  if(a==='sumopt'){cfg.sum=el.dataset.v!=='off';cfgSave();render();return;}
   if(a==='basis'){cfg.basis=el.dataset.v==='share'?'share':'full';cfgSave();render();return;}
   if(a==='detach'||a==='savenew'){unlinkVisit();render();toast('To będzie osobna wizyta – poprzedni wpis zostaje bez zmian');return;}
   if(a==='savefix'||a==='saveforce'){state.iniOk=saveIni();state.diffOk=JSON.stringify(linkKey());state.skipSave=false;render();return;}

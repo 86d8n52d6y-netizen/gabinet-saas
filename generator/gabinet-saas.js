@@ -18,6 +18,11 @@
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const MOD = C.mod === 'prywatne' || C.mod === 'kalendarz' || C.mod === 'import' ? C.mod : 'nfz';
   const G = window.G = { user: { id: C.uid, name: C.name }, key: null, mod: null, esc };
+  // Własne materiały z konta (Ustawienia → Moje materiały; pkt 1.2): podpowiedzi = lista wbudowana + własne, bez powtórzeń.
+  G.mat = (kinds, base) => { const out = [], seen = new Set();
+    for (const n of (base || []).concat(...[].concat(kinds).map(k => ((C.mat || {})[k] || []))))
+      if (typeof n === 'string' && n && !seen.has(n.toLowerCase())) { seen.add(n.toLowerCase()); out.push(n); }
+    return out; };
   G.zl = c => (Math.round(c) / 100).toLocaleString('pl-PL', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' zł';
   G.today = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
 
@@ -302,7 +307,7 @@
     localStorage.setItem(CFG_KEY, JSON.stringify(Object.assign(loc, C.cfg || {})));
   } catch (e) { }
   let lastCfg = JSON.stringify(C.cfg || {}), cfgT = null;
-  function pickCfg() { /* global cfg */ const c = typeof cfg !== 'undefined' ? cfg : null; return c && { price: c.price, pct: c.pct, rev: c.rev, basis: c.basis, auto: c.auto, fav: c.fav, hid: c.hid, sets: c.sets }; }
+  function pickCfg() { /* global cfg */ const c = typeof cfg !== 'undefined' ? cfg : null; return c && { price: c.price, pct: c.pct, rev: c.rev, basis: c.basis, auto: c.auto, fav: c.fav, hid: c.hid, sets: c.sets, sum: c.sum }; }
   addEventListener('DOMContentLoaded', () => {
     const orig = window.cfgSave;
     if (typeof orig !== 'function') return;

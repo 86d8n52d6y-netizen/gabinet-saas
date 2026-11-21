@@ -2,7 +2,8 @@ import ActionForm from '@/components/ActionForm';
 import { requireAccess } from '@/lib/access';
 import { withUser } from '@/lib/db';
 import { centsHours, centsPts, fmtC } from '@/lib/nfz/engine';
-import { saveNfzSettings } from '@/lib/praca/actions';
+import { saveMaterials, saveNfzSettings } from '@/lib/praca/actions';
+import { cleanMat, MAT_KINDS, type MatKind } from '@/lib/materialy';
 import { cleanNfz, PCT_OPTS } from '@/lib/settings';
 export const metadata = { title: 'Ustawienia – Gabinet' };
 export const dynamic = 'force-dynamic';
@@ -13,6 +14,7 @@ export default async function Ustawienia() {
   const s = await requireAccess();
   const row = await withUser(s.userId, async c => (await c.query('SELECT settings, version FROM app.user_settings')).rows[0]);
   const n = cleanNfz(row?.settings?.nfz);
+  const mat = cleanMat(row?.settings?.mat);
   return (
     <main className="wrap">
       <h1>Ustawienia</h1>
@@ -36,6 +38,19 @@ export default async function Ustawienia() {
               <p className="hint">jak liczyć zarobek w statystykach</p></div>
           </div>
           <p className="hint">Domyślnie: 1,84 zł/pkt, 40%, 350 zł/h. Pakiet higienizacyjny z ekstrakcją lub leczeniem zachowawczym: +10 min do czasu wizyty (zasada bez zmian).</p>
+        </ActionForm>
+      </section>
+      <section className="card" aria-labelledby="mat" data-testid="materialy">
+        <h2 id="mat" style={{ marginTop: 0 }}>Moje materiały</h2>
+        <p className="hint">Nazwy preparatów, których używasz – pojawią się jako podpowiedzi w Opisach NFZ i prywatnych (obok listy wbudowanej; zawsze możesz też wpisać inną nazwę).
+          Jedna nazwa w linii. Usuń linię, żeby usunąć materiał; popraw tekst, żeby zmienić nazwę. Bez danych pacjentów.</p>
+        <ActionForm action={saveMaterials} submit="Zapisz materiały" pending="Zapisuję…">
+          <input type="hidden" name="version" value={row?.version ?? 0} />
+          <div className="grid2">
+            {(Object.keys(MAT_KINDS) as MatKind[]).map(k => (
+              <div key={k}><label htmlFor={'mat_' + k}>{MAT_KINDS[k]}</label>
+                <textarea id={'mat_' + k} name={'mat_' + k} rows={5} defaultValue={mat[k].join('\n')} placeholder={k === 'kompozyt' ? 'np. Filtek Z550' : k === 'lakier' ? 'np. Duraphat' : k === 'podklad' ? 'np. Ionosit' : 'np. Biodentine'} /></div>))}
+          </div>
         </ActionForm>
       </section>
     </main>

@@ -1,5 +1,6 @@
 // Strony modułów Opisy NFZ i Opisy prywatne: pliki z katalogu generator/ (poza public/ – kod widoczny tylko dla zalogowanych z licencją).
 import 'server-only';
+import { cleanMat } from '../materialy';
 import { createHash } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
@@ -62,8 +63,9 @@ export async function page(uid: string, name: string, mod: 'nfz' | 'prywatne' | 
         cfg: { ...cleanNfz(st.nfz), ...cleanUi(st.nfzUi) }, seg: st.nfzSeg ?? null };
     }
     const shifts = await shiftsByDay(c, addDays(-400), addDays(60));
-    if (mod === 'prywatne') return { uid, name, mod, clinics, shifts, blobs: await getBlobs(c, BLOB_KEYS), blobVer: await getBlobVers(c, BLOB_KEYS), visits: await listPryw(c) };
-    return { uid, name, mod, clinics, shifts, cfg: { ...cleanNfz(st.nfz), ...cleanUi(st.nfzUi) }, seg: st.nfzSeg ?? null, visits: await listVisits(c) };
+    const mat = cleanMat(st.mat);                                                       // własne materiały (pkt 1.2) – nazwy preparatów, bez danych pacjentów
+    if (mod === 'prywatne') return { uid, name, mod, clinics, shifts, mat, blobs: await getBlobs(c, BLOB_KEYS), blobVer: await getBlobVers(c, BLOB_KEYS), visits: await listPryw(c) };
+    return { uid, name, mod, clinics, shifts, mat, cfg: { ...cleanNfz(st.nfz), ...cleanUi(st.nfzUi) }, seg: st.nfzSeg ?? null, visits: await listVisits(c) };
   });
   const json = JSON.stringify(data).replace(/</g, '\\u003c').replace(/\u2028/g, '\\u2028').replace(/\u2029/g, '\\u2029');
   const html = (await file(mod === 'prywatne' ? 'prywatne.html' : mod === 'kalendarz' ? 'kalendarz.html' : mod === 'import' ? 'import.html' : 'nfz.html')).buf.toString('utf8').replace('<!--GABINET_DANE-->', `<script>window.__GABINET=${json};</script>`);

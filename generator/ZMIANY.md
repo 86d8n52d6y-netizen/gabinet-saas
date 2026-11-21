@@ -29,6 +29,31 @@ Plik `wspolne.js` (sejf z hasłem w przeglądarce) zastąpiony przez `gabinet-sa
 | P20 | lakiery fluorkowe (1101): lista podpowiedzi rozszerzona – Duraphat, Fluor Protector (decyzja Patryka 21.11.2026, pkt 1.1); własna nazwa nadal wpisywana ręcznie |
 | P21 | lakierowanie zębów (1006): opcjonalny wybór preparatu – dopisywany do opisu tylko po wybraniu (pkt 1.1); Elmex jako żel (nie lakier) |
 | P22 | lista preparatów fluorkowych (wspólna dla 1101 i 1006) |
+| P23 | nazwa kompozytu: podpowiedzi z „Moich materiałów” (Ustawienia; prompt Patryka 21.11.2026, pkt 1.2) – nadal można wpisać dowolną nazwę |
+| P24 | materiał podkładowy (głęboka próchnica): pole przy leczeniu zachowawczym i urazie – domyślnie Ionosit (tekst bez zmian), podpowiedzi z „Moich materiałów” (pkt 1.2) |
+| P25 | materiał podkładowy w opisie: wybrana nazwa zamiast „Ionosit” (puste pole = Ionosit, jak dotąd) |
+| P26 | wędzidełka: domyślnie „Typ I – śluzówkowy” (decyzja Patryka 21.11.2026, pkt 2.1); zmiana tylko, gdy jest inaczej |
+| P27 | wywiad: opcjonalne pole „aktualnie przyjmowane leki” (pkt 2.1; tylko w treści opisu na urządzeniu) |
+| P28 | opis badania: wędzidełka domyślnie Typ I (P26) |
+| P28a | opis badania: wędzidełko dolne domyślnie Typ I (P26) |
+| P29 | opis badania: linia „Aktualnie przyjmowane leki – …” tylko, gdy wpisano (P27) |
+| P30 | przycisk „Wywiad bez obciążeń” – jednym kliknięciem brak alergii, chorób i leków; nie nadpisuje wpisanych (pkt 2.1) |
+| P30a | obsługa przycisku „Wywiad bez obciążeń”: uzupełnia tylko puste pola |
+| P31 | znieczulenie przy wypełnieniach, endo i ST30 (decyzja Patryka 21.11.2026, pkt 6.3): przyciski Dentocaine / Mark3 / bez znieczulenia + własny preparat; rodzaj i dawka (domyślnie 1 amp., do zmiany); nic nie wybrane = opis bez zmian |
+| P32 | znieczulenie w opisie: zdanie zaraz po tytule pierwszego zabiegu z listy (P31); ekstrakcje ST01/ST02 bez zmian (mają własne znieczulenie) |
+| P33 | stałe znieczuleń (P31–P32) |
+| P34 | zalecenia: przełącznik „ustnie / ustnie i pisemnie” przy każdej wizycie, domyślnie „ustnie” (decyzja Patryka 21.11.2026, pkt 6.5) |
+| P35 | zalecenia w opisie: przy „ustnie” fraza „ustnie i pisemnie” ze stałych tekstów zamieniona na „ustnie” (stałe teksty w Ustawieniach bez zmian) |
+| P36 | stałe zaleceń (P34–P35) |
+| P37 | trzy szybkie opcje (decyzja Patryka 21.11.2026, pkt 6.4): kolor wypełnienia, nazwa kompozytu, lakier fluorkowy – 3 najczęściej używane (licznik na tym urządzeniu, bez danych pacjentów; na start: A1/A2/A3 i początek listy); nadal można wpisać własną wartość |
+| P38 | funkcje szybkich opcji NFZ (P37) |
+| P39 | obsługa szybkich opcji i nauka „najczęściej używanych” przy kopiowaniu opisu |
+| P39a | zapamiętanie użytych wartości (kolor, kompozyt, lakier) przy kopiowaniu opisu |
+| P39b | wygląd zaznaczonej szybkiej opcji |
+| P40 | podsumowanie na początku opisu (decyzja Patryka 21.11.2026, pkt 6.1): „Wykonano: …” z nazw zaznaczonych zabiegów, zębów i powierzchni; domyślnie włączone, wyłącznik w Ustawieniach; kopiowane razem z opisem |
+| P40a | podsumowanie także w podglądzie „Cały opis” |
+| P40b | wyłącznik podsumowania w Ustawieniach modułu |
+| P40c | obsługa wyłącznika podsumowania |
 
 ## Opisy prywatne (`prywatne.html`)
 
@@ -44,6 +69,18 @@ Plik `wspolne.js` (sejf z hasłem w przeglądarce) zastąpiony przez `gabinet-sa
 | R7a | odczyt treści: zapamiętanie, że treści nie ma (zamiast ponownego „Wczytuję…”) |
 | R7b | „Pokaż opis”: komunikat o braku treści na tym urządzeniu |
 | R7c | „Kopiuj opis” bez treści na urządzeniu: konkretny komunikat zamiast „Nie udało się skopiować” |
+| R8 | podpowiedzi materiałów w szablonach: lista wbudowana + „Moje materiały” z konta (prompt Patryka 21.11.2026, pkt 1.2); pola: materiał wypełnienia, podkład, materiał w zębodole |
+| R8a | pole „Materiał w zębodole” też z podpowiedziami „Moich materiałów” |
+| R9 | zalecenia ustne (decyzja Patryka 21.11.2026, pkt 6.5): „Zalecenia przekazano pacjentowi w formie ustnej.” na końcu opisu wizyty – domyślnie tak, do wyłączenia przy wizycie |
+| R9a | pole wyboru przy wizycie (obok e-ZLA) |
+| R9b | obsługa pola „zalecenia ustne” |
+| R10 | szybkie opcje (pkt 6.2–6.4): 3 najczęściej używane wartości z historii jako przyciski (materiały, środek znieczulający); 5 dolegliwości do klikania przy wywiadzie (zachowawcze, endo, diagnostyka); dawka znieczulenia ½ / 1 / 2 amp. (domyślnie 1 amp. = 1,7 ml); zawsze można wpisać własną wartość |
+| R10a | funkcje szybkich opcji i podpowiedzi (wspólne dla datalist i przycisków) |
+| R10b | obsługa przycisków szybkich opcji |
+| R10c | wygląd przycisków szybkich opcji |
+| R11 | podsumowanie na początku opisu (decyzja Patryka 21.11.2026, pkt 6.1): „Wykonano: …” z procedur wizyty i zębów; domyślnie włączone, wyłącznik w Ustawieniach |
+| R11a | wyłącznik podsumowania w Ustawieniach (obok podpisu) |
+| R11b | obsługa wyłącznika podsumowania |
 
 ## Kalendarz (`kalendarz.html`)
 

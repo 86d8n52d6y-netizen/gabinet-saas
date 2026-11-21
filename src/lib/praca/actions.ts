@@ -9,6 +9,7 @@ import { withUser } from '../db';
 import { str, type State } from '../auth/core';
 import { cleanNfz, parseNum, PCT_OPTS } from '../settings';
 import { COLORS, MODELS, type Model } from '../clinics';
+import { cleanMat, linesOf, MAT_KINDS } from '../materialy';
 
 const CONFLICT = 'Te dane zmieniono w międzyczasie na innym urządzeniu. Odśwież stronę i wprowadź zmianę ponownie.';
 const ver = (fd: FormData) => { const v = Number(str(fd, 'version', 12)); return Number.isInteger(v) && v > 0 ? v : 0; };
@@ -28,6 +29,19 @@ export async function saveNfzSettings(_: State, fd: FormData): Promise<State> {
   if (!r.rowCount) return { error: CONFLICT };
   revalidatePath('/ustawienia');
   return { ok: 'Zapisano. Nowe stawki dotyczą nowych wizyt – zapisane wizyty pamiętają stawki z dnia zapisu.' };
+}
+
+// ---------------- własne materiały (prompt 21.11.2026, pkt 1.2) ----------------
+export async function saveMaterials(_: State, fd: FormData): Promise<State> {
+  const s = await requireAccess();
+  const mat = cleanMat(Object.fromEntries(Object.keys(MAT_KINDS).map(k => [k, linesOf(str(fd, 'mat_' + k, 20000))])));
+  const r = await withUser(s.userId, c => c.query(
+    `UPDATE app.user_settings SET settings = jsonb_set(settings, '{mat}', $2::jsonb) WHERE user_id = $1 AND version = $3`,
+    [s.userId, JSON.stringify(mat), ver(fd)]));
+  if (!r.rowCount) return { error: CONFLICT };
+  revalidatePath('/ustawienia');
+  const n = Object.values(mat).reduce((a, l) => a + l.length, 0);
+  return { ok: `Zapisano ${n} ${n === 1 ? 'materiał' : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? 'materiały' : 'materiałów'}. Pojawią się jako podpowiedzi w Opisach NFZ i prywatnych.` };
 }
 
 // ---------------- gabinety ----------------

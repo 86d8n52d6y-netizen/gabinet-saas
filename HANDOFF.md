@@ -182,3 +182,34 @@ Zasada: narzędzia uruchamiane **lokalnie, bez wysyłania danych na zewnątrz**;
 |---|---|
 | shellcheck 0.9.0 (8 skryptów `.sh`/`.command`) | **0 błędów**, 6 ostrzeżeń, 11 uwag stylu. Ostrzeżenia: `tests/e2e/uruchom.sh` (`cd` bez `|| exit`, brak cudzysłowów przy `$(cat $PIDF)`, nieużyta zmienna pętli); `zainstaluj-mac.command:24` (`ls … </dev/null` – celowe, poprawka `f37b14a`; fałszywy alarm), `:90` (nieużyta zmienna pętli). Nic krytycznego – do ewentualnej poprawki w etapie 3. |
 | Sekrety w historii git (28 commitów; zamiast gitleaks – wyszukiwanie wzorców: klucze prywatne, tokeny GitHub/Stripe/AWS, 64-znakowe klucze hex przypisane do `AUTH_SECRET`/`APP_ENC_KEY`/haseł) | **nic nie znaleziono**; w historii tylko `.env.example` z tekstami zastępczymi. Drobiazg: komentarz w `.env.example` wspomina „skrypty uruchom-*” (dziś `zainstaluj-mac.command`). |
+
+## 9. Prompt „Rozwój aplikacji Gabinet” (21.11.2026) – stan i decyzje Patryka
+
+Treść promptu: 7 etapów (materiały, automatyzacja formularzy, zarobki i rozliczenia, wygląd, opisy prywatne, generowanie opisów, badanie). Zasady promptu: etapami, testy po każdym, bez zmian architektury bez zgody, `POSTEP.md` / `CLAUDE.md` / `docs/AUDYT_SAAS.md` tylko za zgodą.
+
+### Zrobione (PR #4, `main` @ `d8b9426`)
+| Pkt | Zmiana |
+|---|---|
+| 1.1 | lakiery: Duraphat (Colgate), Fluor Protector (Ivoclar), Elmex gelée (żel fluorkowy – to nie lakier) obok VOCO Profluorid; 1006 – opcjonalny preparat w opisie (P20–P22) |
+| 3.1 | Opisy NFZ: dolny pasek bez kwot (P8–P10) |
+| 3.2 | Statystyki NFZ: bez kolumn „Z punktów” i „Z przeglądów” (P14–P19) |
+| 3.3 | Zarobki: kwota z rozliczenia gabinetu (Kalendarz → Rozliczenia) zamiast sumy z dyżurów – jak `monthCalc` w Kalendarzu, tylko pełne miesiące, brutto i netto (`kal.ts`, `kal-silnik.ts`) |
+| 3.4 | sprawdzone: gabinety już są jednym rekordem (UUID) – bez zmian |
+| 4.1/4.2 | jeden wygląd: `GBar` na stronach aplikacji, Kalendarz K39 (tylko CSS) |
+| 5 | Opisy prywatne: brak treści na urządzeniu → komunikat zamiast „Wczytuję…” (R7–R7c); pomiar startu: 1500 wizyt < 0,3 s |
+| 7.1 / 7.2 | uraz: „nagryzienie na twardy przedmiot” (P11); niepewne rokowanie – opcja pełna/krótka, domyślnie nic (P12–P13) |
+
+### Do zrobienia – decyzje Patryka (pytania do klikania, 21.11.2026)
+| Pkt | Decyzja |
+|---|---|
+| 1.2 materiały | lista „wybierz albo wpisz własny”, zapisana **na koncie**, w polach: nazwa kompozytu (NFZ), lakier fluorkowy (NFZ), materiał podkładowy (zamiast stałego „Ionosit”), materiały w Opisach prywatnych; zarządzanie: sekcja „Moje materiały” na stronie **Ustawienia**; zmiana API: nowy klucz ustawień z walidacją, **bez migracji** |
+| 2.1 wędzidełka | oba domyślnie „Typ I – śluzówkowy” |
+| 2.1 wywiad | przycisk „wywiad bez obciążeń” (brak alergii, chorób, leków naraz; nie nadpisuje wpisanych) + wyraźne pole „aktualne leki”; dane tylko w treści opisu na urządzeniu |
+| 6.1 podsumowanie | na górze opisu, **domyślnie włączone**, wyłącznik w Ustawieniach; forma: „Wykonano: badanie kontrolne, usunięcie złogów (½ łuku), wypełnienie zęba 36 (MO).” (NFZ i prywatne) |
+| 6.2 dolegliwości | 5 przycisków: ból samoistny · ból na zimno/ciepło · ból przy nagryzaniu · nadwrażliwość · ukruszenie/złamanie zęba (lub wypełnienia); kilka naraz + własny wpis; Opisy prywatne: procedury zachowawcze, endo, konsultacje |
+| 6.3 znieczulenie | przyciski: Dentocaine (artykaina), Mark3 20% benzokaina, bez znieczulenia, własny preparat; dawka domyślnie **1 amp. (1,7 ml)**, przyciski ½ / 2 amp. + własna; NFZ: wypełnienia (1105, 1108, 15xx), endo (1206), ST30; ekstrakcje ST01/ST02 bez zmian; prywatne: procedury zabiegowe |
+| 6.4 trzy szybkie opcje | kolor, nazwa kompozytu, lakier, pola w prywatnych; „najczęstsze” liczone z historii na urządzeniu (na start – pierwsze z listy) |
+| 6.5 zalecenia | przycisk „ustnie / ustnie i pisemnie”, **domyślnie „ustnie”**; prywatne: „Zalecenia przekazano pacjentowi w formie ustnej.” we wszystkich, z wyłączeniem przy wizycie |
+
+**Skutek:** domyślny tekst opisów NFZ zmieni się (6.1, 6.5, 2.1) – testy porównawcze ze starą aplikacją dostosować: porównanie przy wyłączonych nowościach + osobne sprawdzenie nowych fragmentów.
+**Kolejność:** 1.2 → 2.1 → 6.3 → 6.2 → 6.5 → 6.4 → 6.1; po każdym etapie testy; commit + PR po całości (Patryk scala).
