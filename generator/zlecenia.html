@@ -38,6 +38,15 @@
   .zl-chk ul{margin:6px 0 0;padding-left:18px}
   .zl-bar{position:sticky;bottom:0;background:var(--g-surface);border-top:1px solid var(--g-line);padding:10px 0;display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;z-index:5}
   .zl-hist{font-size:13px;color:var(--g-muted);margin:6px 0 0;padding-left:18px}
+  .zl-fdi{display:grid;gap:6px;overflow-x:auto;padding:4px 0}
+  .zl-fdi .rz{display:flex;gap:3px;justify-content:center;min-width:max-content}
+  .zl-fdi .rz .mid{width:10px;border-left:2px solid var(--g-line);margin-left:6px}
+  .zl-fdi .sep{border-top:2px solid var(--g-line);margin:2px 0}
+  .zl-fdi button{font:inherit;font-size:12.5px;width:36px;height:44px;border:1px solid var(--g-line);border-radius:8px;background:var(--g-surface);color:var(--g-ink);cursor:pointer;display:grid;place-items:center;line-height:1.05;padding:2px 0}
+  .zl-fdi button small{font-size:10.5px;font-weight:700}
+  .zl-fdi button[data-r]{background:var(--rc);border-color:var(--rc);color:#fff}
+  .zl-leg{display:flex;flex-wrap:wrap;gap:6px;font-size:12.5px}
+  .zl-ch button[data-rola]{border-left:6px solid var(--rc)}
   @media print{.gbar,.zl-bar,.zl-noprint{display:none!important}}
 </style>
 </head>
@@ -87,6 +96,36 @@ const KAT = [
 const KOLORY = { 'Vita Classic': ['A1', 'A2', 'A3', 'A3,5', 'A4', 'B1', 'B2', 'B3', 'B4', 'C1', 'C2', 'C3', 'C4', 'D2', 'D3', 'D4'],
   'Vita 3D-Master': ['0M1', '0M2', '0M3', '1M1', '1M2', '2L1.5', '2L2.5', '2M1', '2M2', '2M3', '2R1.5', '2R2.5', '3L1.5', '3L2.5', '3M1', '3M2', '3M3', '3R1.5', '3R2.5', '4L1.5', '4L2.5', '4M1', '4M2', '4M3', '4R1.5', '4R2.5', '5M1', '5M2', '5M3'],
   'Bleach': ['BL1', 'BL2', 'BL3', 'BL4'] };
+/* ---------- schemat zębów FDI (E3) – rola na ząb; z.a.schemat = { '11': 'korona', ... }, uwagi z.a.zUw = { '11': '…' } ---------- */
+const ROLE = [['korona', 'K', '#2f6fb3'], ['filar', 'F', '#6b4fb3'], ['przęsło', 'P', '#c0601a'], ['implant', 'I', '#1f8a5b'], ['brak', 'B', '#7a7a7a'], ['uwaga', '!', '#b3263b'], ['kontakt', '•', '#8a6d00']];
+const ROLA = Object.fromEntries(ROLE.map(r => [r[0], r]));
+const FDI = { s: [[18, 17, 16, 15, 14, 13, 12, 11], [21, 22, 23, 24, 25, 26, 27, 28], [48, 47, 46, 45, 44, 43, 42, 41], [31, 32, 33, 34, 35, 36, 37, 38]],
+  m: [[55, 54, 53, 52, 51], [61, 62, 63, 64, 65], [85, 84, 83, 82, 81], [71, 72, 73, 74, 75]] };
+const FDI_ALL = new Set(FDI.s.concat(FDI.m).flat().map(String));
+const fdiSort = l => l.slice().sort((x, y) => +x - +y);
+const zRola = (z, r) => fdiSort(Object.keys((z.a || {}).schemat || {}).filter(n => z.a.schemat[n] === r));
+/* po zmianie schematu: pola tekstowe uzupełniane ze schematu (można je potem poprawić ręcznie) */
+function zSync(z) {
+  const t = typOf(z), sc = (z.a || {}).schemat || {}, s = t ? t.secs : [];
+  const prace = fdiSort(Object.keys(sc).filter(n => ['korona', 'filar', 'przęsło', 'implant'].includes(sc[n])));
+  z.a.zeby = prace.join(', ');
+  if (s.includes('most')) { z.a.filary = zRola(z, 'filar').concat(zRola(z, 'implant')).sort((x, y) => +x - +y).join(', '); z.a.przesla = zRola(z, 'przęsło').join(', '); }
+  if (s.includes('aox')) z.a.aoxPoz = zRola(z, 'implant').join(', ');
+  for (const n of Object.keys(z.a.zUw || {})) if (sc[n] !== 'uwaga' || !z.a.zUw[n]) delete z.a.zUw[n];
+}
+function fdiHTML(z) {
+  const sc = (z.a || {}).schemat || {}, M = !!S.mlecz, Q = M ? FDI.m : FDI.s;
+  const zab = n => { const r = ROLA[sc[n]]; return '<button type="button" data-a="zab" data-v="' + n + '" data-testid="zab-' + n + '"' + (r ? ' data-r="' + r[0] + '" style="--rc:' + r[2] + '"' : '') +
+    ' aria-pressed="' + !!r + '" aria-label="ząb ' + n + (r ? ': ' + r[0] : '') + '">' + n + (r ? '<small>' + r[1] + '</small>' : '') + '</button>'; };
+  const rzad = (a, b) => '<div class="rz">' + a.map(zab).join('') + '<span class="mid"></span>' + b.map(zab).join('') + '</div>';
+  const uw = zRola(z, 'uwaga'), poza = Object.keys(sc).filter(n => (M ? !FDI.m.flat().includes(+n) : !FDI.s.flat().includes(+n)));
+  return '<span class="lb">Schemat zębów (FDI) – wybierz rolę, potem kliknij zęby</span>' +
+    '<div class="zl-ch" role="group" aria-label="Rola zęba">' + ROLE.map(r => '<button type="button" data-a="rola" data-rola="' + r[0] + '" data-v="' + r[0] + '" style="--rc:' + r[2] + '" aria-pressed="' + ((S.rola || 'korona') === r[0]) + '">' + r[1] + ' ' + esc(r[0]) + '</button>').join('') +
+      '<button type="button" data-a="mlecz" aria-pressed="' + M + '">' + (M ? 'zęby mleczne (51–85)' : 'zęby stałe (11–48)') + ' – przełącz</button></div>' +
+    '<div class="zl-fdi" role="group" aria-label="Schemat zębów">' + rzad(Q[0], Q[1]) + '<div class="sep"></div>' + rzad(Q[2], Q[3]) + '</div>' +
+    '<span class="zl-hint">Kliknięcie zęba nadaje wybraną rolę, ponowne – usuwa. Prawa strona pacjenta po lewej (jak na schemacie w karcie).' + (poza.length ? ' Oznaczone też w ' + (M ? 'stałych' : 'mlecznych') + ': ' + esc(fdiSort(poza).join(', ')) + '.' : '') + '</span>' +
+    (uw.length ? uw.map(n => '<label class="zl-hint" for="f_zuw_' + n + '">Uwaga do zęba ' + n + '</label><input class="zl-in" id="f_zuw_' + n + '" data-zuw="' + n + '" value="' + esc(((z.a || {}).zUw || {})[n] || '') + '" autocomplete="off">').join('') : '');
+}
 function typOf(z) { return KAT.find(k => k.id === z.typ) || (z.typ ? { id: z.typ, grp: 'F', name: z.typ, mats: M_STALE, secs: ['kolor'] } : null); }
 function allTypes() { return KAT.concat(G.mat('praca', []).map(n => ({ id: n, grp: 'F', name: n, mats: M_STALE, secs: ['kolor'], own: true }))); }
 
@@ -97,7 +136,8 @@ function sekcje(z) {
   const out = [{ id: 'pod', tyt: 'Dane podstawowe', open: true, pola: [
     { k: 'nr', l: 'Numer przypadku', t: 'text', st: 'W', hint: 'ten sam numer w nazwach plików i zdjęć' },
     { k: 'ini', l: 'Inicjały pacjenta', t: 'text', st: 'W', hint: 'tylko na tym urządzeniu' },
-    { k: 'zeby', l: 'Zęby (FDI)', t: 'text', st: 'W', hint: 'np. 11, 21 albo 14–16' },
+    { k: 'schemat', l: 'Schemat zębów', t: 'fdi', st: 'O', w: 1 },
+    { k: 'zeby', l: 'Zęby (FDI)', t: 'text', st: 'W', hint: 'uzupełnia się ze schematu; można wpisać ręcznie, np. 11, 21 albo 14–16' },
     { k: 'mat', l: 'Materiał', t: 'chips1', opts: t ? G.mat(t.grp === 'C' || t.grp === 'D' ? ['kompozyt', 'inne'] : ['kompozyt'], t.mats) : [], st: 'W', own: true },
     { k: 'lab', l: 'Laboratorium / technik', t: 'text', dl: 'dl-lab', st: 'Z' },
     { k: 'termin', l: 'Termin odbioru', t: 'date', st: 'W' },
@@ -219,6 +259,7 @@ function lista() {
 function poleHTML(z, f) {
   const v = val(z, f.k), id = 'f_' + f.k, tag = f.st !== 'O' ? '<span class="zl-tag ' + f.st + '" title="' + (f.st === 'W' ? 'wymagane' : 'zalecane') + '">' + (f.st === 'W' ? 'wymagane' : 'zalecane') + '</span>' : '';
   let h;
+  if (f.t === 'fdi') return '<div class="zl-f w" data-testid="fdi">' + fdiHTML(z) + '</div>';
   if (f.t === 'chips1' || f.t === 'chipsN') {
     const cur = f.t === 'chipsN' ? (Array.isArray(v) ? v : []) : v;
     const opts = f.opts.concat(f.t === 'chips1' && v && !f.opts.includes(v) ? [v] : []).concat(f.t === 'chipsN' ? cur.filter(x => !f.opts.includes(x)) : []);
@@ -267,13 +308,19 @@ document.addEventListener('click', async e => {
   if (a === 'usun') { if (b.dataset.arm !== '1') { b.dataset.arm = '1'; b.textContent = 'Na pewno usunąć? Kliknij ponownie'; return; }
     await G.store('zlecenia').del(z.id); S.list = S.list.filter(x => x.id !== z.id); S.cur = null; render(); toast('Zlecenie usunięte z tego urządzenia.'); return; }
   if (!z) return;
-  if (a === 'typ') { S.open.typ = false; z.typ = b.dataset.v; await zapisz('rodzaj pracy: ' + (typOf(z) || {}).name); render(); return; }
+  if (a === 'typ') { S.open.typ = false; z.typ = b.dataset.v; if (Object.keys((z.a || {}).schemat || {}).length) zSync(z); await zapisz('rodzaj pracy: ' + (typOf(z) || {}).name); render(); return; }
+  if (a === 'rola') { S.rola = b.dataset.v; render(); return; }
+  if (a === 'mlecz') { S.mlecz = !S.mlecz; render(); return; }
+  if (a === 'zab') { const n = b.dataset.v, r = S.rola || 'korona'; if (!FDI_ALL.has(n)) return; z.a = z.a || {}; const sc = z.a.schemat = Object.assign({}, z.a.schemat);
+    if (sc[n] === r) delete sc[n]; else sc[n] = r; zSync(z); autosave(); render(); return; }
   if (a === 'status') { z.status = b.dataset.v; await zapisz('status: ' + z.status); render(); return; }
   if (a === 'ch') { const k = b.dataset.k, v = b.dataset.v; z.a = z.a || {};
     if (b.dataset.m === 'N') { const cur = Array.isArray(z.a[k]) ? z.a[k] : []; z.a[k] = cur.includes(v) ? cur.filter(x => x !== v) : cur.concat([v]); } else z.a[k] = z.a[k] === v ? '' : v;
     autosave(); render(); return; }
 });
-document.addEventListener('input', e => { const t = e.target; if (!S.cur || !t.dataset.k) return; S.cur.a = S.cur.a || {}; if (t.dataset.k === 'nr') S.cur.nr = t.value; else S.cur.a[t.dataset.k] = t.value; autosave(); odswiezKontrole(); });
+document.addEventListener('input', e => { const t = e.target; if (!S.cur) return;
+  if (t.dataset.zuw) { S.cur.a.zUw = Object.assign({}, S.cur.a.zUw, { [t.dataset.zuw]: t.value }); autosave(); return; }
+  if (!t.dataset.k) return; S.cur.a = S.cur.a || {}; if (t.dataset.k === 'nr') S.cur.nr = t.value; else S.cur.a[t.dataset.k] = t.value; autosave(); odswiezKontrole(); });
 document.addEventListener('keydown', e => {
   const t = e.target; if (e.key !== 'Enter' || !S.cur) return;
   if (t.dataset.own) { e.preventDefault(); const v = t.value.trim(); if (!v) return; const k = t.dataset.own; S.cur.a = S.cur.a || {};
