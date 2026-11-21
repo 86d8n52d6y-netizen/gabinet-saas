@@ -37,11 +37,15 @@
       rq.onblocked = () => { clearTimeout(to); rej(new Error('baza zablokowana przez inną kartę')); };
     });
   }
+  // Limit czasu operacji na bazie przeglądarki (Safari potrafi zawiesić transakcję po przejściu między stronami):
+  // zamiast „Wczytuję…” bez końca – błąd z komunikatem (moduł pokazuje informację i „Odśwież”).
+  const TX_MS = 20000;
   function run(db, stores, mode, fn) {
     return new Promise((res, rej) => {
       let t; try { t = db.transaction(stores, mode); } catch (e) { rej(e); return; }
-      let r; t.oncomplete = () => res(r && typeof r === 'object' && 'readyState' in r ? r.result : r);
-      t.onabort = t.onerror = () => rej(t.error || new Error('zapis przerwany'));
+      const to = setTimeout(() => { try { t.abort(); } catch (_) { } rej(new Error('baza danych przeglądarki nie odpowiada – odśwież stronę')); }, TX_MS);
+      let r; t.oncomplete = () => { clearTimeout(to); res(r && typeof r === 'object' && 'readyState' in r ? r.result : r); };
+      t.onabort = t.onerror = () => { clearTimeout(to); rej(t.error || new Error('zapis przerwany')); };
       try { r = fn(t); } catch (e) { try { t.abort(); } catch (_) { } rej(e); }
     });
   }
@@ -122,6 +126,11 @@
   const STORES = ['kv', 'szkice', 'wizyty', 'opisy'];                                   // wizyty/opisy – Opisy prywatne (wersja 2 bazy)
   let udb = null;
   async function userDb() { if (!udb) udb = await idbOpen('gabinet-saas@' + C.uid, STORES, 2); return udb; }
+  // Safari zachowuje poprzednią stronę w pamięci „wstecz/naprzód” razem z otwartym połączeniem do bazy, co potrafi
+  // zablokować bazę na następnej stronie (np. Opisy NFZ → Opisy prywatne). Przy wyjściu zamykamy połączenie (po zapisach
+  // z pagehide), a stronę przywróconą z tej pamięci przeładowujemy na świeżo. Zgłoszenie Patryka 21.11.2026.
+  addEventListener('pagehide', e => { if (e.persisted) setTimeout(() => { try { if (udb) udb.close(); } catch (_) { } udb = null; }, 0); });
+  addEventListener('pageshow', e => { if (e.persisted) location.reload(); });
   const BLOBS = ['pryw:cennik', 'pryw:ust', 'pryw:katalog', 'pryw:zestawy'];
   const PB_KEY = 'gabinet-saas.bloby@' + C.uid;
   const pendingBlobs = () => { try { const a = JSON.parse(localStorage.getItem(PB_KEY) || '[]'); return Array.isArray(a) ? a : []; } catch (e) { return []; } };

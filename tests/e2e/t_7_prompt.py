@@ -225,6 +225,22 @@ with sync_playwright() as p:
     chk('niepełny miesiąc (1 dzień): nadal z dyżurów (400 zł) – kwoty miesięcznej nie dzielimy na dni', money(pg.inner_text('[data-testid=zarobek]')) == 40000, pg.inner_text('[data-testid=zarobek]'))
     chk('podwójne liczenie wykluczone: miesiąc = kwota z rozliczenia (nie suma + kwota)', money(pg.inner_text('[data-testid=zarobek]')) != 64250 + 60000)
 
+    # ---- zgłoszenie 21.11: Konto → Kalendarz – strona nie przeskakuje (menu u góry widoczne)
+    pg.set_viewport_size({'width': 1280, 'height': 800})
+    pg.goto(URL + '/konto'); pg.click('#gbar a[href="/kalendarz"]')
+    pg.wait_for_function("window.Kal&&Kal.UI.loaded===true", timeout=20000); pg.wait_for_timeout(1500)
+    chk('Kalendarz: po wejściu strona na górze, menu Gabinetu widoczne', pg.evaluate("scrollY") == 0 and pg.evaluate("document.getElementById('gbar').getBoundingClientRect().top") >= 0)
+
+    # ---- zgłoszenie 21.11: Opisy prywatne czasem „Wczytuję…” bez końca – bezpiecznik (symulacja zawieszonej bazy przeglądarki)
+    hc = br.new_context(bypass_csp=True); hp = hc.new_page()
+    hp.goto(URL + '/logowanie'); fill(hp, email='p.7@example.com', password='zielony-kubek-na-biurku'); submit(hp, 'Zaloguj')
+    hp.add_init_script("""IDBDatabase.prototype.transaction = function () { const req = () => ({}); const st = { get: req, getAll: req, getAllKeys: req, put: req, delete: req, clear: req };
+      return { objectStore: () => st, abort() {} }; };""")
+    hp.goto(URL + '/opisy-prywatne'); hp.wait_for_timeout(18500)
+    main = hp.inner_text('#main')
+    chk('prywatne: zawieszona baza → po próbie odświeżenia komunikat z „Odśwież” (nie „Wczytuję…” bez końca)', 'trwa dłużej niż zwykle' in main and hp.locator('#main button', has_text='Odśwież').count() == 1, main[:200])
+    hc.close()
+
     chk('brak błędów JavaScript', not errs, errs)
     br.close()
 t.done('prompt 21.11: pasek bez kwot, uraz, rokowanie, opisy prywatne')

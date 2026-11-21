@@ -2149,12 +2149,12 @@ function hdrH() { var h = document.querySelector('header.top'); return h ? Math.
 function setHdrVar() { var h = document.querySelector('header.top'); if (h) document.documentElement.style.setProperty('--hdr', Math.round(h.getBoundingClientRect().height) + 'px'); }
 function stackTopBlock() {
   var bl = document.querySelectorAll('#main .sblock'), h = hdrH();
-  for (var i = 0; i < bl.length; i++) { var r = bl[i].getBoundingClientRect(); if (r.bottom > h + 48) return { key: bl[i].dataset.key, top: r.top }; }
+  for (var i = 0; i < bl.length; i++) { var r = bl[i].getBoundingClientRect(); if (r.bottom > h + 48) return { key: bl[i].dataset.key, top: r.top, y: window.scrollY }; }
   return null;
 }
 /* po przerysowaniu ten sam blok zostaje w tym samym miejscu ekranu (Safari nie ma „scroll anchoring”) */
 function stackRestore(a) {
-  if (!a) return;
+  if (!a || a.y < 1) return;
   var el = document.querySelector('#main .sblock[data-key="' + a.key + '"]'); if (!el) return;
   var d = el.getBoundingClientRect().top - a.top;
   if (Math.abs(d) > 1) window.scrollBy(0, d);
