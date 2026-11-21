@@ -87,3 +87,4 @@ Plik `wspolne.js` (sejf z hasłem w przeglądarce) zastąpiony przez `gabinet-sa
 | K25a | bez gabinetu: „Dodaj dyżury” prosi o dodanie gabinetu |
 | K25b | bez gabinetu: nowy wzór dni pracy prosi o dodanie gabinetu |
 | K25c | bez gabinetu: klik w siatkę tygodnia nie odwołuje się do nieistniejącego gabinetu |
+| K39 | wygląd jak reszta aplikacji (prompt Patryka 21.11.2026, pkt 4.1; wzorzec: Opisy NFZ): czcionka IBM Plex, paleta Gabinetu, wyróżnienia (przyciski główne, aktywna zakładka, dziś, podpowiedzi) w kolorze morskim zamiast czarnego, zakładki jako „pigułki”; logika bez zmian; kolory gabinetów bez zmian |

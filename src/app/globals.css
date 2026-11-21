@@ -61,3 +61,25 @@ table.num tfoot td{font-weight:700;border-top:2px solid var(--line)}
 .tile{display:flex;flex-direction:column;gap:4px;padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--surface);text-decoration:none;color:var(--ink)}
 .tile:hover{border-color:var(--accent)}.tile b{font-size:17px}
 table.num td:first-child{white-space:nowrap}
+
+/* górny pasek stron aplikacji = pasek modułów (generator/wspolne.css .gbar); prompt Patryka 21.11.2026, pkt 4.2 */
+.gbar{background:var(--surface);border-bottom:1px solid var(--line);color:var(--ink);position:relative;z-index:60}
+.gbar-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:6px 16px;min-height:48px}
+.gbar a{color:inherit;text-decoration:none}
+.gbar-home{display:flex;align-items:center;gap:7px;font-weight:700;font-size:16px;padding:6px 8px;border-radius:8px;color:var(--accent) !important}
+.gbar-nav{display:flex;gap:4px;flex:1;min-width:0;overflow-x:auto;scrollbar-width:none}
+.gbar-nav::-webkit-scrollbar{display:none}
+.gbar-nav a{white-space:nowrap;padding:8px 12px;border-radius:999px;font-size:14.5px;font-weight:500;color:var(--muted)}
+.gbar-nav a:hover{background:var(--bg);color:var(--ink)}
+.gbar-nav a.on{background:var(--accent);color:#fff;font-weight:600}
+@media (prefers-color-scheme:dark){.gbar-nav a.on{color:#06191a}}
+.gbar-out{margin-left:auto}.gbar-out button{min-height:34px;padding:4px 12px;font-size:13.5px;font-weight:500;background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:999px}
+.gbar-out button:hover{color:var(--ink);border-color:var(--accent)}
+@media (max-width:640px){.gbar-home span{display:none}.gbar-in{padding:6px 10px;gap:6px}.gbar-nav a{padding:8px 10px;font-size:14px}}
+@media print{.gbar{display:none}}
+/* szerokość i nagłówki stron jak w Opisach NFZ */
+.wrap{max-width:1180px;padding:24px 16px}
+.card{border-radius:12px;padding:16px 18px}
+h1{font-size:24px;font-weight:700}
+.wrap.narrow{max-width:440px}
+.wrap.wide{max-width:1180px}
