@@ -128,3 +128,9 @@ Plik `wspolne.js` (sejf z hasłem w przeglądarce) zastąpiony przez `gabinet-sa
 | K39 | wygląd jak reszta aplikacji (prompt Patryka 21.11.2026, pkt 4.1; wzorzec: Opisy NFZ): czcionka IBM Plex, paleta Gabinetu, wyróżnienia (przyciski główne, aktywna zakładka, dziś, podpowiedzi) w kolorze morskim zamiast czarnego, zakładki jako „pigułki”; logika bez zmian; kolory gabinetów bez zmian |
 | K40 | strona nie przeskakuje po wejściu do Kalendarza (zgłoszenie Patryka 21.11.2026: „ucina zakładki u góry”): gdy strona jest na samej górze, przerysowanie (np. podpowiedzi po wczytaniu danych) nie przewija jej w dół |
 | K40a | utrzymanie miejsca na ekranie tylko, gdy strona była przewinięta |
+| K41 | Rozliczenia i Podsumowanie przeniesione do Zarobków (decyzja Patryka 21.11.2026): ten sam kod i obliczenia, otwierane pod /zarobki/rozliczenia i /zarobki/podatki (widok z danych startowych); w menu aktywne „Zarobki” |
+| K41a | zakładki: w Kalendarzu bez „Podsumowanie” i „Rozliczenia”; w widoku Zarobków tylko wybrany widok |
+| K41b | w widoku Zarobków zamiast zakładek Kalendarza – nawigacja Zarobki · Rozliczenia · Podatki i ZUS |
+| K41c | start: w widoku Zarobków właściwa zakładka; stare adresy #podsumowanie / #rozliczenia prowadzą do Zarobków |
+| K41d | przejścia do zakładek z innych miejsc (podpowiedzi, terminy): Podsumowanie/Rozliczenia → Zarobki; z widoku Zarobków do pozostałych → Kalendarz |
+| K41e | Rozliczenia: kolumna „Zarobek lekarza (z dyżurów)” – ta sama nazwa i kwota co w Zarobkach |

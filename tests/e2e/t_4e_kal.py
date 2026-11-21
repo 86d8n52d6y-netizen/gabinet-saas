@@ -185,7 +185,7 @@ with sync_playwright() as p:
         same = []
         for tb in ['sum', 'inv', 'dl', 'cmp']:
             for x in (pg, po): K(x, f"UI.tab='{tb}';UI.edit=null;render();"); x.wait_for_timeout(150)
-            a, b = pg.inner_text('#main'), po.inner_text('#main').replace('% po odjęciu labu/implantów', '% po odjęciu kosztów własnych')   # K13: nowa nazwa modelu
+            a, b = pg.inner_text('#main'), po.inner_text('#main').replace('% po odjęciu labu/implantów', '% po odjęciu kosztów własnych').replace('Z Twojego kalendarza', 'Zarobek lekarza (z dyżurów)').replace('Z TWOJEGO KALENDARZA', 'ZAROBEK LEKARZA (Z DYŻURÓW)')   # K13, K41e: nowe nazwy
             chk(f'zakładka „{tb}”: tekst = stara aplikacja ({len(a)} znaków)', a == b and len(a) > 100, (len(a), len(b), [l for l in a.split('\n') if l not in b.split('\n')][:3]))
         oc.close()
         if srv: srv.terminate()

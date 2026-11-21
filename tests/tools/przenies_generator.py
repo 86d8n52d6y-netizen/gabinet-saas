@@ -385,6 +385,36 @@ PATCHES_KAL = [
   ('K40a utrzymanie miejsca na ekranie tylko, gdy strona była przewinięta',
    "function stackRestore(a) {\n  if (!a) return;",
    "function stackRestore(a) {\n  if (!a || a.y < 1) return;"),
+  ('K41 Rozliczenia i Podsumowanie przeniesione do Zarobków (decyzja Patryka 21.11.2026): ten sam kod i obliczenia, otwierane pod /zarobki/rozliczenia i /zarobki/podatki (widok z danych startowych); w menu aktywne „Zarobki”',
+   "G.bar('kalendarz');",
+   "var WIDOK = (window.__GABINET && window.__GABINET.widok) || '', WIDOK_TAB = { rozliczenia: 'inv', podatki: 'sum' }[WIDOK] || '';\n"
+   "var ZAR_URL = { inv: '/zarobki/rozliczenia', sum: '/zarobki/podatki' };\n"
+   "G.bar(WIDOK_TAB ? 'zarobki' : 'kalendarz');"),
+  ('K41a zakładki: w Kalendarzu bez „Podsumowanie” i „Rozliczenia”; w widoku Zarobków tylko wybrany widok',
+   "  ['dl', 'Terminy', 'terminy'], ['cmp', 'Porównaj formy', 'porownaj'], ['set', 'Ustawienia', 'ustawienia']];",
+   "  ['dl', 'Terminy', 'terminy'], ['cmp', 'Porównaj formy', 'porownaj'], ['set', 'Ustawienia', 'ustawienia']];\n"
+   "var TABS_ALL = TABS; TABS = WIDOK_TAB ? TABS.filter(function (t) { return t[0] === WIDOK_TAB; }) : TABS.filter(function (t) { return t[0] !== 'sum' && t[0] !== 'inv'; });"),
+  ('K41b w widoku Zarobków zamiast zakładek Kalendarza – nawigacja Zarobki · Rozliczenia · Podatki i ZUS',
+   "function renderTabs() {\n  var todo",
+   "function renderTabs() {\n"
+   "  if (WIDOK_TAB) { var h1 = document.querySelector('.brand h1'); if (h1) h1.textContent = 'Zarobki'; document.title = (WIDOK_TAB === 'inv' ? 'Rozliczenia' : 'Podatki i ZUS') + ' – Zarobki – Gabinet';\n"
+   "    document.getElementById('tabs').innerHTML = [['/zarobki', 'Zarobki', ''], [ZAR_URL.inv, 'Rozliczenia', 'inv'], [ZAR_URL.sum, 'Podatki i ZUS', 'sum']].map(function (x) {\n"
+   "      return '<a class=\"tab\" href=\"' + x[0] + '\"' + (x[2] === WIDOK_TAB ? ' aria-current=\"page\" aria-selected=\"true\"' : '') + ' style=\"text-decoration:none\">' + x[1] + '</a>'; }).join(''); return; }\n"
+   "  var todo"),
+  ('K41c start: w widoku Zarobków właściwa zakładka; stare adresy #podsumowanie / #rozliczenia prowadzą do Zarobków',
+   "  TABS.forEach(function (t) { if (t[2] === h) UI.tab = t[0]; });",
+   "  if (!WIDOK_TAB && (h === 'podsumowanie' || h === 'rozliczenia')) { location.replace(h === 'rozliczenia' ? ZAR_URL.inv : ZAR_URL.sum); return; }\n"
+   "  TABS.forEach(function (t) { if (t[2] === h) UI.tab = t[0]; });\n"
+   "  if (WIDOK_TAB) UI.tab = WIDOK_TAB; else if (UI.tab === 'sum' || UI.tab === 'inv') UI.tab = 'cal';"),
+  ('K41d przejścia do zakładek z innych miejsc (podpowiedzi, terminy): Podsumowanie/Rozliczenia → Zarobki; z widoku Zarobków do pozostałych → Kalendarz',
+   "  'tab': function (el) { UI.tab = el.dataset.v;",
+   "  'tab': function (el) { var v = el.dataset.v;\n"
+   "    if (!WIDOK_TAB && ZAR_URL[v]) { location.href = ZAR_URL[v]; return; }\n"
+   "    if (WIDOK_TAB && v !== WIDOK_TAB) { var t = TABS_ALL.filter(function (x) { return x[0] === v; })[0]; location.href = ZAR_URL[v] || ('/kalendarz' + (t ? '#' + t[2] : '')); return; }\n"
+   "    UI.tab = v;"),
+  ('K41e Rozliczenia: kolumna „Zarobek lekarza (z dyżurów)” – ta sama nazwa i kwota co w Zarobkach',
+   "<th class=\"r\">Z Twojego kalendarza</th>",
+   "<th class=\"r\">Zarobek lekarza (z dyżurów)</th>"),
 ]
 
 def przenies(plik, patches):
