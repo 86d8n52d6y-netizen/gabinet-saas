@@ -1,7 +1,7 @@
 <!doctype html>
 <!-- Gabinet SaaS: Zlecenia protetyczne dla technika (docs/ZLECENIA_PROTETYCZNE.md). Moduł napisany dla wersji SaaS (nie ma go w starej aplikacji).
-     Treść zleceń (inicjały, zęby, zgryz, kolory, zdjęcia) TYLKO na tym urządzeniu – zaszyfrowana kluczem urządzenia (G.store, jak treść opisów);
-     na serwer nic z tego nie trafia (zasada nr 1). Formularz sterowany katalogiem (KAT / POLA) – nowy rodzaj pracy = nowy wpis w katalogu. -->
+     Treść zleceń (inicjały, zęby, zgryz, kolory) – na urządzeniu (zaszyfrowana kluczem urządzenia) i na koncie (E7, decyzja 17; synchronizacja w gabinet-saas.js).
+     NIGDY na serwer: imię i nazwisko (tylko pole do wydruku, niezapisywane), PESEL, adres, zdjęcia (tylko urządzenie). Formularz sterowany katalogiem (KAT / POLA) – nowy rodzaj pracy = nowy wpis w katalogu. -->
 <html lang="pl">
 <head>
 <meta charset="utf-8">
@@ -148,7 +148,7 @@ function sekcje(z) {
   const t = typOf(z), s = t ? t.secs : [];
   const out = [{ id: 'pod', tyt: 'Dane podstawowe', open: true, pola: [
     { k: 'nr', l: 'Numer przypadku', t: 'text', st: 'W', hint: 'ten sam numer w nazwach plików i zdjęć' },
-    { k: 'ini', l: 'Inicjały pacjenta', t: 'text', st: 'W', hint: 'tylko na tym urządzeniu' },
+    { k: 'ini', l: 'Inicjały pacjenta', t: 'text', st: 'W', max: 5, hint: 'same inicjały (np. AB) – bez imienia i nazwiska' },
     { k: 'schemat', l: 'Schemat zębów', t: 'fdi', st: 'O', w: 1 },
     { k: 'zeby', l: 'Zęby (FDI)', t: 'text', st: 'W', hint: 'uzupełnia się ze schematu; można wpisać ręcznie, np. 11, 21 albo 14–16' },
     { k: 'mat', l: 'Materiał', t: 'chips1', opts: t ? G.mat(t.grp === 'C' || t.grp === 'D' ? ['kompozyt', 'inne'] : ['kompozyt'], t.mats) : [], st: 'W', own: true },
@@ -323,7 +323,7 @@ function stCls(s) { return s === 'do uzupełnienia' ? ' braki' : s === 'gotowe' 
 function lista() {
   const rows = S.list.slice().sort((a, b) => String(b.at || '').localeCompare(String(a.at || '')));
   return '<div class="zl-head"><h1>Zlecenia protetyczne</h1><button type="button" class="g-btn" data-a="nowe">+ Nowe zlecenie</button></div>' +
-    '<p class="g-muted" style="margin-top:0">Zlecenia są zapisane tylko na tym urządzeniu (zaszyfrowane). Gotowe zlecenie drukujesz albo zapisujesz jako PDF i przekazujesz technikowi.</p>' +
+    '<p class="g-muted" style="margin-top:0">Zlecenia zapisują się na koncie (widać je na Twoich urządzeniach) – bez imienia i nazwiska pacjenta. Zdjęcia zostają tylko na urządzeniu, na którym je dodano. Gotowe zlecenie drukujesz albo zapisujesz jako PDF i przekazujesz technikowi.</p>' +
     (rows.length ? '<div class="zl-list">' + rows.map(z => { const t = typOf(z), b = braki(z).filter(x => x[0] === 'W').length;
       return '<div class="zl-item" data-id="' + z.id + '"><b>' + esc(z.nr) + '</b><span>' + esc((z.a || {}).ini || '—') + '</span><span>' + esc(t ? t.name : 'rodzaj nieokreślony') + '</span>' +
         ((z.a || {}).zeby ? '<span class="g-muted">zęby ' + esc(z.a.zeby) + '</span>' : '') + ((z.a || {}).termin ? '<span class="g-muted">termin ' + esc(z.a.termin) + '</span>' : '') +
@@ -342,7 +342,7 @@ function poleHTML(z, f) {
       return '<button type="button" data-a="ch" data-k="' + f.k + '" data-m="' + (f.t === 'chipsN' ? 'N' : '1') + '" data-v="' + esc(o) + '" aria-pressed="' + on + '">' + esc(o) + '</button>'; }).join('') + '</div>' +
       (f.own !== false ? '<input class="zl-in" data-own="' + f.k + '" data-m="' + (f.t === 'chipsN' ? 'N' : '1') + '" placeholder="inne – wpisz i Enter" aria-label="' + esc(f.l) + ' – inna wartość">' : '');
   } else if (f.t === 'area') h = '<label for="' + id + '">' + esc(f.l) + tag + '</label><textarea class="zl-in" id="' + id + '" data-k="' + f.k + '">' + esc(v || '') + '</textarea>';
-  else h = '<label for="' + id + '">' + esc(f.l) + tag + '</label><input class="zl-in" id="' + id + '" data-k="' + f.k + '" type="' + (f.t === 'date' ? 'date' : 'text') + '" value="' + esc(v || '') + '"' + (f.dl ? ' list="' + f.dl + '"' : '') + ' autocomplete="off">';
+  else h = '<label for="' + id + '">' + esc(f.l) + tag + '</label><input class="zl-in" id="' + id + '" data-k="' + f.k + '" type="' + (f.t === 'date' ? 'date' : 'text') + '" value="' + esc(v || '') + '"' + (f.dl ? ' list="' + f.dl + '"' : '') + (f.max ? ' maxlength="' + f.max + '"' : '') + ' autocomplete="off">';
   return '<div class="zl-f' + (f.w ? ' w' : '') + '">' + h + (f.hint ? '<span class="zl-hint">' + esc(f.hint) + '</span>' : '') + '</div>';
 }
 function edytor() {
@@ -419,6 +419,16 @@ document.addEventListener('change', e => { const t = e.target; if (!S.cur) retur
 addEventListener('beforeprint', () => { if (S.cur && !$('#druk').innerHTML) $('#druk').innerHTML = drukHTML(S.cur, (($('#f_pacjent') || {}).value || '').trim()); });
 addEventListener('afterprint', () => { $('#druk').innerHTML = ''; });
 addEventListener('pagehide', () => { if (S.dirty) zapisz(); });
+/* zmiany z innego urządzenia (E7): odśwież listę; otwarte zlecenie – tylko gdy nie ma tu niezapisanych zmian */
+addEventListener('gabinet:zlecenia', async e => {
+  const ids = (e.detail || []), all = (await G.store('zlecenia').all()).map(([, v]) => v).filter(z => z && z.id);
+  S.list = all;
+  if (!S.cur) { render(); return; }
+  if (!ids.includes(S.cur.id) || S.dirty) return;
+  const x = all.find(z => z.id === S.cur.id);
+  if (!x) { S.cur = null; render(); toast('To zlecenie usunięto na innym urządzeniu.'); return; }
+  S.cur = JSON.parse(JSON.stringify(x)); render(); toast('Wczytano zmiany z innego urządzenia.');
+});
 
 /* ---------- start ---------- */
 (async () => {

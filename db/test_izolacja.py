@@ -129,4 +129,14 @@ r = as_('gabinet_app', B, f"DELETE FROM app.calendar_docs WHERE owner_id='{A}' R
 r = as_('gabinet_app', B, f"INSERT INTO app.calendar_docs(owner_id,doc,data) VALUES ('{A}','m2026-12','{{}}')"); chk('kalendarz: B nie zapisze dokumentu na konto A', not r[0], r)
 r = as_('gabinet_app', A, f"INSERT INTO app.calendar_docs(owner_id,doc,data) VALUES ('{A}','pacjenci','{{}}')"); chk('kalendarz: tylko dozwolone nazwy dokumentów', not r[0], r)
 r = as_('gabinet_admin', None, "SELECT count(*) FROM app.calendar_docs"); chk('administrator nie czyta Kalendarza', denied(r), r)
+T = 'app.prosthetic_orders'
+r = as_('gabinet_app', A, f"INSERT INTO {T}(owner_id,id,data) VALUES ('{A}','zabc12345','{{\"nr\":\"ZP-2026-001\",\"a\":{{\"zeby\":\"11\"}}}}')"); chk('zlecenia: zapis własnego zlecenia', r[0], r)
+r = as_('gabinet_app', B, f"SELECT count(*) FROM {T}"); chk('zlecenia: B nie widzi zleceń A', r == (True, '0'), r)
+r = as_('gabinet_app', B, f"UPDATE {T} SET data='{{}}' WHERE owner_id='{A}' RETURNING 1"); chk('zlecenia: B nie zmieni zleceń A', r[0] and r[1] == '', r)
+r = as_('gabinet_app', B, f"DELETE FROM {T} WHERE owner_id='{A}' RETURNING 1"); chk('zlecenia: B nie usunie zleceń A', r[0] and r[1] == '', r)
+r = as_('gabinet_app', B, f"INSERT INTO {T}(owner_id,id,data) VALUES ('{A}','zabc99999','{{}}')"); chk('zlecenia: B nie zapisze zlecenia na konto A', not r[0], r)
+for pole in ('imie', 'nazwisko', 'pesel', 'adres', 'zdjecia'):
+    r = as_('gabinet_app', A, f"INSERT INTO {T}(owner_id,id,data) VALUES ('{A}','zx{pole}0001','{{\"{pole}\":\"x\"}}')"); chk(f'zlecenia: baza odrzuca pole „{pole}”', not r[0], r)
+r = as_('gabinet_app', A, f"INSERT INTO {T}(owner_id,id,data,deleted) VALUES ('{A}','zdel000001','{{\"nr\":\"x\"}}',true)"); chk('zlecenia: usunięte bez treści', not r[0], r)
+r = as_('gabinet_admin', None, f"SELECT count(*) FROM {T}"); chk('administrator nie czyta zleceń', denied(r), r)
 print(f'--- izolacja i uprawnienia: {ok} OK, {bad} błędów'); sys.exit(1 if bad else 0)

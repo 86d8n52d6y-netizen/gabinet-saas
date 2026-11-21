@@ -1,4 +1,3 @@
--- PROJEKT (nie wykonany) – do akceptacji Patryka przed przeniesieniem do db/migrations/0008_zlecenia.sql (zasada 12).
 -- Gabinet SaaS – migracja 8: Zlecenia protetyczne w chmurze (etap E7, decyzja 17 w docs/AUDYT_SAAS.md).
 -- Na serwerze: treść zlecenia (numer przypadku, inicjały, rodzaj pracy, zęby/schemat FDI, materiał, kolor, zgryz, implanty,
 -- terminy, statusy, historia zmian). NIGDY: imię i nazwisko, PESEL, adres, zdjęcia (zdjęcia zostają na urządzeniu).
