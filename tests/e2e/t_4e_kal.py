@@ -172,6 +172,8 @@ with sync_playwright() as p:
         try: urllib.request.urlopen(OLD + '/kalendarz.html', timeout=1)
         except Exception: srv = subprocess.Popen(['python3', '-m', 'http.server', '8765', '--bind', '127.0.0.1'], cwd=OPISY, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL); time.sleep(1)
         pg.goto(URL + '/kalendarz'); ready(pg)
+        # K14: domyślnie brak ustawień podatków – do porównania obie aplikacje dostają te same, jawnie wpisane
+        K(pg, "Object.assign(S(),{jdgStart:'2026-10',regimes:{2026:'skala',2027:'ryczalt'},zus:[{id:'z1',from:'2026-10',variant:'custom',amount:800,base:0,chor:true}]});S().setup.zus=true;saveSettings();")
         K(pg, f"""const m=M('{MK}',true);m.costs.push({{id:'k1',date:'{TODAY}',amount:300,desc:'Materiały',kup:true}});
           m.shifts.push({{id:'t3',date:'{MK}-02',clinicId:'{B}',start:'08:00',end:'14:00',status:'done',turnover:3000,lab:0}});saveMonth('{MK}');render();""")
         pg.wait_for_timeout(1200)

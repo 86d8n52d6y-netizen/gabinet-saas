@@ -43,3 +43,20 @@ Plik `wspolne.js` (sejf z hasłem w przeglądarce) zastąpiony przez `gabinet-sa
 | K11 | pytanie przed usunięciem danych Kalendarza: gabinety zostają |
 | K12 | zmiany z innego urządzenia (scalone na koncie) od razu w otwartym Kalendarzu – bez nadpisywania pola, które właśnie edytujesz |
 | K13 | nazwa modelu rozliczenia: „% po odjęciu kosztów własnych” (decyzja Patryka 21.11.2026; logika bez zmian) |
+| K14 | domyślne ustawienia bez założeń o użytkowniku (decyzja Patryka 21.11.2026): pusty start JDG, brak formy opodatkowania i okresów ZUS – wybiera użytkownik (kreator K16) |
+| K15 | bez ustawionych podatków i ZUS nie pokazujemy „netto ≈” ani „odłóż” (zamiast wyniku liczonego z cudzych założeń); taxReady() = start JDG + forma + okres ZUS |
+| K15a | podsumowanie miesiąca bez ustawień podatków: zaproszenie do kreatora zamiast „JDG nieaktywna (start: )” |
+| K15b | pasek miesiąca bez ustawień podatków: zaproszenie do kreatora |
+| K15c | Podsumowanie bez ustawień podatków: zaproszenie do kreatora |
+| K15d | tydzień: „Netto ≈” tylko przy ustawionych podatkach i ZUS |
+| K16 | kreator „Ustaw podatki i ZUS” przy pierwszym otwarciu (3 pytania, bez wartości z góry; można pominąć i wrócić) |
+| K16a | akcje kreatora i „Ustaw od nowa” (czyści tylko ustawienia podatków i ZUS – po potwierdzeniu; dyżury, gabinety, koszty i kursy zostają) |
+| K17 | przycisk „Ustaw od nowa” w Ustawieniach → Działalność i podatek (z potwierdzeniem) |
+| K18 | opis pola startu JDG – ogólny (nie tylko wznowienie) |
+| K19 | etat: bieżący rok zamiast stałego 2026 (Ustawienia, pomocnik, pierwsze kroki) |
+| K19a | pomocnik etatu zapisuje bieżący rok |
+| K19b | pierwsze kroki: „Podatki i ZUS” (kreator) zamiast „Kwota ZUS z eZUS”; etat bieżącego roku i opcjonalny |
+| K19c | pierwsze kroki: krok „wiz” otwiera kreator |
+| K20 | koszty firmowe: opis ogólny zamiast planu jednej osoby (skala do końca 2026) |
+| K21 | „+ Dodaj okres” ZUS przy pustej liście: od startu JDG (albo bieżącego miesiąca), wariant do wyboru |
+| K22 | przykład (demo) z własnymi, oznaczonymi wartościami podatków – domyślne są puste |

@@ -1,23 +1,17 @@
-// Brutto / netto w Zarobkach (decyzja Patryka 21.11.2026).
-// Kwoty w aplikacji są BRUTTO (przed podatkiem, składkami i innymi potrąceniami). Zasady wyliczania netto Patryk przekaże później,
-// dlatego nie ma tu żadnych stawek, składek ani przykładowych wartości: dopóki konfiguracji nie ma, netto jest nieaktywne
-// i aplikacja pokazuje informację „wymaga konfiguracji” zamiast wymyślonego wyniku.
+// Brutto / netto w Zarobkach. Decyzja Patryka 21.11.2026: netto wg ustawień Kalendarza (wariant A) – forma opodatkowania,
+// okresy ZUS, zdrowotna i parametry roczne wpisuje się w Kalendarzu (Ustawienia), tu ich nie dublujemy ani nie wymyślamy.
+// Obliczenia: src/lib/kal-silnik.ts (ten sam silnik co Kalendarz). Netto dotyczy zarobku lekarza z odbytych dyżurów;
+// kwoty z wizyt (Opisy NFZ / prywatne) pozostają brutto.
 import type { PoolClient } from 'pg';
-
-/** Konfiguracja netto – struktura zarezerwowana; zostanie zdefiniowana po przekazaniu zasad rozliczenia przez Patryka. */
-export type NettoConfig = { version: 1; rules: unknown };
+import { loadDocs } from './kal';
+import { kalNettoZ, type NettoWynik } from './kal-silnik';
+import { todayPL } from './zarobki';
 
 export type KwotyTryb = 'brutto' | 'netto';
 export const trybKwot = (v: string | undefined): KwotyTryb => (v === 'netto' ? 'netto' : 'brutto');
 
-/** Wczytuje konfigurację netto z ustawień konta (user_settings.settings.netto). Dziś zawsze null – brak skonfigurowanych zasad. */
-export async function loadNetto(c: PoolClient): Promise<NettoConfig | null> {
-  const n = (await c.query('SELECT settings->\'netto\' AS n FROM app.user_settings')).rows[0]?.n;
-  return n && typeof n === 'object' && n.version === 1 && n.rules ? (n as NettoConfig) : null;
-}
-
-/** Przeliczenie kwoty brutto (grosze) na netto. Bez konfiguracji – null (nie zgadujemy). Reguły zostaną dodane po decyzji Patryka. */
-export function naNetto(bruttoGr: number, cfg: NettoConfig | null): number | null {
-  if (!cfg) return null;
-  return null;   // zasady netto nie są jeszcze zdefiniowane – celowo brak obliczeń
+/** Netto per gabinet (grosze) dla okresu – z dokumentów Kalendarza tego użytkownika (połączenie w withUser). */
+export async function kalNetto(c: PoolClient, from: string, to: string, today = todayPL()): Promise<NettoWynik> {
+  const { docs } = await loadDocs(c);
+  return kalNettoZ(docs, from, to, today);
 }

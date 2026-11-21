@@ -3,7 +3,7 @@ import { requireAccess } from '@/lib/access';
 import { withUser } from '@/lib/db';
 import { fmtC, fmtP } from '@/lib/nfz/engine';
 import { RANGES, rangeOf, report, type Report } from '@/lib/zarobki';
-import { loadNetto, trybKwot } from '@/lib/netto';
+import { kalNetto, trybKwot } from '@/lib/netto';
 export const metadata = { title: 'Zarobki – Gabinet' };
 export const dynamic = 'force-dynamic';
 
@@ -46,12 +46,18 @@ export default async function Zarobki({ searchParams }: { searchParams: Promise<
   const range = rangeOf(sp.o ?? 'month', sp.od, sp.do);
   const tryb = trybKwot(sp.kw);
   const { r, clinics, netto } = await withUser(s.userId, async c => {
-    const netto = await loadNetto(c);
     const clinics = (await c.query(`SELECT id, name FROM app.clinics WHERE deleted_at IS NULL ORDER BY sort, created_at`)).rows as { id: string; name: string }[];
     const g = sp.g && clinics.some(k => k.id === sp.g) ? sp.g : null;
-    return { r: await report(c, range, g, (sp.k ?? '').slice(0, 130)), clinics, g, netto };
+    const r = await report(c, range, g, (sp.k ?? '').slice(0, 130));
+    // netto tylko na żądanie i bez filtra rodzaju (zarobek lekarza z Kalendarza jest wtedy niedostępny)
+    const netto = tryb === 'netto' && !r.kind ? await kalNetto(c, range.from, range.to) : null;
+    return { r, clinics, g, netto };
   });
   const T = r.total;
+  const N = netto?.info.ok ? netto : null;              // netto policzone z ustawień Kalendarza
+  const dr = (id: string | null, brutto: number) => (N ? (id ? N.perClinic.get(id) ?? 0 : 0) : brutto);
+  const drT = N ? r.rows.reduce((a, x) => a + dr(x.id, x.dr), 0) : T.dr;
+  const nt = N ? ' (netto)' : '';
   return (
     <main className="wrap wide">
       <h1>Zarobki</h1>
@@ -60,9 +66,13 @@ export default async function Zarobki({ searchParams }: { searchParams: Promise<
       </nav>
       <nav className="tabs-row" aria-label="Kwoty brutto lub netto">
         <Link href={qs(sp, { kw: '' })} className={'chip' + (tryb === 'brutto' ? ' on' : '')} aria-current={tryb === 'brutto' ? 'true' : undefined}>Brutto</Link>
-        <Link href={qs(sp, { kw: 'netto' })} className={'chip' + (tryb === 'netto' ? ' on' : '')} aria-current={tryb === 'netto' ? 'true' : undefined}>Netto{netto ? '' : ' (wymaga konfiguracji)'}</Link>
+        <Link href={qs(sp, { kw: 'netto' })} className={'chip' + (tryb === 'netto' ? ' on' : '')} aria-current={tryb === 'netto' ? 'true' : undefined}>Netto</Link>
       </nav>
-      {tryb === 'netto' && !netto && <p className="msg" role="status" data-testid="netto-info">Kwoty <b>netto</b> wymagają konfiguracji Twoich zasad rozliczenia (składki, podatek, inne potrącenia) – zostaną dodane, gdy je przekażesz. Do tego czasu poniżej są kwoty <b>brutto</b>.</p>}
+      {tryb === 'netto' && r.kind && <p className="msg" role="status" data-testid="netto-info">Netto liczy się dla zarobku lekarza, który jest niedostępny przy filtrze rodzaju – poniżej kwoty <b>brutto</b>.</p>}
+      {tryb === 'netto' && netto && !N && <p className="msg" role="status" data-testid="netto-info">Netto liczy się z Twoich ustawień w <a href="/kalendarz">Kalendarzu</a> (start JDG, forma opodatkowania, ZUS) – nie są jeszcze ustawione. Otwórz Kalendarz i wybierz je w „Ustaw podatki i ZUS”; do tego czasu poniżej są kwoty <b>brutto</b>.</p>}
+      {N && <p className="msg" role="status" data-testid="netto-info">Zarobek lekarza <b>netto</b> – po odjęciu ZUS, składki zdrowotnej i podatku wg ustawień <a href="/kalendarz">Kalendarza</a> ({N.info.zasady.join(' · ')}). To szacunek: podatek i progi rozlicza się rocznie, tak samo jak „Netto ≈” w Kalendarzu. Kwoty z wizyt (Razem z wizyt, wykres, średnie, szczegóły) są brutto.
+        {N.info.zusNiepotwierdzony && <> <b data-testid="netto-zus">Kwota ZUS nie jest potwierdzona w Kalendarzu</b> (Ustawienia → „Kwota się zgadza”) – netto może być niedokładne.</>}
+        {N.info.szacunek && <> Część parametrów roku to szacunki (oznaczone w Ustawieniach Kalendarza).</>}</p>}
       <form className="row filters" method="get">
         {tryb === 'netto' && <input type="hidden" name="kw" value="netto" />}
         <input type="hidden" name="o" value="own" />
@@ -80,7 +90,7 @@ export default async function Zarobki({ searchParams }: { searchParams: Promise<
       <section className="card tiles" aria-label="Podsumowanie">
         <div><span className="muted">Razem z wizyt</span><b data-testid="razem">{fmtC(T.sum)}</b><span className="hint">{T.nv + T.pv} wizyt</span></div>
         <div><span className="muted">Razem punktów</span><b data-testid="punkty">{fmtP(r.nfz.pts)} pkt</b><span className="hint">punkty NFZ z opisów</span></div>
-        <div><span className="muted">Zarobek lekarza (%)</span><b data-testid="zarobek">{r.kind ? '—' : fmtC(T.dr)}</b>
+        <div><span className="muted">Zarobek lekarza (%){nt}</span><b data-testid="zarobek">{r.kind ? '—' : fmtC(drT)}</b>
           <span className="hint">{r.kind ? 'niedostępny przy filtrze rodzaju' : 'wg zasad rozliczenia gabinetów'}</span></div>
         <div><span className="muted">Poprzedni okres ({r.prev.label})</span><b data-testid="poprz">{fmtC(r.prev.sum)}</b>
           <span className="hint" data-testid="zmiana">{r.prev.sum ? `${T.sum >= r.prev.sum ? '+' : '−'}${fmtC(Math.abs(T.sum - r.prev.sum))} (${T.sum >= r.prev.sum ? '+' : '−'}${Math.abs(Math.round((T.sum - r.prev.sum) / r.prev.sum * 1000) / 10).toLocaleString('pl-PL')}%)` : 'brak zarobków w poprzednim okresie'} · {dd(r.prev.from)} – {dd(r.prev.to)}</span></div>
@@ -90,12 +100,12 @@ export default async function Zarobki({ searchParams }: { searchParams: Promise<
         <h2 id="gab" style={{ marginTop: 0 }}>Wszystkie gabinety</h2>
         {r.rows.length ? (
           <div style={{ overflowX: 'auto' }}><table className="num" data-testid="tabela">
-            <thead><tr><th>Gabinet</th><th>Liczba wizyt</th><th>Zarobek lekarza</th><th>Zarobek na godzinę</th></tr></thead>
+            <thead><tr><th>Gabinet</th><th>Liczba wizyt</th><th>Zarobek lekarza{nt}</th><th>Zarobek na godzinę{nt}</th></tr></thead>
             <tbody>{r.rows.map(x => (
               <tr key={x.id ?? '-'}><td>{x.color && <span className="dot" style={{ ['--cc' as string]: `var(--c${x.color})` }} />} {x.name}</td>
-                <td>{x.vis || '—'}</td><td><b>{r.kind ? '—' : z(x.dr)}</b></td><td>{r.kind ? '—' : perHour(x.dr, x.h)}</td></tr>))}
+                <td>{x.vis || '—'}</td><td><b>{r.kind ? '—' : z(dr(x.id, x.dr))}</b></td><td>{r.kind ? '—' : perHour(dr(x.id, x.dr), x.h)}</td></tr>))}
             </tbody>
-            <tfoot><tr><td>Razem</td><td>{T.vis || '—'}</td><td>{r.kind ? '—' : z(T.dr)}</td><td>{r.kind ? '—' : perHour(T.dr, T.h)}</td></tr></tfoot>
+            <tfoot><tr><td>Razem</td><td>{T.vis || '—'}</td><td>{r.kind ? '—' : z(drT)}</td><td>{r.kind ? '—' : perHour(drT, T.h)}</td></tr></tfoot>
           </table></div>) : <p className="muted">Brak gabinetów i wizyt w tym okresie.</p>}
         <p className="hint">Liczba wizyt: wszystkie zapisane (odbyte) wizyty z Opisów NFZ i prywatnych. Zarobek lekarza: kwota należna z danego gabinetu wg jego zasad rozliczenia (<Link href="/gabinety">Gabinety</Link>), z odbytych dyżurów w <a href="/kalendarz">Kalendarzu</a> – obrót wpisujesz przy dyżurze (np. „Wpisz jako obrót”). Zarobek na godzinę: zarobek lekarza ÷ godziny odbytych dyżurów; w podsumowaniu – łączny zarobek ÷ łączne godziny.</p>
       </section>

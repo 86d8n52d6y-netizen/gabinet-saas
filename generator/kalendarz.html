@@ -1221,8 +1221,8 @@ function defClinic(i) {
 function defPresets() { return [{ id: 'p1', name: 'Rano', start: '08:00', end: '14:00' }, { id: 'p2', name: 'Popołudnie', start: '14:00', end: '20:00' }]; }
 function firstPreset(c) { return (c && c.presets && c.presets[0]) || { name: 'Rano', start: '08:00', end: '14:00' }; }
 function defaultSettings() {
-  return { v: 1, clinics: [0, 1, 2, 3].map(defClinic), jdgStart: '2026-10', regimes: { 2026: 'skala', 2027: 'ryczalt' }, ryczaltRate: 14,
-    uop: {}, kwotaJDG: true, zus: [{ id: 'z1', from: '2026-10', variant: 'custom', amount: 800, base: 0, chor: true }],
+  return { v: 1, clinics: [0, 1, 2, 3].map(defClinic), jdgStart: '', regimes: {}, ryczaltRate: 14,
+    uop: {}, kwotaJDG: true, zus: [],
     wakacje: {}, healthMode: 'auto', annualOverride: {}, goalNet: 0, params: {}, templates: [], travelMin: 30, done: {}, setup: {},
     autoMonths: 3, autoSkip: {}, cme: { from: '', target: 200, months: 48 }, ics: { alarm: 60, deadlines: true, amounts: false, offDays: true, range: 'month' } };
 }
@@ -1409,7 +1409,11 @@ function results() {
   return (CACHE = out);
 }
 function monthRes(mk, which) { var R = results(), Y = R[+mk.slice(0, 4)]; return Y ? Y[which || 'actual'].months[+mk.slice(5) - 1] : null; }
+function curYear() { return +todayStr().slice(0, 4); }
+function taxReady() { var s = S(); return /^\d{4}-\d{2}$/.test(s.jdgStart || '') && Object.keys(s.regimes || {}).length > 0 && Array.isArray(s.zus) && s.zus.length > 0; }
+function taxNote(tag) { return '<' + (tag || 'div') + ' class="note" data-tax-todo>Ustaw <b>podatki i ZUS</b> – wtedy policzę netto i kwoty do odłożenia. <button class="btn sm" data-a="wiz-open">Ustaw teraz</button></' + (tag || 'div') + '>'; }
 function reserveRatio(mk) {
+  if (!taxReady()) return null;
   var o = monthRes(mk, 'fcst');
   if (!o || !o.active) return 0;
   return o.rev > 0 ? Math.min(0.95, Math.max(0, o.reserve / o.rev)) : null;
@@ -1834,12 +1838,12 @@ function statsStrip() {
   }
   if (UI.view === 'week') {
     var n = weekNumbers(E.mondayOf(UI.sel));
-    return statRow([['Przychód tygodnia', zl0(n.rev), n.plan > 0.5 ? '+ ~' + zl0(n.plan) + ' zaplanowane' : ''], ['Netto ≈', zl0(n.net), ''],
+    return statRow([['Przychód tygodnia', zl0(n.rev), n.plan > 0.5 ? '+ ~' + zl0(n.plan) + ' zaplanowane' : ''], ['Netto ≈', taxReady() ? zl0(n.net) : '—', taxReady() ? '' : 'ustaw podatki i ZUS'],
       ['Dni pracy', String(n.days), ''], ['Godziny', hText(n.h), 'odbyte i zaplanowane']]);
   }
   var mk = UI.mk, a = monthRes(mk, 'actual'), f = monthRes(mk, 'fcst');
   if (!a) return '';
-  if (!a.active) return '<div class="note">JDG nieaktywna w tym miesiącu (start: ' + esc(S().jdgStart) + ').</div>';
+  if (!a.active) return taxReady() ? '<div class="note">JDG nieaktywna w tym miesiącu (start: ' + esc(S().jdgStart) + ').</div>' : taxNote();
   var wdm = workDays(mk + '-01', E.lastDay(mk)), out;
   if (a.future) out = statRow([['Przychód (plan)', '~' + zl0(f.rev), ''], ['Netto (plan)', '~' + zl0(f.net), ''], ['Odłóż na ZUS i podatek', '~' + zl0(f.reserve), ''], ['Godziny', hText(f.hours), wdm.plan + ' dni zaplanowanych']]);
   else out = statRow([['Przychód', zl0(a.rev), f.rev > a.rev + 0.5 ? 'z planem ~' + zl0(f.rev) : ''], ['Netto', zl0(a.net), f.rev > a.rev + 0.5 ? 'z planem ~' + zl0(f.net) : ''],
@@ -1885,18 +1889,31 @@ function onboardingBar() {
   var s = S();
   if (s.setup.hidden || Store.mode === 'demo' || !UI.loaded) return '';
   var any = allShifts().length > 0;
-  var steps = [['Gabinety i %', 'set', 'sec-clinics', !!s.setup.clinics], ['Kwota ZUS z eZUS', 'set', 'sec-zus', !!s.setup.zus],
-    ['Dochód z etatu 2026', 'set', 'sec-tax', !!s.setup.uop || (num((s.uop || {})[2026]) || 0) > 0], ['Dni pracy w gabinetach', 'tpl', '', clinics().some(hasWeek) || s.templates.length > 0 || any]];
+  var steps = [['Gabinety i %', 'set', 'sec-clinics', !!s.setup.clinics], ['Podatki i ZUS', 'wiz', '', taxReady() && !!s.setup.zus],
+    ['Dochód z etatu (jeśli masz)', 'set', 'sec-tax', !!s.setup.uop || (num((s.uop || {})[curYear()]) || 0) > 0], ['Dni pracy w gabinetach', 'tpl', '', clinics().some(hasWeek) || s.templates.length > 0 || any]];
   var done = steps.filter(function (x) { return x[3]; }).length;
   if (done === steps.length) return '';
   return '<div class="onb-bar"><b>Pierwsze kroki ' + done + '/' + steps.length + '</b>' + steps.map(function (x) {
-    var act = x[1] === 'tpl' ? 'data-a="tpl-open"' : 'data-a="goto" data-v="set" data-anchor="' + x[2] + '"';
+    var act = x[1] === 'tpl' ? 'data-a="tpl-open"' : x[1] === 'wiz' ? 'data-a="wiz-open"' : 'data-a="goto" data-v="set" data-anchor="' + x[2] + '"';
     return '<button class="step' + (x[3] ? ' ok' : '') + '" ' + act + '>' + (x[3] ? '✓ ' : '') + x[0] + '</button>';
   }).join('') + '<span class="onb-end"><button class="btn ghost sm" data-a="demo-on">Zobacz przykład</button><button class="btn ghost sm" data-a="setup-hide">Ukryj</button></span></div>';
+}
+function wizard() {
+  var cy = curYear(), opt = function (o) { return Object.keys(o).map(function (k) { return '<option value="' + k + '">' + o[k] + '</option>'; }).join(''); };
+  return '<div class="card" id="wiz" style="margin-bottom:12px"><h3 style="margin-top:0">Ustaw podatki i ZUS</h3><p class="small muted">Z tego policzę netto, kwoty do odłożenia i terminy. Niczego nie zakładam z góry – zmienisz to w każdej chwili w Ustawieniach.</p><div class="frow">' +
+    '<label class="f">1. Od kiedy prowadzisz JDG<input type="month" id="wiz-start"><span class="hint">miesiąc rozpoczęcia lub wznowienia</span></label>' +
+    '<label class="f">2. Forma opodatkowania w ' + cy + '<select id="wiz-reg"><option value="">— wybierz —</option>' + opt(REGIMES) + '</select></label>' +
+    '<label class="f">Od ' + (cy + 1) + ' (opcjonalnie)<select id="wiz-reg2"><option value="">bez zmiany</option>' + opt(REGIMES) + '</select></label>' +
+    '<label class="f">3. Składki społeczne ZUS<select id="wiz-zus"><option value="">— wybierz —</option>' + opt(ZUSV) + '</select></label>' +
+    '<label class="f">Kwota (zł)<input type="text" inputmode="decimal" id="wiz-amt"><span class="hint">„z eZUS”: miesięczne społeczne · „własna podstawa”: podstawa wymiaru</span></label>' +
+    '<label class="chk" style="align-self:end"><input type="checkbox" id="wiz-chor"> chorobowe (dobrowolne)</label></div>' +
+    '<div class="row"><button class="btn primary" data-a="wiz-save">Zapisz</button><button class="btn ghost" data-a="wiz-skip">Pomiń na razie</button></div></div>';
 }
 function nudges() {
   if (!UI.loaded) return '<div class="note">Wczytuję Twoje dane…</div>';
   var out = [], todo = todoShifts();
+  if (Store.mode !== 'demo' && (UI.wiz || (!taxReady() && !S().setup.wizSkip))) out.push(wizard());
+  else if (Store.mode !== 'demo' && !taxReady()) out.push('<button class="nudge accent" data-a="wiz-open"><b>Ustaw podatki i ZUS</b> – wtedy policzę netto i kwoty do odłożenia</button>');
   if (Store.mode !== 'demo' && !activeClinics().some(hasWeek)) out.push('<button class="nudge accent" data-a="tpl-open"><b>Ustaw dni pracy</b> – zaznacz, kiedy pracujesz w każdym gabinecie (np. pn rano, czw popołudnie), a kalendarz wypełni się sam</button>');
   /* zaplanowane dyżury bez żadnej podstawy do prognozy (brak historii i „spodziewanego przychodu”) liczą się jako 0 zł */
   var rates = results().rates, blind = activeClinics().filter(function (c) {
@@ -2081,7 +2098,7 @@ function sbItems(items) { return items.map(function (x) { return '<span class="s
 function monthStatLine(mk) {
   if (!UI.loaded) return '';
   var a = monthRes(mk, 'actual'), f = monthRes(mk, 'fcst'); if (!a) return '';
-  if (!a.active) return '<span class="muted">JDG nieaktywna w tym miesiącu (start: ' + esc(S().jdgStart) + ')</span>';
+  if (!a.active) return taxReady() ? '<span class="muted">JDG nieaktywna w tym miesiącu (start: ' + esc(S().jdgStart) + ')</span>' : '<span class="muted">Ustaw podatki i ZUS, żeby liczyć netto</span>';
   var w = workDays(mk + '-01', E.lastDay(mk)), more = f.rev > a.rev + 0.5;
   if (a.future && !w.done && !w.plan) {
     var fo = autoFillDate(mk);
@@ -2192,7 +2209,7 @@ function viewSummary() {
   var a = Y.actual.months[i], f = Y.fcst.months[i], b = Y.base[i], ml = MONTHS_LOC[i], future = !!a.future;
   if (future) a = f;
   var h = '<div class="stack"><div class="toolbar">' + monthNav() + '</div>';
-  if (!a.active) h += '<div class="note">W tym miesiącu JDG nie była aktywna (start: ' + esc(S().jdgStart) + '). Datę zmienisz w Ustawieniach → Podatek.</div>';
+  if (!a.active) h += taxReady() ? '<div class="note">W tym miesiącu JDG nie była aktywna (start: ' + esc(S().jdgStart) + '). Datę zmienisz w Ustawieniach → Podatek.</div>' : taxNote();
   if (future) h += '<div class="note">Ten miesiąc jeszcze się nie zaczął – pokazuję plan z grafiku (średnie przychody z dotychczasowych dyżurów).</div>';
   // karta główna
   var parts = [['Netto', a.net, 'var(--ink)'], ['Podatek', a.taxReal, 'color-mix(in srgb,var(--ink) 62%,var(--surface))'],
@@ -2561,11 +2578,11 @@ function viewSettings() {
     '<section class="set-sec" id="sec-clinics"><h2>Gabinety</h2><p>W każdym gabinecie zaznacz <b>dni pracy</b> (dzień tygodnia × zmiana) – kalendarz sam wpisze te dyżury i będzie dopisywał kolejne. Urlop, odwołany albo przesunięty dyżur zmieniasz potem w kalendarzu i to zostaje. Kolor gabinetu przenosi się na kalendarz, wykresy i logo; model rozliczenia decyduje, o co zapyta formularz dyżuru.</p>' +
     '<div class="frow" style="margin-bottom:14px">' + horizonSelect('wk-months-s') + '</div><div class="clinic-cards">' + cl + '</div>' +
     '<div class="row" style="margin-top:12px"><button class="btn" data-a="clinic-add">+ Dodaj gabinet</button></div></section>' +
-    '<section class="set-sec" id="sec-tax"><h2>Działalność i podatek</h2><div class="card"><div class="frow">' +
-    '<label class="f">Start JDG (wznowienie)<input type="month" id="jdg-start" data-bind="jdgStart" value="' + esc(s.jdgStart) + '"><span class="hint">od tego miesiąca liczę ZUS i podatek</span></label>' + regs +
+    '<section class="set-sec" id="sec-tax"><h2>Działalność i podatek</h2>' + (UI.taxReset ? '<div class="confirm" data-tax-reset>Wyczyścić ustawienia podatków i ZUS (start JDG, formę opodatkowania, okresy ZUS, wakacje składkowe, dochód z etatu, parametry lat, prognozę przychodu)? Dyżury, gabinety, koszty i kursy zostają. <button class="btn sm danger" data-a="tax-reset-do">Tak, wyczyść</button><button class="btn sm" data-a="tax-reset-no">Nie</button></div>' : '<div class="row" style="margin-bottom:10px"><button class="btn ghost" data-a="wiz-open">Kreator: ustaw podatki i ZUS</button><button class="btn ghost danger" data-a="tax-reset-ask">Ustaw od nowa (wyczyść)</button></div>') + '<div class="card"><div class="frow">' +
+    '<label class="f">Start JDG (lub wznowienie)<input type="month" id="jdg-start" data-bind="jdgStart" value="' + esc(s.jdgStart) + '"><span class="hint">od tego miesiąca liczę ZUS i podatek</span></label>' + regs +
     fld('Stawka ryczałtu %', 'rycz-rate', 'ryczaltRate', s.ryczaltRate, { num: 1, hint: '14% – usługi w zakresie opieki zdrowotnej' }) + '</div></div>' +
-    '<div class="card"><h3>Etat w 2026 (skala)</h3><div class="frow">' + fld('Dochód z etatu 2026 (zł)', 'uop-2026', 'uop.2026', (s.uop || {})[2026], { num: 1, hint: 'przychód − koszty − Twoje składki społeczne (PIT-11)' }) +
-    '<label class="f">Pomocnik: brutto z etatu w 2026<input type="text" inputmode="decimal" id="uop-gross" placeholder="np. 90 000"></label><label class="f">Miesięcy pracy<input type="text" inputmode="decimal" id="uop-months" placeholder="np. 9"></label>' +
+    '<div class="card"><h3>Etat w ' + curYear() + ' (skala, jeśli masz)</h3><div class="frow">' + fld('Dochód z etatu ' + curYear() + ' (zł)', 'uop-' + curYear(), 'uop.' + curYear(), (s.uop || {})[curYear()], { num: 1, hint: 'przychód − koszty − Twoje składki społeczne (PIT-11)' }) +
+    '<label class="f">Pomocnik: brutto z etatu w ' + curYear() + '<input type="text" inputmode="decimal" id="uop-gross" placeholder="np. 90 000"></label><label class="f">Miesięcy pracy<input type="text" inputmode="decimal" id="uop-months" placeholder="np. 9"></label>' +
     '<div style="display:flex;align-items:flex-end"><button class="btn" data-a="uop-calc">Przelicz ≈ dochód</button></div></div>' +
     '<label class="chk" style="margin-top:10px"><input type="checkbox" id="kwota-jdg" data-bind="kwotaJDG"' + (s.kwotaJDG !== false ? ' checked' : '') + '> Odliczaj kwotę zmniejszającą (3 600 zł) w zaliczkach z JDG</label>' +
     '<p class="small muted" style="margin-top:6px">Pomocnik liczy: brutto × 0,8629 − 250 zł × miesiące (składki pracownika 13,71% i podstawowe koszty). Dokładną kwotę znajdziesz w PIT-11.</p></div>' +
@@ -2574,7 +2591,7 @@ function viewSettings() {
     '<div class="card"><h3>Cel</h3><div class="frow">' + fld('Cel netto na miesiąc (zł)', 'goal-net', 'goalNet', s.goalNet, { num: 1, hint: '0 = bez paska celu' }) + fld('Czas na przejazd między gabinetami (min)', 'travel', 'travelMin', s.travelMin, { num: 1 }) + '</div></div></section>' +
     '<section class="set-sec" id="sec-zus"><h2>ZUS</h2><p>Wpisz składki społeczne z eZUS (albo od księgowej). Dla porównania: preferencyjny ZUS w 2026 to 456,18 zł z chorobowym, a duży 1 926,76 zł – kwoty pomiędzy to zwykle Mały ZUS Plus. Dodaj okres „Duży ZUS” od miesiąca, w którym kończy się zniżka.</p>' +
     zus + '<div class="row"><button class="btn" data-a="zus-add">+ Dodaj okres (np. koniec zniżki)</button>' + (s.setup.zus ? '' : '<button class="btn ghost" data-a="setup-ok" data-v="zus">Kwota się zgadza</button>') + '</div><div class="frow">' + wak + '</div></section>' +
-    '<section class="set-sec" id="sec-costs"><h2>Koszty firmowe</h2><p>Na skali (do końca 2026) koszty obniżają podatek i zdrowotną. Na ryczałcie zmniejszają tylko Twoje netto – dlatego większe zakupy warto rozważyć jeszcze w 2026 (potwierdź z księgową).</p>' +
+    '<section class="set-sec" id="sec-costs"><h2>Koszty firmowe</h2><p>Na skali i podatku liniowym koszty obniżają podatek i zdrowotną. Na ryczałcie nie obniżają podatku – zmniejszają tylko Twoje netto (szczegóły potwierdź z księgową).</p>' +
     '<div class="card"><div class="frow"><label class="f">Data<input type="date" id="cost-date" value="' + todayStr() + '"></label><label class="f">Kwota (zł)<input type="text" inputmode="decimal" id="cost-amt"></label><label class="f">Opis<input type="text" id="cost-desc" placeholder="np. lupy, kurs"></label>' +
     '<label class="chk" style="align-self:end"><input type="checkbox" id="cost-kup" checked> koszt podatkowy</label><div style="display:flex;align-items:flex-end"><button class="btn" data-a="cost-add">Dodaj koszt</button></div></div>' +
     (costRows ? '<div class="tbl-wrap" style="margin-top:12px"><table class="tbl"><thead><tr><th>Data</th><th>Opis</th><th class="r">Kwota</th><th>KUP</th><th></th></tr></thead><tbody>' + costRows + '</tbody></table></div>' : '') + '</div></section>' +
@@ -2680,7 +2697,8 @@ function demoDocs() {
   s.clinics[2].presets.push({ id: 'p3', name: 'Cały dzień', start: '08:00', end: '20:00' }); s.clinics[1].presets[1].start = '15:00';
   [[[0, 'p1'], [2, 'p1']], [[1, 'p2'], [3, 'p2']], [[4, 'p3']], [[3, 'p1']]].forEach(function (w, i) { s.clinics[i].week = { freq: 'weekly', slots: w.map(function (x) { return { day: x[0], pid: x[1] }; }) }; });
   s.templates = [{ id: 't5', clinicId: 'c3', slots: [{ day: 5, start: '09:00', end: '13:00' }], freq: 'monthly', nth: 'last' }];
-  s.setup = { clinics: true, zus: true, uop: true, grid: true }; s.uop = { 2026: 85000 }; s.goalNet = 20000;
+  s.setup = { clinics: true, zus: true, uop: true, grid: true }; s.uop = {}; s.uop[curYear()] = 85000;
+  s.jdgStart = (curYear() - 1) + '-01'; s.regimes = {}; s.regimes[curYear() - 1] = 'skala'; s.zus = [{ id: 'z1', from: s.jdgStart, variant: 'custom', amount: 1600, base: 0, chor: true }]; s.goalNet = 20000;
   var docs = { settings: s }, t = todayStr(), mk0 = mkOf(t), seed = 7;
   var rnd = function () { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; };
   var lastMk = mkAdd(mk0, 1), kd = lastMk + '-13';
@@ -2812,15 +2830,35 @@ var ACT = {
   },
   'ask-cancel': function () { UI.ask = null; if (UI.modal) renderModal(); render(); },
   'clinic-color': function (el) { S().clinics[+el.dataset.i].color = +el.dataset.v; S().setup.clinics = true; saveSettings(); render(); },
-  'zus-add': function () { var s = S(), last = s.zus[s.zus.length - 1]; s.zus.push({ id: uid(), from: mkAdd(last && last.from ? last.from : s.jdgStart, 12), variant: 'full', amount: 0, base: 0, chor: true }); s.setup.zus = true; saveSettings(); render(); },
+  'zus-add': function () { var s = S(), last = s.zus[s.zus.length - 1]; s.zus.push({ id: uid(), from: last && last.from ? mkAdd(last.from, 12) : (s.jdgStart || mkOf(todayStr())), variant: last ? 'full' : 'custom', amount: 0, base: 0, chor: true }); s.setup.zus = true; saveSettings(); render(); },
   'zus-del': function (el) { var s = S(); s.zus.splice(+el.dataset.i, 1); saveSettings(); render(); },
   'setup-ok': function (el) { S().setup[el.dataset.v] = true; saveSettings(); render(); toast('Zapisano'); },
   'setup-hide': function () { S().setup.hidden = true; saveSettings(); render(); },
   'setup-show': function () { S().setup.hidden = false; saveSettings(); render(); },
+  'wiz-open': function () { UI.wiz = true; UI.tab = 'cal'; UI.edit = null; render(); window.scrollTo(0, 0); },
+  'wiz-skip': function () { S().setup.wizSkip = true; UI.wiz = false; saveSettings(); render(); },
+  'wiz-save': function () {
+    var v = function (id) { return (document.getElementById(id) || {}).value || ''; };
+    var st = v('wiz-start'), r = v('wiz-reg'), r2 = v('wiz-reg2'), zv = v('wiz-zus'), amt = num(v('wiz-amt'));
+    if (!/^\d{4}-\d{2}$/.test(st)) return toast('Podaj miesiąc startu JDG');
+    if (!REGIMES[r]) return toast('Wybierz formę opodatkowania');
+    if (!ZUSV[zv]) return toast('Wybierz wariant składek ZUS');
+    if ((zv === 'custom' || zv === 'base') && !(amt > 0)) return toast(zv === 'custom' ? 'Wpisz miesięczną kwotę społecznych z eZUS' : 'Wpisz podstawę wymiaru');
+    var s = S(), cy = curYear(), y0 = +st.slice(0, 4), b = Math.max(y0, cy);
+    s.jdgStart = st; s.regimes = {}; s.regimes[y0] = r; s.regimes[b] = r; if (r2 && r2 !== r) s.regimes[b + 1] = r2;
+    s.zus = [{ id: uid(), from: st, variant: zv, amount: zv === 'custom' ? amt : 0, base: zv === 'base' ? amt : 0, chor: !!(document.getElementById('wiz-chor') || {}).checked }];
+    s.setup.zus = true; s.setup.wizSkip = false; UI.wiz = false; saveSettings(); render(); toast('Zapisano – netto liczę wg Twoich ustawień');
+  },
+  'tax-reset-ask': function () { UI.taxReset = true; render(); },
+  'tax-reset-no': function () { UI.taxReset = false; render(); },
+  'tax-reset-do': function () {
+    var s = S(); s.jdgStart = ''; s.regimes = {}; s.zus = []; s.uop = {}; s.wakacje = {}; s.annualOverride = {}; s.params = {}; s.healthMode = 'auto'; s.ryczaltRate = 14; s.kwotaJDG = true;
+    s.setup.zus = false; s.setup.uop = false; s.setup.wizSkip = false; UI.taxReset = false; saveSettings(); ACT['wiz-open'](); toast('Wyczyszczono ustawienia podatków i ZUS – ustaw je od nowa');
+  },
   'uop-calc': function () {
     var g = num(document.getElementById('uop-gross').value), m = num(document.getElementById('uop-months').value);
     if (g == null || m == null) return toast('Wpisz brutto i liczbę miesięcy');
-    var v = Math.max(0, Math.round(g * 0.8629 - 250 * m)); var s = S(); s.uop = s.uop || {}; s.uop[2026] = v; s.setup.uop = true; saveSettings(); render(); toast('Dochód z etatu ≈ ' + zl0(v));
+    var v = Math.max(0, Math.round(g * 0.8629 - 250 * m)); var s = S(); s.uop = s.uop || {}; s.uop[curYear()] = v; s.setup.uop = true; saveSettings(); render(); toast('Dochód z etatu ≈ ' + zl0(v));
   },
   'cost-add': function () {
     var d = document.getElementById('cost-date').value, a = num(document.getElementById('cost-amt').value);
