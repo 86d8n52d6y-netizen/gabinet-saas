@@ -71,6 +71,10 @@ Plik `wspolne.js` (sejf z hasłem w przeglądarce) zastąpiony przez `gabinet-sa
 | P41 | baza stomatologiczna (I1): dane checklist (generator/baza-dane.js z data/, scripts/baza_dane_przegladarka.py) ładowane w Opisach NFZ – tylko do odczytu |
 | P42 | baza stomatologiczna (I1): funkcje kontroli kompletności dokumentacji (ostrzeżenie bez blokady – decyzja Patryka 22.11.2026) |
 | P42a | kontrola kompletności w kroku 3 (Opis) – przed opisem; treść opisu i wycena bez zmian |
+| P43 | opis z karty procedury (etap I2, decyzja Patryka 22.11.2026): dane kart zweryfikowanych (generator/karty-opisy.js) i okienko (generator/opis-z-karty.js) – tylko na urządzeniu |
+| P43a | przycisk „Opis z karty” obok „Edytuj tekst” (krok 3) – generator opisu NFZ bez zmian |
+| P43b | przycisk „Opis z karty” także w trybie edycji tekstu |
+| P43c | wstawienie: tekst z karty dopisany na końcu opisu jako edycja ręczna (state.ed) – zapis, szkic i historia jak przy „Edytuj tekst” |
 
 ## Opisy prywatne (`prywatne.html`)
 
@@ -99,6 +103,9 @@ Plik `wspolne.js` (sejf z hasłem w przeglądarce) zastąpiony przez `gabinet-sa
 | R11a | wyłącznik podsumowania w Ustawieniach (obok podpisu) |
 | R11b | obsługa wyłącznika podsumowania |
 | R12 | bezpiecznik startu (zgłoszenie Patryka 21.11.2026: „czasem zostaje Wczytuję…”, zwłaszcza po przejściu z Opisów NFZ): po 8 s bez gotowości – informacja i „Odśwież”; za pierwszym razem samo odświeżenie (najwyżej raz na minutę) |
+| R13 | opis z karty procedury (etap I2, decyzja Patryka 22.11.2026): dane kart zweryfikowanych i okienko – tylko na urządzeniu |
+| R13a | przycisk „Opis z karty” obok „Edytuj tekst” / „Wygeneruj tekst z formularza” |
+| R13b | wstawienie: tekst z karty dopisany na końcu opisu jako edycja ręczna (V.edited) – zapis i szkic jak przy „Edytuj tekst” |
 
 ## Kalendarz (`kalendarz.html`)
 
