@@ -54,7 +54,7 @@ W = wymagane (bez nich zlecenie niekompletne – ostrzeżenie, ale zapis możliw
 
 ## 5. Zgryz (moduł rozwijany)
 
-Klasa Angle'a (I / II/1 / II/2 / III), overjet i overbite (mm), zgryz głęboki / otwarty / krzyżowy / przewieszony, linia pośrodkowa (zgodna / przesunięta – mm, strona), płaszczyzna zgryzowa, VDO (zachować / zmienić o … mm), rejestracja zwarcia (zgryz w MIC / CR, rejestrat, skan bocznego zwarcia), kontakty zwarciowe (na schemacie), prowadzenie (kłowe / grupowe / przednie), bruksizm i parafunkcje (tak/nie + szyna), zaburzenia SSSŻ (TMD) – uwagi. Wszystko Z/O, z wyjątkiem: **rejestracja zwarcia – W przy mostach i pracach pełnołukowych** [W].
+Klasa Angle'a (I / II/1 / II/2 / III), overjet i overbite (mm), zgryz głęboki / otwarty / krzyżowy / przewieszony, linia pośrodkowa (zgodna / przesunięta – mm, strona), płaszczyzna zgryzowa, VDO (zachować / zmienić o … mm), rejestracja zwarcia (zgryz w MIC / CR, rejestrat, skan bocznego zwarcia), kontakty zwarciowe (na schemacie), prowadzenie (kłowe / grupowe / przednie), bruksizm i parafunkcje (tak/nie + szyna), zaburzenia SSSŻ (TMD) – uwagi. Wszystko Z/O, z wyjątkiem: **rejestracja zwarcia – W przy każdym moście (klasyczny, adhezyjny, na implantach, pełnołukowy, tymczasowy) i pracach pełnołukowych** (potwierdzone przez Patryka 22.11.2026).
 
 ## 6. Katalog rodzajów prac (rozszerzalny) i pola zależne
 
@@ -64,13 +64,19 @@ Klasa Angle'a (I / II/1 / II/2 / III), overjet i overbite (mm), zgryz głęboki 
 | B Mosty | klasyczny, adhezyjny, na implantach, pełnołukowy, tymczasowy | j.w. | **filary i przęsła na schemacie (W)**, kształt przęsła (siodłowe/owalne/higieniczne) (Z), łączniki (Z) |
 | C Implantoprotetyka | korona/most na implancie, łącznik indywidualny, Ti-base, przykręcana/cementowana | cyrkon, tytan, CoCr, PMMA | **producent i system (W)**, platforma, połączenie (W wg deltalabs), scanbody (Z), MUA (Z), średnica/długość (O), kąt (O), profil wyłaniania (Z), otwór śruby (Z), tkanki miękkie (O) |
 | D Pełnołukowe | All-on-4, All-on-6, All-on-X, tymczasowe, ostateczne, hybrydowe | PMMA, kompozyt, tytan/CoCr + akryl/kompozyt, cyrkon | liczba i pozycje implantów (W), system/MUA (W), rejestracja zwarcia + VDO (W), linia pośrodkowa, płaszczyzna zgryzowa, podparcie wargi, ekspozycja zębów, fonetyka, kształt i ustawienie, kolor zębów i dziąsła (Z), materiał konstrukcji (W), etap: tymczasowa / ostateczna (W), oczekiwane przymiarki (Z) |
-| E Ruchome | całkowita, częściowa, szkieletowa, akrylowa, elastyczna, naprawa, podścielenie | akryl, CoCr, nylon (elastyczna) | brakujące zęby i klamry na schemacie (W), etap (łyżka indywidualna / wzorniki / ustawienie / gotowa), kolor zębów (W) i dziąsła (Z), rodzaj/nr zębów sztucznych (O) |
+| E Ruchome | całkowita, częściowa, szkieletowa, akrylowa, elastyczna, naprawa, podścielenie | akryl, CoCr, nylon (elastyczna) | brakujące zęby i klamry na schemacie (W), etap (łyżka indywidualna / wzorniki / próba szkieletu – tylko szkieletowa / ustawienie / gotowa), kolor zębów (W) i dziąsła (Z), rodzaj/nr zębów sztucznych (O) |
 | F Pozostałe | licówki, inlay, onlay, overlay, endokorona, szyna relaksacyjna/ochronna, inna | e.max, kompozyt, cyrkon, PMMA, akryl (szyny) | kolor (W przy estetycznych), grubość szyny (Z), łuk (W przy szynach) |
 
 ## 7. Kontrola kompletności (przykłady z promptu)
 
 Korona bez materiału · praca estetyczna bez koloru (lub bez skali) · most bez przęseł · implant bez systemu · All-on-X bez komponentów → **ostrzeżenie**, zapis i wydruk możliwe (z listą braków na wydruku). Status „do uzupełnienia” z listą braków (zgłoszonych przez technika telefonicznie/mailowo – wpisuje lekarz).
 
-## 8. Do weryfikacji przez Patryka
+## 8. Weryfikacja pozycji [W] przez Patryka (22.11.2026, etap E4)
 
-Wszystkie pozycje **[W]** (pochodzą z ogólnej wiedzy, nie ze źródła powyżej) – szczególnie: listy materiałów dla rodzajów prac, pola All-on-X, etapy protez ruchomych.
+| Pozycja | Decyzja |
+|---|---|
+| Rejestracja zwarcia przy mostach | **wymagana przy każdym moście** (wcześniej w aplikacji tylko zalecana) |
+| Listy materiałów dla rodzajów prac | zaakceptowane bez zmian (własne materiały można dopisać w zleceniu) |
+| Pola All-on-X (wymagane i zalecane) | zaakceptowane bez zmian |
+| Etapy protez ruchomych | dodany etap **„próba szkieletu”** przy protezie szkieletowej; reszta bez zmian |
+| Pozostałe [W] (laboratorium, mapa koloru, przezierność, kolor dziąsła) | bez zmian (Patryk nie zgłosił uwag) |
