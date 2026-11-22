@@ -6,33 +6,295 @@
    "kod": "23.0101",
    "nazwa_oficjalna": "Badanie lekarskie stomatologiczne, które obejmuje również instruktaż higieny jamy ustnej",
    "kategoria": "badanie i porada",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Badanie lekarskie stomatologiczne",
+   "opis": "Badanie lekarskie stomatologiczne obejmujące instruktaż higieny jamy ustnej.",
+   "cel": {
+    "na_czym_polega": "Pełne badanie stomatologiczne (katalog A: BAD-STOMATOLOGICZNE) z instruktażem higieny i planem leczenia.",
+    "cel_kliniczny": "Rozpoznanie stanu jamy ustnej, wykrycie chorób, plan leczenia i profilaktyki.",
+    "wskazania": [
+     "pierwsza wizyta",
+     "badanie okresowe (NFZ: 1× w roku kalendarzowym)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "aktualny wywiad"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy, oświetlenie",
+     "karta / formularz badania"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-INSTRUKTAZ"
+    },
+    {
+     "krok": "KROK-PLAN"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "kompletność badań składowych",
+     "przeprowadzenie instruktażu"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Plan leczenia i zalecenia higieniczne."
+    ],
+    "kontrola": "Wg ryzyka próchnicy i chorób przyzębia."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Instruktaż higieny jamy ustnej (składnik świadczenia)",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-DU-2025-615"
+      ],
+      "warunek": "rozliczenie NFZ"
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "pakiet ST30D",
+     "pakiet ST30F",
+     "pakiet ST33",
+     "pakiet ST33A"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie jest udzielane 1 raz w roku kalendarzowym.",
+     "zał. 2 (<18): Świadczenie jest udzielane 1 raz w roku kalendarzowym.",
+     "zał. 2b (<18 (szkoła)): Świadczenie jest udzielane raz w roku kalendarzowym."
+    ],
+    "reguly": [
+     "R-BAD-01",
+     "R-ST30-CZAS",
+     "R-ST30-WZAJEM",
+     "R-ST30BC-WYK",
+     "R-ST30DFG-LIMIT",
+     "R-ST30DG-WIEK"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "W Opisach NFZ – pakiet ST33."
+   },
+   "zrodla": [
+    "SRC-DU-2025-615",
+    "SRC-ZARZ-60-2023-TJ"
+   ],
+   "opracowano": "2026-11-22",
+   "kody_aplikacji": [
+    "ST33"
+   ]
   },
   {
    "id": "PROC-23.0102",
    "kod": "23.0102",
    "nazwa_oficjalna": "Badanie lekarskie kontrolne",
    "kategoria": "badanie i porada",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Badanie lekarskie kontrolne",
+   "opis": "Badanie lekarskie kontrolne.",
+   "cel": {
+    "na_czym_polega": "Badanie kontrolne wg BAD-KONTROLNE.",
+    "cel_kliniczny": "Ocena zmian i wyników leczenia.",
+    "wskazania": [
+     "kontrola w trakcie / po leczeniu",
+     "kontrola okresowa"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "aktualny wywiad"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-PLAN"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "porównanie z poprzednim badaniem"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg planu."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "pakiet ST34",
+     "pakiet ST34A"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie jest udzielane 3 razy w roku kalendarzowym. W przypadku kobiet w ciąży i w okresie połogu świadczenie jest udzielane nie częściej niż 1 raz na kwartał.",
+     "zał. 2 (<18): Świadczenie jest udzielane 3 razy w roku kalendarzowym. W przypadku kobiet w ciąży i w okresie połogu świadczenie jest udzielane nie częściej niż 1 raz na kwartał.",
+     "zał. 2b (<18 (szkoła)): Świadczenie jest udzielane 3 razy w roku kalendarzowym. W przypadku kobiet w ciąży i w okresie połogu świadczenie jest udzielane nie częściej niż raz na kwartał."
+    ],
+    "reguly": [
+     "R-BAD-02",
+     "R-ST30BC-WYK"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "W Opisach NFZ – pakiet ST34."
+   },
+   "zrodla": [
+    "SRC-DU-2025-615"
+   ],
+   "opracowano": "2026-11-22",
+   "kody_aplikacji": [
+    "ST34"
+   ]
   },
   {
    "id": "PROC-23.0103",
    "kod": "23.0103",
    "nazwa_oficjalna": "Porada lekarska",
    "kategoria": "badanie i porada",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Porada lekarska",
+   "opis": "Porada lekarska.",
+   "cel": {
+    "na_czym_polega": "Ukierunkowana konsultacja problemu zgłaszanego przez pacjenta (wywiad, badanie miejscowe, zalecenia) bez wykonywania zabiegu.",
+    "cel_kliniczny": "Ocena problemu i decyzja o postępowaniu.",
+    "wskazania": [
+     "dolegliwość wymagająca oceny",
+     "pytania pacjenta o leczenie"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "aktualny wywiad"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-PLAN"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "udzielone zalecenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg potrzeby."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Problem, wynik badania miejscowego, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0104",
@@ -50,11 +312,98 @@
    "kod": "23.0105",
    "nazwa_oficjalna": "Konsultacja specjalistyczna",
    "kategoria": "badanie i porada",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Konsultacja specjalistyczna",
+   "opis": "Konsultacja specjalistyczna.",
+   "cel": {
+    "na_czym_polega": "Ocena przypadku przez lekarza konsultującego na podstawie skierowania / problemu, z opinią i zaleceniami.",
+    "cel_kliniczny": "Ustalenie rozpoznania i postępowania w przypadku wymagającym wiedzy specjalistycznej.",
+    "wskazania": [
+     "skierowanie od innego lekarza",
+     "przypadek wymagający specjalistycznej oceny"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "aktualny wywiad"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "dokumentacja / skierowanie",
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-PLAN"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "odpowiedź na pytanie z konsultacji"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg opinii."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Opinia konsultacyjna z zaleceniami",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "pakiet ST29"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie obejmuje badanie lekarza specjalisty z krótką pisemną oceną i wskazaniami diagnostyczno- -terapeutycznymi dla lekarza prowadzącego, bez połączenia z innymi świadczeniami gwarantowanymi.",
+     "zał. 2 (<18): Świadczenie obejmuje badanie lekarza specjalisty z krótką pisemną oceną i wskazaniami diagnostyczno- -terapeutycznymi dla lekarza prowadzącego, bez połączenia z innymi świadczeniami gwarantowanymi.",
+     "zał. 2b (<18 (szkoła)): Świadczenie obejmuje badanie lekarza specjalisty z krótką pisemną oceną i wskazaniami diagnostyczno-terapeutycznymi dla lekarza prowadzącego, bez połączenia z innymi świadczeniami gwarantowanymi."
+    ],
+    "reguly": [
+     "R-KONS-01"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "NFZ: konsultacja nie łączy się z innymi świadczeniami (R-KONS-01)."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0106",
@@ -72,44 +421,419 @@
    "kod": "23.0107",
    "nazwa_oficjalna": "Badanie lekarskie stomatologiczne i kontrolne po urazie zęba",
    "kategoria": "badanie i porada",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Badanie po urazie zęba",
+   "opis": "Badanie lekarskie stomatologiczne i kontrolne po urazie zęba.",
+   "cel": {
+    "na_czym_polega": "Badanie i kontrole po urazie wg BAD-PO-URAZIE (IADT 2020).",
+    "cel_kliniczny": "Rozpoznanie urazu, leczenie doraźne, monitorowanie miazgi i przyzębia.",
+    "wskazania": [
+     "uraz zęba",
+     "kontrole po urazie"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "aktualny wywiad"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy, testy żywotności, RTG"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-PLAN"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-TESTER",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-RTG-UPS",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "klasyfikacja urazu i plan kontroli"
+    ]
+   },
+   "zalecenia": {
+    "kontakt_gdy": [
+     "ból, obrzęk, przebarwienie zęba, ruchomość"
+    ],
+    "kontrola": "Wg IADT – zależnie od rodzaju urazu."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Okoliczności, rodzaj urazu, plan kontroli",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-IADT-OG-2020"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "pakiet ST28"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia. Świadczenie obejmuje jednorazowe badanie lekarskie stomatologiczne po urazie zęba wraz z instruktażem higieny jamy ustnej, w połączeniu ze świadczeniami stomatologicznymi związanymi z udzieleniem pomocy medycznej pourazowej, oraz badanie lekarskie kontrolne związane z urazem zęba, wykonywane do 3 razy w ciągu pierwszych 6 miesięcy od urazu, z wpisaniem opisu do dokumentacji medycznej. 3) leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 3 kanałów; 4) leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA – inne. 23.13143 23.13149",
+     "zał. 2 (<18): Świadczenie jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia. Świadczenie obejmuje jednorazowe badanie lekarskie stomatologiczne po urazie zęba wraz z instruktażem higieny jamy ustnej, w połączeniu ze świadczeniami stomatologicznymi związanymi z udzieleniem pomocy medycznej pourazowej, oraz badanie lekarskie kontrolne związane z urazem zęba, wykonywane do 3 razy w ciągu pierwszych 6 miesięcy od urazu, z wpisaniem opisu do dokumentacji medycznej.",
+     "zał. 2b (<18 (szkoła)): Świadczenie obejmuje jednorazowe badanie lekarskie stomatologiczne po urazie wraz z instruktażem higieny jamy ustnej, w połączeniu ze świadczeniami stomatologicznymi związanymi z udzieleniem pomocy medycznej pourazowej, oraz badanie lekarskie kontrolne związane z urazem zęba, wykonywane do 3 razy w okresie pierwszych 6 miesięcy od urazu, z wpisaniem opisu do dokumentacji medycznej."
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "W Opisach NFZ – pakiet ST28."
+   },
+   "zrodla": [
+    "SRC-KLIN-IADT-OG-2020",
+    "SRC-KLIN-IADT-ZLAM-2020"
+   ],
+   "opracowano": "2026-11-22",
+   "kody_aplikacji": [
+    "ST28"
+   ]
   },
   {
    "id": "PROC-23.02",
    "kod": "23.02",
    "nazwa_oficjalna": "Badanie żywotności zęba",
    "kategoria": "diagnostyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Badanie żywotności zęba",
+   "opis": "Badanie żywotności zęba.",
+   "cel": {
+    "na_czym_polega": "Testy miazgowe i okołowierzchołkowe wg BAD-ZYWOTNOSC.",
+    "cel_kliniczny": "Ocena stanu miazgi i tkanek okołowierzchołkowych.",
+    "wskazania": [
+     "ból zęba",
+     "kwalifikacja do leczenia",
+     "kontrola po urazie / pokryciu miazgi"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "aktualny wywiad"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "środek do testu na zimno"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-TESTER",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "porównanie z zębem kontrolnym"
+    ]
+   },
+   "zalecenia": {},
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "pakiet ST28"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie obejmuje badanie żywotności zęba z objęciem badaniem 3 zębów sąsiednich lub przeciwstawnych.",
+     "zał. 2 (<18): Świadczenie obejmuje badanie żywotności zęba z objęciem badaniem 3 zębów sąsiednich lub przeciwstawnych.",
+     "zał. 2b (<18 (szkoła)): Świadczenie obejmuje badanie żywotności zęba z objęciem badaniem 3 zębów sąsiednich lub przeciwstawnych."
+    ],
+    "reguly": [
+     "R-ZYW-01"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0301",
    "kod": "23.0301",
    "nazwa_oficjalna": "Rentgenodiagnostyka do 2 zdjęć wewnątrzustnych",
    "kategoria": "radiologia",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "RTG – do 2 zdjęć wewnątrzustnych",
+   "opis": "Rentgenodiagnostyka – do 2 zdjęć wewnątrzustnych.",
+   "cel": {
+    "na_czym_polega": "Wykonanie i opis do 2 zdjęć wewnątrzustnych.",
+    "cel_kliniczny": "Diagnostyka zmian niewidocznych klinicznie.",
+    "wskazania": [
+     "próchnica styczna",
+     "endodoncja",
+     "zmiany okołowierzchołkowe",
+     "przed ekstrakcją"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "uzasadnienie wykonania",
+     "poprzednie zdjęcia (unikanie powtórzeń)"
+    ],
+    "wywiad": [
+     "ciąża"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ciąża – tylko przy pilnym wskazaniu",
+      "rodzaj": "wzgledne"
+     }
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "aparat RTG / pantomograf",
+     "pozycjoner / osłony wg procedur"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-RTG-WYKONANIE"
+    },
+    {
+     "krok": "KROK-RTG-OPIS"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-RTG",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-RTG-UPS",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "jakość zdjęcia (obejmuje okolicę, bez zniekształceń)"
+    ],
+    "dalsze_postepowanie": [
+     "powtórzenie tylko przy niediagnostycznym zdjęciu"
+    ]
+   },
+   "zalecenia": {},
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Opis zdjęcia w dokumentacji",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-DU-2025-615"
+      ],
+      "warunek": "rozliczenie NFZ"
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.2303010 – 20 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie obejmuje wykonanie techniczne zdjęcia. Świadczenie jest udzielane do 2 zdjęć wewnątrzustnych w roku kalendarzowym w połączeniu z innymi świadczeniami gwarantowanymi z wpisaniem opisu do dokumentacji medycznej.",
+     "zał. 2 (<18): Świadczenie obejmuje wykonanie techniczne zdjęcia. Świadczenie jest udzielane do 2 zdjęć wewnątrzustnych w roku kalendarzowym w połączeniu z innymi świadczeniami gwarantowanymi z wpisaniem opisu do dokumentacji medycznej.",
+     "zał. 2b (<18 (szkoła)): Świadczenie obejmuje wykonanie techniczne zdjęcia. Świadczenie jest udzielane do 2 zdjęć wewnątrzustnych w roku kalendarzowym w połączeniu z innymi świadczeniami gwarantowanymi z wpisaniem opisu do dokumentacji medycznej. Wyposażenie niezbędne do realizacji świadczenia: aparat RTG do zdjęć zębowych lub radiowizjografia w lokalizacji lub w dostępie."
+    ],
+    "reguly": [
+     "R-RTG-01",
+     "R-RTG-02"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-DU-2025-615",
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0302",
    "kod": "23.0302",
    "nazwa_oficjalna": "Rentgenodiagnostyka do 5 zdjęć wewnątrzustnych",
    "kategoria": "radiologia",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "RTG – do 5 zdjęć wewnątrzustnych",
+   "opis": "Rentgenodiagnostyka – do 5 zdjęć wewnątrzustnych.",
+   "cel": {
+    "na_czym_polega": "Wykonanie i opis do 5 zdjęć wewnątrzustnych.",
+    "cel_kliniczny": "Diagnostyka zmian niewidocznych klinicznie.",
+    "wskazania": [
+     "próchnica styczna",
+     "endodoncja",
+     "zmiany okołowierzchołkowe",
+     "przed ekstrakcją"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "uzasadnienie wykonania",
+     "poprzednie zdjęcia (unikanie powtórzeń)"
+    ],
+    "wywiad": [
+     "ciąża"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ciąża – tylko przy pilnym wskazaniu",
+      "rodzaj": "wzgledne"
+     }
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "aparat RTG / pantomograf",
+     "pozycjoner / osłony wg procedur"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-RTG-WYKONANIE"
+    },
+    {
+     "krok": "KROK-RTG-OPIS"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-RTG",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-RTG-UPS",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "jakość zdjęcia (obejmuje okolicę, bez zniekształceń)"
+    ],
+    "dalsze_postepowanie": [
+     "powtórzenie tylko przy niediagnostycznym zdjęciu"
+    ]
+   },
+   "zalecenia": {},
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Opis zdjęcia w dokumentacji",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-DU-2025-615"
+      ],
+      "warunek": "rozliczenie NFZ"
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia. Świadczenie obejmuje wykonanie techniczne zdjęcia. Świadczenie obejmuje wykonanie do 5 zdjęć wewnątrzustnych w roku kalendarzowym wraz z przygotowaniem opisu badań oraz wpisaniem opisu zdjęć w dokumentację medyczną pacjenta. Świadczenie jest realizowane w połączeniu ze świadczeniami gwarantowanymi o kodzie ICD-9 23.01 wraz z rozszerzeniami oraz 23.13 wraz z rozszerzeniami. Lekarz kierujący na badanie ma obowiązek uzasadnić w treści skierowania konieczność wykonania badania, w tym liczbę zdjęć. Wyposażenie niezbędne do realizacji świadczenia: aparat RTG do zdjęć zębowych lub radiowizjografia w lokalizacji lub w dostępie.",
+     "zał. 2 (<18): Świadczenie jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia. Świadczenie obejmuje wykonanie techniczne zdjęcia. Świadczenie obejmuje wykonanie do 5 zdjęć wewnątrzustnych w roku kalendarzowym wraz z przygotowaniem opisu badań oraz wpisaniem opisu zdjęć w dokumentację medyczną pacjenta. Świadczenie jest realizowane w połączeniu ze świadczeniami gwarantowanymi o kodzie ICD-9 23.01 wraz z rozszerzeniami oraz 23.13 wraz z rozszerzeniami. Lekarz kierujący na badanie ma obowiązek uzasadnić w treści skierowania konieczność wykonania badania, w tym liczbę zdjęć. Wyposażenie niezbędne do realizacji świadczenia: aparat RTG do zdjęć zębowych lub radiowizjografia w lokalizacji lub w dostępie.",
+     "zał. 2b (<18 (szkoła)): Świadczenie obejmuje wykonanie techniczne zdjęcia. Świadczenie obejmuje wykonanie do 5 zdjęć wewnątrzustnych w roku kalendarzowym wraz z przygotowaniem opisu badań oraz wpisaniem opisu zdjęć do dokumentacji medycznej pacjenta. Świadczenie jest realizowane w połączeniu ze świadczeniami gwarantowanymi o kodzie ICD-9 23.01 wraz z rozszerzeniami oraz 23.13 wraz z rozszerzeniami. Lekarz kierujący na badanie ma obowiązek uzasadnić w treści skierowania konieczność wykonania badania, w tym liczbę zdjęć. Wyposażenie niezbędne do realizacji świadczenia: aparat RTG do zdjęć zębowych lub radiowizjografia w lokalizacji lub w dostępie."
+    ],
+    "reguly": [
+     "R-RTG-02"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615"
+    ]
+   },
+   "zrodla": [
+    "SRC-DU-2025-615",
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0303",
@@ -127,44 +851,523 @@
    "kod": "23.0304",
    "nazwa_oficjalna": "Rentgenodiagnostyka - zdjęcie pantomograficzne z opisem",
    "kategoria": "radiologia",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Pantomogram z opisem",
+   "opis": "Rentgenodiagnostyka – zdjęcia pantomograficznego.",
+   "cel": {
+    "na_czym_polega": "Wykonanie i opis zdjęcia pantomograficznego.",
+    "cel_kliniczny": "Diagnostyka zmian niewidocznych klinicznie.",
+    "wskazania": [
+     "endodoncja (dorośli)",
+     "przed leczeniem protetycznym",
+     "zęby zatrzymane, ocena rozwoju uzębienia u dzieci"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "uzasadnienie wykonania",
+     "poprzednie zdjęcia (unikanie powtórzeń)"
+    ],
+    "wywiad": [
+     "ciąża"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ciąża – tylko przy pilnym wskazaniu",
+      "rodzaj": "wzgledne"
+     }
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "aparat RTG / pantomograf",
+     "pozycjoner / osłony wg procedur"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-RTG-WYKONANIE"
+    },
+    {
+     "krok": "KROK-RTG-OPIS"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-PANTOMOGRAF",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-RTG-UPS",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "jakość zdjęcia (obejmuje okolicę, bez zniekształceń)"
+    ],
+    "dalsze_postepowanie": [
+     "powtórzenie tylko przy niediagnostycznym zdjęciu"
+    ]
+   },
+   "zalecenia": {},
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Opis zdjęcia w dokumentacji",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-DU-2025-615"
+      ],
+      "warunek": "rozliczenie NFZ"
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.2303040 – 74 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy): W przypadku: 1) osób dorosłych świadczenie jest udzielane na potrzeby leczenia endodontycznego oraz w przypadku wszystkich świadczeniobiorców przed rozpoczęciem udzielania świadczeń protetyki stomatologicznej. Świadczenie jest udzielane 1 raz na 5 lat w połączeniu ze świadczeniami gwarantowanymi z zakresu leczenia stomatologicznego; 2) dzieci i młodzieży od 5. do ukończenia 18. roku życia świadczenie jest udzielane w uzasadnionych medycznie przypadkach przy podejrzeniu nieprawidłowości rozwojowych zębów, zmian chorobowych w obrębie kości szczęk lub zapalenia przyzębia lub w diagnostyce ognisk infekcji zębo- i niezębopochodnych. Świadczenie jest udzielane 1 raz na 3 lata w połączeniu ze świadczeniami gwarantowanymi z zakresu leczenia stomatologicznego. Świadczenie obejmuje wykonanie techniczne zdjęcia wraz z przygotowaniem opisu badania oraz wpisaniem opisu zdjęcia w dokumentację medyczną pacjenta. Skierowanie wystawia lekarz dentysta posiadający specjalizację lub lekarz dentysta w trakcie szkolenia specjalizacyjnego. Lekarz kierujący na badanie ma obowiązek uzasadnić w treści skierowania konieczność wykonania badania. Wyposażenie niezbędne do realizacji świadczenia: aparat RTG do zdjęć zębowych lub radiowizjografia w lokalizacji lub dostępie.",
+     "zał. 2 (<18): Świadczenie jest udzielane dzieciom i młodzieży od 5. do ukończenia 18. roku życia w uzasadnionych medycznie przypadkach przy podejrzeniu nieprawidłowości rozwojowych zębów, zmian chorobowych w obrębie kości szczęk lub zapalenia przyzębia, diagnostyce ognisk infekcji zębo- i niezębopochodnych. Świadczenie obejmuje wykonanie techniczne zdjęcia wraz z przygotowaniem opisu badania oraz wpisaniem opisu zdjęcia w dokumentację medyczną pacjenta. Świadczenie jest udzielane 1 raz na 3 lata w połączeniu ze świadczeniami gwarantowanymi z zakresu stomatologii. Skierowanie wystawia lekarz dentysta posiadający specjalizację lub lekarz dentysta w trakcie szkolenia specjalizacyjnego. Lekarz kierujący na badanie ma obowiązek uzasadnić w treści skierowania konieczność wykonania badania. Wyposażenie niezbędne do realizacji świadczenia: aparat RTG do zdjęć zębowych lub radiowizjografia w lokalizacji lub w dostępie.",
+     "zał. 2b (<18 (szkoła)): Świadczenie jest udzielane dzieciom i młodzieży od 5. do ukończenia 18. roku życia w uzasadnionych medycznie przypadkach przy podejrzeniu nieprawidłowości rozwojowych zębów, zmian chorobowych w obrębie kości szczęk lub zapalenia przyzębia, lub diagnostyce ognisk infekcji zębo- i niezębopochodnych. Świadczenie obejmuje wykonanie techniczne zdjęcia wraz z przygotowaniem opisu badań oraz wpisaniem opisu zdjęcia do dokumentacji medycznej pacjenta. Świadczenie jest udzielane 1 raz na 3 lata w połączeniu ze świadczeniami gwarantowanymi z zakresu stomatologii. Skierowanie wystawia lekarz dentysta posiadający specjalizację lub lekarz dentysta w trakcie szkolenia specjalizacyjnego. Lekarz kierujący na badanie ma obowiązek uzasadnić w treści skierowania konieczność wykonania badania. Wyposażenie niezbędne do realizacji świadczenia: aparat RTG do zdjęć zębowych lub radiowizjografia w lokalizacji lub w dostępie."
+    ],
+    "reguly": [
+     "R-RTG-02",
+     "R-RTG-03"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-DU-2025-615",
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0401",
    "kod": "23.0401",
    "nazwa_oficjalna": "Znieczulenie miejscowe powierzchniowe",
    "kategoria": "znieczulenie",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Znieczulenie powierzchniowe",
+   "opis": "Znieczulenie miejscowe powierzchniowe.",
+   "cel": {
+    "na_czym_polega": "Znieczulenie miejscowe powierzchniowe. Podanie środka znieczulającego przed zabiegiem.",
+    "cel_kliniczny": "Bezbolesne przeprowadzenie zabiegu.",
+    "wskazania": [
+     "zabiegi bolesne (wypełnienia głębokie, endodoncja, ekstrakcje, kiretaż)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "masa ciała (dzieci) – dawka maksymalna",
+     "choroby ogólne, ciąża"
+    ],
+    "wywiad": [
+     "alergie na środki znieczulające",
+     "wcześniejsze reakcje",
+     "leki"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "potwierdzona alergia na dany środek",
+      "rodzaj": "bezwzgledne"
+     },
+     {
+      "tekst": "choroby, przy których ograniczamy środek obkurczający naczynia",
+      "rodzaj": "wzgledne"
+     }
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "środek znieczulający, strzykawka z aspiracją, igła"
+    ],
+    "opcjonalne": [
+     "znieczulenie powierzchniowe miejsca wkłucia"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZ-POWIERZCHNIOWE"
+    },
+    {
+     "krok": "KROK-OBSERWACJA-ZNIECZ"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ-POW",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "skuteczność znieczulenia",
+     "stan ogólny pacjenta"
+    ],
+    "nieprawidlowosci": [
+     "brak znieczulenia",
+     "omdlenie",
+     "reakcja alergiczna",
+     "krwiak"
+    ],
+    "dalsze_postepowanie": [
+     "postępowanie w nagłych przypadkach wg procedur gabinetu"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Nie jeść do ustąpienia znieczulenia; uważać na przygryzienie warg / policzków (dzieci – nadzór opiekuna)."
+    ],
+    "kontakt_gdy": [
+     "przedłużone drętwienie (> doba)"
+    ]
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Preparat, dawka, miejsce podania",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.2304010 – 3 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie jest udzielane jako samodzielne znieczulenie w połączeniu z innymi świadczeniami gwarantowanymi.",
+     "zał. 2 (<18): Świadczenie jest udzielane jako samodzielne znieczulenie w połączeniu z innymi świadczeniami gwarantowanymi.",
+     "zał. 2b (<18 (szkoła)): Świadczenie jest udzielane jako samodzielne znieczulenie w połączeniu z innymi świadczeniami gwarantowanymi."
+    ],
+    "reguly": [
+     "R-ZNI-01",
+     "R-ZNI-02"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "R-ZNI-01: tylko z innym świadczeniem; R-ZNI-02: przy ST01/ST02/ST04 wliczone w pakiet (decyzja Patryka)."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "kody_aplikacji": [
+    "0401"
+   ]
   },
   {
    "id": "PROC-23.0402",
    "kod": "23.0402",
    "nazwa_oficjalna": "Znieczulenie miejscowe nasiękowe",
    "kategoria": "znieczulenie",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Znieczulenie nasiękowe",
+   "opis": "Znieczulenie miejscowe nasiękowe.",
+   "cel": {
+    "na_czym_polega": "Znieczulenie miejscowe nasiękowe. Podanie środka znieczulającego przed zabiegiem.",
+    "cel_kliniczny": "Bezbolesne przeprowadzenie zabiegu.",
+    "wskazania": [
+     "zabiegi bolesne (wypełnienia głębokie, endodoncja, ekstrakcje, kiretaż)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "masa ciała (dzieci) – dawka maksymalna",
+     "choroby ogólne, ciąża"
+    ],
+    "wywiad": [
+     "alergie na środki znieczulające",
+     "wcześniejsze reakcje",
+     "leki"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "potwierdzona alergia na dany środek",
+      "rodzaj": "bezwzgledne"
+     },
+     {
+      "tekst": "choroby, przy których ograniczamy środek obkurczający naczynia",
+      "rodzaj": "wzgledne"
+     }
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "środek znieczulający, strzykawka z aspiracją, igła"
+    ],
+    "opcjonalne": [
+     "znieczulenie powierzchniowe miejsca wkłucia"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZ-NASIEKOWE"
+    },
+    {
+     "krok": "KROK-OBSERWACJA-ZNIECZ"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ-POW",
+     "rola": "sytuacyjne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "skuteczność znieczulenia",
+     "stan ogólny pacjenta"
+    ],
+    "nieprawidlowosci": [
+     "brak znieczulenia",
+     "omdlenie",
+     "reakcja alergiczna",
+     "krwiak"
+    ],
+    "dalsze_postepowanie": [
+     "postępowanie w nagłych przypadkach wg procedur gabinetu"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Nie jeść do ustąpienia znieczulenia; uważać na przygryzienie warg / policzków (dzieci – nadzór opiekuna)."
+    ],
+    "kontakt_gdy": [
+     "przedłużone drętwienie (> doba)"
+    ]
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Preparat, dawka, miejsce podania",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.2304020 – 12 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie jest udzielane w połączeniu z innymi świadczeniami gwarantowanymi.",
+     "zał. 2 (<18): Świadczenie jest udzielane w połączeniu z innymi świadczeniami gwarantowanymi.",
+     "zał. 2b (<18 (szkoła)): Świadczenie jest udzielane w połączeniu z innymi świadczeniami gwarantowanymi."
+    ],
+    "reguly": [
+     "R-ZNI-01",
+     "R-ZNI-02"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "R-ZNI-01: tylko z innym świadczeniem; R-ZNI-02: przy ST01/ST02/ST04 wliczone w pakiet (decyzja Patryka)."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "kody_aplikacji": [
+    "0402"
+   ]
   },
   {
    "id": "PROC-23.0403",
    "kod": "23.0403",
    "nazwa_oficjalna": "Znieczulenie przewodowe wewnątrzustne",
    "kategoria": "znieczulenie",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Znieczulenie przewodowe wewnątrzustne",
+   "opis": "Znieczulenie przewodowe wewnątrzustne.",
+   "cel": {
+    "na_czym_polega": "Znieczulenie przewodowe wewnątrzustne. Podanie środka znieczulającego przed zabiegiem.",
+    "cel_kliniczny": "Bezbolesne przeprowadzenie zabiegu.",
+    "wskazania": [
+     "zabiegi bolesne (wypełnienia głębokie, endodoncja, ekstrakcje, kiretaż)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "masa ciała (dzieci) – dawka maksymalna",
+     "choroby ogólne, ciąża"
+    ],
+    "wywiad": [
+     "alergie na środki znieczulające",
+     "wcześniejsze reakcje",
+     "leki"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "potwierdzona alergia na dany środek",
+      "rodzaj": "bezwzgledne"
+     },
+     {
+      "tekst": "choroby, przy których ograniczamy środek obkurczający naczynia",
+      "rodzaj": "wzgledne"
+     }
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "środek znieczulający, strzykawka z aspiracją, igła"
+    ],
+    "opcjonalne": [
+     "znieczulenie powierzchniowe miejsca wkłucia"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZ-PRZEWODOWE"
+    },
+    {
+     "krok": "KROK-OBSERWACJA-ZNIECZ"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ-POW",
+     "rola": "sytuacyjne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "skuteczność znieczulenia",
+     "stan ogólny pacjenta"
+    ],
+    "nieprawidlowosci": [
+     "brak znieczulenia",
+     "omdlenie",
+     "reakcja alergiczna",
+     "krwiak"
+    ],
+    "dalsze_postepowanie": [
+     "postępowanie w nagłych przypadkach wg procedur gabinetu"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Nie jeść do ustąpienia znieczulenia; uważać na przygryzienie warg / policzków (dzieci – nadzór opiekuna)."
+    ],
+    "kontakt_gdy": [
+     "przedłużone drętwienie (> doba)"
+    ]
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Preparat, dawka, miejsce podania",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.2304030 – 20 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie jest udzielane w połączeniu z innymi świadczeniami gwarantowanymi.",
+     "zał. 2 (<18): Świadczenie jest udzielane w połączeniu z innymi świadczeniami gwarantowanymi.",
+     "zał. 2b (<18 (szkoła)): Świadczenie jest udzielane w połączeniu z innymi świadczeniami gwarantowanymi."
+    ],
+    "reguly": [
+     "R-ZNI-01",
+     "R-ZNI-02"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "R-ZNI-01: tylko z innym świadczeniem; R-ZNI-02: przy ST01/ST02/ST04 wliczone w pakiet (decyzja Patryka)."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "kody_aplikacji": [
+    "0403"
+   ]
   },
   {
    "id": "PROC-23.0404",
@@ -215,11 +1418,90 @@
    "kod": "23.08",
    "nazwa_oficjalna": "Instruktaż higieny jamy ustnej",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Instruktaż higieny jamy ustnej",
+   "opis": "Instruktaż higieny jamy ustnej.",
+   "cel": {
+    "na_czym_polega": "Indywidualny instruktaż higieny z oceną płytki i demonstracją techniki.",
+    "cel_kliniczny": "Poprawa higieny i profilaktyka próchnicy oraz chorób przyzębia.",
+    "wskazania": [
+     "niedostateczna higiena",
+     "leczenie ortodontyczne / protetyczne",
+     "zapalenie dziąseł / przyzębia"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "aktualny wywiad"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "model / lusterko, przybory higieniczne"
+    ],
+    "opcjonalne": [
+     "płyn wybarwiający płytkę"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-INSTRUKTAZ"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-SZCZOTKA-PASTA",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "zrozumienie techniki (pokaz przez pacjenta)"
+    ]
+   },
+   "zalecenia": {
+    "higiena": [
+     "Zalecana technika i przybory wg instruktażu."
+    ],
+    "kontrola": "Ocena wskaźnika płytki na kolejnej wizycie."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Wskaźnik płytki i zakres instruktażu",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-PCR-1972"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Instruktaż jest też składnikiem 23.0101 (ST33). Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-PCR-1972",
+    "SRC-KLIN-EAPD-F-2019"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0901",
@@ -325,11 +1607,142 @@
    "kod": "23.1003",
    "nazwa_oficjalna": "Zabezpieczenie profilaktyczne bruzd lakiem szczelinowym - za każdy ząb",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Lakowanie bruzd (ząb)",
+   "opis": "Zabezpieczenie profilaktyczne bruzd lakiem szczelinowym – za każdy ząb.",
+   "cel": {
+    "na_czym_polega": "Uszczelnienie bruzd i dołków lakiem.",
+    "cel_kliniczny": "Zapobieganie próchnicy bruzd.",
+    "wskazania": [
+     "zęby trzonowe (i przedtrzonowe) z głębokimi bruzdami u dzieci i młodzieży",
+     "początkowe zmiany próchnicowe w bruzdach (bez ubytku)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "całkowite wyrznięcie zęba",
+     "brak ubytku w zębinie",
+     "możliwość izolacji"
+    ],
+    "wywiad": [
+     "ryzyko próchnicy"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ubytek w zębinie – wskazana odbudowa",
+      "rodzaj": "bezwzgledne"
+     },
+     {
+      "tekst": "brak możliwości izolacji – lak glasjonomerowy",
+      "rodzaj": "wzgledne"
+     }
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "izolacja, wytrawiacz, lak, lampa"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-OCZYSZCZENIE-ZEBOW"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-LAKOWANIE"
+    },
+    {
+     "krok": "KROK-WYKONCZENIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-LAK",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WYTRAWIACZ",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-IZOL-WZGL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-LAMPA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-KALKA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SZCZOTKA-PASTA",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "retencja laku (zgłębnik)",
+     "pokrycie bruzd",
+     "zwarcie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola retencji na wizytach kontrolnych; uzupełnienie ubytków laku"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Kontrola laku na badaniach okresowych."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zęby lakowane i rodzaj laku",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-ADA-LAK-2016"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.2310090 – 11 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie dotyczy bruzd pierwszych trzonowców stałych i jest udzielane 1 raz do ukończenia 8. roku życia oraz bruzd drugich trzonowców stałych i jest udzielane 1 raz do ukończenia 14. roku życia.",
+     "zał. 2 (<18): Świadczenie dotyczy bruzd pierwszych trzonowców stałych i jest udzielane 1 raz do ukończenia 8. roku życia oraz bruzd drugich trzonowców stałych i jest udzielane 1 raz do ukończenia 14. roku życia.",
+     "zał. 2b (<18 (szkoła)): Świadczenie dotyczy bruzd pierwszych trzonowców stałych i jest udzielane 1 raz do ukończenia 8. roku życia oraz bruzd drugich trzonowców stałych i jest udzielane 1 raz do ukończenia 14. roku życia."
+    ],
+    "reguly": [
+     "R-LAKOW-01"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "R-LAKOW-01: limity wieku i częstotliwości (zęby trzonowe)."
+   },
+   "zrodla": [
+    "SRC-KLIN-ADA-LAK-2016"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1004",
@@ -347,11 +1760,125 @@
    "kod": "23.1006",
    "nazwa_oficjalna": "Lakierowanie zębów 1/4 łuku zębowego",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Lakierowanie zębów (¼ łuku)",
+   "opis": "Lakierowanie zębów preparatem fluorkowym w obrębie ¼ łuku.",
+   "cel": {
+    "na_czym_polega": "Aplikacja lakieru fluorkowego na zęby ćwiartki.",
+    "cel_kliniczny": "Profilaktyka próchnicy, remineralizacja.",
+    "wskazania": [
+     "podwyższone ryzyko próchnicy u dzieci i młodzieży"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek (NFZ: do 18 r.ż.)",
+     "ryzyko próchnicy"
+    ],
+    "wywiad": [
+     "alergia na składniki lakieru (np. kalafonię)"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "alergia na składnik preparatu",
+      "rodzaj": "bezwzgledne"
+     },
+     {
+      "tekst": "rozległe owrzodzenia błony śluzowej",
+      "rodzaj": "wzgledne"
+     }
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "lakier fluorkowy, izolacja względna"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-OCZYSZCZENIE-ZEBOW"
+    },
+    {
+     "krok": "KROK-LAKIEROWANIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-FLUOR",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IZOL-WZGL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SZCZOTKA-PASTA",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "pokrycie zębów ćwiartki"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Nie jeść i nie szczotkować zębów przez kilka godzin (wg preparatu)."
+    ],
+    "kontrola": "Kolejna aplikacja wg ryzyka (NFZ: nie częściej niż 1× na kwartał na ¼ łuku)."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Ćwiartki i preparat",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.2310060 – 5 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie dotyczy wszystkich zębów mlecznych i stałych i jest udzielane nie częściej niż 1 raz na kwartał – za każdą 1/4 łuku zębowego. Świadczenie jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia.",
+     "zał. 2 (<18): Świadczenie dotyczy wszystkich zębów mlecznych i stałych i jest udzielane nie częściej niż 1 raz na kwartał – za każdą 1/4 łuku zębowego.",
+     "zał. 2b (<18 (szkoła)): Świadczenie dotyczy wszystkich zębów mlecznych i stałych i jest udzielane nie częściej niż 1 raz na kwartał – za każdą 1/4 łuku zębowego."
+    ],
+    "reguly": [
+     "R-LAKIER-01",
+     "R-ST30-LAKIER"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "Moduł Opisy NFZ: ostrzeżenie przy wieku ≥ 18 (P31); nie łączy się z ST30–ST30C (R-ST30-LAKIER)."
+   },
+   "zrodla": [
+    "SRC-KLIN-EAPD-F-2019",
+    "SRC-KLIN-ADA-F-2013"
+   ],
+   "opracowano": "2026-11-22",
+   "kody_aplikacji": [
+    "1006"
+   ]
   },
   {
    "id": "PROC-23.1007",
@@ -5664,29 +7191,295 @@
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "uzasadnienie_statusu": "Kod nadrzędny – od 01.09.2026 do rozliczenia wykazuje się podkody (R-KOD-01): 23.16011 / 23.16012; karty w podkodach."
   },
   {
    "id": "PROC-23.16011",
    "kod": "23.16011",
    "nazwa_oficjalna": "Usunięcie złogów nazębnych miękkich z 1/2 łuku zębowego",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Złogi miękkie – ½ łuku",
+   "opis": "Usunięcie złogów nazębnych miękkich z ½ łuku.",
+   "cel": {
+    "na_czym_polega": "Usunięcie płytki i osadów (złogi miękkie) z ½ łuku.",
+    "cel_kliniczny": "Eliminacja czynnika zapalnego dziąseł, profilaktyka chorób przyzębia.",
+    "wskazania": [
+     "płytka i osady",
+     "zapalenie dziąseł",
+     "etap 1 leczenia periodontologicznego (EFP)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "badanie przyzębia (BPE)",
+     "wywiad"
+    ],
+    "wywiad": [
+     "rozrusznik serca / urządzenia wszczepialne (rodzaj skalera)",
+     "choroby zakaźne",
+     "leki przeciwkrzepliwe"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niektóre rozruszniki – skaler magnetostrykcyjny; użyć piezoelektrycznego / ręcznego wg zaleceń",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "instrumentacja poddziąsłowa (kiretaż) przy kieszonkach – etap 2 EFP"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "szczoteczka / gumka z pastą lub piaskarka"
+    ],
+    "opcjonalne": [
+     "znieczulenie powierzchniowe"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-USUNIECIE-PLYTKI"
+    },
+    {
+     "krok": "KROK-INSTRUKTAZ"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-SZCZOTKA-PASTA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-PIASKARKA",
+     "rola": "alternatywa"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "brak złogów (zgłębnik, wybarwienie)",
+     "gładkość powierzchni"
+    ],
+    "dalsze_postepowanie": [
+     "przy kieszonkach ≥ 4 mm – instrumentacja poddziąsłowa / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Przejściowa nadwrażliwość i krwawienie dziąseł są możliwe."
+    ],
+    "higiena": [
+     "Szczotkowanie 2× dziennie, oczyszczanie przestrzeni międzyzębowych."
+    ],
+    "kontrola": "Wg potrzeb (NFZ – limity)."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres (½ łuku / wszystkie zęby) i rodzaj złogów",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-NFZ-KOM-9017"
+      ],
+      "warunek": "od 01.09.2026 podkody (R-KOD-01)"
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "produkty": [
+     "pakiet ST30D",
+     "pakiet ST30E"
+    ],
+    "reguly": [
+     "R-ST30-CZAS",
+     "R-ST30-WZAJEM",
+     "R-ST30DFG-LIMIT",
+     "R-ST30DG-WIEK",
+     "R-ST30E-LIMIT",
+     "R-ZLOG-01"
+    ],
+    "zrodla": [
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "Od 01.09.2026 wykazuje się podkod (R-KOD-01). Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-EFP-S3-2020",
+    "SRC-NFZ-KOM-9017"
+   ],
+   "opracowano": "2026-11-22",
+   "kody_aplikacji": [
+    "ST30E"
+   ]
   },
   {
    "id": "PROC-23.16012",
    "kod": "23.16012",
    "nazwa_oficjalna": "Usunięcie złogów nazębnych twardych z 1/2 łuku zębowego",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Złogi twarde – ½ łuku",
+   "opis": "Usunięcie złogów nazębnych twardych z ½ łuku.",
+   "cel": {
+    "na_czym_polega": "Usunięcie kamienia nazębnego (skaling naddziąsłowy) z ½ łuku.",
+    "cel_kliniczny": "Eliminacja czynnika zapalnego dziąseł, profilaktyka chorób przyzębia.",
+    "wskazania": [
+     "kamień nazębny",
+     "zapalenie dziąseł",
+     "etap 1 leczenia periodontologicznego (EFP)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "badanie przyzębia (BPE)",
+     "wywiad"
+    ],
+    "wywiad": [
+     "rozrusznik serca / urządzenia wszczepialne (rodzaj skalera)",
+     "choroby zakaźne",
+     "leki przeciwkrzepliwe"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niektóre rozruszniki – skaler magnetostrykcyjny; użyć piezoelektrycznego / ręcznego wg zaleceń",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "instrumentacja poddziąsłowa (kiretaż) przy kieszonkach – etap 2 EFP"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "skaler ultradźwiękowy / ręczny"
+    ],
+    "opcjonalne": [
+     "znieczulenie powierzchniowe"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-SKALING-NADDZIASLOWY"
+    },
+    {
+     "krok": "KROK-POLEROWANIE"
+    },
+    {
+     "krok": "KROK-INSTRUKTAZ"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-SKALER",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NARZ-REKA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SZCZOTKA-PASTA",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "brak złogów (zgłębnik, wybarwienie)",
+     "gładkość powierzchni"
+    ],
+    "dalsze_postepowanie": [
+     "przy kieszonkach ≥ 4 mm – instrumentacja poddziąsłowa / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Przejściowa nadwrażliwość i krwawienie dziąseł są możliwe."
+    ],
+    "higiena": [
+     "Szczotkowanie 2× dziennie, oczyszczanie przestrzeni międzyzębowych."
+    ],
+    "kontrola": "Wg potrzeb (NFZ – limity)."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres (½ łuku / wszystkie zęby) i rodzaj złogów",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-NFZ-KOM-9017"
+      ],
+      "warunek": "od 01.09.2026 podkody (R-KOD-01)"
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "produkty": [
+     "pakiet ST30",
+     "pakiet ST30B",
+     "pakiet ST30C"
+    ],
+    "reguly": [
+     "R-ST30-CZAS",
+     "R-ST30-LAKIER",
+     "R-ST30-TWARDE",
+     "R-ST30-WZAJEM",
+     "R-ST30BC-WYK",
+     "R-ZLOG-01"
+    ],
+    "zrodla": [
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "Od 01.09.2026 wykazuje się podkod (R-KOD-01). Twarde złogi – pakiet ST30 (½ łuku). Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-EFP-S3-2020",
+    "SRC-NFZ-KOM-9017"
+   ],
+   "opracowano": "2026-11-22",
+   "kody_aplikacji": [
+    "ST30"
+   ]
   },
   {
    "id": "PROC-23.1602",
@@ -5697,40 +7490,361 @@
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "uzasadnienie_statusu": "Kod nadrzędny – od 01.09.2026 do rozliczenia wykazuje się podkody (R-KOD-01): 23.16021 / 23.16022; karty w podkodach."
   },
   {
    "id": "PROC-23.16021",
    "kod": "23.16021",
    "nazwa_oficjalna": "Usunięcie złogów nazębnych miękkich ze wszystkich zębów",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Złogi miękkie – wszystkie zęby",
+   "opis": "Usunięcie złogów nazębnych miękkich z wszystkich zębów.",
+   "cel": {
+    "na_czym_polega": "Usunięcie płytki i osadów (złogi miękkie) z wszystkich zębów.",
+    "cel_kliniczny": "Eliminacja czynnika zapalnego dziąseł, profilaktyka chorób przyzębia.",
+    "wskazania": [
+     "płytka i osady",
+     "zapalenie dziąseł",
+     "etap 1 leczenia periodontologicznego (EFP)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "badanie przyzębia (BPE)",
+     "wywiad"
+    ],
+    "wywiad": [
+     "rozrusznik serca / urządzenia wszczepialne (rodzaj skalera)",
+     "choroby zakaźne",
+     "leki przeciwkrzepliwe"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niektóre rozruszniki – skaler magnetostrykcyjny; użyć piezoelektrycznego / ręcznego wg zaleceń",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "instrumentacja poddziąsłowa (kiretaż) przy kieszonkach – etap 2 EFP"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "szczoteczka / gumka z pastą lub piaskarka"
+    ],
+    "opcjonalne": [
+     "znieczulenie powierzchniowe"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-USUNIECIE-PLYTKI"
+    },
+    {
+     "krok": "KROK-INSTRUKTAZ"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-SZCZOTKA-PASTA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-PIASKARKA",
+     "rola": "alternatywa"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "brak złogów (zgłębnik, wybarwienie)",
+     "gładkość powierzchni"
+    ],
+    "dalsze_postepowanie": [
+     "przy kieszonkach ≥ 4 mm – instrumentacja poddziąsłowa / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Przejściowa nadwrażliwość i krwawienie dziąseł są możliwe."
+    ],
+    "higiena": [
+     "Szczotkowanie 2× dziennie, oczyszczanie przestrzeni międzyzębowych."
+    ],
+    "kontrola": "Wg potrzeb (NFZ – limity)."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres (½ łuku / wszystkie zęby) i rodzaj złogów",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-NFZ-KOM-9017"
+      ],
+      "warunek": "od 01.09.2026 podkody (R-KOD-01)"
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "produkty": [
+     "pakiet ST30F",
+     "pakiet ST30G"
+    ],
+    "reguly": [
+     "R-ST30-CZAS",
+     "R-ST30-WZAJEM",
+     "R-ST30DFG-LIMIT",
+     "R-ST30DG-WIEK",
+     "R-ZLOG-02"
+    ],
+    "zrodla": [
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "Od 01.09.2026 wykazuje się podkod (R-KOD-01). Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-EFP-S3-2020",
+    "SRC-NFZ-KOM-9017"
+   ],
+   "opracowano": "2026-11-22",
+   "kody_aplikacji": [
+    "ST30G"
+   ]
   },
   {
    "id": "PROC-23.16022",
    "kod": "23.16022",
    "nazwa_oficjalna": "Usunięcie złogów nazębnych twardych ze wszystkich zębów",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Złogi twarde – wszystkie zęby",
+   "opis": "Usunięcie złogów nazębnych twardych z wszystkich zębów.",
+   "cel": {
+    "na_czym_polega": "Usunięcie kamienia nazębnego (skaling naddziąsłowy) z wszystkich zębów.",
+    "cel_kliniczny": "Eliminacja czynnika zapalnego dziąseł, profilaktyka chorób przyzębia.",
+    "wskazania": [
+     "kamień nazębny",
+     "zapalenie dziąseł",
+     "etap 1 leczenia periodontologicznego (EFP)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "badanie przyzębia (BPE)",
+     "wywiad"
+    ],
+    "wywiad": [
+     "rozrusznik serca / urządzenia wszczepialne (rodzaj skalera)",
+     "choroby zakaźne",
+     "leki przeciwkrzepliwe"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niektóre rozruszniki – skaler magnetostrykcyjny; użyć piezoelektrycznego / ręcznego wg zaleceń",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "instrumentacja poddziąsłowa (kiretaż) przy kieszonkach – etap 2 EFP"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "skaler ultradźwiękowy / ręczny"
+    ],
+    "opcjonalne": [
+     "znieczulenie powierzchniowe"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-SKALING-NADDZIASLOWY"
+    },
+    {
+     "krok": "KROK-POLEROWANIE"
+    },
+    {
+     "krok": "KROK-INSTRUKTAZ"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-SKALER",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NARZ-REKA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SZCZOTKA-PASTA",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "brak złogów (zgłębnik, wybarwienie)",
+     "gładkość powierzchni"
+    ],
+    "dalsze_postepowanie": [
+     "przy kieszonkach ≥ 4 mm – instrumentacja poddziąsłowa / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Przejściowa nadwrażliwość i krwawienie dziąseł są możliwe."
+    ],
+    "higiena": [
+     "Szczotkowanie 2× dziennie, oczyszczanie przestrzeni międzyzębowych."
+    ],
+    "kontrola": "Wg potrzeb (NFZ – limity)."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres (½ łuku / wszystkie zęby) i rodzaj złogów",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-NFZ-KOM-9017"
+      ],
+      "warunek": "od 01.09.2026 podkody (R-KOD-01)"
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "produkty": [
+     "pakiet ST30A"
+    ],
+    "reguly": [
+     "R-ST30-CZAS",
+     "R-ST30-LAKIER",
+     "R-ST30-TWARDE",
+     "R-ST30-WZAJEM",
+     "R-ZLOG-02"
+    ],
+    "zrodla": [
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "Od 01.09.2026 wykazuje się podkod (R-KOD-01). Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-EFP-S3-2020",
+    "SRC-NFZ-KOM-9017"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1603",
    "kod": "23.1603",
    "nazwa_oficjalna": "Polerowanie zębów",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Polerowanie zębów",
+   "opis": "Polerowanie zębów.",
+   "cel": {
+    "na_czym_polega": "Wygładzenie powierzchni zębów po usunięciu złogów.",
+    "cel_kliniczny": "Utrudnienie odkładania płytki, poprawa estetyki.",
+    "wskazania": [
+     "po skalingu / usunięciu osadów"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "aktualny wywiad"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "gumki / szczoteczki, pasta polerska"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-POLEROWANIE"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-POLERY",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SZCZOTKA-PASTA",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "gładkość powierzchni"
+    ]
+   },
+   "zalecenia": {},
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1604",
@@ -5748,11 +7862,116 @@
    "kod": "23.1605",
    "nazwa_oficjalna": "Leczenie zmian na błonie śluzowej jamy ustnej",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Leczenie zmian na błonie śluzowej",
+   "opis": "Leczenie zmian na błonie śluzowej jamy ustnej.",
+   "cel": {
+    "na_czym_polega": "Miejscowe leczenie zmian błony śluzowej (zapalnych, urazowych, aftowych, infekcyjnych) po ich ocenie.",
+    "cel_kliniczny": "Ustąpienie dolegliwości i zmian.",
+    "wskazania": [
+     "afty, odleżyny, zapalenie dziąseł / błony śluzowej, kandydoza – po rozpoznaniu"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "opis zmiany (BAD-BLONA)",
+     "wykluczenie zmiany podejrzanej"
+    ],
+    "wywiad": [
+     "czas trwania, nawroty, leki, choroby ogólne"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "zmiana podejrzana o charakter nowotworowy – skierowanie zamiast leczenia objawowego",
+      "rodzaj": "bezwzgledne"
+     }
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "preparat miejscowy wg rozpoznania"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-LECZENIE-BLONY"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-LEK-BLONA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "opis zmiany i zastosowane leczenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola po ok. 2 tygodniach; brak poprawy – skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "kontakt_gdy": [
+     "brak poprawy w ciągu 2 tygodni",
+     "nasilenie zmian"
+    ],
+    "kontrola": "Ok. 2 tygodnie."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Opis zmiany i zastosowany preparat",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-OPMD-2021"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "pakiet ST26"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie obejmuje każdą wizytę.",
+     "zał. 2 (<18): Świadczenie obejmuje każdą wizytę.",
+     "zał. 2b (<18 (szkoła)): Świadczenie obejmuje każdą wizytę."
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "W Opisach NFZ – pakiet ST26 (procedura kierunkowa 23.1605)."
+   },
+   "zrodla": [
+    "SRC-KLIN-OPMD-2021"
+   ],
+   "opracowano": "2026-11-22",
+   "kody_aplikacji": [
+    "ST26"
+   ]
   },
   {
    "id": "PROC-23.1606",
@@ -5770,11 +7989,149 @@
    "kod": "23.1607",
    "nazwa_oficjalna": "Kiretaż zwykły w obrębie 1/4 uzębienia",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Kiretaż zamknięty (¼ uzębienia)",
+   "opis": "Kiretaż zwykły (zamknięty) w obrębie ¼ uzębienia.",
+   "cel": {
+    "na_czym_polega": "Instrumentacja poddziąsłowa: usunięcie złogów poddziąsłowych i biofilmu z powierzchni korzeni w kieszonkach.",
+    "cel_kliniczny": "Zmniejszenie głębokości kieszonek i stanu zapalnego.",
+    "wskazania": [
+     "zapalenie przyzębia z kieszonkami ≥ 4 mm (etap 2 leczenia EFP)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "badanie periodontologiczne (PPD, CAL, BOP), RTG",
+     "higiena po etapie 1"
+    ],
+    "wywiad": [
+     "cukrzyca, palenie",
+     "leki przeciwkrzepliwe"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niedostateczna higiena po etapie 1 – najpierw motywacja",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "leczenie chirurgiczne przy kieszonkach rezydualnych (skierowanie)"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "znieczulenie",
+     "kirety / skaler z końcówkami poddziąsłowymi"
+    ],
+    "opcjonalne": [
+     "płukanka antyseptyczna"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-KIRETAZ"
+    },
+    {
+     "krok": "KROK-HEMOSTAZA"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-KIRETY",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALER",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-PLUKANKA",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "gładkość powierzchni korzeni"
+    ],
+    "dalsze_postepowanie": [
+     "reewaluacja po 6–8 tygodniach (EFP)"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Ból i nadwrażliwość przez kilka dni są możliwe."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanki wg zaleceń."
+    ],
+    "kontrola": "Reewaluacja po 6–8 tygodniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Ćwiartka, głębokości kieszonek przed zabiegiem",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-EFP-S3-2020"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "pakiet ST04"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie nie obejmuje odpowiedniego znieczulenia i opatrunku.",
+     "zał. 2 (<18): Świadczenie nie obejmuje odpowiedniego znieczulenia i opatrunku.",
+     "zał. 2b (<18 (szkoła)): Świadczenie nie obejmuje odpowiedniego znieczulenia i opatrunku."
+    ],
+    "reguly": [
+     "R-KIR-DZ",
+     "R-ZNI-02"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "Pakiet ST04 (znieczulenie wliczone – R-ZNI-02); u dzieci – informacja „wymaga weryfikacji” (R-KIR-DZ)."
+   },
+   "zrodla": [
+    "SRC-KLIN-EFP-S3-2020",
+    "SRC-KLIN-PERIO-2018"
+   ],
+   "opracowano": "2026-11-22",
+   "kody_aplikacji": [
+    "ST04"
+   ]
   },
   {
    "id": "PROC-23.1608",
@@ -5935,44 +8292,838 @@
    "kod": "23.1701",
    "nazwa_oficjalna": "Usunięcie zęba jednokorzeniowego",
    "kategoria": "chirurgia – ekstrakcje",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Usunięcie zęba jednokorzeniowego",
+   "opis": "Usunięcie zęba jednokorzeniowego.",
+   "cel": {
+    "na_czym_polega": "Usunięcie zęba jednokorzeniowego kleszczami / dźwignią (ekstrakcja prosta).",
+    "cel_kliniczny": "Usunięcie zęba niekwalifikującego się do leczenia lub ze wskazań (ortodontycznych, protetycznych).",
+    "wskazania": [
+     "ząb niemożliwy do odbudowy",
+     "zaawansowane zapalenie przyzębia",
+     "nieskuteczne leczenie endodontyczne",
+     "wskazania ortodontyczne / protetyczne",
+     "ząb mleczny przetrwały / z powikłaniami"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG zęba / okolicy",
+     "stan ogólny, ciśnienie (wg wskazań)"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyagregacyjne",
+     "leki antyresorpcyjne (ryzyko martwicy kości)",
+     "radioterapia głowy i szyi",
+     "cukrzyca, choroby serca, ciąża",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ostre stany ogólne (np. niewyrównana choroba ogólna) – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "zaburzenia krzepnięcia bez przygotowania – konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka, ewentualnie skierowanie",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "dodatkowa_diagnostyka": [
+     "INR / konsultacja lekarza prowadzącego wg wskazań",
+     "CBCT – zęby zatrzymane blisko kanału żuchwy (poza gabinetem)"
+    ],
+    "inne_postepowanie": [
+     "leczenie zachowawcze / endodontyczne, jeśli ząb rokuje",
+     "skierowanie do chirurga stomatologa przy zabiegu trudnym"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "zgoda",
+     "znieczulenie",
+     "zestaw ekstrakcyjny"
+    ],
+    "sytuacyjne": [
+     "środek hemostatyczny, szwy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-EKSTRAKCJA"
+    },
+    {
+     "krok": "KROK-ZEBODOL"
+    },
+    {
+     "krok": "KROK-HEMOSTAZA"
+    },
+    {
+     "krok": "KROK-SZYCIE",
+     "uwaga": "gdy wskazane"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-KLESZCZE",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-DZWIGNIE",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-LYZECZKA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-HEMOSTATYK",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "sytuacyjne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "kompletność usuniętego zęba (korzenie)",
+     "hemostaza",
+     "połączenie z zatoką (zęby boczne szczęki)"
+    ],
+    "nieprawidlowosci": [
+     "pozostawiony fragment korzenia",
+     "połączenie ustno-zatokowe",
+     "złamanie wyrostka",
+     "uszkodzenie zębów sąsiednich"
+    ],
+    "dalsze_postepowanie": [
+     "RTG przy wątpliwości",
+     "zamknięcie połączenia z zatoką (23.1801)",
+     "skierowanie przy powikłaniach"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Ucisk gazika 20–30 min.",
+     "Zimne okłady w pierwszej dobie.",
+     "Leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie płukać, nie ssać rany, nie palić w pierwszej dobie.",
+     "Dieta miękka, chłodna do ustąpienia znieczulenia i w pierwszej dobie."
+    ],
+    "kontakt_gdy": [
+     "krwawienie niepoddające się uciskowi",
+     "narastający ból po 2–3 dniach (suchy zębodół)",
+     "obrzęk, gorączka, szczękościsk"
+    ],
+    "kontrola": "Wg potrzeby; zdjęcie szwów po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Wskazanie, przebieg, kompletność, powikłania",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "pakiet ST01"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie nie obejmuje odpowiedniego znieczulenia.",
+     "zał. 2 (<18): Świadczenie nie obejmuje odpowiedniego znieczulenia.",
+     "zał. 2b (<18 (szkoła)): Świadczenie nie obejmuje odpowiedniego znieczulenia."
+    ],
+    "reguly": [
+     "R-ZNI-02"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "Pakiet ST01 – NFZ wymaga wskazania znieczulenia z listy ST1 (moduł Opisy NFZ); znieczulenie wliczone w pakiet (R-ZNI-02)."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "kody_aplikacji": [
+    "ST01"
+   ]
   },
   {
    "id": "PROC-23.1702",
    "kod": "23.1702",
    "nazwa_oficjalna": "Usunięcie zęba wielokorzeniowego",
    "kategoria": "chirurgia – ekstrakcje",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Usunięcie zęba wielokorzeniowego",
+   "opis": "Usunięcie zęba wielokorzeniowego.",
+   "cel": {
+    "na_czym_polega": "Usunięcie zęba wielokorzeniowego kleszczami / dźwignią (ekstrakcja prosta).",
+    "cel_kliniczny": "Usunięcie zęba niekwalifikującego się do leczenia lub ze wskazań (ortodontycznych, protetycznych).",
+    "wskazania": [
+     "ząb niemożliwy do odbudowy",
+     "zaawansowane zapalenie przyzębia",
+     "nieskuteczne leczenie endodontyczne",
+     "wskazania ortodontyczne / protetyczne",
+     "ząb mleczny przetrwały / z powikłaniami"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG zęba / okolicy",
+     "stan ogólny, ciśnienie (wg wskazań)"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyagregacyjne",
+     "leki antyresorpcyjne (ryzyko martwicy kości)",
+     "radioterapia głowy i szyi",
+     "cukrzyca, choroby serca, ciąża",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ostre stany ogólne (np. niewyrównana choroba ogólna) – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "zaburzenia krzepnięcia bez przygotowania – konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka, ewentualnie skierowanie",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "dodatkowa_diagnostyka": [
+     "INR / konsultacja lekarza prowadzącego wg wskazań",
+     "CBCT – zęby zatrzymane blisko kanału żuchwy (poza gabinetem)"
+    ],
+    "inne_postepowanie": [
+     "leczenie zachowawcze / endodontyczne, jeśli ząb rokuje",
+     "skierowanie do chirurga stomatologa przy zabiegu trudnym"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "zgoda",
+     "znieczulenie",
+     "zestaw ekstrakcyjny"
+    ],
+    "sytuacyjne": [
+     "środek hemostatyczny, szwy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-EKSTRAKCJA"
+    },
+    {
+     "krok": "KROK-ZEBODOL"
+    },
+    {
+     "krok": "KROK-HEMOSTAZA"
+    },
+    {
+     "krok": "KROK-SZYCIE",
+     "uwaga": "gdy wskazane"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-KLESZCZE",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-DZWIGNIE",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-LYZECZKA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-HEMOSTATYK",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "sytuacyjne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "kompletność usuniętego zęba (korzenie)",
+     "hemostaza",
+     "połączenie z zatoką (zęby boczne szczęki)"
+    ],
+    "nieprawidlowosci": [
+     "pozostawiony fragment korzenia",
+     "połączenie ustno-zatokowe",
+     "złamanie wyrostka",
+     "uszkodzenie zębów sąsiednich"
+    ],
+    "dalsze_postepowanie": [
+     "RTG przy wątpliwości",
+     "zamknięcie połączenia z zatoką (23.1801)",
+     "skierowanie przy powikłaniach"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Ucisk gazika 20–30 min.",
+     "Zimne okłady w pierwszej dobie.",
+     "Leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie płukać, nie ssać rany, nie palić w pierwszej dobie.",
+     "Dieta miękka, chłodna do ustąpienia znieczulenia i w pierwszej dobie."
+    ],
+    "kontakt_gdy": [
+     "krwawienie niepoddające się uciskowi",
+     "narastający ból po 2–3 dniach (suchy zębodół)",
+     "obrzęk, gorączka, szczękościsk"
+    ],
+    "kontrola": "Wg potrzeby; zdjęcie szwów po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Wskazanie, przebieg, kompletność, powikłania",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "pakiet ST02"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie nie obejmuje odpowiedniego znieczulenia.",
+     "zał. 2 (<18): Świadczenie nie obejmuje odpowiedniego znieczulenia.",
+     "zał. 2b (<18 (szkoła)): Świadczenie nie obejmuje odpowiedniego znieczulenia."
+    ],
+    "reguly": [
+     "R-ZNI-02"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "Pakiet ST02 – NFZ wymaga wskazania znieczulenia z listy ST1 (moduł Opisy NFZ); znieczulenie wliczone w pakiet (R-ZNI-02)."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "kody_aplikacji": [
+    "ST02"
+   ]
   },
   {
    "id": "PROC-23.1703",
    "kod": "23.1703",
    "nazwa_oficjalna": "Usunięcie głęboko złamanego zęba poprzez dłutowanie wewnątrzzębodołowe przy zastosowaniu wierteł, dźwigni",
    "kategoria": "chirurgia – ekstrakcje",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Dłutowanie wewnątrzzębodołowe",
+   "opis": "Usunięcie głęboko złamanego zęba poprzez dłutowanie wewnątrzzębodołowe przy zastosowaniu wiertła.",
+   "cel": {
+    "na_czym_polega": "Separacja i usunięcie korzeni wiertłem w obrębie zębodołu, bez płata.",
+    "cel_kliniczny": "Usunięcie głęboko złamanego zęba / korzeni.",
+    "wskazania": [
+     "złamanie zęba podczas ekstrakcji",
+     "głęboko zniszczony ząb wielokorzeniowy",
+     "pozostawione korzenie"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG zęba / okolicy",
+     "stan ogólny, ciśnienie (wg wskazań)"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyagregacyjne",
+     "leki antyresorpcyjne (ryzyko martwicy kości)",
+     "radioterapia głowy i szyi",
+     "cukrzyca, choroby serca, ciąża",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ostre stany ogólne (np. niewyrównana choroba ogólna) – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "zaburzenia krzepnięcia bez przygotowania – konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka, ewentualnie skierowanie",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "dodatkowa_diagnostyka": [
+     "INR / konsultacja lekarza prowadzącego wg wskazań",
+     "CBCT – zęby zatrzymane blisko kanału żuchwy (poza gabinetem)"
+    ],
+    "inne_postepowanie": [
+     "leczenie zachowawcze / endodontyczne, jeśli ząb rokuje",
+     "skierowanie do chirurga stomatologa przy zabiegu trudnym"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "zgoda",
+     "znieczulenie",
+     "wiertła chirurgiczne z chłodzeniem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-DLUTOWANIE-WEWN"
+    },
+    {
+     "krok": "KROK-ZEBODOL"
+    },
+    {
+     "krok": "KROK-HEMOSTAZA"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-KLESZCZE",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-DZWIGNIE",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-LYZECZKA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-HEMOSTATYK",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-WIERTLA-CHIR",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "kompletność usuniętego zęba (korzenie)",
+     "hemostaza",
+     "połączenie z zatoką (zęby boczne szczęki)"
+    ],
+    "nieprawidlowosci": [
+     "pozostawiony fragment korzenia",
+     "połączenie ustno-zatokowe",
+     "złamanie wyrostka",
+     "uszkodzenie zębów sąsiednich"
+    ],
+    "dalsze_postepowanie": [
+     "RTG przy wątpliwości",
+     "zamknięcie połączenia z zatoką (23.1801)",
+     "skierowanie przy powikłaniach"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Ucisk gazika 20–30 min.",
+     "Zimne okłady w pierwszej dobie.",
+     "Leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie płukać, nie ssać rany, nie palić w pierwszej dobie.",
+     "Dieta miękka, chłodna do ustąpienia znieczulenia i w pierwszej dobie."
+    ],
+    "kontakt_gdy": [
+     "krwawienie niepoddające się uciskowi",
+     "narastający ból po 2–3 dniach (suchy zębodół)",
+     "obrzęk, gorączka, szczękościsk"
+    ],
+    "kontrola": "Wg potrzeby; zdjęcie szwów po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg dłutowania, kompletność",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1704",
    "kod": "23.1704",
    "nazwa_oficjalna": "Usunięcie zęba przez dłutowanie zewnątrzzębodołowe z wytworzeniem płata śluzówkowo-okostnowego",
    "kategoria": "chirurgia – ekstrakcje",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Dłutowanie zewnątrzzębodołowe z płatem",
+   "opis": "Usunięcie zęba przez dłutowanie zewnątrzzębodołowe z wytworzeniem płata śluzówkowo-okostnowego.",
+   "cel": {
+    "na_czym_polega": "Odwarstwienie płata, usunięcie kości, separacja i usunięcie zęba / korzeni, szycie.",
+    "cel_kliniczny": "Usunięcie zęba / korzeni niedostępnych ekstrakcją prostą.",
+    "wskazania": [
+     "korzenie głęboko w kości",
+     "zęby z hipercementozą / zakrzywionymi korzeniami",
+     "nieudana ekstrakcja prosta"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG zęba / okolicy",
+     "stan ogólny, ciśnienie (wg wskazań)"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyagregacyjne",
+     "leki antyresorpcyjne (ryzyko martwicy kości)",
+     "radioterapia głowy i szyi",
+     "cukrzyca, choroby serca, ciąża",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ostre stany ogólne (np. niewyrównana choroba ogólna) – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "zaburzenia krzepnięcia bez przygotowania – konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka, ewentualnie skierowanie",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "dodatkowa_diagnostyka": [
+     "INR / konsultacja lekarza prowadzącego wg wskazań",
+     "CBCT – zęby zatrzymane blisko kanału żuchwy (poza gabinetem)"
+    ],
+    "inne_postepowanie": [
+     "leczenie zachowawcze / endodontyczne, jeśli ząb rokuje",
+     "skierowanie do chirurga stomatologa przy zabiegu trudnym"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "zgoda pisemna",
+     "znieczulenie",
+     "zestaw chirurgiczny, wiertła z chłodzeniem, nici"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-PLAT"
+    },
+    {
+     "krok": "KROK-OSTEOTOMIA"
+    },
+    {
+     "krok": "KROK-EKSTRAKCJA"
+    },
+    {
+     "krok": "KROK-ZEBODOL"
+    },
+    {
+     "krok": "KROK-HEMOSTAZA"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-KLESZCZE",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-DZWIGNIE",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-LYZECZKA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-HEMOSTATYK",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WIERTLA-CHIR",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "kompletność usuniętego zęba (korzenie)",
+     "hemostaza",
+     "połączenie z zatoką (zęby boczne szczęki)"
+    ],
+    "nieprawidlowosci": [
+     "pozostawiony fragment korzenia",
+     "połączenie ustno-zatokowe",
+     "złamanie wyrostka",
+     "uszkodzenie zębów sąsiednich"
+    ],
+    "dalsze_postepowanie": [
+     "RTG przy wątpliwości",
+     "zamknięcie połączenia z zatoką (23.1801)",
+     "skierowanie przy powikłaniach"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Ucisk gazika 20–30 min.",
+     "Zimne okłady w pierwszej dobie.",
+     "Leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie płukać, nie ssać rany, nie palić w pierwszej dobie.",
+     "Dieta miękka, chłodna do ustąpienia znieczulenia i w pierwszej dobie."
+    ],
+    "kontakt_gdy": [
+     "krwawienie niepoddające się uciskowi",
+     "narastający ból po 2–3 dniach (suchy zębodół)",
+     "obrzęk, gorączka, szczękościsk"
+    ],
+    "kontrola": "Wg potrzeby; zdjęcie szwów po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Rodzaj płata, zakres osteotomii, szwy",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta (pisemna)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1705",
@@ -6111,11 +9262,159 @@
    "kod": "23.1809",
    "nazwa_oficjalna": "Chirurgiczne zaopatrzenie małej rany obejmującej do 3 zębodołów włącznie ze szwem",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Zaopatrzenie małej rany ze szwem",
+   "opis": "Chirurgiczne zaopatrzenie małej rany obejmującej do 3 zębodołów włącznie ze szwem.",
+   "cel": {
+    "na_czym_polega": "Opracowanie i zszycie rany (np. po ekstrakcjach mnogich, urazie) obejmującej do 3 zębodołów.",
+    "cel_kliniczny": "Hemostaza i gojenie rany.",
+    "wskazania": [
+     "rana poekstrakcyjna mnoga",
+     "rana urazowa błony śluzowej wyrostka"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG zęba / okolicy",
+     "stan ogólny, ciśnienie (wg wskazań)"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyagregacyjne",
+     "leki antyresorpcyjne (ryzyko martwicy kości)",
+     "radioterapia głowy i szyi",
+     "cukrzyca, choroby serca, ciąża",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ostre stany ogólne (np. niewyrównana choroba ogólna) – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "zaburzenia krzepnięcia bez przygotowania – konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka, ewentualnie skierowanie",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "dodatkowa_diagnostyka": [
+     "INR / konsultacja lekarza prowadzącego wg wskazań",
+     "CBCT – zęby zatrzymane blisko kanału żuchwy (poza gabinetem)"
+    ],
+    "inne_postepowanie": [
+     "leczenie zachowawcze / endodontyczne, jeśli ząb rokuje",
+     "skierowanie do chirurga stomatologa przy zabiegu trudnym"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "znieczulenie, nici, igłotrzymacz"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-ZEBODOL"
+    },
+    {
+     "krok": "KROK-HEMOSTAZA"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "przyleganie brzegów rany"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Ucisk gazika 20–30 min.",
+     "Zimne okłady w pierwszej dobie.",
+     "Leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie płukać, nie ssać rany, nie palić w pierwszej dobie.",
+     "Dieta miękka, chłodna do ustąpienia znieczulenia i w pierwszej dobie."
+    ],
+    "kontakt_gdy": [
+     "krwawienie niepoddające się uciskowi",
+     "narastający ból po 2–3 dniach (suchy zębodół)",
+     "obrzęk, gorączka, szczękościsk"
+    ],
+    "kontrola": "Wg potrzeby; zdjęcie szwów po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Lokalizacja i rozległość rany, rodzaj szwów",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "pakiet ST27"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy)",
+     "zał. 2 (<18)",
+     "zał. 2b (<18 (szkoła))"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1810",
@@ -6155,11 +9454,148 @@
    "kod": "23.1813",
    "nazwa_oficjalna": "Zatamowanie krwawienia w obrębie jamy ustnej - nie zaliczane w bezpośrednim połączeniu z zabiegiem chirurgicznym, chyba że zajmuje niewspółmiernie dużo czasu",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Zatamowanie krwawienia",
+   "opis": "Zatamowanie krwawienia w obrębie jamy ustnej (niezwiązane bezpośrednio z zabiegiem).",
+   "cel": {
+    "na_czym_polega": "Opanowanie krwawienia (np. wtórnego po ekstrakcji): oczyszczenie, ucisk, środki hemostatyczne, szwy.",
+    "cel_kliniczny": "Zatrzymanie krwawienia.",
+    "wskazania": [
+     "krwawienie wtórne po ekstrakcji",
+     "krwawienie z rany jamy ustnej"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "źródło krwawienia",
+     "stan ogólny (tętno, ciśnienie)",
+     "leki przeciwkrzepliwe – data, INR"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyagregacyjne",
+     "leki antyresorpcyjne (ryzyko martwicy kości)",
+     "radioterapia głowy i szyi",
+     "cukrzyca, choroby serca, ciąża",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ostre stany ogólne (np. niewyrównana choroba ogólna) – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "zaburzenia krzepnięcia bez przygotowania – konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka, ewentualnie skierowanie",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "dodatkowa_diagnostyka": [
+     "INR / konsultacja lekarza prowadzącego wg wskazań",
+     "CBCT – zęby zatrzymane blisko kanału żuchwy (poza gabinetem)"
+    ],
+    "inne_postepowanie": [
+     "leczenie zachowawcze / endodontyczne, jeśli ząb rokuje",
+     "skierowanie do chirurga stomatologa przy zabiegu trudnym"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "ssak, gaziki, środki hemostatyczne, nici"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-HEMOSTAZA"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-HEMOSTATYK",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "skuteczność hemostazy po 15–30 min obserwacji"
+    ],
+    "dalsze_postepowanie": [
+     "brak opanowania / zaburzenia krzepnięcia – pilne skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Ucisk gazika 20–30 min.",
+     "Zimne okłady w pierwszej dobie.",
+     "Leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie płukać, nie ssać rany, nie palić w pierwszej dobie.",
+     "Dieta miękka, chłodna do ustąpienia znieczulenia i w pierwszej dobie."
+    ],
+    "kontakt_gdy": [
+     "krwawienie niepoddające się uciskowi",
+     "narastający ból po 2–3 dniach (suchy zębodół)",
+     "obrzęk, gorączka, szczękościsk"
+    ],
+    "kontrola": "Wg potrzeby; zdjęcie szwów po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Źródło krwawienia, zastosowane metody, stan po",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1814",
@@ -6177,11 +9613,152 @@
    "kod": "23.1815",
    "nazwa_oficjalna": "Założenie opatrunku chirurgicznego",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Opatrunek chirurgiczny",
+   "opis": "Założenie opatrunku chirurgicznego.",
+   "cel": {
+    "na_czym_polega": "Założenie opatrunku do zębodołu / na ranę (np. przy zapaleniu zębodołu – suchy zębodół).",
+    "cel_kliniczny": "Ochrona rany, łagodzenie bólu, wspomaganie gojenia.",
+    "wskazania": [
+     "zapalenie zębodołu (suchy zębodół)",
+     "ochrona rany po zabiegu"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG zęba / okolicy",
+     "stan ogólny, ciśnienie (wg wskazań)"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyagregacyjne",
+     "leki antyresorpcyjne (ryzyko martwicy kości)",
+     "radioterapia głowy i szyi",
+     "cukrzyca, choroby serca, ciąża",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ostre stany ogólne (np. niewyrównana choroba ogólna) – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "zaburzenia krzepnięcia bez przygotowania – konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka, ewentualnie skierowanie",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "dodatkowa_diagnostyka": [
+     "INR / konsultacja lekarza prowadzącego wg wskazań",
+     "CBCT – zęby zatrzymane blisko kanału żuchwy (poza gabinetem)"
+    ],
+    "inne_postepowanie": [
+     "leczenie zachowawcze / endodontyczne, jeśli ząb rokuje",
+     "skierowanie do chirurga stomatologa przy zabiegu trudnym"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "opatrunek, płukanie solą"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-ZEBODOL"
+    },
+    {
+     "krok": "KROK-OPATRUNEK-CHIR"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-OPATR-ZEBODOL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "ułożenie opatrunku"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola / wymiana opatrunku wg potrzeby"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Ucisk gazika 20–30 min.",
+     "Zimne okłady w pierwszej dobie.",
+     "Leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie płukać, nie ssać rany, nie palić w pierwszej dobie.",
+     "Dieta miękka, chłodna do ustąpienia znieczulenia i w pierwszej dobie."
+    ],
+    "kontakt_gdy": [
+     "krwawienie niepoddające się uciskowi",
+     "narastający ból po 2–3 dniach (suchy zębodół)",
+     "obrzęk, gorączka, szczękościsk"
+    ],
+    "kontrola": "Wg potrzeby; zdjęcie szwów po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Wskazanie i rodzaj opatrunku",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "pakiet ST26",
+     "pakiet ST31"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy)",
+     "zał. 2 (<18)",
+     "zał. 2b (<18 (szkoła))"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "Procedura w składzie pakietu ST26 wg danych audytu."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1816",
@@ -6287,11 +9864,142 @@
    "kod": "23.2001",
    "nazwa_oficjalna": "Nacięcie powierzchniowo, podśluzówkowo lub podskórnie leżącego ropnia włącznie z drenażem i opatrunkiem",
    "kategoria": "chirurgia – zakażenia",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Nacięcie ropnia (powierzchownego)",
+   "opis": "Nacięcie powierzchniowo, podśluzówkowo lub podskórnie leżącego ropnia włącznie z drenażem i opatrunkiem.",
+   "cel": {
+    "na_czym_polega": "Nacięcie i drenaż ropnia leżącego powierzchownie.",
+    "cel_kliniczny": "Ewakuacja ropy, zmniejszenie bólu i ryzyka szerzenia się zakażenia.",
+    "wskazania": [
+     "ropień podśluzówkowy / przyzębny z chełbotaniem"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "zasięg obrzęku, objawy ogólne (gorączka, szczękościsk, duszność)",
+     "źródło zakażenia (ząb)"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyagregacyjne",
+     "leki antyresorpcyjne (ryzyko martwicy kości)",
+     "radioterapia głowy i szyi",
+     "cukrzyca, choroby serca, ciąża",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "zakażenie szerzące się w przestrzeniach głębokich, duszność, utrudnione połykanie – pilne skierowanie do szpitala",
+      "rodzaj": "bezwzgledne"
+     }
+    ],
+    "dodatkowa_diagnostyka": [
+     "INR / konsultacja lekarza prowadzącego wg wskazań",
+     "CBCT – zęby zatrzymane blisko kanału żuchwy (poza gabinetem)"
+    ],
+    "inne_postepowanie": [
+     "leczenie zachowawcze / endodontyczne, jeśli ząb rokuje",
+     "skierowanie do chirurga stomatologa przy zabiegu trudnym"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "znieczulenie, skalpel, sączek, sól"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-NACIECIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SACZEK-DREN",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "ewakuacja ropy, położenie sączka"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola po 24–48 h, usunięcie sączka",
+     "leczenie przyczynowe zęba (endodoncja / ekstrakcja)"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Płukanie wg zaleceń, leki wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "narastający obrzęk, gorączka, trudności w połykaniu lub oddychaniu – pilnie, także SOR"
+    ],
+    "kontrola": "24–48 h."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Lokalizacja, wynik nacięcia, drenaż, decyzja o antybiotyku",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie nie obejmuje odpowiedniego znieczulenia.",
+     "zał. 2 (<18): Świadczenie nie obejmuje odpowiedniego znieczulenia.",
+     "zał. 2b (<18 (szkoła)): Świadczenie nie obejmuje odpowiedniego znieczulenia."
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615"
+    ],
+    "uwagi": "W Opisach NFZ – pakiet ST19 (nacięcie ropnia)."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "kody_aplikacji": [
+    "ST19"
+   ]
   },
   {
    "id": "PROC-23.2002",

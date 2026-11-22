@@ -966,6 +966,784 @@
      "pole": "POLE-LUK"
     }
    ]
+  },
+  {
+   "procedura": "PROC-23.0101",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.0101-1",
+     "tekst": "Instruktaż higieny przeprowadzony",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "pole": "POLE-HG-INSTRUKTAZ"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.0102",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": []
+  },
+  {
+   "procedura": "PROC-23.0103",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": []
+  },
+  {
+   "procedura": "PROC-23.0105",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": []
+  },
+  {
+   "procedura": "PROC-23.0107",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.0107-1",
+     "tekst": "Okoliczności urazu i zęby objęte urazem",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-IADT-OG-2020"
+     ],
+     "pole": "POLE-UR-OKOLICZNOSCI"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.02",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO"
+   ],
+   "elementy": []
+  },
+  {
+   "procedura": "PROC-23.0301",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.0301-1",
+     "tekst": "Opis zdjęcia",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "pole": "POLE-RTG-OPIS"
+    },
+    {
+     "id": "CHK-23.0301-2",
+     "tekst": "Uzasadnienie wykonania",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-RTG-WSKAZANIE"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.0302",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.0302-1",
+     "tekst": "Opis zdjęcia",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "pole": "POLE-RTG-OPIS"
+    },
+    {
+     "id": "CHK-23.0302-2",
+     "tekst": "Uzasadnienie wykonania",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-RTG-WSKAZANIE"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.0304",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.0304-1",
+     "tekst": "Opis zdjęcia",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "pole": "POLE-RTG-OPIS"
+    },
+    {
+     "id": "CHK-23.0304-2",
+     "tekst": "Uzasadnienie wykonania",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-RTG-WSKAZANIE"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.0401",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.0401-1",
+     "tekst": "Preparat i dawka",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-ZNIECZ-PREPARAT"
+    },
+    {
+     "id": "CHK-23.0401-2",
+     "tekst": "Świadczenie, któremu towarzyszy znieczulenie",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "R-ZNI-01 – nie jako jedyne świadczenie"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.0402",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.0402-1",
+     "tekst": "Preparat i dawka",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-ZNIECZ-PREPARAT"
+    },
+    {
+     "id": "CHK-23.0402-2",
+     "tekst": "Świadczenie, któremu towarzyszy znieczulenie",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "R-ZNI-01 – nie jako jedyne świadczenie"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.0403",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.0403-1",
+     "tekst": "Preparat i dawka",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-ZNIECZ-PREPARAT"
+    },
+    {
+     "id": "CHK-23.0403-2",
+     "tekst": "Świadczenie, któremu towarzyszy znieczulenie",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "R-ZNI-01 – nie jako jedyne świadczenie"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.08",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": []
+  },
+  {
+   "procedura": "PROC-23.1003",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1003-1",
+     "tekst": "Zęby lakowane (każdy ząb = świadczenie)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-ZARZ-60-2023-TJ"
+     ],
+     "pole": "POLE-ZEBY"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1006",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1006-1",
+     "tekst": "Wiek pacjenta < 18 lat",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "pole": "POLE-WIEK",
+     "warunek": "R-LAKIER-01"
+    },
+    {
+     "id": "CHK-23.1006-2",
+     "tekst": "Ćwiartki objęte lakierowaniem",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-ZARZ-60-2023-TJ"
+     ],
+     "pole": "POLE-LUK"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.16011",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.16011-1",
+     "tekst": "Podkod złogów (miękkie / twarde, ½ łuku / wszystkie zęby)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-NFZ-KOM-9017"
+     ],
+     "warunek": "od 01.09.2026",
+     "pole": "POLE-LUK"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.16012",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.16012-1",
+     "tekst": "Podkod złogów (miękkie / twarde, ½ łuku / wszystkie zęby)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-NFZ-KOM-9017"
+     ],
+     "warunek": "od 01.09.2026",
+     "pole": "POLE-LUK"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.16021",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.16021-1",
+     "tekst": "Podkod złogów (miękkie / twarde, ½ łuku / wszystkie zęby)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-NFZ-KOM-9017"
+     ],
+     "warunek": "od 01.09.2026",
+     "pole": "POLE-LUK"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.16022",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.16022-1",
+     "tekst": "Podkod złogów (miękkie / twarde, ½ łuku / wszystkie zęby)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-NFZ-KOM-9017"
+     ],
+     "warunek": "od 01.09.2026",
+     "pole": "POLE-LUK"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1603",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": []
+  },
+  {
+   "procedura": "PROC-23.1605",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1605-1",
+     "tekst": "Opis zmiany (lokalizacja, wykwit)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-OPMD-2021"
+     ],
+     "pole": "POLE-BL-LOK"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1607",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1607-1",
+     "tekst": "Głębokości kieszonek przed zabiegiem",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-EFP-S3-2020"
+     ],
+     "pole": "POLE-PZ-PPD"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1701",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA",
+    "CHK-W-ZGODA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1701-1",
+     "tekst": "Zgoda pacjenta na zabieg",
+     "poziom": "zalecane",
+     "podstawa": "wymaganie_prawne",
+     "zrodla": [
+      "SRC-PRAWA-PACJENTA"
+     ],
+     "pole": "POLE-ZGODA"
+    },
+    {
+     "id": "CHK-23.1701-2",
+     "tekst": "Kompletność usuniętego zęba / korzeni",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-WYNIK"
+    },
+    {
+     "id": "CHK-23.1701-3",
+     "tekst": "Przekazane zalecenia pozabiegowe (pisemnie)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-ZALECENIA-FORMA"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1702",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA",
+    "CHK-W-ZGODA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1702-1",
+     "tekst": "Zgoda pacjenta na zabieg",
+     "poziom": "zalecane",
+     "podstawa": "wymaganie_prawne",
+     "zrodla": [
+      "SRC-PRAWA-PACJENTA"
+     ],
+     "pole": "POLE-ZGODA"
+    },
+    {
+     "id": "CHK-23.1702-2",
+     "tekst": "Kompletność usuniętego zęba / korzeni",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-WYNIK"
+    },
+    {
+     "id": "CHK-23.1702-3",
+     "tekst": "Przekazane zalecenia pozabiegowe (pisemnie)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-ZALECENIA-FORMA"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1703",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA",
+    "CHK-W-ZGODA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1703-1",
+     "tekst": "Zgoda pacjenta na zabieg",
+     "poziom": "zalecane",
+     "podstawa": "wymaganie_prawne",
+     "zrodla": [
+      "SRC-PRAWA-PACJENTA"
+     ],
+     "pole": "POLE-ZGODA"
+    },
+    {
+     "id": "CHK-23.1703-2",
+     "tekst": "Kompletność usuniętego zęba / korzeni",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-WYNIK"
+    },
+    {
+     "id": "CHK-23.1703-3",
+     "tekst": "Przekazane zalecenia pozabiegowe (pisemnie)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-ZALECENIA-FORMA"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1704",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA",
+    "CHK-W-ZGODA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1704-1",
+     "tekst": "Zgoda pacjenta na zabieg",
+     "poziom": "zalecane",
+     "podstawa": "wymaganie_prawne",
+     "zrodla": [
+      "SRC-PRAWA-PACJENTA"
+     ],
+     "pole": "POLE-ZGODA"
+    },
+    {
+     "id": "CHK-23.1704-2",
+     "tekst": "Kompletność usuniętego zęba / korzeni",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-WYNIK"
+    },
+    {
+     "id": "CHK-23.1704-3",
+     "tekst": "Przekazane zalecenia pozabiegowe (pisemnie)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-ZALECENIA-FORMA"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1809",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA",
+    "CHK-W-ZGODA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1809-1",
+     "tekst": "Lokalizacja rany",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-LOKALIZACJA"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1813",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1813-1",
+     "tekst": "Leki przeciwkrzepliwe (wywiad)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-WYW-LEKI"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1815",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": []
+  },
+  {
+   "procedura": "PROC-23.2001",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.2001-1",
+     "tekst": "Ocena objawów ogólnych (szerzenie się zakażenia)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-WSKAZANIE"
+    }
+   ]
   }
  ]
 }

@@ -152,6 +152,124 @@
    "nazwa": "Pasta dewitalizacyjna",
    "kategoria": "preparat",
    "uwagi": "Metoda historyczna – obecnie rzadko wskazana (ryzyko martwicy tkanek)."
+  },
+  {
+   "id": "MAT-RTG-UPS",
+   "nazwa": "Pozycjoner, czujnik / klisza, osłony",
+   "kategoria": "srodek_pomocniczy"
+  },
+  {
+   "id": "MAT-PANTOMOGRAF",
+   "nazwa": "Pantomograf",
+   "kategoria": "aparatura"
+  },
+  {
+   "id": "MAT-LAK",
+   "nazwa": "Lak szczelinowy (żywiczny)",
+   "kategoria": "material",
+   "alternatywy": [
+    "lak glasjonomerowy – ząb częściowo wyrznięty / trudna izolacja"
+   ]
+  },
+  {
+   "id": "MAT-SZCZOTKA-PASTA",
+   "nazwa": "Szczoteczka / gumka profilaktyczna, pasta profilaktyczna",
+   "kategoria": "srodek_pomocniczy"
+  },
+  {
+   "id": "MAT-PIASKARKA",
+   "nazwa": "Piaskarka (proszek o niskiej ścieralności)",
+   "kategoria": "aparatura"
+  },
+  {
+   "id": "MAT-SKALER",
+   "nazwa": "Skaler ultradźwiękowy / piezoelektryczny i końcówki",
+   "kategoria": "aparatura"
+  },
+  {
+   "id": "MAT-NARZ-REKA",
+   "nazwa": "Skalery ręczne",
+   "kategoria": "narzedzie"
+  },
+  {
+   "id": "MAT-KIRETY",
+   "nazwa": "Kirety (np. typu Gracey)",
+   "kategoria": "narzedzie"
+  },
+  {
+   "id": "MAT-PLUKANKA",
+   "nazwa": "Płyn do płukania kieszonek (np. chlorheksydyna)",
+   "kategoria": "preparat"
+  },
+  {
+   "id": "MAT-LEK-BLONA",
+   "nazwa": "Lek miejscowy na błonę śluzową (wg rozpoznania)",
+   "kategoria": "preparat"
+  },
+  {
+   "id": "MAT-KLESZCZE",
+   "nazwa": "Kleszcze ekstrakcyjne",
+   "kategoria": "narzedzie"
+  },
+  {
+   "id": "MAT-DZWIGNIE",
+   "nazwa": "Dźwignie, syndesmotom, periotom",
+   "kategoria": "narzedzie"
+  },
+  {
+   "id": "MAT-LYZECZKA",
+   "nazwa": "Łyżeczka zębodołowa, kleszczyki",
+   "kategoria": "narzedzie"
+  },
+  {
+   "id": "MAT-WIERTLA-CHIR",
+   "nazwa": "Wiertła chirurgiczne, prostnica / kątnica chirurgiczna z chłodzeniem solą",
+   "kategoria": "narzedzie"
+  },
+  {
+   "id": "MAT-SKALPEL-RASP",
+   "nazwa": "Skalpel, raspator, haczyki",
+   "kategoria": "narzedzie"
+  },
+  {
+   "id": "MAT-IGLOTRZYMACZ",
+   "nazwa": "Igłotrzymacz, nożyczki, pęseta chirurgiczna",
+   "kategoria": "narzedzie"
+  },
+  {
+   "id": "MAT-NICI",
+   "nazwa": "Nici chirurgiczne (wchłanialne / niewchłanialne)",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-GAZIKI",
+   "nazwa": "Gaziki jałowe",
+   "kategoria": "srodek_pomocniczy"
+  },
+  {
+   "id": "MAT-HEMOSTATYK",
+   "nazwa": "Miejscowy środek hemostatyczny (np. gąbka żelatynowa, kolagen, kwas traneksamowy)",
+   "kategoria": "preparat"
+  },
+  {
+   "id": "MAT-OPATR-ZEBODOL",
+   "nazwa": "Opatrunek do zębodołu",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-SACZEK-DREN",
+   "nazwa": "Sączek gumowy (dren)",
+   "kategoria": "srodek_pomocniczy"
+  },
+  {
+   "id": "MAT-SOL",
+   "nazwa": "Sól fizjologiczna jałowa",
+   "kategoria": "preparat"
+  },
+  {
+   "id": "MAT-TESTER",
+   "nazwa": "Środek do testu na zimno, elektryczny tester miazgi",
+   "kategoria": "preparat"
   }
  ]
 }

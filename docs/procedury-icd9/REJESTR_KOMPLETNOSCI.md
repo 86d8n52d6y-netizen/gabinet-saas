@@ -8,8 +8,8 @@ Wersja danych: 2026.11.22-1.
 
 | Status | Procedury |
 |---|---|
-| draft | 21 |
-| not_started | 245 |
+| draft | 51 |
+| not_started | 215 |
 | **razem** | **266** |
 
 Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: draft, BAD-BLONA: draft, BAD-UZEBIENIE: draft, BAD-PRZYZEBIE: draft, BAD-HIGIENA: draft, BAD-ZGRYZ: draft, BAD-SSZ: draft, BAD-ZYWOTNOSC: draft, BAD-RTG: draft, BAD-PO-URAZIE: draft, BAD-DZIECKO: draft, BAD-STOMATOLOGICZNE: draft, BAD-KONTROLNE: draft, BAD-PRZED-LECZENIEM: draft, BAD-PO-LECZENIU: draft).
@@ -20,26 +20,26 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 
 | Kod | Nazwa (ICD-9 PL 5.91) | Kategoria | Status | Uwagi |
 |---|---|---|---|---|
-| 23.0101 | Badanie lekarskie stomatologiczne, które obejmuje również instruktaż higieny jamy ustnej | badanie i porada | not_started | Do opracowania w kolejnej partii. |
-| 23.0102 | Badanie lekarskie kontrolne | badanie i porada | not_started | Do opracowania w kolejnej partii. |
-| 23.0103 | Porada lekarska | badanie i porada | not_started | Do opracowania w kolejnej partii. |
+| 23.0101 | Badanie lekarskie stomatologiczne, które obejmuje również instruktaż higieny jamy ustnej | badanie i porada | draft |  |
+| 23.0102 | Badanie lekarskie kontrolne | badanie i porada | draft |  |
+| 23.0103 | Porada lekarska | badanie i porada | draft |  |
 | 23.0104 | Wydanie orzeczenia lekarskiego | badanie i porada | not_started | Do opracowania w kolejnej partii. |
-| 23.0105 | Konsultacja specjalistyczna | badanie i porada | not_started | Do opracowania w kolejnej partii. |
+| 23.0105 | Konsultacja specjalistyczna | badanie i porada | draft |  |
 | 23.0106 | Wydanie krótkiego zaświadczenia lub świadectwa | badanie i porada | not_started | Do opracowania w kolejnej partii. |
-| 23.0107 | Badanie lekarskie stomatologiczne i kontrolne po urazie zęba | badanie i porada | not_started | Do opracowania w kolejnej partii. |
-| 23.02 | Badanie żywotności zęba | diagnostyka | not_started | Do opracowania w kolejnej partii. |
-| 23.0301 | Rentgenodiagnostyka do 2 zdjęć wewnątrzustnych | radiologia | not_started | Do opracowania w kolejnej partii. |
-| 23.0302 | Rentgenodiagnostyka do 5 zdjęć wewnątrzustnych | radiologia | not_started | Do opracowania w kolejnej partii. |
+| 23.0107 | Badanie lekarskie stomatologiczne i kontrolne po urazie zęba | badanie i porada | draft |  |
+| 23.02 | Badanie żywotności zęba | diagnostyka | draft |  |
+| 23.0301 | Rentgenodiagnostyka do 2 zdjęć wewnątrzustnych | radiologia | draft |  |
+| 23.0302 | Rentgenodiagnostyka do 5 zdjęć wewnątrzustnych | radiologia | draft |  |
 | 23.0303 | Rentgenodiagnostyka do 8 zdjęć wewnątrzustnych | radiologia | not_started | Do opracowania w kolejnej partii. |
-| 23.0304 | Rentgenodiagnostyka - zdjęcie pantomograficzne z opisem | radiologia | not_started | Do opracowania w kolejnej partii. |
-| 23.0401 | Znieczulenie miejscowe powierzchniowe | znieczulenie | not_started | Do opracowania w kolejnej partii. |
-| 23.0402 | Znieczulenie miejscowe nasiękowe | znieczulenie | not_started | Do opracowania w kolejnej partii. |
-| 23.0403 | Znieczulenie przewodowe wewnątrzustne | znieczulenie | not_started | Do opracowania w kolejnej partii. |
+| 23.0304 | Rentgenodiagnostyka - zdjęcie pantomograficzne z opisem | radiologia | draft |  |
+| 23.0401 | Znieczulenie miejscowe powierzchniowe | znieczulenie | draft |  |
+| 23.0402 | Znieczulenie miejscowe nasiękowe | znieczulenie | draft |  |
+| 23.0403 | Znieczulenie przewodowe wewnątrzustne | znieczulenie | draft |  |
 | 23.0404 | Znieczulenie przewodowe zewnątrzustne | znieczulenie | not_started | Do opracowania w kolejnej partii. |
 | 23.05 | Postępowanie w nagłych przypadkach | pomoc doraźna | not_started | Do opracowania w kolejnej partii. |
 | 23.06 | Wizyta adaptacyjna -dotyczy pierwszych wizyt małych dzieci | dziecko | not_started | Do opracowania w kolejnej partii. |
 | 23.07 | Pilne zabiegi poza godzinami pracy w dni świąteczne lub w domu pacjenta | pomoc doraźna | not_started | Do opracowania w kolejnej partii. |
-| 23.08 | Instruktaż higieny jamy ustnej | profilaktyka | not_started | Do opracowania w kolejnej partii. |
+| 23.08 | Instruktaż higieny jamy ustnej | profilaktyka | draft |  |
 | 23.0901 | Balneoterapia lub hydroterapia | fizykoterapia | not_started | Do opracowania w kolejnej partii. |
 | 23.0902 | Naświetlanie Sollux | fizykoterapia | not_started | Do opracowania w kolejnej partii. |
 | 23.0903 | Jonoforeza nadziąsłowa | fizykoterapia | not_started | Do opracowania w kolejnej partii. |
@@ -49,9 +49,9 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.0907 | Laseroterapia biostymulacyjna | fizykoterapia | not_started | Do opracowania w kolejnej partii. |
 | 23.1001 | Indywidualna fluoryzacja metodą kontaktową - za każdy zabieg | profilaktyka | not_started | Do opracowania w kolejnej partii. |
 | 23.1002 | Fluoryzacja kontaktowa zbiorowa, 1 zabieg u każdego dziecka | profilaktyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1003 | Zabezpieczenie profilaktyczne bruzd lakiem szczelinowym - za każdy ząb | profilaktyka | not_started | Do opracowania w kolejnej partii. |
+| 23.1003 | Zabezpieczenie profilaktyczne bruzd lakiem szczelinowym - za każdy ząb | profilaktyka | draft |  |
 | 23.1004 | Zabezpieczanie profilaktyczne bruzd innymi materiałami | profilaktyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1006 | Lakierowanie zębów 1/4 łuku zębowego | profilaktyka | not_started | Do opracowania w kolejnej partii. |
+| 23.1006 | Lakierowanie zębów 1/4 łuku zębowego | profilaktyka | draft |  |
 | 23.1007 | Leczenie nadwrażliwości zębów w obrębie 1/4 łuku zębowego | profilaktyka | draft |  |
 | 23.1008 | Impregnacja zębiny | profilaktyka | not_started | Do opracowania w kolejnej partii. |
 | 23.1009 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 6. miesiącu życia | profilaktyka | not_started | Do opracowania w kolejnej partii. |
@@ -122,17 +122,17 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.1510 | Likwidacja diastemy | odbudowa i estetyka | not_started | Do opracowania w kolejnej partii. |
 | 23.1511 | Wybielanie zęba metodą wewnętrzną | odbudowa i estetyka | not_started | Do opracowania w kolejnej partii. |
 | 23.1512 | Wybielanie grupy zębów metodą zewnętrzną | odbudowa i estetyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1601 | Usunięcie złogów nazębnych z 1/2 łuku zębowego | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
-| 23.16011 | Usunięcie złogów nazębnych miękkich z 1/2 łuku zębowego | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
-| 23.16012 | Usunięcie złogów nazębnych twardych z 1/2 łuku zębowego | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
-| 23.1602 | Usunięcie złogów nazębnych ze wszystkich zębów | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
-| 23.16021 | Usunięcie złogów nazębnych miękkich ze wszystkich zębów | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
-| 23.16022 | Usunięcie złogów nazębnych twardych ze wszystkich zębów | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
-| 23.1603 | Polerowanie zębów | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
+| 23.1601 | Usunięcie złogów nazębnych z 1/2 łuku zębowego | periodontologia i błona śluzowa | not_started | Kod nadrzędny – od 01.09.2026 do rozliczenia wykazuje się podkody (R-KOD-01): 23.16011 / 23.16012; karty w podkodach. |
+| 23.16011 | Usunięcie złogów nazębnych miękkich z 1/2 łuku zębowego | periodontologia i błona śluzowa | draft |  |
+| 23.16012 | Usunięcie złogów nazębnych twardych z 1/2 łuku zębowego | periodontologia i błona śluzowa | draft |  |
+| 23.1602 | Usunięcie złogów nazębnych ze wszystkich zębów | periodontologia i błona śluzowa | not_started | Kod nadrzędny – od 01.09.2026 do rozliczenia wykazuje się podkody (R-KOD-01): 23.16021 / 23.16022; karty w podkodach. |
+| 23.16021 | Usunięcie złogów nazębnych miękkich ze wszystkich zębów | periodontologia i błona śluzowa | draft |  |
+| 23.16022 | Usunięcie złogów nazębnych twardych ze wszystkich zębów | periodontologia i błona śluzowa | draft |  |
+| 23.1603 | Polerowanie zębów | periodontologia i błona śluzowa | draft |  |
 | 23.1604 | Płukanie kieszonki dziąsłowej i aplikacja leku | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
-| 23.1605 | Leczenie zmian na błonie śluzowej jamy ustnej | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
+| 23.1605 | Leczenie zmian na błonie śluzowej jamy ustnej | periodontologia i błona śluzowa | draft |  |
 | 23.1606 | Korekta zgryzu | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
-| 23.1607 | Kiretaż zwykły w obrębie 1/4 uzębienia | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
+| 23.1607 | Kiretaż zwykły w obrębie 1/4 uzębienia | periodontologia i błona śluzowa | draft |  |
 | 23.1608 | Kiretaż otwarty w obrębie 1/4 uzębienia | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
 | 23.1609 | Gingwoplastyka | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
 | 23.1610 | Gingwoosteoplastyka | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
@@ -147,10 +147,10 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.1619 | Zabieg pokrycia obnażonych korzeni zębów metodą bocznie przesuniętego płata | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
 | 23.1620 | Założenie opatrunku parodontologicznego | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
 | 23.17 | Chirurgiczne usunięcie zęba | chirurgia – ekstrakcje | not_started | Do opracowania w kolejnej partii. |
-| 23.1701 | Usunięcie zęba jednokorzeniowego | chirurgia – ekstrakcje | not_started | Do opracowania w kolejnej partii. |
-| 23.1702 | Usunięcie zęba wielokorzeniowego | chirurgia – ekstrakcje | not_started | Do opracowania w kolejnej partii. |
-| 23.1703 | Usunięcie głęboko złamanego zęba poprzez dłutowanie wewnątrzzębodołowe przy zastosowaniu wierteł, dźwigni | chirurgia – ekstrakcje | not_started | Do opracowania w kolejnej partii. |
-| 23.1704 | Usunięcie zęba przez dłutowanie zewnątrzzębodołowe z wytworzeniem płata śluzówkowo-okostnowego | chirurgia – ekstrakcje | not_started | Do opracowania w kolejnej partii. |
+| 23.1701 | Usunięcie zęba jednokorzeniowego | chirurgia – ekstrakcje | draft |  |
+| 23.1702 | Usunięcie zęba wielokorzeniowego | chirurgia – ekstrakcje | draft |  |
+| 23.1703 | Usunięcie głęboko złamanego zęba poprzez dłutowanie wewnątrzzębodołowe przy zastosowaniu wierteł, dźwigni | chirurgia – ekstrakcje | draft |  |
+| 23.1704 | Usunięcie zęba przez dłutowanie zewnątrzzębodołowe z wytworzeniem płata śluzówkowo-okostnowego | chirurgia – ekstrakcje | draft |  |
 | 23.1705 | Operacyjne usunięcie zęba zatrzymanego | chirurgia – ekstrakcje | not_started | Do opracowania w kolejnej partii. |
 | 23.1706 | Operacyjne odsłonięcie zatrzymanego zęba z założeniem pętli drucianej dla celów ortodontycznych | chirurgia – ekstrakcje | not_started | Do opracowania w kolejnej partii. |
 | 23.1707 | Operacyjne usunięcie zawiązków zębów ze wskazań ortodontycznych | chirurgia – ekstrakcje | not_started | Do opracowania w kolejnej partii. |
@@ -163,13 +163,13 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.1806 | Reimplantacja zęba | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
 | 23.1807 | Wyłuszczenie torbieli zębopochodnej | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
 | 23.1808 | Wyłuszczenie kamienia z przewodu ślinianki | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
-| 23.1809 | Chirurgiczne zaopatrzenie małej rany obejmującej do 3 zębodołów włącznie ze szwem | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
+| 23.1809 | Chirurgiczne zaopatrzenie małej rany obejmującej do 3 zębodołów włącznie ze szwem | chirurgia stomatologiczna | draft |  |
 | 23.1810 | Chirurgiczne zaopatrzenie małej rany obejmującej do 2-3 zębodołów włącznie z opracowaniem i szwami | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
 | 23.1811 | Chirurgiczne zaopatrzenie dużej rany w obrębie połowy szczęki włącznie ze szwami | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
 | 23.1812 | Chirurgiczne zaopatrzenie dużej, albo znacznie zanieczyszczonej rany w obrębie połowy szczęki włącznie z opracowaniem i szwami | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
-| 23.1813 | Zatamowanie krwawienia w obrębie jamy ustnej - nie zaliczane w bezpośrednim połączeniu z zabiegiem chirurgicznym, chyba że zajmuje niewspółmiernie dużo czasu | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
+| 23.1813 | Zatamowanie krwawienia w obrębie jamy ustnej - nie zaliczane w bezpośrednim połączeniu z zabiegiem chirurgicznym, chyba że zajmuje niewspółmiernie dużo czasu | chirurgia stomatologiczna | draft |  |
 | 23.1814 | Zatamowanie masywnego krwawienia w obrębie jamy ustnej przez podwiązanie, pokłucie naczyń bądź zatkanie kością | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
-| 23.1815 | Założenie opatrunku chirurgicznego | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
+| 23.1815 | Założenie opatrunku chirurgicznego | chirurgia stomatologiczna | draft |  |
 | 23.1816 | Ograniczone, miejscowe wycięcie wargi, języka | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
 | 23.1817 | Krioterapia niewielkich zmian w obrębie tkanek miękkich jamy ustnej | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
 | 23.1819 | Ograniczone wycięcie, zniszczenie zmiany podniebienia twardego | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
@@ -179,7 +179,7 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.1904 | Plastyka wyrostka zębodołowego szczęki lub części zębodołowej żuchwy z użyciem przeszczepu lub wszczepu | chirurgia – wycięcia i plastyki | not_started | Do opracowania w kolejnej partii. |
 | 23.1905 | Plastyka guza szczęki | chirurgia – wycięcia i plastyki | not_started | Do opracowania w kolejnej partii. |
 | 23.1906 | Plastyka połączenia lub przetoki ustno-zatokowej - jako samodzielne postępowanie lub jako następstwo ekstrakcji | chirurgia – wycięcia i plastyki | not_started | Do opracowania w kolejnej partii. |
-| 23.2001 | Nacięcie powierzchniowo, podśluzówkowo lub podskórnie leżącego ropnia włącznie z drenażem i opatrunkiem | chirurgia – zakażenia | not_started | Do opracowania w kolejnej partii. |
+| 23.2001 | Nacięcie powierzchniowo, podśluzówkowo lub podskórnie leżącego ropnia włącznie z drenażem i opatrunkiem | chirurgia – zakażenia | draft |  |
 | 23.2002 | Nacięcie z dojścia wewnątrz lub zewnątrzustnego głęboko leżącego ropnia włącznie z drenażem i opatrunkiem | chirurgia – zakażenia | not_started | Do opracowania w kolejnej partii. |
 | 23.2003 | Nacięcie ropowicy | chirurgia – zakażenia | not_started | Pominięte decyzją Patryka (22.11.2026): nacięcie ropowicy – chirurgia szczękowo-twarzowa (szpital). |
 | 23.2101 | Repozycja i unieruchomienie zwichniętego zęba lub grupy zębów | urazy zębów | not_started | Do opracowania w kolejnej partii. |

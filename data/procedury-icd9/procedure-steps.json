@@ -241,6 +241,232 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ]
+  },
+  {
+   "id": "KROK-BADANIE",
+   "nazwa": "Badanie wg katalogu badań",
+   "opis": "Wykonaj badania składowe z katalogu A odpowiednie do świadczenia (formularze i szablony BAD-…).",
+   "uwaga": "Wynik każdego elementu wpisuje lekarz."
+  },
+  {
+   "id": "KROK-INSTRUKTAZ",
+   "nazwa": "Instruktaż higieny jamy ustnej",
+   "opis": "Pokaż i omów technikę szczotkowania i oczyszczania przestrzeni międzyzębowych, przybory, stosowanie fluorków; dostosuj do wieku i potrzeb (aparat, protezy).",
+   "zrodla": [
+    "SRC-KLIN-EAPD-F-2019"
+   ]
+  },
+  {
+   "id": "KROK-PLAN",
+   "nazwa": "Omówienie wyników i planu",
+   "opis": "Przedstaw pacjentowi wyniki, rozpoznanie i plan leczenia z alternatywami; ustal termin kolejnej wizyty.",
+   "zrodla": [
+    "SRC-PRAWA-PACJENTA"
+   ]
+  },
+  {
+   "id": "KROK-RTG-WYKONANIE",
+   "nazwa": "Wykonanie zdjęcia RTG",
+   "opis": "Uzasadnienie, ochrona pacjenta wg procedur pracowni, ustawienie czujnika / kliszy z pozycjonerem, ekspozycja.",
+   "uwaga": "Wywiad w kierunku ciąży u kobiet w wieku rozrodczym.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-RTG-OPIS",
+   "nazwa": "Opis zdjęcia RTG",
+   "opis": "Opis zdjęcia w dokumentacji (warunek rozliczenia NFZ) – wg badania BAD-RTG.",
+   "zrodla": [
+    "SRC-DU-2025-615"
+   ]
+  },
+  {
+   "id": "KROK-ZNIECZ-POWIERZCHNIOWE",
+   "nazwa": "Znieczulenie powierzchniowe",
+   "opis": "Osuszenie błony śluzowej, aplikacja preparatu (żel / aerozol) na ograniczony obszar, odczekanie czasu działania.",
+   "uwaga": "Uwaga na dawkę i połknięcie preparatu u dzieci.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ZNIECZ-NASIEKOWE",
+   "nazwa": "Znieczulenie nasiękowe",
+   "opis": "Wkłucie w fałd przejściowy w okolicy wierzchołka zęba, aspiracja, powolne podanie; ewentualnie uzupełniająco od strony podniebiennej / językowej.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ZNIECZ-PRZEWODOWE",
+   "nazwa": "Znieczulenie przewodowe wewnątrzustne",
+   "opis": "Np. blokada nerwu zębodołowego dolnego: lokalizacja punktów orientacyjnych, wkłucie, aspiracja (obowiązkowo), powolne podanie, ocena objawów znieczulenia.",
+   "uwaga": "Ryzyko podania donaczyniowego i uszkodzenia nerwu – aspiracja, powolne podawanie.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-OBSERWACJA-ZNIECZ",
+   "nazwa": "Obserwacja po znieczuleniu",
+   "opis": "Obserwacja pacjenta (bladość, kołatanie, reakcja alergiczna); ocena skuteczności przed zabiegiem.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-OCZYSZCZENIE-ZEBOW",
+   "nazwa": "Oczyszczenie powierzchni zębów",
+   "opis": "Usunięcie płytki (szczoteczka, pasta profilaktyczna lub piaskowanie) przed aplikacją preparatu.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-LAKOWANIE",
+   "nazwa": "Lakowanie bruzd",
+   "opis": "Izolacja, oczyszczenie bruzd, wytrawienie (lak żywiczny) lub przygotowanie wg instrukcji (glasjonomer), aplikacja laku bez pęcherzyków, polimeryzacja, kontrola retencji i zwarcia.",
+   "uwaga": "Ząb musi być całkowicie wyrznięty i suchy.",
+   "zrodla": [
+    "SRC-KLIN-ADA-LAK-2016"
+   ]
+  },
+  {
+   "id": "KROK-LAKIEROWANIE",
+   "nazwa": "Lakierowanie fluorkowe",
+   "opis": "Oczyszczenie i osuszenie zębów, cienka warstwa lakieru fluorkowego na wszystkie powierzchnie zębów ¼ łuku.",
+   "uwaga": "Ilość lakieru u małych dzieci wg zaleceń dla wieku.",
+   "zrodla": [
+    "SRC-KLIN-EAPD-F-2019",
+    "SRC-KLIN-ADA-F-2013"
+   ]
+  },
+  {
+   "id": "KROK-SKALING-NADDZIASLOWY",
+   "nazwa": "Usunięcie złogów naddziąsłowych",
+   "opis": "Skaler ultradźwiękowy i / lub narzędzia ręczne: usunięcie kamienia naddziąsłowego z zębów objętych zabiegiem.",
+   "uwaga": "U pacjentów z rozrusznikiem – ocenić rodzaj skalera wg zaleceń producenta.",
+   "zrodla": [
+    "SRC-KLIN-EFP-S3-2020"
+   ]
+  },
+  {
+   "id": "KROK-USUNIECIE-PLYTKI",
+   "nazwa": "Usunięcie złogów miękkich",
+   "opis": "Usunięcie płytki i osadów (szczoteczka / gumka z pastą, piaskarka z proszkiem o niskiej ścieralności).",
+   "zrodla": [
+    "SRC-KLIN-EFP-S3-2020"
+   ]
+  },
+  {
+   "id": "KROK-POLEROWANIE",
+   "nazwa": "Polerowanie zębów",
+   "opis": "Polerowanie powierzchni gumką / szczoteczką z pastą, paski polerskie w przestrzeniach międzyzębowych.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-KIRETAZ",
+   "nazwa": "Kiretaż zamknięty / oczyszczanie kieszonek",
+   "opis": "Pod znieczuleniem: usunięcie złogów poddziąsłowych i oczyszczenie powierzchni korzeni kiretami / końcówkami ultradźwiękowymi w kieszonkach ¼ uzębienia; płukanie.",
+   "uwaga": "Instrumentacja poddziąsłowa wg EFP – etap 2 leczenia zapalenia przyzębia.",
+   "zrodla": [
+    "SRC-KLIN-EFP-S3-2020"
+   ]
+  },
+  {
+   "id": "KROK-LECZENIE-BLONY",
+   "nazwa": "Leczenie zmian na błonie śluzowej",
+   "opis": "Oczyszczenie zmiany, usunięcie czynnika drażniącego, aplikacja leku miejscowego (np. preparat ochronny, przeciwzapalny, przeciwgrzybiczy – wg rozpoznania).",
+   "uwaga": "Zmiana niepokojąca – skierowanie (BAD-BLONA).",
+   "zrodla": [
+    "SRC-KLIN-OPMD-2021"
+   ]
+  },
+  {
+   "id": "KROK-EKSTRAKCJA",
+   "nazwa": "Usunięcie zęba",
+   "opis": "Oddzielenie dziąsła (syndesmotomia), zwichnięcie i usunięcie zęba kleszczami / dźwignią z kontrolą siły; kontrola kompletności korzeni.",
+   "uwaga": "Przy zębach wielokorzeniowych rozważ separację korzeni.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-DLUTOWANIE-WEWN",
+   "nazwa": "Dłutowanie wewnątrzzębodołowe",
+   "opis": "Separacja korzeni wiertłem chirurgicznym w obrębie zębodołu i usunięcie fragmentów dźwigniami bez odwarstwienia płata.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-PLAT",
+   "nazwa": "Wytworzenie płata śluzówkowo-okostnowego",
+   "opis": "Cięcie (np. brzeżne z cięciem pionowym), odwarstwienie płata śluzówkowo-okostnowego, ochrona tkanek miękkich.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-OSTEOTOMIA",
+   "nazwa": "Usunięcie kości (dłutowanie zewnątrzzębodołowe)",
+   "opis": "Usunięcie fragmentu kości wiertłem z chłodzeniem w celu dostępu do korzenia / zęba; separacja i usunięcie.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ZEBODOL",
+   "nazwa": "Opracowanie zębodołu",
+   "opis": "Kontrola zębodołu, usunięcie ziarniny i odłamów, wygładzenie ostrych brzegów kostnych, kontrola połączenia z zatoką (zęby boczne szczęki).",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-HEMOSTAZA",
+   "nazwa": "Zatamowanie krwawienia",
+   "opis": "Ucisk gazikiem, w razie potrzeby środki hemostatyczne miejscowe i szwy; ocena skuteczności.",
+   "uwaga": "U pacjentów na lekach przeciwkrzepliwych – postępowanie wg zaleceń, bez samodzielnego odstawiania leków.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-SZYCIE",
+   "nazwa": "Szycie rany",
+   "opis": "Ułożenie płata / brzegów rany i założenie szwów (rodzaj nici wg przypadku); termin zdjęcia szwów.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-OPATRUNEK-CHIR",
+   "nazwa": "Opatrunek chirurgiczny",
+   "opis": "Założenie opatrunku do zębodołu / na ranę (np. opatrunek resorbowalny, sączek z preparatem) zależnie od wskazania.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-NACIECIE",
+   "nazwa": "Nacięcie ropnia i drenaż",
+   "opis": "Znieczulenie (miejscowo, poza naciekiem), nacięcie w najbardziej chełbocącym miejscu, rozwarstwienie, ewakuacja ropy, założenie sączka, płukanie.",
+   "uwaga": "Rozważ antybiotyk przy objawach ogólnych / szerzeniu się zakażenia; usuń przyczynę (ząb).",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ZALECENIA-CHIR",
+   "nazwa": "Zalecenia po zabiegu chirurgicznym",
+   "opis": "Ucisk gazika 20–30 min, zimne okłady, bez płukania i ssania rany w pierwszej dobie, dieta miękka i chłodna, leki przeciwbólowe wg zaleceń, termin kontroli / zdjęcia szwów; ustnie i pisemnie.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
   }
  ]
 }

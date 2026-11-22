@@ -2,7 +2,1086 @@
 
 > Plik generowany: `python3 scripts/buduj_docs_bazy.py` z danych w `data/`. Nie edytuj ręcznie – popraw JSON.
 
-Wersja danych: 2026.11.22-1. Kart opracowanych: 21 z 266 (rejestr: `REJESTR_KOMPLETNOSCI.md`). Wymagania NFZ są oddzielone od zaleceń klinicznych; elementy oznaczone podstawą i źródłem.
+Wersja danych: 2026.11.22-1. Kart opracowanych: 51 z 266 (rejestr: `REJESTR_KOMPLETNOSCI.md`). Wymagania NFZ są oddzielone od zaleceń klinicznych; elementy oznaczone podstawą i źródłem.
+
+## 23.0101 – Badanie lekarskie stomatologiczne, które obejmuje również instruktaż higieny jamy ustnej
+
+`PROC-23.0101` · **Badanie lekarskie stomatologiczne** · badanie i porada · status: **draft** · kody w Opisach NFZ: ST33
+
+Badanie lekarskie stomatologiczne obejmujące instruktaż higieny jamy ustnej.
+
+**Na czym polega.** Pełne badanie stomatologiczne (katalog A: BAD-STOMATOLOGICZNE) z instruktażem higieny i planem leczenia. **Cel:** Rozpoznanie stanu jamy ustnej, wykrycie chorób, plan leczenia i profilaktyki.
+
+Wskazania: pierwsza wizyta; badanie okresowe (NFZ: 1× w roku kalendarzowym)
+
+**Kwalifikacja** – ocenić: aktualny wywiad. Wywiad: choroby, leki, alergie.
+
+
+
+**Przygotowanie** – konieczne: zestaw podstawowy, oświetlenie; karta / formularz badania
+
+**Przebieg krok po kroku**
+
+1. **Badanie wg katalogu badań** – Wykonaj badania składowe z katalogu A odpowiednie do świadczenia (formularze i szablony BAD-…). *Uwaga: Wynik każdego elementu wpisuje lekarz.*
+2. **Instruktaż higieny jamy ustnej** – Pokaż i omów technikę szczotkowania i oczyszczania przestrzeni międzyzębowych, przybory, stosowanie fluorków; dostosuj do wieku i potrzeb (aparat, protezy).
+3. **Omówienie wyników i planu** – Przedstaw pacjentowi wyniki, rozpoznanie i plan leczenia z alternatywami; ustal termin kolejnej wizyty.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne)
+
+**Kontrola efektu:** kompletność badań składowych; przeprowadzenie instruktażu
+
+**Zalecenia pozabiegowe:** Pacjent: Plan leczenia i zalecenia higieniczne.. Kontrola: Wg ryzyka próchnicy i chorób przyzębia.
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Instruktaż higieny jamy ustnej (składnik świadczenia) — *NFZ*, warunek: rozliczenie NFZ (`SRC-DU-2025-615`)
+
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: pakiet ST30D; pakiet ST30F; pakiet ST33; pakiet ST33A
+
+- zał. 1 (wszyscy): Świadczenie jest udzielane 1 raz w roku kalendarzowym.
+- zał. 2 (<18): Świadczenie jest udzielane 1 raz w roku kalendarzowym.
+- zał. 2b (<18 (szkoła)): Świadczenie jest udzielane raz w roku kalendarzowym.
+
+Reguły: R-BAD-01, R-ST30-CZAS, R-ST30-WZAJEM, R-ST30BC-WYK, R-ST30DFG-LIMIT, R-ST30DG-WIEK
+
+*W Opisach NFZ – pakiet ST33.*
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| Z01.2 | Badanie dentystyczne | badanie bez rozpoznania choroby; przy chorobie – kod choroby (wybór lekarza) | ocena_kliniczna | tak |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Instruktaż higieny przeprowadzony — *NFZ*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Badanie lekarskie stomatologiczne: {{POLE-PRZEBIEG}} Instruktaż higieny jamy ustnej: {{POLE-HG-INSTRUKTAZ}}. Plan: {{POLE-DECYZJA}}.
+
+**skrocony**
+
+> Badanie stomatologiczne z instruktażem higieny: {{POLE-HG-INSTRUKTAZ}}.
+
+**rozszerzony**
+
+> BADANIE LEKARSKIE STOMATOLOGICZNE: {{POLE-PRZEBIEG}} Rozpoznanie: {{POLE-ROZPOZNANIE}}. Instruktaż higieny: {{POLE-HG-INSTRUKTAZ}} – {{POLE-HG-INSTR-OPIS}}. Plan leczenia: {{POLE-DECYZJA}}. Kolejna wizyta: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+## 23.0102 – Badanie lekarskie kontrolne
+
+`PROC-23.0102` · **Badanie lekarskie kontrolne** · badanie i porada · status: **draft** · kody w Opisach NFZ: ST34
+
+Badanie lekarskie kontrolne.
+
+**Na czym polega.** Badanie kontrolne wg BAD-KONTROLNE. **Cel:** Ocena zmian i wyników leczenia.
+
+Wskazania: kontrola w trakcie / po leczeniu; kontrola okresowa
+
+**Kwalifikacja** – ocenić: aktualny wywiad. Wywiad: choroby, leki, alergie.
+
+
+
+**Przygotowanie** – konieczne: zestaw podstawowy
+
+**Przebieg krok po kroku**
+
+1. **Badanie wg katalogu badań** – Wykonaj badania składowe z katalogu A odpowiednie do świadczenia (formularze i szablony BAD-…). *Uwaga: Wynik każdego elementu wpisuje lekarz.*
+2. **Omówienie wyników i planu** – Przedstaw pacjentowi wyniki, rozpoznanie i plan leczenia z alternatywami; ustal termin kolejnej wizyty.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne)
+
+**Kontrola efektu:** porównanie z poprzednim badaniem
+
+**Zalecenia pozabiegowe:**  Kontrola: Wg planu.
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: pakiet ST34; pakiet ST34A
+
+- zał. 1 (wszyscy): Świadczenie jest udzielane 3 razy w roku kalendarzowym. W przypadku kobiet w ciąży i w okresie połogu świadczenie jest udzielane nie częściej niż 1 raz na kwartał.
+- zał. 2 (<18): Świadczenie jest udzielane 3 razy w roku kalendarzowym. W przypadku kobiet w ciąży i w okresie połogu świadczenie jest udzielane nie częściej niż 1 raz na kwartał.
+- zał. 2b (<18 (szkoła)): Świadczenie jest udzielane 3 razy w roku kalendarzowym. W przypadku kobiet w ciąży i w okresie połogu świadczenie jest udzielane nie częściej niż raz na kwartał.
+
+Reguły: R-BAD-02, R-ST30BC-WYK
+
+*W Opisach NFZ – pakiet ST34.*
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| Z01.2 | Badanie dentystyczne | kontrola bez rozpoznania choroby | ocena_kliniczna | tak |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Badanie kontrolne: {{POLE-KO-OCENA}}. Plan: {{POLE-DECYZJA}}.
+
+**skrocony**
+
+> Kontrola: {{POLE-KO-OCENA}}.
+
+**rozszerzony**
+
+> BADANIE KONTROLNE: {{POLE-KO-ZMIANY}}. {{POLE-PRZEBIEG}} Ocena: {{POLE-KO-OCENA}}. Plan: {{POLE-DECYZJA}}. Kolejna kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-DU-2025-615`
+
+## 23.0103 – Porada lekarska
+
+`PROC-23.0103` · **Porada lekarska** · badanie i porada · status: **draft**
+
+Porada lekarska.
+
+**Na czym polega.** Ukierunkowana konsultacja problemu zgłaszanego przez pacjenta (wywiad, badanie miejscowe, zalecenia) bez wykonywania zabiegu. **Cel:** Ocena problemu i decyzja o postępowaniu.
+
+Wskazania: dolegliwość wymagająca oceny; pytania pacjenta o leczenie
+
+**Kwalifikacja** – ocenić: aktualny wywiad. Wywiad: choroby, leki, alergie.
+
+
+
+**Przygotowanie** – konieczne: zestaw podstawowy
+
+**Przebieg krok po kroku**
+
+1. **Badanie wg katalogu badań** – Wykonaj badania składowe z katalogu A odpowiednie do świadczenia (formularze i szablony BAD-…). *Uwaga: Wynik każdego elementu wpisuje lekarz.*
+2. **Omówienie wyników i planu** – Przedstaw pacjentowi wyniki, rozpoznanie i plan leczenia z alternatywami; ustal termin kolejnej wizyty.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne)
+
+**Kontrola efektu:** udzielone zalecenia
+
+**Zalecenia pozabiegowe:**  Kontrola: Wg potrzeby.
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Problem, wynik badania miejscowego, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Porada lekarska: {{POLE-WYW-POWOD}}. Badanie: {{POLE-WYNIK}}. Zalecenia: {{POLE-ZALECENIA}}.
+
+**skrocony**
+
+> Porada: {{POLE-WYW-POWOD}} – {{POLE-ZALECENIA}}.
+
+**rozszerzony**
+
+> PORADA LEKARSKA: powód: {{POLE-WYW-POWOD}}. Wywiad: {{POLE-WYW-DOLEGLIWOSCI}}. Badanie: {{POLE-WYNIK}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Zalecenia: {{POLE-ZALECENIA}}. Plan: {{POLE-DECYZJA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.0105 – Konsultacja specjalistyczna
+
+`PROC-23.0105` · **Konsultacja specjalistyczna** · badanie i porada · status: **draft**
+
+Konsultacja specjalistyczna.
+
+**Na czym polega.** Ocena przypadku przez lekarza konsultującego na podstawie skierowania / problemu, z opinią i zaleceniami. **Cel:** Ustalenie rozpoznania i postępowania w przypadku wymagającym wiedzy specjalistycznej.
+
+Wskazania: skierowanie od innego lekarza; przypadek wymagający specjalistycznej oceny
+
+**Kwalifikacja** – ocenić: aktualny wywiad. Wywiad: choroby, leki, alergie.
+
+
+
+**Przygotowanie** – konieczne: dokumentacja / skierowanie; zestaw podstawowy
+
+**Przebieg krok po kroku**
+
+1. **Badanie wg katalogu badań** – Wykonaj badania składowe z katalogu A odpowiednie do świadczenia (formularze i szablony BAD-…). *Uwaga: Wynik każdego elementu wpisuje lekarz.*
+2. **Omówienie wyników i planu** – Przedstaw pacjentowi wyniki, rozpoznanie i plan leczenia z alternatywami; ustal termin kolejnej wizyty.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne)
+
+**Kontrola efektu:** odpowiedź na pytanie z konsultacji
+
+**Zalecenia pozabiegowe:**  Kontrola: Wg opinii.
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Opinia konsultacyjna z zaleceniami — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: pakiet ST29
+
+- zał. 1 (wszyscy): Świadczenie obejmuje badanie lekarza specjalisty z krótką pisemną oceną i wskazaniami diagnostyczno- -terapeutycznymi dla lekarza prowadzącego, bez połączenia z innymi świadczeniami gwarantowanymi.
+- zał. 2 (<18): Świadczenie obejmuje badanie lekarza specjalisty z krótką pisemną oceną i wskazaniami diagnostyczno- -terapeutycznymi dla lekarza prowadzącego, bez połączenia z innymi świadczeniami gwarantowanymi.
+- zał. 2b (<18 (szkoła)): Świadczenie obejmuje badanie lekarza specjalisty z krótką pisemną oceną i wskazaniami diagnostyczno-terapeutycznymi dla lekarza prowadzącego, bez połączenia z innymi świadczeniami gwarantowanymi.
+
+Reguły: R-KONS-01
+
+*NFZ: konsultacja nie łączy się z innymi świadczeniami (R-KONS-01).*
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| Z01.2 | Badanie dentystyczne | konsultacja bez rozpoznania choroby | ocena_kliniczna | tak |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Konsultacja specjalistyczna: problem {{POLE-WYW-POWOD}}. Badanie: {{POLE-WYNIK}}. Opinia i zalecenia: {{POLE-ZALECENIA}}.
+
+**skrocony**
+
+> Konsultacja: {{POLE-ZALECENIA}}.
+
+**rozszerzony**
+
+> KONSULTACJA SPECJALISTYCZNA: powód / skierowanie: {{POLE-WYW-POWOD}}. Badanie: {{POLE-PRZEBIEG}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Opinia: {{POLE-WYNIK}}. Zalecenia: {{POLE-ZALECENIA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.0107 – Badanie lekarskie stomatologiczne i kontrolne po urazie zęba
+
+`PROC-23.0107` · **Badanie po urazie zęba** · badanie i porada · status: **draft** · kody w Opisach NFZ: ST28
+
+Badanie lekarskie stomatologiczne i kontrolne po urazie zęba.
+
+**Na czym polega.** Badanie i kontrole po urazie wg BAD-PO-URAZIE (IADT 2020). **Cel:** Rozpoznanie urazu, leczenie doraźne, monitorowanie miazgi i przyzębia.
+
+Wskazania: uraz zęba; kontrole po urazie
+
+**Kwalifikacja** – ocenić: aktualny wywiad. Wywiad: choroby, leki, alergie.
+
+
+
+**Przygotowanie** – konieczne: zestaw podstawowy, testy żywotności, RTG
+
+**Przebieg krok po kroku**
+
+1. **Badanie wg katalogu badań** – Wykonaj badania składowe z katalogu A odpowiednie do świadczenia (formularze i szablony BAD-…). *Uwaga: Wynik każdego elementu wpisuje lekarz.*
+2. **Omówienie wyników i planu** – Przedstaw pacjentowi wyniki, rozpoznanie i plan leczenia z alternatywami; ustal termin kolejnej wizyty.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Środek do testu na zimno, elektryczny tester miazgi (typowe); Pozycjoner, czujnik / klisza, osłony (typowe)
+
+**Kontrola efektu:** klasyfikacja urazu i plan kontroli
+
+**Zalecenia pozabiegowe:** Kontakt z gabinetem, gdy: ból, obrzęk, przebarwienie zęba, ruchomość. Kontrola: Wg IADT – zależnie od rodzaju urazu.
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Okoliczności, rodzaj urazu, plan kontroli — *zalecenie kliniczne* (`SRC-KLIN-IADT-OG-2020` (PMID 32472740))
+
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: pakiet ST28
+
+- zał. 1 (wszyscy): Świadczenie jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia. Świadczenie obejmuje jednorazowe badanie lekarskie stomatologiczne po urazie zęba wraz z instruktażem higieny jamy ustnej, w połączeniu ze świadczeniami stomatologicznymi związanymi z udzieleniem pomocy medycznej pourazowej, oraz badanie lekarskie kontrolne związane z urazem zęba, wykonywane do 3 razy w ciągu pierwszych 6 miesięcy od urazu, z wpisaniem opisu do dokumentacji medycznej. 3) leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 3 kanałów; 4) leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA – inne. 23.13143 23.13149
+- zał. 2 (<18): Świadczenie jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia. Świadczenie obejmuje jednorazowe badanie lekarskie stomatologiczne po urazie zęba wraz z instruktażem higieny jamy ustnej, w połączeniu ze świadczeniami stomatologicznymi związanymi z udzieleniem pomocy medycznej pourazowej, oraz badanie lekarskie kontrolne związane z urazem zęba, wykonywane do 3 razy w ciągu pierwszych 6 miesięcy od urazu, z wpisaniem opisu do dokumentacji medycznej.
+- zał. 2b (<18 (szkoła)): Świadczenie obejmuje jednorazowe badanie lekarskie stomatologiczne po urazie wraz z instruktażem higieny jamy ustnej, w połączeniu ze świadczeniami stomatologicznymi związanymi z udzieleniem pomocy medycznej pourazowej, oraz badanie lekarskie kontrolne związane z urazem zęba, wykonywane do 3 razy w okresie pierwszych 6 miesięcy od urazu, z wpisaniem opisu do dokumentacji medycznej.
+
+*W Opisach NFZ – pakiet ST28.*
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| S02.5 | Złamanie zęba | złamanie zęba | ocena_kliniczna | nie |
+| S03.2 | Zwichnięcie zęba | zwichnięcie zęba | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Okoliczności urazu i zęby objęte urazem — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Badanie po urazie: {{POLE-UR-OKOLICZNOSCI}}. Zęby {{POLE-ZEBY}}: {{POLE-UR-RODZAJ}}. Plan kontroli: {{POLE-UR-PLAN}}.
+
+**skrocony**
+
+> Uraz {{POLE-ZEBY}}: {{POLE-UR-RODZAJ}}.
+
+**rozszerzony**
+
+> BADANIE PO URAZIE: {{POLE-PRZEBIEG}} Rozpoznanie: {{POLE-ROZPOZNANIE}}. Plan kontroli: {{POLE-UR-PLAN}}. Zalecenia: {{POLE-ZALECENIA}}.
+
+**Źródła kliniczne:** `SRC-KLIN-IADT-OG-2020` (PMID 32472740); `SRC-KLIN-IADT-ZLAM-2020` (PMID 32475015)
+
+## 23.02 – Badanie żywotności zęba
+
+`PROC-23.02` · **Badanie żywotności zęba** · diagnostyka · status: **draft**
+
+Badanie żywotności zęba.
+
+**Na czym polega.** Testy miazgowe i okołowierzchołkowe wg BAD-ZYWOTNOSC. **Cel:** Ocena stanu miazgi i tkanek okołowierzchołkowych.
+
+Wskazania: ból zęba; kwalifikacja do leczenia; kontrola po urazie / pokryciu miazgi
+
+**Kwalifikacja** – ocenić: aktualny wywiad. Wywiad: choroby, leki, alergie.
+
+
+
+**Przygotowanie** – konieczne: środek do testu na zimno
+
+**Przebieg krok po kroku**
+
+1. **Badanie wg katalogu badań** – Wykonaj badania składowe z katalogu A odpowiednie do świadczenia (formularze i szablony BAD-…). *Uwaga: Wynik każdego elementu wpisuje lekarz.*
+
+**Materiały i narzędzia:** Środek do testu na zimno, elektryczny tester miazgi (konieczne); Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne)
+
+**Kontrola efektu:** porównanie z zębem kontrolnym
+
+**Zalecenia pozabiegowe:** 
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: pakiet ST28
+
+- zał. 1 (wszyscy): Świadczenie obejmuje badanie żywotności zęba z objęciem badaniem 3 zębów sąsiednich lub przeciwstawnych.
+- zał. 2 (<18): Świadczenie obejmuje badanie żywotności zęba z objęciem badaniem 3 zębów sąsiednich lub przeciwstawnych.
+- zał. 2b (<18 (szkoła)): Świadczenie obejmuje badanie żywotności zęba z objęciem badaniem 3 zębów sąsiednich lub przeciwstawnych.
+
+Reguły: R-ZYW-01
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K04.0 | Zapalenie miazgi | zapalenie miazgi – rozpoznanie lekarza | ocena_kliniczna | tak |
+| K04.1 | Martwica miazgi | martwica miazgi | ocena_kliniczna | tak |
+| K02.1 | Próchnica zębiny | próchnica zębiny – kwalifikacja | ocena_kliniczna | tak |
+| S02.5 | Złamanie zęba | uraz – kontrola żywotności | ocena_kliniczna | tak |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Badanie żywotności zęba {{POLE-ZAB}}: zimno {{POLE-ZY-ZIMNO}}, opukiwanie {{POLE-ZY-OPUK}}. Ocena: {{POLE-ZY-OCENA}}.
+
+**skrocony**
+
+> Żywotność {{POLE-ZAB}}: {{POLE-ZY-ZIMNO}}.
+
+**rozszerzony**
+
+> BADANIE ŻYWOTNOŚCI zęba {{POLE-ZAB}}: zimno {{POLE-ZY-ZIMNO}}; EPT {{POLE-ZY-EPT}}; opukiwanie {{POLE-ZY-OPUK}}; palpacja {{POLE-ZY-PALP}}; ząb kontrolny {{POLE-ZY-KONTROLA}}. Ocena: {{POLE-ZY-OCENA}}.
+
+**Źródła kliniczne:** `SRC-KLIN-ESE-S3-2023` (PMID 37772327)
+
+## 23.0301 – Rentgenodiagnostyka do 2 zdjęć wewnątrzustnych
+
+`PROC-23.0301` · **RTG – do 2 zdjęć wewnątrzustnych** · radiologia · status: **draft**
+
+Rentgenodiagnostyka – do 2 zdjęć wewnątrzustnych.
+
+**Na czym polega.** Wykonanie i opis do 2 zdjęć wewnątrzustnych. **Cel:** Diagnostyka zmian niewidocznych klinicznie.
+
+Wskazania: próchnica styczna; endodoncja; zmiany okołowierzchołkowe; przed ekstrakcją
+
+**Kwalifikacja** – ocenić: uzasadnienie wykonania; poprzednie zdjęcia (unikanie powtórzeń). Wywiad: ciąża.
+
+- przeciwwskazanie *wzgledne*: ciąża – tylko przy pilnym wskazaniu
+
+**Przygotowanie** – konieczne: aparat RTG / pantomograf; pozycjoner / osłony wg procedur
+
+**Przebieg krok po kroku**
+
+1. **Wykonanie zdjęcia RTG** – Uzasadnienie, ochrona pacjenta wg procedur pracowni, ustawienie czujnika / kliszy z pozycjonerem, ekspozycja. *Uwaga: Wywiad w kierunku ciąży u kobiet w wieku rozrodczym.*
+2. **Opis zdjęcia RTG** – Opis zdjęcia w dokumentacji (warunek rozliczenia NFZ) – wg badania BAD-RTG.
+
+**Materiały i narzędzia:** Aparat RTG / czujnik, pozycjoner (konieczne); Pozycjoner, czujnik / klisza, osłony (konieczne)
+
+**Kontrola efektu:** jakość zdjęcia (obejmuje okolicę, bez zniekształceń). Dalej: powtórzenie tylko przy niediagnostycznym zdjęciu
+
+**Zalecenia pozabiegowe:** 
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Opis zdjęcia w dokumentacji — *NFZ*, warunek: rozliczenie NFZ (`SRC-DU-2025-615`)
+
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: 5.13.00.2303010 – 20 pkt (zał. 1b)
+
+- zał. 1 (wszyscy): Świadczenie obejmuje wykonanie techniczne zdjęcia. Świadczenie jest udzielane do 2 zdjęć wewnątrzustnych w roku kalendarzowym w połączeniu z innymi świadczeniami gwarantowanymi z wpisaniem opisu do dokumentacji medycznej.
+- zał. 2 (<18): Świadczenie obejmuje wykonanie techniczne zdjęcia. Świadczenie jest udzielane do 2 zdjęć wewnątrzustnych w roku kalendarzowym w połączeniu z innymi świadczeniami gwarantowanymi z wpisaniem opisu do dokumentacji medycznej.
+- zał. 2b (<18 (szkoła)): Świadczenie obejmuje wykonanie techniczne zdjęcia. Świadczenie jest udzielane do 2 zdjęć wewnątrzustnych w roku kalendarzowym w połączeniu z innymi świadczeniami gwarantowanymi z wpisaniem opisu do dokumentacji medycznej. Wyposażenie niezbędne do realizacji świadczenia: aparat RTG do zdjęć zębowych lub radiowizjografia w lokalizacji lub w dostępie.
+
+Reguły: R-RTG-01, R-RTG-02
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Opis zdjęcia — *NFZ*
+- [zalecane] Uzasadnienie wykonania — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> RTG {{POLE-RTG-RODZAJ}} ({{POLE-ZEBY}}). Wskazanie: {{POLE-RTG-WSKAZANIE}}. Opis: {{POLE-RTG-OPIS}}.
+
+**skrocony**
+
+> RTG {{POLE-ZEBY}}: {{POLE-RTG-OPIS}}.
+
+**rozszerzony**
+
+> RTG {{POLE-RTG-RODZAJ}} z dnia {{POLE-DATA}}, okolica {{POLE-ZEBY}}. Wskazanie: {{POLE-RTG-WSKAZANIE}}. Opis: {{POLE-RTG-OPIS}}. Wnioski: {{POLE-DECYZJA}}.
+
+**Źródła kliniczne:** `SRC-DU-2025-615`; `SRC-PRAKTYKA`
+
+## 23.0302 – Rentgenodiagnostyka do 5 zdjęć wewnątrzustnych
+
+`PROC-23.0302` · **RTG – do 5 zdjęć wewnątrzustnych** · radiologia · status: **draft**
+
+Rentgenodiagnostyka – do 5 zdjęć wewnątrzustnych.
+
+**Na czym polega.** Wykonanie i opis do 5 zdjęć wewnątrzustnych. **Cel:** Diagnostyka zmian niewidocznych klinicznie.
+
+Wskazania: próchnica styczna; endodoncja; zmiany okołowierzchołkowe; przed ekstrakcją
+
+**Kwalifikacja** – ocenić: uzasadnienie wykonania; poprzednie zdjęcia (unikanie powtórzeń). Wywiad: ciąża.
+
+- przeciwwskazanie *wzgledne*: ciąża – tylko przy pilnym wskazaniu
+
+**Przygotowanie** – konieczne: aparat RTG / pantomograf; pozycjoner / osłony wg procedur
+
+**Przebieg krok po kroku**
+
+1. **Wykonanie zdjęcia RTG** – Uzasadnienie, ochrona pacjenta wg procedur pracowni, ustawienie czujnika / kliszy z pozycjonerem, ekspozycja. *Uwaga: Wywiad w kierunku ciąży u kobiet w wieku rozrodczym.*
+2. **Opis zdjęcia RTG** – Opis zdjęcia w dokumentacji (warunek rozliczenia NFZ) – wg badania BAD-RTG.
+
+**Materiały i narzędzia:** Aparat RTG / czujnik, pozycjoner (konieczne); Pozycjoner, czujnik / klisza, osłony (konieczne)
+
+**Kontrola efektu:** jakość zdjęcia (obejmuje okolicę, bez zniekształceń). Dalej: powtórzenie tylko przy niediagnostycznym zdjęciu
+
+**Zalecenia pozabiegowe:** 
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Opis zdjęcia w dokumentacji — *NFZ*, warunek: rozliczenie NFZ (`SRC-DU-2025-615`)
+
+**NFZ** – świadczenie gwarantowane: **tak**
+
+- zał. 1 (wszyscy): Świadczenie jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia. Świadczenie obejmuje wykonanie techniczne zdjęcia. Świadczenie obejmuje wykonanie do 5 zdjęć wewnątrzustnych w roku kalendarzowym wraz z przygotowaniem opisu badań oraz wpisaniem opisu zdjęć w dokumentację medyczną pacjenta. Świadczenie jest realizowane w połączeniu ze świadczeniami gwarantowanymi o kodzie ICD-9 23.01 wraz z rozszerzeniami oraz 23.13 wraz z rozszerzeniami. Lekarz kierujący na badanie ma obowiązek uzasadnić w treści skierowania konieczność wykonania badania, w tym liczbę zdjęć. Wyposażenie niezbędne do realizacji świadczenia: aparat RTG do zdjęć zębowych lub radiowizjografia w lokalizacji lub w dostępie.
+- zał. 2 (<18): Świadczenie jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia. Świadczenie obejmuje wykonanie techniczne zdjęcia. Świadczenie obejmuje wykonanie do 5 zdjęć wewnątrzustnych w roku kalendarzowym wraz z przygotowaniem opisu badań oraz wpisaniem opisu zdjęć w dokumentację medyczną pacjenta. Świadczenie jest realizowane w połączeniu ze świadczeniami gwarantowanymi o kodzie ICD-9 23.01 wraz z rozszerzeniami oraz 23.13 wraz z rozszerzeniami. Lekarz kierujący na badanie ma obowiązek uzasadnić w treści skierowania konieczność wykonania badania, w tym liczbę zdjęć. Wyposażenie niezbędne do realizacji świadczenia: aparat RTG do zdjęć zębowych lub radiowizjografia w lokalizacji lub w dostępie.
+- zał. 2b (<18 (szkoła)): Świadczenie obejmuje wykonanie techniczne zdjęcia. Świadczenie obejmuje wykonanie do 5 zdjęć wewnątrzustnych w roku kalendarzowym wraz z przygotowaniem opisu badań oraz wpisaniem opisu zdjęć do dokumentacji medycznej pacjenta. Świadczenie jest realizowane w połączeniu ze świadczeniami gwarantowanymi o kodzie ICD-9 23.01 wraz z rozszerzeniami oraz 23.13 wraz z rozszerzeniami. Lekarz kierujący na badanie ma obowiązek uzasadnić w treści skierowania konieczność wykonania badania, w tym liczbę zdjęć. Wyposażenie niezbędne do realizacji świadczenia: aparat RTG do zdjęć zębowych lub radiowizjografia w lokalizacji lub w dostępie.
+
+Reguły: R-RTG-02
+
+Źródła NFZ: `SRC-DU-2025-615`
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Opis zdjęcia — *NFZ*
+- [zalecane] Uzasadnienie wykonania — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> RTG {{POLE-RTG-RODZAJ}} ({{POLE-ZEBY}}). Wskazanie: {{POLE-RTG-WSKAZANIE}}. Opis: {{POLE-RTG-OPIS}}.
+
+**skrocony**
+
+> RTG {{POLE-ZEBY}}: {{POLE-RTG-OPIS}}.
+
+**rozszerzony**
+
+> RTG {{POLE-RTG-RODZAJ}} z dnia {{POLE-DATA}}, okolica {{POLE-ZEBY}}. Wskazanie: {{POLE-RTG-WSKAZANIE}}. Opis: {{POLE-RTG-OPIS}}. Wnioski: {{POLE-DECYZJA}}.
+
+**Źródła kliniczne:** `SRC-DU-2025-615`; `SRC-PRAKTYKA`
+
+## 23.0304 – Rentgenodiagnostyka - zdjęcie pantomograficzne z opisem
+
+`PROC-23.0304` · **Pantomogram z opisem** · radiologia · status: **draft**
+
+Rentgenodiagnostyka – zdjęcia pantomograficznego.
+
+**Na czym polega.** Wykonanie i opis zdjęcia pantomograficznego. **Cel:** Diagnostyka zmian niewidocznych klinicznie.
+
+Wskazania: endodoncja (dorośli); przed leczeniem protetycznym; zęby zatrzymane, ocena rozwoju uzębienia u dzieci
+
+**Kwalifikacja** – ocenić: uzasadnienie wykonania; poprzednie zdjęcia (unikanie powtórzeń). Wywiad: ciąża.
+
+- przeciwwskazanie *wzgledne*: ciąża – tylko przy pilnym wskazaniu
+
+**Przygotowanie** – konieczne: aparat RTG / pantomograf; pozycjoner / osłony wg procedur
+
+**Przebieg krok po kroku**
+
+1. **Wykonanie zdjęcia RTG** – Uzasadnienie, ochrona pacjenta wg procedur pracowni, ustawienie czujnika / kliszy z pozycjonerem, ekspozycja. *Uwaga: Wywiad w kierunku ciąży u kobiet w wieku rozrodczym.*
+2. **Opis zdjęcia RTG** – Opis zdjęcia w dokumentacji (warunek rozliczenia NFZ) – wg badania BAD-RTG.
+
+**Materiały i narzędzia:** Pantomograf (konieczne); Pozycjoner, czujnik / klisza, osłony (konieczne)
+
+**Kontrola efektu:** jakość zdjęcia (obejmuje okolicę, bez zniekształceń). Dalej: powtórzenie tylko przy niediagnostycznym zdjęciu
+
+**Zalecenia pozabiegowe:** 
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Opis zdjęcia w dokumentacji — *NFZ*, warunek: rozliczenie NFZ (`SRC-DU-2025-615`)
+
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: 5.13.00.2303040 – 74 pkt (zał. 1b)
+
+- zał. 1 (wszyscy): W przypadku: 1) osób dorosłych świadczenie jest udzielane na potrzeby leczenia endodontycznego oraz w przypadku wszystkich świadczeniobiorców przed rozpoczęciem udzielania świadczeń protetyki stomatologicznej. Świadczenie jest udzielane 1 raz na 5 lat w połączeniu ze świadczeniami gwarantowanymi z zakresu leczenia stomatologicznego; 2) dzieci i młodzieży od 5. do ukończenia 18. roku życia świadczenie jest udzielane w uzasadnionych medycznie przypadkach przy podejrzeniu nieprawidłowości rozwojowych zębów, zmian chorobowych w obrębie kości szczęk lub zapalenia przyzębia lub w diagnostyce ognisk infekcji zębo- i niezębopochodnych. Świadczenie jest udzielane 1 raz na 3 lata w połączeniu ze świadczeniami gwarantowanymi z zakresu leczenia stomatologicznego. Świadczenie obejmuje wykonanie techniczne zdjęcia wraz z przygotowaniem opisu badania oraz wpisaniem opisu zdjęcia w dokumentację medyczną pacjenta. Skierowanie wystawia lekarz dentysta posiadający specjalizację lub lekarz dentysta w trakcie szkolenia specjalizacyjnego. Lekarz kierujący na badanie ma obowiązek uzasadnić w treści skierowania konieczność wykonania badania. Wyposażenie niezbędne do realizacji świadczenia: aparat RTG do zdjęć zębowych lub radiowizjografia w lokalizacji lub dostępie.
+- zał. 2 (<18): Świadczenie jest udzielane dzieciom i młodzieży od 5. do ukończenia 18. roku życia w uzasadnionych medycznie przypadkach przy podejrzeniu nieprawidłowości rozwojowych zębów, zmian chorobowych w obrębie kości szczęk lub zapalenia przyzębia, diagnostyce ognisk infekcji zębo- i niezębopochodnych. Świadczenie obejmuje wykonanie techniczne zdjęcia wraz z przygotowaniem opisu badania oraz wpisaniem opisu zdjęcia w dokumentację medyczną pacjenta. Świadczenie jest udzielane 1 raz na 3 lata w połączeniu ze świadczeniami gwarantowanymi z zakresu stomatologii. Skierowanie wystawia lekarz dentysta posiadający specjalizację lub lekarz dentysta w trakcie szkolenia specjalizacyjnego. Lekarz kierujący na badanie ma obowiązek uzasadnić w treści skierowania konieczność wykonania badania. Wyposażenie niezbędne do realizacji świadczenia: aparat RTG do zdjęć zębowych lub radiowizjografia w lokalizacji lub w dostępie.
+- zał. 2b (<18 (szkoła)): Świadczenie jest udzielane dzieciom i młodzieży od 5. do ukończenia 18. roku życia w uzasadnionych medycznie przypadkach przy podejrzeniu nieprawidłowości rozwojowych zębów, zmian chorobowych w obrębie kości szczęk lub zapalenia przyzębia, lub diagnostyce ognisk infekcji zębo- i niezębopochodnych. Świadczenie obejmuje wykonanie techniczne zdjęcia wraz z przygotowaniem opisu badań oraz wpisaniem opisu zdjęcia do dokumentacji medycznej pacjenta. Świadczenie jest udzielane 1 raz na 3 lata w połączeniu ze świadczeniami gwarantowanymi z zakresu stomatologii. Skierowanie wystawia lekarz dentysta posiadający specjalizację lub lekarz dentysta w trakcie szkolenia specjalizacyjnego. Lekarz kierujący na badanie ma obowiązek uzasadnić w treści skierowania konieczność wykonania badania. Wyposażenie niezbędne do realizacji świadczenia: aparat RTG do zdjęć zębowych lub radiowizjografia w lokalizacji lub w dostępie.
+
+Reguły: R-RTG-02, R-RTG-03
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Opis zdjęcia — *NFZ*
+- [zalecane] Uzasadnienie wykonania — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> RTG {{POLE-RTG-RODZAJ}} ({{POLE-ZEBY}}). Wskazanie: {{POLE-RTG-WSKAZANIE}}. Opis: {{POLE-RTG-OPIS}}.
+
+**skrocony**
+
+> RTG {{POLE-ZEBY}}: {{POLE-RTG-OPIS}}.
+
+**rozszerzony**
+
+> RTG {{POLE-RTG-RODZAJ}} z dnia {{POLE-DATA}}, okolica {{POLE-ZEBY}}. Wskazanie: {{POLE-RTG-WSKAZANIE}}. Opis: {{POLE-RTG-OPIS}}. Wnioski: {{POLE-DECYZJA}}.
+
+**Źródła kliniczne:** `SRC-DU-2025-615`; `SRC-PRAKTYKA`
+
+## 23.0401 – Znieczulenie miejscowe powierzchniowe
+
+`PROC-23.0401` · **Znieczulenie powierzchniowe** · znieczulenie · status: **draft** · kody w Opisach NFZ: 0401
+
+Znieczulenie miejscowe powierzchniowe.
+
+**Na czym polega.** Znieczulenie miejscowe powierzchniowe. Podanie środka znieczulającego przed zabiegiem. **Cel:** Bezbolesne przeprowadzenie zabiegu.
+
+Wskazania: zabiegi bolesne (wypełnienia głębokie, endodoncja, ekstrakcje, kiretaż)
+
+**Kwalifikacja** – ocenić: masa ciała (dzieci) – dawka maksymalna; choroby ogólne, ciąża. Wywiad: alergie na środki znieczulające; wcześniejsze reakcje; leki.
+
+- przeciwwskazanie *bezwzgledne*: potwierdzona alergia na dany środek
+- przeciwwskazanie *wzgledne*: choroby, przy których ograniczamy środek obkurczający naczynia
+
+**Przygotowanie** – konieczne: środek znieczulający, strzykawka z aspiracją, igła; opcjonalne: znieczulenie powierzchniowe miejsca wkłucia
+
+**Przebieg krok po kroku**
+
+1. **Aktualizacja wywiadu, informacja i zgoda** – Sprawdź aktualny wywiad (leki, alergie, ciąża), przedstaw rozpoznanie, plan, alternatywy i ryzyka; uzyskaj zgodę pacjenta. *Uwaga: Szczegóły: badanie BAD-PRZED-LECZENIEM.*
+2. **Znieczulenie powierzchniowe** – Osuszenie błony śluzowej, aplikacja preparatu (żel / aerozol) na ograniczony obszar, odczekanie czasu działania. *Uwaga: Uwaga na dawkę i połknięcie preparatu u dzieci.*
+3. **Obserwacja po znieczuleniu** – Obserwacja pacjenta (bladość, kołatanie, reakcja alergiczna); ocena skuteczności przed zabiegiem.
+
+**Materiały i narzędzia:** Strzykawka, igła, środek znieczulający miejscowo (konieczne); Środek do znieczulenia powierzchniowego (konieczne)
+
+**Kontrola efektu:** skuteczność znieczulenia; stan ogólny pacjenta. Nieprawidłowości: brak znieczulenia; omdlenie; reakcja alergiczna; krwiak. Dalej: postępowanie w nagłych przypadkach wg procedur gabinetu
+
+**Zalecenia pozabiegowe:** Pacjent: Nie jeść do ustąpienia znieczulenia; uważać na przygryzienie warg / policzków (dzieci – nadzór opiekuna).. Kontakt z gabinetem, gdy: przedłużone drętwienie (> doba).
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Preparat, dawka, miejsce podania — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: 5.13.00.2304010 – 3 pkt (zał. 1b)
+
+- zał. 1 (wszyscy): Świadczenie jest udzielane jako samodzielne znieczulenie w połączeniu z innymi świadczeniami gwarantowanymi.
+- zał. 2 (<18): Świadczenie jest udzielane jako samodzielne znieczulenie w połączeniu z innymi świadczeniami gwarantowanymi.
+- zał. 2b (<18 (szkoła)): Świadczenie jest udzielane jako samodzielne znieczulenie w połączeniu z innymi świadczeniami gwarantowanymi.
+
+Reguły: R-ZNI-01, R-ZNI-02
+
+*R-ZNI-01: tylko z innym świadczeniem; R-ZNI-02: przy ST01/ST02/ST04 wliczone w pakiet (decyzja Patryka).*
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [zalecane] Preparat i dawka — *zalecenie kliniczne*
+- [rozliczeniowe] Świadczenie, któremu towarzyszy znieczulenie — *NFZ*, R-ZNI-01 – nie jako jedyne świadczenie
+
+**Szablony opisu**
+
+**standardowy**
+
+> Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}, okolica {{POLE-ZNIECZ-MIEJSCE}}.
+
+**skrocony**
+
+> Znieczulenie {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}.
+
+**rozszerzony**
+
+> Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}}, dawka {{POLE-ZNIECZ-DAWKA}}, miejsce {{POLE-ZNIECZ-MIEJSCE}}. Aspiracja wykonana. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.0402 – Znieczulenie miejscowe nasiękowe
+
+`PROC-23.0402` · **Znieczulenie nasiękowe** · znieczulenie · status: **draft** · kody w Opisach NFZ: 0402
+
+Znieczulenie miejscowe nasiękowe.
+
+**Na czym polega.** Znieczulenie miejscowe nasiękowe. Podanie środka znieczulającego przed zabiegiem. **Cel:** Bezbolesne przeprowadzenie zabiegu.
+
+Wskazania: zabiegi bolesne (wypełnienia głębokie, endodoncja, ekstrakcje, kiretaż)
+
+**Kwalifikacja** – ocenić: masa ciała (dzieci) – dawka maksymalna; choroby ogólne, ciąża. Wywiad: alergie na środki znieczulające; wcześniejsze reakcje; leki.
+
+- przeciwwskazanie *bezwzgledne*: potwierdzona alergia na dany środek
+- przeciwwskazanie *wzgledne*: choroby, przy których ograniczamy środek obkurczający naczynia
+
+**Przygotowanie** – konieczne: środek znieczulający, strzykawka z aspiracją, igła; opcjonalne: znieczulenie powierzchniowe miejsca wkłucia
+
+**Przebieg krok po kroku**
+
+1. **Aktualizacja wywiadu, informacja i zgoda** – Sprawdź aktualny wywiad (leki, alergie, ciąża), przedstaw rozpoznanie, plan, alternatywy i ryzyka; uzyskaj zgodę pacjenta. *Uwaga: Szczegóły: badanie BAD-PRZED-LECZENIEM.*
+2. **Znieczulenie nasiękowe** – Wkłucie w fałd przejściowy w okolicy wierzchołka zęba, aspiracja, powolne podanie; ewentualnie uzupełniająco od strony podniebiennej / językowej.
+3. **Obserwacja po znieczuleniu** – Obserwacja pacjenta (bladość, kołatanie, reakcja alergiczna); ocena skuteczności przed zabiegiem.
+
+**Materiały i narzędzia:** Strzykawka, igła, środek znieczulający miejscowo (konieczne); Środek do znieczulenia powierzchniowego (sytuacyjne)
+
+**Kontrola efektu:** skuteczność znieczulenia; stan ogólny pacjenta. Nieprawidłowości: brak znieczulenia; omdlenie; reakcja alergiczna; krwiak. Dalej: postępowanie w nagłych przypadkach wg procedur gabinetu
+
+**Zalecenia pozabiegowe:** Pacjent: Nie jeść do ustąpienia znieczulenia; uważać na przygryzienie warg / policzków (dzieci – nadzór opiekuna).. Kontakt z gabinetem, gdy: przedłużone drętwienie (> doba).
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Preparat, dawka, miejsce podania — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: 5.13.00.2304020 – 12 pkt (zał. 1b)
+
+- zał. 1 (wszyscy): Świadczenie jest udzielane w połączeniu z innymi świadczeniami gwarantowanymi.
+- zał. 2 (<18): Świadczenie jest udzielane w połączeniu z innymi świadczeniami gwarantowanymi.
+- zał. 2b (<18 (szkoła)): Świadczenie jest udzielane w połączeniu z innymi świadczeniami gwarantowanymi.
+
+Reguły: R-ZNI-01, R-ZNI-02
+
+*R-ZNI-01: tylko z innym świadczeniem; R-ZNI-02: przy ST01/ST02/ST04 wliczone w pakiet (decyzja Patryka).*
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [zalecane] Preparat i dawka — *zalecenie kliniczne*
+- [rozliczeniowe] Świadczenie, któremu towarzyszy znieczulenie — *NFZ*, R-ZNI-01 – nie jako jedyne świadczenie
+
+**Szablony opisu**
+
+**standardowy**
+
+> Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}, okolica {{POLE-ZNIECZ-MIEJSCE}}.
+
+**skrocony**
+
+> Znieczulenie {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}.
+
+**rozszerzony**
+
+> Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}}, dawka {{POLE-ZNIECZ-DAWKA}}, miejsce {{POLE-ZNIECZ-MIEJSCE}}. Aspiracja wykonana. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.0403 – Znieczulenie przewodowe wewnątrzustne
+
+`PROC-23.0403` · **Znieczulenie przewodowe wewnątrzustne** · znieczulenie · status: **draft** · kody w Opisach NFZ: 0403
+
+Znieczulenie przewodowe wewnątrzustne.
+
+**Na czym polega.** Znieczulenie przewodowe wewnątrzustne. Podanie środka znieczulającego przed zabiegiem. **Cel:** Bezbolesne przeprowadzenie zabiegu.
+
+Wskazania: zabiegi bolesne (wypełnienia głębokie, endodoncja, ekstrakcje, kiretaż)
+
+**Kwalifikacja** – ocenić: masa ciała (dzieci) – dawka maksymalna; choroby ogólne, ciąża. Wywiad: alergie na środki znieczulające; wcześniejsze reakcje; leki.
+
+- przeciwwskazanie *bezwzgledne*: potwierdzona alergia na dany środek
+- przeciwwskazanie *wzgledne*: choroby, przy których ograniczamy środek obkurczający naczynia
+
+**Przygotowanie** – konieczne: środek znieczulający, strzykawka z aspiracją, igła; opcjonalne: znieczulenie powierzchniowe miejsca wkłucia
+
+**Przebieg krok po kroku**
+
+1. **Aktualizacja wywiadu, informacja i zgoda** – Sprawdź aktualny wywiad (leki, alergie, ciąża), przedstaw rozpoznanie, plan, alternatywy i ryzyka; uzyskaj zgodę pacjenta. *Uwaga: Szczegóły: badanie BAD-PRZED-LECZENIEM.*
+2. **Znieczulenie przewodowe wewnątrzustne** – Np. blokada nerwu zębodołowego dolnego: lokalizacja punktów orientacyjnych, wkłucie, aspiracja (obowiązkowo), powolne podanie, ocena objawów znieczulenia. *Uwaga: Ryzyko podania donaczyniowego i uszkodzenia nerwu – aspiracja, powolne podawanie.*
+3. **Obserwacja po znieczuleniu** – Obserwacja pacjenta (bladość, kołatanie, reakcja alergiczna); ocena skuteczności przed zabiegiem.
+
+**Materiały i narzędzia:** Strzykawka, igła, środek znieczulający miejscowo (konieczne); Środek do znieczulenia powierzchniowego (sytuacyjne)
+
+**Kontrola efektu:** skuteczność znieczulenia; stan ogólny pacjenta. Nieprawidłowości: brak znieczulenia; omdlenie; reakcja alergiczna; krwiak. Dalej: postępowanie w nagłych przypadkach wg procedur gabinetu
+
+**Zalecenia pozabiegowe:** Pacjent: Nie jeść do ustąpienia znieczulenia; uważać na przygryzienie warg / policzków (dzieci – nadzór opiekuna).. Kontakt z gabinetem, gdy: przedłużone drętwienie (> doba).
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Preparat, dawka, miejsce podania — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: 5.13.00.2304030 – 20 pkt (zał. 1b)
+
+- zał. 1 (wszyscy): Świadczenie jest udzielane w połączeniu z innymi świadczeniami gwarantowanymi.
+- zał. 2 (<18): Świadczenie jest udzielane w połączeniu z innymi świadczeniami gwarantowanymi.
+- zał. 2b (<18 (szkoła)): Świadczenie jest udzielane w połączeniu z innymi świadczeniami gwarantowanymi.
+
+Reguły: R-ZNI-01, R-ZNI-02
+
+*R-ZNI-01: tylko z innym świadczeniem; R-ZNI-02: przy ST01/ST02/ST04 wliczone w pakiet (decyzja Patryka).*
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [zalecane] Preparat i dawka — *zalecenie kliniczne*
+- [rozliczeniowe] Świadczenie, któremu towarzyszy znieczulenie — *NFZ*, R-ZNI-01 – nie jako jedyne świadczenie
+
+**Szablony opisu**
+
+**standardowy**
+
+> Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}, okolica {{POLE-ZNIECZ-MIEJSCE}}.
+
+**skrocony**
+
+> Znieczulenie {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}.
+
+**rozszerzony**
+
+> Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}}, dawka {{POLE-ZNIECZ-DAWKA}}, miejsce {{POLE-ZNIECZ-MIEJSCE}}. Aspiracja wykonana. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.08 – Instruktaż higieny jamy ustnej
+
+`PROC-23.08` · **Instruktaż higieny jamy ustnej** · profilaktyka · status: **draft**
+
+Instruktaż higieny jamy ustnej.
+
+**Na czym polega.** Indywidualny instruktaż higieny z oceną płytki i demonstracją techniki. **Cel:** Poprawa higieny i profilaktyka próchnicy oraz chorób przyzębia.
+
+Wskazania: niedostateczna higiena; leczenie ortodontyczne / protetyczne; zapalenie dziąseł / przyzębia
+
+**Kwalifikacja** – ocenić: aktualny wywiad. Wywiad: choroby, leki, alergie.
+
+
+
+**Przygotowanie** – konieczne: model / lusterko, przybory higieniczne; opcjonalne: płyn wybarwiający płytkę
+
+**Przebieg krok po kroku**
+
+1. **Badanie wg katalogu badań** – Wykonaj badania składowe z katalogu A odpowiednie do świadczenia (formularze i szablony BAD-…). *Uwaga: Wynik każdego elementu wpisuje lekarz.*
+2. **Instruktaż higieny jamy ustnej** – Pokaż i omów technikę szczotkowania i oczyszczania przestrzeni międzyzębowych, przybory, stosowanie fluorków; dostosuj do wieku i potrzeb (aparat, protezy).
+
+**Materiały i narzędzia:** Szczoteczka / gumka profilaktyczna, pasta profilaktyczna (typowe)
+
+**Kontrola efektu:** zrozumienie techniki (pokaz przez pacjenta)
+
+**Zalecenia pozabiegowe:** Higiena: Zalecana technika i przybory wg instruktażu.. Kontrola: Ocena wskaźnika płytki na kolejnej wizycie.
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Wskaźnik płytki i zakres instruktażu — *zalecenie kliniczne* (`SRC-KLIN-PCR-1972` (PMID 4500182))
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Instruktaż jest też składnikiem 23.0101 (ST33). Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K03.6 | Osady na zębach (złogi) | złogi nazębne | ocena_kliniczna | nie |
+| K05.1 | Przewlekłe zapalenie dziąseł | przewlekłe zapalenie dziąseł | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Instruktaż higieny jamy ustnej: {{POLE-HG-INSTR-OPIS}}. Wskaźnik płytki: {{POLE-HG-WARTOSC}}%.
+
+**skrocony**
+
+> Instruktaż higieny: {{POLE-HG-INSTR-OPIS}}.
+
+**rozszerzony**
+
+> INSTRUKTAŻ HIGIENY: {{POLE-HG-WSKAZNIK}} {{POLE-HG-WARTOSC}}%. Zakres: {{POLE-HG-INSTR-OPIS}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-KLIN-PCR-1972` (PMID 4500182); `SRC-KLIN-EAPD-F-2019` (PMID 31631242)
+
+## 23.1003 – Zabezpieczenie profilaktyczne bruzd lakiem szczelinowym - za każdy ząb
+
+`PROC-23.1003` · **Lakowanie bruzd (ząb)** · profilaktyka · status: **draft**
+
+Zabezpieczenie profilaktyczne bruzd lakiem szczelinowym – za każdy ząb.
+
+**Na czym polega.** Uszczelnienie bruzd i dołków lakiem. **Cel:** Zapobieganie próchnicy bruzd.
+
+Wskazania: zęby trzonowe (i przedtrzonowe) z głębokimi bruzdami u dzieci i młodzieży; początkowe zmiany próchnicowe w bruzdach (bez ubytku)
+
+**Kwalifikacja** – ocenić: całkowite wyrznięcie zęba; brak ubytku w zębinie; możliwość izolacji. Wywiad: ryzyko próchnicy.
+
+- przeciwwskazanie *bezwzgledne*: ubytek w zębinie – wskazana odbudowa
+- przeciwwskazanie *wzgledne*: brak możliwości izolacji – lak glasjonomerowy
+
+**Przygotowanie** – konieczne: izolacja, wytrawiacz, lak, lampa
+
+**Przebieg krok po kroku**
+
+1. **Oczyszczenie powierzchni zębów** – Usunięcie płytki (szczoteczka, pasta profilaktyczna lub piaskowanie) przed aplikacją preparatu.
+2. **Izolacja pola zabiegowego** – Koferdam (izolacja bezwzględna) albo izolacja względna (wałki ligninowe, ślinociąg) – zależnie od zabiegu. *Uwaga: W leczeniu endodontycznym koferdam jest standardem (ESE).* Warianty: izolacja względna, gdy założenie koferdamu nie jest możliwe – uzasadnij w dokumentacji.
+3. **Lakowanie bruzd** – Izolacja, oczyszczenie bruzd, wytrawienie (lak żywiczny) lub przygotowanie wg instrukcji (glasjonomer), aplikacja laku bez pęcherzyków, polimeryzacja, kontrola retencji i zwarcia. *Uwaga: Ząb musi być całkowicie wyrznięty i suchy.*
+4. **Kontrola zwarcia, wykończenie i polerowanie** – Usunięcie nadmiarów, kontrola zwarcia i ruchów (kalka), kontrola punktu stycznego (nić), polerowanie.
+5. **Przekazanie zaleceń** – Przekaż zalecenia pozabiegowe (ustnie lub ustnie i pisemnie) i ustal termin kontroli.
+
+**Materiały i narzędzia:** Lak szczelinowy (żywiczny) (konieczne); Wytrawiacz (kwas ortofosforowy) (typowe); Wałki ligninowe, ślinociąg (konieczne); Lampa polimeryzacyjna (konieczne); Kalka zgryzowa, nić dentystyczna (typowe); Szczoteczka / gumka profilaktyczna, pasta profilaktyczna (typowe)
+
+**Kontrola efektu:** retencja laku (zgłębnik); pokrycie bruzd; zwarcie. Dalej: kontrola retencji na wizytach kontrolnych; uzupełnienie ubytków laku
+
+**Zalecenia pozabiegowe:**  Kontrola: Kontrola laku na badaniach okresowych.
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Zęby lakowane i rodzaj laku — *zalecenie kliniczne* (`SRC-KLIN-ADA-LAK-2016` (PMID 27470525))
+
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: 5.13.00.2310090 – 11 pkt (zał. 1b)
+
+- zał. 1 (wszyscy): Świadczenie dotyczy bruzd pierwszych trzonowców stałych i jest udzielane 1 raz do ukończenia 8. roku życia oraz bruzd drugich trzonowców stałych i jest udzielane 1 raz do ukończenia 14. roku życia.
+- zał. 2 (<18): Świadczenie dotyczy bruzd pierwszych trzonowców stałych i jest udzielane 1 raz do ukończenia 8. roku życia oraz bruzd drugich trzonowców stałych i jest udzielane 1 raz do ukończenia 14. roku życia.
+- zał. 2b (<18 (szkoła)): Świadczenie dotyczy bruzd pierwszych trzonowców stałych i jest udzielane 1 raz do ukończenia 8. roku życia oraz bruzd drugich trzonowców stałych i jest udzielane 1 raz do ukończenia 14. roku życia.
+
+Reguły: R-LAKOW-01
+
+*R-LAKOW-01: limity wieku i częstotliwości (zęby trzonowe).*
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| Z29.8 | Inne określone środki zapobiegawcze | profilaktyka bez choroby | ocena_kliniczna | tak |
+| K02.0 | Próchnica ograniczona do szkliwa | początkowa próchnica bruzd (bez ubytku) | ocena_kliniczna | tak |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [rozliczeniowe] Zęby lakowane (każdy ząb = świadczenie) — *NFZ*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Lakowanie bruzd: zęby {{POLE-ZEBY}}. Materiał: {{POLE-MATERIAL}}. Retencja: {{POLE-WYNIK}}.
+
+**skrocony**
+
+> Lakowanie {{POLE-ZEBY}}, {{POLE-MATERIAL}}.
+
+**rozszerzony**
+
+> LAKOWANIE BRUZD: zęby {{POLE-ZEBY}}. Wskazanie: {{POLE-WSKAZANIE}}. Izolacja: {{POLE-IZOLACJA}}. Materiał: {{POLE-MATERIAL}}. Kontrola retencji i zwarcia: {{POLE-WYNIK}}. Zalecenia: {{POLE-ZALECENIA}}.
+
+**Źródła kliniczne:** `SRC-KLIN-ADA-LAK-2016` (PMID 27470525)
+
+## 23.1006 – Lakierowanie zębów 1/4 łuku zębowego
+
+`PROC-23.1006` · **Lakierowanie zębów (¼ łuku)** · profilaktyka · status: **draft** · kody w Opisach NFZ: 1006
+
+Lakierowanie zębów preparatem fluorkowym w obrębie ¼ łuku.
+
+**Na czym polega.** Aplikacja lakieru fluorkowego na zęby ćwiartki. **Cel:** Profilaktyka próchnicy, remineralizacja.
+
+Wskazania: podwyższone ryzyko próchnicy u dzieci i młodzieży
+
+**Kwalifikacja** – ocenić: wiek (NFZ: do 18 r.ż.); ryzyko próchnicy. Wywiad: alergia na składniki lakieru (np. kalafonię).
+
+- przeciwwskazanie *bezwzgledne*: alergia na składnik preparatu
+- przeciwwskazanie *wzgledne*: rozległe owrzodzenia błony śluzowej
+
+**Przygotowanie** – konieczne: lakier fluorkowy, izolacja względna
+
+**Przebieg krok po kroku**
+
+1. **Oczyszczenie powierzchni zębów** – Usunięcie płytki (szczoteczka, pasta profilaktyczna lub piaskowanie) przed aplikacją preparatu.
+2. **Lakierowanie fluorkowe** – Oczyszczenie i osuszenie zębów, cienka warstwa lakieru fluorkowego na wszystkie powierzchnie zębów ¼ łuku. *Uwaga: Ilość lakieru u małych dzieci wg zaleceń dla wieku.*
+3. **Przekazanie zaleceń** – Przekaż zalecenia pozabiegowe (ustnie lub ustnie i pisemnie) i ustal termin kontroli.
+
+**Materiały i narzędzia:** Preparat fluorkowy (lakier / żel) (konieczne); Wałki ligninowe, ślinociąg (typowe); Szczoteczka / gumka profilaktyczna, pasta profilaktyczna (typowe)
+
+**Kontrola efektu:** pokrycie zębów ćwiartki
+
+**Zalecenia pozabiegowe:** Pacjent: Nie jeść i nie szczotkować zębów przez kilka godzin (wg preparatu).. Kontrola: Kolejna aplikacja wg ryzyka (NFZ: nie częściej niż 1× na kwartał na ¼ łuku).
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Ćwiartki i preparat — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: 5.13.00.2310060 – 5 pkt (zał. 1b)
+
+- zał. 1 (wszyscy): Świadczenie dotyczy wszystkich zębów mlecznych i stałych i jest udzielane nie częściej niż 1 raz na kwartał – za każdą 1/4 łuku zębowego. Świadczenie jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia.
+- zał. 2 (<18): Świadczenie dotyczy wszystkich zębów mlecznych i stałych i jest udzielane nie częściej niż 1 raz na kwartał – za każdą 1/4 łuku zębowego.
+- zał. 2b (<18 (szkoła)): Świadczenie dotyczy wszystkich zębów mlecznych i stałych i jest udzielane nie częściej niż 1 raz na kwartał – za każdą 1/4 łuku zębowego.
+
+Reguły: R-LAKIER-01, R-ST30-LAKIER
+
+*Moduł Opisy NFZ: ostrzeżenie przy wieku ≥ 18 (P31); nie łączy się z ST30–ST30C (R-ST30-LAKIER).*
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| Z29.8 | Inne określone środki zapobiegawcze | profilaktyka fluorkowa | ocena_kliniczna | tak |
+| K02.0 | Próchnica ograniczona do szkliwa | początkowe zmiany próchnicowe | ocena_kliniczna | tak |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Wiek pacjenta < 18 lat — *NFZ*, R-LAKIER-01
+- [rozliczeniowe] Ćwiartki objęte lakierowaniem — *NFZ*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Lakierowanie zębów: {{POLE-LUK}} {{POLE-ZEBY}}. Preparat: {{POLE-MATERIAL}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Lakierowanie {{POLE-ZEBY}}, {{POLE-MATERIAL}}.
+
+**rozszerzony**
+
+> LAKIEROWANIE FLUORKOWE: zakres {{POLE-LUK}}, zęby {{POLE-ZEBY}}. Wskazanie: {{POLE-WSKAZANIE}}. Preparat: {{POLE-MATERIAL}}. Zalecenia: {{POLE-ZALECENIA}}. Kolejna aplikacja: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-KLIN-EAPD-F-2019` (PMID 31631242); `SRC-KLIN-ADA-F-2013` (PMID 24177407)
 
 ## 23.1007 – Leczenie nadwrażliwości zębów w obrębie 1/4 łuku zębowego
 
@@ -1949,3 +3028,1218 @@ Wskazania: próchnica lub nieszczelne wypełnienie obejmujące kąt sieczny; zł
 > Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}, miejsce: {{POLE-ZNIECZ-MIEJSCE}}. Izolacja: {{POLE-IZOLACJA}}. odbudowa zniszczonego kąta siecznego – powierzchnie {{POLE-POWIERZCHNIE}}. Przebieg: {{POLE-PRZEBIEG}}. Ochrona miazgi: {{POLE-MATERIAL-PODKLAD}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (szczelność, punkt styczny, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.
 
 **Źródła kliniczne:** `SRC-KLIN-ESE-VPT-2019` (PMID 30664240); `SRC-KLIN-ICDAS-2007` (PMID 17518963); `SRC-PRAKTYKA`
+
+## 23.16011 – Usunięcie złogów nazębnych miękkich z 1/2 łuku zębowego
+
+`PROC-23.16011` · **Złogi miękkie – ½ łuku** · periodontologia i błona śluzowa · status: **draft** · kody w Opisach NFZ: ST30E
+
+Usunięcie złogów nazębnych miękkich z ½ łuku.
+
+**Na czym polega.** Usunięcie płytki i osadów (złogi miękkie) z ½ łuku. **Cel:** Eliminacja czynnika zapalnego dziąseł, profilaktyka chorób przyzębia.
+
+Wskazania: płytka i osady; zapalenie dziąseł; etap 1 leczenia periodontologicznego (EFP)
+
+**Kwalifikacja** – ocenić: badanie przyzębia (BPE); wywiad. Wywiad: rozrusznik serca / urządzenia wszczepialne (rodzaj skalera); choroby zakaźne; leki przeciwkrzepliwe.
+
+- przeciwwskazanie *wzgledne*: niektóre rozruszniki – skaler magnetostrykcyjny; użyć piezoelektrycznego / ręcznego wg zaleceń
+- rozważ inne postępowanie: instrumentacja poddziąsłowa (kiretaż) przy kieszonkach – etap 2 EFP
+
+**Przygotowanie** – konieczne: szczoteczka / gumka z pastą lub piaskarka; opcjonalne: znieczulenie powierzchniowe; zależne od sytuacji: płukanka antyseptyczna przed zabiegiem
+
+**Przebieg krok po kroku**
+
+1. **Badanie wg katalogu badań** – Wykonaj badania składowe z katalogu A odpowiednie do świadczenia (formularze i szablony BAD-…). *Uwaga: Wynik każdego elementu wpisuje lekarz.*
+2. **Usunięcie złogów miękkich** – Usunięcie płytki i osadów (szczoteczka / gumka z pastą, piaskarka z proszkiem o niskiej ścieralności).
+3. **Instruktaż higieny jamy ustnej** – Pokaż i omów technikę szczotkowania i oczyszczania przestrzeni międzyzębowych, przybory, stosowanie fluorków; dostosuj do wieku i potrzeb (aparat, protezy).
+4. **Przekazanie zaleceń** – Przekaż zalecenia pozabiegowe (ustnie lub ustnie i pisemnie) i ustal termin kontroli.
+
+**Materiały i narzędzia:** Szczoteczka / gumka profilaktyczna, pasta profilaktyczna (konieczne); Piaskarka (proszek o niskiej ścieralności) (alternatywa)
+
+**Kontrola efektu:** brak złogów (zgłębnik, wybarwienie); gładkość powierzchni. Dalej: przy kieszonkach ≥ 4 mm – instrumentacja poddziąsłowa / skierowanie
+
+**Zalecenia pozabiegowe:** Pacjent: Przejściowa nadwrażliwość i krwawienie dziąseł są możliwe.. Higiena: Szczotkowanie 2× dziennie, oczyszczanie przestrzeni międzyzębowych.. Kontrola: Wg potrzeb (NFZ – limity).
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Zakres (½ łuku / wszystkie zęby) i rodzaj złogów — *NFZ*, warunek: od 01.09.2026 podkody (R-KOD-01) (`SRC-NFZ-KOM-9017`)
+
+**NFZ** – świadczenie gwarantowane: **nie**; produkty: pakiet ST30D; pakiet ST30E
+
+Reguły: R-ST30-CZAS, R-ST30-WZAJEM, R-ST30DFG-LIMIT, R-ST30DG-WIEK, R-ST30E-LIMIT, R-ZLOG-01
+
+*Od 01.09.2026 wykazuje się podkod (R-KOD-01). Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+Źródła NFZ: `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K03.6 | Osady na zębach (złogi) | złogi nazębne | ocena_kliniczna | tak |
+| K05.1 | Przewlekłe zapalenie dziąseł | przewlekłe zapalenie dziąseł | ocena_kliniczna | tak |
+| K05.3 | Przewlekłe zapalenie przyzębia | zapalenie przyzębia – etap 1 leczenia | ocena_kliniczna | tak |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Podkod złogów (miękkie / twarde, ½ łuku / wszystkie zęby) — *NFZ*, od 01.09.2026
+
+**Szablony opisu**
+
+**standardowy**
+
+> Usunięcie złogów miękkich: {{POLE-LUK}} ({{POLE-LOKALIZACJA}}). Instruktaż: {{POLE-HG-INSTRUKTAZ}}.
+
+**skrocony**
+
+> Złogi miękkie {{POLE-LOKALIZACJA}}.
+
+**rozszerzony**
+
+> USUNIĘCIE ZŁOGÓW MIĘKKICH: zakres {{POLE-LUK}}, {{POLE-LOKALIZACJA}}. Wskazanie: {{POLE-WSKAZANIE}}. Przebieg: {{POLE-PRZEBIEG}}. Polerowanie / instruktaż: {{POLE-HG-INSTRUKTAZ}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}.
+
+**Źródła kliniczne:** `SRC-KLIN-EFP-S3-2020` (PMID 32383274); `SRC-NFZ-KOM-9017`
+
+## 23.16012 – Usunięcie złogów nazębnych twardych z 1/2 łuku zębowego
+
+`PROC-23.16012` · **Złogi twarde – ½ łuku** · periodontologia i błona śluzowa · status: **draft** · kody w Opisach NFZ: ST30
+
+Usunięcie złogów nazębnych twardych z ½ łuku.
+
+**Na czym polega.** Usunięcie kamienia nazębnego (skaling naddziąsłowy) z ½ łuku. **Cel:** Eliminacja czynnika zapalnego dziąseł, profilaktyka chorób przyzębia.
+
+Wskazania: kamień nazębny; zapalenie dziąseł; etap 1 leczenia periodontologicznego (EFP)
+
+**Kwalifikacja** – ocenić: badanie przyzębia (BPE); wywiad. Wywiad: rozrusznik serca / urządzenia wszczepialne (rodzaj skalera); choroby zakaźne; leki przeciwkrzepliwe.
+
+- przeciwwskazanie *wzgledne*: niektóre rozruszniki – skaler magnetostrykcyjny; użyć piezoelektrycznego / ręcznego wg zaleceń
+- rozważ inne postępowanie: instrumentacja poddziąsłowa (kiretaż) przy kieszonkach – etap 2 EFP
+
+**Przygotowanie** – konieczne: skaler ultradźwiękowy / ręczny; opcjonalne: znieczulenie powierzchniowe; zależne od sytuacji: płukanka antyseptyczna przed zabiegiem
+
+**Przebieg krok po kroku**
+
+1. **Badanie wg katalogu badań** – Wykonaj badania składowe z katalogu A odpowiednie do świadczenia (formularze i szablony BAD-…). *Uwaga: Wynik każdego elementu wpisuje lekarz.*
+2. **Usunięcie złogów naddziąsłowych** – Skaler ultradźwiękowy i / lub narzędzia ręczne: usunięcie kamienia naddziąsłowego z zębów objętych zabiegiem. *Uwaga: U pacjentów z rozrusznikiem – ocenić rodzaj skalera wg zaleceń producenta.*
+3. **Polerowanie zębów** – Polerowanie powierzchni gumką / szczoteczką z pastą, paski polerskie w przestrzeniach międzyzębowych.
+4. **Instruktaż higieny jamy ustnej** – Pokaż i omów technikę szczotkowania i oczyszczania przestrzeni międzyzębowych, przybory, stosowanie fluorków; dostosuj do wieku i potrzeb (aparat, protezy).
+5. **Przekazanie zaleceń** – Przekaż zalecenia pozabiegowe (ustnie lub ustnie i pisemnie) i ustal termin kontroli.
+
+**Materiały i narzędzia:** Skaler ultradźwiękowy / piezoelektryczny i końcówki (konieczne); Skalery ręczne (typowe); Szczoteczka / gumka profilaktyczna, pasta profilaktyczna (typowe)
+
+**Kontrola efektu:** brak złogów (zgłębnik, wybarwienie); gładkość powierzchni. Dalej: przy kieszonkach ≥ 4 mm – instrumentacja poddziąsłowa / skierowanie
+
+**Zalecenia pozabiegowe:** Pacjent: Przejściowa nadwrażliwość i krwawienie dziąseł są możliwe.. Higiena: Szczotkowanie 2× dziennie, oczyszczanie przestrzeni międzyzębowych.. Kontrola: Wg potrzeb (NFZ – limity).
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Zakres (½ łuku / wszystkie zęby) i rodzaj złogów — *NFZ*, warunek: od 01.09.2026 podkody (R-KOD-01) (`SRC-NFZ-KOM-9017`)
+
+**NFZ** – świadczenie gwarantowane: **nie**; produkty: pakiet ST30; pakiet ST30B; pakiet ST30C
+
+Reguły: R-ST30-CZAS, R-ST30-LAKIER, R-ST30-TWARDE, R-ST30-WZAJEM, R-ST30BC-WYK, R-ZLOG-01
+
+*Od 01.09.2026 wykazuje się podkod (R-KOD-01). Twarde złogi – pakiet ST30 (½ łuku). Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+Źródła NFZ: `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K03.6 | Osady na zębach (złogi) | złogi nazębne | ocena_kliniczna | tak |
+| K05.1 | Przewlekłe zapalenie dziąseł | przewlekłe zapalenie dziąseł | ocena_kliniczna | tak |
+| K05.3 | Przewlekłe zapalenie przyzębia | zapalenie przyzębia – etap 1 leczenia | ocena_kliniczna | tak |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Podkod złogów (miękkie / twarde, ½ łuku / wszystkie zęby) — *NFZ*, od 01.09.2026
+
+**Szablony opisu**
+
+**standardowy**
+
+> Usunięcie złogów twardych: {{POLE-LUK}} ({{POLE-LOKALIZACJA}}). Instruktaż: {{POLE-HG-INSTRUKTAZ}}.
+
+**skrocony**
+
+> Złogi twarde {{POLE-LOKALIZACJA}}.
+
+**rozszerzony**
+
+> USUNIĘCIE ZŁOGÓW TWARDYCH: zakres {{POLE-LUK}}, {{POLE-LOKALIZACJA}}. Wskazanie: {{POLE-WSKAZANIE}}. Przebieg: {{POLE-PRZEBIEG}}. Polerowanie / instruktaż: {{POLE-HG-INSTRUKTAZ}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}.
+
+**Źródła kliniczne:** `SRC-KLIN-EFP-S3-2020` (PMID 32383274); `SRC-NFZ-KOM-9017`
+
+## 23.16021 – Usunięcie złogów nazębnych miękkich ze wszystkich zębów
+
+`PROC-23.16021` · **Złogi miękkie – wszystkie zęby** · periodontologia i błona śluzowa · status: **draft** · kody w Opisach NFZ: ST30G
+
+Usunięcie złogów nazębnych miękkich z wszystkich zębów.
+
+**Na czym polega.** Usunięcie płytki i osadów (złogi miękkie) z wszystkich zębów. **Cel:** Eliminacja czynnika zapalnego dziąseł, profilaktyka chorób przyzębia.
+
+Wskazania: płytka i osady; zapalenie dziąseł; etap 1 leczenia periodontologicznego (EFP)
+
+**Kwalifikacja** – ocenić: badanie przyzębia (BPE); wywiad. Wywiad: rozrusznik serca / urządzenia wszczepialne (rodzaj skalera); choroby zakaźne; leki przeciwkrzepliwe.
+
+- przeciwwskazanie *wzgledne*: niektóre rozruszniki – skaler magnetostrykcyjny; użyć piezoelektrycznego / ręcznego wg zaleceń
+- rozważ inne postępowanie: instrumentacja poddziąsłowa (kiretaż) przy kieszonkach – etap 2 EFP
+
+**Przygotowanie** – konieczne: szczoteczka / gumka z pastą lub piaskarka; opcjonalne: znieczulenie powierzchniowe; zależne od sytuacji: płukanka antyseptyczna przed zabiegiem
+
+**Przebieg krok po kroku**
+
+1. **Badanie wg katalogu badań** – Wykonaj badania składowe z katalogu A odpowiednie do świadczenia (formularze i szablony BAD-…). *Uwaga: Wynik każdego elementu wpisuje lekarz.*
+2. **Usunięcie złogów miękkich** – Usunięcie płytki i osadów (szczoteczka / gumka z pastą, piaskarka z proszkiem o niskiej ścieralności).
+3. **Instruktaż higieny jamy ustnej** – Pokaż i omów technikę szczotkowania i oczyszczania przestrzeni międzyzębowych, przybory, stosowanie fluorków; dostosuj do wieku i potrzeb (aparat, protezy).
+4. **Przekazanie zaleceń** – Przekaż zalecenia pozabiegowe (ustnie lub ustnie i pisemnie) i ustal termin kontroli.
+
+**Materiały i narzędzia:** Szczoteczka / gumka profilaktyczna, pasta profilaktyczna (konieczne); Piaskarka (proszek o niskiej ścieralności) (alternatywa)
+
+**Kontrola efektu:** brak złogów (zgłębnik, wybarwienie); gładkość powierzchni. Dalej: przy kieszonkach ≥ 4 mm – instrumentacja poddziąsłowa / skierowanie
+
+**Zalecenia pozabiegowe:** Pacjent: Przejściowa nadwrażliwość i krwawienie dziąseł są możliwe.. Higiena: Szczotkowanie 2× dziennie, oczyszczanie przestrzeni międzyzębowych.. Kontrola: Wg potrzeb (NFZ – limity).
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Zakres (½ łuku / wszystkie zęby) i rodzaj złogów — *NFZ*, warunek: od 01.09.2026 podkody (R-KOD-01) (`SRC-NFZ-KOM-9017`)
+
+**NFZ** – świadczenie gwarantowane: **nie**; produkty: pakiet ST30F; pakiet ST30G
+
+Reguły: R-ST30-CZAS, R-ST30-WZAJEM, R-ST30DFG-LIMIT, R-ST30DG-WIEK, R-ZLOG-02
+
+*Od 01.09.2026 wykazuje się podkod (R-KOD-01). Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+Źródła NFZ: `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K03.6 | Osady na zębach (złogi) | złogi nazębne | ocena_kliniczna | tak |
+| K05.1 | Przewlekłe zapalenie dziąseł | przewlekłe zapalenie dziąseł | ocena_kliniczna | tak |
+| K05.3 | Przewlekłe zapalenie przyzębia | zapalenie przyzębia – etap 1 leczenia | ocena_kliniczna | tak |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Podkod złogów (miękkie / twarde, ½ łuku / wszystkie zęby) — *NFZ*, od 01.09.2026
+
+**Szablony opisu**
+
+**standardowy**
+
+> Usunięcie złogów miękkich: {{POLE-LUK}} ({{POLE-LOKALIZACJA}}). Instruktaż: {{POLE-HG-INSTRUKTAZ}}.
+
+**skrocony**
+
+> Złogi miękkie {{POLE-LOKALIZACJA}}.
+
+**rozszerzony**
+
+> USUNIĘCIE ZŁOGÓW MIĘKKICH: zakres {{POLE-LUK}}, {{POLE-LOKALIZACJA}}. Wskazanie: {{POLE-WSKAZANIE}}. Przebieg: {{POLE-PRZEBIEG}}. Polerowanie / instruktaż: {{POLE-HG-INSTRUKTAZ}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}.
+
+**Źródła kliniczne:** `SRC-KLIN-EFP-S3-2020` (PMID 32383274); `SRC-NFZ-KOM-9017`
+
+## 23.16022 – Usunięcie złogów nazębnych twardych ze wszystkich zębów
+
+`PROC-23.16022` · **Złogi twarde – wszystkie zęby** · periodontologia i błona śluzowa · status: **draft**
+
+Usunięcie złogów nazębnych twardych z wszystkich zębów.
+
+**Na czym polega.** Usunięcie kamienia nazębnego (skaling naddziąsłowy) z wszystkich zębów. **Cel:** Eliminacja czynnika zapalnego dziąseł, profilaktyka chorób przyzębia.
+
+Wskazania: kamień nazębny; zapalenie dziąseł; etap 1 leczenia periodontologicznego (EFP)
+
+**Kwalifikacja** – ocenić: badanie przyzębia (BPE); wywiad. Wywiad: rozrusznik serca / urządzenia wszczepialne (rodzaj skalera); choroby zakaźne; leki przeciwkrzepliwe.
+
+- przeciwwskazanie *wzgledne*: niektóre rozruszniki – skaler magnetostrykcyjny; użyć piezoelektrycznego / ręcznego wg zaleceń
+- rozważ inne postępowanie: instrumentacja poddziąsłowa (kiretaż) przy kieszonkach – etap 2 EFP
+
+**Przygotowanie** – konieczne: skaler ultradźwiękowy / ręczny; opcjonalne: znieczulenie powierzchniowe; zależne od sytuacji: płukanka antyseptyczna przed zabiegiem
+
+**Przebieg krok po kroku**
+
+1. **Badanie wg katalogu badań** – Wykonaj badania składowe z katalogu A odpowiednie do świadczenia (formularze i szablony BAD-…). *Uwaga: Wynik każdego elementu wpisuje lekarz.*
+2. **Usunięcie złogów naddziąsłowych** – Skaler ultradźwiękowy i / lub narzędzia ręczne: usunięcie kamienia naddziąsłowego z zębów objętych zabiegiem. *Uwaga: U pacjentów z rozrusznikiem – ocenić rodzaj skalera wg zaleceń producenta.*
+3. **Polerowanie zębów** – Polerowanie powierzchni gumką / szczoteczką z pastą, paski polerskie w przestrzeniach międzyzębowych.
+4. **Instruktaż higieny jamy ustnej** – Pokaż i omów technikę szczotkowania i oczyszczania przestrzeni międzyzębowych, przybory, stosowanie fluorków; dostosuj do wieku i potrzeb (aparat, protezy).
+5. **Przekazanie zaleceń** – Przekaż zalecenia pozabiegowe (ustnie lub ustnie i pisemnie) i ustal termin kontroli.
+
+**Materiały i narzędzia:** Skaler ultradźwiękowy / piezoelektryczny i końcówki (konieczne); Skalery ręczne (typowe); Szczoteczka / gumka profilaktyczna, pasta profilaktyczna (typowe)
+
+**Kontrola efektu:** brak złogów (zgłębnik, wybarwienie); gładkość powierzchni. Dalej: przy kieszonkach ≥ 4 mm – instrumentacja poddziąsłowa / skierowanie
+
+**Zalecenia pozabiegowe:** Pacjent: Przejściowa nadwrażliwość i krwawienie dziąseł są możliwe.. Higiena: Szczotkowanie 2× dziennie, oczyszczanie przestrzeni międzyzębowych.. Kontrola: Wg potrzeb (NFZ – limity).
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Zakres (½ łuku / wszystkie zęby) i rodzaj złogów — *NFZ*, warunek: od 01.09.2026 podkody (R-KOD-01) (`SRC-NFZ-KOM-9017`)
+
+**NFZ** – świadczenie gwarantowane: **nie**; produkty: pakiet ST30A
+
+Reguły: R-ST30-CZAS, R-ST30-LAKIER, R-ST30-TWARDE, R-ST30-WZAJEM, R-ZLOG-02
+
+*Od 01.09.2026 wykazuje się podkod (R-KOD-01). Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+Źródła NFZ: `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K03.6 | Osady na zębach (złogi) | złogi nazębne | ocena_kliniczna | tak |
+| K05.1 | Przewlekłe zapalenie dziąseł | przewlekłe zapalenie dziąseł | ocena_kliniczna | tak |
+| K05.3 | Przewlekłe zapalenie przyzębia | zapalenie przyzębia – etap 1 leczenia | ocena_kliniczna | tak |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Podkod złogów (miękkie / twarde, ½ łuku / wszystkie zęby) — *NFZ*, od 01.09.2026
+
+**Szablony opisu**
+
+**standardowy**
+
+> Usunięcie złogów twardych: {{POLE-LUK}} ({{POLE-LOKALIZACJA}}). Instruktaż: {{POLE-HG-INSTRUKTAZ}}.
+
+**skrocony**
+
+> Złogi twarde {{POLE-LOKALIZACJA}}.
+
+**rozszerzony**
+
+> USUNIĘCIE ZŁOGÓW TWARDYCH: zakres {{POLE-LUK}}, {{POLE-LOKALIZACJA}}. Wskazanie: {{POLE-WSKAZANIE}}. Przebieg: {{POLE-PRZEBIEG}}. Polerowanie / instruktaż: {{POLE-HG-INSTRUKTAZ}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}.
+
+**Źródła kliniczne:** `SRC-KLIN-EFP-S3-2020` (PMID 32383274); `SRC-NFZ-KOM-9017`
+
+## 23.1603 – Polerowanie zębów
+
+`PROC-23.1603` · **Polerowanie zębów** · periodontologia i błona śluzowa · status: **draft**
+
+Polerowanie zębów.
+
+**Na czym polega.** Wygładzenie powierzchni zębów po usunięciu złogów. **Cel:** Utrudnienie odkładania płytki, poprawa estetyki.
+
+Wskazania: po skalingu / usunięciu osadów
+
+**Kwalifikacja** – ocenić: aktualny wywiad. Wywiad: choroby, leki, alergie.
+
+
+
+**Przygotowanie** – konieczne: gumki / szczoteczki, pasta polerska
+
+**Przebieg krok po kroku**
+
+1. **Polerowanie zębów** – Polerowanie powierzchni gumką / szczoteczką z pastą, paski polerskie w przestrzeniach międzyzębowych.
+
+**Materiały i narzędzia:** Gumki, krążki, pasty polerskie, paski (konieczne); Szczoteczka / gumka profilaktyczna, pasta profilaktyczna (typowe)
+
+**Kontrola efektu:** gładkość powierzchni
+
+**Zalecenia pozabiegowe:** 
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K03.6 | Osady na zębach (złogi) | po usunięciu złogów | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Polerowanie zębów: {{POLE-LOKALIZACJA}}.
+
+**skrocony**
+
+> Polerowanie {{POLE-LOKALIZACJA}}.
+
+**rozszerzony**
+
+> POLEROWANIE ZĘBÓW: zakres {{POLE-LOKALIZACJA}}, materiał {{POLE-MATERIAL}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.1605 – Leczenie zmian na błonie śluzowej jamy ustnej
+
+`PROC-23.1605` · **Leczenie zmian na błonie śluzowej** · periodontologia i błona śluzowa · status: **draft** · kody w Opisach NFZ: ST26
+
+Leczenie zmian na błonie śluzowej jamy ustnej.
+
+**Na czym polega.** Miejscowe leczenie zmian błony śluzowej (zapalnych, urazowych, aftowych, infekcyjnych) po ich ocenie. **Cel:** Ustąpienie dolegliwości i zmian.
+
+Wskazania: afty, odleżyny, zapalenie dziąseł / błony śluzowej, kandydoza – po rozpoznaniu
+
+**Kwalifikacja** – ocenić: opis zmiany (BAD-BLONA); wykluczenie zmiany podejrzanej. Wywiad: czas trwania, nawroty, leki, choroby ogólne.
+
+- przeciwwskazanie *bezwzgledne*: zmiana podejrzana o charakter nowotworowy – skierowanie zamiast leczenia objawowego
+
+**Przygotowanie** – konieczne: preparat miejscowy wg rozpoznania
+
+**Przebieg krok po kroku**
+
+1. **Badanie wg katalogu badań** – Wykonaj badania składowe z katalogu A odpowiednie do świadczenia (formularze i szablony BAD-…). *Uwaga: Wynik każdego elementu wpisuje lekarz.*
+2. **Leczenie zmian na błonie śluzowej** – Oczyszczenie zmiany, usunięcie czynnika drażniącego, aplikacja leku miejscowego (np. preparat ochronny, przeciwzapalny, przeciwgrzybiczy – wg rozpoznania). *Uwaga: Zmiana niepokojąca – skierowanie (BAD-BLONA).*
+3. **Przekazanie zaleceń** – Przekaż zalecenia pozabiegowe (ustnie lub ustnie i pisemnie) i ustal termin kontroli.
+
+**Materiały i narzędzia:** Lek miejscowy na błonę śluzową (wg rozpoznania) (konieczne); Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne)
+
+**Kontrola efektu:** opis zmiany i zastosowane leczenie. Dalej: kontrola po ok. 2 tygodniach; brak poprawy – skierowanie
+
+**Zalecenia pozabiegowe:** Kontakt z gabinetem, gdy: brak poprawy w ciągu 2 tygodni; nasilenie zmian. Kontrola: Ok. 2 tygodnie.
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Opis zmiany i zastosowany preparat — *zalecenie kliniczne* (`SRC-KLIN-OPMD-2021` (PMID 33128420))
+
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: pakiet ST26
+
+- zał. 1 (wszyscy): Świadczenie obejmuje każdą wizytę.
+- zał. 2 (<18): Świadczenie obejmuje każdą wizytę.
+- zał. 2b (<18 (szkoła)): Świadczenie obejmuje każdą wizytę.
+
+*W Opisach NFZ – pakiet ST26 (procedura kierunkowa 23.1605).*
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K12.0 | Nawracające afty jamy ustnej | afty nawracające | ocena_kliniczna | nie |
+| K12.1 | Inne postacie zapalenia jamy ustnej | inne postacie zapalenia jamy ustnej | ocena_kliniczna | nie |
+| K05.0 | Ostre zapalenie dziąseł | ostre zapalenie dziąseł | ocena_kliniczna | nie |
+| K13.7 | Inne i nieokreślone zmiany błony śluzowej jamy ustnej | inne zmiany błony śluzowej (np. odleżyna – do weryfikacji kodu) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [zalecane] Opis zmiany (lokalizacja, wykwit) — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Leczenie zmiany na błonie śluzowej: {{POLE-BL-LOK}} – {{POLE-BL-WYKWIT}}. Preparat: {{POLE-MATERIAL}}. Kontrola: {{POLE-KONTROLA}}.
+
+**skrocony**
+
+> Leczenie zmiany {{POLE-BL-LOK}}, {{POLE-MATERIAL}}.
+
+**rozszerzony**
+
+> LECZENIE ZMIAN NA BŁONIE ŚLUZOWEJ: zmiana {{POLE-BL-LOK}}, {{POLE-BL-WYKWIT}}, {{POLE-BL-WYM}} mm. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Leczenie: {{POLE-PRZEBIEG}}, preparat {{POLE-MATERIAL}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-KLIN-OPMD-2021` (PMID 33128420)
+
+## 23.1607 – Kiretaż zwykły w obrębie 1/4 uzębienia
+
+`PROC-23.1607` · **Kiretaż zamknięty (¼ uzębienia)** · periodontologia i błona śluzowa · status: **draft** · kody w Opisach NFZ: ST04
+
+Kiretaż zwykły (zamknięty) w obrębie ¼ uzębienia.
+
+**Na czym polega.** Instrumentacja poddziąsłowa: usunięcie złogów poddziąsłowych i biofilmu z powierzchni korzeni w kieszonkach. **Cel:** Zmniejszenie głębokości kieszonek i stanu zapalnego.
+
+Wskazania: zapalenie przyzębia z kieszonkami ≥ 4 mm (etap 2 leczenia EFP)
+
+**Kwalifikacja** – ocenić: badanie periodontologiczne (PPD, CAL, BOP), RTG; higiena po etapie 1. Wywiad: cukrzyca, palenie; leki przeciwkrzepliwe.
+
+- przeciwwskazanie *wzgledne*: niedostateczna higiena po etapie 1 – najpierw motywacja
+- rozważ inne postępowanie: leczenie chirurgiczne przy kieszonkach rezydualnych (skierowanie)
+
+**Przygotowanie** – konieczne: znieczulenie; kirety / skaler z końcówkami poddziąsłowymi; opcjonalne: płukanka antyseptyczna
+
+**Przebieg krok po kroku**
+
+1. **Aktualizacja wywiadu, informacja i zgoda** – Sprawdź aktualny wywiad (leki, alergie, ciąża), przedstaw rozpoznanie, plan, alternatywy i ryzyka; uzyskaj zgodę pacjenta. *Uwaga: Szczegóły: badanie BAD-PRZED-LECZENIEM.*
+2. **Znieczulenie miejscowe** – Dobierz metodę (nasiękowe / przewodowe / śródwięzadłowe) do zęba i zabiegu; znieczulenie powierzchniowe miejsca wkłucia (opcjonalnie); aspiracja przed podaniem; podawaj powoli; odnotuj preparat, dawkę i miejsce. *Uwaga: Sprawdź maksymalną dawkę dla masy ciała i choroby ogólne (środek obkurczający naczynia).* Warianty: bez znieczulenia – przy zabiegach nieinwazyjnych lub na życzenie pacjenta, jeśli nie powoduje bólu.
+3. **Kiretaż zamknięty / oczyszczanie kieszonek** – Pod znieczuleniem: usunięcie złogów poddziąsłowych i oczyszczenie powierzchni korzeni kiretami / końcówkami ultradźwiękowymi w kieszonkach ¼ uzębienia; płukanie. *Uwaga: Instrumentacja poddziąsłowa wg EFP – etap 2 leczenia zapalenia przyzębia.*
+4. **Zatamowanie krwawienia** – Ucisk gazikiem, w razie potrzeby środki hemostatyczne miejscowe i szwy; ocena skuteczności. *Uwaga: U pacjentów na lekach przeciwkrzepliwych – postępowanie wg zaleceń, bez samodzielnego odstawiania leków.*
+5. **Przekazanie zaleceń** – Przekaż zalecenia pozabiegowe (ustnie lub ustnie i pisemnie) i ustal termin kontroli.
+
+**Materiały i narzędzia:** Kirety (np. typu Gracey) (konieczne); Skaler ultradźwiękowy / piezoelektryczny i końcówki (typowe); Strzykawka, igła, środek znieczulający miejscowo (konieczne); Płyn do płukania kieszonek (np. chlorheksydyna) (sytuacyjne); Gaziki jałowe (typowe)
+
+**Kontrola efektu:** gładkość powierzchni korzeni. Dalej: reewaluacja po 6–8 tygodniach (EFP)
+
+**Zalecenia pozabiegowe:** Pacjent: Ból i nadwrażliwość przez kilka dni są możliwe.. Higiena: Delikatna higiena okolicy, płukanki wg zaleceń.. Kontrola: Reewaluacja po 6–8 tygodniach.
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Ćwiartka, głębokości kieszonek przed zabiegiem — *zalecenie kliniczne* (`SRC-KLIN-EFP-S3-2020` (PMID 32383274))
+
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: pakiet ST04
+
+- zał. 1 (wszyscy): Świadczenie nie obejmuje odpowiedniego znieczulenia i opatrunku.
+- zał. 2 (<18): Świadczenie nie obejmuje odpowiedniego znieczulenia i opatrunku.
+- zał. 2b (<18 (szkoła)): Świadczenie nie obejmuje odpowiedniego znieczulenia i opatrunku.
+
+Reguły: R-KIR-DZ, R-ZNI-02
+
+*Pakiet ST04 (znieczulenie wliczone – R-ZNI-02); u dzieci – informacja „wymaga weryfikacji” (R-KIR-DZ).*
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K05.3 | Przewlekłe zapalenie przyzębia | przewlekłe zapalenie przyzębia | ocena_kliniczna | tak |
+| K05.2 | Ostre zapalenie przyzębia | ostre zapalenie przyzębia / ropień przyzębny – po opanowaniu ostrego stanu | ocena_kliniczna | tak |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [sytuacyjne] Znieczulenie: rodzaj, preparat, dawka, miejsce — *zalecenie kliniczne*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Powikłania – odnotowane albo zaznaczony ich brak przez lekarza — *zalecenie kliniczne*
+- [zalecane] Głębokości kieszonek przed zabiegiem — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Kiretaż zamknięty: ćwiartka {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Powikłania: {{POLE-POWIKLANIA}}. Reewaluacja: {{POLE-KONTROLA}}.
+
+**skrocony**
+
+> Kiretaż {{POLE-LOKALIZACJA}}.
+
+**rozszerzony**
+
+> KIRETAŻ ZAMKNIĘTY: ćwiartka {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Kieszonki przed zabiegiem: {{POLE-PZ-PPD}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Reewaluacja: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-KLIN-EFP-S3-2020` (PMID 32383274); `SRC-KLIN-PERIO-2018` (PMID 29926490)
+
+## 23.1701 – Usunięcie zęba jednokorzeniowego
+
+`PROC-23.1701` · **Usunięcie zęba jednokorzeniowego** · chirurgia – ekstrakcje · status: **draft** · kody w Opisach NFZ: ST01
+
+Usunięcie zęba jednokorzeniowego.
+
+**Na czym polega.** Usunięcie zęba jednokorzeniowego kleszczami / dźwignią (ekstrakcja prosta). **Cel:** Usunięcie zęba niekwalifikującego się do leczenia lub ze wskazań (ortodontycznych, protetycznych).
+
+Wskazania: ząb niemożliwy do odbudowy; zaawansowane zapalenie przyzębia; nieskuteczne leczenie endodontyczne; wskazania ortodontyczne / protetyczne; ząb mleczny przetrwały / z powikłaniami
+
+**Kwalifikacja** – ocenić: RTG zęba / okolicy; stan ogólny, ciśnienie (wg wskazań). Wywiad: leki przeciwkrzepliwe i antyagregacyjne; leki antyresorpcyjne (ryzyko martwicy kości); radioterapia głowy i szyi; cukrzyca, choroby serca, ciąża; alergie.
+
+- przeciwwskazanie *wzgledne*: ostre stany ogólne (np. niewyrównana choroba ogólna) – odroczenie / konsultacja
+- przeciwwskazanie *wzgledne*: zaburzenia krzepnięcia bez przygotowania – konsultacja
+- przeciwwskazanie *wzgledne*: leczenie antyresorpcyjne / radioterapia – ocena ryzyka, ewentualnie skierowanie
+- dodatkowa diagnostyka: INR / konsultacja lekarza prowadzącego wg wskazań; CBCT – zęby zatrzymane blisko kanału żuchwy (poza gabinetem)
+- rozważ inne postępowanie: leczenie zachowawcze / endodontyczne, jeśli ząb rokuje; skierowanie do chirurga stomatologa przy zabiegu trudnym
+
+**Przygotowanie** – konieczne: RTG; zgoda; znieczulenie; zestaw ekstrakcyjny; zależne od sytuacji: środek hemostatyczny, szwy
+
+**Przebieg krok po kroku**
+
+1. **Aktualizacja wywiadu, informacja i zgoda** – Sprawdź aktualny wywiad (leki, alergie, ciąża), przedstaw rozpoznanie, plan, alternatywy i ryzyka; uzyskaj zgodę pacjenta. *Uwaga: Szczegóły: badanie BAD-PRZED-LECZENIEM.*
+2. **Znieczulenie miejscowe** – Dobierz metodę (nasiękowe / przewodowe / śródwięzadłowe) do zęba i zabiegu; znieczulenie powierzchniowe miejsca wkłucia (opcjonalnie); aspiracja przed podaniem; podawaj powoli; odnotuj preparat, dawkę i miejsce. *Uwaga: Sprawdź maksymalną dawkę dla masy ciała i choroby ogólne (środek obkurczający naczynia).* Warianty: bez znieczulenia – przy zabiegach nieinwazyjnych lub na życzenie pacjenta, jeśli nie powoduje bólu.
+3. **Usunięcie zęba** – Oddzielenie dziąsła (syndesmotomia), zwichnięcie i usunięcie zęba kleszczami / dźwignią z kontrolą siły; kontrola kompletności korzeni. *Uwaga: Przy zębach wielokorzeniowych rozważ separację korzeni.*
+4. **Opracowanie zębodołu** – Kontrola zębodołu, usunięcie ziarniny i odłamów, wygładzenie ostrych brzegów kostnych, kontrola połączenia z zatoką (zęby boczne szczęki).
+5. **Zatamowanie krwawienia** – Ucisk gazikiem, w razie potrzeby środki hemostatyczne miejscowe i szwy; ocena skuteczności. *Uwaga: U pacjentów na lekach przeciwkrzepliwych – postępowanie wg zaleceń, bez samodzielnego odstawiania leków.*
+6. **Szycie rany** – Ułożenie płata / brzegów rany i założenie szwów (rodzaj nici wg przypadku); termin zdjęcia szwów. **W tej procedurze:** gdy wskazane
+7. **Zalecenia po zabiegu chirurgicznym** – Ucisk gazika 20–30 min, zimne okłady, bez płukania i ssania rany w pierwszej dobie, dieta miękka i chłodna, leki przeciwbólowe wg zaleceń, termin kontroli / zdjęcia szwów; ustnie i pisemnie.
+
+**Materiały i narzędzia:** Strzykawka, igła, środek znieczulający miejscowo (konieczne); Kleszcze ekstrakcyjne (konieczne); Dźwignie, syndesmotom, periotom (konieczne); Łyżeczka zębodołowa, kleszczyki (typowe); Gaziki jałowe (konieczne); Miejscowy środek hemostatyczny (np. gąbka żelatynowa, kolagen, kwas traneksamowy) (sytuacyjne); Nici chirurgiczne (wchłanialne / niewchłanialne) (sytuacyjne); Igłotrzymacz, nożyczki, pęseta chirurgiczna (sytuacyjne)
+
+**Kontrola efektu:** kompletność usuniętego zęba (korzenie); hemostaza; połączenie z zatoką (zęby boczne szczęki). Nieprawidłowości: pozostawiony fragment korzenia; połączenie ustno-zatokowe; złamanie wyrostka; uszkodzenie zębów sąsiednich. Dalej: RTG przy wątpliwości; zamknięcie połączenia z zatoką (23.1801); skierowanie przy powikłaniach
+
+**Zalecenia pozabiegowe:** Pacjent: Ucisk gazika 20–30 min.; Zimne okłady w pierwszej dobie.; Leki przeciwbólowe wg zaleceń.. Ograniczenia: Nie płukać, nie ssać rany, nie palić w pierwszej dobie.; Dieta miękka, chłodna do ustąpienia znieczulenia i w pierwszej dobie.. Kontakt z gabinetem, gdy: krwawienie niepoddające się uciskowi; narastający ból po 2–3 dniach (suchy zębodół); obrzęk, gorączka, szczękościsk. Kontrola: Wg potrzeby; zdjęcie szwów po 7–10 dniach.
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Wskazanie, przebieg, kompletność, powikłania — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+- Zgoda pacjenta — *prawne* (`SRC-PRAWA-PACJENTA`)
+
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: pakiet ST01
+
+- zał. 1 (wszyscy): Świadczenie nie obejmuje odpowiedniego znieczulenia.
+- zał. 2 (<18): Świadczenie nie obejmuje odpowiedniego znieczulenia.
+- zał. 2b (<18 (szkoła)): Świadczenie nie obejmuje odpowiedniego znieczulenia.
+
+Reguły: R-ZNI-02
+
+*Pakiet ST01 – NFZ wymaga wskazania znieczulenia z listy ST1 (moduł Opisy NFZ); znieczulenie wliczone w pakiet (R-ZNI-02).*
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K04.1 | Martwica miazgi | martwica miazgi – ząb niekwalifikujący się do leczenia | ocena_kliniczna | tak |
+| K04.5 | Przewlekłe zapalenie tkanek okołowierzchołkowych | przewlekłe zapalenie okołowierzchołkowe | ocena_kliniczna | tak |
+| K04.7 | Ropień okołowierzchołkowy bez przetoki | ropień okołowierzchołkowy | ocena_kliniczna | tak |
+| K02.9 | Próchnica zębów, nieokreślona | próchnica niszcząca koronę – ząb do usunięcia | ocena_kliniczna | tak |
+| K05.3 | Przewlekłe zapalenie przyzębia | zapalenie przyzębia – ząb bez rokowania | ocena_kliniczna | tak |
+| K08.3 | Pozostawiony korzeń zęba | pozostawiony korzeń | ocena_kliniczna | tak |
+| K01.1 | Zęby zaklinowane | ząb zatrzymany | ocena_kliniczna | tak |
+| S02.5 | Złamanie zęba | złamanie zęba (uraz) | ocena_kliniczna | tak |
+| K07.3 | Anomalie położenia zębów | ekstrakcja ze wskazań ortodontycznych (anomalie położenia) | ocena_kliniczna | tak |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [sytuacyjne] Znieczulenie: rodzaj, preparat, dawka, miejsce — *zalecenie kliniczne*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Powikłania – odnotowane albo zaznaczony ich brak przez lekarza — *zalecenie kliniczne*
+- [sytuacyjne] Zgoda pacjenta na zabieg (pisemna przy zabiegu o podwyższonym ryzyku) — *prawne*
+- [zalecane] Zgoda pacjenta na zabieg — *prawne*
+- [zalecane] Kompletność usuniętego zęba / korzeni — *zalecenie kliniczne*
+- [zalecane] Przekazane zalecenia pozabiegowe (pisemnie) — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Ząb {{POLE-ZAB}}: usunięcie zęba. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Zębodół: {{POLE-WYNIK}}. Hemostaza / szwy: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> {{POLE-ZAB}}: usunięcie zęba; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.
+
+**rozszerzony**
+
+> Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. RTG: {{POLE-RTG}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}, miejsce {{POLE-ZNIECZ-MIEJSCE}}. usunięcie zęba. Przebieg: {{POLE-PRZEBIEG}}. Kontrola zębodołu i kompletności korzeni: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola / zdjęcie szwów: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.1702 – Usunięcie zęba wielokorzeniowego
+
+`PROC-23.1702` · **Usunięcie zęba wielokorzeniowego** · chirurgia – ekstrakcje · status: **draft** · kody w Opisach NFZ: ST02
+
+Usunięcie zęba wielokorzeniowego.
+
+**Na czym polega.** Usunięcie zęba wielokorzeniowego kleszczami / dźwignią (ekstrakcja prosta). **Cel:** Usunięcie zęba niekwalifikującego się do leczenia lub ze wskazań (ortodontycznych, protetycznych).
+
+Wskazania: ząb niemożliwy do odbudowy; zaawansowane zapalenie przyzębia; nieskuteczne leczenie endodontyczne; wskazania ortodontyczne / protetyczne; ząb mleczny przetrwały / z powikłaniami
+
+**Kwalifikacja** – ocenić: RTG zęba / okolicy; stan ogólny, ciśnienie (wg wskazań). Wywiad: leki przeciwkrzepliwe i antyagregacyjne; leki antyresorpcyjne (ryzyko martwicy kości); radioterapia głowy i szyi; cukrzyca, choroby serca, ciąża; alergie.
+
+- przeciwwskazanie *wzgledne*: ostre stany ogólne (np. niewyrównana choroba ogólna) – odroczenie / konsultacja
+- przeciwwskazanie *wzgledne*: zaburzenia krzepnięcia bez przygotowania – konsultacja
+- przeciwwskazanie *wzgledne*: leczenie antyresorpcyjne / radioterapia – ocena ryzyka, ewentualnie skierowanie
+- dodatkowa diagnostyka: INR / konsultacja lekarza prowadzącego wg wskazań; CBCT – zęby zatrzymane blisko kanału żuchwy (poza gabinetem)
+- rozważ inne postępowanie: leczenie zachowawcze / endodontyczne, jeśli ząb rokuje; skierowanie do chirurga stomatologa przy zabiegu trudnym
+
+**Przygotowanie** – konieczne: RTG; zgoda; znieczulenie; zestaw ekstrakcyjny; zależne od sytuacji: środek hemostatyczny, szwy
+
+**Przebieg krok po kroku**
+
+1. **Aktualizacja wywiadu, informacja i zgoda** – Sprawdź aktualny wywiad (leki, alergie, ciąża), przedstaw rozpoznanie, plan, alternatywy i ryzyka; uzyskaj zgodę pacjenta. *Uwaga: Szczegóły: badanie BAD-PRZED-LECZENIEM.*
+2. **Znieczulenie miejscowe** – Dobierz metodę (nasiękowe / przewodowe / śródwięzadłowe) do zęba i zabiegu; znieczulenie powierzchniowe miejsca wkłucia (opcjonalnie); aspiracja przed podaniem; podawaj powoli; odnotuj preparat, dawkę i miejsce. *Uwaga: Sprawdź maksymalną dawkę dla masy ciała i choroby ogólne (środek obkurczający naczynia).* Warianty: bez znieczulenia – przy zabiegach nieinwazyjnych lub na życzenie pacjenta, jeśli nie powoduje bólu.
+3. **Usunięcie zęba** – Oddzielenie dziąsła (syndesmotomia), zwichnięcie i usunięcie zęba kleszczami / dźwignią z kontrolą siły; kontrola kompletności korzeni. *Uwaga: Przy zębach wielokorzeniowych rozważ separację korzeni.*
+4. **Opracowanie zębodołu** – Kontrola zębodołu, usunięcie ziarniny i odłamów, wygładzenie ostrych brzegów kostnych, kontrola połączenia z zatoką (zęby boczne szczęki).
+5. **Zatamowanie krwawienia** – Ucisk gazikiem, w razie potrzeby środki hemostatyczne miejscowe i szwy; ocena skuteczności. *Uwaga: U pacjentów na lekach przeciwkrzepliwych – postępowanie wg zaleceń, bez samodzielnego odstawiania leków.*
+6. **Szycie rany** – Ułożenie płata / brzegów rany i założenie szwów (rodzaj nici wg przypadku); termin zdjęcia szwów. **W tej procedurze:** gdy wskazane
+7. **Zalecenia po zabiegu chirurgicznym** – Ucisk gazika 20–30 min, zimne okłady, bez płukania i ssania rany w pierwszej dobie, dieta miękka i chłodna, leki przeciwbólowe wg zaleceń, termin kontroli / zdjęcia szwów; ustnie i pisemnie.
+
+**Materiały i narzędzia:** Strzykawka, igła, środek znieczulający miejscowo (konieczne); Kleszcze ekstrakcyjne (konieczne); Dźwignie, syndesmotom, periotom (konieczne); Łyżeczka zębodołowa, kleszczyki (typowe); Gaziki jałowe (konieczne); Miejscowy środek hemostatyczny (np. gąbka żelatynowa, kolagen, kwas traneksamowy) (sytuacyjne); Nici chirurgiczne (wchłanialne / niewchłanialne) (sytuacyjne); Igłotrzymacz, nożyczki, pęseta chirurgiczna (sytuacyjne)
+
+**Kontrola efektu:** kompletność usuniętego zęba (korzenie); hemostaza; połączenie z zatoką (zęby boczne szczęki). Nieprawidłowości: pozostawiony fragment korzenia; połączenie ustno-zatokowe; złamanie wyrostka; uszkodzenie zębów sąsiednich. Dalej: RTG przy wątpliwości; zamknięcie połączenia z zatoką (23.1801); skierowanie przy powikłaniach
+
+**Zalecenia pozabiegowe:** Pacjent: Ucisk gazika 20–30 min.; Zimne okłady w pierwszej dobie.; Leki przeciwbólowe wg zaleceń.. Ograniczenia: Nie płukać, nie ssać rany, nie palić w pierwszej dobie.; Dieta miękka, chłodna do ustąpienia znieczulenia i w pierwszej dobie.. Kontakt z gabinetem, gdy: krwawienie niepoddające się uciskowi; narastający ból po 2–3 dniach (suchy zębodół); obrzęk, gorączka, szczękościsk. Kontrola: Wg potrzeby; zdjęcie szwów po 7–10 dniach.
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Wskazanie, przebieg, kompletność, powikłania — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+- Zgoda pacjenta — *prawne* (`SRC-PRAWA-PACJENTA`)
+
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: pakiet ST02
+
+- zał. 1 (wszyscy): Świadczenie nie obejmuje odpowiedniego znieczulenia.
+- zał. 2 (<18): Świadczenie nie obejmuje odpowiedniego znieczulenia.
+- zał. 2b (<18 (szkoła)): Świadczenie nie obejmuje odpowiedniego znieczulenia.
+
+Reguły: R-ZNI-02
+
+*Pakiet ST02 – NFZ wymaga wskazania znieczulenia z listy ST1 (moduł Opisy NFZ); znieczulenie wliczone w pakiet (R-ZNI-02).*
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K04.1 | Martwica miazgi | martwica miazgi – ząb niekwalifikujący się do leczenia | ocena_kliniczna | tak |
+| K04.5 | Przewlekłe zapalenie tkanek okołowierzchołkowych | przewlekłe zapalenie okołowierzchołkowe | ocena_kliniczna | tak |
+| K04.7 | Ropień okołowierzchołkowy bez przetoki | ropień okołowierzchołkowy | ocena_kliniczna | tak |
+| K02.9 | Próchnica zębów, nieokreślona | próchnica niszcząca koronę – ząb do usunięcia | ocena_kliniczna | tak |
+| K05.3 | Przewlekłe zapalenie przyzębia | zapalenie przyzębia – ząb bez rokowania | ocena_kliniczna | tak |
+| K08.3 | Pozostawiony korzeń zęba | pozostawiony korzeń | ocena_kliniczna | tak |
+| K01.1 | Zęby zaklinowane | ząb zatrzymany | ocena_kliniczna | tak |
+| S02.5 | Złamanie zęba | złamanie zęba (uraz) | ocena_kliniczna | tak |
+| K07.3 | Anomalie położenia zębów | ekstrakcja ze wskazań ortodontycznych (anomalie położenia) | ocena_kliniczna | tak |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [sytuacyjne] Znieczulenie: rodzaj, preparat, dawka, miejsce — *zalecenie kliniczne*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Powikłania – odnotowane albo zaznaczony ich brak przez lekarza — *zalecenie kliniczne*
+- [sytuacyjne] Zgoda pacjenta na zabieg (pisemna przy zabiegu o podwyższonym ryzyku) — *prawne*
+- [zalecane] Zgoda pacjenta na zabieg — *prawne*
+- [zalecane] Kompletność usuniętego zęba / korzeni — *zalecenie kliniczne*
+- [zalecane] Przekazane zalecenia pozabiegowe (pisemnie) — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Ząb {{POLE-ZAB}}: usunięcie zęba. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Zębodół: {{POLE-WYNIK}}. Hemostaza / szwy: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> {{POLE-ZAB}}: usunięcie zęba; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.
+
+**rozszerzony**
+
+> Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. RTG: {{POLE-RTG}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}, miejsce {{POLE-ZNIECZ-MIEJSCE}}. usunięcie zęba. Przebieg: {{POLE-PRZEBIEG}}. Kontrola zębodołu i kompletności korzeni: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola / zdjęcie szwów: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.1703 – Usunięcie głęboko złamanego zęba poprzez dłutowanie wewnątrzzębodołowe przy zastosowaniu wierteł, dźwigni
+
+`PROC-23.1703` · **Dłutowanie wewnątrzzębodołowe** · chirurgia – ekstrakcje · status: **draft**
+
+Usunięcie głęboko złamanego zęba poprzez dłutowanie wewnątrzzębodołowe przy zastosowaniu wiertła.
+
+**Na czym polega.** Separacja i usunięcie korzeni wiertłem w obrębie zębodołu, bez płata. **Cel:** Usunięcie głęboko złamanego zęba / korzeni.
+
+Wskazania: złamanie zęba podczas ekstrakcji; głęboko zniszczony ząb wielokorzeniowy; pozostawione korzenie
+
+**Kwalifikacja** – ocenić: RTG zęba / okolicy; stan ogólny, ciśnienie (wg wskazań). Wywiad: leki przeciwkrzepliwe i antyagregacyjne; leki antyresorpcyjne (ryzyko martwicy kości); radioterapia głowy i szyi; cukrzyca, choroby serca, ciąża; alergie.
+
+- przeciwwskazanie *wzgledne*: ostre stany ogólne (np. niewyrównana choroba ogólna) – odroczenie / konsultacja
+- przeciwwskazanie *wzgledne*: zaburzenia krzepnięcia bez przygotowania – konsultacja
+- przeciwwskazanie *wzgledne*: leczenie antyresorpcyjne / radioterapia – ocena ryzyka, ewentualnie skierowanie
+- dodatkowa diagnostyka: INR / konsultacja lekarza prowadzącego wg wskazań; CBCT – zęby zatrzymane blisko kanału żuchwy (poza gabinetem)
+- rozważ inne postępowanie: leczenie zachowawcze / endodontyczne, jeśli ząb rokuje; skierowanie do chirurga stomatologa przy zabiegu trudnym
+
+**Przygotowanie** – konieczne: RTG; zgoda; znieczulenie; wiertła chirurgiczne z chłodzeniem
+
+**Przebieg krok po kroku**
+
+1. **Aktualizacja wywiadu, informacja i zgoda** – Sprawdź aktualny wywiad (leki, alergie, ciąża), przedstaw rozpoznanie, plan, alternatywy i ryzyka; uzyskaj zgodę pacjenta. *Uwaga: Szczegóły: badanie BAD-PRZED-LECZENIEM.*
+2. **Znieczulenie miejscowe** – Dobierz metodę (nasiękowe / przewodowe / śródwięzadłowe) do zęba i zabiegu; znieczulenie powierzchniowe miejsca wkłucia (opcjonalnie); aspiracja przed podaniem; podawaj powoli; odnotuj preparat, dawkę i miejsce. *Uwaga: Sprawdź maksymalną dawkę dla masy ciała i choroby ogólne (środek obkurczający naczynia).* Warianty: bez znieczulenia – przy zabiegach nieinwazyjnych lub na życzenie pacjenta, jeśli nie powoduje bólu.
+3. **Dłutowanie wewnątrzzębodołowe** – Separacja korzeni wiertłem chirurgicznym w obrębie zębodołu i usunięcie fragmentów dźwigniami bez odwarstwienia płata.
+4. **Opracowanie zębodołu** – Kontrola zębodołu, usunięcie ziarniny i odłamów, wygładzenie ostrych brzegów kostnych, kontrola połączenia z zatoką (zęby boczne szczęki).
+5. **Zatamowanie krwawienia** – Ucisk gazikiem, w razie potrzeby środki hemostatyczne miejscowe i szwy; ocena skuteczności. *Uwaga: U pacjentów na lekach przeciwkrzepliwych – postępowanie wg zaleceń, bez samodzielnego odstawiania leków.*
+6. **Szycie rany** – Ułożenie płata / brzegów rany i założenie szwów (rodzaj nici wg przypadku); termin zdjęcia szwów.
+7. **Zalecenia po zabiegu chirurgicznym** – Ucisk gazika 20–30 min, zimne okłady, bez płukania i ssania rany w pierwszej dobie, dieta miękka i chłodna, leki przeciwbólowe wg zaleceń, termin kontroli / zdjęcia szwów; ustnie i pisemnie.
+
+**Materiały i narzędzia:** Strzykawka, igła, środek znieczulający miejscowo (konieczne); Kleszcze ekstrakcyjne (konieczne); Dźwignie, syndesmotom, periotom (konieczne); Łyżeczka zębodołowa, kleszczyki (typowe); Gaziki jałowe (konieczne); Miejscowy środek hemostatyczny (np. gąbka żelatynowa, kolagen, kwas traneksamowy) (sytuacyjne); Nici chirurgiczne (wchłanialne / niewchłanialne) (sytuacyjne); Igłotrzymacz, nożyczki, pęseta chirurgiczna (sytuacyjne); Wiertła chirurgiczne, prostnica / kątnica chirurgiczna z chłodzeniem solą (konieczne); Sól fizjologiczna jałowa (konieczne)
+
+**Kontrola efektu:** kompletność usuniętego zęba (korzenie); hemostaza; połączenie z zatoką (zęby boczne szczęki). Nieprawidłowości: pozostawiony fragment korzenia; połączenie ustno-zatokowe; złamanie wyrostka; uszkodzenie zębów sąsiednich. Dalej: RTG przy wątpliwości; zamknięcie połączenia z zatoką (23.1801); skierowanie przy powikłaniach
+
+**Zalecenia pozabiegowe:** Pacjent: Ucisk gazika 20–30 min.; Zimne okłady w pierwszej dobie.; Leki przeciwbólowe wg zaleceń.. Ograniczenia: Nie płukać, nie ssać rany, nie palić w pierwszej dobie.; Dieta miękka, chłodna do ustąpienia znieczulenia i w pierwszej dobie.. Kontakt z gabinetem, gdy: krwawienie niepoddające się uciskowi; narastający ból po 2–3 dniach (suchy zębodół); obrzęk, gorączka, szczękościsk. Kontrola: Wg potrzeby; zdjęcie szwów po 7–10 dniach.
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Przebieg dłutowania, kompletność — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+- Zgoda pacjenta — *prawne* (`SRC-PRAWA-PACJENTA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.3 | Pozostawiony korzeń zęba | pozostawiony korzeń | ocena_kliniczna | nie |
+| K02.9 | Próchnica zębów, nieokreślona | próchnica niszcząca koronę – ząb do usunięcia | ocena_kliniczna | nie |
+| S02.5 | Złamanie zęba | złamanie zęba (uraz) | ocena_kliniczna | nie |
+| K04.5 | Przewlekłe zapalenie tkanek okołowierzchołkowych | przewlekłe zapalenie okołowierzchołkowe | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [sytuacyjne] Znieczulenie: rodzaj, preparat, dawka, miejsce — *zalecenie kliniczne*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Powikłania – odnotowane albo zaznaczony ich brak przez lekarza — *zalecenie kliniczne*
+- [sytuacyjne] Zgoda pacjenta na zabieg (pisemna przy zabiegu o podwyższonym ryzyku) — *prawne*
+- [zalecane] Zgoda pacjenta na zabieg — *prawne*
+- [zalecane] Kompletność usuniętego zęba / korzeni — *zalecenie kliniczne*
+- [zalecane] Przekazane zalecenia pozabiegowe (pisemnie) — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Ząb {{POLE-ZAB}}: usunięcie zęba przez dłutowanie wewnątrzzębodołowe. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Zębodół: {{POLE-WYNIK}}. Hemostaza / szwy: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> {{POLE-ZAB}}: usunięcie zęba przez dłutowanie wewnątrzzębodołowe; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.
+
+**rozszerzony**
+
+> Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. RTG: {{POLE-RTG}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}, miejsce {{POLE-ZNIECZ-MIEJSCE}}. usunięcie zęba przez dłutowanie wewnątrzzębodołowe. Przebieg: {{POLE-PRZEBIEG}}. Kontrola zębodołu i kompletności korzeni: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola / zdjęcie szwów: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.1704 – Usunięcie zęba przez dłutowanie zewnątrzzębodołowe z wytworzeniem płata śluzówkowo-okostnowego
+
+`PROC-23.1704` · **Dłutowanie zewnątrzzębodołowe z płatem** · chirurgia – ekstrakcje · status: **draft**
+
+Usunięcie zęba przez dłutowanie zewnątrzzębodołowe z wytworzeniem płata śluzówkowo-okostnowego.
+
+**Na czym polega.** Odwarstwienie płata, usunięcie kości, separacja i usunięcie zęba / korzeni, szycie. **Cel:** Usunięcie zęba / korzeni niedostępnych ekstrakcją prostą.
+
+Wskazania: korzenie głęboko w kości; zęby z hipercementozą / zakrzywionymi korzeniami; nieudana ekstrakcja prosta
+
+**Kwalifikacja** – ocenić: RTG zęba / okolicy; stan ogólny, ciśnienie (wg wskazań). Wywiad: leki przeciwkrzepliwe i antyagregacyjne; leki antyresorpcyjne (ryzyko martwicy kości); radioterapia głowy i szyi; cukrzyca, choroby serca, ciąża; alergie.
+
+- przeciwwskazanie *wzgledne*: ostre stany ogólne (np. niewyrównana choroba ogólna) – odroczenie / konsultacja
+- przeciwwskazanie *wzgledne*: zaburzenia krzepnięcia bez przygotowania – konsultacja
+- przeciwwskazanie *wzgledne*: leczenie antyresorpcyjne / radioterapia – ocena ryzyka, ewentualnie skierowanie
+- dodatkowa diagnostyka: INR / konsultacja lekarza prowadzącego wg wskazań; CBCT – zęby zatrzymane blisko kanału żuchwy (poza gabinetem)
+- rozważ inne postępowanie: leczenie zachowawcze / endodontyczne, jeśli ząb rokuje; skierowanie do chirurga stomatologa przy zabiegu trudnym
+
+**Przygotowanie** – konieczne: RTG; zgoda pisemna; znieczulenie; zestaw chirurgiczny, wiertła z chłodzeniem, nici
+
+**Przebieg krok po kroku**
+
+1. **Aktualizacja wywiadu, informacja i zgoda** – Sprawdź aktualny wywiad (leki, alergie, ciąża), przedstaw rozpoznanie, plan, alternatywy i ryzyka; uzyskaj zgodę pacjenta. *Uwaga: Szczegóły: badanie BAD-PRZED-LECZENIEM.*
+2. **Znieczulenie miejscowe** – Dobierz metodę (nasiękowe / przewodowe / śródwięzadłowe) do zęba i zabiegu; znieczulenie powierzchniowe miejsca wkłucia (opcjonalnie); aspiracja przed podaniem; podawaj powoli; odnotuj preparat, dawkę i miejsce. *Uwaga: Sprawdź maksymalną dawkę dla masy ciała i choroby ogólne (środek obkurczający naczynia).* Warianty: bez znieczulenia – przy zabiegach nieinwazyjnych lub na życzenie pacjenta, jeśli nie powoduje bólu.
+3. **Wytworzenie płata śluzówkowo-okostnowego** – Cięcie (np. brzeżne z cięciem pionowym), odwarstwienie płata śluzówkowo-okostnowego, ochrona tkanek miękkich.
+4. **Usunięcie kości (dłutowanie zewnątrzzębodołowe)** – Usunięcie fragmentu kości wiertłem z chłodzeniem w celu dostępu do korzenia / zęba; separacja i usunięcie.
+5. **Usunięcie zęba** – Oddzielenie dziąsła (syndesmotomia), zwichnięcie i usunięcie zęba kleszczami / dźwignią z kontrolą siły; kontrola kompletności korzeni. *Uwaga: Przy zębach wielokorzeniowych rozważ separację korzeni.*
+6. **Opracowanie zębodołu** – Kontrola zębodołu, usunięcie ziarniny i odłamów, wygładzenie ostrych brzegów kostnych, kontrola połączenia z zatoką (zęby boczne szczęki).
+7. **Zatamowanie krwawienia** – Ucisk gazikiem, w razie potrzeby środki hemostatyczne miejscowe i szwy; ocena skuteczności. *Uwaga: U pacjentów na lekach przeciwkrzepliwych – postępowanie wg zaleceń, bez samodzielnego odstawiania leków.*
+8. **Szycie rany** – Ułożenie płata / brzegów rany i założenie szwów (rodzaj nici wg przypadku); termin zdjęcia szwów.
+9. **Zalecenia po zabiegu chirurgicznym** – Ucisk gazika 20–30 min, zimne okłady, bez płukania i ssania rany w pierwszej dobie, dieta miękka i chłodna, leki przeciwbólowe wg zaleceń, termin kontroli / zdjęcia szwów; ustnie i pisemnie.
+
+**Materiały i narzędzia:** Strzykawka, igła, środek znieczulający miejscowo (konieczne); Kleszcze ekstrakcyjne (konieczne); Dźwignie, syndesmotom, periotom (konieczne); Łyżeczka zębodołowa, kleszczyki (typowe); Gaziki jałowe (konieczne); Miejscowy środek hemostatyczny (np. gąbka żelatynowa, kolagen, kwas traneksamowy) (sytuacyjne); Nici chirurgiczne (wchłanialne / niewchłanialne) (sytuacyjne); Igłotrzymacz, nożyczki, pęseta chirurgiczna (sytuacyjne); Skalpel, raspator, haczyki (konieczne); Wiertła chirurgiczne, prostnica / kątnica chirurgiczna z chłodzeniem solą (konieczne); Sól fizjologiczna jałowa (konieczne); Nici chirurgiczne (wchłanialne / niewchłanialne) (konieczne); Igłotrzymacz, nożyczki, pęseta chirurgiczna (konieczne)
+
+**Kontrola efektu:** kompletność usuniętego zęba (korzenie); hemostaza; połączenie z zatoką (zęby boczne szczęki). Nieprawidłowości: pozostawiony fragment korzenia; połączenie ustno-zatokowe; złamanie wyrostka; uszkodzenie zębów sąsiednich. Dalej: RTG przy wątpliwości; zamknięcie połączenia z zatoką (23.1801); skierowanie przy powikłaniach
+
+**Zalecenia pozabiegowe:** Pacjent: Ucisk gazika 20–30 min.; Zimne okłady w pierwszej dobie.; Leki przeciwbólowe wg zaleceń.. Ograniczenia: Nie płukać, nie ssać rany, nie palić w pierwszej dobie.; Dieta miękka, chłodna do ustąpienia znieczulenia i w pierwszej dobie.. Kontakt z gabinetem, gdy: krwawienie niepoddające się uciskowi; narastający ból po 2–3 dniach (suchy zębodół); obrzęk, gorączka, szczękościsk. Kontrola: Wg potrzeby; zdjęcie szwów po 7–10 dniach.
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Rodzaj płata, zakres osteotomii, szwy — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+- Zgoda pacjenta (pisemna) — *prawne* (`SRC-PRAWA-PACJENTA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.3 | Pozostawiony korzeń zęba | pozostawiony korzeń | ocena_kliniczna | nie |
+| K01.1 | Zęby zaklinowane | ząb zatrzymany | ocena_kliniczna | nie |
+| K04.5 | Przewlekłe zapalenie tkanek okołowierzchołkowych | przewlekłe zapalenie okołowierzchołkowe | ocena_kliniczna | nie |
+| K02.9 | Próchnica zębów, nieokreślona | próchnica niszcząca koronę – ząb do usunięcia | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [sytuacyjne] Znieczulenie: rodzaj, preparat, dawka, miejsce — *zalecenie kliniczne*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Powikłania – odnotowane albo zaznaczony ich brak przez lekarza — *zalecenie kliniczne*
+- [sytuacyjne] Zgoda pacjenta na zabieg (pisemna przy zabiegu o podwyższonym ryzyku) — *prawne*
+- [zalecane] Zgoda pacjenta na zabieg — *prawne*
+- [zalecane] Kompletność usuniętego zęba / korzeni — *zalecenie kliniczne*
+- [zalecane] Przekazane zalecenia pozabiegowe (pisemnie) — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Ząb {{POLE-ZAB}}: usunięcie zęba przez dłutowanie zewnątrzzębodołowe z płatem. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Zębodół: {{POLE-WYNIK}}. Hemostaza / szwy: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> {{POLE-ZAB}}: usunięcie zęba przez dłutowanie zewnątrzzębodołowe z płatem; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.
+
+**rozszerzony**
+
+> Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. RTG: {{POLE-RTG}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}, miejsce {{POLE-ZNIECZ-MIEJSCE}}. usunięcie zęba przez dłutowanie zewnątrzzębodołowe z płatem. Przebieg: {{POLE-PRZEBIEG}}. Kontrola zębodołu i kompletności korzeni: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola / zdjęcie szwów: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.1809 – Chirurgiczne zaopatrzenie małej rany obejmującej do 3 zębodołów włącznie ze szwem
+
+`PROC-23.1809` · **Zaopatrzenie małej rany ze szwem** · chirurgia stomatologiczna · status: **draft**
+
+Chirurgiczne zaopatrzenie małej rany obejmującej do 3 zębodołów włącznie ze szwem.
+
+**Na czym polega.** Opracowanie i zszycie rany (np. po ekstrakcjach mnogich, urazie) obejmującej do 3 zębodołów. **Cel:** Hemostaza i gojenie rany.
+
+Wskazania: rana poekstrakcyjna mnoga; rana urazowa błony śluzowej wyrostka
+
+**Kwalifikacja** – ocenić: RTG zęba / okolicy; stan ogólny, ciśnienie (wg wskazań). Wywiad: leki przeciwkrzepliwe i antyagregacyjne; leki antyresorpcyjne (ryzyko martwicy kości); radioterapia głowy i szyi; cukrzyca, choroby serca, ciąża; alergie.
+
+- przeciwwskazanie *wzgledne*: ostre stany ogólne (np. niewyrównana choroba ogólna) – odroczenie / konsultacja
+- przeciwwskazanie *wzgledne*: zaburzenia krzepnięcia bez przygotowania – konsultacja
+- przeciwwskazanie *wzgledne*: leczenie antyresorpcyjne / radioterapia – ocena ryzyka, ewentualnie skierowanie
+- dodatkowa diagnostyka: INR / konsultacja lekarza prowadzącego wg wskazań; CBCT – zęby zatrzymane blisko kanału żuchwy (poza gabinetem)
+- rozważ inne postępowanie: leczenie zachowawcze / endodontyczne, jeśli ząb rokuje; skierowanie do chirurga stomatologa przy zabiegu trudnym
+
+**Przygotowanie** – konieczne: znieczulenie, nici, igłotrzymacz
+
+**Przebieg krok po kroku**
+
+1. **Znieczulenie miejscowe** – Dobierz metodę (nasiękowe / przewodowe / śródwięzadłowe) do zęba i zabiegu; znieczulenie powierzchniowe miejsca wkłucia (opcjonalnie); aspiracja przed podaniem; podawaj powoli; odnotuj preparat, dawkę i miejsce. *Uwaga: Sprawdź maksymalną dawkę dla masy ciała i choroby ogólne (środek obkurczający naczynia).* Warianty: bez znieczulenia – przy zabiegach nieinwazyjnych lub na życzenie pacjenta, jeśli nie powoduje bólu.
+2. **Opracowanie zębodołu** – Kontrola zębodołu, usunięcie ziarniny i odłamów, wygładzenie ostrych brzegów kostnych, kontrola połączenia z zatoką (zęby boczne szczęki).
+3. **Zatamowanie krwawienia** – Ucisk gazikiem, w razie potrzeby środki hemostatyczne miejscowe i szwy; ocena skuteczności. *Uwaga: U pacjentów na lekach przeciwkrzepliwych – postępowanie wg zaleceń, bez samodzielnego odstawiania leków.*
+4. **Szycie rany** – Ułożenie płata / brzegów rany i założenie szwów (rodzaj nici wg przypadku); termin zdjęcia szwów.
+5. **Zalecenia po zabiegu chirurgicznym** – Ucisk gazika 20–30 min, zimne okłady, bez płukania i ssania rany w pierwszej dobie, dieta miękka i chłodna, leki przeciwbólowe wg zaleceń, termin kontroli / zdjęcia szwów; ustnie i pisemnie.
+
+**Materiały i narzędzia:** Strzykawka, igła, środek znieczulający miejscowo (typowe); Nici chirurgiczne (wchłanialne / niewchłanialne) (konieczne); Igłotrzymacz, nożyczki, pęseta chirurgiczna (konieczne); Gaziki jałowe (konieczne); Sól fizjologiczna jałowa (typowe)
+
+**Kontrola efektu:** hemostaza; przyleganie brzegów rany
+
+**Zalecenia pozabiegowe:** Pacjent: Ucisk gazika 20–30 min.; Zimne okłady w pierwszej dobie.; Leki przeciwbólowe wg zaleceń.. Ograniczenia: Nie płukać, nie ssać rany, nie palić w pierwszej dobie.; Dieta miękka, chłodna do ustąpienia znieczulenia i w pierwszej dobie.. Kontakt z gabinetem, gdy: krwawienie niepoddające się uciskowi; narastający ból po 2–3 dniach (suchy zębodół); obrzęk, gorączka, szczękościsk. Kontrola: Wg potrzeby; zdjęcie szwów po 7–10 dniach.
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Lokalizacja i rozległość rany, rodzaj szwów — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: pakiet ST27
+
+- zał. 1 (wszyscy)
+- zał. 2 (<18)
+- zał. 2b (<18 (szkoła))
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [sytuacyjne] Znieczulenie: rodzaj, preparat, dawka, miejsce — *zalecenie kliniczne*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Powikłania – odnotowane albo zaznaczony ich brak przez lekarza — *zalecenie kliniczne*
+- [sytuacyjne] Zgoda pacjenta na zabieg (pisemna przy zabiegu o podwyższonym ryzyku) — *prawne*
+- [zalecane] Lokalizacja rany — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Zaopatrzenie rany {{POLE-LOKALIZACJA}}: szwy {{POLE-MATERIAL}}. Powikłania: {{POLE-POWIKLANIA}}. Zdjęcie szwów: {{POLE-KONTROLA}}.
+
+**skrocony**
+
+> Rana {{POLE-LOKALIZACJA}} – szwy.
+
+**rozszerzony**
+
+> ZAOPATRZENIE RANY: lokalizacja {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Szwy: {{POLE-MATERIAL}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Zdjęcie szwów: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.1813 – Zatamowanie krwawienia w obrębie jamy ustnej - nie zaliczane w bezpośrednim połączeniu z zabiegiem chirurgicznym, chyba że zajmuje niewspółmiernie dużo czasu
+
+`PROC-23.1813` · **Zatamowanie krwawienia** · chirurgia stomatologiczna · status: **draft**
+
+Zatamowanie krwawienia w obrębie jamy ustnej (niezwiązane bezpośrednio z zabiegiem).
+
+**Na czym polega.** Opanowanie krwawienia (np. wtórnego po ekstrakcji): oczyszczenie, ucisk, środki hemostatyczne, szwy. **Cel:** Zatrzymanie krwawienia.
+
+Wskazania: krwawienie wtórne po ekstrakcji; krwawienie z rany jamy ustnej
+
+**Kwalifikacja** – ocenić: źródło krwawienia; stan ogólny (tętno, ciśnienie); leki przeciwkrzepliwe – data, INR. Wywiad: leki przeciwkrzepliwe i antyagregacyjne; leki antyresorpcyjne (ryzyko martwicy kości); radioterapia głowy i szyi; cukrzyca, choroby serca, ciąża; alergie.
+
+- przeciwwskazanie *wzgledne*: ostre stany ogólne (np. niewyrównana choroba ogólna) – odroczenie / konsultacja
+- przeciwwskazanie *wzgledne*: zaburzenia krzepnięcia bez przygotowania – konsultacja
+- przeciwwskazanie *wzgledne*: leczenie antyresorpcyjne / radioterapia – ocena ryzyka, ewentualnie skierowanie
+- dodatkowa diagnostyka: INR / konsultacja lekarza prowadzącego wg wskazań; CBCT – zęby zatrzymane blisko kanału żuchwy (poza gabinetem)
+- rozważ inne postępowanie: leczenie zachowawcze / endodontyczne, jeśli ząb rokuje; skierowanie do chirurga stomatologa przy zabiegu trudnym
+
+**Przygotowanie** – konieczne: ssak, gaziki, środki hemostatyczne, nici
+
+**Przebieg krok po kroku**
+
+1. **Znieczulenie miejscowe** – Dobierz metodę (nasiękowe / przewodowe / śródwięzadłowe) do zęba i zabiegu; znieczulenie powierzchniowe miejsca wkłucia (opcjonalnie); aspiracja przed podaniem; podawaj powoli; odnotuj preparat, dawkę i miejsce. *Uwaga: Sprawdź maksymalną dawkę dla masy ciała i choroby ogólne (środek obkurczający naczynia).* Warianty: bez znieczulenia – przy zabiegach nieinwazyjnych lub na życzenie pacjenta, jeśli nie powoduje bólu.
+2. **Zatamowanie krwawienia** – Ucisk gazikiem, w razie potrzeby środki hemostatyczne miejscowe i szwy; ocena skuteczności. *Uwaga: U pacjentów na lekach przeciwkrzepliwych – postępowanie wg zaleceń, bez samodzielnego odstawiania leków.*
+3. **Szycie rany** – Ułożenie płata / brzegów rany i założenie szwów (rodzaj nici wg przypadku); termin zdjęcia szwów.
+4. **Zalecenia po zabiegu chirurgicznym** – Ucisk gazika 20–30 min, zimne okłady, bez płukania i ssania rany w pierwszej dobie, dieta miękka i chłodna, leki przeciwbólowe wg zaleceń, termin kontroli / zdjęcia szwów; ustnie i pisemnie.
+
+**Materiały i narzędzia:** Gaziki jałowe (konieczne); Miejscowy środek hemostatyczny (np. gąbka żelatynowa, kolagen, kwas traneksamowy) (konieczne); Nici chirurgiczne (wchłanialne / niewchłanialne) (typowe); Igłotrzymacz, nożyczki, pęseta chirurgiczna (typowe); Strzykawka, igła, środek znieczulający miejscowo (sytuacyjne)
+
+**Kontrola efektu:** skuteczność hemostazy po 15–30 min obserwacji. Dalej: brak opanowania / zaburzenia krzepnięcia – pilne skierowanie
+
+**Zalecenia pozabiegowe:** Pacjent: Ucisk gazika 20–30 min.; Zimne okłady w pierwszej dobie.; Leki przeciwbólowe wg zaleceń.. Ograniczenia: Nie płukać, nie ssać rany, nie palić w pierwszej dobie.; Dieta miękka, chłodna do ustąpienia znieczulenia i w pierwszej dobie.. Kontakt z gabinetem, gdy: krwawienie niepoddające się uciskowi; narastający ból po 2–3 dniach (suchy zębodół); obrzęk, gorączka, szczękościsk. Kontrola: Wg potrzeby; zdjęcie szwów po 7–10 dniach.
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Źródło krwawienia, zastosowane metody, stan po — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [sytuacyjne] Znieczulenie: rodzaj, preparat, dawka, miejsce — *zalecenie kliniczne*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Powikłania – odnotowane albo zaznaczony ich brak przez lekarza — *zalecenie kliniczne*
+- [zalecane] Leki przeciwkrzepliwe (wywiad) — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Zatamowanie krwawienia: {{POLE-LOKALIZACJA}}. Metoda: {{POLE-PRZEBIEG}}. Wynik: {{POLE-WYNIK}}.
+
+**skrocony**
+
+> Krwawienie {{POLE-LOKALIZACJA}} – opanowane: {{POLE-WYNIK}}.
+
+**rozszerzony**
+
+> ZATAMOWANIE KRWAWIENIA: lokalizacja {{POLE-LOKALIZACJA}}. Przyczyna: {{POLE-WSKAZANIE}}. Leki przeciwkrzepliwe: {{POLE-WYW-LEKI}}. Postępowanie: {{POLE-PRZEBIEG}}. Wynik: {{POLE-WYNIK}}. Zalecenia: {{POLE-ZALECENIA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.1815 – Założenie opatrunku chirurgicznego
+
+`PROC-23.1815` · **Opatrunek chirurgiczny** · chirurgia stomatologiczna · status: **draft**
+
+Założenie opatrunku chirurgicznego.
+
+**Na czym polega.** Założenie opatrunku do zębodołu / na ranę (np. przy zapaleniu zębodołu – suchy zębodół). **Cel:** Ochrona rany, łagodzenie bólu, wspomaganie gojenia.
+
+Wskazania: zapalenie zębodołu (suchy zębodół); ochrona rany po zabiegu
+
+**Kwalifikacja** – ocenić: RTG zęba / okolicy; stan ogólny, ciśnienie (wg wskazań). Wywiad: leki przeciwkrzepliwe i antyagregacyjne; leki antyresorpcyjne (ryzyko martwicy kości); radioterapia głowy i szyi; cukrzyca, choroby serca, ciąża; alergie.
+
+- przeciwwskazanie *wzgledne*: ostre stany ogólne (np. niewyrównana choroba ogólna) – odroczenie / konsultacja
+- przeciwwskazanie *wzgledne*: zaburzenia krzepnięcia bez przygotowania – konsultacja
+- przeciwwskazanie *wzgledne*: leczenie antyresorpcyjne / radioterapia – ocena ryzyka, ewentualnie skierowanie
+- dodatkowa diagnostyka: INR / konsultacja lekarza prowadzącego wg wskazań; CBCT – zęby zatrzymane blisko kanału żuchwy (poza gabinetem)
+- rozważ inne postępowanie: leczenie zachowawcze / endodontyczne, jeśli ząb rokuje; skierowanie do chirurga stomatologa przy zabiegu trudnym
+
+**Przygotowanie** – konieczne: opatrunek, płukanie solą
+
+**Przebieg krok po kroku**
+
+1. **Znieczulenie miejscowe** – Dobierz metodę (nasiękowe / przewodowe / śródwięzadłowe) do zęba i zabiegu; znieczulenie powierzchniowe miejsca wkłucia (opcjonalnie); aspiracja przed podaniem; podawaj powoli; odnotuj preparat, dawkę i miejsce. *Uwaga: Sprawdź maksymalną dawkę dla masy ciała i choroby ogólne (środek obkurczający naczynia).* Warianty: bez znieczulenia – przy zabiegach nieinwazyjnych lub na życzenie pacjenta, jeśli nie powoduje bólu.
+2. **Opracowanie zębodołu** – Kontrola zębodołu, usunięcie ziarniny i odłamów, wygładzenie ostrych brzegów kostnych, kontrola połączenia z zatoką (zęby boczne szczęki).
+3. **Opatrunek chirurgiczny** – Założenie opatrunku do zębodołu / na ranę (np. opatrunek resorbowalny, sączek z preparatem) zależnie od wskazania.
+4. **Zalecenia po zabiegu chirurgicznym** – Ucisk gazika 20–30 min, zimne okłady, bez płukania i ssania rany w pierwszej dobie, dieta miękka i chłodna, leki przeciwbólowe wg zaleceń, termin kontroli / zdjęcia szwów; ustnie i pisemnie.
+
+**Materiały i narzędzia:** Opatrunek do zębodołu (konieczne); Sól fizjologiczna jałowa (typowe); Strzykawka, igła, środek znieczulający miejscowo (sytuacyjne)
+
+**Kontrola efektu:** ułożenie opatrunku. Dalej: kontrola / wymiana opatrunku wg potrzeby
+
+**Zalecenia pozabiegowe:** Pacjent: Ucisk gazika 20–30 min.; Zimne okłady w pierwszej dobie.; Leki przeciwbólowe wg zaleceń.. Ograniczenia: Nie płukać, nie ssać rany, nie palić w pierwszej dobie.; Dieta miękka, chłodna do ustąpienia znieczulenia i w pierwszej dobie.. Kontakt z gabinetem, gdy: krwawienie niepoddające się uciskowi; narastający ból po 2–3 dniach (suchy zębodół); obrzęk, gorączka, szczękościsk. Kontrola: Wg potrzeby; zdjęcie szwów po 7–10 dniach.
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Wskazanie i rodzaj opatrunku — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: pakiet ST26; pakiet ST31
+
+- zał. 1 (wszyscy)
+- zał. 2 (<18)
+- zał. 2b (<18 (szkoła))
+
+*Procedura w składzie pakietu ST26 wg danych audytu.*
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K10.3 | Zapalenie zębodołu (suchy zębodół) | zapalenie zębodołu (suchy zębodół) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Opatrunek chirurgiczny: {{POLE-LOKALIZACJA}}, {{POLE-MATERIAL}}. Kontrola: {{POLE-KONTROLA}}.
+
+**skrocony**
+
+> Opatrunek {{POLE-LOKALIZACJA}}.
+
+**rozszerzony**
+
+> OPATRUNEK CHIRURGICZNY: {{POLE-LOKALIZACJA}}. Wskazanie: {{POLE-WSKAZANIE}}. Przebieg: {{POLE-PRZEBIEG}}. Opatrunek: {{POLE-MATERIAL}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.2001 – Nacięcie powierzchniowo, podśluzówkowo lub podskórnie leżącego ropnia włącznie z drenażem i opatrunkiem
+
+`PROC-23.2001` · **Nacięcie ropnia (powierzchownego)** · chirurgia – zakażenia · status: **draft** · kody w Opisach NFZ: ST19
+
+Nacięcie powierzchniowo, podśluzówkowo lub podskórnie leżącego ropnia włącznie z drenażem i opatrunkiem.
+
+**Na czym polega.** Nacięcie i drenaż ropnia leżącego powierzchownie. **Cel:** Ewakuacja ropy, zmniejszenie bólu i ryzyka szerzenia się zakażenia.
+
+Wskazania: ropień podśluzówkowy / przyzębny z chełbotaniem
+
+**Kwalifikacja** – ocenić: zasięg obrzęku, objawy ogólne (gorączka, szczękościsk, duszność); źródło zakażenia (ząb). Wywiad: leki przeciwkrzepliwe i antyagregacyjne; leki antyresorpcyjne (ryzyko martwicy kości); radioterapia głowy i szyi; cukrzyca, choroby serca, ciąża; alergie.
+
+- przeciwwskazanie *bezwzgledne*: zakażenie szerzące się w przestrzeniach głębokich, duszność, utrudnione połykanie – pilne skierowanie do szpitala
+- dodatkowa diagnostyka: INR / konsultacja lekarza prowadzącego wg wskazań; CBCT – zęby zatrzymane blisko kanału żuchwy (poza gabinetem)
+- rozważ inne postępowanie: leczenie zachowawcze / endodontyczne, jeśli ząb rokuje; skierowanie do chirurga stomatologa przy zabiegu trudnym
+
+**Przygotowanie** – konieczne: znieczulenie, skalpel, sączek, sól
+
+**Przebieg krok po kroku**
+
+1. **Aktualizacja wywiadu, informacja i zgoda** – Sprawdź aktualny wywiad (leki, alergie, ciąża), przedstaw rozpoznanie, plan, alternatywy i ryzyka; uzyskaj zgodę pacjenta. *Uwaga: Szczegóły: badanie BAD-PRZED-LECZENIEM.*
+2. **Znieczulenie miejscowe** – Dobierz metodę (nasiękowe / przewodowe / śródwięzadłowe) do zęba i zabiegu; znieczulenie powierzchniowe miejsca wkłucia (opcjonalnie); aspiracja przed podaniem; podawaj powoli; odnotuj preparat, dawkę i miejsce. *Uwaga: Sprawdź maksymalną dawkę dla masy ciała i choroby ogólne (środek obkurczający naczynia).* Warianty: bez znieczulenia – przy zabiegach nieinwazyjnych lub na życzenie pacjenta, jeśli nie powoduje bólu.
+3. **Nacięcie ropnia i drenaż** – Znieczulenie (miejscowo, poza naciekiem), nacięcie w najbardziej chełbocącym miejscu, rozwarstwienie, ewakuacja ropy, założenie sączka, płukanie. *Uwaga: Rozważ antybiotyk przy objawach ogólnych / szerzeniu się zakażenia; usuń przyczynę (ząb).*
+4. **Zalecenia po zabiegu chirurgicznym** – Ucisk gazika 20–30 min, zimne okłady, bez płukania i ssania rany w pierwszej dobie, dieta miękka i chłodna, leki przeciwbólowe wg zaleceń, termin kontroli / zdjęcia szwów; ustnie i pisemnie.
+
+**Materiały i narzędzia:** Strzykawka, igła, środek znieczulający miejscowo (konieczne); Skalpel, raspator, haczyki (konieczne); Sączek gumowy (dren) (konieczne); Sól fizjologiczna jałowa (konieczne); Gaziki jałowe (konieczne)
+
+**Kontrola efektu:** ewakuacja ropy, położenie sączka. Dalej: kontrola po 24–48 h, usunięcie sączka; leczenie przyczynowe zęba (endodoncja / ekstrakcja)
+
+**Zalecenia pozabiegowe:** Pacjent: Płukanie wg zaleceń, leki wg zaleceń.. Kontakt z gabinetem, gdy: narastający obrzęk, gorączka, trudności w połykaniu lub oddychaniu – pilnie, także SOR. Kontrola: 24–48 h.
+
+**Dokumentacja**
+
+- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
+- Lokalizacja, wynik nacięcia, drenaż, decyzja o antybiotyku — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **tak**
+
+- zał. 1 (wszyscy): Świadczenie nie obejmuje odpowiedniego znieczulenia.
+- zał. 2 (<18): Świadczenie nie obejmuje odpowiedniego znieczulenia.
+- zał. 2b (<18 (szkoła)): Świadczenie nie obejmuje odpowiedniego znieczulenia.
+
+*W Opisach NFZ – pakiet ST19 (nacięcie ropnia).*
+
+Źródła NFZ: `SRC-DU-2025-615`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K04.7 | Ropień okołowierzchołkowy bez przetoki | ropień okołowierzchołkowy bez przetoki | ocena_kliniczna | nie |
+| K05.2 | Ostre zapalenie przyzębia | ropień przyzębny (ostre zapalenie przyzębia) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [sytuacyjne] Znieczulenie: rodzaj, preparat, dawka, miejsce — *zalecenie kliniczne*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Powikłania – odnotowane albo zaznaczony ich brak przez lekarza — *zalecenie kliniczne*
+- [zalecane] Ocena objawów ogólnych (szerzenie się zakażenia) — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Nacięcie ropnia: {{POLE-LOKALIZACJA}} (ząb przyczynowy {{POLE-ZAB}}). Drenaż: {{POLE-PRZEBIEG}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.
+
+**skrocony**
+
+> Nacięcie ropnia {{POLE-LOKALIZACJA}}, sączek.
+
+**rozszerzony**
+
+> NACIĘCIE ROPNIA: lokalizacja {{POLE-LOKALIZACJA}}, ząb przyczynowy {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Objawy ogólne: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg (nacięcie, ewakuacja, sączek): {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia (w tym leki): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`

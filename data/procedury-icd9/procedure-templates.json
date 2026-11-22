@@ -1132,6 +1132,1167 @@
     "POLE-WYNIK",
     "POLE-ZALECENIA"
    ]
+  },
+  {
+   "id": "SZAB-PROC-23.0101-STD",
+   "dotyczy": "PROC-23.0101",
+   "wariant": "standardowy",
+   "tekst": "Badanie lekarskie stomatologiczne: {{POLE-PRZEBIEG}} Instruktaż higieny jamy ustnej: {{POLE-HG-INSTRUKTAZ}}. Plan: {{POLE-DECYZJA}}.",
+   "pola": [
+    "POLE-PRZEBIEG",
+    "POLE-HG-INSTRUKTAZ",
+    "POLE-DECYZJA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST33"
+  },
+  {
+   "id": "SZAB-PROC-23.0101-SKR",
+   "dotyczy": "PROC-23.0101",
+   "wariant": "skrocony",
+   "tekst": "Badanie stomatologiczne z instruktażem higieny: {{POLE-HG-INSTRUKTAZ}}.",
+   "pola": [
+    "POLE-HG-INSTRUKTAZ"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST33"
+  },
+  {
+   "id": "SZAB-PROC-23.0101-ROZ",
+   "dotyczy": "PROC-23.0101",
+   "wariant": "rozszerzony",
+   "tekst": "BADANIE LEKARSKIE STOMATOLOGICZNE: {{POLE-PRZEBIEG}} Rozpoznanie: {{POLE-ROZPOZNANIE}}. Instruktaż higieny: {{POLE-HG-INSTRUKTAZ}} – {{POLE-HG-INSTR-OPIS}}. Plan leczenia: {{POLE-DECYZJA}}. Kolejna wizyta: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-PRZEBIEG",
+    "POLE-ROZPOZNANIE",
+    "POLE-HG-INSTRUKTAZ",
+    "POLE-HG-INSTR-OPIS",
+    "POLE-DECYZJA",
+    "POLE-KONTROLA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST33"
+  },
+  {
+   "id": "SZAB-PROC-23.0102-STD",
+   "dotyczy": "PROC-23.0102",
+   "wariant": "standardowy",
+   "tekst": "Badanie kontrolne: {{POLE-KO-OCENA}}. Plan: {{POLE-DECYZJA}}.",
+   "pola": [
+    "POLE-KO-OCENA",
+    "POLE-DECYZJA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST34"
+  },
+  {
+   "id": "SZAB-PROC-23.0102-SKR",
+   "dotyczy": "PROC-23.0102",
+   "wariant": "skrocony",
+   "tekst": "Kontrola: {{POLE-KO-OCENA}}.",
+   "pola": [
+    "POLE-KO-OCENA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST34"
+  },
+  {
+   "id": "SZAB-PROC-23.0102-ROZ",
+   "dotyczy": "PROC-23.0102",
+   "wariant": "rozszerzony",
+   "tekst": "BADANIE KONTROLNE: {{POLE-KO-ZMIANY}}. {{POLE-PRZEBIEG}} Ocena: {{POLE-KO-OCENA}}. Plan: {{POLE-DECYZJA}}. Kolejna kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-KO-ZMIANY",
+    "POLE-PRZEBIEG",
+    "POLE-KO-OCENA",
+    "POLE-DECYZJA",
+    "POLE-KONTROLA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST34"
+  },
+  {
+   "id": "SZAB-PROC-23.0103-STD",
+   "dotyczy": "PROC-23.0103",
+   "wariant": "standardowy",
+   "tekst": "Porada lekarska: {{POLE-WYW-POWOD}}. Badanie: {{POLE-WYNIK}}. Zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-WYW-POWOD",
+    "POLE-WYNIK",
+    "POLE-ZALECENIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.0103-SKR",
+   "dotyczy": "PROC-23.0103",
+   "wariant": "skrocony",
+   "tekst": "Porada: {{POLE-WYW-POWOD}} – {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-WYW-POWOD",
+    "POLE-ZALECENIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.0103-ROZ",
+   "dotyczy": "PROC-23.0103",
+   "wariant": "rozszerzony",
+   "tekst": "PORADA LEKARSKA: powód: {{POLE-WYW-POWOD}}. Wywiad: {{POLE-WYW-DOLEGLIWOSCI}}. Badanie: {{POLE-WYNIK}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Zalecenia: {{POLE-ZALECENIA}}. Plan: {{POLE-DECYZJA}}.",
+   "pola": [
+    "POLE-WYW-POWOD",
+    "POLE-WYW-DOLEGLIWOSCI",
+    "POLE-WYNIK",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZALECENIA",
+    "POLE-DECYZJA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.0105-STD",
+   "dotyczy": "PROC-23.0105",
+   "wariant": "standardowy",
+   "tekst": "Konsultacja specjalistyczna: problem {{POLE-WYW-POWOD}}. Badanie: {{POLE-WYNIK}}. Opinia i zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-WYW-POWOD",
+    "POLE-WYNIK",
+    "POLE-ZALECENIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.0105-SKR",
+   "dotyczy": "PROC-23.0105",
+   "wariant": "skrocony",
+   "tekst": "Konsultacja: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-ZALECENIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.0105-ROZ",
+   "dotyczy": "PROC-23.0105",
+   "wariant": "rozszerzony",
+   "tekst": "KONSULTACJA SPECJALISTYCZNA: powód / skierowanie: {{POLE-WYW-POWOD}}. Badanie: {{POLE-PRZEBIEG}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Opinia: {{POLE-WYNIK}}. Zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-WYW-POWOD",
+    "POLE-PRZEBIEG",
+    "POLE-ROZPOZNANIE",
+    "POLE-WYNIK",
+    "POLE-ZALECENIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.0107-STD",
+   "dotyczy": "PROC-23.0107",
+   "wariant": "standardowy",
+   "tekst": "Badanie po urazie: {{POLE-UR-OKOLICZNOSCI}}. Zęby {{POLE-ZEBY}}: {{POLE-UR-RODZAJ}}. Plan kontroli: {{POLE-UR-PLAN}}.",
+   "pola": [
+    "POLE-UR-OKOLICZNOSCI",
+    "POLE-ZEBY",
+    "POLE-UR-RODZAJ",
+    "POLE-UR-PLAN"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST28"
+  },
+  {
+   "id": "SZAB-PROC-23.0107-SKR",
+   "dotyczy": "PROC-23.0107",
+   "wariant": "skrocony",
+   "tekst": "Uraz {{POLE-ZEBY}}: {{POLE-UR-RODZAJ}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-UR-RODZAJ"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST28"
+  },
+  {
+   "id": "SZAB-PROC-23.0107-ROZ",
+   "dotyczy": "PROC-23.0107",
+   "wariant": "rozszerzony",
+   "tekst": "BADANIE PO URAZIE: {{POLE-PRZEBIEG}} Rozpoznanie: {{POLE-ROZPOZNANIE}}. Plan kontroli: {{POLE-UR-PLAN}}. Zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-PRZEBIEG",
+    "POLE-ROZPOZNANIE",
+    "POLE-UR-PLAN",
+    "POLE-ZALECENIA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST28"
+  },
+  {
+   "id": "SZAB-PROC-23.02-STD",
+   "dotyczy": "PROC-23.02",
+   "wariant": "standardowy",
+   "tekst": "Badanie żywotności zęba {{POLE-ZAB}}: zimno {{POLE-ZY-ZIMNO}}, opukiwanie {{POLE-ZY-OPUK}}. Ocena: {{POLE-ZY-OCENA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ZY-ZIMNO",
+    "POLE-ZY-OPUK",
+    "POLE-ZY-OCENA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.02-SKR",
+   "dotyczy": "PROC-23.02",
+   "wariant": "skrocony",
+   "tekst": "Żywotność {{POLE-ZAB}}: {{POLE-ZY-ZIMNO}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ZY-ZIMNO"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.02-ROZ",
+   "dotyczy": "PROC-23.02",
+   "wariant": "rozszerzony",
+   "tekst": "BADANIE ŻYWOTNOŚCI zęba {{POLE-ZAB}}: zimno {{POLE-ZY-ZIMNO}}; EPT {{POLE-ZY-EPT}}; opukiwanie {{POLE-ZY-OPUK}}; palpacja {{POLE-ZY-PALP}}; ząb kontrolny {{POLE-ZY-KONTROLA}}. Ocena: {{POLE-ZY-OCENA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ZY-ZIMNO",
+    "POLE-ZY-EPT",
+    "POLE-ZY-OPUK",
+    "POLE-ZY-PALP",
+    "POLE-ZY-KONTROLA",
+    "POLE-ZY-OCENA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.0301-STD",
+   "dotyczy": "PROC-23.0301",
+   "wariant": "standardowy",
+   "tekst": "RTG {{POLE-RTG-RODZAJ}} ({{POLE-ZEBY}}). Wskazanie: {{POLE-RTG-WSKAZANIE}}. Opis: {{POLE-RTG-OPIS}}.",
+   "pola": [
+    "POLE-RTG-RODZAJ",
+    "POLE-ZEBY",
+    "POLE-RTG-WSKAZANIE",
+    "POLE-RTG-OPIS"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.0301-SKR",
+   "dotyczy": "PROC-23.0301",
+   "wariant": "skrocony",
+   "tekst": "RTG {{POLE-ZEBY}}: {{POLE-RTG-OPIS}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-RTG-OPIS"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.0301-ROZ",
+   "dotyczy": "PROC-23.0301",
+   "wariant": "rozszerzony",
+   "tekst": "RTG {{POLE-RTG-RODZAJ}} z dnia {{POLE-DATA}}, okolica {{POLE-ZEBY}}. Wskazanie: {{POLE-RTG-WSKAZANIE}}. Opis: {{POLE-RTG-OPIS}}. Wnioski: {{POLE-DECYZJA}}.",
+   "pola": [
+    "POLE-RTG-RODZAJ",
+    "POLE-DATA",
+    "POLE-ZEBY",
+    "POLE-RTG-WSKAZANIE",
+    "POLE-RTG-OPIS",
+    "POLE-DECYZJA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.0302-STD",
+   "dotyczy": "PROC-23.0302",
+   "wariant": "standardowy",
+   "tekst": "RTG {{POLE-RTG-RODZAJ}} ({{POLE-ZEBY}}). Wskazanie: {{POLE-RTG-WSKAZANIE}}. Opis: {{POLE-RTG-OPIS}}.",
+   "pola": [
+    "POLE-RTG-RODZAJ",
+    "POLE-ZEBY",
+    "POLE-RTG-WSKAZANIE",
+    "POLE-RTG-OPIS"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.0302-SKR",
+   "dotyczy": "PROC-23.0302",
+   "wariant": "skrocony",
+   "tekst": "RTG {{POLE-ZEBY}}: {{POLE-RTG-OPIS}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-RTG-OPIS"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.0302-ROZ",
+   "dotyczy": "PROC-23.0302",
+   "wariant": "rozszerzony",
+   "tekst": "RTG {{POLE-RTG-RODZAJ}} z dnia {{POLE-DATA}}, okolica {{POLE-ZEBY}}. Wskazanie: {{POLE-RTG-WSKAZANIE}}. Opis: {{POLE-RTG-OPIS}}. Wnioski: {{POLE-DECYZJA}}.",
+   "pola": [
+    "POLE-RTG-RODZAJ",
+    "POLE-DATA",
+    "POLE-ZEBY",
+    "POLE-RTG-WSKAZANIE",
+    "POLE-RTG-OPIS",
+    "POLE-DECYZJA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.0304-STD",
+   "dotyczy": "PROC-23.0304",
+   "wariant": "standardowy",
+   "tekst": "RTG {{POLE-RTG-RODZAJ}} ({{POLE-ZEBY}}). Wskazanie: {{POLE-RTG-WSKAZANIE}}. Opis: {{POLE-RTG-OPIS}}.",
+   "pola": [
+    "POLE-RTG-RODZAJ",
+    "POLE-ZEBY",
+    "POLE-RTG-WSKAZANIE",
+    "POLE-RTG-OPIS"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.0304-SKR",
+   "dotyczy": "PROC-23.0304",
+   "wariant": "skrocony",
+   "tekst": "RTG {{POLE-ZEBY}}: {{POLE-RTG-OPIS}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-RTG-OPIS"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.0304-ROZ",
+   "dotyczy": "PROC-23.0304",
+   "wariant": "rozszerzony",
+   "tekst": "RTG {{POLE-RTG-RODZAJ}} z dnia {{POLE-DATA}}, okolica {{POLE-ZEBY}}. Wskazanie: {{POLE-RTG-WSKAZANIE}}. Opis: {{POLE-RTG-OPIS}}. Wnioski: {{POLE-DECYZJA}}.",
+   "pola": [
+    "POLE-RTG-RODZAJ",
+    "POLE-DATA",
+    "POLE-ZEBY",
+    "POLE-RTG-WSKAZANIE",
+    "POLE-RTG-OPIS",
+    "POLE-DECYZJA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.0401-STD",
+   "dotyczy": "PROC-23.0401",
+   "wariant": "standardowy",
+   "tekst": "Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}, okolica {{POLE-ZNIECZ-MIEJSCE}}.",
+   "pola": [
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-ZNIECZ-MIEJSCE"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: 0401"
+  },
+  {
+   "id": "SZAB-PROC-23.0401-SKR",
+   "dotyczy": "PROC-23.0401",
+   "wariant": "skrocony",
+   "tekst": "Znieczulenie {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}.",
+   "pola": [
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: 0401"
+  },
+  {
+   "id": "SZAB-PROC-23.0401-ROZ",
+   "dotyczy": "PROC-23.0401",
+   "wariant": "rozszerzony",
+   "tekst": "Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}}, dawka {{POLE-ZNIECZ-DAWKA}}, miejsce {{POLE-ZNIECZ-MIEJSCE}}. Aspiracja wykonana. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-ZNIECZ-MIEJSCE",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: 0401"
+  },
+  {
+   "id": "SZAB-PROC-23.0402-STD",
+   "dotyczy": "PROC-23.0402",
+   "wariant": "standardowy",
+   "tekst": "Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}, okolica {{POLE-ZNIECZ-MIEJSCE}}.",
+   "pola": [
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-ZNIECZ-MIEJSCE"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: 0402"
+  },
+  {
+   "id": "SZAB-PROC-23.0402-SKR",
+   "dotyczy": "PROC-23.0402",
+   "wariant": "skrocony",
+   "tekst": "Znieczulenie {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}.",
+   "pola": [
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: 0402"
+  },
+  {
+   "id": "SZAB-PROC-23.0402-ROZ",
+   "dotyczy": "PROC-23.0402",
+   "wariant": "rozszerzony",
+   "tekst": "Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}}, dawka {{POLE-ZNIECZ-DAWKA}}, miejsce {{POLE-ZNIECZ-MIEJSCE}}. Aspiracja wykonana. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-ZNIECZ-MIEJSCE",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: 0402"
+  },
+  {
+   "id": "SZAB-PROC-23.0403-STD",
+   "dotyczy": "PROC-23.0403",
+   "wariant": "standardowy",
+   "tekst": "Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}, okolica {{POLE-ZNIECZ-MIEJSCE}}.",
+   "pola": [
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-ZNIECZ-MIEJSCE"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: 0403"
+  },
+  {
+   "id": "SZAB-PROC-23.0403-SKR",
+   "dotyczy": "PROC-23.0403",
+   "wariant": "skrocony",
+   "tekst": "Znieczulenie {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}.",
+   "pola": [
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: 0403"
+  },
+  {
+   "id": "SZAB-PROC-23.0403-ROZ",
+   "dotyczy": "PROC-23.0403",
+   "wariant": "rozszerzony",
+   "tekst": "Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}}, dawka {{POLE-ZNIECZ-DAWKA}}, miejsce {{POLE-ZNIECZ-MIEJSCE}}. Aspiracja wykonana. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-ZNIECZ-MIEJSCE",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: 0403"
+  },
+  {
+   "id": "SZAB-PROC-23.08-STD",
+   "dotyczy": "PROC-23.08",
+   "wariant": "standardowy",
+   "tekst": "Instruktaż higieny jamy ustnej: {{POLE-HG-INSTR-OPIS}}. Wskaźnik płytki: {{POLE-HG-WARTOSC}}%.",
+   "pola": [
+    "POLE-HG-INSTR-OPIS",
+    "POLE-HG-WARTOSC"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.08-SKR",
+   "dotyczy": "PROC-23.08",
+   "wariant": "skrocony",
+   "tekst": "Instruktaż higieny: {{POLE-HG-INSTR-OPIS}}.",
+   "pola": [
+    "POLE-HG-INSTR-OPIS"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.08-ROZ",
+   "dotyczy": "PROC-23.08",
+   "wariant": "rozszerzony",
+   "tekst": "INSTRUKTAŻ HIGIENY: {{POLE-HG-WSKAZNIK}} {{POLE-HG-WARTOSC}}%. Zakres: {{POLE-HG-INSTR-OPIS}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-HG-WSKAZNIK",
+    "POLE-HG-WARTOSC",
+    "POLE-HG-INSTR-OPIS",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1003-STD",
+   "dotyczy": "PROC-23.1003",
+   "wariant": "standardowy",
+   "tekst": "Lakowanie bruzd: zęby {{POLE-ZEBY}}. Materiał: {{POLE-MATERIAL}}. Retencja: {{POLE-WYNIK}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-MATERIAL",
+    "POLE-WYNIK"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1003-SKR",
+   "dotyczy": "PROC-23.1003",
+   "wariant": "skrocony",
+   "tekst": "Lakowanie {{POLE-ZEBY}}, {{POLE-MATERIAL}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-MATERIAL"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1003-ROZ",
+   "dotyczy": "PROC-23.1003",
+   "wariant": "rozszerzony",
+   "tekst": "LAKOWANIE BRUZD: zęby {{POLE-ZEBY}}. Wskazanie: {{POLE-WSKAZANIE}}. Izolacja: {{POLE-IZOLACJA}}. Materiał: {{POLE-MATERIAL}}. Kontrola retencji i zwarcia: {{POLE-WYNIK}}. Zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-WSKAZANIE",
+    "POLE-IZOLACJA",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-ZALECENIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1006-STD",
+   "dotyczy": "PROC-23.1006",
+   "wariant": "standardowy",
+   "tekst": "Lakierowanie zębów: {{POLE-LUK}} {{POLE-ZEBY}}. Preparat: {{POLE-MATERIAL}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LUK",
+    "POLE-ZEBY",
+    "POLE-MATERIAL",
+    "POLE-ZALECENIA-FORMA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: 1006"
+  },
+  {
+   "id": "SZAB-PROC-23.1006-SKR",
+   "dotyczy": "PROC-23.1006",
+   "wariant": "skrocony",
+   "tekst": "Lakierowanie {{POLE-ZEBY}}, {{POLE-MATERIAL}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-MATERIAL"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: 1006"
+  },
+  {
+   "id": "SZAB-PROC-23.1006-ROZ",
+   "dotyczy": "PROC-23.1006",
+   "wariant": "rozszerzony",
+   "tekst": "LAKIEROWANIE FLUORKOWE: zakres {{POLE-LUK}}, zęby {{POLE-ZEBY}}. Wskazanie: {{POLE-WSKAZANIE}}. Preparat: {{POLE-MATERIAL}}. Zalecenia: {{POLE-ZALECENIA}}. Kolejna aplikacja: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LUK",
+    "POLE-ZEBY",
+    "POLE-WSKAZANIE",
+    "POLE-MATERIAL",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: 1006"
+  },
+  {
+   "id": "SZAB-PROC-23.16011-STD",
+   "dotyczy": "PROC-23.16011",
+   "wariant": "standardowy",
+   "tekst": "Usunięcie złogów miękkich: {{POLE-LUK}} ({{POLE-LOKALIZACJA}}). Instruktaż: {{POLE-HG-INSTRUKTAZ}}.",
+   "pola": [
+    "POLE-LUK",
+    "POLE-LOKALIZACJA",
+    "POLE-HG-INSTRUKTAZ"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST30E"
+  },
+  {
+   "id": "SZAB-PROC-23.16011-SKR",
+   "dotyczy": "PROC-23.16011",
+   "wariant": "skrocony",
+   "tekst": "Złogi miękkie {{POLE-LOKALIZACJA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST30E"
+  },
+  {
+   "id": "SZAB-PROC-23.16011-ROZ",
+   "dotyczy": "PROC-23.16011",
+   "wariant": "rozszerzony",
+   "tekst": "USUNIĘCIE ZŁOGÓW MIĘKKICH: zakres {{POLE-LUK}}, {{POLE-LOKALIZACJA}}. Wskazanie: {{POLE-WSKAZANIE}}. Przebieg: {{POLE-PRZEBIEG}}. Polerowanie / instruktaż: {{POLE-HG-INSTRUKTAZ}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-LUK",
+    "POLE-LOKALIZACJA",
+    "POLE-WSKAZANIE",
+    "POLE-PRZEBIEG",
+    "POLE-HG-INSTRUKTAZ",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST30E"
+  },
+  {
+   "id": "SZAB-PROC-23.16012-STD",
+   "dotyczy": "PROC-23.16012",
+   "wariant": "standardowy",
+   "tekst": "Usunięcie złogów twardych: {{POLE-LUK}} ({{POLE-LOKALIZACJA}}). Instruktaż: {{POLE-HG-INSTRUKTAZ}}.",
+   "pola": [
+    "POLE-LUK",
+    "POLE-LOKALIZACJA",
+    "POLE-HG-INSTRUKTAZ"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST30"
+  },
+  {
+   "id": "SZAB-PROC-23.16012-SKR",
+   "dotyczy": "PROC-23.16012",
+   "wariant": "skrocony",
+   "tekst": "Złogi twarde {{POLE-LOKALIZACJA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST30"
+  },
+  {
+   "id": "SZAB-PROC-23.16012-ROZ",
+   "dotyczy": "PROC-23.16012",
+   "wariant": "rozszerzony",
+   "tekst": "USUNIĘCIE ZŁOGÓW TWARDYCH: zakres {{POLE-LUK}}, {{POLE-LOKALIZACJA}}. Wskazanie: {{POLE-WSKAZANIE}}. Przebieg: {{POLE-PRZEBIEG}}. Polerowanie / instruktaż: {{POLE-HG-INSTRUKTAZ}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-LUK",
+    "POLE-LOKALIZACJA",
+    "POLE-WSKAZANIE",
+    "POLE-PRZEBIEG",
+    "POLE-HG-INSTRUKTAZ",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST30"
+  },
+  {
+   "id": "SZAB-PROC-23.16021-STD",
+   "dotyczy": "PROC-23.16021",
+   "wariant": "standardowy",
+   "tekst": "Usunięcie złogów miękkich: {{POLE-LUK}} ({{POLE-LOKALIZACJA}}). Instruktaż: {{POLE-HG-INSTRUKTAZ}}.",
+   "pola": [
+    "POLE-LUK",
+    "POLE-LOKALIZACJA",
+    "POLE-HG-INSTRUKTAZ"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST30G"
+  },
+  {
+   "id": "SZAB-PROC-23.16021-SKR",
+   "dotyczy": "PROC-23.16021",
+   "wariant": "skrocony",
+   "tekst": "Złogi miękkie {{POLE-LOKALIZACJA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST30G"
+  },
+  {
+   "id": "SZAB-PROC-23.16021-ROZ",
+   "dotyczy": "PROC-23.16021",
+   "wariant": "rozszerzony",
+   "tekst": "USUNIĘCIE ZŁOGÓW MIĘKKICH: zakres {{POLE-LUK}}, {{POLE-LOKALIZACJA}}. Wskazanie: {{POLE-WSKAZANIE}}. Przebieg: {{POLE-PRZEBIEG}}. Polerowanie / instruktaż: {{POLE-HG-INSTRUKTAZ}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-LUK",
+    "POLE-LOKALIZACJA",
+    "POLE-WSKAZANIE",
+    "POLE-PRZEBIEG",
+    "POLE-HG-INSTRUKTAZ",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST30G"
+  },
+  {
+   "id": "SZAB-PROC-23.16022-STD",
+   "dotyczy": "PROC-23.16022",
+   "wariant": "standardowy",
+   "tekst": "Usunięcie złogów twardych: {{POLE-LUK}} ({{POLE-LOKALIZACJA}}). Instruktaż: {{POLE-HG-INSTRUKTAZ}}.",
+   "pola": [
+    "POLE-LUK",
+    "POLE-LOKALIZACJA",
+    "POLE-HG-INSTRUKTAZ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.16022-SKR",
+   "dotyczy": "PROC-23.16022",
+   "wariant": "skrocony",
+   "tekst": "Złogi twarde {{POLE-LOKALIZACJA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.16022-ROZ",
+   "dotyczy": "PROC-23.16022",
+   "wariant": "rozszerzony",
+   "tekst": "USUNIĘCIE ZŁOGÓW TWARDYCH: zakres {{POLE-LUK}}, {{POLE-LOKALIZACJA}}. Wskazanie: {{POLE-WSKAZANIE}}. Przebieg: {{POLE-PRZEBIEG}}. Polerowanie / instruktaż: {{POLE-HG-INSTRUKTAZ}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-LUK",
+    "POLE-LOKALIZACJA",
+    "POLE-WSKAZANIE",
+    "POLE-PRZEBIEG",
+    "POLE-HG-INSTRUKTAZ",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1603-STD",
+   "dotyczy": "PROC-23.1603",
+   "wariant": "standardowy",
+   "tekst": "Polerowanie zębów: {{POLE-LOKALIZACJA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1603-SKR",
+   "dotyczy": "PROC-23.1603",
+   "wariant": "skrocony",
+   "tekst": "Polerowanie {{POLE-LOKALIZACJA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1603-ROZ",
+   "dotyczy": "PROC-23.1603",
+   "wariant": "rozszerzony",
+   "tekst": "POLEROWANIE ZĘBÓW: zakres {{POLE-LOKALIZACJA}}, materiał {{POLE-MATERIAL}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-MATERIAL"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1605-STD",
+   "dotyczy": "PROC-23.1605",
+   "wariant": "standardowy",
+   "tekst": "Leczenie zmiany na błonie śluzowej: {{POLE-BL-LOK}} – {{POLE-BL-WYKWIT}}. Preparat: {{POLE-MATERIAL}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-BL-LOK",
+    "POLE-BL-WYKWIT",
+    "POLE-MATERIAL",
+    "POLE-KONTROLA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST26"
+  },
+  {
+   "id": "SZAB-PROC-23.1605-SKR",
+   "dotyczy": "PROC-23.1605",
+   "wariant": "skrocony",
+   "tekst": "Leczenie zmiany {{POLE-BL-LOK}}, {{POLE-MATERIAL}}.",
+   "pola": [
+    "POLE-BL-LOK",
+    "POLE-MATERIAL"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST26"
+  },
+  {
+   "id": "SZAB-PROC-23.1605-ROZ",
+   "dotyczy": "PROC-23.1605",
+   "wariant": "rozszerzony",
+   "tekst": "LECZENIE ZMIAN NA BŁONIE ŚLUZOWEJ: zmiana {{POLE-BL-LOK}}, {{POLE-BL-WYKWIT}}, {{POLE-BL-WYM}} mm. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Leczenie: {{POLE-PRZEBIEG}}, preparat {{POLE-MATERIAL}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-BL-LOK",
+    "POLE-BL-WYKWIT",
+    "POLE-BL-WYM",
+    "POLE-ROZPOZNANIE",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST26"
+  },
+  {
+   "id": "SZAB-PROC-23.1607-STD",
+   "dotyczy": "PROC-23.1607",
+   "wariant": "standardowy",
+   "tekst": "Kiretaż zamknięty: ćwiartka {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Powikłania: {{POLE-POWIKLANIA}}. Reewaluacja: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-POWIKLANIA",
+    "POLE-KONTROLA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST04"
+  },
+  {
+   "id": "SZAB-PROC-23.1607-SKR",
+   "dotyczy": "PROC-23.1607",
+   "wariant": "skrocony",
+   "tekst": "Kiretaż {{POLE-LOKALIZACJA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST04"
+  },
+  {
+   "id": "SZAB-PROC-23.1607-ROZ",
+   "dotyczy": "PROC-23.1607",
+   "wariant": "rozszerzony",
+   "tekst": "KIRETAŻ ZAMKNIĘTY: ćwiartka {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Kieszonki przed zabiegiem: {{POLE-PZ-PPD}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Reewaluacja: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-PZ-PPD",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST04"
+  },
+  {
+   "id": "SZAB-PROC-23.1701-STD",
+   "dotyczy": "PROC-23.1701",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: usunięcie zęba. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Zębodół: {{POLE-WYNIK}}. Hemostaza / szwy: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-WYNIK",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST01"
+  },
+  {
+   "id": "SZAB-PROC-23.1701-SKR",
+   "dotyczy": "PROC-23.1701",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: usunięcie zęba; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ZNIECZ-RODZAJ"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST01"
+  },
+  {
+   "id": "SZAB-PROC-23.1701-ROZ",
+   "dotyczy": "PROC-23.1701",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. RTG: {{POLE-RTG}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}, miejsce {{POLE-ZNIECZ-MIEJSCE}}. usunięcie zęba. Przebieg: {{POLE-PRZEBIEG}}. Kontrola zębodołu i kompletności korzeni: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola / zdjęcie szwów: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-RTG",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-ZNIECZ-MIEJSCE",
+    "POLE-PRZEBIEG",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST01"
+  },
+  {
+   "id": "SZAB-PROC-23.1702-STD",
+   "dotyczy": "PROC-23.1702",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: usunięcie zęba. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Zębodół: {{POLE-WYNIK}}. Hemostaza / szwy: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-WYNIK",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST02"
+  },
+  {
+   "id": "SZAB-PROC-23.1702-SKR",
+   "dotyczy": "PROC-23.1702",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: usunięcie zęba; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ZNIECZ-RODZAJ"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST02"
+  },
+  {
+   "id": "SZAB-PROC-23.1702-ROZ",
+   "dotyczy": "PROC-23.1702",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. RTG: {{POLE-RTG}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}, miejsce {{POLE-ZNIECZ-MIEJSCE}}. usunięcie zęba. Przebieg: {{POLE-PRZEBIEG}}. Kontrola zębodołu i kompletności korzeni: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola / zdjęcie szwów: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-RTG",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-ZNIECZ-MIEJSCE",
+    "POLE-PRZEBIEG",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST02"
+  },
+  {
+   "id": "SZAB-PROC-23.1703-STD",
+   "dotyczy": "PROC-23.1703",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: usunięcie zęba przez dłutowanie wewnątrzzębodołowe. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Zębodół: {{POLE-WYNIK}}. Hemostaza / szwy: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-WYNIK",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1703-SKR",
+   "dotyczy": "PROC-23.1703",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: usunięcie zęba przez dłutowanie wewnątrzzębodołowe; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1703-ROZ",
+   "dotyczy": "PROC-23.1703",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. RTG: {{POLE-RTG}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}, miejsce {{POLE-ZNIECZ-MIEJSCE}}. usunięcie zęba przez dłutowanie wewnątrzzębodołowe. Przebieg: {{POLE-PRZEBIEG}}. Kontrola zębodołu i kompletności korzeni: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola / zdjęcie szwów: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-RTG",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-ZNIECZ-MIEJSCE",
+    "POLE-PRZEBIEG",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1704-STD",
+   "dotyczy": "PROC-23.1704",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: usunięcie zęba przez dłutowanie zewnątrzzębodołowe z płatem. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Zębodół: {{POLE-WYNIK}}. Hemostaza / szwy: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-WYNIK",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1704-SKR",
+   "dotyczy": "PROC-23.1704",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: usunięcie zęba przez dłutowanie zewnątrzzębodołowe z płatem; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1704-ROZ",
+   "dotyczy": "PROC-23.1704",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. RTG: {{POLE-RTG}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}, miejsce {{POLE-ZNIECZ-MIEJSCE}}. usunięcie zęba przez dłutowanie zewnątrzzębodołowe z płatem. Przebieg: {{POLE-PRZEBIEG}}. Kontrola zębodołu i kompletności korzeni: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola / zdjęcie szwów: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-RTG",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-ZNIECZ-MIEJSCE",
+    "POLE-PRZEBIEG",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1809-STD",
+   "dotyczy": "PROC-23.1809",
+   "wariant": "standardowy",
+   "tekst": "Zaopatrzenie rany {{POLE-LOKALIZACJA}}: szwy {{POLE-MATERIAL}}. Powikłania: {{POLE-POWIKLANIA}}. Zdjęcie szwów: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-MATERIAL",
+    "POLE-POWIKLANIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1809-SKR",
+   "dotyczy": "PROC-23.1809",
+   "wariant": "skrocony",
+   "tekst": "Rana {{POLE-LOKALIZACJA}} – szwy.",
+   "pola": [
+    "POLE-LOKALIZACJA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1809-ROZ",
+   "dotyczy": "PROC-23.1809",
+   "wariant": "rozszerzony",
+   "tekst": "ZAOPATRZENIE RANY: lokalizacja {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Szwy: {{POLE-MATERIAL}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Zdjęcie szwów: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1813-STD",
+   "dotyczy": "PROC-23.1813",
+   "wariant": "standardowy",
+   "tekst": "Zatamowanie krwawienia: {{POLE-LOKALIZACJA}}. Metoda: {{POLE-PRZEBIEG}}. Wynik: {{POLE-WYNIK}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-PRZEBIEG",
+    "POLE-WYNIK"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1813-SKR",
+   "dotyczy": "PROC-23.1813",
+   "wariant": "skrocony",
+   "tekst": "Krwawienie {{POLE-LOKALIZACJA}} – opanowane: {{POLE-WYNIK}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-WYNIK"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1813-ROZ",
+   "dotyczy": "PROC-23.1813",
+   "wariant": "rozszerzony",
+   "tekst": "ZATAMOWANIE KRWAWIENIA: lokalizacja {{POLE-LOKALIZACJA}}. Przyczyna: {{POLE-WSKAZANIE}}. Leki przeciwkrzepliwe: {{POLE-WYW-LEKI}}. Postępowanie: {{POLE-PRZEBIEG}}. Wynik: {{POLE-WYNIK}}. Zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-WSKAZANIE",
+    "POLE-WYW-LEKI",
+    "POLE-PRZEBIEG",
+    "POLE-WYNIK",
+    "POLE-ZALECENIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1815-STD",
+   "dotyczy": "PROC-23.1815",
+   "wariant": "standardowy",
+   "tekst": "Opatrunek chirurgiczny: {{POLE-LOKALIZACJA}}, {{POLE-MATERIAL}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-MATERIAL",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1815-SKR",
+   "dotyczy": "PROC-23.1815",
+   "wariant": "skrocony",
+   "tekst": "Opatrunek {{POLE-LOKALIZACJA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1815-ROZ",
+   "dotyczy": "PROC-23.1815",
+   "wariant": "rozszerzony",
+   "tekst": "OPATRUNEK CHIRURGICZNY: {{POLE-LOKALIZACJA}}. Wskazanie: {{POLE-WSKAZANIE}}. Przebieg: {{POLE-PRZEBIEG}}. Opatrunek: {{POLE-MATERIAL}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-WSKAZANIE",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2001-STD",
+   "dotyczy": "PROC-23.2001",
+   "wariant": "standardowy",
+   "tekst": "Nacięcie ropnia: {{POLE-LOKALIZACJA}} (ząb przyczynowy {{POLE-ZAB}}). Drenaż: {{POLE-PRZEBIEG}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZAB",
+    "POLE-PRZEBIEG",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST19"
+  },
+  {
+   "id": "SZAB-PROC-23.2001-SKR",
+   "dotyczy": "PROC-23.2001",
+   "wariant": "skrocony",
+   "tekst": "Nacięcie ropnia {{POLE-LOKALIZACJA}}, sączek.",
+   "pola": [
+    "POLE-LOKALIZACJA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST19"
+  },
+  {
+   "id": "SZAB-PROC-23.2001-ROZ",
+   "dotyczy": "PROC-23.2001",
+   "wariant": "rozszerzony",
+   "tekst": "NACIĘCIE ROPNIA: lokalizacja {{POLE-LOKALIZACJA}}, ząb przyczynowy {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Objawy ogólne: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg (nacięcie, ewakuacja, sączek): {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia (w tym leki): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ],
+   "tekst_aplikacji": "obiekt D w generator/nfz.html: ST19"
   }
  ]
 }
