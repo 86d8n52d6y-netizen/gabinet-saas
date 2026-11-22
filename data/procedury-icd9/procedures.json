@@ -6,7 +6,7 @@
    "kod": "23.0101",
    "nazwa_oficjalna": "Badanie lekarskie stomatologiczne, które obejmuje również instruktaż higieny jamy ustnej",
    "kategoria": "badanie i porada",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -117,14 +117,16 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "ST33"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0102",
    "kod": "23.0102",
    "nazwa_oficjalna": "Badanie lekarskie kontrolne",
    "kategoria": "badanie i porada",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -212,7 +214,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "ST34"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0103",
@@ -547,7 +551,7 @@
    "kod": "23.0107",
    "nazwa_oficjalna": "Badanie lekarskie stomatologiczne i kontrolne po urazie zęba",
    "kategoria": "badanie i porada",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -649,7 +653,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "ST28"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.02",
@@ -1162,7 +1168,7 @@
    "kod": "23.0401",
    "nazwa_oficjalna": "Znieczulenie miejscowe powierzchniowe",
    "kategoria": "znieczulenie",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -1292,14 +1298,16 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "0401"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0402",
    "kod": "23.0402",
    "nazwa_oficjalna": "Znieczulenie miejscowe nasiękowe",
    "kategoria": "znieczulenie",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -1429,14 +1437,16 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "0402"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0403",
    "kod": "23.0403",
    "nazwa_oficjalna": "Znieczulenie przewodowe wewnątrzustne",
    "kategoria": "znieczulenie",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -1566,14 +1576,16 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "0403"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0404",
    "kod": "23.0404",
    "nazwa_oficjalna": "Znieczulenie przewodowe zewnątrzustne",
    "kategoria": "znieczulenie",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -1644,7 +1656,7 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Technika specjalistyczna – do weryfikacji eksperckiej."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.05",
@@ -1820,7 +1832,7 @@
    "kod": "23.07",
    "nazwa_oficjalna": "Pilne zabiegi poza godzinami pracy w dni świąteczne lub w domu pacjenta",
    "kategoria": "pomoc doraźna",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -1891,7 +1903,7 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zasady organizacyjne i rozliczeniowe (pomoc doraźna – zał. nieodczytany w audycie) do weryfikacji."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.08",
@@ -1988,7 +2000,7 @@
    "kod": "23.0901",
    "nazwa_oficjalna": "Balneoterapia lub hydroterapia",
    "kategoria": "fizykoterapia",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -2053,14 +2065,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Fizykoterapia w stomatologii – ograniczone współczesne dowody skuteczności; karta do weryfikacji eksperckiej."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.0902",
    "kod": "23.0902",
    "nazwa_oficjalna": "Naświetlanie Sollux",
    "kategoria": "fizykoterapia",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -2125,14 +2137,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Fizykoterapia w stomatologii – ograniczone współczesne dowody skuteczności; karta do weryfikacji eksperckiej."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.0903",
    "kod": "23.0903",
    "nazwa_oficjalna": "Jonoforeza nadziąsłowa",
    "kategoria": "fizykoterapia",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -2197,14 +2209,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Fizykoterapia w stomatologii – ograniczone współczesne dowody skuteczności; karta do weryfikacji eksperckiej."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.0904",
    "kod": "23.0904",
    "nazwa_oficjalna": "Jonoforeza lub elektrosterylizacja kanału korzeniowego",
    "kategoria": "fizykoterapia",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -2269,14 +2281,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Fizykoterapia w stomatologii – ograniczone współczesne dowody skuteczności; karta do weryfikacji eksperckiej."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.0905",
    "kod": "23.0905",
    "nazwa_oficjalna": "Diadynamik 1/2 łuku zębowego",
    "kategoria": "fizykoterapia",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -2341,14 +2353,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Fizykoterapia w stomatologii – ograniczone współczesne dowody skuteczności; karta do weryfikacji eksperckiej."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.0906",
    "kod": "23.0906",
    "nazwa_oficjalna": "Hydroterapia",
    "kategoria": "fizykoterapia",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -2413,14 +2425,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Fizykoterapia w stomatologii – ograniczone współczesne dowody skuteczności; karta do weryfikacji eksperckiej."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.0907",
    "kod": "23.0907",
    "nazwa_oficjalna": "Laseroterapia biostymulacyjna",
    "kategoria": "fizykoterapia",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -2485,7 +2497,7 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Fizykoterapia w stomatologii – ograniczone współczesne dowody skuteczności; karta do weryfikacji eksperckiej."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1001",
@@ -2886,7 +2898,7 @@
    "kod": "23.1006",
    "nazwa_oficjalna": "Lakierowanie zębów 1/4 łuku zębowego",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -3004,7 +3016,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "1006"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1007",
@@ -3151,7 +3165,7 @@
    "kod": "23.1008",
    "nazwa_oficjalna": "Impregnacja zębiny",
    "kategoria": "profilaktyka",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -3232,7 +3246,7 @@
     "SRC-KLIN-ADA-LAK-2016"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Preparat i wskazania do weryfikacji (np. fluorek diaminy srebra – przebarwienia, zgoda)."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1009",
@@ -4832,7 +4846,7 @@
    "kod": "23.1101",
    "nazwa_oficjalna": "Leczenie próchnicy powierzchniowej - za każdy ząb",
    "kategoria": "leczenie próchnicy",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -4987,7 +5001,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "1101"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1102",
@@ -5596,7 +5612,7 @@
    "kod": "23.1105",
    "nazwa_oficjalna": "Postępowanie przy obnażeniu i skaleczeniu miazgi - bezpośrednie pokrycie miazgi",
    "kategoria": "leczenie próchnicy",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -5840,7 +5856,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "1105"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1106",
@@ -6254,7 +6272,7 @@
    "kod": "23.1108",
    "nazwa_oficjalna": "Wypełnienie ubytku korony zęba mlecznego",
    "kategoria": "leczenie próchnicy",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -6506,14 +6524,16 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "1108"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1109",
    "kod": "23.1109",
    "nazwa_oficjalna": "Wypełnienie ubytku korony zęba na 1 powierzchni",
    "kategoria": "leczenie próchnicy",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -6703,14 +6723,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Kod obecny w ICD-9 PL 5.91 obok 23.1502–23.1506 – Patryk: czy jest jeszcze używany (raport, kwestia 6)."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1110",
    "kod": "23.1110",
    "nazwa_oficjalna": "Wypełnienie ubytku korony zęba na 2 powierzchniach",
    "kategoria": "leczenie próchnicy",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -6900,14 +6920,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Kod obecny w ICD-9 PL 5.91 obok 23.1502–23.1506 – Patryk: czy jest jeszcze używany (raport, kwestia 6)."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1111",
    "kod": "23.1111",
    "nazwa_oficjalna": "Wypełnienie ubytku korony zęba na 3 powierzchniach",
    "kategoria": "leczenie próchnicy",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -7097,14 +7117,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Kod obecny w ICD-9 PL 5.91 obok 23.1502–23.1506 – Patryk: czy jest jeszcze używany (raport, kwestia 6)."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1112",
    "kod": "23.1112",
    "nazwa_oficjalna": "Wypełnienie ubytku korony zęba na więcej niż 3 powierzchniach",
    "kategoria": "leczenie próchnicy",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -7294,7 +7314,7 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Kod obecny w ICD-9 PL 5.91 obok 23.1502–23.1506 – Patryk: czy jest jeszcze używany (raport, kwestia 6)."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1201",
@@ -7514,7 +7534,7 @@
    "kod": "23.1202",
    "nazwa_oficjalna": "Dewitalizacja miazgi zęba z zaopatrzeniem ubytku opatrunkiem",
    "kategoria": "endodoncja – leczenie miazgi",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -7669,7 +7689,7 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Metoda z użyciem preparatu dewitalizującego – nadal w wykazie świadczeń gwarantowanych, ale współczesne wytyczne (ESE) preferują leczenie w znieczuleniu; do oceny Patryka, jak ją przedstawiać w aplikacji."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1203",
@@ -8244,7 +8264,7 @@
    "kod": "23.1206",
    "nazwa_oficjalna": "Ekstyrpacja przyżyciowa miazgi",
    "kategoria": "endodoncja – leczenie miazgi",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -8482,14 +8502,16 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "1206"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1207",
    "kod": "23.1207",
    "nazwa_oficjalna": "Amputacja zdewitalizowanej miazgi zęba",
    "kategoria": "endodoncja – leczenie miazgi",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -8650,14 +8672,14 @@
     "SRC-KLIN-ESE-2006"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Metoda z użyciem preparatu dewitalizującego – nadal w wykazie świadczeń gwarantowanych, ale współczesne wytyczne (ESE) preferują leczenie w znieczuleniu; do oceny Patryka, jak ją przedstawiać w aplikacji."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1208",
    "kod": "23.1208",
    "nazwa_oficjalna": "Ekstyrpacja zdewitalizowanej miazgi zęba z nieuformowanym korzeniem",
    "kategoria": "endodoncja – leczenie miazgi",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -8841,14 +8863,14 @@
     "SRC-KLIN-ESE-2006"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Metoda z użyciem preparatu dewitalizującego – nadal w wykazie świadczeń gwarantowanych, ale współczesne wytyczne (ESE) preferują leczenie w znieczuleniu; do oceny Patryka, jak ją przedstawiać w aplikacji."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1209",
    "kod": "23.1209",
    "nazwa_oficjalna": "Ekstyrpacja zdewitalizowanej miazgi zęba",
    "kategoria": "endodoncja – leczenie miazgi",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -9035,14 +9057,14 @@
     "SRC-KLIN-ESE-2006"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Metoda z użyciem preparatu dewitalizującego – nadal w wykazie świadczeń gwarantowanych, ale współczesne wytyczne (ESE) preferują leczenie w znieczuleniu; do oceny Patryka, jak ją przedstawiać w aplikacji."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1210",
    "kod": "23.1210",
    "nazwa_oficjalna": "Amputacja zdewitalizowanej miazgi zęba mlecznego",
    "kategoria": "endodoncja – leczenie miazgi",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -9212,7 +9234,7 @@
     "SRC-KLIN-AAPD-VPT-2017"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Metoda z użyciem preparatu dewitalizującego – nadal w wykazie świadczeń gwarantowanych, ale współczesne wytyczne (ESE) preferują leczenie w znieczuleniu; do oceny Patryka, jak ją przedstawiać w aplikacji."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1301",
@@ -10984,7 +11006,7 @@
    "kod": "23.1310",
    "nazwa_oficjalna": "Leczenie endodontyczne metodą amputacyjno-ekstyrpacyjną",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -11147,7 +11169,7 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Metoda historyczna (brak w wykazie świadczeń gwarantowanych wg audytu) – do oceny Patryka."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1311",
@@ -13302,7 +13324,7 @@
    "kod": "23.1502",
    "nazwa_oficjalna": "Całkowite opracowanie i odbudowa ubytku zęba na 1 powierzchni",
    "kategoria": "odbudowa i estetyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -13559,14 +13581,16 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "1502"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1503",
    "kod": "23.1503",
    "nazwa_oficjalna": "Całkowite opracowanie i odbudowa ubytku na 2 powierzchniach",
    "kategoria": "odbudowa i estetyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -13823,14 +13847,16 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "1503"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1504",
    "kod": "23.1504",
    "nazwa_oficjalna": "Całkowite opracowanie i odbudowa rozległego ubytku na 2 powierzchniach",
    "kategoria": "odbudowa i estetyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -14087,14 +14113,16 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "1504"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1505",
    "kod": "23.1505",
    "nazwa_oficjalna": "Całkowite opracowanie i odbudowa rozległego ubytku na 3 powierzchniach",
    "kategoria": "odbudowa i estetyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -14351,7 +14379,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "1505"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1506",
@@ -15547,7 +15577,7 @@
    "kod": "23.16011",
    "nazwa_oficjalna": "Usunięcie złogów nazębnych miękkich z 1/2 łuku zębowego",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -15680,14 +15710,16 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "ST30E"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.16012",
    "kod": "23.16012",
    "nazwa_oficjalna": "Usunięcie złogów nazębnych twardych z 1/2 łuku zębowego",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -15828,7 +15860,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "ST30"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1602",
@@ -15846,7 +15880,7 @@
    "kod": "23.16021",
    "nazwa_oficjalna": "Usunięcie złogów nazębnych miękkich ze wszystkich zębów",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -15978,7 +16012,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "ST30G"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.16022",
@@ -16376,7 +16412,7 @@
    "kod": "23.1605",
    "nazwa_oficjalna": "Leczenie zmian na błonie śluzowej jamy ustnej",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -16485,14 +16521,16 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "ST26"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1606",
    "kod": "23.1606",
    "nazwa_oficjalna": "Korekta zgryzu",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -16663,14 +16701,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1607",
    "kod": "23.1607",
    "nazwa_oficjalna": "Kiretaż zwykły w obrębie 1/4 uzębienia",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -16812,14 +16850,16 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "ST04"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1608",
    "kod": "23.1608",
    "nazwa_oficjalna": "Kiretaż otwarty w obrębie 1/4 uzębienia",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -16986,7 +17026,7 @@
     "SRC-KLIN-EFP-S3-2020"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1609",
@@ -17168,7 +17208,7 @@
    "kod": "23.1610",
    "nazwa_oficjalna": "Gingwoosteoplastyka",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -17337,7 +17377,7 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1611",
@@ -17680,7 +17720,7 @@
    "kod": "23.1613",
    "nazwa_oficjalna": "Plastyka przedsionka jamy ustnej met. Clarka, Kazanjana",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -17847,14 +17887,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1614",
    "kod": "23.1614",
    "nazwa_oficjalna": "Plastyka przedsionka jamy ustnej met. Nabersa",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -18021,7 +18061,7 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1615",
@@ -18579,7 +18619,7 @@
    "kod": "23.1618",
    "nazwa_oficjalna": "Zabieg wszczepiania hydroksyapatytu, bioglassu lub tp.",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -18747,14 +18787,14 @@
     "SRC-KLIN-EFP-S3-2020"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1619",
    "kod": "23.1619",
    "nazwa_oficjalna": "Zabieg pokrycia obnażonych korzeni zębów metodą bocznie przesuniętego płata",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -18915,7 +18955,7 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1620",
@@ -19107,7 +19147,7 @@
    "kod": "23.1701",
    "nazwa_oficjalna": "Usunięcie zęba jednokorzeniowego",
    "kategoria": "chirurgia – ekstrakcje",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -19313,14 +19353,16 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "ST01"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1702",
    "kod": "23.1702",
    "nazwa_oficjalna": "Usunięcie zęba wielokorzeniowego",
    "kategoria": "chirurgia – ekstrakcje",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -19526,7 +19568,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "ST02"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1703",
@@ -19945,7 +19989,7 @@
    "kod": "23.1705",
    "nazwa_oficjalna": "Operacyjne usunięcie zęba zatrzymanego",
    "kategoria": "chirurgia – ekstrakcje",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -20136,14 +20180,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1706",
    "kod": "23.1706",
    "nazwa_oficjalna": "Operacyjne odsłonięcie zatrzymanego zęba z założeniem pętli drucianej dla celów ortodontycznych",
    "kategoria": "chirurgia – ekstrakcje",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -20315,14 +20359,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1707",
    "kod": "23.1707",
    "nazwa_oficjalna": "Operacyjne usunięcie zawiązków zębów ze wskazań ortodontycznych",
    "kategoria": "chirurgia – ekstrakcje",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -20499,7 +20543,7 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1708",
@@ -20517,7 +20561,7 @@
    "kod": "23.1801",
    "nazwa_oficjalna": "Zamknięcie zatoki otwartej w przebiegu chirurgicznego usuwania zęba",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -20678,14 +20722,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1802",
    "kod": "23.1802",
    "nazwa_oficjalna": "Resekcja wierzchołka korzenia zęba przedniego",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -20862,14 +20906,14 @@
     "SRC-KLIN-ESE-S3-2023"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1803",
    "kod": "23.1803",
    "nazwa_oficjalna": "Resekcja wierzchołka korzenia zęba bocznego",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -21046,14 +21090,14 @@
     "SRC-KLIN-ESE-S3-2023"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1804",
    "kod": "23.1804",
    "nazwa_oficjalna": "Resekcja wierzchołka korzenia zęba każdego następnego zęba podczas tego samego zabiegu i dotyczy zębów",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -21230,14 +21274,14 @@
     "SRC-KLIN-ESE-S3-2023"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1805",
    "kod": "23.1805",
    "nazwa_oficjalna": "Hemisekcja zęba",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -21408,7 +21452,7 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1806",
@@ -21586,7 +21630,7 @@
    "kod": "23.1807",
    "nazwa_oficjalna": "Wyłuszczenie torbieli zębopochodnej",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -21761,14 +21805,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1808",
    "kod": "23.1808",
    "nazwa_oficjalna": "Wyłuszczenie kamienia z przewodu ślinianki",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -21929,7 +21973,7 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1809",
@@ -22268,7 +22312,7 @@
    "kod": "23.1811",
    "nazwa_oficjalna": "Chirurgiczne zaopatrzenie dużej rany w obrębie połowy szczęki włącznie ze szwami",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -22435,14 +22479,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1812",
    "kod": "23.1812",
    "nazwa_oficjalna": "Chirurgiczne zaopatrzenie dużej, albo znacznie zanieczyszczonej rany w obrębie połowy szczęki włącznie z opracowaniem i szwami",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -22609,7 +22653,7 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1813",
@@ -22764,7 +22808,7 @@
    "kod": "23.1814",
    "nazwa_oficjalna": "Zatamowanie masywnego krwawienia w obrębie jamy ustnej przez podwiązanie, pokłucie naczyń bądź zatkanie kością",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -22929,7 +22973,7 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1815",
@@ -23088,7 +23132,7 @@
    "kod": "23.1816",
    "nazwa_oficjalna": "Ograniczone, miejscowe wycięcie wargi, języka",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -23253,14 +23297,14 @@
     "SRC-KLIN-OPMD-2021"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1817",
    "kod": "23.1817",
    "nazwa_oficjalna": "Krioterapia niewielkich zmian w obrębie tkanek miękkich jamy ustnej",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -23422,14 +23466,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1819",
    "kod": "23.1819",
    "nazwa_oficjalna": "Ograniczone wycięcie, zniszczenie zmiany podniebienia twardego",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -23594,14 +23638,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1901",
    "kod": "23.1901",
    "nazwa_oficjalna": "Wycięcie małego guzka lub zmiany guzopodobnej, włókniaka",
    "kategoria": "chirurgia – wycięcia i plastyki",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -23766,14 +23810,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1902",
    "kod": "23.1902",
    "nazwa_oficjalna": "Wycięcie przerostu błony śluzowej (guzy łagodne, zmiany guzopodobnej, nadziąślaki) w obrębie połowy szczęki",
    "kategoria": "chirurgia – wycięcia i plastyki",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -23938,14 +23982,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1903",
    "kod": "23.1903",
    "nazwa_oficjalna": "Plastyka wyrostka zębodołowego w obrębie połowy szczęki",
    "kategoria": "chirurgia – wycięcia i plastyki",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -24110,14 +24154,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1904",
    "kod": "23.1904",
    "nazwa_oficjalna": "Plastyka wyrostka zębodołowego szczęki lub części zębodołowej żuchwy z użyciem przeszczepu lub wszczepu",
    "kategoria": "chirurgia – wycięcia i plastyki",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -24289,14 +24333,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1905",
    "kod": "23.1905",
    "nazwa_oficjalna": "Plastyka guza szczęki",
    "kategoria": "chirurgia – wycięcia i plastyki",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -24461,14 +24505,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1906",
    "kod": "23.1906",
    "nazwa_oficjalna": "Plastyka połączenia lub przetoki ustno-zatokowej - jako samodzielne postępowanie lub jako następstwo ekstrakcji",
    "kategoria": "chirurgia – wycięcia i plastyki",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -24633,14 +24677,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.2001",
    "kod": "23.2001",
    "nazwa_oficjalna": "Nacięcie powierzchniowo, podśluzówkowo lub podskórnie leżącego ropnia włącznie z drenażem i opatrunkiem",
    "kategoria": "chirurgia – zakażenia",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -24775,14 +24819,16 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "ST19"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.2002",
    "kod": "23.2002",
    "nazwa_oficjalna": "Nacięcie z dojścia wewnątrz lub zewnątrzustnego głęboko leżącego ropnia włącznie z drenażem i opatrunkiem",
    "kategoria": "chirurgia – zakażenia",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -24940,7 +24986,7 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.2003",
@@ -25140,7 +25186,7 @@
    "kod": "23.2102",
    "nazwa_oficjalna": "Repozycja i unieruchomienie złamanego fragmentu wyrostka zębodołowego z zębem lub zębami",
    "kategoria": "urazy zębów",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -25309,7 +25355,7 @@
     "SRC-KLIN-IADT-ZLAM-2020"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.2103",

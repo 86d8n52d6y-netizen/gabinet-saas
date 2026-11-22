@@ -92,7 +92,7 @@ for p in procs.values():
         if g not in chk_dla: bledy.append(f'{g}: brak checklisty kompletności')
         if not any(m['procedura'] == g for m in L('procedure-diagnosis-mappings.json', 'mapowania')) and p['kategoria'] not in ('znieczulenie', 'radiologia'):
             ostrz.append(f'{g}: brak powiązań z ICD-10')
-    if p['status'] == 'verified' and (not p.get('zweryfikowal') or not p.get('zrodla')): bledy.append(f'{g}: verified bez osoby weryfikującej lub źródeł')
+    if p['status'] == 'verified' and (not p.get('zweryfikowal') or not p.get('zweryfikowano') or not p.get('zrodla')): bledy.append(f'{g}: verified bez osoby weryfikującej, daty lub źródeł')
     if p['status'] == 'not_started' and not p.get('uzasadnienie_statusu'): bledy.append(f'{g}: not_started bez uzasadnienia')
     for k in p.get('kroki', []):
         if k['krok'] not in kroki: bledy.append(f'{g}: nieznany krok {k["krok"]}')
