@@ -38,8 +38,10 @@ with sync_playwright() as p:
     r = wiz(pg, ['ST30', '1006'], '8'); chk('ST30 + 1006: nadal błąd „nie sumuje się” (R-ST30-LAKIER, bez zmian)', has(r['err'], 'nie mogą być rozliczone razem'), r)
 
     # P32 – kiretaż u dzieci (INFORMACJA)
-    r = wiz(pg, ['ST04'], '15'); chk('ST04, dziecko: informacja „wymaga weryfikacji” (D4=A), nie błąd ani ostrzeżenie', has(r['info'], 'wymaga weryfikacji') and not has(r['err'], 'kiretaż') and not has(r['warn'], 'kiretaż u dzieci'), r)
-    box = pg.inner_html('#nfz-box'); chk('informacja wyświetlana jako notatka (P34)', 'class="note"' in box and 'kiretaż u dzieci' in box, box[:400])
+    r = wiz(pg, ['ST04'], '14'); chk('ST04, dziecko < 15 r.ż.: informacja (komunikat 627276, stan sporny), nie błąd ani ostrzeżenie', has(r['info'], '627276') and has(r['info'], 'stan sporny') and not has(r['err'], 'kiretaż') and not has(r['warn'], 'kiretaż u dzieci'), r)
+    r15 = wiz(pg, ['ST04'], '15'); chk('ST04, 15 lat: bez informacji o kiretażu u dzieci (komunikat dotyczy < 15 r.ż.)', not has(r15['info'], 'kiretaż'), r15)
+    wiz(pg, ['ST04'], '14')
+    box = pg.inner_html('#nfz-box'); chk('informacja wyświetlana jako notatka (P34)', 'class="note"' in box and 'NFZ nie zapłaci za kiretaż' in box, box[:400])
     r = wiz(pg, ['ST04'], '45'); chk('ST04, dorosły: bez informacji o dzieciach', not has(r['info'], 'kiretaż'), r)
 
     # P33 – znieczulenie osobno przy ekstrakcji / kiretażu

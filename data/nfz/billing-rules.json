@@ -860,14 +860,16 @@
       "id": "R-KIR-DZ",
       "obszar": "periodontologia",
       "warstwa": "rozliczeniowa",
-      "wyzwalacz": "ST04 / 23.1607 u dziecka",
-      "tresc": "Kiretaż u dzieci – komunikat NFZ z 22.07.2026 vs protest NIL. Stan prawny NIE ustalony w tym audycie.",
+      "wyzwalacz": "ST04 / 23.1607 u dziecka poniżej 15 r.ż.",
+      "tresc": "Kiretaż u dzieci < 15 r.ż. – komunikat Prezesa NFZ nr 627276 (22.07.2026): od świadczeń z 1.01.2026 reguła weryfikacyjna odrzuca rozliczenie; wyjątek – wniosek do OW NFZ (przypadek udokumentowany i uzasadniony medycznie). NRL (31.07.2026) kwestionuje (zał. 2 rozporządzenia bez limitu wieku, działanie wstecz). Stan sporny.",
       "poziom": "INFORMACJA",
       "status": "WYMAGA WERYFIKACJI",
       "zrodla": [
-        "SRC-NFZ-KOM-KIRETAZ-DZ"
+        "SRC-NFZ-KOM-KIRETAZ-DZ",
+        "SRC-GL-2026-09-KIRETAZ",
+        "SRC-DU-2025-615"
       ],
-      "obowiazuje_od": "2026-07-22",
+      "obowiazuje_od": "2026-01-01",
       "obowiazuje_do": null,
       "dotyczy": [
         "ST04",

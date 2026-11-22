@@ -81,6 +81,7 @@ npm audit --omit=dev
 - Etapami. Po etapie: testy (pkt 3) → raport ze statusami **WDROŻONE / WYMAGA MOJEGO DZIAŁANIA / WYMAGA KONFIGURACJI ZEWNĘTRZNEJ / NIE WDROŻONO** → za zgodą Patryka commit, push i jeden wiersz w `POSTEP.md`.
 - Po przerwie: najpierw `HANDOFF.md`, `POSTEP.md`, `git log --oneline -10`.
 - Odpowiedzi przejrzyste: tabele, krótkie bloki, źródła. Błędy przyznawaj wprost.
+- **Reguły NFZ i przepisy – zawsze wprost skutek dla rozliczenia:** za co i u kogo NFZ **płaci / nie płaci**, z przykładem granicy (np. „14 lat – NFZ nie zapłaci, 15 lat – zapłaci”). Bez skrótów typu „dotyczy dzieci < 15” (decyzja Patryka 22.11.2026).
 
 ## 6. Konwencje kodu i nazewnictwa
 - **Język:** nazwy tras, plików domenowych, komunikatów i testów po polsku (`/zarobki`, `/opisy-nfz`, `kal-silnik.ts`, `t_4e_kal.py`); kod pomocniczy i typy mogą być po angielsku (`withUser`, `ClinicRow`). Teksty interfejsu wyłącznie po polsku.
