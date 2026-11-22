@@ -42,3 +42,4 @@
 | 2026-11-22 | `gabinet-saas` | **Weryfikacja endodoncji (Patryk).** Zatwierdzone pojedynczo 21 kart; poprawione szablony pulpotomii 23.1203/23.1204 (bez pól kanałów); uwagi do audytu NFZ: 23.1313, kod produktu 23.13142. Stan: 96 verified, 43 draft, 67 odrzucone |
 | 2026-11-22 | `gabinet-saas` | **Weryfikacja perio, odbudowy i chirurgii (Patryk).** Pojedynczo: 14 zatwierdzonych, 11 odrzuconych. Stan: 110 verified, 18 draft, 78 odrzucone |
 | 2026-11-22 | `gabinet-saas` | **Koniec weryfikacji kart procedur (Patryk).** Ostatnie 18: 9 zatwierdzonych (RTG, opatrunki, pośrednie pokrycie, wizyta adaptacyjna, repozycja), 9 odrzuconych. Stan: 119 verified, 0 draft, 87 odrzucone; t_10 bez karty roboczej |
+| 2026-11-22 | `gabinet-saas` | **Przegląd odrzuconych kart (Patryk).** Pojedynczo 87 kart: 25 przywróconych i zatwierdzonych, reszta bez zmian; pominięte (57) – nie opracowywać. Stan: 144 verified, 62 odrzucone. t_10: przykład karty odrzuconej z danych |

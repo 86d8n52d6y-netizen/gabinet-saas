@@ -8,8 +8,8 @@ Wersja danych: 2026.11.22-1.
 
 | Status | Procedury |
 |---|---|
-| not_started | 147 |
-| verified | 119 |
+| not_started | 122 |
+| verified | 144 |
 | **razem** | **266** |
 
 Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: draft, BAD-BLONA: draft, BAD-UZEBIENIE: draft, BAD-PRZYZEBIE: draft, BAD-HIGIENA: draft, BAD-ZGRYZ: draft, BAD-SSZ: draft, BAD-ZYWOTNOSC: draft, BAD-RTG: draft, BAD-PO-URAZIE: draft, BAD-DZIECKO: draft, BAD-STOMATOLOGICZNE: draft, BAD-KONTROLNE: draft, BAD-PRZED-LECZENIEM: draft, BAD-PO-LECZENIU: draft).
@@ -22,12 +22,12 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 |---|---|---|---|---|
 | 23.0101 | Badanie lekarskie stomatologiczne, które obejmuje również instruktaż higieny jamy ustnej | badanie i porada | verified |  |
 | 23.0102 | Badanie lekarskie kontrolne | badanie i porada | verified |  |
-| 23.0103 | Porada lekarska | badanie i porada | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.0104 | Wydanie orzeczenia lekarskiego | badanie i porada | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.0103 | Porada lekarska | badanie i porada | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
+| 23.0104 | Wydanie orzeczenia lekarskiego | badanie i porada | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
 | 23.0105 | Konsultacja specjalistyczna | badanie i porada | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.0106 | Wydanie krótkiego zaświadczenia lub świadectwa | badanie i porada | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.0106 | Wydanie krótkiego zaświadczenia lub świadectwa | badanie i porada | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
 | 23.0107 | Badanie lekarskie stomatologiczne i kontrolne po urazie zęba | badanie i porada | verified |  |
-| 23.02 | Badanie żywotności zęba | diagnostyka | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.02 | Badanie żywotności zęba | diagnostyka | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
 | 23.0301 | Rentgenodiagnostyka do 2 zdjęć wewnątrzustnych | radiologia | verified |  |
 | 23.0302 | Rentgenodiagnostyka do 5 zdjęć wewnątrzustnych | radiologia | verified |  |
 | 23.0303 | Rentgenodiagnostyka do 8 zdjęć wewnątrzustnych | radiologia | verified |  |
@@ -35,7 +35,7 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.0401 | Znieczulenie miejscowe powierzchniowe | znieczulenie | verified |  |
 | 23.0402 | Znieczulenie miejscowe nasiękowe | znieczulenie | verified |  |
 | 23.0403 | Znieczulenie przewodowe wewnątrzustne | znieczulenie | verified |  |
-| 23.0404 | Znieczulenie przewodowe zewnątrzustne | znieczulenie | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.0404 | Znieczulenie przewodowe zewnątrzustne | znieczulenie | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
 | 23.05 | Postępowanie w nagłych przypadkach | pomoc doraźna | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.06 | Wizyta adaptacyjna -dotyczy pierwszych wizyt małych dzieci | dziecko | verified |  |
 | 23.07 | Pilne zabiegi poza godzinami pracy w dni świąteczne lub w domu pacjenta | pomoc doraźna | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
@@ -53,7 +53,7 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.1004 | Zabezpieczanie profilaktyczne bruzd innymi materiałami | profilaktyka | verified |  |
 | 23.1006 | Lakierowanie zębów 1/4 łuku zębowego | profilaktyka | verified |  |
 | 23.1007 | Leczenie nadwrażliwości zębów w obrębie 1/4 łuku zębowego | profilaktyka | verified |  |
-| 23.1008 | Impregnacja zębiny | profilaktyka | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.1008 | Impregnacja zębiny | profilaktyka | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
 | 23.1009 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 6. miesiącu życia | profilaktyka | verified |  |
 | 23.1010 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 9. miesiącu życia | profilaktyka | verified |  |
 | 23.1011 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 12. miesiącu życia | profilaktyka | verified |  |
@@ -77,19 +77,19 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.1106 | Opatrunek leczniczy w zębie stałym | leczenie próchnicy | verified |  |
 | 23.1107 | Opatrunek leczniczy w zębie mlecznym | leczenie próchnicy | verified |  |
 | 23.1108 | Wypełnienie ubytku korony zęba mlecznego | leczenie próchnicy | verified |  |
-| 23.1109 | Wypełnienie ubytku korony zęba na 1 powierzchni | leczenie próchnicy | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1110 | Wypełnienie ubytku korony zęba na 2 powierzchniach | leczenie próchnicy | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1111 | Wypełnienie ubytku korony zęba na 3 powierzchniach | leczenie próchnicy | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1112 | Wypełnienie ubytku korony zęba na więcej niż 3 powierzchniach | leczenie próchnicy | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.1109 | Wypełnienie ubytku korony zęba na 1 powierzchni | leczenie próchnicy | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
+| 23.1110 | Wypełnienie ubytku korony zęba na 2 powierzchniach | leczenie próchnicy | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
+| 23.1111 | Wypełnienie ubytku korony zęba na 3 powierzchniach | leczenie próchnicy | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
+| 23.1112 | Wypełnienie ubytku korony zęba na więcej niż 3 powierzchniach | leczenie próchnicy | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
 | 23.1201 | Trepanacja martwego zęba z zaopatrzeniem ubytku opatrunkiem | endodoncja – leczenie miazgi | verified |  |
-| 23.1202 | Dewitalizacja miazgi zęba z zaopatrzeniem ubytku opatrunkiem | endodoncja – leczenie miazgi | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.1202 | Dewitalizacja miazgi zęba z zaopatrzeniem ubytku opatrunkiem | endodoncja – leczenie miazgi | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
 | 23.1203 | Amputacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem | endodoncja – leczenie miazgi | verified |  |
 | 23.1204 | Amputacja przyżyciowa miazgi | endodoncja – leczenie miazgi | verified |  |
 | 23.1205 | Ekstyrpacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem | endodoncja – leczenie miazgi | verified |  |
 | 23.1206 | Ekstyrpacja przyżyciowa miazgi | endodoncja – leczenie miazgi | verified |  |
 | 23.1207 | Amputacja zdewitalizowanej miazgi zęba | endodoncja – leczenie miazgi | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1208 | Ekstyrpacja zdewitalizowanej miazgi zęba z nieuformowanym korzeniem | endodoncja – leczenie miazgi | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1209 | Ekstyrpacja zdewitalizowanej miazgi zęba | endodoncja – leczenie miazgi | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.1208 | Ekstyrpacja zdewitalizowanej miazgi zęba z nieuformowanym korzeniem | endodoncja – leczenie miazgi | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
+| 23.1209 | Ekstyrpacja zdewitalizowanej miazgi zęba | endodoncja – leczenie miazgi | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
 | 23.1210 | Amputacja zdewitalizowanej miazgi zęba mlecznego | endodoncja – leczenie miazgi | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1301 | Całkowite opracowanie i dezynfekcja kanału | endodoncja – leczenie kanałowe | verified |  |
 | 23.1302 | Leczenie zgorzeli | endodoncja – leczenie kanałowe | verified |  |
@@ -135,27 +135,27 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.1607 | Kiretaż zwykły w obrębie 1/4 uzębienia | periodontologia i błona śluzowa | verified |  |
 | 23.1608 | Kiretaż otwarty w obrębie 1/4 uzębienia | periodontologia i błona śluzowa | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1609 | Gingwoplastyka | periodontologia i błona śluzowa | verified |  |
-| 23.1610 | Gingwoosteoplastyka | periodontologia i błona śluzowa | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.1610 | Gingwoosteoplastyka | periodontologia i błona śluzowa | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
 | 23.1611 | Podcięcie wędzidełka, wargi, języka, policzka | periodontologia i błona śluzowa | verified |  |
-| 23.1612 | Plastyka wędzidełka ,wargi ,policzka | periodontologia i błona śluzowa | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1613 | Plastyka przedsionka jamy ustnej met. Clarka, Kazanjana | periodontologia i błona śluzowa | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.1612 | Plastyka wędzidełka ,wargi ,policzka | periodontologia i błona śluzowa | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
+| 23.1613 | Plastyka przedsionka jamy ustnej met. Clarka, Kazanjana | periodontologia i błona śluzowa | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
 | 23.1614 | Plastyka przedsionka jamy ustnej met. Nabersa | periodontologia i błona śluzowa | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1615 | Unieruchomienie zębów ligaturą drucianą | periodontologia i błona śluzowa | verified |  |
 | 23.1616 | Unieruchomienie zębów materiałem złożonym (kompozytowym) | periodontologia i błona śluzowa | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1617 | Unieruchomienie zębów szyną z materiału złożonego z dodatkowymi wzmocnieniami | periodontologia i błona śluzowa | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1618 | Zabieg wszczepiania hydroksyapatytu, bioglassu lub tp. | periodontologia i błona śluzowa | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1619 | Zabieg pokrycia obnażonych korzeni zębów metodą bocznie przesuniętego płata | periodontologia i błona śluzowa | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.1618 | Zabieg wszczepiania hydroksyapatytu, bioglassu lub tp. | periodontologia i błona śluzowa | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
+| 23.1619 | Zabieg pokrycia obnażonych korzeni zębów metodą bocznie przesuniętego płata | periodontologia i błona śluzowa | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
 | 23.1620 | Założenie opatrunku parodontologicznego | periodontologia i błona śluzowa | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.17 | Chirurgiczne usunięcie zęba | chirurgia – ekstrakcje | not_started | Kod nadrzędny używany w składzie pakietów NFZ – karty w podkodach: 23.1701–23.1708. |
 | 23.1701 | Usunięcie zęba jednokorzeniowego | chirurgia – ekstrakcje | verified |  |
 | 23.1702 | Usunięcie zęba wielokorzeniowego | chirurgia – ekstrakcje | verified |  |
 | 23.1703 | Usunięcie głęboko złamanego zęba poprzez dłutowanie wewnątrzzębodołowe przy zastosowaniu wierteł, dźwigni | chirurgia – ekstrakcje | verified |  |
 | 23.1704 | Usunięcie zęba przez dłutowanie zewnątrzzębodołowe z wytworzeniem płata śluzówkowo-okostnowego | chirurgia – ekstrakcje | verified |  |
-| 23.1705 | Operacyjne usunięcie zęba zatrzymanego | chirurgia – ekstrakcje | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.1705 | Operacyjne usunięcie zęba zatrzymanego | chirurgia – ekstrakcje | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
 | 23.1706 | Operacyjne odsłonięcie zatrzymanego zęba z założeniem pętli drucianej dla celów ortodontycznych | chirurgia – ekstrakcje | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1707 | Operacyjne usunięcie zawiązków zębów ze wskazań ortodontycznych | chirurgia – ekstrakcje | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.1707 | Operacyjne usunięcie zawiązków zębów ze wskazań ortodontycznych | chirurgia – ekstrakcje | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
 | 23.1708 | Usunięcie zębów w znieczuleniu ogólnym u pacjentów z niedorozwojem umysłowym | chirurgia – ekstrakcje | not_started | Pominięte decyzją Patryka (22.11.2026): usuwanie zębów w znieczuleniu ogólnym – warunki szpitalne/anestezjologiczne. |
-| 23.1801 | Zamknięcie zatoki otwartej w przebiegu chirurgicznego usuwania zęba | chirurgia stomatologiczna | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.1801 | Zamknięcie zatoki otwartej w przebiegu chirurgicznego usuwania zęba | chirurgia stomatologiczna | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
 | 23.1802 | Resekcja wierzchołka korzenia zęba przedniego | chirurgia stomatologiczna | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1803 | Resekcja wierzchołka korzenia zęba bocznego | chirurgia stomatologiczna | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1804 | Resekcja wierzchołka korzenia zęba każdego następnego zęba podczas tego samego zabiegu i dotyczy zębów | chirurgia stomatologiczna | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
@@ -180,7 +180,7 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.1905 | Plastyka guza szczęki | chirurgia – wycięcia i plastyki | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1906 | Plastyka połączenia lub przetoki ustno-zatokowej - jako samodzielne postępowanie lub jako następstwo ekstrakcji | chirurgia – wycięcia i plastyki | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.2001 | Nacięcie powierzchniowo, podśluzówkowo lub podskórnie leżącego ropnia włącznie z drenażem i opatrunkiem | chirurgia – zakażenia | verified |  |
-| 23.2002 | Nacięcie z dojścia wewnątrz lub zewnątrzustnego głęboko leżącego ropnia włącznie z drenażem i opatrunkiem | chirurgia – zakażenia | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.2002 | Nacięcie z dojścia wewnątrz lub zewnątrzustnego głęboko leżącego ropnia włącznie z drenażem i opatrunkiem | chirurgia – zakażenia | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
 | 23.2003 | Nacięcie ropowicy | chirurgia – zakażenia | not_started | Pominięte decyzją Patryka (22.11.2026): nacięcie ropowicy – chirurgia szczękowo-twarzowa (szpital). |
 | 23.2101 | Repozycja i unieruchomienie zwichniętego zęba lub grupy zębów | urazy zębów | verified |  |
 | 23.2102 | Repozycja i unieruchomienie złamanego fragmentu wyrostka zębodołowego z zębem lub zębami | urazy zębów | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
@@ -249,7 +249,7 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.3001 | Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną laną | protetyka – mosty | verified |  |
 | 23.3002 | Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną licowaną | protetyka – mosty | verified |  |
 | 23.3003 | Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną pochewkową lub częściową | protetyka – mosty | verified |  |
-| 23.3004 | Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną teleskopową | protetyka – mosty | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – protetyka specjalistyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.3004 | Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną teleskopową | protetyka – mosty | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
 | 23.3005 | Dalsze czynności przy uzupełnianiu braków zębowych za pomocą na stałe mocowanych mostów za każdy element (punkt) przęsła; liczy się również element jednobrzeżny | protetyka – mosty | verified |  |
 | 23.3006 | Uzupełnienie braków zębowych za pomocą złożonych na stałe umocowanych lub ruchomych mostów i/lub złożonych stałych/ruchomych uzupełnień - dodatkowo przy zastosowaniu przęsła, włącznie z elementem łączącym każde przęsło | protetyka – mosty | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – protetyka specjalistyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.3007 | Uzupełnienie braków zębowych za pomocą złożonych na stałe umocowanych lub ruchomych mostów i/lub złożonych stałych /ruchomych uzupełnień - dodatkowo przy zastosowaniu śrub, sztyftów sprężynowych lub tp. - za każdy element łączący | protetyka – mosty | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – protetyka specjalistyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
@@ -261,9 +261,9 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.3102 | Uzupełnienie braków zębowych przy pomocy protezy częściowej włącznie z prostymi doginanymi klamrami w zakresie 5-8 brakujących zębów | protetyka – protezy ruchome | verified |  |
 | 23.3103 | Uzupełnienie braków zębowych przy pomocy protezy częściowej włącznie z prostymi doginanymi klamrami w zakresie więcej niż 8 zębów | protetyka – protezy ruchome | verified |  |
 | 23.3104 | Zaopatrzenie bezzębnej szczęki protezą całkowitą w szczęce | protetyka – protezy ruchome | verified |  |
-| 23.31041 | Proteza całkowita górna o charakterze overdenture oparta na zabezpieczonych korzeniach | protetyka – protezy ruchome | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – protetyka specjalistyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.31041 | Proteza całkowita górna o charakterze overdenture oparta na zabezpieczonych korzeniach | protetyka – protezy ruchome | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
 | 23.3105 | Zaopatrzenie bezzębnej szczęki protezą całkowitą w żuchwie | protetyka – protezy ruchome | verified |  |
-| 23.31051 | Proteza całkowita dolna o charakterze overdenture oparta na zabezpieczonych korzeniach | protetyka – protezy ruchome | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – protetyka specjalistyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.31051 | Proteza całkowita dolna o charakterze overdenture oparta na zabezpieczonych korzeniach | protetyka – protezy ruchome | verified | Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych. |
 | 23.3106 | Zastosowanie metalowej podstawy przy bezzębnej szczęce | protetyka – protezy ruchome | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – protetyka specjalistyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.3107 | Zastosowanie prostych dwuramiennych elementów utrzymujących lub podpierających lub wieloramiennych elementów doginanych o podobnym działaniu dodatkowo do każdej protezy- przy prowizorycznych protezach jedynie w szczególnych przypadkach, za element | protetyka – protezy ruchome | verified |  |
 | 23.3108 | Zastosowanie płyty metalowej z elementami utrzymującymi i podporami | protetyka – protezy ruchome | verified |  |
