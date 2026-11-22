@@ -2,7 +2,7 @@
 
 > Plik generowany: `python3 scripts/buduj_docs_bazy.py` z danych w `data/`. Nie edytuj ręcznie – popraw JSON.
 
-Wersja danych: 2026.11.22-1. Kart opracowanych: 144 z 266 (rejestr: `REJESTR_KOMPLETNOSCI.md`). Wymagania NFZ są oddzielone od zaleceń klinicznych; elementy oznaczone podstawą i źródłem.
+Wersja danych: 2026.11.22-1. Kart opracowanych: 139 z 266 (rejestr: `REJESTR_KOMPLETNOSCI.md`). Wymagania NFZ są oddzielone od zaleceń klinicznych; elementy oznaczone podstawą i źródłem.
 
 ## 23.0101 – Badanie lekarskie stomatologiczne, które obejmuje również instruktaż higieny jamy ustnej
 
@@ -1178,208 +1178,9 @@ Reguły: R-ADAPT-01
 
 **Źródła kliniczne:** `SRC-DU-2025-615`
 
-## 23.08 – Instruktaż higieny jamy ustnej
-
-`PROC-23.08` · **Instruktaż higieny jamy ustnej** · profilaktyka · status: **draft**
-
-Instruktaż higieny jamy ustnej.
-
-**Na czym polega.** Indywidualny instruktaż higieny z oceną płytki i demonstracją techniki. **Cel:** Poprawa higieny i profilaktyka próchnicy oraz chorób przyzębia.
-
-Wskazania: niedostateczna higiena; leczenie ortodontyczne / protetyczne; zapalenie dziąseł / przyzębia
-
-**Kwalifikacja** – ocenić: aktualny wywiad. Wywiad: choroby, leki, alergie.
-
-
-
-**Przygotowanie** – konieczne: model / lusterko, przybory higieniczne; opcjonalne: płyn wybarwiający płytkę
-
-**Przebieg krok po kroku**
-
-1. **Badanie wg katalogu badań** – Wykonaj badania składowe z katalogu A odpowiednie do świadczenia (formularze i szablony BAD-…). *Uwaga: Wynik każdego elementu wpisuje lekarz.*
-2. **Instruktaż higieny jamy ustnej** – Pokaż i omów technikę szczotkowania i oczyszczania przestrzeni międzyzębowych, przybory, stosowanie fluorków; dostosuj do wieku i potrzeb (aparat, protezy).
-
-**Materiały i narzędzia:** Szczoteczka / gumka profilaktyczna, pasta profilaktyczna (typowe)
-
-**Kontrola efektu:** zrozumienie techniki (pokaz przez pacjenta)
-
-**Zalecenia pozabiegowe:** Higiena: Zalecana technika i przybory wg instruktażu.. Kontrola: Ocena wskaźnika płytki na kolejnej wizycie.
-
-**Dokumentacja**
-
-- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
-- Wskaźnik płytki i zakres instruktażu — *zalecenie kliniczne* (`SRC-KLIN-PCR-1972` (PMID 4500182))
-
-**NFZ** – świadczenie gwarantowane: **nie**
-
-*Instruktaż jest też składnikiem 23.0101 (ST33). Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
-
-**ICD-10 (podpowiedzi, wybiera lekarz)**
-
-| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
-|---|---|---|---|---|
-| K03.6 | Osady na zębach (złogi) | złogi nazębne | ocena_kliniczna | nie |
-| K05.1 | Przewlekłe zapalenie dziąseł | przewlekłe zapalenie dziąseł | ocena_kliniczna | nie |
-
-**Checklista kompletności**
-
-- [obowiazkowe] Data udzielenia świadczenia — *prawne*
-- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
-- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
-- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
-- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
-
-**Szablony opisu**
-
-**standardowy**
-
-> Instruktaż higieny jamy ustnej: {{POLE-HG-INSTR-OPIS}}. Wskaźnik płytki: {{POLE-HG-WARTOSC}}%.
-
-**skrocony**
-
-> Instruktaż higieny: {{POLE-HG-INSTR-OPIS}}.
-
-**rozszerzony**
-
-> INSTRUKTAŻ HIGIENY: {{POLE-HG-WSKAZNIK}} {{POLE-HG-WARTOSC}}%. Zakres: {{POLE-HG-INSTR-OPIS}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.
-
-**Źródła kliniczne:** `SRC-KLIN-PCR-1972` (PMID 4500182); `SRC-KLIN-EAPD-F-2019` (PMID 31631242)
-
-## 23.1001 – Indywidualna fluoryzacja metodą kontaktową - za każdy zabieg
-
-`PROC-23.1001` · **Fluoryzacja kontaktowa indywidualna** · profilaktyka · status: **draft**
-
-Fluoryzacja kontaktowa indywidualna.
-
-**Na czym polega.** Fluoryzacja kontaktowa indywidualna: profilaktyka / zatrzymanie próchnicy. **Cel:** Fluoryzacja kontaktowa indywidualna: profilaktyka / zatrzymanie próchnicy.
-
-Wskazania: podwyższone ryzyko próchnicy
-
-**Kwalifikacja** – ocenić: wiek, stan ogólny. Wywiad: choroby, leki, alergie.
-
-
-
-**Przygotowanie** – konieczne: zestaw podstawowy
-
-**Przebieg krok po kroku**
-
-1. **Oczyszczenie powierzchni zębów** – Usunięcie płytki (szczoteczka, pasta profilaktyczna lub piaskowanie) przed aplikacją preparatu.
-2. **Fluoryzacja kontaktowa** – Oczyszczenie i osuszenie zębów, aplikacja preparatu fluorkowego (żel w łyżce / pędzelkiem / lakier) na czas wg producenta, usunięcie nadmiaru. *Uwaga: Ryzyko połknięcia żelu u małych dzieci – preferowany lakier.*
-3. **Przekazanie zaleceń** – Przekaż zalecenia pozabiegowe (ustnie lub ustnie i pisemnie) i ustal termin kontroli.
-
-**Materiały i narzędzia:** Preparat fluorkowy (lakier / żel) (konieczne)
-
-**Kontrola efektu:** wykonanie wszystkich elementów świadczenia
-
-**Zalecenia pozabiegowe:**  Kontrola: Wg wieku i ryzyka.
-
-**Dokumentacja**
-
-- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
-
-**NFZ** – świadczenie gwarantowane: **nie**
-
-*Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
-
-**ICD-10 (podpowiedzi, wybiera lekarz)**
-
-| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
-|---|---|---|---|---|
-| Z29.8 | Inne określone środki zapobiegawcze | profilaktyka fluorkowa | ocena_kliniczna | nie |
-
-**Checklista kompletności**
-
-- [obowiazkowe] Data udzielenia świadczenia — *prawne*
-- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
-- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
-- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
-- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
-- [zalecane] Zęby / zakres i preparat — *zalecenie kliniczne*
-
-**Szablony opisu**
-
-**standardowy**
-
-> Fluoryzacja kontaktowa indywidualna: {{POLE-PRZEBIEG}}. Zalecenia: {{POLE-ZALECENIA}}.
-
-**skrocony**
-
-> Fluoryzacja kontaktowa indywidualna.
-
-**rozszerzony**
-
-> FLUORYZACJA KONTAKTOWA INDYWIDUALNA: {{POLE-PRZEBIEG}}. Wynik: {{POLE-WYNIK}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.
-
-**Źródła kliniczne:** `SRC-KLIN-EAPD-F-2019` (PMID 31631242); `SRC-KLIN-ADA-F-2013` (PMID 24177407); `SRC-KLIN-ADA-LAK-2016` (PMID 27470525)
-
-## 23.1002 – Fluoryzacja kontaktowa zbiorowa, 1 zabieg u każdego dziecka
-
-`PROC-23.1002` · **Fluoryzacja kontaktowa zbiorowa** · profilaktyka · status: **draft**
-
-Fluoryzacja kontaktowa zbiorowa.
-
-**Na czym polega.** Fluoryzacja kontaktowa zbiorowa: profilaktyka / zatrzymanie próchnicy. **Cel:** Fluoryzacja kontaktowa zbiorowa: profilaktyka / zatrzymanie próchnicy.
-
-Wskazania: programy profilaktyczne w grupach dzieci
-
-**Kwalifikacja** – ocenić: wiek, stan ogólny. Wywiad: choroby, leki, alergie.
-
-
-
-**Przygotowanie** – konieczne: zestaw podstawowy
-
-**Przebieg krok po kroku**
-
-1. **Fluoryzacja kontaktowa** – Oczyszczenie i osuszenie zębów, aplikacja preparatu fluorkowego (żel w łyżce / pędzelkiem / lakier) na czas wg producenta, usunięcie nadmiaru. *Uwaga: Ryzyko połknięcia żelu u małych dzieci – preferowany lakier.*
-
-**Materiały i narzędzia:** Preparat fluorkowy (lakier / żel) (konieczne)
-
-**Kontrola efektu:** wykonanie wszystkich elementów świadczenia
-
-**Zalecenia pozabiegowe:**  Kontrola: Wg wieku i ryzyka.
-
-**Dokumentacja**
-
-- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
-
-**NFZ** – świadczenie gwarantowane: **nie**
-
-*Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
-
-**ICD-10 (podpowiedzi, wybiera lekarz)**
-
-| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
-|---|---|---|---|---|
-| Z29.8 | Inne określone środki zapobiegawcze | profilaktyka fluorkowa | ocena_kliniczna | nie |
-
-**Checklista kompletności**
-
-- [obowiazkowe] Data udzielenia świadczenia — *prawne*
-- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
-- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
-- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
-- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
-- [zalecane] Zęby / zakres i preparat — *zalecenie kliniczne*
-
-**Szablony opisu**
-
-**standardowy**
-
-> Fluoryzacja kontaktowa zbiorowa: {{POLE-PRZEBIEG}}. Zalecenia: {{POLE-ZALECENIA}}.
-
-**skrocony**
-
-> Fluoryzacja kontaktowa zbiorowa.
-
-**rozszerzony**
-
-> FLUORYZACJA KONTAKTOWA ZBIOROWA: {{POLE-PRZEBIEG}}. Wynik: {{POLE-WYNIK}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.
-
-**Źródła kliniczne:** `SRC-KLIN-EAPD-F-2019` (PMID 31631242); `SRC-KLIN-ADA-F-2013` (PMID 24177407); `SRC-KLIN-ADA-LAK-2016` (PMID 27470525)
-
 ## 23.1003 – Zabezpieczenie profilaktyczne bruzd lakiem szczelinowym - za każdy ząb
 
-`PROC-23.1003` · **Lakowanie bruzd (ząb)** · profilaktyka · status: **draft**
+`PROC-23.1003` · **Lakowanie bruzd (ząb)** · profilaktyka · status: **verified**
 
 Zabezpieczenie profilaktyczne bruzd lakiem szczelinowym – za każdy ząb.
 
@@ -1460,7 +1261,7 @@ Reguły: R-LAKOW-01
 
 ## 23.1004 – Zabezpieczanie profilaktyczne bruzd innymi materiałami
 
-`PROC-23.1004` · **Lakowanie bruzd innymi materiałami** · profilaktyka · status: **draft**
+`PROC-23.1004` · **Lakowanie bruzd innymi materiałami** · profilaktyka · status: **verified**
 
 Lakowanie bruzd innymi materiałami.
 
@@ -1613,7 +1414,7 @@ Reguły: R-LAKIER-01, R-ST30-LAKIER
 
 ## 23.1007 – Leczenie nadwrażliwości zębów w obrębie 1/4 łuku zębowego
 
-`PROC-23.1007` · **Leczenie nadwrażliwości zębów (¼ łuku)** · profilaktyka · status: **draft**
+`PROC-23.1007` · **Leczenie nadwrażliwości zębów (¼ łuku)** · profilaktyka · status: **verified**
 
 Leczenie nadwrażliwości zębów w obrębie ¼ łuku zębowego.
 
@@ -1689,7 +1490,7 @@ Wskazania: nadwrażliwość zębiny przy recesjach, abrazji, erozji, po skalingu
 
 ## 23.1009 – Profilaktyczne świadczenie stomatologiczne dla dziecka w 6. miesiącu życia
 
-`PROC-23.1009` · **Profilaktyka – 6. miesiąc życia** · profilaktyka · status: **draft**
+`PROC-23.1009` · **Profilaktyka – 6. miesiąc życia** · profilaktyka · status: **verified**
 
 Profilaktyka – 6. miesiąc życia.
 
@@ -1762,7 +1563,7 @@ Wskazania: dziecko / młodzież w 6. miesiąc życia (świadczenie profilaktyczn
 
 ## 23.1010 – Profilaktyczne świadczenie stomatologiczne dla dziecka w 9. miesiącu życia
 
-`PROC-23.1010` · **Profilaktyka – 9. miesiąc życia** · profilaktyka · status: **draft**
+`PROC-23.1010` · **Profilaktyka – 9. miesiąc życia** · profilaktyka · status: **verified**
 
 Profilaktyka – 9. miesiąc życia.
 
@@ -1836,7 +1637,7 @@ Wskazania: dziecko / młodzież w 9. miesiąc życia (świadczenie profilaktyczn
 
 ## 23.1011 – Profilaktyczne świadczenie stomatologiczne dla dziecka w 12. miesiącu życia
 
-`PROC-23.1011` · **Profilaktyka – 12. miesiąc życia** · profilaktyka · status: **draft**
+`PROC-23.1011` · **Profilaktyka – 12. miesiąc życia** · profilaktyka · status: **verified**
 
 Profilaktyka – 12. miesiąc życia.
 
@@ -1912,7 +1713,7 @@ Wskazania: dziecko / młodzież w 12. miesiąc życia (świadczenie profilaktycz
 
 ## 23.1012 – Profilaktyczne świadczenie stomatologiczne dla dziecka w 2. roku życia
 
-`PROC-23.1012` · **Profilaktyka – 2. rok życia** · profilaktyka · status: **draft**
+`PROC-23.1012` · **Profilaktyka – 2. rok życia** · profilaktyka · status: **verified**
 
 Profilaktyka – 2. rok życia.
 
@@ -1992,7 +1793,7 @@ Wskazania: dziecko / młodzież w 2. rok życia (świadczenie profilaktyczne NFZ
 
 ## 23.1013 – Profilaktyczne świadczenie stomatologiczne dla dziecka w 4. roku życia
 
-`PROC-23.1013` · **Profilaktyka – 4. rok życia** · profilaktyka · status: **draft**
+`PROC-23.1013` · **Profilaktyka – 4. rok życia** · profilaktyka · status: **verified**
 
 Profilaktyka – 4. rok życia.
 
@@ -2071,7 +1872,7 @@ Wskazania: dziecko / młodzież w 4. rok życia (świadczenie profilaktyczne NFZ
 
 ## 23.1014 – Profilaktyczne świadczenie stomatologiczne dla dziecka w 5. roku życia
 
-`PROC-23.1014` · **Profilaktyka – 5. rok życia** · profilaktyka · status: **draft**
+`PROC-23.1014` · **Profilaktyka – 5. rok życia** · profilaktyka · status: **verified**
 
 Profilaktyka – 5. rok życia.
 
@@ -2150,7 +1951,7 @@ Wskazania: dziecko / młodzież w 5. rok życia (świadczenie profilaktyczne NFZ
 
 ## 23.1015 – Profilaktyczne świadczenie stomatologiczne dla dziecka w 6. roku życia
 
-`PROC-23.1015` · **Profilaktyka – 6. rok życia** · profilaktyka · status: **draft**
+`PROC-23.1015` · **Profilaktyka – 6. rok życia** · profilaktyka · status: **verified**
 
 Profilaktyka – 6. rok życia.
 
@@ -2228,7 +2029,7 @@ Wskazania: dziecko / młodzież w 6. rok życia (świadczenie profilaktyczne NFZ
 
 ## 23.1016 – Profilaktyczne świadczenie stomatologiczne dla dziecka w 7. roku życia
 
-`PROC-23.1016` · **Profilaktyka – 7. rok życia** · profilaktyka · status: **draft**
+`PROC-23.1016` · **Profilaktyka – 7. rok życia** · profilaktyka · status: **verified**
 
 Profilaktyka – 7. rok życia.
 
@@ -2306,7 +2107,7 @@ Wskazania: dziecko / młodzież w 7. rok życia (świadczenie profilaktyczne NFZ
 
 ## 23.1017 – Profilaktyczne świadczenie stomatologiczne dla dziecka w 10. roku życia
 
-`PROC-23.1017` · **Profilaktyka – 10. rok życia** · profilaktyka · status: **draft**
+`PROC-23.1017` · **Profilaktyka – 10. rok życia** · profilaktyka · status: **verified**
 
 Profilaktyka – 10. rok życia.
 
@@ -2384,7 +2185,7 @@ Wskazania: dziecko / młodzież w 10. rok życia (świadczenie profilaktyczne NF
 
 ## 23.1018 – Profilaktyczne świadczenie stomatologiczne dla młodzieży w 12. roku życia
 
-`PROC-23.1018` · **Profilaktyka – 12. rok życia** · profilaktyka · status: **draft**
+`PROC-23.1018` · **Profilaktyka – 12. rok życia** · profilaktyka · status: **verified**
 
 Profilaktyka – 12. rok życia.
 
@@ -2462,7 +2263,7 @@ Wskazania: dziecko / młodzież w 12. rok życia (świadczenie profilaktyczne NF
 
 ## 23.1019 – Profilaktyczne świadczenie stomatologiczne dla młodzieży w 13. roku życia
 
-`PROC-23.1019` · **Profilaktyka – 13. rok życia** · profilaktyka · status: **draft**
+`PROC-23.1019` · **Profilaktyka – 13. rok życia** · profilaktyka · status: **verified**
 
 Profilaktyka – 13. rok życia.
 
@@ -2540,7 +2341,7 @@ Wskazania: dziecko / młodzież w 13. rok życia (świadczenie profilaktyczne NF
 
 ## 23.1020 – Profilaktyczne świadczenie stomatologiczne dla młodzieży w 16. roku życia
 
-`PROC-23.1020` · **Profilaktyka – 16. rok życia** · profilaktyka · status: **draft**
+`PROC-23.1020` · **Profilaktyka – 16. rok życia** · profilaktyka · status: **verified**
 
 Profilaktyka – 16. rok życia.
 
@@ -2618,7 +2419,7 @@ Wskazania: dziecko / młodzież w 16. rok życia (świadczenie profilaktyczne NF
 
 ## 23.1021 – Profilaktyczne świadczenie stomatologiczne dla młodzieży w 19. roku życia
 
-`PROC-23.1021` · **Profilaktyka – 19. rok życia** · profilaktyka · status: **draft**
+`PROC-23.1021` · **Profilaktyka – 19. rok życia** · profilaktyka · status: **verified**
 
 Profilaktyka – 19. rok życia.
 
@@ -2689,150 +2490,6 @@ Wskazania: dziecko / młodzież w 19. rok życia (świadczenie profilaktyczne NF
 **rozszerzony**
 
 > ŚWIADCZENIE PROFILAKTYCZNE – 19. rok życia: {{POLE-PRZEBIEG}}. Uzębienie: {{POLE-UZ-DIAGRAM}}. puw/PUW (składowe): {{POLE-UZ-DMFT}}. Higiena: {{POLE-HG-OCENA}}. Instruktaż opiekuna / pacjenta: {{POLE-HG-INSTR-OPIS}}. Fluorki: {{POLE-DZ-FLUOR}}. Ryzyko próchnicy: {{POLE-UZ-RYZYKO}}. Zalecenia: {{POLE-ZALECENIA}}. Kolejna wizyta: {{POLE-KONTROLA}}.
-
-**Źródła kliniczne:** `SRC-DU-2025-615`; `SRC-KLIN-EAPD-F-2019` (PMID 31631242)
-
-## 23.1022 – Profilaktyczne świadczenie stomatologiczne zapobiegające wadom zgryzu
-
-`PROC-23.1022` · **Profilaktyka wad zgryzu** · profilaktyka · status: **draft**
-
-Profilaktyka wad zgryzu.
-
-**Na czym polega.** Profilaktyczne świadczenie zapobiegające wadom zgryzu (ocena zgryzu, nawyków, zalecenia). **Cel:** Profilaktyczne świadczenie zapobiegające wadom zgryzu (ocena zgryzu, nawyków, zalecenia).
-
-Wskazania: dzieci – ocena rozwoju zgryzu i nawyków
-
-**Kwalifikacja** – ocenić: wiek, stan ogólny. Wywiad: choroby, leki, alergie.
-
-
-
-**Przygotowanie** – konieczne: zestaw podstawowy
-
-**Przebieg krok po kroku**
-
-1. **Badanie wg katalogu badań** – Wykonaj badania składowe z katalogu A odpowiednie do świadczenia (formularze i szablony BAD-…). *Uwaga: Wynik każdego elementu wpisuje lekarz.*
-2. **Instruktaż opiekuna** – Instruktaż higieny i diety dla opiekuna (kto i jak szczotkuje, ilość pasty, nocne karmienie, słodkie napoje), pokaz techniki.
-3. **Omówienie wyników i planu** – Przedstaw pacjentowi wyniki, rozpoznanie i plan leczenia z alternatywami; ustal termin kolejnej wizyty.
-
-**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne)
-
-**Kontrola efektu:** wykonanie wszystkich elementów świadczenia
-
-**Zalecenia pozabiegowe:**  Kontrola: Wg wieku i ryzyka.
-
-**Dokumentacja**
-
-- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
-
-**NFZ** – świadczenie gwarantowane: **nie**
-
-*Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
-
-**ICD-10 (podpowiedzi, wybiera lekarz)**
-
-| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
-|---|---|---|---|---|
-| K07.2 | Anomalie relacji łuków zębowych | anomalie relacji łuków – rozpoznanie lekarza | ocena_kliniczna | nie |
-| Z01.2 | Badanie dentystyczne | badanie profilaktyczne | ocena_kliniczna | nie |
-
-**Checklista kompletności**
-
-- [obowiazkowe] Data udzielenia świadczenia — *prawne*
-- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
-- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
-- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
-- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
-- [zalecane] Ocena zgryzu i nawyków — *zalecenie kliniczne*
-
-**Szablony opisu**
-
-**standardowy**
-
-> Profilaktyka wad zgryzu: {{POLE-PRZEBIEG}}. Zalecenia: {{POLE-ZALECENIA}}.
-
-**skrocony**
-
-> Profilaktyka wad zgryzu.
-
-**rozszerzony**
-
-> PROFILAKTYKA WAD ZGRYZU: {{POLE-PRZEBIEG}}. Wynik: {{POLE-WYNIK}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.
-
-**Źródła kliniczne:** `SRC-DU-2025-615`
-
-## 23.1023 – Profilaktyczne świadczenie stomatologiczne dla dziecka w 3. roku życia
-
-`PROC-23.1023` · **Profilaktyka – 3. rok życia** · profilaktyka · status: **draft**
-
-Profilaktyka – 3. rok życia.
-
-**Na czym polega.** Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 3. rok życia – zakres określony w zał. 10 rozporządzenia. **Cel:** Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 3. rok życia – zakres określony w zał. 10 rozporządzenia.
-
-Wskazania: dziecko / młodzież w 3. rok życia (świadczenie profilaktyczne NFZ)
-
-**Kwalifikacja** – ocenić: wiek, stan ogólny. Wywiad: choroby, leki, alergie.
-
-
-
-**Przygotowanie** – konieczne: zestaw podstawowy
-
-**Przebieg krok po kroku**
-
-1. **Wizyta adaptacyjna** – Zapoznanie dziecka z gabinetem i lekarzem (pokaż–powiedz–zrób), oglądanie jamy ustnej bez zabiegów inwazyjnych, rozmowa z opiekunem.
-2. **Badanie wg katalogu badań** – Wykonaj badania składowe z katalogu A odpowiednie do świadczenia (formularze i szablony BAD-…). *Uwaga: Wynik każdego elementu wpisuje lekarz.*
-3. **Ocena intensywności próchnicy (puw / PUW)** – Policz zęby z próchnicą (p/P), usunięte z powodu próchnicy (u/U) i wypełnione (w/W) – osobno dla zębów mlecznych i stałych; zapisz składowe.
-4. **Instruktaż opiekuna** – Instruktaż higieny i diety dla opiekuna (kto i jak szczotkuje, ilość pasty, nocne karmienie, słodkie napoje), pokaz techniki.
-5. **Profilaktyka fluorkowa dostosowana do wieku** – Dobór preparatu i ilości fluorku do wieku i ryzyka próchnicy (pasta 1000 ppm F – ilość wielkości ziarna ryżu do 2 lat, wielkości ziarna grochu 2–6 lat; od 6 lat 1450 ppm F; lakier fluorkowy wg ryzyka). *Uwaga: Wartości wg EAPD 2019 – zweryfikować z aktualnym dokumentem przed wdrożeniem.*
-6. **Omówienie wyników i planu** – Przedstaw pacjentowi wyniki, rozpoznanie i plan leczenia z alternatywami; ustal termin kolejnej wizyty.
-
-**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Preparat fluorkowy (lakier / żel) (sytuacyjne); Szczoteczka / gumka profilaktyczna, pasta profilaktyczna (typowe)
-
-**Kontrola efektu:** wykonanie wszystkich elementów świadczenia
-
-**Zalecenia pozabiegowe:**  Kontrola: Wg wieku i ryzyka.
-
-**Dokumentacja**
-
-- Data, opis świadczenia, rozpoznanie / wskazanie — *prawne* (`SRC-DU-2026-1391`)
-- Elementy świadczenia wymienione w zał. 10 (wykonane) — *NFZ* (`SRC-DU-2025-615`)
-
-**NFZ** – świadczenie gwarantowane: **nie**
-
-*Kod NFZ w zarządzeniu: 23.1012a (D5=B – eksport kodu ICD-9 23.1023). Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
-
-**ICD-10 (podpowiedzi, wybiera lekarz)**
-
-| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
-|---|---|---|---|---|
-| Z01.2 | Badanie dentystyczne | badanie profilaktyczne bez rozpoznania choroby | ocena_kliniczna | nie |
-| K02.1 | Próchnica zębiny | stwierdzona próchnica – rozpoznanie lekarza | ocena_kliniczna | nie |
-
-**Checklista kompletności**
-
-- [obowiazkowe] Data udzielenia świadczenia — *prawne*
-- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
-- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
-- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
-- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
-- [rozliczeniowe] Wizyta adaptacyjna przysługuje w przypadku pierwszej wizyty dziecka (jeżeli nie wykorzystano świadczenia wcześniej) albo w przypadku dzieci odczuwających lęk związany z zabiegiem stomatologicznym (co najmniej 2 wizyty adaptacyjne mające na celu zmniejszenie odczuwania lęku przez dzieci oraz ocenę stanu zdrowia uzębienia) — *NFZ*, element świadczenia wg zał. 10
-- [rozliczeniowe] Kontrola higieny jamy ustnej (badanie kontrolne wraz z instruktażem higieny jamy ustnej i oceną stanu uzębienia za pomocą wskaźnika intensywności próchnicy puw* dla zębów mlecznych) — *NFZ*, element świadczenia wg zał. 10
-- [rozliczeniowe] Ocena stanu morfologicznego i funkcji żucia oraz wyrzynania zębów obejmuje: 1) sprawdzenie liczby zębów oraz przebiegu linii pośrodkowej; 2) sprawdzenie sposobu zwierania siekaczy; 3) sprawdzenie toru oddychania; 4) sprawdzenie występowania nawyków w postaci ssania smoczków lub palców — *NFZ*, element świadczenia wg zał. 10
-- [rozliczeniowe] Zastosowanie działań zapobiegających wadom zgryzu – profilaktyka ortodontyczna. Pouczenie dotyczące: 1) dbałości o to, by dziecko oddychało przez nos; 2) wprowadzania pokarmów o stałej konsystencji; 3) oduczania nawyków — *NFZ*, element świadczenia wg zał. 10
-- [rozliczeniowe] Profilaktyka profesjonalna próchnicy, w tym profilaktyka fluorkowa przy braku przeciwwskazań — *NFZ*, element świadczenia wg zał. 10
-
-**Szablony opisu**
-
-**standardowy**
-
-> Świadczenie profilaktyczne (3. rok życia): {{POLE-PRZEBIEG}}. puw/PUW: {{POLE-UZ-DMFT}}. Instruktaż: {{POLE-HG-INSTR-OPIS}}. Fluorki: {{POLE-DZ-FLUOR}}.
-
-**skrocony**
-
-> Profilaktyka 3. rok życia: puw/PUW {{POLE-UZ-DMFT}}; instruktaż przeprowadzono.
-
-**rozszerzony**
-
-> ŚWIADCZENIE PROFILAKTYCZNE – 3. rok życia: {{POLE-PRZEBIEG}}. Uzębienie: {{POLE-UZ-DIAGRAM}}. puw/PUW (składowe): {{POLE-UZ-DMFT}}. Higiena: {{POLE-HG-OCENA}}. Instruktaż opiekuna / pacjenta: {{POLE-HG-INSTR-OPIS}}. Fluorki: {{POLE-DZ-FLUOR}}. Ryzyko próchnicy: {{POLE-UZ-RYZYKO}}. Zalecenia: {{POLE-ZALECENIA}}. Kolejna wizyta: {{POLE-KONTROLA}}.
 
 **Źródła kliniczne:** `SRC-DU-2025-615`; `SRC-KLIN-EAPD-F-2019` (PMID 31631242)
 
