@@ -6,6 +6,7 @@ t = T(); chk = t.chk
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..')
 PROC = json.load(open(os.path.join(ROOT, 'data', 'procedury-icd9', 'procedures.json')))['procedury']
 OPR = [p for p in PROC if p['status'] != 'not_started']
+REJ = next(p for p in PROC if p.get('uzasadnienie_statusu', '').startswith('Odrzucone'))   # przykład karty odrzuconej
 DRAFT = next((p for p in PROC if p['status'] == 'draft'), None)   # przykład karty niezatwierdzonej (po pełnej weryfikacji 22.11.2026 – brak)
 
 def ready(pg): pg.wait_for_function("typeof DB!=='undefined'&&DB.ready===true", timeout=20000); pg.wait_for_timeout(200)
@@ -45,9 +46,9 @@ with sync_playwright() as p:
     else:
         pg.goto(URL + '/katalog-procedur')
         chk('Wszystkie widoczne karty zweryfikowane – brak „wersja robocza” na liście', not any('wersja robocza' in x for x in pg.locator('[data-testid="kp-procedury"]').all_inner_texts()))
-    pg.goto(URL + '/katalog-procedur/PROC-23.1202')
-    chk('Karta odrzucona (23.1202 dewitalizacja): informacja o odrzuceniu, bez treści karty', 'odrzucona' in pg.inner_text('main') and pg.locator('[data-testid="kp-kroki"]').count() == 0)
-    pg.goto(URL + '/katalog-procedur?q=23.1202')
+    pg.goto(URL + '/katalog-procedur/' + REJ['id'])
+    chk(f'Karta odrzucona ({REJ["kod"]}): informacja o odrzuceniu, bez treści karty', 'odrzucona' in pg.inner_text('main') and pg.locator('[data-testid="kp-kroki"]').count() == 0)
+    pg.goto(URL + '/katalog-procedur?q=' + REJ['kod'])
     chk('Karta odrzucona nie pojawia się na liście', pg.locator('[data-testid="kp-procedury"] li').count() == 0)
     pg.goto(URL + '/katalog-procedur/PROC-23.1502')
     chk('Karta 23.1502: kroki, checklista, ICD-10, 3 szablony', pg.locator('[data-testid="kp-kroki"] li').count() >= 8 and pg.locator('[data-testid="kp-checklista"] li').count() >= 5

@@ -223,7 +223,7 @@
    "kod": "23.0103",
    "nazwa_oficjalna": "Porada lekarska",
    "kategoria": "badanie i porada",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -299,14 +299,16 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0104",
    "kod": "23.0104",
    "nazwa_oficjalna": "Wydanie orzeczenia lekarskiego",
    "kategoria": "badanie i porada",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -374,7 +376,9 @@
     "SRC-DU-2026-1391"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0105",
@@ -480,7 +484,7 @@
    "kod": "23.0106",
    "nazwa_oficjalna": "Wydanie krótkiego zaświadczenia lub świadectwa",
    "kategoria": "badanie i porada",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -548,7 +552,9 @@
     "SRC-DU-2026-1391"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0107",
@@ -666,7 +672,7 @@
    "kod": "23.02",
    "nazwa_oficjalna": "Badanie żywotności zęba",
    "kategoria": "diagnostyka",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -749,7 +755,9 @@
     "SRC-KLIN-ESE-S3-2023"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0301",
@@ -1598,7 +1606,7 @@
    "kod": "23.0404",
    "nazwa_oficjalna": "Znieczulenie przewodowe zewnątrzustne",
    "kategoria": "znieczulenie",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -1669,7 +1677,9 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.05",
@@ -3190,7 +3200,7 @@
    "kod": "23.1008",
    "nazwa_oficjalna": "Impregnacja zębiny",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -3271,7 +3281,9 @@
     "SRC-KLIN-ADA-LAK-2016"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1009",
@@ -6594,7 +6606,7 @@
    "kod": "23.1109",
    "nazwa_oficjalna": "Wypełnienie ubytku korony zęba na 1 powierzchni",
    "kategoria": "leczenie próchnicy",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -6784,14 +6796,16 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1110",
    "kod": "23.1110",
    "nazwa_oficjalna": "Wypełnienie ubytku korony zęba na 2 powierzchniach",
    "kategoria": "leczenie próchnicy",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -6981,14 +6995,16 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1111",
    "kod": "23.1111",
    "nazwa_oficjalna": "Wypełnienie ubytku korony zęba na 3 powierzchniach",
    "kategoria": "leczenie próchnicy",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -7178,14 +7194,16 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1112",
    "kod": "23.1112",
    "nazwa_oficjalna": "Wypełnienie ubytku korony zęba na więcej niż 3 powierzchniach",
    "kategoria": "leczenie próchnicy",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -7375,7 +7393,9 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1201",
@@ -7597,7 +7617,7 @@
    "kod": "23.1202",
    "nazwa_oficjalna": "Dewitalizacja miazgi zęba z zaopatrzeniem ubytku opatrunkiem",
    "kategoria": "endodoncja – leczenie miazgi",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -7752,7 +7772,9 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1203",
@@ -8748,7 +8770,7 @@
    "kod": "23.1208",
    "nazwa_oficjalna": "Ekstyrpacja zdewitalizowanej miazgi zęba z nieuformowanym korzeniem",
    "kategoria": "endodoncja – leczenie miazgi",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -8932,14 +8954,16 @@
     "SRC-KLIN-ESE-2006"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1209",
    "kod": "23.1209",
    "nazwa_oficjalna": "Ekstyrpacja zdewitalizowanej miazgi zęba",
    "kategoria": "endodoncja – leczenie miazgi",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -9126,7 +9150,9 @@
     "SRC-KLIN-ESE-2006"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1210",
@@ -17332,7 +17358,7 @@
    "kod": "23.1610",
    "nazwa_oficjalna": "Gingwoosteoplastyka",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -17501,7 +17527,9 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1611",
@@ -17678,7 +17706,7 @@
    "kod": "23.1612",
    "nazwa_oficjalna": "Plastyka wędzidełka ,wargi ,policzka",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -17840,14 +17868,16 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1613",
    "kod": "23.1613",
    "nazwa_oficjalna": "Plastyka przedsionka jamy ustnej met. Clarka, Kazanjana",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -18014,7 +18044,9 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1614",
@@ -18750,7 +18782,7 @@
    "kod": "23.1618",
    "nazwa_oficjalna": "Zabieg wszczepiania hydroksyapatytu, bioglassu lub tp.",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -18918,14 +18950,16 @@
     "SRC-KLIN-EFP-S3-2020"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1619",
    "kod": "23.1619",
    "nazwa_oficjalna": "Zabieg pokrycia obnażonych korzeni zębów metodą bocznie przesuniętego płata",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -19086,7 +19120,9 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1620",
@@ -20125,7 +20161,7 @@
    "kod": "23.1705",
    "nazwa_oficjalna": "Operacyjne usunięcie zęba zatrzymanego",
    "kategoria": "chirurgia – ekstrakcje",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -20316,7 +20352,9 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1706",
@@ -20502,7 +20540,7 @@
    "kod": "23.1707",
    "nazwa_oficjalna": "Operacyjne usunięcie zawiązków zębów ze wskazań ortodontycznych",
    "kategoria": "chirurgia – ekstrakcje",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -20679,7 +20717,9 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1708",
@@ -20697,7 +20737,7 @@
    "kod": "23.1801",
    "nazwa_oficjalna": "Zamknięcie zatoki otwartej w przebiegu chirurgicznego usuwania zęba",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -20858,7 +20898,9 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1802",
@@ -24971,7 +25013,7 @@
    "kod": "23.2002",
    "nazwa_oficjalna": "Nacięcie z dojścia wewnątrz lub zewnątrzustnego głęboko leżącego ropnia włącznie z drenażem i opatrunkiem",
    "kategoria": "chirurgia – zakażenia",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -25129,7 +25171,9 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.2003",
@@ -28790,7 +28834,7 @@
    "kod": "23.3004",
    "nazwa_oficjalna": "Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną teleskopową",
    "kategoria": "protetyka – mosty",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -28970,7 +29014,9 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – protetyka specjalistyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3005",
@@ -30854,7 +30900,7 @@
    "kod": "23.31041",
    "nazwa_oficjalna": "Proteza całkowita górna o charakterze overdenture oparta na zabezpieczonych korzeniach",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -31017,7 +31063,9 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – protetyka specjalistyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3105",
@@ -31209,7 +31257,7 @@
    "kod": "23.31051",
    "nazwa_oficjalna": "Proteza całkowita dolna o charakterze overdenture oparta na zabezpieczonych korzeniach",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "not_started",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -31372,7 +31420,9 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – protetyka specjalistyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
+   "uzasadnienie_statusu": "Przywrócone i zatwierdzone przez Patryka (22.11.2026) po przeglądzie kart odrzuconych.",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3106",

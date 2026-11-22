@@ -110,3 +110,11 @@ Odrzucone (9): 23.0103, 23.0104, 23.0105, 23.0106, 23.02 (badanie/porada/diagnos
 Uwagi: karty RTG nie mają mapowań ICD-10; 23.0302 i 23.2101 – świadczenia gwarantowane bez odczytanego kodu produktu (audyt NFZ).
 
 **Stan końcowy kart procedur:** 119 verified, 0 draft, 87 odrzucone (ukryte, treść zachowana), 57 pominięte, 3 nadrzędne (razem 266). Badania (17) – nadal draft.
+
+### Przegląd kart odrzuconych (22.11.2026)
+
+Patryk przejrzał pojedynczo wszystkie 87 odrzuconych kart (przywrócić / pozostawić).
+Przywrócone i zatwierdzone (25): 23.0103, 23.0104, 23.0106, 23.02, 23.0404, 23.1008, 23.1109–23.1112, 23.1202, 23.1208, 23.1209, 23.1610, 23.1612, 23.1613, 23.1618, 23.1619, 23.1705, 23.1707, 23.1801, 23.2002, 23.3004, 23.31041, 23.31051.
+Pozostają odrzucone: 62. Pominięte kody (57: ortodoncja, chirurgia szczękowo-twarzowa, znieczulenie ogólne, epitezy) – bez zmian, decyzja: nie opracowywać.
+
+**Stan:** 144 verified, 0 draft, 62 odrzucone, 57 pominięte, 3 nadrzędne (razem 266).
