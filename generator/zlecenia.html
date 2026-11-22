@@ -188,7 +188,7 @@ function sekcje(z) {
     { k: 'aoxFonet', l: 'Fonetyka – uwagi', t: 'text', st: 'O' },
     { k: 'aoxPrzym', l: 'Oczekiwane przymiarki', t: 'chipsN', opts: ['ustawienie zębów w wosku', 'próba konstrukcji (pasywne dopasowanie)', 'próba estetyczna'], st: 'Z' }] });
   if (s.includes('rem')) out.push({ id: 'rem', tyt: 'Proteza', open: true, pola: [
-    { k: 'remEtap', l: 'Etap', t: 'chips1', opts: ['łyżka indywidualna', 'wzorniki zwarciowe', 'ustawienie zębów (próba)', 'proteza gotowa', 'naprawa', 'podścielenie'], st: 'W' },
+    { k: 'remEtap', l: 'Etap', t: 'chips1', opts: ['łyżka indywidualna', 'wzorniki zwarciowe'].concat(z.typ === 'rem-szkiel' ? ['próba szkieletu'] : []).concat(['ustawienie zębów (próba)', 'proteza gotowa', 'naprawa', 'podścielenie']), st: 'W' },
     { k: 'remLuk', l: 'Łuk', t: 'chips1', opts: ['szczęka', 'żuchwa', 'obie'], st: 'W', own: false },
     { k: 'remKlamry', l: 'Klamry / elementy retencyjne (zęby)', t: 'text', st: z.typ === 'rem-calk' ? 'O' : 'Z' },
     { k: 'remZeby', l: 'Zęby sztuczne (rodzaj / numer formy)', t: 'text', st: 'O' }] });
@@ -212,7 +212,7 @@ function sekcje(z) {
     { k: 'kontakty', l: 'Punkty styczne', t: 'chips1', opts: ['jak zęby sąsiednie', 'mocne', 'lekkie'], st: 'Z' }] });
   if (t) { const W = s.includes('zgryzW');
     out.push({ id: 'zgryz', tyt: 'Zgryz i warunki zwarciowe', open: W, pola: [
-      { k: 'rejestr', l: 'Rejestracja zwarcia', t: 'chips1', opts: ['MIC (zwarcie nawykowe)', 'CR (relacja centralna)', 'skan zwarcia bocznego', 'rejestrat zgryzowy dołączony'], st: W ? 'W' : 'Z' },
+      { k: 'rejestr', l: 'Rejestracja zwarcia', t: 'chips1', opts: ['MIC (zwarcie nawykowe)', 'CR (relacja centralna)', 'skan zwarcia bocznego', 'rejestrat zgryzowy dołączony'], st: W || grp === 'B' ? 'W' : 'Z' },   // E4: przy każdym moście wymagana (decyzja Patryka 22.11)
       { k: 'vdo', l: 'Wymiar pionowy (VDO)', t: 'chips1', opts: ['zachować', 'zwiększyć', 'zmniejszyć'], st: W ? 'Z' : 'O' },
       { k: 'vdoMm', l: 'Zmiana VDO (mm)', t: 'text', st: 'O' },
       { k: 'angle', l: 'Klasa Angle\'a', t: 'chips1', opts: ['I', 'II/1', 'II/2', 'III'], st: 'O', own: false },

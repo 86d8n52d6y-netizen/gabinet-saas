@@ -80,6 +80,11 @@ with sync_playwright() as p:
     chk('All-on-X: rejestracja zwarcia wymagana', 'Rejestracja zwarcia' in W())
     typ(pg, 'kor-emax')
     chk('korona: rejestracja zwarcia tylko zalecana (nie wymagana)', 'Rejestracja zwarcia' not in W())
+    for k in ('most-klas', 'most-adh', 'most-impl', 'most-tymcz'):
+        typ(pg, k); chk(f'E4: {k} – rejestracja zwarcia wymagana', 'Rejestracja zwarcia' in W(), W())
+    typ(pg, 'rem-szkiel'); chk('E4: proteza szkieletowa – etap „próba szkieletu”', pg.locator('button[data-k="remEtap"][data-v="próba szkieletu"]').count() == 1)
+    typ(pg, 'rem-czesc'); chk('E4: proteza częściowa – bez etapu „próba szkieletu”', pg.locator('button[data-k="remEtap"][data-v="próba szkieletu"]').count() == 0)
+    typ(pg, 'kor-emax')
     pg.click('details[data-sec="kolor"] > summary') if not pg.locator('button[data-k="zabStan"]').first.is_visible() else None
     ch(pg, 'zabStan', 'ząb martwy / przebarwiony')
     chk('ząb martwy → kolor kikuta wymagany', 'Kolor kikuta' in W(), W())
