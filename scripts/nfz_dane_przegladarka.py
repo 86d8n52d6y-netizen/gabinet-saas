@@ -15,6 +15,7 @@ def zbuduj():
     L = lambda p: json.loads((D / p).read_text(encoding='utf-8'))
     man, src, rules = L('manifest.json'), L('sources.json'), L('billing-rules.json')
     lim, mp, dg = L('limits-and-combinations.json'), L('procedure-diagnosis-mappings.json'), L('diagnoses.json')
+    prod = L('products.json')
     for f in man['pliki']:                                                     # dane muszą być tymi, które przeszły walidację
         if hashlib.sha256((D / f['plik']).read_bytes()).hexdigest() != f['sha256']:
             sys.exit(f'nfz-dane: zła suma SHA-256 dla {f["plik"]} – uruchom scripts/waliduj_nfz.py')
@@ -34,7 +35,8 @@ def zbuduj():
     return {'wersja': man['wersja'], 'stan_prawny_na': man['stan_prawny_na'],
             'uwaga': 'Dane audytu NFZ (docs/nfz/). Nazwy ICD-10 robocze – do porównania z Tomem I CeZ. Mapowania ICD-9→ICD-10 to podpowiedzi, wybiera lekarz.',
             'reguly': reguly, 'limity': lim['limity'], 'laczenie': lim['laczenie'], 'zasada_laczenia': lim['zasada_domyslna'],
-            'icd10': icd10, 'podpowiedzi_icd10': sug}
+            'icd10': icd10, 'podpowiedzi_icd10': sug,
+            'pakiety': {x['id']: (x.get('sklad') or {}).get('kierunkowa') or [] for x in prod['pakiety_zal_1c_1d']}}   # pakiet → procedury kierunkowe ICD-9 (do podpowiedzi)
 
 
 def zapisz():

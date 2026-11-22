@@ -209,6 +209,15 @@ PATCHES = [
   ('P37b lista zasad NFZ na końcu okienka komunikatów',
    "${err.length||hard.length?`<div class=\"nfz-src\">${esc(NFZ_SRC)}</div>`:''}</div>`;",
    "${err.length||hard.length?`<div class=\"nfz-src\">${esc(NFZ_SRC)}</div>`:''}${zas}</div>`;"),
+  ('P38 audyt NFZ N5 (D3=A): rozpoznanie ICD-10 wybrane przez lekarza z podpowiedzi pokazywane przy kodzie i w tabeli (domyślnie jak dotąd)',
+   "const icdOf=c=>typeof D[c].icd==='function'?D[c].icd():D[c].icd;",
+   "const icdOf0=c=>typeof D[c].icd==='function'?D[c].icd():D[c].icd;\nconst icdOf=c=>{const w=str(state.a[c+'.icd10']);return w?w+' (wybrane)':icdOf0(c);};"),
+  ('P39 audyt NFZ N5: podpowiedzi ICD-10 z mapowań audytu w karcie każdej procedury (pakiet → procedury kierunkowe; brak podkodu → kod nadrzędny)',
+   "function renderStep2(){return linkBanner()+nfzBox()+sharedCard()+state.codes.map(cardHTML).join('')+ptsExtraCard();}",
+   'function icdSug(c){const N=window.NFZ_DANE;if(!N)return [];const P=N.podpowiedzi_icd10,seen=new Set(),out=[];\n  const src=/^ST/.test(c)?(N.pakiety[c]||[]):[\'23.\'+c];\n  src.forEach(k=>{let q=k;while(q.length>5&&!P[q])q=q.slice(0,-1);(P[q]||[]).forEach(x=>{if(seen.has(x.k))return;seen.add(x.k);out.push(Object.assign({n:(N.icd10[x.k]||{}).n||\'\'},x));});});\n  return out;}\nfunction icdSugHTML(c){const L=icdSug(c);if(!L.length)return \'\';const w=str(state.a[c+\'.icd10\']),op=ui.icdOpen&&ui.icdOpen[c];\n  return `<details class="icd-sug"${op?\' open\':\'\'}><summary>Podpowiedzi ICD-10 (${L.length}) – wybiera lekarz</summary><div class="chips">${L.map(x=>`<button type="button" class="chip" data-act="icd10" data-c="${esc(c)}" data-v="${esc(x.k)}" aria-pressed="${w===x.k}" title="${esc(x.u||\'\')}">${esc(x.k)} ${esc(x.n)}</button>`).join(\'\')}</div><p class="note" style="margin:6px 0 0">Nazwy robocze z audytu NFZ (do porównania z wydaniem CeZ). NFZ nie narzuca pary procedura–rozpoznanie. Wybór pokazuje się przy kodzie i w tabeli – nie zmienia treści opisu ani wyceny; zostaje na tym urządzeniu.</p></details>`;}\nfunction renderStep2(){'+"return linkBanner()+nfzBox()+sharedCard()+state.codes.map(c=>cardHTML(c).replace(/<\\/section>\\s*$/,icdSugHTML(c)+'</section>')).join('')+ptsExtraCard();}"),
+  ('P40 audyt NFZ N5: wybór / odznaczenie podpowiedzi ICD-10',
+   "  if(a==='rmcode'){state.codes.splice(state.codes.indexOf(el.dataset.c),1);render();return;}",
+   "  if(a==='rmcode'){state.codes.splice(state.codes.indexOf(el.dataset.c),1);render();return;}\n  if(a==='icd10'){const k=el.dataset.c+'.icd10';state.a[k]=str(state.a[k])===el.dataset.v?'':el.dataset.v;ui.icdOpen=Object.assign({},ui.icdOpen,{[el.dataset.c]:true});render();return;}"),
 ]
 
 PATCHES_PRYW = [

@@ -65,6 +65,9 @@ Plik `wspolne.js` (sejf z hasłem w przeglądarce) zastąpiony przez `gabinet-sa
 | P37 | audyt NFZ N2: rozwijana lista „Zasady NFZ dla wybranych kodów” (treść, poziom, status, źródło) pod komunikatami NFZ |
 | P37a | lista zasad NFZ widoczna także bez błędów i ostrzeżeń |
 | P37b | lista zasad NFZ na końcu okienka komunikatów |
+| P38 | audyt NFZ N5 (D3=A): rozpoznanie ICD-10 wybrane przez lekarza z podpowiedzi pokazywane przy kodzie i w tabeli (domyślnie jak dotąd) |
+| P39 | audyt NFZ N5: podpowiedzi ICD-10 z mapowań audytu w karcie każdej procedury (pakiet → procedury kierunkowe; brak podkodu → kod nadrzędny) |
+| P40 | audyt NFZ N5: wybór / odznaczenie podpowiedzi ICD-10 |
 
 ## Opisy prywatne (`prywatne.html`)
 

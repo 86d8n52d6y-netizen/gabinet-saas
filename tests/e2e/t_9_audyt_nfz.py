@@ -68,6 +68,22 @@ with sync_playwright() as p:
     r = wiz(pg, ['1502'], '30', D('2026-11-20')); chk('N2: wypełnienie bez dodatkowych błędów z danych audytu', r['err'] == [], r)
     pts_a = (wiz(pg, ['ST01', '1502'], '30', D('2026-11-20')), pts(pg))[1]; chk('N2: silnik nie zmienia punktów (ST01 + 1502 = 138 pkt)', pts_a == 138, pts_a)
 
+    # N5 – podpowiedzi ICD-10 (D3=A: wybiera lekarz; tekst opisu i wycena bez zmian)
+    for c, oczek in [('ST30', 'K03.6'), ('1006', None), ('ST01', None), ('1502', 'K02')]:
+        wiz(pg, [c], '30', {'sv.date': '2026-11-20'}); pg.evaluate("state.step=2;render()"); pg.wait_for_timeout(150)
+        sug = pg.evaluate(f"icdSug('{c}').map(x=>x.k)")
+        chk(f'N5: {c} – podpowiedzi ICD-10 z mapowań audytu', len(sug) > 0 and (oczek is None or any(k.startswith(oczek) for k in sug)), sug)
+        chk(f'N5: {c} – podpowiedzi w karcie procedury (rozwijane)', pg.locator(f'#card-{c} details.icd-sug').count() == 1)
+    wiz(pg, ['ST30'], '30', {'sv.date': '2026-11-20'}); pg.evaluate("state.step=2;render()"); pg.wait_for_timeout(150)
+    t0, p0 = pg.evaluate("genTxt()"), pts(pg)
+    pg.click('#card-ST30 details.icd-sug > summary'); pg.click('#card-ST30 button[data-act="icd10"][data-v="K03.6"]'); pg.wait_for_timeout(200)
+    chk('N5: wybrane rozpoznanie przy kodzie („K03.6 (wybrane)”)', 'K03.6 (wybrane)' in pg.inner_text('#card-ST30 h2'), pg.inner_text('#card-ST30 h2'))
+    chk('N5: lista podpowiedzi zostaje otwarta, wybór zaznaczony', pg.evaluate("document.querySelector('#card-ST30 details.icd-sug').open") and pg.get_attribute('#card-ST30 button[data-v="K03.6"]', 'aria-pressed') == 'true')
+    chk('N5: wybór nie zmienia treści opisu ani wyceny', pg.evaluate("genTxt()") == t0 and pts(pg) == p0)
+    pg.click('#card-ST30 button[data-act="icd10"][data-v="K03.6"]'); pg.wait_for_timeout(200)
+    chk('N5: ponowne kliknięcie – powrót do domyślnego opisu kodu', '(wybrane)' not in pg.inner_text('#card-ST30 h2') and 'K03.6 Złogi nazębne' in pg.inner_text('#card-ST30 h2'), pg.inner_text('#card-ST30 h2'))
+    chk('N5: podpowiedzi z dopiskiem o nazwach roboczych', 'Nazwy robocze' in pg.inner_text('#card-ST30 details.icd-sug'))
+
     # N1 – dane audytu w przeglądarce (generator/nfz-dane.js z data/nfz/)
     import json, os, sys as _s
     _s.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'scripts'))
@@ -82,6 +98,14 @@ with sync_playwright() as p:
     chk('N1: dane tylko do odczytu', pg.evaluate("Object.isFrozen(NFZ_DANE)"))
     anon = br.new_context(); pa = anon.new_page()
     r = pa.request.get(URL + '/opisy-nfz/zasoby/nfz-dane.js'); chk('N1: plik danych tylko dla zalogowanych', r.status == 401, r.status); anon.close()
+    # N6 – Katalog NFZ: zasady rozliczeń z audytu
+    pg.goto(URL + '/katalog-nfz'); pg.wait_for_load_state('networkidle')
+    sek = pg.locator('[data-testid="zasady-nfz"]')
+    chk('N6: Katalog NFZ – sekcja „Zasady rozliczeń NFZ (47)”', sek.count() == 1 and 'Zasady rozliczeń NFZ (47)' in sek.inner_text())
+    chk('N6: każda reguła w tabeli (47 wierszy) ze źródłem', sek.locator('tbody tr').count() == 47 and 'Zarządzenie nr 60/2023/DSOZ' in sek.inner_text())
+    wiersz = sek.locator('tbody tr', has_text='R-KIR-DZ').inner_text()
+    chk('N6: reguła „wymaga weryfikacji” pokazana jako informacja (D4=A)', 'informacja' in wiersz and 'wymaga weryfikacji' in wiersz, wiersz)
+    chk('N6: kody z katalogu bez zmian (punkty ST30E = 24)', '24 / ćwiartka' in pg.locator('section', has_text='Kody z zarządzeń DSOZ').first.inner_text())
     chk('brak błędów JavaScript', not errs, errs)
     br.close()
-t.done('audyt NFZ – etapy N3 (ryzyka), N1 (dane) i N2 (silnik reguł)')
+t.done('audyt NFZ – etapy N3 (ryzyka), N1 (dane), N2 (silnik reguł), N5 (ICD-10) i N6 (katalog)')
