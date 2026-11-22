@@ -19,7 +19,7 @@ export default async function KatalogProcedur({ searchParams }: { searchParams: 
     <main className="wrap">
       <h1>Katalog procedur i badań</h1>
       <p className="muted">Baza wiedzy (wersja danych {b.wersja}): {b.badania.length} badań, {opracowane.length} kart procedur ICD-9. Zweryfikowane przez Patryka: <b>{b.procedury.filter(p => p.status === 'verified').length}</b>; pozostałe to <b>wersja robocza do weryfikacji</b> – nie zastępują oceny klinicznej; wymagania NFZ z audytu NFZ.
-        {' '}Kody pominięte lub nadrzędne ({pominiete}) – w rejestrze kompletności.</p>
+        {' '}Kody pominięte, odrzucone lub nadrzędne ({pominiete}) – w rejestrze kompletności.</p>
       <form className="card" method="get" style={{ display: 'flex', gap: 10, flexWrap: 'wrap', alignItems: 'end' }} data-testid="kp-filtr">
         <label>Szukaj (kod, nazwa, kod z Opisów NFZ)<br /><input name="q" defaultValue={q} placeholder="np. 23.1502, ekstrakcja, ST30" /></label>
         <label>Status<br /><select name="status" defaultValue={status}>

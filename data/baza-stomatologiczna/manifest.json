@@ -35,7 +35,7 @@
   },
   {
    "plik": "data/procedury-icd9/procedures.json",
-   "sha256": "6c4d4c53e05b2a3b3bfc9eef67a46e2cdccd973724ae6a3526b7814848800ee1",
+   "sha256": "048a88f5486f02da2ed2fc5116aac4a1edcec9e773df85387417f5840d081b08",
    "schemat": "data/baza-stomatologiczna/schemas/procedures.schema.json",
    "rekordy": 266
   },
@@ -76,8 +76,8 @@
   "procedury_wg_statusu": {
    "verified": 23,
    "draft": 121,
-   "requires_expert_review": 62,
-   "not_started": 60
+   "not_started": 111,
+   "requires_expert_review": 11
   },
   "szablony": 669,
   "pola": 135,

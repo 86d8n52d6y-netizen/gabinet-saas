@@ -41,7 +41,7 @@ export default async function Karta({ params }: { params: Promise<{ id: string }
   const nag = <><p><a href="/katalog-procedur">← Katalog procedur i badań</a></p><h1>{p.kod} – {p.nazwa_oficjalna}</h1>
     <p><span className={p.status === 'verified' ? 'badge' : 'badge warn'} data-testid="kp-status">{STATUS[p.status]}</span>{p.zweryfikowal ? <span className="muted"> · zweryfikował: {String(p.zweryfikowal)}, {String(p.zweryfikowano ?? '')}</span> : null} <span className="muted">{String(p.kategoria)}{L(p.kody_aplikacji).length ? ` · Opisy NFZ: ${L(p.kody_aplikacji).join(', ')}` : ''}</span></p>
     {p.uzasadnienie_statusu ? <p className="muted">{String(p.uzasadnienie_statusu)}</p> : null}</>;
-  if (p.status === 'not_started') return <main className="wrap">{nag}<p>Karta nie jest opracowana.</p></main>;
+  if (p.status === 'not_started') return <main className="wrap">{nag}<p>{String(p.uzasadnienie_statusu ?? '').startsWith('Odrzucone') ? 'Karta odrzucona – nie jest wyświetlana w aplikacji.' : 'Karta nie jest opracowana.'}</p></main>;
   const cel = p.cel as R, kw = p.kwalifikacja as R, prz = p.przygotowanie as R, ke = p.kontrola_efektu as R, za = p.zalecenia as R, nfz = p.nfz as R;
   const chk = b.checklisty.get(id);
   const mapy = b.mapowania.filter(m => m.procedura === id);

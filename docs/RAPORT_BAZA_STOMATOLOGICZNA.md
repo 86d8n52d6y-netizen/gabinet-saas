@@ -60,3 +60,13 @@
 1. **Weryfikacja Patryka** – zacznij od kart z kodami używanymi w Opisach NFZ (ST33, ST34, ST28, ST26, ST30*, ST04, ST01, ST02, ST19, 1101, 1105, 1108, 1206, 1502–1505, 1006, 0401–0403); zatwierdzone → `verified`.
 2. Decyzje do kwestii 5 i 6 (kwestia 1 – rozstrzygnięta: ostrzeżenie).
 3. Integracja (na zlecenie): `generator/baza-dane.js` jak `nfz-dane.js` → katalog procedur, podpowiedzi przebiegu, checklisty przed zapisem, generowanie opisów z szablonów (przykład w instrukcji, sprawdzony na danych).
+
+## 7. Weryfikacja i decyzje Patryka (22.11.2026)
+
+| Decyzja | Karty | Stan |
+|---|---|---|
+| Zatwierdzone (`verified`) | wszystkie kody wizyty z Opisów NFZ: 23.0101, 23.0102, 23.0107, 23.0401–23.0403, 23.1006, 23.1101, 23.1105, 23.1108, 23.1206, 23.1502–23.1505, 23.16011, 23.16012, 23.16021, 23.1605, 23.1607, 23.1701, 23.1702, 23.2001 | 23 |
+| Odrzucone – nie umieszczać w aplikacji | metody historyczne i rzadkie (fizykoterapia, dewitalizacja i miazga zdewitalizowana, 23.1310, stare kody „wypełnienie” 23.1109–23.1112, impregnacja, znieczulenie zewnątrzustne, 23.07), chirurgia specjalistyczna (24), periodontologia specjalistyczna (7) | 51 – status `not_started` z uzasadnieniem „Odrzucone decyzją Patryka”; treść zachowana, przywracalna |
+| Zostają „do oceny specjalisty” | protetyka specjalistyczna (teleskopy, overdenture, uzupełnienia złożone, metalowa podstawa, odlewane elementy, odtworzenie zwarcia, 23.2901) – przyda się przy implantoprotetyce | 11 |
+
+Stan po decyzjach: 23 verified, 121 draft, 11 requires_expert_review, 51 odrzucone, 57 pominięte, 3 nadrzędne (razem 266).
