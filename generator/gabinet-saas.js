@@ -16,7 +16,7 @@
   function b64(u8) { let s = ''; for (let i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000)); return btoa(s); }
   function unb64(s) { const b = atob(s), u = new Uint8Array(b.length); for (let i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; }
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const MOD = C.mod === 'prywatne' || C.mod === 'kalendarz' || C.mod === 'import' || C.mod === 'zlecenia' ? C.mod : 'nfz';
+  const MOD = C.mod === 'prywatne' || C.mod === 'kalendarz' || C.mod === 'import' || C.mod === 'zlecenia' || C.mod === 'nfzk' ? C.mod : 'nfz';   // nfzk – zakładka „NFZ” (E4)
   const G = window.G = { user: { id: C.uid, name: C.name }, key: null, mod: null, esc };
   // Własne materiały z konta (Ustawienia → Moje materiały; pkt 1.2): podpowiedzi = lista wbudowana + własne, bez powtórzeń.
   G.mat = (kinds, base) => { const out = [], seen = new Set();
@@ -100,7 +100,7 @@
 
   /* ---------- pasek aplikacji ---------- */
   const LOGO = '<svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path d="M16 4c-3 0-4.4 1.6-7 1.6C5.8 5.6 4 8 4 11.6c0 5.6 2.3 15.4 5.6 15.4 2.3 0 2.2-6.6 6.4-6.6s4.1 6.6 6.4 6.6c3.3 0 5.6-9.8 5.6-15.4C28 8 26.2 5.6 23 5.6 20.4 5.6 19 4 16 4z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>';
-  const NAV = [['/kalendarz', 'Kalendarz', 'kalendarz'], ['/opisy-nfz', 'Opisy NFZ', 'nfz'], ['/opisy-prywatne', 'Opisy prywatne', 'prywatne'], ['/zlecenia', 'Zlecenia', 'zlecenia'], ['/zarobki', 'Zarobki', 'zarobki'], ['/katalog-nfz', 'Katalog NFZ'], ['/gabinety', 'Gabinety'], ['/ustawienia', 'Ustawienia'], ['/konto', 'Konto']];
+  const NAV = [['/kalendarz', 'Kalendarz', 'kalendarz'], ['/opisy-nfz', 'Opisy NFZ', 'nfz'], ['/nfz', 'NFZ', 'nfzk'], ['/opisy-prywatne', 'Opisy prywatne', 'prywatne'], ['/zlecenia', 'Zlecenia', 'zlecenia'], ['/zarobki', 'Zarobki', 'zarobki'], ['/katalog-nfz', 'Katalog NFZ'], ['/gabinety', 'Gabinety'], ['/ustawienia', 'Ustawienia'], ['/konto', 'Konto']];
   G.bar = function (mod) {
     let el = document.getElementById('gbar');
     if (!el) { el = document.createElement('header'); el.id = 'gbar'; document.body.insertBefore(el, document.body.firstChild); }

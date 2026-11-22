@@ -25,6 +25,10 @@ describe('pakiety – rozpoznanie i brak podwójnych punktów', () => {
     const w = licz([{ kod: '23.1702' }, { kod: '23.0403' }]);
     expect(w.suma).toBe(104); expect(w.skladowe.map(s => s.pakiet)).toEqual(['ST02']);
   });
+  it('znieczulenie z karty wypełnienia NIE wpada do pakietu ekstrakcji: ST02 104 + 1502 45 + 23.0402 12 = 161', () => {
+    const w = licz([{ kod: '23.1702', zn: '23.0403' }, { kod: '23.1502', zn: '23.0402' }]);
+    expect(w.suma).toBe(161); expect(w.skladowe.map(s => s.kod)).toEqual(['23.0403']); expect(kody(w)).toEqual(['ST02', '23.1502', '23.0402']);
+  });
   it('ekstrakcja bez znieczulenia z listy ST1 → błąd: NFZ nie zapłaci', () => {
     const w = licz([{ kod: '23.1701' }]);
     expect(w.bledy.some(b => b.startsWith('ST01 wymaga procedury z listy ST1'))).toBe(true);

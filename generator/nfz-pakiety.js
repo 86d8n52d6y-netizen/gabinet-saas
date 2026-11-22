@@ -61,13 +61,16 @@
     const pakList = id => P[id].wym.concat(P[id].opc);
     e.forEach(x => {
       if (x.st) return; const ls = listOf(x.kod);
-      const host = inst.find(t => pakList(t.id).some(l => ls.includes(l)) || (P[t.id].kody_opc || []).includes(x.kod));
+      /* znieczulenie wybrane w karcie należy do TEJ procedury: składowa tylko jej pakietu; przy świadczeniu jednostkowym
+         (np. wypełnienie) – rozliczane osobno jak w Opisach NFZ (nie „wpada” do pakietu innej procedury wizyty) */
+      const host = inst.find(t => (!x.zn || t.z.includes(x.i)) && (pakList(t.id).some(l => ls.includes(l)) || (P[t.id].kody_opc || []).includes(x.kod)));
       if (host) { sklad(x, host.id); return; }
+      if (x.zn) return;
       if (x.kod === '23.1815' && x.w === 'ST26') { addPkg('ST26', x.n, x); x.st = { typ: 'pak' }; return; }
       if (WLASNY[x.kod]) { addPkg(WLASNY[x.kod], x.n, x); x.st = { typ: 'pak' }; }
     });
     /* składowe ST2 itp. zgłoszone po utworzeniu pakietu z 2b (np. 23.1815 przy ST27) */
-    e.forEach(x => { if (x.st) return; const ls = listOf(x.kod); const host = inst.find(t => pakList(t.id).some(l => ls.includes(l)) || (P[t.id].kody_opc || []).includes(x.kod)); if (host) sklad(x, host.id); });
+    e.forEach(x => { if (x.st || x.zn) return; const ls = listOf(x.kod); const host = inst.find(t => pakList(t.id).some(l => ls.includes(l)) || (P[t.id].kody_opc || []).includes(x.kod)); if (host) sklad(x, host.id); });
     /* 2c. świadczenia jednostkowe */
     const jed = [], nie = [];
     e.forEach(x => {
