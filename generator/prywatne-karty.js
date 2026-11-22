@@ -26,7 +26,7 @@
   const KEY = { 'POLE-ZNIECZ-RODZAJ': 'zn', 'POLE-ZNIECZ-PREPARAT': 'znprep', 'POLE-ZNIECZ-DAWKA': 'zndawka', 'POLE-MATERIAL': 'mat', 'POLE-MATERIAL-PODKLAD': 'podklad' };
   const keyOf = id => KEY[id] || 'k_' + id.replace(/^POLE-/, '').toLowerCase().replace(/[^a-z0-9]+/g, '_');
   const BEZ_ZN = { k: 'zn', not: ['nie stosowano'] };
-  const ZN_SUG = ['artykaina 4% z adrenaliną 1:100 000', 'artykaina 4% z adrenaliną 1:200 000', 'lidokaina 2% z adrenaliną', 'mepiwakaina 3% bez środka obkurczającego', 'lidokaina w żelu / aerozolu'];
+  const ZORD = ['POLE-ZNIECZ-RODZAJ', 'POLE-ZNIECZ-PREPARAT', 'POLE-ZNIECZ-DAWKA', 'POLE-ZNIECZ-MIEJSCE'];
   function pole(id, card) {
     const d = (K.pola || {})[id] || { e: id, t: 'tekst' }, k = keyOf(id), f = { k, l: d.e };
     switch (d.t) {
@@ -43,7 +43,7 @@
     }
     if (k === 'znprep' || k === 'zndawka' || k === 'k_znieczulenie_miejsce') f.show = BEZ_ZN;
     if (k === 'zndawka') { f.t = 'num'; f.l = 'Dawka (ml)'; f.unit = 'ml'; }
-    if (k === 'znprep') { f.l = 'Środek znieczulający'; f.sug = ZN_SUG.slice(); }   // jak we własnych procedurach; Dentocaine i Mark3 dokłada moduł (QBASE)
+    if (k === 'znprep') f.l = 'Środek znieczulający';   // podpowiedzi: Dentocaine i Mark3 (QBASE modułu) + historia; Dentocaine wpisywane samo (decyzja Patryka 22.11.2026)
     if (k === 'k_rozpoznanie') { f.req = 1; f.l = 'Rozpoznanie / wskazanie (ICD-10)'; f.qloc = 1; f.sug = (card.icd10 || []).map(r => r[0] + ' ' + r[1]); }
     return f;
   }
@@ -61,7 +61,8 @@
       const m = t.match(/Rozpoznanie: \{\{POLE-ROZPOZNANIE\}\}\.\s*/); t = m ? t.replace(m[0], m[0] + ZT + ' ') : t + ' ' + ZT; }
     if (zn.length || t.includes(ZT)) ['POLE-ZNIECZ-RODZAJ', 'POLE-ZNIECZ-PREPARAT', 'POLE-ZNIECZ-DAWKA'].forEach(id => { if (!zn.includes(id)) zn.push(id); });
     if (!ids.includes('POLE-POWIKLANIA')) t += ' Powikłania: {{POLE-POWIKLANIA}}.';
-    const uz = [...new Set([...t.matchAll(PL)].map(m => m[1]).filter(id => id !== 'ZNIECZENIE').concat(zn))];
+    const zs = ZORD.filter(id => zn.includes(id)).concat(zn.filter(id => !ZORD.includes(id)));   // pola znieczulenia w miejscu zdania (pod rozpoznaniem)
+    const uz = [...new Set([...t.matchAll(PL)].flatMap(m => m[1] === 'ZNIECZENIE' ? zs : [m[1]]).concat(zs))];
     const fields = uz.map(id => pole(id, c));
     t = t.replace(PL, (m, id) => id === 'ZNIECZENIE' ? m : '{{' + keyOf(id) + '}}');
     fields.push(

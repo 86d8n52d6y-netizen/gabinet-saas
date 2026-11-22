@@ -416,6 +416,9 @@ PATCHES_PRYW = [
   ('R14f Szablony: karty procedur bez edycji i duplikowania (tekst z bazy kart zweryfikowanych) – ulubione i ukrywanie działają',
    """<button type="button" class="pw-ib" data-a="tedit" data-id="' + p.id + '">Edytuj</button><button type="button" class="pw-ib" data-a="tdup" data-id="' + p.id + '">Duplikuj</button>' +""",
    """' + (p.karta ? '<span class="pw-tag">karta ' + esc(p.karta) + ' – tekst z bazy kart</span>' : '<button type="button" class="pw-ib" data-a="tedit" data-id="' + p.id + '">Edytuj</button><button type="button" class="pw-ib" data-a="tdup" data-id="' + p.id + '">Duplikuj</button>') +"""),
+  ('R14g karty: Dentocaine wpisywane samo przy znieczuleniu iniekcyjnym (decyzja Patryka 22.11.2026: „tylko Dentocaine”), jak dawka 1,7 ml – do zmiany; przy powierzchniowym nic',
+   "  let q = [];\n  if (f.k === 'wywiad'",
+   "  let q = [];\n  if (f.k === 'znprep' && p.karta && it.vals.zn && !['nie stosowano', 'powierzchniowe'].includes(it.vals.zn) && it.vals[f.k] === undefined) it.vals[f.k] = QBASE.znprep[0];\n  if (f.k === 'wywiad'"),
 ]
 
 PATCHES_KAL = [

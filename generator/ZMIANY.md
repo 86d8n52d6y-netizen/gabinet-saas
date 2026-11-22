@@ -123,6 +123,7 @@ Plik `wspolne.js` (sejf z hasłem w przeglądarce) zastąpiony przez `gabinet-sa
 | R14d | podpowiedzi rozpoznania z karty liczone tylko z wizyt tej samej procedury (nie podpowiada próchnicy przy ekstrakcji) |
 | R14e | wywołanie podpowiedzi z identyfikatorem procedury (pola z kart) |
 | R14f | Szablony: karty procedur bez edycji i duplikowania (tekst z bazy kart zweryfikowanych) – ulubione i ukrywanie działają |
+| R14g | karty: Dentocaine wpisywane samo przy znieczuleniu iniekcyjnym (decyzja Patryka 22.11.2026: „tylko Dentocaine”), jak dawka 1,7 ml – do zmiany; przy powierzchniowym nic |
 
 ## Kalendarz (`kalendarz.html`)
 
