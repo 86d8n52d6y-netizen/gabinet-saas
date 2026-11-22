@@ -8,10 +8,10 @@ Wersja danych: 2026.11.22-1.
 
 | Status | Procedury |
 |---|---|
-| draft | 127 |
+| draft | 121 |
 | not_started | 60 |
 | requires_expert_review | 62 |
-| verified | 17 |
+| verified | 23 |
 | **razem** | **266** |
 
 Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: draft, BAD-BLONA: draft, BAD-UZEBIENIE: draft, BAD-PRZYZEBIE: draft, BAD-HIGIENA: draft, BAD-ZGRYZ: draft, BAD-SSZ: draft, BAD-ZYWOTNOSC: draft, BAD-RTG: draft, BAD-PO-URAZIE: draft, BAD-DZIECKO: draft, BAD-STOMATOLOGICZNE: draft, BAD-KONTROLNE: draft, BAD-PRZED-LECZENIEM: draft, BAD-PO-LECZENIU: draft).
@@ -88,7 +88,7 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.1203 | Amputacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem | endodoncja – leczenie miazgi | draft |  |
 | 23.1204 | Amputacja przyżyciowa miazgi | endodoncja – leczenie miazgi | draft |  |
 | 23.1205 | Ekstyrpacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem | endodoncja – leczenie miazgi | draft |  |
-| 23.1206 | Ekstyrpacja przyżyciowa miazgi | endodoncja – leczenie miazgi | draft |  |
+| 23.1206 | Ekstyrpacja przyżyciowa miazgi | endodoncja – leczenie miazgi | verified |  |
 | 23.1207 | Amputacja zdewitalizowanej miazgi zęba | endodoncja – leczenie miazgi | requires_expert_review | Metoda z użyciem preparatu dewitalizującego – nadal w wykazie świadczeń gwarantowanych, ale współczesne wytyczne (ESE) preferują leczenie w znieczuleniu; do oceny Patryka, jak ją przedstawiać w aplikacji. |
 | 23.1208 | Ekstyrpacja zdewitalizowanej miazgi zęba z nieuformowanym korzeniem | endodoncja – leczenie miazgi | requires_expert_review | Metoda z użyciem preparatu dewitalizującego – nadal w wykazie świadczeń gwarantowanych, ale współczesne wytyczne (ESE) preferują leczenie w znieczuleniu; do oceny Patryka, jak ją przedstawiać w aplikacji. |
 | 23.1209 | Ekstyrpacja zdewitalizowanej miazgi zęba | endodoncja – leczenie miazgi | requires_expert_review | Metoda z użyciem preparatu dewitalizującego – nadal w wykazie świadczeń gwarantowanych, ale współczesne wytyczne (ESE) preferują leczenie w znieczuleniu; do oceny Patryka, jak ją przedstawiać w aplikacji. |
@@ -125,16 +125,16 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.1511 | Wybielanie zęba metodą wewnętrzną | odbudowa i estetyka | draft |  |
 | 23.1512 | Wybielanie grupy zębów metodą zewnętrzną | odbudowa i estetyka | draft |  |
 | 23.1601 | Usunięcie złogów nazębnych z 1/2 łuku zębowego | periodontologia i błona śluzowa | not_started | Kod nadrzędny – od 01.09.2026 do rozliczenia wykazuje się podkody (R-KOD-01): 23.16011 / 23.16012; karty w podkodach. |
-| 23.16011 | Usunięcie złogów nazębnych miękkich z 1/2 łuku zębowego | periodontologia i błona śluzowa | draft |  |
-| 23.16012 | Usunięcie złogów nazębnych twardych z 1/2 łuku zębowego | periodontologia i błona śluzowa | draft |  |
+| 23.16011 | Usunięcie złogów nazębnych miękkich z 1/2 łuku zębowego | periodontologia i błona śluzowa | verified |  |
+| 23.16012 | Usunięcie złogów nazębnych twardych z 1/2 łuku zębowego | periodontologia i błona śluzowa | verified |  |
 | 23.1602 | Usunięcie złogów nazębnych ze wszystkich zębów | periodontologia i błona śluzowa | not_started | Kod nadrzędny – od 01.09.2026 do rozliczenia wykazuje się podkody (R-KOD-01): 23.16021 / 23.16022; karty w podkodach. |
-| 23.16021 | Usunięcie złogów nazębnych miękkich ze wszystkich zębów | periodontologia i błona śluzowa | draft |  |
+| 23.16021 | Usunięcie złogów nazębnych miękkich ze wszystkich zębów | periodontologia i błona śluzowa | verified |  |
 | 23.16022 | Usunięcie złogów nazębnych twardych ze wszystkich zębów | periodontologia i błona śluzowa | draft |  |
 | 23.1603 | Polerowanie zębów | periodontologia i błona śluzowa | draft |  |
 | 23.1604 | Płukanie kieszonki dziąsłowej i aplikacja leku | periodontologia i błona śluzowa | draft |  |
-| 23.1605 | Leczenie zmian na błonie śluzowej jamy ustnej | periodontologia i błona śluzowa | draft |  |
+| 23.1605 | Leczenie zmian na błonie śluzowej jamy ustnej | periodontologia i błona śluzowa | verified |  |
 | 23.1606 | Korekta zgryzu | periodontologia i błona śluzowa | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
-| 23.1607 | Kiretaż zwykły w obrębie 1/4 uzębienia | periodontologia i błona śluzowa | draft |  |
+| 23.1607 | Kiretaż zwykły w obrębie 1/4 uzębienia | periodontologia i błona śluzowa | verified |  |
 | 23.1608 | Kiretaż otwarty w obrębie 1/4 uzębienia | periodontologia i błona śluzowa | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
 | 23.1609 | Gingwoplastyka | periodontologia i błona śluzowa | draft |  |
 | 23.1610 | Gingwoosteoplastyka | periodontologia i błona śluzowa | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |

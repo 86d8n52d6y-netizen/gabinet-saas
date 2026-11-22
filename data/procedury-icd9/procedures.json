@@ -8264,7 +8264,7 @@
    "kod": "23.1206",
    "nazwa_oficjalna": "Ekstyrpacja przyżyciowa miazgi",
    "kategoria": "endodoncja – leczenie miazgi",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -8502,7 +8502,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "1206"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1207",
@@ -15575,7 +15577,7 @@
    "kod": "23.16011",
    "nazwa_oficjalna": "Usunięcie złogów nazębnych miękkich z 1/2 łuku zębowego",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -15708,14 +15710,16 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "ST30E"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.16012",
    "kod": "23.16012",
    "nazwa_oficjalna": "Usunięcie złogów nazębnych twardych z 1/2 łuku zębowego",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -15856,7 +15860,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "ST30"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1602",
@@ -15874,7 +15880,7 @@
    "kod": "23.16021",
    "nazwa_oficjalna": "Usunięcie złogów nazębnych miękkich ze wszystkich zębów",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -16006,7 +16012,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "ST30G"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.16022",
@@ -16404,7 +16412,7 @@
    "kod": "23.1605",
    "nazwa_oficjalna": "Leczenie zmian na błonie śluzowej jamy ustnej",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -16513,7 +16521,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "ST26"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1606",
@@ -16698,7 +16708,7 @@
    "kod": "23.1607",
    "nazwa_oficjalna": "Kiretaż zwykły w obrębie 1/4 uzębienia",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -16840,7 +16850,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "ST04"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1608",

@@ -4901,7 +4901,7 @@ Reguły: R-ENDO-DZ
 
 ## 23.1206 – Ekstyrpacja przyżyciowa miazgi
 
-`PROC-23.1206` · **Ekstyrpacja przyżyciowa miazgi** · endodoncja – leczenie miazgi · status: **draft** · kody w Opisach NFZ: 1206
+`PROC-23.1206` · **Ekstyrpacja przyżyciowa miazgi** · endodoncja – leczenie miazgi · status: **verified** · kody w Opisach NFZ: 1206
 
 Usunięcie żywej miazgi z komory i kanałów (świadczenie za każdy kanał).
 
@@ -8093,7 +8093,7 @@ Wskazania: wskazania estetyczne zgłaszane przez pacjenta, po wykluczeniu choró
 
 ## 23.16011 – Usunięcie złogów nazębnych miękkich z 1/2 łuku zębowego
 
-`PROC-23.16011` · **Złogi miękkie – ½ łuku** · periodontologia i błona śluzowa · status: **draft** · kody w Opisach NFZ: ST30E
+`PROC-23.16011` · **Złogi miękkie – ½ łuku** · periodontologia i błona śluzowa · status: **verified** · kody w Opisach NFZ: ST30E
 
 Usunięcie złogów nazębnych miękkich z ½ łuku.
 
@@ -8169,7 +8169,7 @@ Reguły: R-ST30-CZAS, R-ST30-WZAJEM, R-ST30DFG-LIMIT, R-ST30DG-WIEK, R-ST30E-LIM
 
 ## 23.16012 – Usunięcie złogów nazębnych twardych z 1/2 łuku zębowego
 
-`PROC-23.16012` · **Złogi twarde – ½ łuku** · periodontologia i błona śluzowa · status: **draft** · kody w Opisach NFZ: ST30
+`PROC-23.16012` · **Złogi twarde – ½ łuku** · periodontologia i błona śluzowa · status: **verified** · kody w Opisach NFZ: ST30
 
 Usunięcie złogów nazębnych twardych z ½ łuku.
 
@@ -8246,7 +8246,7 @@ Reguły: R-ST30-CZAS, R-ST30-LAKIER, R-ST30-TWARDE, R-ST30-WZAJEM, R-ST30BC-WYK,
 
 ## 23.16021 – Usunięcie złogów nazębnych miękkich ze wszystkich zębów
 
-`PROC-23.16021` · **Złogi miękkie – wszystkie zęby** · periodontologia i błona śluzowa · status: **draft** · kody w Opisach NFZ: ST30G
+`PROC-23.16021` · **Złogi miękkie – wszystkie zęby** · periodontologia i błona śluzowa · status: **verified** · kody w Opisach NFZ: ST30G
 
 Usunięcie złogów nazębnych miękkich z wszystkich zębów.
 
@@ -8540,7 +8540,7 @@ Wskazania: zaostrzenie stanu zapalnego w kieszonce; wspomagająco w leczeniu per
 
 ## 23.1605 – Leczenie zmian na błonie śluzowej jamy ustnej
 
-`PROC-23.1605` · **Leczenie zmian na błonie śluzowej** · periodontologia i błona śluzowa · status: **draft** · kody w Opisach NFZ: ST26
+`PROC-23.1605` · **Leczenie zmian na błonie śluzowej** · periodontologia i błona śluzowa · status: **verified** · kody w Opisach NFZ: ST26
 
 Leczenie zmian na błonie śluzowej jamy ustnej.
 
@@ -8690,7 +8690,7 @@ Wskazania: uraz zgryzowy pierwotny / wtórny; kontakty przedwczesne
 
 ## 23.1607 – Kiretaż zwykły w obrębie 1/4 uzębienia
 
-`PROC-23.1607` · **Kiretaż zamknięty (¼ uzębienia)** · periodontologia i błona śluzowa · status: **draft** · kody w Opisach NFZ: ST04
+`PROC-23.1607` · **Kiretaż zamknięty (¼ uzębienia)** · periodontologia i błona śluzowa · status: **verified** · kody w Opisach NFZ: ST04
 
 Kiretaż zwykły (zamknięty) w obrębie ¼ uzębienia.
 
