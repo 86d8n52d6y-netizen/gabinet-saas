@@ -9870,7 +9870,6 @@ Reguły: R-ZNI-02
 - [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
 - [zalecane] Powikłania – odnotowane albo zaznaczony ich brak przez lekarza — *zalecenie kliniczne*
 - [sytuacyjne] Zgoda pacjenta na zabieg (pisemna przy zabiegu o podwyższonym ryzyku) — *prawne*
-- [zalecane] Zgoda pacjenta na zabieg — *prawne*
 - [zalecane] Kompletność usuniętego zęba / korzeni — *zalecenie kliniczne*
 - [zalecane] Przekazane zalecenia pozabiegowe (pisemnie) — *zalecenie kliniczne*
 
@@ -9970,7 +9969,6 @@ Reguły: R-ZNI-02
 - [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
 - [zalecane] Powikłania – odnotowane albo zaznaczony ich brak przez lekarza — *zalecenie kliniczne*
 - [sytuacyjne] Zgoda pacjenta na zabieg (pisemna przy zabiegu o podwyższonym ryzyku) — *prawne*
-- [zalecane] Zgoda pacjenta na zabieg — *prawne*
 - [zalecane] Kompletność usuniętego zęba / korzeni — *zalecenie kliniczne*
 - [zalecane] Przekazane zalecenia pozabiegowe (pisemnie) — *zalecenie kliniczne*
 
@@ -10057,7 +10055,6 @@ Wskazania: złamanie zęba podczas ekstrakcji; głęboko zniszczony ząb wieloko
 - [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
 - [zalecane] Powikłania – odnotowane albo zaznaczony ich brak przez lekarza — *zalecenie kliniczne*
 - [sytuacyjne] Zgoda pacjenta na zabieg (pisemna przy zabiegu o podwyższonym ryzyku) — *prawne*
-- [zalecane] Zgoda pacjenta na zabieg — *prawne*
 - [zalecane] Kompletność usuniętego zęba / korzeni — *zalecenie kliniczne*
 - [zalecane] Przekazane zalecenia pozabiegowe (pisemnie) — *zalecenie kliniczne*
 
@@ -10146,7 +10143,6 @@ Wskazania: korzenie głęboko w kości; zęby z hipercementozą / zakrzywionymi 
 - [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
 - [zalecane] Powikłania – odnotowane albo zaznaczony ich brak przez lekarza — *zalecenie kliniczne*
 - [sytuacyjne] Zgoda pacjenta na zabieg (pisemna przy zabiegu o podwyższonym ryzyku) — *prawne*
-- [zalecane] Zgoda pacjenta na zabieg — *prawne*
 - [zalecane] Kompletność usuniętego zęba / korzeni — *zalecenie kliniczne*
 - [zalecane] Przekazane zalecenia pozabiegowe (pisemnie) — *zalecenie kliniczne*
 

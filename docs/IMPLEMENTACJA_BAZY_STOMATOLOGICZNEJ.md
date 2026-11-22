@@ -1,7 +1,7 @@
 # Baza stomatologiczna – instrukcja przyszłej integracji z aplikacją Gabinet
 
 Stan: 22.11.2026 · gałąź `baza-stomatologiczna` · prompt Patryka „PROMPT 2 – badania stomatologiczne i karty procedur ICD-9”.
-**Na tym etapie nic nie jest zintegrowane z aplikacją** – dane leżą obok niej. Integrację zrobię dopiero na Twoje polecenie.
+**Stan integracji:** etap I1 (22.11.2026) – „Katalog procedur i badań” (`/katalog-procedur`, link w Katalogu NFZ; `src/lib/baza.ts`) oraz kontrola kompletności dokumentacji w Opisach NFZ (krok 3, `generator/baza-dane.js` ze `scripts/baza_dane_przegladarka.py`, poprawki P41–P42a) – ostrzeżenie bez blokady; treść opisów i wycena bez zmian. Pozostałe funkcje (§8) – na Twoje polecenie.
 
 ## 1. Gdzie są dane
 
@@ -95,4 +95,4 @@ Zasady importu: upsert po id; rekordy usunięte z JSON **nie są kasowane automa
 
 ## 8. Elementy aplikacji, które mogą korzystać z bazy
 
-Katalog badań i procedur (strona), dynamiczne formularze w Opisach NFZ / prywatnych, generowanie opisów z szablonów, podpowiedzi przebiegu (kroki), checklisty kompletności przed zapisem, podpowiedzi ICD-10, moduł kontroli rozliczeń NFZ (reguły z audytu). **Żadna z tych funkcji nie jest jeszcze zaimplementowana** – wymagają Twojego zlecenia.
+Katalog badań i procedur (strona), dynamiczne formularze w Opisach NFZ / prywatnych, generowanie opisów z szablonów, podpowiedzi przebiegu (kroki), checklisty kompletności przed zapisem, podpowiedzi ICD-10, moduł kontroli rozliczeń NFZ (reguły z audytu). Zaimplementowane w I1: katalog (strona) i checklisty kompletności (Opisy NFZ). Pozostałe – wymagają Twojego zlecenia.

@@ -59,7 +59,7 @@
   },
   {
    "plik": "data/procedury-icd9/procedure-checklists.json",
-   "sha256": "9c860cf89e21baf3d48f5b4955204af294e31553ad326d124f8cfbdec8e3a5ae",
+   "sha256": "2085b11dd4f94e6d64eb64c8370e6e5b20f4a6eaa14eb62ed0ee2870205d3786",
    "schemat": "data/baza-stomatologiczna/schemas/procedure-checklists.schema.json",
    "rekordy": 206
   },

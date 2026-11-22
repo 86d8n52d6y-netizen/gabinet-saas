@@ -68,6 +68,9 @@ Plik `wspolne.js` (sejf z hasłem w przeglądarce) zastąpiony przez `gabinet-sa
 | P38 | audyt NFZ N5 (D3=A): rozpoznanie ICD-10 wybrane przez lekarza z podpowiedzi pokazywane przy kodzie i w tabeli (domyślnie jak dotąd) |
 | P39 | audyt NFZ N5: podpowiedzi ICD-10 z mapowań audytu w karcie każdej procedury (pakiet → procedury kierunkowe; brak podkodu → kod nadrzędny) |
 | P40 | audyt NFZ N5: wybór / odznaczenie podpowiedzi ICD-10 |
+| P41 | baza stomatologiczna (I1): dane checklist (generator/baza-dane.js z data/, scripts/baza_dane_przegladarka.py) ładowane w Opisach NFZ – tylko do odczytu |
+| P42 | baza stomatologiczna (I1): funkcje kontroli kompletności dokumentacji (ostrzeżenie bez blokady – decyzja Patryka 22.11.2026) |
+| P42a | kontrola kompletności w kroku 3 (Opis) – przed opisem; treść opisu i wycena bez zmian |
 
 ## Opisy prywatne (`prywatne.html`)
 
