@@ -158,13 +158,24 @@
     {
       "id": "SRC-NFZ-KOM-KIRETAZ-DZ",
       "typ": "komunikat NFZ",
-      "tytul": "Komunikat NFZ z 22.07.2026 dot. kiretażu u dzieci",
+      "tytul": "Komunikat Prezesa NFZ nr 627276 z 22.07.2026 – kiretaż u dzieci poniżej 15 r.ż. (reguła weryfikacyjna od świadczeń z 1.01.2026)",
       "url": "https://www.nfz.gov.pl",
       "obowiazuje_od": "2026-07-22",
-      "stan": "opublikowany, SPORNY",
-      "uwagi": "Protest NIL (nil.org.pl/articleToPdf/9349). Treści komunikatu nie zacytowano – WYMAGA ponownego odczytu.",
-      "status": "WYMAGA WERYFIKACJI",
-      "data_dostepu": "2026-11-21"
+      "stan": "opublikowany, SPORNY (pismo NRL z 31.07.2026)",
+      "uwagi": "Treść znana z cytatów w Gazecie Lekarskiej 9/2026 (SRC-GL-2026-09-KIRETAZ); oryginału komunikatu nie odczytano. Wyjątek: przypadek udokumentowany i uzasadniony medycznie – wniosek do OW NFZ.",
+      "status": "CZĘŚCIOWO POTWIERDZONA",
+      "data_dostepu": "2026-11-22"
+    },
+    {
+      "id": "SRC-GL-2026-09-KIRETAZ",
+      "typ": "artykuł prasowy (samorząd lekarski)",
+      "tytul": "„NFZ nie chce płacić za kiretaż” – Gazeta Lekarska nr 9/2026 (22.09.2026), A. Pedryc",
+      "url": "https://gazetalekarska.pl/nfz-nie-chce-placic-za-kiretaz/",
+      "obowiazuje_od": "2026-09-22",
+      "stan": "opublikowany",
+      "uwagi": "Cytuje komunikat NFZ nr 627276 (22.07.2026) i pismo NRL z 31.07.2026 (P. Barucha do F. Nowaka); sprawa nierozstrzygnięta.",
+      "status": "POTWIERDZONA",
+      "data_dostepu": "2026-11-22"
     },
     {
       "id": "SRC-SEJM-INT-16442",

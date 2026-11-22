@@ -56,7 +56,7 @@ Plik `wspolne.js` (sejf z hasłem w przeglądarce) zastąpiony przez `gabinet-sa
 | P40c | obsługa wyłącznika podsumowania |
 | P30 | audyt NFZ R-ST30DG-WIEK (decyzja Patryka D1=B, 22.11.2026): ST30E/ST30G u pacjenta ≥ 18 lat – ostrzeżenie zamiast błędu; bez wpisanego wieku – przypomnienie (źródło: Zarządzenie 60/2023/DSOZ t.j. od 1.09.2026, 95/2026/DSOZ) |
 | P31 | audyt NFZ R-LAKIER-01: lakierowanie 1006 u pacjenta ≥ 18 lat – ostrzeżenie; bez wieku – przypomnienie (źródło: rozporządzenie koszykowe, t.j. Dz.U. 2025 poz. 615) |
-| P32 | audyt NFZ R-KIR-DZ (decyzja D4=A): kiretaż ST04 u dziecka – INFORMACJA „wymaga weryfikacji” (komunikat NFZ z 22.07.2026, stan prawny nieustalony) |
+| P32 | audyt NFZ R-KIR-DZ (decyzja D4=A; aktualizacja 22.11.2026): kiretaż ST04 u dziecka < 15 r.ż. – INFORMACJA „stan sporny” (komunikat Prezesa NFZ nr 627276 z 22.07.2026, pismo NRL z 31.07.2026; źródło: Gazeta Lekarska 9/2026) |
 | P33 | audyt NFZ R-ZNI-02 (decyzja Patryka 22.11.2026 – ostrzeżenie): znieczulenie wpisane osobno przy ekstrakcji (ST01/ST02) lub kiretażu (ST04) – jest wliczone w pakiet; osobno tylko do wypełnienia, 1105 lub 1206 (źródło: Zarządzenie 60/2023/DSOZ t.j., zał. 1c/1d – lista ST1) |
 | P34 | komunikaty NFZ: INFORMACJA (reguły „wymaga weryfikacji”) wyświetlana jako notatka, nie ostrzeżenie (D4=A) |
 | P35 | audyt NFZ N1: dane audytu (generator/nfz-dane.js z data/nfz/, scripts/nfz_dane_przegladarka.py) ładowane razem z szablonami – tylko do odczytu na urządzeniu |
