@@ -102,3 +102,11 @@ Odrzucone – nie umieszczać (11): 23.1603, 23.1612, 23.1616, 23.1617, 23.1620,
 Uwagi: 23.1501 i 23.1507 opisują podobny zabieg (w NFZ rozliczana 23.1507) – obie zatwierdzone decyzją Patryka; 23.1615 – świadczenie gwarantowane bez odczytanego kodu produktu (audyt NFZ).
 
 Stan: 110 verified, 18 draft, 78 odrzucone, 57 pominięte, 3 nadrzędne (razem 266).
+
+### Weryfikacja ostatnich kart (22.11.2026) – koniec weryfikacji kart procedur
+
+Zatwierdzone pojedynczo (9): RTG 23.0301, 23.0302, 23.0303, 23.0304; 23.1104 pośrednie pokrycie miazgi; 23.1106 i 23.1107 opatrunek leczniczy; 23.06 wizyta adaptacyjna; 23.2101 repozycja zwichniętego zęba.
+Odrzucone (9): 23.0103, 23.0104, 23.0105, 23.0106, 23.02 (badanie/porada/diagnostyka – grupowo), 23.1102, 23.1103, 23.05, 23.14.
+Uwagi: karty RTG nie mają mapowań ICD-10; 23.0302 i 23.2101 – świadczenia gwarantowane bez odczytanego kodu produktu (audyt NFZ).
+
+**Stan końcowy kart procedur:** 119 verified, 0 draft, 87 odrzucone (ukryte, treść zachowana), 57 pominięte, 3 nadrzędne (razem 266). Badania (17) – nadal draft.

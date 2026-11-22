@@ -223,7 +223,7 @@
    "kod": "23.0103",
    "nazwa_oficjalna": "Porada lekarska",
    "kategoria": "badanie i porada",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -298,14 +298,15 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.0104",
    "kod": "23.0104",
    "nazwa_oficjalna": "Wydanie orzeczenia lekarskiego",
    "kategoria": "badanie i porada",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -372,14 +373,15 @@
    "zrodla": [
     "SRC-DU-2026-1391"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.0105",
    "kod": "23.0105",
    "nazwa_oficjalna": "Konsultacja specjalistyczna",
    "kategoria": "badanie i porada",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -470,14 +472,15 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.0106",
    "kod": "23.0106",
    "nazwa_oficjalna": "Wydanie krótkiego zaświadczenia lub świadectwa",
    "kategoria": "badanie i porada",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -544,7 +547,8 @@
    "zrodla": [
     "SRC-DU-2026-1391"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.0107",
@@ -662,7 +666,7 @@
    "kod": "23.02",
    "nazwa_oficjalna": "Badanie żywotności zęba",
    "kategoria": "diagnostyka",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -744,14 +748,15 @@
    "zrodla": [
     "SRC-KLIN-ESE-S3-2023"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.0301",
    "kod": "23.0301",
    "nazwa_oficjalna": "Rentgenodiagnostyka do 2 zdjęć wewnątrzustnych",
    "kategoria": "radiologia",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -857,14 +862,16 @@
     "SRC-DU-2025-615",
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0302",
    "kod": "23.0302",
    "nazwa_oficjalna": "Rentgenodiagnostyka do 5 zdjęć wewnątrzustnych",
    "kategoria": "radiologia",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -965,14 +972,16 @@
     "SRC-DU-2025-615",
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0303",
    "kod": "23.0303",
    "nazwa_oficjalna": "Rentgenodiagnostyka do 8 zdjęć wewnątrzustnych",
    "kategoria": "radiologia",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -1049,14 +1058,16 @@
     "SRC-DU-2025-615",
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0304",
    "kod": "23.0304",
    "nazwa_oficjalna": "Rentgenodiagnostyka - zdjęcie pantomograficzne z opisem",
    "kategoria": "radiologia",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -1161,7 +1172,9 @@
     "SRC-DU-2025-615",
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0401",
@@ -1663,7 +1676,7 @@
    "kod": "23.05",
    "nazwa_oficjalna": "Postępowanie w nagłych przypadkach",
    "kategoria": "pomoc doraźna",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -1736,14 +1749,15 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.06",
    "kod": "23.06",
    "nazwa_oficjalna": "Wizyta adaptacyjna -dotyczy pierwszych wizyt małych dzieci",
    "kategoria": "dziecko",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -1825,7 +1839,9 @@
    "zrodla": [
     "SRC-DU-2025-615"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.07",
@@ -5047,7 +5063,7 @@
    "kod": "23.1102",
    "nazwa_oficjalna": "Całkowite opracowanie ubytku próchnicowego z założeniem podkładu",
    "kategoria": "leczenie próchnicy",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -5226,14 +5242,15 @@
     "SRC-KLIN-ESE-VPT-2019",
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1103",
    "kod": "23.1103",
    "nazwa_oficjalna": "Całkowite opracowanie rozległego ubytku próchnicowego z założeniem podwójnego podkładu",
    "kategoria": "leczenie próchnicy",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -5412,14 +5429,15 @@
     "SRC-KLIN-ESE-VPT-2019",
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1104",
    "kod": "23.1104",
    "nazwa_oficjalna": "Postępowanie przy próchnicy głębokiej - pośrednie pokrycie miazgi",
    "kategoria": "leczenie próchnicy",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -5642,7 +5660,9 @@
     "SRC-KLIN-ESE-VPT-2019",
     "SRC-KLIN-ESE-S3-2023"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1105",
@@ -5902,7 +5922,7 @@
    "kod": "23.1106",
    "nazwa_oficjalna": "Opatrunek leczniczy w zębie stałym",
    "kategoria": "leczenie próchnicy",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -6098,14 +6118,16 @@
     "SRC-KLIN-ESE-VPT-2019",
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1107",
    "kod": "23.1107",
    "nazwa_oficjalna": "Opatrunek leczniczy w zębie mlecznym",
    "kategoria": "leczenie próchnicy",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -6302,7 +6324,9 @@
     "SRC-PRAKTYKA",
     "SRC-KLIN-AAPD-VPT-2017"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1108",
@@ -13034,7 +13058,7 @@
    "kod": "23.14",
    "nazwa_oficjalna": "Szczególne trudności w preparowaniu/ wypełnianiu zębów - usunięcie przerośniętej brodawki międzyzębowej, zatamowanie krwawienia z brodawki, separowanie zębów itp.",
    "kategoria": "stomatologia zachowawcza",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -13152,7 +13176,8 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1501",
@@ -25122,7 +25147,7 @@
    "kod": "23.2101",
    "nazwa_oficjalna": "Repozycja i unieruchomienie zwichniętego zęba lub grupy zębów",
    "kategoria": "urazy zębów",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -25297,7 +25322,9 @@
    "zrodla": [
     "SRC-KLIN-IADT-ZLAM-2020"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.2102",

@@ -41,3 +41,4 @@
 | 2026-11-22 | `gabinet-saas` | **Weryfikacja profilaktyki (Patryk).** Zatwierdzone 16 kart (13 bilansów NFZ dla dzieci – pojedynczo, lakowanie ×2, nadwrażliwość); odrzucone 5 (23.08, 23.1001, 23.1002, 23.1022, 23.1023). Stan: 75 verified, 64 draft, 67 odrzucone |
 | 2026-11-22 | `gabinet-saas` | **Weryfikacja endodoncji (Patryk).** Zatwierdzone pojedynczo 21 kart; poprawione szablony pulpotomii 23.1203/23.1204 (bez pól kanałów); uwagi do audytu NFZ: 23.1313, kod produktu 23.13142. Stan: 96 verified, 43 draft, 67 odrzucone |
 | 2026-11-22 | `gabinet-saas` | **Weryfikacja perio, odbudowy i chirurgii (Patryk).** Pojedynczo: 14 zatwierdzonych, 11 odrzuconych. Stan: 110 verified, 18 draft, 78 odrzucone |
+| 2026-11-22 | `gabinet-saas` | **Koniec weryfikacji kart procedur (Patryk).** Ostatnie 18: 9 zatwierdzonych (RTG, opatrunki, pośrednie pokrycie, wizyta adaptacyjna, repozycja), 9 odrzuconych. Stan: 119 verified, 0 draft, 87 odrzucone; t_10 bez karty roboczej |
