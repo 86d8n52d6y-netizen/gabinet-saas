@@ -6,7 +6,7 @@ Wersja danych: 2026.11.22-1. Kart opracowanych: 206 z 266 (rejestr: `REJESTR_KOM
 
 ## 23.0101 – Badanie lekarskie stomatologiczne, które obejmuje również instruktaż higieny jamy ustnej
 
-`PROC-23.0101` · **Badanie lekarskie stomatologiczne** · badanie i porada · status: **draft** · kody w Opisach NFZ: ST33
+`PROC-23.0101` · **Badanie lekarskie stomatologiczne** · badanie i porada · status: **verified** · kody w Opisach NFZ: ST33
 
 Badanie lekarskie stomatologiczne obejmujące instruktaż higieny jamy ustnej.
 
@@ -82,7 +82,7 @@ Reguły: R-BAD-01, R-ST30-CZAS, R-ST30-WZAJEM, R-ST30BC-WYK, R-ST30DFG-LIMIT, R-
 
 ## 23.0102 – Badanie lekarskie kontrolne
 
-`PROC-23.0102` · **Badanie lekarskie kontrolne** · badanie i porada · status: **draft** · kody w Opisach NFZ: ST34
+`PROC-23.0102` · **Badanie lekarskie kontrolne** · badanie i porada · status: **verified** · kody w Opisach NFZ: ST34
 
 Badanie lekarskie kontrolne.
 
@@ -409,7 +409,7 @@ Wskazania: prośba pacjenta / instytucji
 
 ## 23.0107 – Badanie lekarskie stomatologiczne i kontrolne po urazie zęba
 
-`PROC-23.0107` · **Badanie po urazie zęba** · badanie i porada · status: **draft** · kody w Opisach NFZ: ST28
+`PROC-23.0107` · **Badanie po urazie zęba** · badanie i porada · status: **verified** · kody w Opisach NFZ: ST28
 
 Badanie lekarskie stomatologiczne i kontrolne po urazie zęba.
 
@@ -822,7 +822,7 @@ Reguły: R-RTG-02, R-RTG-03
 
 ## 23.0401 – Znieczulenie miejscowe powierzchniowe
 
-`PROC-23.0401` · **Znieczulenie powierzchniowe** · znieczulenie · status: **draft** · kody w Opisach NFZ: 0401
+`PROC-23.0401` · **Znieczulenie powierzchniowe** · znieczulenie · status: **verified** · kody w Opisach NFZ: 0401
 
 Znieczulenie miejscowe powierzchniowe.
 
@@ -894,7 +894,7 @@ Reguły: R-ZNI-01, R-ZNI-02
 
 ## 23.0402 – Znieczulenie miejscowe nasiękowe
 
-`PROC-23.0402` · **Znieczulenie nasiękowe** · znieczulenie · status: **draft** · kody w Opisach NFZ: 0402
+`PROC-23.0402` · **Znieczulenie nasiękowe** · znieczulenie · status: **verified** · kody w Opisach NFZ: 0402
 
 Znieczulenie miejscowe nasiękowe.
 
@@ -966,7 +966,7 @@ Reguły: R-ZNI-01, R-ZNI-02
 
 ## 23.0403 – Znieczulenie przewodowe wewnątrzustne
 
-`PROC-23.0403` · **Znieczulenie przewodowe wewnątrzustne** · znieczulenie · status: **draft** · kody w Opisach NFZ: 0403
+`PROC-23.0403` · **Znieczulenie przewodowe wewnątrzustne** · znieczulenie · status: **verified** · kody w Opisach NFZ: 0403
 
 Znieczulenie przewodowe wewnątrzustne.
 
@@ -2069,7 +2069,7 @@ Wskazania: bruzdy zagrożone próchnicą, gdy lak żywiczny niewskazany (np. zą
 
 ## 23.1006 – Lakierowanie zębów 1/4 łuku zębowego
 
-`PROC-23.1006` · **Lakierowanie zębów (¼ łuku)** · profilaktyka · status: **draft** · kody w Opisach NFZ: 1006
+`PROC-23.1006` · **Lakierowanie zębów (¼ łuku)** · profilaktyka · status: **verified** · kody w Opisach NFZ: 1006
 
 Lakierowanie zębów preparatem fluorkowym w obrębie ¼ łuku.
 
@@ -3444,7 +3444,7 @@ Wskazania: dziecko / młodzież w 3. rok życia (świadczenie profilaktyczne NFZ
 
 ## 23.1101 – Leczenie próchnicy powierzchniowej - za każdy ząb
 
-`PROC-23.1101` · **Leczenie próchnicy powierzchniowej** · leczenie próchnicy · status: **draft** · kody w Opisach NFZ: 1101
+`PROC-23.1101` · **Leczenie próchnicy powierzchniowej** · leczenie próchnicy · status: **verified** · kody w Opisach NFZ: 1101
 
 Leczenie próchnicy powierzchniowej (bez opracowania ubytku) – za każdy ząb.
 
@@ -3765,7 +3765,7 @@ Wskazania: głęboka próchnica w zębie żywym bez objawów nieodwracalnego zap
 
 ## 23.1105 – Postępowanie przy obnażeniu i skaleczeniu miazgi - bezpośrednie pokrycie miazgi
 
-`PROC-23.1105` · **Bezpośrednie pokrycie miazgi** · leczenie próchnicy · status: **draft** · kody w Opisach NFZ: 1105
+`PROC-23.1105` · **Bezpośrednie pokrycie miazgi** · leczenie próchnicy · status: **verified** · kody w Opisach NFZ: 1105
 
 Postępowanie przy obnażeniu i skaleczeniu miazgi – bezpośrednie pokrycie.
 
@@ -4031,7 +4031,7 @@ Wskazania: etapowe usuwanie głębokiej próchnicy; niejednoznaczny stan miazgi 
 
 ## 23.1108 – Wypełnienie ubytku korony zęba mlecznego
 
-`PROC-23.1108` · **Wypełnienie zęba mlecznego** · leczenie próchnicy · status: **draft** · kody w Opisach NFZ: 1108
+`PROC-23.1108` · **Wypełnienie zęba mlecznego** · leczenie próchnicy · status: **verified** · kody w Opisach NFZ: 1108
 
 Wypełnienie ubytku korony zęba mlecznego.
 
@@ -7097,7 +7097,7 @@ Wskazania: złamanie kąta korony po urazie (bez obnażenia miazgi); zniszczenie
 
 ## 23.1502 – Całkowite opracowanie i odbudowa ubytku zęba na 1 powierzchni
 
-`PROC-23.1502` · **Odbudowa – 1 powierzchnia** · odbudowa i estetyka · status: **draft** · kody w Opisach NFZ: 1502
+`PROC-23.1502` · **Odbudowa – 1 powierzchnia** · odbudowa i estetyka · status: **verified** · kody w Opisach NFZ: 1502
 
 Opracowanie ubytku i odbudowa korony zęba stałego na jednej powierzchni.
 
@@ -7201,7 +7201,7 @@ Reguły: R-AMALG-01
 
 ## 23.1503 – Całkowite opracowanie i odbudowa ubytku na 2 powierzchniach
 
-`PROC-23.1503` · **Odbudowa – 2 powierzchnie** · odbudowa i estetyka · status: **draft** · kody w Opisach NFZ: 1503
+`PROC-23.1503` · **Odbudowa – 2 powierzchnie** · odbudowa i estetyka · status: **verified** · kody w Opisach NFZ: 1503
 
 Opracowanie ubytku i odbudowa korony zęba na dwóch powierzchniach.
 
@@ -7305,7 +7305,7 @@ Reguły: R-AMALG-01
 
 ## 23.1504 – Całkowite opracowanie i odbudowa rozległego ubytku na 2 powierzchniach
 
-`PROC-23.1504` · **Odbudowa rozległa – 2 powierzchnie** · odbudowa i estetyka · status: **draft** · kody w Opisach NFZ: 1504
+`PROC-23.1504` · **Odbudowa rozległa – 2 powierzchnie** · odbudowa i estetyka · status: **verified** · kody w Opisach NFZ: 1504
 
 Opracowanie i odbudowa rozległego ubytku obejmującego dwie powierzchnie (znaczna utrata tkanek).
 
@@ -7409,7 +7409,7 @@ Reguły: R-AMALG-01
 
 ## 23.1505 – Całkowite opracowanie i odbudowa rozległego ubytku na 3 powierzchniach
 
-`PROC-23.1505` · **Odbudowa rozległa – 3 powierzchnie** · odbudowa i estetyka · status: **draft** · kody w Opisach NFZ: 1505
+`PROC-23.1505` · **Odbudowa rozległa – 3 powierzchnie** · odbudowa i estetyka · status: **verified** · kody w Opisach NFZ: 1505
 
 Opracowanie i odbudowa rozległego ubytku na trzech powierzchniach.
 
@@ -9792,7 +9792,7 @@ Wskazania: po zabiegach chirurgii przyzębia
 
 ## 23.1701 – Usunięcie zęba jednokorzeniowego
 
-`PROC-23.1701` · **Usunięcie zęba jednokorzeniowego** · chirurgia – ekstrakcje · status: **draft** · kody w Opisach NFZ: ST01
+`PROC-23.1701` · **Usunięcie zęba jednokorzeniowego** · chirurgia – ekstrakcje · status: **verified** · kody w Opisach NFZ: ST01
 
 Usunięcie zęba jednokorzeniowego.
 
@@ -9891,7 +9891,7 @@ Reguły: R-ZNI-02
 
 ## 23.1702 – Usunięcie zęba wielokorzeniowego
 
-`PROC-23.1702` · **Usunięcie zęba wielokorzeniowego** · chirurgia – ekstrakcje · status: **draft** · kody w Opisach NFZ: ST02
+`PROC-23.1702` · **Usunięcie zęba wielokorzeniowego** · chirurgia – ekstrakcje · status: **verified** · kody w Opisach NFZ: ST02
 
 Usunięcie zęba wielokorzeniowego.
 
@@ -12280,7 +12280,7 @@ Wskazania: przetrwałe połączenie / przetoka ustno-zatokowa
 
 ## 23.2001 – Nacięcie powierzchniowo, podśluzówkowo lub podskórnie leżącego ropnia włącznie z drenażem i opatrunkiem
 
-`PROC-23.2001` · **Nacięcie ropnia (powierzchownego)** · chirurgia – zakażenia · status: **draft** · kody w Opisach NFZ: ST19
+`PROC-23.2001` · **Nacięcie ropnia (powierzchownego)** · chirurgia – zakażenia · status: **verified** · kody w Opisach NFZ: ST19
 
 Nacięcie powierzchniowo, podśluzówkowo lub podskórnie leżącego ropnia włącznie z drenażem i opatrunkiem.
 

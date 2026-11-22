@@ -24,7 +24,7 @@ export default async function Karta({ params }: { params: Promise<{ id: string }
     const cel = x.cel as R, wsk = x.wskazania as R, dok = x.dokumentacja as Record<string, Poz[]>, pw = x.powiazania as R;
     return (
       <main className="wrap"><p><a href="/katalog-procedur">← Katalog procedur i badań</a></p>
-        <h1>{String(x.nazwa)}</h1><p><span className="badge warn" data-testid="kp-status">{STATUS[String(x.status)]}</span> <span className="muted">{String(x.id)} · {String(x.kategoria)}</span></p>
+        <h1>{String(x.nazwa)}</h1><p><span className={x.status === 'verified' ? 'badge' : 'badge warn'} data-testid="kp-status">{STATUS[String(x.status)]}</span> <span className="muted">{String(x.id)} · {String(x.kategoria)}</span></p>
         <section className="card"><p><b>Cel:</b> {String(cel.oceniane)}</p><Lista t="Informacje" x={cel.informacje} /><Lista t="Wykrywa" x={cel.wykrywa} /><Lista t="Wskazania" x={wsk.kiedy} /><Lista t="Szczególnie" x={wsk.szczegolnie} /></section>
         <section className="card"><h2 style={{ marginTop: 0 }}>Przebieg</h2><ol>{(x.przebieg as { krok: string; opis: string }[]).map((k, i) => <li key={i}><b>{k.krok}</b> – {k.opis}</li>)}</ol>
           <h3>Elementy oceny</h3><ul>{(x.elementy_oceny as { element: string; co: string; pole?: string }[]).map((e, i) => <li key={i}>{e.element} – {e.co}{e.pole ? <span className="muted"> (pole: {b.pola.get(e.pole)?.etykieta})</span> : null}</li>)}</ul>
@@ -39,7 +39,7 @@ export default async function Karta({ params }: { params: Promise<{ id: string }
   const p = b.procedury.find(e => e.id === id) as (R & { status: string; kod: string; nazwa_oficjalna: string }) | undefined;
   if (!p) notFound();
   const nag = <><p><a href="/katalog-procedur">← Katalog procedur i badań</a></p><h1>{p.kod} – {p.nazwa_oficjalna}</h1>
-    <p><span className="badge warn" data-testid="kp-status">{STATUS[p.status]}</span> <span className="muted">{String(p.kategoria)}{L(p.kody_aplikacji).length ? ` · Opisy NFZ: ${L(p.kody_aplikacji).join(', ')}` : ''}</span></p>
+    <p><span className={p.status === 'verified' ? 'badge' : 'badge warn'} data-testid="kp-status">{STATUS[p.status]}</span>{p.zweryfikowal ? <span className="muted"> · zweryfikował: {String(p.zweryfikowal)}, {String(p.zweryfikowano ?? '')}</span> : null} <span className="muted">{String(p.kategoria)}{L(p.kody_aplikacji).length ? ` · Opisy NFZ: ${L(p.kody_aplikacji).join(', ')}` : ''}</span></p>
     {p.uzasadnienie_statusu ? <p className="muted">{String(p.uzasadnienie_statusu)}</p> : null}</>;
   if (p.status === 'not_started') return <main className="wrap">{nag}<p>Karta nie jest opracowana.</p></main>;
   const cel = p.cel as R, kw = p.kwalifikacja as R, prz = p.przygotowanie as R, ke = p.kontrola_efektu as R, za = p.zalecenia as R, nfz = p.nfz as R;

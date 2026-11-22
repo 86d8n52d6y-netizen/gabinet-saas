@@ -433,6 +433,10 @@
      "zweryfikowal": {
       "type": "string",
       "minLength": 1
+     },
+     "zweryfikowano": {
+      "type": "string",
+      "format": "date"
      }
     }
    }

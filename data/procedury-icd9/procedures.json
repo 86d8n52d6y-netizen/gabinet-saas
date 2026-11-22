@@ -6,7 +6,7 @@
    "kod": "23.0101",
    "nazwa_oficjalna": "Badanie lekarskie stomatologiczne, które obejmuje również instruktaż higieny jamy ustnej",
    "kategoria": "badanie i porada",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -117,14 +117,16 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "ST33"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0102",
    "kod": "23.0102",
    "nazwa_oficjalna": "Badanie lekarskie kontrolne",
    "kategoria": "badanie i porada",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -212,7 +214,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "ST34"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0103",
@@ -547,7 +551,7 @@
    "kod": "23.0107",
    "nazwa_oficjalna": "Badanie lekarskie stomatologiczne i kontrolne po urazie zęba",
    "kategoria": "badanie i porada",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -649,7 +653,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "ST28"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.02",
@@ -1162,7 +1168,7 @@
    "kod": "23.0401",
    "nazwa_oficjalna": "Znieczulenie miejscowe powierzchniowe",
    "kategoria": "znieczulenie",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -1292,14 +1298,16 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "0401"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0402",
    "kod": "23.0402",
    "nazwa_oficjalna": "Znieczulenie miejscowe nasiękowe",
    "kategoria": "znieczulenie",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -1429,14 +1437,16 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "0402"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0403",
    "kod": "23.0403",
    "nazwa_oficjalna": "Znieczulenie przewodowe wewnątrzustne",
    "kategoria": "znieczulenie",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -1566,7 +1576,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "0403"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0404",
@@ -2886,7 +2898,7 @@
    "kod": "23.1006",
    "nazwa_oficjalna": "Lakierowanie zębów 1/4 łuku zębowego",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -3004,7 +3016,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "1006"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1007",
@@ -4832,7 +4846,7 @@
    "kod": "23.1101",
    "nazwa_oficjalna": "Leczenie próchnicy powierzchniowej - za każdy ząb",
    "kategoria": "leczenie próchnicy",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -4987,7 +5001,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "1101"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1102",
@@ -5596,7 +5612,7 @@
    "kod": "23.1105",
    "nazwa_oficjalna": "Postępowanie przy obnażeniu i skaleczeniu miazgi - bezpośrednie pokrycie miazgi",
    "kategoria": "leczenie próchnicy",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -5840,7 +5856,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "1105"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1106",
@@ -6254,7 +6272,7 @@
    "kod": "23.1108",
    "nazwa_oficjalna": "Wypełnienie ubytku korony zęba mlecznego",
    "kategoria": "leczenie próchnicy",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -6506,7 +6524,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "1108"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1109",
@@ -13302,7 +13322,7 @@
    "kod": "23.1502",
    "nazwa_oficjalna": "Całkowite opracowanie i odbudowa ubytku zęba na 1 powierzchni",
    "kategoria": "odbudowa i estetyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -13559,14 +13579,16 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "1502"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1503",
    "kod": "23.1503",
    "nazwa_oficjalna": "Całkowite opracowanie i odbudowa ubytku na 2 powierzchniach",
    "kategoria": "odbudowa i estetyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -13823,14 +13845,16 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "1503"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1504",
    "kod": "23.1504",
    "nazwa_oficjalna": "Całkowite opracowanie i odbudowa rozległego ubytku na 2 powierzchniach",
    "kategoria": "odbudowa i estetyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -14087,14 +14111,16 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "1504"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1505",
    "kod": "23.1505",
    "nazwa_oficjalna": "Całkowite opracowanie i odbudowa rozległego ubytku na 3 powierzchniach",
    "kategoria": "odbudowa i estetyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -14351,7 +14377,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "1505"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1506",
@@ -19107,7 +19135,7 @@
    "kod": "23.1701",
    "nazwa_oficjalna": "Usunięcie zęba jednokorzeniowego",
    "kategoria": "chirurgia – ekstrakcje",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -19313,14 +19341,16 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "ST01"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1702",
    "kod": "23.1702",
    "nazwa_oficjalna": "Usunięcie zęba wielokorzeniowego",
    "kategoria": "chirurgia – ekstrakcje",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -19526,7 +19556,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "ST02"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1703",
@@ -24640,7 +24672,7 @@
    "kod": "23.2001",
    "nazwa_oficjalna": "Nacięcie powierzchniowo, podśluzówkowo lub podskórnie leżącego ropnia włącznie z drenażem i opatrunkiem",
    "kategoria": "chirurgia – zakażenia",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -24775,7 +24807,9 @@
    "opracowano": "2026-11-22",
    "kody_aplikacji": [
     "ST19"
-   ]
+   ],
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.2002",

@@ -8,9 +8,10 @@ Wersja danych: 2026.11.22-1.
 
 | Status | Procedury |
 |---|---|
-| draft | 144 |
+| draft | 127 |
 | not_started | 60 |
 | requires_expert_review | 62 |
+| verified | 17 |
 | **razem** | **266** |
 
 Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: draft, BAD-BLONA: draft, BAD-UZEBIENIE: draft, BAD-PRZYZEBIE: draft, BAD-HIGIENA: draft, BAD-ZGRYZ: draft, BAD-SSZ: draft, BAD-ZYWOTNOSC: draft, BAD-RTG: draft, BAD-PO-URAZIE: draft, BAD-DZIECKO: draft, BAD-STOMATOLOGICZNE: draft, BAD-KONTROLNE: draft, BAD-PRZED-LECZENIEM: draft, BAD-PO-LECZENIU: draft).
@@ -21,21 +22,21 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 
 | Kod | Nazwa (ICD-9 PL 5.91) | Kategoria | Status | Uwagi |
 |---|---|---|---|---|
-| 23.0101 | Badanie lekarskie stomatologiczne, które obejmuje również instruktaż higieny jamy ustnej | badanie i porada | draft |  |
-| 23.0102 | Badanie lekarskie kontrolne | badanie i porada | draft |  |
+| 23.0101 | Badanie lekarskie stomatologiczne, które obejmuje również instruktaż higieny jamy ustnej | badanie i porada | verified |  |
+| 23.0102 | Badanie lekarskie kontrolne | badanie i porada | verified |  |
 | 23.0103 | Porada lekarska | badanie i porada | draft |  |
 | 23.0104 | Wydanie orzeczenia lekarskiego | badanie i porada | draft |  |
 | 23.0105 | Konsultacja specjalistyczna | badanie i porada | draft |  |
 | 23.0106 | Wydanie krótkiego zaświadczenia lub świadectwa | badanie i porada | draft |  |
-| 23.0107 | Badanie lekarskie stomatologiczne i kontrolne po urazie zęba | badanie i porada | draft |  |
+| 23.0107 | Badanie lekarskie stomatologiczne i kontrolne po urazie zęba | badanie i porada | verified |  |
 | 23.02 | Badanie żywotności zęba | diagnostyka | draft |  |
 | 23.0301 | Rentgenodiagnostyka do 2 zdjęć wewnątrzustnych | radiologia | draft |  |
 | 23.0302 | Rentgenodiagnostyka do 5 zdjęć wewnątrzustnych | radiologia | draft |  |
 | 23.0303 | Rentgenodiagnostyka do 8 zdjęć wewnątrzustnych | radiologia | draft |  |
 | 23.0304 | Rentgenodiagnostyka - zdjęcie pantomograficzne z opisem | radiologia | draft |  |
-| 23.0401 | Znieczulenie miejscowe powierzchniowe | znieczulenie | draft |  |
-| 23.0402 | Znieczulenie miejscowe nasiękowe | znieczulenie | draft |  |
-| 23.0403 | Znieczulenie przewodowe wewnątrzustne | znieczulenie | draft |  |
+| 23.0401 | Znieczulenie miejscowe powierzchniowe | znieczulenie | verified |  |
+| 23.0402 | Znieczulenie miejscowe nasiękowe | znieczulenie | verified |  |
+| 23.0403 | Znieczulenie przewodowe wewnątrzustne | znieczulenie | verified |  |
 | 23.0404 | Znieczulenie przewodowe zewnątrzustne | znieczulenie | requires_expert_review | Technika specjalistyczna – do weryfikacji eksperckiej. |
 | 23.05 | Postępowanie w nagłych przypadkach | pomoc doraźna | draft |  |
 | 23.06 | Wizyta adaptacyjna -dotyczy pierwszych wizyt małych dzieci | dziecko | draft |  |
@@ -52,7 +53,7 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.1002 | Fluoryzacja kontaktowa zbiorowa, 1 zabieg u każdego dziecka | profilaktyka | draft |  |
 | 23.1003 | Zabezpieczenie profilaktyczne bruzd lakiem szczelinowym - za każdy ząb | profilaktyka | draft |  |
 | 23.1004 | Zabezpieczanie profilaktyczne bruzd innymi materiałami | profilaktyka | draft |  |
-| 23.1006 | Lakierowanie zębów 1/4 łuku zębowego | profilaktyka | draft |  |
+| 23.1006 | Lakierowanie zębów 1/4 łuku zębowego | profilaktyka | verified |  |
 | 23.1007 | Leczenie nadwrażliwości zębów w obrębie 1/4 łuku zębowego | profilaktyka | draft |  |
 | 23.1008 | Impregnacja zębiny | profilaktyka | requires_expert_review | Preparat i wskazania do weryfikacji (np. fluorek diaminy srebra – przebarwienia, zgoda). |
 | 23.1009 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 6. miesiącu życia | profilaktyka | draft |  |
@@ -70,14 +71,14 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.1021 | Profilaktyczne świadczenie stomatologiczne dla młodzieży w 19. roku życia | profilaktyka | draft |  |
 | 23.1022 | Profilaktyczne świadczenie stomatologiczne zapobiegające wadom zgryzu | profilaktyka | draft |  |
 | 23.1023 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 3. roku życia | profilaktyka | draft |  |
-| 23.1101 | Leczenie próchnicy powierzchniowej - za każdy ząb | leczenie próchnicy | draft |  |
+| 23.1101 | Leczenie próchnicy powierzchniowej - za każdy ząb | leczenie próchnicy | verified |  |
 | 23.1102 | Całkowite opracowanie ubytku próchnicowego z założeniem podkładu | leczenie próchnicy | draft |  |
 | 23.1103 | Całkowite opracowanie rozległego ubytku próchnicowego z założeniem podwójnego podkładu | leczenie próchnicy | draft |  |
 | 23.1104 | Postępowanie przy próchnicy głębokiej - pośrednie pokrycie miazgi | leczenie próchnicy | draft |  |
-| 23.1105 | Postępowanie przy obnażeniu i skaleczeniu miazgi - bezpośrednie pokrycie miazgi | leczenie próchnicy | draft |  |
+| 23.1105 | Postępowanie przy obnażeniu i skaleczeniu miazgi - bezpośrednie pokrycie miazgi | leczenie próchnicy | verified |  |
 | 23.1106 | Opatrunek leczniczy w zębie stałym | leczenie próchnicy | draft |  |
 | 23.1107 | Opatrunek leczniczy w zębie mlecznym | leczenie próchnicy | draft |  |
-| 23.1108 | Wypełnienie ubytku korony zęba mlecznego | leczenie próchnicy | draft |  |
+| 23.1108 | Wypełnienie ubytku korony zęba mlecznego | leczenie próchnicy | verified |  |
 | 23.1109 | Wypełnienie ubytku korony zęba na 1 powierzchni | leczenie próchnicy | requires_expert_review | Kod obecny w ICD-9 PL 5.91 obok 23.1502–23.1506 – Patryk: czy jest jeszcze używany (raport, kwestia 6). |
 | 23.1110 | Wypełnienie ubytku korony zęba na 2 powierzchniach | leczenie próchnicy | requires_expert_review | Kod obecny w ICD-9 PL 5.91 obok 23.1502–23.1506 – Patryk: czy jest jeszcze używany (raport, kwestia 6). |
 | 23.1111 | Wypełnienie ubytku korony zęba na 3 powierzchniach | leczenie próchnicy | requires_expert_review | Kod obecny w ICD-9 PL 5.91 obok 23.1502–23.1506 – Patryk: czy jest jeszcze używany (raport, kwestia 6). |
@@ -112,10 +113,10 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.13149 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA - inne | endodoncja – leczenie kanałowe | draft |  |
 | 23.14 | Szczególne trudności w preparowaniu/ wypełnianiu zębów - usunięcie przerośniętej brodawki międzyzębowej, zatamowanie krwawienia z brodawki, separowanie zębów itp. | stomatologia zachowawcza | draft |  |
 | 23.1501 | Odbudowa zniszczonego, złamanego kąta w zębach siecznych | odbudowa i estetyka | draft |  |
-| 23.1502 | Całkowite opracowanie i odbudowa ubytku zęba na 1 powierzchni | odbudowa i estetyka | draft |  |
-| 23.1503 | Całkowite opracowanie i odbudowa ubytku na 2 powierzchniach | odbudowa i estetyka | draft |  |
-| 23.1504 | Całkowite opracowanie i odbudowa rozległego ubytku na 2 powierzchniach | odbudowa i estetyka | draft |  |
-| 23.1505 | Całkowite opracowanie i odbudowa rozległego ubytku na 3 powierzchniach | odbudowa i estetyka | draft |  |
+| 23.1502 | Całkowite opracowanie i odbudowa ubytku zęba na 1 powierzchni | odbudowa i estetyka | verified |  |
+| 23.1503 | Całkowite opracowanie i odbudowa ubytku na 2 powierzchniach | odbudowa i estetyka | verified |  |
+| 23.1504 | Całkowite opracowanie i odbudowa rozległego ubytku na 2 powierzchniach | odbudowa i estetyka | verified |  |
+| 23.1505 | Całkowite opracowanie i odbudowa rozległego ubytku na 3 powierzchniach | odbudowa i estetyka | verified |  |
 | 23.1506 | Całkowite opracowanie i odbudowa rozległego ubytku na więcej niż 3 powierzchniach | odbudowa i estetyka | draft |  |
 | 23.1507 | Całkowite opracowanie i odbudowa zniszczonego kąta w zębach siecznych | odbudowa i estetyka | draft |  |
 | 23.1508 | Kosmetyczne pokrycie niedorozwoju szkliwa | odbudowa i estetyka | draft |  |
@@ -148,8 +149,8 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.1619 | Zabieg pokrycia obnażonych korzeni zębów metodą bocznie przesuniętego płata | periodontologia i błona śluzowa | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
 | 23.1620 | Założenie opatrunku parodontologicznego | periodontologia i błona śluzowa | draft |  |
 | 23.17 | Chirurgiczne usunięcie zęba | chirurgia – ekstrakcje | not_started | Kod nadrzędny używany w składzie pakietów NFZ – karty w podkodach: 23.1701–23.1708. |
-| 23.1701 | Usunięcie zęba jednokorzeniowego | chirurgia – ekstrakcje | draft |  |
-| 23.1702 | Usunięcie zęba wielokorzeniowego | chirurgia – ekstrakcje | draft |  |
+| 23.1701 | Usunięcie zęba jednokorzeniowego | chirurgia – ekstrakcje | verified |  |
+| 23.1702 | Usunięcie zęba wielokorzeniowego | chirurgia – ekstrakcje | verified |  |
 | 23.1703 | Usunięcie głęboko złamanego zęba poprzez dłutowanie wewnątrzzębodołowe przy zastosowaniu wierteł, dźwigni | chirurgia – ekstrakcje | draft |  |
 | 23.1704 | Usunięcie zęba przez dłutowanie zewnątrzzębodołowe z wytworzeniem płata śluzówkowo-okostnowego | chirurgia – ekstrakcje | draft |  |
 | 23.1705 | Operacyjne usunięcie zęba zatrzymanego | chirurgia – ekstrakcje | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
@@ -180,7 +181,7 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.1904 | Plastyka wyrostka zębodołowego szczęki lub części zębodołowej żuchwy z użyciem przeszczepu lub wszczepu | chirurgia – wycięcia i plastyki | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
 | 23.1905 | Plastyka guza szczęki | chirurgia – wycięcia i plastyki | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
 | 23.1906 | Plastyka połączenia lub przetoki ustno-zatokowej - jako samodzielne postępowanie lub jako następstwo ekstrakcji | chirurgia – wycięcia i plastyki | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
-| 23.2001 | Nacięcie powierzchniowo, podśluzówkowo lub podskórnie leżącego ropnia włącznie z drenażem i opatrunkiem | chirurgia – zakażenia | draft |  |
+| 23.2001 | Nacięcie powierzchniowo, podśluzówkowo lub podskórnie leżącego ropnia włącznie z drenażem i opatrunkiem | chirurgia – zakażenia | verified |  |
 | 23.2002 | Nacięcie z dojścia wewnątrz lub zewnątrzustnego głęboko leżącego ropnia włącznie z drenażem i opatrunkiem | chirurgia – zakażenia | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
 | 23.2003 | Nacięcie ropowicy | chirurgia – zakażenia | not_started | Pominięte decyzją Patryka (22.11.2026): nacięcie ropowicy – chirurgia szczękowo-twarzowa (szpital). |
 | 23.2101 | Repozycja i unieruchomienie zwichniętego zęba lub grupy zębów | urazy zębów | draft |  |
