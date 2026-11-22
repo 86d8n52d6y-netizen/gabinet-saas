@@ -1,4 +1,712 @@
 {
- "opis": "Szablony opisów badań: standardowy, skrócony, rozszerzony. {{POLE-…}} = wartość wpisana przez lekarza.",
- "szablony": []
+ "opis": "Szablony opisów badań: standardowy, skrócony, rozszerzony. {{POLE-…}} = wartość wpisana przez lekarza; puste pole = fragment pomijany przy składaniu opisu. Tekst zawsze edytowalny przed zapisem.",
+ "szablony": [
+  {
+   "id": "SZAB-BAD-WYWIAD-STD",
+   "dotyczy": "BAD-WYWIAD",
+   "wariant": "standardowy",
+   "tekst": "WYWIAD: Powód zgłoszenia: {{POLE-WYW-POWOD}}. Dolegliwości: {{POLE-WYW-DOLEGLIWOSCI}}. Choroby ogólne: {{POLE-WYW-CHOROBY}}. Leki: {{POLE-WYW-LEKI}}. Alergie: {{POLE-WYW-ALERGIE}}. Ciąża / karmienie: {{POLE-WYW-CIAZA}}. Używki: {{POLE-WYW-NALOGI}}.",
+   "pola": [
+    "POLE-WYW-POWOD",
+    "POLE-WYW-DOLEGLIWOSCI",
+    "POLE-WYW-CHOROBY",
+    "POLE-WYW-LEKI",
+    "POLE-WYW-ALERGIE",
+    "POLE-WYW-CIAZA",
+    "POLE-WYW-NALOGI"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-WYWIAD-SKR",
+   "dotyczy": "BAD-WYWIAD",
+   "wariant": "skrocony",
+   "tekst": "Wywiad: {{POLE-WYW-POWOD}}; choroby: {{POLE-WYW-CHOROBY}}; leki: {{POLE-WYW-LEKI}}; alergie: {{POLE-WYW-ALERGIE}}.",
+   "pola": [
+    "POLE-WYW-POWOD",
+    "POLE-WYW-CHOROBY",
+    "POLE-WYW-LEKI",
+    "POLE-WYW-ALERGIE"
+   ],
+   "tekst_aplikacji": "EXAM_A (fragment wywiadu w Opisach NFZ – pola sh.*)"
+  },
+  {
+   "id": "SZAB-BAD-WYWIAD-ROZ",
+   "dotyczy": "BAD-WYWIAD",
+   "wariant": "rozszerzony",
+   "tekst": "WYWIAD: Powód zgłoszenia: {{POLE-WYW-POWOD}}. Dolegliwości: {{POLE-WYW-DOLEGLIWOSCI}}. Choroby ogólne: {{POLE-WYW-CHOROBY}}. Leki przyjmowane stale: {{POLE-WYW-LEKI}}. Alergie: {{POLE-WYW-ALERGIE}}. Ciąża / karmienie: {{POLE-WYW-CIAZA}}. Używki: {{POLE-WYW-NALOGI}}. Wywiad stomatologiczny: {{POLE-WYW-STOMAT}}. Higiena i dieta: {{POLE-WYW-HIGIENA}}. Parafunkcje: {{POLE-WYW-PARAFUNKCJE}}. Uwagi: {{POLE-UWAGI}}.",
+   "pola": [
+    "POLE-WYW-POWOD",
+    "POLE-WYW-DOLEGLIWOSCI",
+    "POLE-WYW-CHOROBY",
+    "POLE-WYW-LEKI",
+    "POLE-WYW-ALERGIE",
+    "POLE-WYW-CIAZA",
+    "POLE-WYW-NALOGI",
+    "POLE-WYW-STOMAT",
+    "POLE-WYW-HIGIENA",
+    "POLE-WYW-PARAFUNKCJE",
+    "POLE-UWAGI"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-ZEWNATRZUSTNE-STD",
+   "dotyczy": "BAD-ZEWNATRZUSTNE",
+   "wariant": "standardowy",
+   "tekst": "BADANIE ZEWNĄTRZUSTNE: Twarz: {{POLE-ZEW-TWARZ}}. Skóra: {{POLE-ZEW-SKORA}}. Czerwień wargowa: {{POLE-ZEW-WARGI}}. Węzły chłonne: {{POLE-ZEW-WEZLY}}. SSŻ: {{POLE-ZEW-SSZ}}. Mięśnie żucia: {{POLE-ZEW-MIESNIE}}.",
+   "pola": [
+    "POLE-ZEW-TWARZ",
+    "POLE-ZEW-SKORA",
+    "POLE-ZEW-WARGI",
+    "POLE-ZEW-WEZLY",
+    "POLE-ZEW-SSZ",
+    "POLE-ZEW-MIESNIE"
+   ],
+   "tekst_aplikacji": "EXAM_A (szablon gabinetu ma wyniki wpisane z góry – w tej bazie wynik wybiera lekarz)"
+  },
+  {
+   "id": "SZAB-BAD-ZEWNATRZUSTNE-SKR",
+   "dotyczy": "BAD-ZEWNATRZUSTNE",
+   "wariant": "skrocony",
+   "tekst": "Zewnątrzustnie: twarz {{POLE-ZEW-TWARZ}}, węzły chłonne {{POLE-ZEW-WEZLY}}, SSŻ {{POLE-ZEW-SSZ}}.",
+   "pola": [
+    "POLE-ZEW-TWARZ",
+    "POLE-ZEW-WEZLY",
+    "POLE-ZEW-SSZ"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-ZEWNATRZUSTNE-ROZ",
+   "dotyczy": "BAD-ZEWNATRZUSTNE",
+   "wariant": "rozszerzony",
+   "tekst": "BADANIE ZEWNĄTRZUSTNE: Twarz: {{POLE-ZEW-TWARZ}}. Skóra: {{POLE-ZEW-SKORA}}. Czerwień wargowa i kąciki ust: {{POLE-ZEW-WARGI}}. Węzły chłonne: {{POLE-ZEW-WEZLY}}. SSŻ: {{POLE-ZEW-SSZ}}. Mięśnie żucia: {{POLE-ZEW-MIESNIE}}. Opis odchyleń: {{POLE-ZEW-OPIS}}. Decyzja: {{POLE-DECYZJA}}.",
+   "pola": [
+    "POLE-ZEW-TWARZ",
+    "POLE-ZEW-SKORA",
+    "POLE-ZEW-WARGI",
+    "POLE-ZEW-WEZLY",
+    "POLE-ZEW-SSZ",
+    "POLE-ZEW-MIESNIE",
+    "POLE-ZEW-OPIS",
+    "POLE-DECYZJA"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-WEWNATRZUSTNE-STD",
+   "dotyczy": "BAD-WEWNATRZUSTNE",
+   "wariant": "standardowy",
+   "tekst": "BADANIE WEWNĄTRZUSTNE: Przedsionek, wargi, policzki: {{POLE-WEW-PRZEDSIONEK}}. Język: {{POLE-WEW-JEZYK}}. Dno jamy ustnej: {{POLE-WEW-DNO}}. Podniebienie: {{POLE-WEW-PODNIEBIENIE}}. Gardło: {{POLE-WEW-GARDLO}}. Ślinianki: {{POLE-WEW-SLINIANKI}}. Wędzidełka: {{POLE-WEW-WEDZIDELKA}}.",
+   "pola": [
+    "POLE-WEW-PRZEDSIONEK",
+    "POLE-WEW-JEZYK",
+    "POLE-WEW-DNO",
+    "POLE-WEW-PODNIEBIENIE",
+    "POLE-WEW-GARDLO",
+    "POLE-WEW-SLINIANKI",
+    "POLE-WEW-WEDZIDELKA"
+   ],
+   "tekst_aplikacji": "EXAM_A"
+  },
+  {
+   "id": "SZAB-BAD-WEWNATRZUSTNE-SKR",
+   "dotyczy": "BAD-WEWNATRZUSTNE",
+   "wariant": "skrocony",
+   "tekst": "Wewnątrzustnie: błona śluzowa {{POLE-WEW-PRZEDSIONEK}}, język {{POLE-WEW-JEZYK}}, wędzidełka {{POLE-WEW-WEDZIDELKA}}.",
+   "pola": [
+    "POLE-WEW-PRZEDSIONEK",
+    "POLE-WEW-JEZYK",
+    "POLE-WEW-WEDZIDELKA"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-WEWNATRZUSTNE-ROZ",
+   "dotyczy": "BAD-WEWNATRZUSTNE",
+   "wariant": "rozszerzony",
+   "tekst": "BADANIE WEWNĄTRZUSTNE: Przedsionek, wargi, policzki: {{POLE-WEW-PRZEDSIONEK}}. Język: {{POLE-WEW-JEZYK}}. Dno jamy ustnej: {{POLE-WEW-DNO}}. Podniebienie: {{POLE-WEW-PODNIEBIENIE}}. Gardło: {{POLE-WEW-GARDLO}}. Ślinianki: {{POLE-WEW-SLINIANKI}}. Wędzidełka: {{POLE-WEW-WEDZIDELKA}}. Opis zmian: {{POLE-WEW-OPIS}}. Decyzja: {{POLE-DECYZJA}}.",
+   "pola": [
+    "POLE-WEW-PRZEDSIONEK",
+    "POLE-WEW-JEZYK",
+    "POLE-WEW-DNO",
+    "POLE-WEW-PODNIEBIENIE",
+    "POLE-WEW-GARDLO",
+    "POLE-WEW-SLINIANKI",
+    "POLE-WEW-WEDZIDELKA",
+    "POLE-WEW-OPIS",
+    "POLE-DECYZJA"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-BLONA-STD",
+   "dotyczy": "BAD-BLONA",
+   "wariant": "standardowy",
+   "tekst": "Zmiana na błonie śluzowej: lokalizacja {{POLE-BL-LOK}}, wymiar {{POLE-BL-WYM}} mm, {{POLE-BL-WYKWIT}}, powierzchnia {{POLE-BL-POW}}, konsystencja {{POLE-BL-KONS}}, {{POLE-BL-BOL}}. Czas trwania: {{POLE-BL-CZAS}}. Postępowanie: {{POLE-BL-DECYZJA}}.",
+   "pola": [
+    "POLE-BL-LOK",
+    "POLE-BL-WYM",
+    "POLE-BL-WYKWIT",
+    "POLE-BL-POW",
+    "POLE-BL-KONS",
+    "POLE-BL-BOL",
+    "POLE-BL-CZAS",
+    "POLE-BL-DECYZJA"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-BLONA-SKR",
+   "dotyczy": "BAD-BLONA",
+   "wariant": "skrocony",
+   "tekst": "Zmiana: {{POLE-BL-LOK}}, {{POLE-BL-WYKWIT}}, {{POLE-BL-WYM}} mm. Postępowanie: {{POLE-BL-DECYZJA}}.",
+   "pola": [
+    "POLE-BL-LOK",
+    "POLE-BL-WYKWIT",
+    "POLE-BL-WYM",
+    "POLE-BL-DECYZJA"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-BLONA-ROZ",
+   "dotyczy": "BAD-BLONA",
+   "wariant": "rozszerzony",
+   "tekst": "OCENA ZMIANY NA BŁONIE ŚLUZOWEJ: Lokalizacja: {{POLE-BL-LOK}}. Wymiar: {{POLE-BL-WYM}} mm. Wykwit: {{POLE-BL-WYKWIT}}. Powierzchnia: {{POLE-BL-POW}}. Konsystencja: {{POLE-BL-KONS}}. Bolesność: {{POLE-BL-BOL}}. Czas trwania: {{POLE-BL-CZAS}}. Czynnik miejscowy: {{POLE-BL-CZYNNIK}}. Węzły chłonne: {{POLE-ZEW-WEZLY}}. Postępowanie: {{POLE-BL-DECYZJA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-BL-LOK",
+    "POLE-BL-WYM",
+    "POLE-BL-WYKWIT",
+    "POLE-BL-POW",
+    "POLE-BL-KONS",
+    "POLE-BL-BOL",
+    "POLE-BL-CZAS",
+    "POLE-BL-CZYNNIK",
+    "POLE-ZEW-WEZLY",
+    "POLE-BL-DECYZJA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-UZEBIENIE-STD",
+   "dotyczy": "BAD-UZEBIENIE",
+   "wariant": "standardowy",
+   "tekst": "UZĘBIENIE ({{POLE-UZ-TYP}}): {{POLE-UZ-DIAGRAM}}. Ocena próchnicy: {{POLE-UZ-SYSTEM}}. DMFT/dmft: {{POLE-UZ-DMFT}}. Zmiany niepróchnicowe: {{POLE-UZ-NIEPROCH}}.",
+   "pola": [
+    "POLE-UZ-TYP",
+    "POLE-UZ-DIAGRAM",
+    "POLE-UZ-SYSTEM",
+    "POLE-UZ-DMFT",
+    "POLE-UZ-NIEPROCH"
+   ],
+   "tekst_aplikacji": "EXAM_A: „Uzębienie: zgodnie z diagramem”"
+  },
+  {
+   "id": "SZAB-BAD-UZEBIENIE-SKR",
+   "dotyczy": "BAD-UZEBIENIE",
+   "wariant": "skrocony",
+   "tekst": "Uzębienie: {{POLE-UZ-DIAGRAM}}.",
+   "pola": [
+    "POLE-UZ-DIAGRAM"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-UZEBIENIE-ROZ",
+   "dotyczy": "BAD-UZEBIENIE",
+   "wariant": "rozszerzony",
+   "tekst": "UZĘBIENIE ({{POLE-UZ-TYP}}): {{POLE-UZ-DIAGRAM}}. Kryteria: {{POLE-UZ-SYSTEM}}. DMFT/dmft: {{POLE-UZ-DMFT}}. Zmiany niepróchnicowe: {{POLE-UZ-NIEPROCH}}. Ryzyko próchnicy: {{POLE-UZ-RYZYKO}}. Opis: {{POLE-UZ-OPIS}}. RTG: {{POLE-RTG}}. Plan: {{POLE-DECYZJA}}.",
+   "pola": [
+    "POLE-UZ-TYP",
+    "POLE-UZ-DIAGRAM",
+    "POLE-UZ-SYSTEM",
+    "POLE-UZ-DMFT",
+    "POLE-UZ-NIEPROCH",
+    "POLE-UZ-RYZYKO",
+    "POLE-UZ-OPIS",
+    "POLE-RTG",
+    "POLE-DECYZJA"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-PRZYZEBIE-STD",
+   "dotyczy": "BAD-PRZYZEBIE",
+   "wariant": "standardowy",
+   "tekst": "PRZYZĘBIE: BPE/PSR: {{POLE-PZ-BPE}}. BOP: {{POLE-PZ-BOP}}%. Kieszonki ≥ 4 mm: {{POLE-PZ-PPD}}. Ocena: {{POLE-PZ-ROZPOZNANIE}}.",
+   "pola": [
+    "POLE-PZ-BPE",
+    "POLE-PZ-BOP",
+    "POLE-PZ-PPD",
+    "POLE-PZ-ROZPOZNANIE"
+   ],
+   "tekst_aplikacji": "EXAM_A: „Błona Śluzowa i Przyzębie”"
+  },
+  {
+   "id": "SZAB-BAD-PRZYZEBIE-SKR",
+   "dotyczy": "BAD-PRZYZEBIE",
+   "wariant": "skrocony",
+   "tekst": "Przyzębie: BPE {{POLE-PZ-BPE}}, BOP {{POLE-PZ-BOP}}%; {{POLE-PZ-ROZPOZNANIE}}.",
+   "pola": [
+    "POLE-PZ-BPE",
+    "POLE-PZ-BOP",
+    "POLE-PZ-ROZPOZNANIE"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-PRZYZEBIE-ROZ",
+   "dotyczy": "BAD-PRZYZEBIE",
+   "wariant": "rozszerzony",
+   "tekst": "BADANIE PERIODONTOLOGICZNE: BPE/PSR: {{POLE-PZ-BPE}}. BOP: {{POLE-PZ-BOP}}%. PPD (≥ 4 mm): {{POLE-PZ-PPD}}. CAL / recesje: {{POLE-PZ-CAL}}. Ruchomość: {{POLE-PZ-RUCH}}. Furkacje: {{POLE-PZ-FURK}}. RTG: {{POLE-RTG}}. Rozpoznanie: {{POLE-PZ-ROZPOZNANIE}}, stadium {{POLE-PZ-STADIUM}}, stopień {{POLE-PZ-STOPIEN}}. Plan: {{POLE-DECYZJA}}.",
+   "pola": [
+    "POLE-PZ-BPE",
+    "POLE-PZ-BOP",
+    "POLE-PZ-PPD",
+    "POLE-PZ-CAL",
+    "POLE-PZ-RUCH",
+    "POLE-PZ-FURK",
+    "POLE-RTG",
+    "POLE-PZ-ROZPOZNANIE",
+    "POLE-PZ-STADIUM",
+    "POLE-PZ-STOPIEN",
+    "POLE-DECYZJA"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-HIGIENA-STD",
+   "dotyczy": "BAD-HIGIENA",
+   "wariant": "standardowy",
+   "tekst": "HIGIENA JAMY USTNEJ: {{POLE-HG-WSKAZNIK}} {{POLE-HG-WARTOSC}}%, GI/SBI {{POLE-HG-GI}}. Złogi: {{POLE-HG-ZLOGI}}. Ocena: {{POLE-HG-OCENA}}. Instruktaż higieny: {{POLE-HG-INSTRUKTAZ}}.",
+   "pola": [
+    "POLE-HG-WSKAZNIK",
+    "POLE-HG-WARTOSC",
+    "POLE-HG-GI",
+    "POLE-HG-ZLOGI",
+    "POLE-HG-OCENA",
+    "POLE-HG-INSTRUKTAZ"
+   ],
+   "tekst_aplikacji": "EXAM_A: „Ocena stanu higieny jamy ustnej” + SEG instruktaż"
+  },
+  {
+   "id": "SZAB-BAD-HIGIENA-SKR",
+   "dotyczy": "BAD-HIGIENA",
+   "wariant": "skrocony",
+   "tekst": "Higiena: {{POLE-HG-WSKAZNIK}} {{POLE-HG-WARTOSC}}%, złogi {{POLE-HG-ZLOGI}}; instruktaż: {{POLE-HG-INSTRUKTAZ}}.",
+   "pola": [
+    "POLE-HG-WSKAZNIK",
+    "POLE-HG-WARTOSC",
+    "POLE-HG-ZLOGI",
+    "POLE-HG-INSTRUKTAZ"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-HIGIENA-ROZ",
+   "dotyczy": "BAD-HIGIENA",
+   "wariant": "rozszerzony",
+   "tekst": "HIGIENA JAMY USTNEJ: {{POLE-HG-WSKAZNIK}} {{POLE-HG-WARTOSC}}%, GI/SBI {{POLE-HG-GI}}. Złogi: {{POLE-HG-ZLOGI}}. Ocena: {{POLE-HG-OCENA}}. Instruktaż: {{POLE-HG-INSTRUKTAZ}} – {{POLE-HG-INSTR-OPIS}}. Zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-HG-WSKAZNIK",
+    "POLE-HG-WARTOSC",
+    "POLE-HG-GI",
+    "POLE-HG-ZLOGI",
+    "POLE-HG-OCENA",
+    "POLE-HG-INSTRUKTAZ",
+    "POLE-HG-INSTR-OPIS",
+    "POLE-ZALECENIA"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-ZGRYZ-STD",
+   "dotyczy": "BAD-ZGRYZ",
+   "wariant": "standardowy",
+   "tekst": "ZGRYZ: klasa Angle’a {{POLE-ZG-ANGLE}}, overjet {{POLE-ZG-OJ}} mm, overbite {{POLE-ZG-OB}} mm, linia pośrodkowa {{POLE-ZG-LINIA}}. Wady: {{POLE-ZG-WADY}}.",
+   "pola": [
+    "POLE-ZG-ANGLE",
+    "POLE-ZG-OJ",
+    "POLE-ZG-OB",
+    "POLE-ZG-LINIA",
+    "POLE-ZG-WADY"
+   ],
+   "tekst_aplikacji": "EXAM_A: „Wada zgryzu”"
+  },
+  {
+   "id": "SZAB-BAD-ZGRYZ-SKR",
+   "dotyczy": "BAD-ZGRYZ",
+   "wariant": "skrocony",
+   "tekst": "Zgryz: kl. {{POLE-ZG-ANGLE}}, wady: {{POLE-ZG-WADY}}.",
+   "pola": [
+    "POLE-ZG-ANGLE",
+    "POLE-ZG-WADY"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-ZGRYZ-ROZ",
+   "dotyczy": "BAD-ZGRYZ",
+   "wariant": "rozszerzony",
+   "tekst": "ZGRYZ: klasa Angle’a {{POLE-ZG-ANGLE}}, overjet {{POLE-ZG-OJ}} mm, overbite {{POLE-ZG-OB}} mm, linia pośrodkowa {{POLE-ZG-LINIA}}. Prowadzenie: {{POLE-ZG-PROWADZENIE}}. Wady: {{POLE-ZG-WADY}}. Opis: {{POLE-ZG-OPIS}}. Decyzja: {{POLE-DECYZJA}}.",
+   "pola": [
+    "POLE-ZG-ANGLE",
+    "POLE-ZG-OJ",
+    "POLE-ZG-OB",
+    "POLE-ZG-LINIA",
+    "POLE-ZG-PROWADZENIE",
+    "POLE-ZG-WADY",
+    "POLE-ZG-OPIS",
+    "POLE-DECYZJA"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-SSZ-STD",
+   "dotyczy": "BAD-SSZ",
+   "wariant": "standardowy",
+   "tekst": "SSŻ: ból {{POLE-SSZ-BOL}}; odwodzenie {{POLE-SSZ-ODWODZENIE}} mm, tor {{POLE-SSZ-TOR}}; odgłosy {{POLE-SSZ-ODGLOSY}}; palpacja: {{POLE-SSZ-PALPACJA}}.",
+   "pola": [
+    "POLE-SSZ-BOL",
+    "POLE-SSZ-ODWODZENIE",
+    "POLE-SSZ-TOR",
+    "POLE-SSZ-ODGLOSY",
+    "POLE-SSZ-PALPACJA"
+   ],
+   "tekst_aplikacji": "EXAM_A: „Stawy skroniowo-żuchwowe”"
+  },
+  {
+   "id": "SZAB-BAD-SSZ-SKR",
+   "dotyczy": "BAD-SSZ",
+   "wariant": "skrocony",
+   "tekst": "SSŻ: ból {{POLE-SSZ-BOL}}, odwodzenie {{POLE-SSZ-ODWODZENIE}} mm, odgłosy {{POLE-SSZ-ODGLOSY}}.",
+   "pola": [
+    "POLE-SSZ-BOL",
+    "POLE-SSZ-ODWODZENIE",
+    "POLE-SSZ-ODGLOSY"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-SSZ-ROZ",
+   "dotyczy": "BAD-SSZ",
+   "wariant": "rozszerzony",
+   "tekst": "BADANIE SSŻ (wg DC/TMD – skrócone): ból {{POLE-SSZ-BOL}}; odwodzenie {{POLE-SSZ-ODWODZENIE}} mm, tor {{POLE-SSZ-TOR}}; odgłosy {{POLE-SSZ-ODGLOSY}}; zablokowanie {{POLE-SSZ-ZABLOK}}; palpacja: {{POLE-SSZ-PALPACJA}}. Ocena: {{POLE-SSZ-OPIS}}. Decyzja: {{POLE-DECYZJA}}.",
+   "pola": [
+    "POLE-SSZ-BOL",
+    "POLE-SSZ-ODWODZENIE",
+    "POLE-SSZ-TOR",
+    "POLE-SSZ-ODGLOSY",
+    "POLE-SSZ-ZABLOK",
+    "POLE-SSZ-PALPACJA",
+    "POLE-SSZ-OPIS",
+    "POLE-DECYZJA"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-ZYWOTNOSC-STD",
+   "dotyczy": "BAD-ZYWOTNOSC",
+   "wariant": "standardowy",
+   "tekst": "BADANIE ŻYWOTNOŚCI zęba {{POLE-ZAB}}: test na zimno {{POLE-ZY-ZIMNO}}; opukiwanie {{POLE-ZY-OPUK}}; palpacja {{POLE-ZY-PALP}}. Ząb kontrolny: {{POLE-ZY-KONTROLA}}. Ocena: {{POLE-ZY-OCENA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ZY-ZIMNO",
+    "POLE-ZY-OPUK",
+    "POLE-ZY-PALP",
+    "POLE-ZY-KONTROLA",
+    "POLE-ZY-OCENA"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-ZYWOTNOSC-SKR",
+   "dotyczy": "BAD-ZYWOTNOSC",
+   "wariant": "skrocony",
+   "tekst": "Żywotność {{POLE-ZAB}}: zimno {{POLE-ZY-ZIMNO}}, opukiwanie {{POLE-ZY-OPUK}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ZY-ZIMNO",
+    "POLE-ZY-OPUK"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-ZYWOTNOSC-ROZ",
+   "dotyczy": "BAD-ZYWOTNOSC",
+   "wariant": "rozszerzony",
+   "tekst": "BADANIE ŻYWOTNOŚCI zęba {{POLE-ZAB}}: test na zimno {{POLE-ZY-ZIMNO}}; EPT {{POLE-ZY-EPT}}; opukiwanie {{POLE-ZY-OPUK}}; palpacja {{POLE-ZY-PALP}}; test nagryzania {{POLE-ZY-NAGRYZ}}. Ząb kontrolny: {{POLE-ZY-KONTROLA}}. RTG: {{POLE-RTG}}. Ocena: {{POLE-ZY-OCENA}}. Decyzja: {{POLE-DECYZJA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ZY-ZIMNO",
+    "POLE-ZY-EPT",
+    "POLE-ZY-OPUK",
+    "POLE-ZY-PALP",
+    "POLE-ZY-NAGRYZ",
+    "POLE-ZY-KONTROLA",
+    "POLE-RTG",
+    "POLE-ZY-OCENA",
+    "POLE-DECYZJA"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-RTG-STD",
+   "dotyczy": "BAD-RTG",
+   "wariant": "standardowy",
+   "tekst": "RTG ({{POLE-RTG-RODZAJ}}), wskazanie: {{POLE-RTG-WSKAZANIE}}. Opis: {{POLE-RTG-OPIS}}.",
+   "pola": [
+    "POLE-RTG-RODZAJ",
+    "POLE-RTG-WSKAZANIE",
+    "POLE-RTG-OPIS"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-RTG-SKR",
+   "dotyczy": "BAD-RTG",
+   "wariant": "skrocony",
+   "tekst": "RTG {{POLE-RTG-RODZAJ}}: {{POLE-RTG-OPIS}}.",
+   "pola": [
+    "POLE-RTG-RODZAJ",
+    "POLE-RTG-OPIS"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-RTG-ROZ",
+   "dotyczy": "BAD-RTG",
+   "wariant": "rozszerzony",
+   "tekst": "OCENA RADIOLOGICZNA – {{POLE-RTG-RODZAJ}} z dnia {{POLE-DATA}}. Wskazanie: {{POLE-RTG-WSKAZANIE}}. Opis: {{POLE-RTG-OPIS}}. Wnioski / decyzja: {{POLE-DECYZJA}}.",
+   "pola": [
+    "POLE-RTG-RODZAJ",
+    "POLE-DATA",
+    "POLE-RTG-WSKAZANIE",
+    "POLE-RTG-OPIS",
+    "POLE-DECYZJA"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-PO-URAZIE-STD",
+   "dotyczy": "BAD-PO-URAZIE",
+   "wariant": "standardowy",
+   "tekst": "BADANIE PO URAZIE: okoliczności: {{POLE-UR-OKOLICZNOSCI}}. Zęby: {{POLE-ZEBY}}. Rodzaj urazu: {{POLE-UR-RODZAJ}}. Ruchomość / przemieszczenie: {{POLE-UR-RUCH}}. Tkanki miękkie: {{POLE-UR-TKANKI}}. Plan kontroli: {{POLE-UR-PLAN}}.",
+   "pola": [
+    "POLE-UR-OKOLICZNOSCI",
+    "POLE-ZEBY",
+    "POLE-UR-RODZAJ",
+    "POLE-UR-RUCH",
+    "POLE-UR-TKANKI",
+    "POLE-UR-PLAN"
+   ],
+   "tekst_aplikacji": "D.ST28 (Opisy NFZ)"
+  },
+  {
+   "id": "SZAB-BAD-PO-URAZIE-SKR",
+   "dotyczy": "BAD-PO-URAZIE",
+   "wariant": "skrocony",
+   "tekst": "Uraz {{POLE-ZEBY}}: {{POLE-UR-RODZAJ}}; kontrola: {{POLE-UR-PLAN}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-UR-RODZAJ",
+    "POLE-UR-PLAN"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-PO-URAZIE-ROZ",
+   "dotyczy": "BAD-PO-URAZIE",
+   "wariant": "rozszerzony",
+   "tekst": "BADANIE PO URAZIE: okoliczności: {{POLE-UR-OKOLICZNOSCI}}. Zęby: {{POLE-ZEBY}}. Rodzaj urazu (IADT): {{POLE-UR-RODZAJ}}. Ruchomość / przemieszczenie: {{POLE-UR-RUCH}}. Tkanki miękkie: {{POLE-UR-TKANKI}}. Żywotność: {{POLE-ZY-ZIMNO}}. RTG: {{POLE-RTG}}. Tężec: {{POLE-UR-SZCZEPIENIE}}. Leczenie doraźne: {{POLE-PRZEBIEG}}. Plan kontroli: {{POLE-UR-PLAN}}. Zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-UR-OKOLICZNOSCI",
+    "POLE-ZEBY",
+    "POLE-UR-RODZAJ",
+    "POLE-UR-RUCH",
+    "POLE-UR-TKANKI",
+    "POLE-ZY-ZIMNO",
+    "POLE-RTG",
+    "POLE-UR-SZCZEPIENIE",
+    "POLE-PRZEBIEG",
+    "POLE-UR-PLAN",
+    "POLE-ZALECENIA"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-DZIECKO-STD",
+   "dotyczy": "BAD-DZIECKO",
+   "wariant": "standardowy",
+   "tekst": "BADANIE DZIECKA ({{POLE-DZ-WIEK}} l.): uzębienie {{POLE-UZ-TYP}}, dmft/DMFT {{POLE-UZ-DMFT}}; rozwój: {{POLE-DZ-ROZWOJ}}. Nawyki: {{POLE-DZ-NAWYKI}}. Fluorki: {{POLE-DZ-FLUOR}}. Współpraca: {{POLE-DZ-WSPOLPRACA}}.",
+   "pola": [
+    "POLE-DZ-WIEK",
+    "POLE-UZ-TYP",
+    "POLE-UZ-DMFT",
+    "POLE-DZ-ROZWOJ",
+    "POLE-DZ-NAWYKI",
+    "POLE-DZ-FLUOR",
+    "POLE-DZ-WSPOLPRACA"
+   ],
+   "tekst_aplikacji": "SEG: szablon gabinetu „pacjent poniżej 5 r.ż.”"
+  },
+  {
+   "id": "SZAB-BAD-DZIECKO-SKR",
+   "dotyczy": "BAD-DZIECKO",
+   "wariant": "skrocony",
+   "tekst": "Dziecko {{POLE-DZ-WIEK}} l.: dmft {{POLE-UZ-DMFT}}, ryzyko próchnicy {{POLE-UZ-RYZYKO}}; zalecenia przekazano opiekunowi: {{POLE-DZ-OPIEKUN}}.",
+   "pola": [
+    "POLE-DZ-WIEK",
+    "POLE-UZ-DMFT",
+    "POLE-UZ-RYZYKO",
+    "POLE-DZ-OPIEKUN"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-DZIECKO-ROZ",
+   "dotyczy": "BAD-DZIECKO",
+   "wariant": "rozszerzony",
+   "tekst": "BADANIE DZIECKA ({{POLE-DZ-WIEK}} l.): uzębienie {{POLE-UZ-TYP}}: {{POLE-UZ-DIAGRAM}}; dmft/DMFT {{POLE-UZ-DMFT}}. Rozwój: {{POLE-DZ-ROZWOJ}}. Zgryz: {{POLE-ZG-WADY}}. Nawyki: {{POLE-DZ-NAWYKI}}. Fluorki: {{POLE-DZ-FLUOR}}. Ryzyko próchnicy: {{POLE-UZ-RYZYKO}}. Współpraca: {{POLE-DZ-WSPOLPRACA}}. Zalecenia: {{POLE-ZALECENIA}} – przekazano opiekunowi: {{POLE-DZ-OPIEKUN}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-DZ-WIEK",
+    "POLE-UZ-TYP",
+    "POLE-UZ-DIAGRAM",
+    "POLE-UZ-DMFT",
+    "POLE-DZ-ROZWOJ",
+    "POLE-ZG-WADY",
+    "POLE-DZ-NAWYKI",
+    "POLE-DZ-FLUOR",
+    "POLE-UZ-RYZYKO",
+    "POLE-DZ-WSPOLPRACA",
+    "POLE-ZALECENIA",
+    "POLE-DZ-OPIEKUN",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-STOMATOLOGICZNE-STD",
+   "dotyczy": "BAD-STOMATOLOGICZNE",
+   "wariant": "standardowy",
+   "tekst": "BADANIE LEKARSKIE STOMATOLOGICZNE. {{POLE-PRZEBIEG}} Instruktaż higieny jamy ustnej: {{POLE-HG-INSTRUKTAZ}}. Plan leczenia: {{POLE-DECYZJA}}.",
+   "pola": [
+    "POLE-PRZEBIEG",
+    "POLE-HG-INSTRUKTAZ",
+    "POLE-DECYZJA"
+   ],
+   "uwagi": "{{POLE-PRZEBIEG}} = złożone opisy badań składowych (standardowe)",
+   "tekst_aplikacji": "EXAM_A + EXAM_B (ST33)"
+  },
+  {
+   "id": "SZAB-BAD-STOMATOLOGICZNE-SKR",
+   "dotyczy": "BAD-STOMATOLOGICZNE",
+   "wariant": "skrocony",
+   "tekst": "Badanie stomatologiczne: {{POLE-PRZEBIEG}} Instruktaż: {{POLE-HG-INSTRUKTAZ}}.",
+   "pola": [
+    "POLE-PRZEBIEG",
+    "POLE-HG-INSTRUKTAZ"
+   ],
+   "uwagi": "badania składowe w wariancie skróconym"
+  },
+  {
+   "id": "SZAB-BAD-STOMATOLOGICZNE-ROZ",
+   "dotyczy": "BAD-STOMATOLOGICZNE",
+   "wariant": "rozszerzony",
+   "tekst": "BADANIE LEKARSKIE STOMATOLOGICZNE. {{POLE-PRZEBIEG}} RTG: {{POLE-RTG}}. Instruktaż higieny: {{POLE-HG-INSTRUKTAZ}} – {{POLE-HG-INSTR-OPIS}}. Plan leczenia: {{POLE-DECYZJA}}. Zalecenia: {{POLE-ZALECENIA}}. Kolejna wizyta: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-PRZEBIEG",
+    "POLE-RTG",
+    "POLE-HG-INSTRUKTAZ",
+    "POLE-HG-INSTR-OPIS",
+    "POLE-DECYZJA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ],
+   "uwagi": "badania składowe w wariancie rozszerzonym"
+  },
+  {
+   "id": "SZAB-BAD-KONTROLNE-STD",
+   "dotyczy": "BAD-KONTROLNE",
+   "wariant": "standardowy",
+   "tekst": "BADANIE KONTROLNE: Zmiany od ostatniej wizyty: {{POLE-KO-ZMIANY}}. Ocena: {{POLE-KO-OCENA}}. Plan: {{POLE-DECYZJA}}.",
+   "pola": [
+    "POLE-KO-ZMIANY",
+    "POLE-KO-OCENA",
+    "POLE-DECYZJA"
+   ],
+   "tekst_aplikacji": "D.ST34"
+  },
+  {
+   "id": "SZAB-BAD-KONTROLNE-SKR",
+   "dotyczy": "BAD-KONTROLNE",
+   "wariant": "skrocony",
+   "tekst": "Kontrola: {{POLE-KO-OCENA}}.",
+   "pola": [
+    "POLE-KO-OCENA"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-KONTROLNE-ROZ",
+   "dotyczy": "BAD-KONTROLNE",
+   "wariant": "rozszerzony",
+   "tekst": "BADANIE KONTROLNE: Zmiany od ostatniej wizyty: {{POLE-KO-ZMIANY}}. Uzębienie: {{POLE-UZ-DIAGRAM}}. Przyzębie: {{POLE-PZ-ROZPOZNANIE}}. Higiena: {{POLE-HG-OCENA}}. Ocena: {{POLE-KO-OCENA}}. Plan: {{POLE-DECYZJA}}. Kolejna kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-KO-ZMIANY",
+    "POLE-UZ-DIAGRAM",
+    "POLE-PZ-ROZPOZNANIE",
+    "POLE-HG-OCENA",
+    "POLE-KO-OCENA",
+    "POLE-DECYZJA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-PRZED-LECZENIEM-STD",
+   "dotyczy": "BAD-PRZED-LECZENIEM",
+   "wariant": "standardowy",
+   "tekst": "KWALIFIKACJA: planowany zabieg: {{POLE-PL-ZABIEG}}. Czynniki ryzyka: {{POLE-PL-RYZYKA}}. Omówiono alternatywy i ryzyka: {{POLE-PL-ALTERNATYWY}}. Zgoda pacjenta: {{POLE-ZGODA}}.",
+   "pola": [
+    "POLE-PL-ZABIEG",
+    "POLE-PL-RYZYKA",
+    "POLE-PL-ALTERNATYWY",
+    "POLE-ZGODA"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-PRZED-LECZENIEM-SKR",
+   "dotyczy": "BAD-PRZED-LECZENIEM",
+   "wariant": "skrocony",
+   "tekst": "Kwalifikacja do {{POLE-PL-ZABIEG}}: ryzyka {{POLE-PL-RYZYKA}}; zgoda {{POLE-ZGODA}}.",
+   "pola": [
+    "POLE-PL-ZABIEG",
+    "POLE-PL-RYZYKA",
+    "POLE-ZGODA"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-PRZED-LECZENIEM-ROZ",
+   "dotyczy": "BAD-PRZED-LECZENIEM",
+   "wariant": "rozszerzony",
+   "tekst": "KWALIFIKACJA DO LECZENIA: planowany zabieg: {{POLE-PL-ZABIEG}}. Wskazanie: {{POLE-WSKAZANIE}}. Czynniki ryzyka: {{POLE-PL-RYZYKA}}. Badania dodatkowe: {{POLE-PL-BADANIA}}. Alternatywy i ryzyka: {{POLE-PL-ALTERNATYWY}}. Zgoda pacjenta: {{POLE-ZGODA}}. Decyzja: {{POLE-DECYZJA}}.",
+   "pola": [
+    "POLE-PL-ZABIEG",
+    "POLE-WSKAZANIE",
+    "POLE-PL-RYZYKA",
+    "POLE-PL-BADANIA",
+    "POLE-PL-ALTERNATYWY",
+    "POLE-ZGODA",
+    "POLE-DECYZJA"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-PO-LECZENIU-STD",
+   "dotyczy": "BAD-PO-LECZENIU",
+   "wariant": "standardowy",
+   "tekst": "KONTROLA PO LECZENIU: {{POLE-PO-LECZENIE}}. Ocena: {{POLE-PO-OCENA}}. Wynik: {{POLE-PO-WYNIK}}.",
+   "pola": [
+    "POLE-PO-LECZENIE",
+    "POLE-PO-OCENA",
+    "POLE-PO-WYNIK"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-PO-LECZENIU-SKR",
+   "dotyczy": "BAD-PO-LECZENIU",
+   "wariant": "skrocony",
+   "tekst": "Po leczeniu {{POLE-PO-LECZENIE}}: {{POLE-PO-WYNIK}}.",
+   "pola": [
+    "POLE-PO-LECZENIE",
+    "POLE-PO-WYNIK"
+   ]
+  },
+  {
+   "id": "SZAB-BAD-PO-LECZENIU-ROZ",
+   "dotyczy": "BAD-PO-LECZENIU",
+   "wariant": "rozszerzony",
+   "tekst": "KONTROLA PO LECZENIU: {{POLE-PO-LECZENIE}}. Dolegliwości: {{POLE-KO-ZMIANY}}. Ocena kliniczna i RTG: {{POLE-PO-OCENA}}. RTG: {{POLE-RTG}}. Wynik: {{POLE-PO-WYNIK}}. Plan: {{POLE-DECYZJA}}.",
+   "pola": [
+    "POLE-PO-LECZENIE",
+    "POLE-KO-ZMIANY",
+    "POLE-PO-OCENA",
+    "POLE-RTG",
+    "POLE-PO-WYNIK",
+    "POLE-DECYZJA"
+   ]
+  }
+ ]
 }

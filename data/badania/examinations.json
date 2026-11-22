@@ -1,4 +1,2622 @@
 {
- "opis": "Katalog A – badania stomatologiczne.",
- "badania": []
+ "opis": "Katalog A – badania stomatologiczne (status draft – do weryfikacji Patryka). Wyniki prawidłowe są przykładami opisu; aplikacja nigdy nie zaznacza ich za lekarza.",
+ "badania": [
+  {
+   "id": "BAD-WYWIAD",
+   "nazwa": "Badanie podmiotowe (wywiad lekarski stomatologiczny)",
+   "nazwa_krotka": "Wywiad",
+   "kategoria": "podmiotowe",
+   "cel": {
+    "oceniane": "Stan zdrowia ogólnego i jamy ustnej z perspektywy pacjenta, czynniki ryzyka i przeciwwskazania do leczenia.",
+    "informacje": [
+     "powód zgłoszenia i dolegliwości",
+     "choroby ogólne, leki, alergie",
+     "ciąża / karmienie",
+     "używki i parafunkcje",
+     "przebieg wcześniejszego leczenia stomatologicznego",
+     "nawyki higieniczne i dietetyczne"
+    ],
+    "wykrywa": [
+     "przeciwwskazania lub ograniczenia do zabiegów (np. leczenie przeciwkrzepliwe, leki antyresorpcyjne, radioterapia)",
+     "ryzyko powikłań po znieczuleniu",
+     "czynniki ryzyka próchnicy i chorób przyzębia",
+     "objawy sugerujące choroby ogólne"
+    ]
+   },
+   "wskazania": {
+    "kiedy": [
+     "pierwsza wizyta",
+     "każda wizyta – aktualizacja (leki, choroby, ciąża)",
+     "przed każdym zabiegiem chirurgicznym i znieczuleniem"
+    ],
+    "szczegolnie": [
+     "pacjenci z chorobami przewlekłymi i wielolekowością",
+     "kobiety w ciąży",
+     "dzieci (wywiad od opiekuna)"
+    ],
+    "charakter": [
+     "rutynowe"
+    ]
+   },
+   "przebieg": [
+    {
+     "krok": "Powód zgłoszenia",
+     "opis": "Zapytaj o powód wizyty i dolegliwości; zanotuj słowami pacjenta."
+    },
+    {
+     "krok": "Wywiad w kierunku dolegliwości",
+     "opis": "Lokalizacja, charakter bólu (samoistny / prowokowany), czas trwania, czynniki nasilające i łagodzące, ból nocny, obrzęk, gorączka."
+    },
+    {
+     "krok": "Wywiad ogólnomedyczny",
+     "opis": "Choroby przewlekłe, hospitalizacje, leki (szczególnie przeciwkrzepliwe, antyagregacyjne, antyresorpcyjne, sterydy), alergie, ciąża / karmienie; u dzieci – od opiekuna."
+    },
+    {
+     "krok": "Wywiad stomatologiczny",
+     "opis": "Dotychczasowe leczenie, reakcje na znieczulenie, powikłania po ekstrakcjach, ostatnia wizyta kontrolna, ortodoncja, protezy."
+    },
+    {
+     "krok": "Czynniki ryzyka",
+     "opis": "Higiena, dieta (częstość cukrów), fluorki, palenie, parafunkcje, suchość w jamie ustnej."
+    },
+    {
+     "krok": "Potwierdzenie i podpis",
+     "opis": "Odczytaj kluczowe informacje pacjentowi; przy ankiecie pisemnej – zweryfikuj ją ustnie."
+    }
+   ],
+   "elementy_oceny": [
+    {
+     "element": "powód zgłoszenia",
+     "co": "dolegliwość główna",
+     "pole": "POLE-WYW-POWOD"
+    },
+    {
+     "element": "choroby ogólne",
+     "co": "choroby wpływające na leczenie",
+     "pole": "POLE-WYW-CHOROBY"
+    },
+    {
+     "element": "leki",
+     "co": "leki modyfikujące krzepnięcie, gojenie i metabolizm kości",
+     "pole": "POLE-WYW-LEKI"
+    },
+    {
+     "element": "alergie",
+     "co": "reakcje uczuleniowe",
+     "pole": "POLE-WYW-ALERGIE"
+    },
+    {
+     "element": "ciąża",
+     "co": "ciąża / karmienie",
+     "pole": "POLE-WYW-CIAZA"
+    },
+    {
+     "element": "używki",
+     "co": "palenie, alkohol",
+     "pole": "POLE-WYW-NALOGI"
+    },
+    {
+     "element": "parafunkcje",
+     "co": "bruksizm i nawyki",
+     "pole": "POLE-WYW-PARAFUNKCJE"
+    }
+   ],
+   "wynik_prawidlowy": "Pacjent bez dolegliwości, zgłasza się na wizytę kontrolną. Wg pacjenta nie choruje przewlekle, nie przyjmuje leków na stałe, alergii nie zgłasza. Nie pali tytoniu. Zęby szczotkuje 2× dziennie pastą z fluorem. (Przykład – wpisują się wyłącznie informacje podane przez pacjenta.)",
+   "nieprawidlowosci": [
+    "ból samoistny, nocny lub pulsujący",
+    "przyjmowanie leków przeciwkrzepliwych (np. acenokumarol, rywaroksaban, apiksaban, dabigatran)",
+    "leki antyresorpcyjne (bisfosfoniany, denosumab) – ryzyko martwicy kości szczęk",
+    "radioterapia okolicy głowy i szyi",
+    "alergia na środki znieczulające lub lateks",
+    "ciąża",
+    "niekontrolowana cukrzyca",
+    "palenie tytoniu"
+   ],
+   "dokumentacja": {
+    "niezbedne": [
+     {
+      "tekst": "Wywiad: choroby, leki, alergie – informacje podane przez pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Data i oznaczenie lekarza",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ],
+    "zalecane": [
+     {
+      "tekst": "Wywiad stomatologiczny i czynniki ryzyka (higiena, dieta, palenie)",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ],
+    "sytuacyjne": [
+     {
+      "tekst": "Uzgodnienie z lekarzem prowadzącym (np. modyfikacja leczenia przeciwkrzepliwego) – tylko przez lekarza prowadzącego",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ],
+      "warunek": "leki przeciwkrzepliwe przed zabiegiem chirurgicznym"
+     },
+     {
+      "tekst": "Tydzień ciąży",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ],
+      "warunek": "ciąża"
+     }
+    ]
+   },
+   "powiazania": {
+    "icd9": [],
+    "icd10": [],
+    "uwaga": "Wywiad jest częścią każdego badania (23.0101, 23.0102, 23.0105, 23.0107) – nie jest osobnym świadczeniem ICD-9."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA",
+    "SRC-DU-2026-1391"
+   ],
+   "status": "draft"
+  },
+  {
+   "id": "BAD-ZEWNATRZUSTNE",
+   "nazwa": "Badanie przedmiotowe zewnątrzustne",
+   "nazwa_krotka": "Zewnątrzustne",
+   "kategoria": "przedmiotowe",
+   "cel": {
+    "oceniane": "Twarz, skóra, wargi, węzły chłonne, stawy skroniowo-żuchwowe i mięśnie żucia.",
+    "informacje": [
+     "symetria i obrzęki",
+     "zmiany skórne i na czerwieni wargowej",
+     "stan węzłów chłonnych",
+     "przesiewowo – SSŻ i mięśnie"
+    ],
+    "wykrywa": [
+     "obrzęki zapalne (zębopochodne)",
+     "powiększone węzły chłonne (zapalne, nowotworowe)",
+     "zmiany skórne i czerwieni wargowej (opryszczka, zajady, zmiany przedrakowe)",
+     "objawy dysfunkcji SSŻ"
+    ]
+   },
+   "wskazania": {
+    "kiedy": [
+     "badanie pierwszorazowe (23.0101)",
+     "obrzęk, ból, uraz"
+    ],
+    "szczegolnie": [
+     "podejrzenie zakażenia zębopochodnego",
+     "palacze – czujność onkologiczna"
+    ],
+    "charakter": [
+     "rutynowe",
+     "diagnostyczne"
+    ]
+   },
+   "przebieg": [
+    {
+     "krok": "Oglądanie",
+     "opis": "Oceń symetrię twarzy z przodu i z boku, zabarwienie skóry, obrzęki, przetoki skórne, czerwień wargową i kąciki ust."
+    },
+    {
+     "krok": "Palpacja węzłów chłonnych",
+     "opis": "Obustronnie, przy lekko pochylonej głowie: podbródkowe, podżuchwowe, szyjne; oceń wielkość, bolesność, spoistość, przesuwalność."
+    },
+    {
+     "krok": "Przesiewowa ocena SSŻ i mięśni",
+     "opis": "Palpacja okolicy stawów przy otwieraniu/zamykaniu, osłuchanie trzasków, palpacja mięśni żwaczy i skroniowych; przy objawach – osobne badanie SSŻ."
+    }
+   ],
+   "elementy_oceny": [
+    {
+     "element": "twarz",
+     "co": "symetria, obrzęki",
+     "pole": "POLE-ZEW-TWARZ"
+    },
+    {
+     "element": "skóra",
+     "co": "zmiany, przetoki",
+     "pole": "POLE-ZEW-SKORA"
+    },
+    {
+     "element": "wargi",
+     "co": "czerwień, kąciki",
+     "pole": "POLE-ZEW-WARGI"
+    },
+    {
+     "element": "węzły chłonne",
+     "co": "wielkość, bolesność, ruchomość",
+     "pole": "POLE-ZEW-WEZLY"
+    },
+    {
+     "element": "SSŻ",
+     "co": "przesiewowo",
+     "pole": "POLE-ZEW-SSZ"
+    },
+    {
+     "element": "mięśnie żucia",
+     "co": "bolesność",
+     "pole": "POLE-ZEW-MIESNIE"
+    }
+   ],
+   "wynik_prawidlowy": "Twarz symetryczna, bez obrzęków. Skóra twarzy i czerwień wargowa bez zmian chorobowych. Węzły chłonne podżuchwowe i szyjne niewyczuwalne. Stawy skroniowo-żuchwowe i mięśnie żucia bez objawów w badaniu przesiewowym. (Przykład wyniku – wpisywany tylko po stwierdzeniu przez lekarza.)",
+   "nieprawidlowosci": [
+    "obrzęk okolicy podżuchwowej / policzka",
+    "przetoka skórna",
+    "powiększony, bolesny węzeł chłonny podżuchwowy",
+    "twardy, nieprzesuwalny węzeł – wskazanie do dalszej diagnostyki",
+    "zmiana na czerwieni wargowej (np. rogowacenie, owrzodzenie)",
+    "trzaski w SSŻ, bolesność mięśni"
+   ],
+   "dokumentacja": {
+    "niezbedne": [
+     {
+      "tekst": "Data i oznaczenie lekarza",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Opis wykonanego badania i stwierdzonych odchyleń (lub informacja lekarza o braku odchyleń w badanych strukturach)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ],
+    "zalecane": [
+     {
+      "tekst": "Opis każdej oglądanej struktury (także bez odchyleń)",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ],
+    "sytuacyjne": [
+     {
+      "tekst": "Wielkość, bolesność i przesuwalność powiększonego węzła chłonnego; skierowanie",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ],
+      "warunek": "powiększony węzeł chłonny"
+     }
+    ]
+   },
+   "powiazania": {
+    "icd9": [
+     {
+      "kod": "23.0101",
+      "kiedy": "element badania lekarskiego stomatologicznego"
+     }
+    ],
+    "icd10": [],
+    "uwaga": "Samo badanie nie uzasadnia rozpoznania."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA",
+    "SRC-DU-2026-1391"
+   ],
+   "status": "draft"
+  },
+  {
+   "id": "BAD-WEWNATRZUSTNE",
+   "nazwa": "Badanie przedmiotowe wewnątrzustne (tkanki miękkie)",
+   "nazwa_krotka": "Wewnątrzustne",
+   "kategoria": "przedmiotowe",
+   "cel": {
+    "oceniane": "Błona śluzowa przedsionka, policzków, języka, dna jamy ustnej, podniebienia, cieśni gardła; ślinianki i wędzidełka.",
+    "informacje": [
+     "stan błony śluzowej",
+     "wydzielanie śliny",
+     "przyczepy wędzidełek"
+    ],
+    "wykrywa": [
+     "zmiany błony śluzowej (zapalne, urazowe, potencjalnie złośliwe)",
+     "suchość jamy ustnej",
+     "nieprawidłowe przyczepy wędzidełek",
+     "przetoki dziąsłowe"
+    ]
+   },
+   "wskazania": {
+    "kiedy": [
+     "każde badanie pierwszorazowe i kontrolne",
+     "dolegliwości ze strony błony śluzowej"
+    ],
+    "szczegolnie": [
+     "palacze, alkohol – czujność onkologiczna",
+     "protezy ruchome"
+    ],
+    "charakter": [
+     "rutynowe",
+     "diagnostyczne"
+    ]
+   },
+   "przebieg": [
+    {
+     "krok": "Systematyczne oglądanie",
+     "opis": "Przy dobrym oświetleniu, z lusterkiem: wargi i przedsionek, policzki, język (grzbiet, brzegi, spód – z wysunięciem języka), dno jamy ustnej, podniebienie, cieśń gardła."
+    },
+    {
+     "krok": "Palpacja",
+     "opis": "Palpacja dwuręczna dna jamy ustnej i policzków; ocena konsystencji zmian."
+    },
+    {
+     "krok": "Ślinianki i wędzidełka",
+     "opis": "Ocena wypływu śliny z ujść, wilgotności błony śluzowej; przyczepy wędzidełek (test napięcia wargi)."
+    },
+    {
+     "krok": "Zmiana na błonie śluzowej",
+     "opis": "Przy stwierdzeniu zmiany – opis szczegółowy wg badania „Ocena zmiany na błonie śluzowej”."
+    }
+   ],
+   "elementy_oceny": [
+    {
+     "element": "przedsionek, wargi, policzki",
+     "co": "barwa, ciągłość, zmiany",
+     "pole": "POLE-WEW-PRZEDSIONEK"
+    },
+    {
+     "element": "język",
+     "co": "brzegi i spód – miejsca predylekcji raka",
+     "pole": "POLE-WEW-JEZYK"
+    },
+    {
+     "element": "dno jamy ustnej",
+     "co": "zmiany, konsystencja",
+     "pole": "POLE-WEW-DNO"
+    },
+    {
+     "element": "podniebienie",
+     "co": "zmiany, ubytki",
+     "pole": "POLE-WEW-PODNIEBIENIE"
+    },
+    {
+     "element": "gardło",
+     "co": "migdałki",
+     "pole": "POLE-WEW-GARDLO"
+    },
+    {
+     "element": "ślinianki",
+     "co": "wypływ śliny, suchość",
+     "pole": "POLE-WEW-SLINIANKI"
+    },
+    {
+     "element": "wędzidełka",
+     "co": "przyczep",
+     "pole": "POLE-WEW-WEDZIDELKA"
+    }
+   ],
+   "wynik_prawidlowy": "Błona śluzowa przedsionka, policzków, języka, dna jamy ustnej i podniebienia różowa, wilgotna, bez zmian chorobowych. Ujścia ślinianek bez zmian, ślina przejrzysta. Wędzidełka bez zaburzeń przyczepu. (Przykład – tylko po stwierdzeniu przez lekarza.)",
+   "nieprawidlowosci": [
+    "biała lub czerwona plama niedająca się zetrzeć (leukoplakia / erytroplakia – wymaga dalszej diagnostyki)",
+    "owrzodzenie utrzymujące się > 2 tygodnie",
+    "nadżerki, pęcherze",
+    "odleżyna protetyczna",
+    "suchość jamy ustnej",
+    "wysoki przyczep wędzidełka wargi"
+   ],
+   "dokumentacja": {
+    "niezbedne": [
+     {
+      "tekst": "Data i oznaczenie lekarza",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Opis wykonanego badania i stwierdzonych odchyleń (lub informacja lekarza o braku odchyleń w badanych strukturach)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ],
+    "zalecane": [
+     {
+      "tekst": "Opis każdej zmiany: lokalizacja, wielkość, barwa, powierzchnia, konsystencja, bolesność",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-OPMD-2021"
+      ]
+     }
+    ],
+    "sytuacyjne": [
+     {
+      "tekst": "Skierowanie (chirurgia stomatologiczna, periodontologia, onkologia) i termin kontroli zmiany",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-OPMD-2021"
+      ],
+      "warunek": "zmiana podejrzana lub utrzymująca się > 2 tygodnie"
+     }
+    ]
+   },
+   "powiazania": {
+    "icd9": [
+     {
+      "kod": "23.0101",
+      "kiedy": "element badania lekarskiego stomatologicznego"
+     }
+    ],
+    "icd10": [
+     {
+      "kod": "K13.2",
+      "kiedy": "tylko gdy lekarz rozpozna leukoplakię / zmiany nabłonka"
+     },
+     {
+      "kod": "K12.0",
+      "kiedy": "nawracające afty – rozpoznanie lekarza"
+     }
+    ],
+    "uwaga": "Rozpoznanie wyłącznie przy stwierdzonej zmianie."
+   },
+   "zrodla": [
+    "SRC-KLIN-OPMD-2021",
+    "SRC-PRAKTYKA",
+    "SRC-DU-2026-1391"
+   ],
+   "status": "draft"
+  },
+  {
+   "id": "BAD-BLONA",
+   "nazwa": "Ocena zmiany na błonie śluzowej jamy ustnej",
+   "nazwa_krotka": "Błona śluzowa – zmiana",
+   "kategoria": "specjalistyczne",
+   "cel": {
+    "oceniane": "Opis morfologiczny stwierdzonej zmiany i ocena jej charakteru.",
+    "informacje": [
+     "morfologia wykwitu",
+     "czas trwania i czynnik miejscowy",
+     "cechy niepokojące"
+    ],
+    "wykrywa": [
+     "zmiany potencjalnie złośliwe (leukoplakia, erytroplakia, liszaj płaski)",
+     "zmiany urazowe i protetyczne",
+     "zmiany zapalne i infekcyjne (kandydoza, opryszczka, afty)"
+    ]
+   },
+   "wskazania": {
+    "kiedy": [
+     "stwierdzenie zmiany w badaniu wewnątrzustnym",
+     "dolegliwości ze strony błony śluzowej"
+    ],
+    "szczegolnie": [
+     "zmiana > 2 tygodnie mimo usunięcia czynnika",
+     "palacze, alkohol, HPV",
+     "twardy naciek, owrzodzenie bez bólu"
+    ],
+    "charakter": [
+     "diagnostyczne"
+    ]
+   },
+   "przebieg": [
+    {
+     "krok": "Wywiad dotyczący zmiany",
+     "opis": "Czas trwania, nawroty, ból, czynniki (proteza, urazy, leki, palenie)."
+    },
+    {
+     "krok": "Opis morfologiczny",
+     "opis": "Lokalizacja, wielkość (mm), rodzaj wykwitu, barwa, powierzchnia, granice; próba starcia nalotu."
+    },
+    {
+     "krok": "Palpacja",
+     "opis": "Konsystencja, naciek podstawy, bolesność; węzły chłonne regionalne."
+    },
+    {
+     "krok": "Dokumentacja fotograficzna",
+     "opis": "Zdjęcie zmiany (jeśli możliwe) – na urządzeniu; zdjęcia nie trafiają na serwer (zasada nr 1)."
+    },
+    {
+     "krok": "Decyzja",
+     "opis": "Usunięcie czynnika miejscowego i kontrola za ok. 2 tygodnie albo skierowanie; przy cechach niepokojących – bez zwłoki."
+    }
+   ],
+   "elementy_oceny": [
+    {
+     "element": "lokalizacja i wielkość",
+     "co": "miejsce, mm",
+     "pole": "POLE-BL-LOK"
+    },
+    {
+     "element": "wykwit",
+     "co": "rodzaj",
+     "pole": "POLE-BL-WYKWIT"
+    },
+    {
+     "element": "powierzchnia",
+     "co": "gładka / nierówna, ścieralność nalotu",
+     "pole": "POLE-BL-POW"
+    },
+    {
+     "element": "konsystencja",
+     "co": "naciek",
+     "pole": "POLE-BL-KONS"
+    },
+    {
+     "element": "bolesność",
+     "co": "ból",
+     "pole": "POLE-BL-BOL"
+    },
+    {
+     "element": "czas trwania",
+     "co": "tygodnie",
+     "pole": "POLE-BL-CZAS"
+    }
+   ],
+   "wynik_prawidlowy": "Nie dotyczy – badanie wykonuje się przy stwierdzonej zmianie.",
+   "nieprawidlowosci": [
+    "plama biała niedająca się zetrzeć, niezwiązana z czynnikiem miejscowym",
+    "plama czerwona o aksamitnej powierzchni",
+    "owrzodzenie z twardym naciekiem podstawy",
+    "zmiana utrzymująca się > 2 tygodnie po usunięciu czynnika"
+   ],
+   "dokumentacja": {
+    "niezbedne": [
+     {
+      "tekst": "Data i oznaczenie lekarza",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Opis wykonanego badania i stwierdzonych odchyleń (lub informacja lekarza o braku odchyleń w badanych strukturach)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ],
+    "zalecane": [
+     {
+      "tekst": "Pełny opis morfologiczny zmiany i decyzja",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-OPMD-2021"
+      ]
+     }
+    ],
+    "sytuacyjne": [
+     {
+      "tekst": "Skierowanie i termin kontroli",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-OPMD-2021"
+      ],
+      "warunek": "zmiana niepokojąca"
+     }
+    ]
+   },
+   "powiazania": {
+    "icd9": [
+     {
+      "kod": "23.1605",
+      "kiedy": "gdy po ocenie wykonano leczenie zmian na błonie śluzowej"
+     }
+    ],
+    "icd10": [
+     {
+      "kod": "K13.2",
+      "kiedy": "leukoplakia i inne zaburzenia nabłonka – rozpoznanie lekarza"
+     },
+     {
+      "kod": "K12.0",
+      "kiedy": "afty nawracające"
+     },
+     {
+      "kod": "K12.1",
+      "kiedy": "inne postacie zapalenia jamy ustnej"
+     },
+     {
+      "kod": "K13.0",
+      "kiedy": "choroby warg"
+     },
+     {
+      "kod": "K14.0",
+      "kiedy": "zapalenie języka"
+     }
+    ],
+    "reguly_nfz": [],
+    "uwaga": "Rozpoznanie histopatologiczne zmian podejrzanych – poza gabinetem; w aplikacji tylko opis i decyzja."
+   },
+   "zrodla": [
+    "SRC-KLIN-OPMD-2021",
+    "SRC-PRAKTYKA",
+    "SRC-DU-2026-1391"
+   ],
+   "status": "draft"
+  },
+  {
+   "id": "BAD-UZEBIENIE",
+   "nazwa": "Badanie uzębienia (stan zębów stałych i mlecznych)",
+   "nazwa_krotka": "Uzębienie",
+   "kategoria": "przedmiotowe",
+   "cel": {
+    "oceniane": "Każdy ząb: obecność, próchnica (aktywność, głębokość), wypełnienia i ich szczelność, uzupełnienia protetyczne, leczenie kanałowe, zmiany niepróchnicowe.",
+    "informacje": [
+     "diagram zębów",
+     "wskaźnik DMFT/dmft",
+     "ryzyko próchnicy"
+    ],
+    "wykrywa": [
+     "próchnica pierwotna i wtórna",
+     "nieszczelne wypełnienia",
+     "zmiany niepróchnicowe (erozje, abfrakcje, starcie, MIH)",
+     "braki zębowe",
+     "zęby wymagające diagnostyki endodontycznej"
+    ]
+   },
+   "wskazania": {
+    "kiedy": [
+     "badanie pierwszorazowe i kontrolne",
+     "przed planem leczenia"
+    ],
+    "szczegolnie": [
+     "wysokie ryzyko próchnicy",
+     "dzieci w okresie uzębienia mieszanego"
+    ],
+    "charakter": [
+     "rutynowe",
+     "kontrolne"
+    ]
+   },
+   "przebieg": [
+    {
+     "krok": "Przygotowanie",
+     "opis": "Usunięcie płytki z powierzchni (jeśli konieczne), osuszenie zębów, dobre oświetlenie, lusterko, zgłębnik z kulką (WHO) – bez nacisku na zdemineralizowane szkliwo."
+    },
+    {
+     "krok": "Ocena systematyczna",
+     "opis": "Ząb po zębie w ustalonej kolejności (od 18 do 48 / od 55 do 85); powierzchnie żujące, styczne, gładkie."
+    },
+    {
+     "krok": "Klasyfikacja zmian",
+     "opis": "Próchnica wg ICDAS (kod 0–6) lub opisowo; aktywność zmian; wypełnienia (szczelność, próchnica wtórna)."
+    },
+    {
+     "krok": "Uzupełnienie diagnostyki",
+     "opis": "Przy podejrzeniu zmian stycznych lub głębokich – RTG zgryzowo-skrzydłowe; przy objawach miazgowych – testy żywotności."
+    },
+    {
+     "krok": "Ocena ryzyka i plan",
+     "opis": "Ocena ryzyka próchnicy (dieta, higiena, fluorki, ślina, aktywne zmiany) i propozycja planu leczenia."
+    }
+   ],
+   "elementy_oceny": [
+    {
+     "element": "diagram",
+     "co": "stan każdego zęba",
+     "pole": "POLE-UZ-DIAGRAM"
+    },
+    {
+     "element": "próchnica",
+     "co": "kryteria ICDAS / opisowe",
+     "pole": "POLE-UZ-SYSTEM"
+    },
+    {
+     "element": "DMFT",
+     "co": "liczba zębów D/M/F",
+     "pole": "POLE-UZ-DMFT"
+    },
+    {
+     "element": "zmiany niepróchnicowe",
+     "co": "starcie, erozje, MIH",
+     "pole": "POLE-UZ-NIEPROCH"
+    },
+    {
+     "element": "ryzyko próchnicy",
+     "co": "ocena lekarza",
+     "pole": "POLE-UZ-RYZYKO"
+    }
+   ],
+   "wynik_prawidlowy": "Uzębienie stałe pełne, bez ognisk próchnicy i zmian niepróchnicowych; wypełnienia szczelne. DMFT = 0. (Przykład – wpisuje lekarz.)",
+   "nieprawidlowosci": [
+    "próchnica w obrębie szkliwa (ICDAS 1–2) – leczenie nieinwazyjne",
+    "ubytek próchnicowy w zębinie (ICDAS 5–6)",
+    "próchnica wtórna przy wypełnieniu",
+    "MIH pierwszych trzonowców",
+    "starcie patologiczne (bruksizm)",
+    "erozje (dieta, refluks)"
+   ],
+   "dokumentacja": {
+    "niezbedne": [
+     {
+      "tekst": "Data i oznaczenie lekarza",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Opis wykonanego badania i stwierdzonych odchyleń (lub informacja lekarza o braku odchyleń w badanych strukturach)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Stan uzębienia (diagram) z oznaczeniem zębów wg FDI",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-NFZ-KOM-6113"
+      ],
+      "warunek": "rozliczenie NFZ – lokalizacja zębów"
+     }
+    ],
+    "zalecane": [
+     {
+      "tekst": "Kryteria oceny próchnicy i aktywność zmian",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-ICDAS-2007"
+      ]
+     },
+     {
+      "tekst": "Ocena ryzyka próchnicy i plan profilaktyki",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-EAPD-F-2019"
+      ]
+     }
+    ],
+    "sytuacyjne": [
+     {
+      "tekst": "Zlecenie RTG z uzasadnieniem",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ],
+      "warunek": "podejrzenie zmian niewidocznych klinicznie"
+     }
+    ]
+   },
+   "powiazania": {
+    "icd9": [
+     {
+      "kod": "23.0101",
+      "kiedy": "w ramach badania lekarskiego"
+     },
+     {
+      "kod": "23.0102",
+      "kiedy": "w ramach badania kontrolnego"
+     }
+    ],
+    "icd10": [
+     {
+      "kod": "K02.0",
+      "kiedy": "próchnica ograniczona do szkliwa – rozpoznanie lekarza"
+     },
+     {
+      "kod": "K02.1",
+      "kiedy": "próchnica zębiny"
+     },
+     {
+      "kod": "K03.0",
+      "kiedy": "nadmierne starcie"
+     },
+     {
+      "kod": "K03.2",
+      "kiedy": "erozja"
+     },
+     {
+      "kod": "K00.4",
+      "kiedy": "zaburzenia rozwoju zębów (np. MIH – do weryfikacji kodu)"
+     },
+     {
+      "kod": "K08.1",
+      "kiedy": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)"
+     }
+    ],
+    "uwaga": "Rozpoznanie dotyczy konkretnego zęba i tylko przy stwierdzonej zmianie."
+   },
+   "zrodla": [
+    "SRC-KLIN-ICDAS-2007",
+    "SRC-KLIN-EAPD-F-2019",
+    "SRC-NFZ-KOM-6113",
+    "SRC-DU-2026-1391"
+   ],
+   "status": "draft"
+  },
+  {
+   "id": "BAD-PRZYZEBIE",
+   "nazwa": "Ocena stanu przyzębia",
+   "nazwa_krotka": "Przyzębie",
+   "kategoria": "przedmiotowe",
+   "cel": {
+    "oceniane": "Dziąsło i tkanki przyzębia: krwawienie, kieszonki, utrata przyczepu, recesje, ruchomość, furkacje.",
+    "informacje": [
+     "wynik badania przesiewowego",
+     "BOP %",
+     "PPD i CAL",
+     "stadium i stopień zapalenia przyzębia"
+    ],
+    "wykrywa": [
+     "zapalenie dziąseł",
+     "zapalenie przyzębia i jego zaawansowanie",
+     "recesje dziąsłowe",
+     "zmiany w furkacjach",
+     "ruchomość patologiczną"
+    ]
+   },
+   "wskazania": {
+    "kiedy": [
+     "każde badanie pierwszorazowe (przesiewowo)",
+     "krwawienie dziąseł, ruchomość zębów",
+     "przed leczeniem protetycznym i implantologicznym"
+    ],
+    "szczegolnie": [
+     "cukrzyca, palenie",
+     "BPE 3–4 – pełne badanie periodontologiczne"
+    ],
+    "charakter": [
+     "rutynowe",
+     "diagnostyczne",
+     "kontrolne"
+    ]
+   },
+   "przebieg": [
+    {
+     "krok": "Badanie przesiewowe",
+     "opis": "Sonda WHO/BPE, 6 sekstantów, najwyższy wynik w sekstancie (0–4, * przy furkacji)."
+    },
+    {
+     "krok": "Pełne badanie (przy BPE 3–4 lub objawach)",
+     "opis": "Sonda periodontologiczna, 6 punktów na ząb: PPD, recesja (CAL = PPD + recesja), BOP; ruchomość (Miller), furkacje (Hamp)."
+    },
+    {
+     "krok": "RTG",
+     "opis": "Ocena utraty kości (pantomogram / zdjęcia wewnątrzustne) – wg wskazań."
+    },
+    {
+     "krok": "Klasyfikacja",
+     "opis": "Rozpoznanie wg klasyfikacji 2017: zdrowie / zapalenie dziąseł / zapalenie przyzębia – stadium (I–IV) i stopień (A–C)."
+    }
+   ],
+   "elementy_oceny": [
+    {
+     "element": "BPE/PSR",
+     "co": "sekstanty",
+     "pole": "POLE-PZ-BPE"
+    },
+    {
+     "element": "BOP",
+     "co": "% miejsc",
+     "pole": "POLE-PZ-BOP"
+    },
+    {
+     "element": "PPD",
+     "co": "kieszonki ≥ 4 mm",
+     "pole": "POLE-PZ-PPD"
+    },
+    {
+     "element": "CAL / recesje",
+     "co": "utrata przyczepu",
+     "pole": "POLE-PZ-CAL"
+    },
+    {
+     "element": "ruchomość",
+     "co": "stopień",
+     "pole": "POLE-PZ-RUCH"
+    },
+    {
+     "element": "furkacje",
+     "co": "stopień",
+     "pole": "POLE-PZ-FURK"
+    }
+   ],
+   "wynik_prawidlowy": "BPE 0 we wszystkich sekstantach; BOP < 10%, brak kieszonek > 3 mm, brak utraty przyczepu i ruchomości – przyzębie zdrowe (klasyfikacja 2017). (Przykład – wpisuje lekarz.)",
+   "nieprawidlowosci": [
+    "BOP ≥ 10% bez utraty przyczepu – zapalenie dziąseł",
+    "kieszonki ≥ 4 mm z utratą przyczepu – zapalenie przyzębia (stadium/stopień)",
+    "recesje dziąsłowe",
+    "zajęcie furkacji II–III stopnia",
+    "ruchomość II–III stopnia"
+   ],
+   "dokumentacja": {
+    "niezbedne": [
+     {
+      "tekst": "Data i oznaczenie lekarza",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Opis wykonanego badania i stwierdzonych odchyleń (lub informacja lekarza o braku odchyleń w badanych strukturach)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ],
+    "zalecane": [
+     {
+      "tekst": "Wyniki BPE/PSR lub karta periodontologiczna (PPD, CAL, BOP)",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-EFP-S3-2020"
+      ]
+     },
+     {
+      "tekst": "Rozpoznanie wg klasyfikacji 2017 (stadium, stopień)",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-PERIO-2018"
+      ]
+     }
+    ],
+    "sytuacyjne": [
+     {
+      "tekst": "Plan leczenia periodontologicznego (etapy wg EFP)",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-EFP-S3-2020"
+      ],
+      "warunek": "zapalenie przyzębia"
+     }
+    ]
+   },
+   "powiazania": {
+    "icd9": [
+     {
+      "kod": "23.0101",
+      "kiedy": "w ramach badania lekarskiego"
+     }
+    ],
+    "icd10": [
+     {
+      "kod": "K05.1",
+      "kiedy": "przewlekłe zapalenie dziąseł – rozpoznanie lekarza"
+     },
+     {
+      "kod": "K05.3",
+      "kiedy": "przewlekłe zapalenie przyzębia"
+     },
+     {
+      "kod": "K05.2",
+      "kiedy": "ostre zapalenie przyzębia / ropień przyzębny"
+     },
+     {
+      "kod": "K06.0",
+      "kiedy": "recesja dziąsła"
+     }
+    ],
+    "uwaga": "Odpowiedniość klasyfikacji 2017 ↔ ICD-10 jest przybliżona – wybór kodu należy do lekarza."
+   },
+   "zrodla": [
+    "SRC-KLIN-EFP-S3-2020",
+    "SRC-KLIN-PERIO-2018",
+    "SRC-KLIN-GING-2018",
+    "SRC-KLIN-KLASYF-2018",
+    "SRC-DU-2026-1391"
+   ],
+   "status": "draft"
+  },
+  {
+   "id": "BAD-HIGIENA",
+   "nazwa": "Ocena higieny jamy ustnej (wskaźniki płytki i stanu dziąseł)",
+   "nazwa_krotka": "Higiena",
+   "kategoria": "przedmiotowe",
+   "cel": {
+    "oceniane": "Ilość i rozmieszczenie płytki nazębnej, złogi, stan zapalny dziąseł.",
+    "informacje": [
+     "wskaźnik płytki (API/PCR)",
+     "wskaźnik dziąsłowy",
+     "rodzaj złogów"
+    ],
+    "wykrywa": [
+     "niewystarczającą higienę",
+     "miejsca zaniedbane (powierzchnie styczne)",
+     "zapalenie dziąseł związane z płytką"
+    ]
+   },
+   "wskazania": {
+    "kiedy": [
+     "badanie pierwszorazowe (23.0101 obejmuje instruktaż)",
+     "przed i po higienizacji",
+     "kontrola motywacji"
+    ],
+    "szczegolnie": [
+     "leczenie ortodontyczne",
+     "zapalenie przyzębia",
+     "wysokie ryzyko próchnicy"
+    ],
+    "charakter": [
+     "rutynowe",
+     "kontrolne"
+    ]
+   },
+   "przebieg": [
+    {
+     "krok": "Wybarwienie płytki (opcjonalnie)",
+     "opis": "Płyn / tabletka wybarwiająca; płukanie wodą."
+    },
+    {
+     "krok": "Wskaźnik płytki",
+     "opis": "API: obecność płytki na powierzchniach stycznych (zgłębnik) w kwadrantach; PCR: 4 powierzchnie każdego zęba, wynik w %."
+    },
+    {
+     "krok": "Wskaźnik dziąsłowy",
+     "opis": "GI (0–3) lub krwawienie z brodawek (SBI)."
+    },
+    {
+     "krok": "Instruktaż",
+     "opis": "Pokaż technikę szczotkowania i oczyszczania przestrzeni międzyzębowych dostosowaną do pacjenta; zalecenia dot. fluorków."
+    }
+   ],
+   "elementy_oceny": [
+    {
+     "element": "płytka",
+     "co": "wskaźnik i wartość",
+     "pole": "POLE-HG-WARTOSC"
+    },
+    {
+     "element": "dziąsła",
+     "co": "GI / SBI",
+     "pole": "POLE-HG-GI"
+    },
+    {
+     "element": "złogi",
+     "co": "rodzaj i lokalizacja",
+     "pole": "POLE-HG-ZLOGI"
+    }
+   ],
+   "wynik_prawidlowy": "API 15%, płytka pojedynczo na powierzchniach stycznych, brak kamienia; GI 0 – higiena dobra. (Przykład – wpisuje lekarz.)",
+   "nieprawidlowosci": [
+    "API > 40% – higiena niedostateczna",
+    "kamień naddziąsłowy na powierzchniach językowych siekaczy dolnych",
+    "krwawienie z brodawek",
+    "przebarwienia (palenie, kawa, chlorheksydyna)"
+   ],
+   "dokumentacja": {
+    "niezbedne": [
+     {
+      "tekst": "Data i oznaczenie lekarza",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Instruktaż higieny jamy ustnej – fakt przeprowadzenia (część świadczenia 23.0101)",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-DU-2025-615"
+      ],
+      "warunek": "rozliczenie 23.0101 / ST33"
+     }
+    ],
+    "zalecane": [
+     {
+      "tekst": "Wartość wskaźnika płytki i dziąsłowego",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-PCR-1972",
+       "SRC-KLIN-GI-1963"
+      ]
+     }
+    ],
+    "sytuacyjne": [
+     {
+      "tekst": "Zakres instruktażu dla pacjenta z aparatem / protezą",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ],
+      "warunek": "aparat ortodontyczny, uzupełnienia protetyczne"
+     }
+    ]
+   },
+   "powiazania": {
+    "icd9": [
+     {
+      "kod": "23.08",
+      "kiedy": "instruktaż higieny jako samodzielna czynność"
+     },
+     {
+      "kod": "23.0101",
+      "kiedy": "badanie lekarskie obejmuje instruktaż higieny"
+     }
+    ],
+    "icd10": [
+     {
+      "kod": "K03.6",
+      "kiedy": "złogi nazębne – rozpoznanie lekarza"
+     },
+     {
+      "kod": "K05.1",
+      "kiedy": "przewlekłe zapalenie dziąseł"
+     }
+    ],
+    "reguly_nfz": [
+     "R-BAD-01"
+    ]
+   },
+   "zrodla": [
+    "SRC-KLIN-PCR-1972",
+    "SRC-KLIN-GI-1963",
+    "SRC-KLIN-GING-2018",
+    "SRC-DU-2025-615",
+    "SRC-DU-2026-1391"
+   ],
+   "status": "draft"
+  },
+  {
+   "id": "BAD-ZGRYZ",
+   "nazwa": "Badanie zgryzu i warunków zwarciowych",
+   "nazwa_krotka": "Zgryz",
+   "kategoria": "przedmiotowe",
+   "cel": {
+    "oceniane": "Relacje łuków zębowych w zwarciu i ruchach żuchwy.",
+    "informacje": [
+     "klasa Angle’a",
+     "nagryz pionowy i poziomy",
+     "linia pośrodkowa",
+     "prowadzenie",
+     "wady zgryzu"
+    ],
+    "wykrywa": [
+     "wady zgryzu wymagające konsultacji ortodontycznej",
+     "kontakty przedwczesne",
+     "urazy zgryzowe"
+    ]
+   },
+   "wskazania": {
+    "kiedy": [
+     "badanie pierwszorazowe",
+     "przed leczeniem protetycznym i rozległymi odbudowami",
+     "dzieci – okres uzębienia mieszanego"
+    ],
+    "szczegolnie": [
+     "starcie, bruksizm",
+     "dolegliwości SSŻ"
+    ],
+    "charakter": [
+     "rutynowe",
+     "diagnostyczne"
+    ]
+   },
+   "przebieg": [
+    {
+     "krok": "Zwarcie centralne",
+     "opis": "Oceń klasę Angle’a (pierwsze trzonowce i kły), overjet, overbite, linię pośrodkową."
+    },
+    {
+     "krok": "Ruchy żuchwy",
+     "opis": "Protruzja i ruchy boczne – prowadzenie kłowe / grupowe, kontakty po stronie nieżującej (kalka zgryzowa)."
+    },
+    {
+     "krok": "Wady i decyzja",
+     "opis": "Odnotuj wady; u dzieci – rozważ skierowanie do ortodonty."
+    }
+   ],
+   "elementy_oceny": [
+    {
+     "element": "klasa Angle’a",
+     "co": "relacja trzonowcowa",
+     "pole": "POLE-ZG-ANGLE"
+    },
+    {
+     "element": "overjet",
+     "co": "mm",
+     "pole": "POLE-ZG-OJ"
+    },
+    {
+     "element": "overbite",
+     "co": "mm",
+     "pole": "POLE-ZG-OB"
+    },
+    {
+     "element": "wady",
+     "co": "rodzaj",
+     "pole": "POLE-ZG-WADY"
+    },
+    {
+     "element": "prowadzenie",
+     "co": "kłowe / grupowe",
+     "pole": "POLE-ZG-PROWADZENIE"
+    }
+   ],
+   "wynik_prawidlowy": "Klasa I Angle’a obustronnie, overjet 2 mm, overbite 2 mm, linia pośrodkowa zgodna, prowadzenie kłowe. (Przykład – wpisuje lekarz.)",
+   "nieprawidlowosci": [
+    "klasa II/III Angle’a",
+    "zgryz krzyżowy boczny",
+    "zgryz otwarty przedni",
+    "kontakty przedwczesne",
+    "przesunięcie linii pośrodkowej"
+   ],
+   "dokumentacja": {
+    "niezbedne": [
+     {
+      "tekst": "Data i oznaczenie lekarza",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ],
+    "zalecane": [
+     {
+      "tekst": "Klasa Angle’a, overjet, overbite, wady",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ],
+    "sytuacyjne": [
+     {
+      "tekst": "Skierowanie do ortodonty",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ],
+      "warunek": "wada zgryzu u dziecka"
+     }
+    ]
+   },
+   "powiazania": {
+    "icd9": [
+     {
+      "kod": "23.0101",
+      "kiedy": "w ramach badania lekarskiego"
+     },
+     {
+      "kod": "23.1022",
+      "kiedy": "profilaktyczne świadczenie zapobiegające wadom zgryzu (warunki NFZ – zał. 1)"
+     }
+    ],
+    "icd10": [
+     {
+      "kod": "K07.2",
+      "kiedy": "anomalie relacji łuków – rozpoznanie lekarza"
+     },
+     {
+      "kod": "K07.3",
+      "kiedy": "anomalie położenia zębów"
+     }
+    ]
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA",
+    "SRC-DU-2026-1391"
+   ],
+   "status": "draft"
+  },
+  {
+   "id": "BAD-SSZ",
+   "nazwa": "Badanie stawów skroniowo-żuchwowych i mięśni żucia",
+   "nazwa_krotka": "SSŻ",
+   "kategoria": "specjalistyczne",
+   "cel": {
+    "oceniane": "Funkcja i dolegliwości stawów skroniowo-żuchwowych oraz mięśni żucia.",
+    "informacje": [
+     "ból (lokalizacja, „ból znany”)",
+     "zakres i tor odwodzenia",
+     "odgłosy stawowe",
+     "zablokowania"
+    ],
+    "wykrywa": [
+     "ból mięśniowo-powięziowy",
+     "artralgię",
+     "przemieszczenia krążka",
+     "ograniczenie otwierania"
+    ]
+   },
+   "wskazania": {
+    "kiedy": [
+     "dolegliwości bólowe twarzy, uszu, skroni",
+     "trzaski, zablokowania",
+     "przed leczeniem protetycznym / ortodontycznym"
+    ],
+    "szczegolnie": [
+     "bruksizm",
+     "bóle głowy"
+    ],
+    "charakter": [
+     "diagnostyczne"
+    ]
+   },
+   "przebieg": [
+    {
+     "krok": "Wywiad",
+     "opis": "Ból w ostatnich 30 dniach, wpływ ruchów żuchwy, zablokowania, bóle głowy (DC/TMD oś I – skrócone)."
+    },
+    {
+     "krok": "Pomiar odwodzenia",
+     "opis": "Linijką między brzegami siecznymi: bez bólu, maksymalne czynne, z pomocą; tor ruchu."
+    },
+    {
+     "krok": "Odgłosy",
+     "opis": "Palpacja / osłuchanie stawu podczas otwierania, zamykania, ruchów bocznych."
+    },
+    {
+     "krok": "Palpacja",
+     "opis": "Żwacze, mięśnie skroniowe, boczne bieguny stawów (ok. 1 kg nacisku); czy ból jest „znany” pacjentowi."
+    },
+    {
+     "krok": "Wstępna ocena",
+     "opis": "Opis objawów; rozpoznanie wg DC/TMD lub skierowanie (protetyk / specjalista zaburzeń czynnościowych)."
+    }
+   ],
+   "elementy_oceny": [
+    {
+     "element": "ból",
+     "co": "lokalizacja, ból znany",
+     "pole": "POLE-SSZ-BOL"
+    },
+    {
+     "element": "odwodzenie",
+     "co": "mm",
+     "pole": "POLE-SSZ-ODWODZENIE"
+    },
+    {
+     "element": "tor",
+     "co": "zbaczanie",
+     "pole": "POLE-SSZ-TOR"
+    },
+    {
+     "element": "odgłosy",
+     "co": "trzaski, trzeszczenia",
+     "pole": "POLE-SSZ-ODGLOSY"
+    },
+    {
+     "element": "palpacja",
+     "co": "mięśnie i staw",
+     "pole": "POLE-SSZ-PALPACJA"
+    }
+   ],
+   "wynik_prawidlowy": "Pacjent nie zgłasza bólu; odwodzenie 45 mm bez bólu, tor prosty, bez odgłosów stawowych; palpacja mięśni i stawów niebolesna. (Przykład – wpisuje lekarz.)",
+   "nieprawidlowosci": [
+    "odwodzenie < 40 mm",
+    "zbaczanie toru",
+    "trzask wzajemny (otwieranie i zamykanie)",
+    "ból znany przy palpacji żwacza",
+    "zablokowanie otwierania"
+   ],
+   "dokumentacja": {
+    "niezbedne": [
+     {
+      "tekst": "Data i oznaczenie lekarza",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Opis wykonanego badania i stwierdzonych odchyleń (lub informacja lekarza o braku odchyleń w badanych strukturach)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ],
+    "zalecane": [
+     {
+      "tekst": "Odwodzenie w mm, tor, odgłosy, wynik palpacji",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-DCTMD-2014"
+      ]
+     }
+    ],
+    "sytuacyjne": [
+     {
+      "tekst": "Skierowanie / plan (szyna, fizjoterapia)",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ],
+      "warunek": "objawy TMD"
+     }
+    ]
+   },
+   "powiazania": {
+    "icd9": [
+     {
+      "kod": "23.0105",
+      "kiedy": "konsultacja specjalistyczna – jeśli dotyczy"
+     },
+     {
+      "kod": "23.2902",
+      "kiedy": "szyna zgryzowa (płytka relaksacyjna) – leczenie po rozpoznaniu"
+     }
+    ],
+    "icd10": [
+     {
+      "kod": "K07.6",
+      "kiedy": "zaburzenia stawu skroniowo-żuchwowego – rozpoznanie lekarza"
+     }
+    ]
+   },
+   "zrodla": [
+    "SRC-KLIN-DCTMD-2014",
+    "SRC-DU-2026-1391"
+   ],
+   "status": "draft"
+  },
+  {
+   "id": "BAD-ZYWOTNOSC",
+   "nazwa": "Badanie żywotności zęba (testy miazgowe i okołowierzchołkowe)",
+   "nazwa_krotka": "Żywotność zęba",
+   "kategoria": "specjalistyczne",
+   "cel": {
+    "oceniane": "Reakcja miazgi na bodźce i stan tkanek okołowierzchołkowych.",
+    "informacje": [
+     "wynik testu na zimno / EPT",
+     "opukiwanie i palpacja",
+     "porównanie z zębem kontrolnym"
+    ],
+    "wykrywa": [
+     "odwracalne i nieodwracalne zapalenie miazgi",
+     "martwicę miazgi",
+     "zapalenie tkanek okołowierzchołkowych"
+    ]
+   },
+   "wskazania": {
+    "kiedy": [
+     "ból zęba",
+     "przed leczeniem głębokiej próchnicy, protetycznym (filary)",
+     "po urazie (kontrole wg IADT)"
+    ],
+    "szczegolnie": [
+     "zęby po urazie – pierwszy wynik może być fałszywie ujemny",
+     "zęby z rozległymi wypełnieniami / koronami"
+    ],
+    "charakter": [
+     "diagnostyczne",
+     "kontrolne"
+    ]
+   },
+   "przebieg": [
+    {
+     "krok": "Wybór zęba kontrolnego",
+     "opis": "Ząb jednoimienny lub sąsiedni, zdrowy – badany najpierw."
+    },
+    {
+     "krok": "Test na zimno",
+     "opis": "Osuszony ząb, wacik z czynnikiem chłodzącym na powierzchnię wargową/policzkową; oceń reakcję i czas jej trwania."
+    },
+    {
+     "krok": "EPT (opcjonalnie)",
+     "opis": "Przy niejednoznacznym teście termicznym; elektroda na osuszonym szkliwie z żelem przewodzącym."
+    },
+    {
+     "krok": "Opukiwanie i palpacja",
+     "opis": "Opukiwanie pionowe i poziome, palpacja okolicy wierzchołka; test nagryzania przy podejrzeniu pęknięcia."
+    },
+    {
+     "krok": "Ocena",
+     "opis": "Zestawienie z wywiadem i RTG; ocena stanu miazgi."
+    }
+   ],
+   "elementy_oceny": [
+    {
+     "element": "zimno",
+     "co": "reakcja i czas",
+     "pole": "POLE-ZY-ZIMNO"
+    },
+    {
+     "element": "EPT",
+     "co": "wynik",
+     "pole": "POLE-ZY-EPT"
+    },
+    {
+     "element": "opukiwanie",
+     "co": "ból",
+     "pole": "POLE-ZY-OPUK"
+    },
+    {
+     "element": "palpacja",
+     "co": "okolica wierzchołka",
+     "pole": "POLE-ZY-PALP"
+    },
+    {
+     "element": "ząb kontrolny",
+     "co": "porównanie",
+     "pole": "POLE-ZY-KONTROLA"
+    }
+   ],
+   "wynik_prawidlowy": "Ząb 36: test na zimno dodatni, reakcja krótkotrwała, porównywalna z zębem 46; opukiwanie i palpacja niebolesne. (Przykład – wpisuje lekarz.)",
+   "nieprawidlowosci": [
+    "reakcja przedłużona po ustaniu bodźca – nieodwracalne zapalenie miazgi",
+    "brak reakcji na zimno i EPT – podejrzenie martwicy (potwierdzić RTG / klinicznie)",
+    "bolesne opukiwanie pionowe – zapalenie tkanek okołowierzchołkowych",
+    "ból przy nagryzaniu – podejrzenie pęknięcia"
+   ],
+   "dokumentacja": {
+    "niezbedne": [
+     {
+      "tekst": "Data i oznaczenie lekarza",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Opis wykonanego badania i stwierdzonych odchyleń (lub informacja lekarza o braku odchyleń w badanych strukturach)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Ząb badany (FDI) i wynik każdego testu",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-DU-2025-615"
+      ],
+      "warunek": "rozliczenie 23.02"
+     }
+    ],
+    "zalecane": [
+     {
+      "tekst": "Ząb kontrolny i jego wynik",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-ESE-2006"
+      ]
+     }
+    ],
+    "sytuacyjne": [
+     {
+      "tekst": "Plan kolejnych testów (np. po urazie: 4 tyg., 3 mies. …)",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-IADT-ZLAM-2020"
+      ],
+      "warunek": "uraz zęba"
+     }
+    ]
+   },
+   "powiazania": {
+    "icd9": [
+     {
+      "kod": "23.02",
+      "kiedy": "badanie żywotności zęba – świadczenie"
+     }
+    ],
+    "icd10": [
+     {
+      "kod": "K04.0",
+      "kiedy": "zapalenie miazgi – rozpoznanie lekarza"
+     },
+     {
+      "kod": "K04.1",
+      "kiedy": "martwica miazgi"
+     },
+     {
+      "kod": "K04.4",
+      "kiedy": "ostre zapalenie tkanek okołowierzchołkowych"
+     },
+     {
+      "kod": "K04.5",
+      "kiedy": "przewlekłe zapalenie okołowierzchołkowe (ziarniniak)"
+     }
+    ]
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023",
+    "SRC-KLIN-ESE-2006",
+    "SRC-KLIN-IADT-ZLAM-2020",
+    "SRC-DU-2025-615",
+    "SRC-DU-2026-1391"
+   ],
+   "status": "draft"
+  },
+  {
+   "id": "BAD-RTG",
+   "nazwa": "Ocena radiologiczna (opis zdjęcia RTG)",
+   "nazwa_krotka": "Opis RTG",
+   "kategoria": "specjalistyczne",
+   "cel": {
+    "oceniane": "Struktury niewidoczne klinicznie: przestrzenie styczne, korzenie, ozębna, kość wyrostka, zęby zatrzymane.",
+    "informacje": [
+     "rodzaj zdjęcia i wskazanie",
+     "opis zmian"
+    ],
+    "wykrywa": [
+     "próchnicę styczną i wtórną",
+     "zmiany okołowierzchołkowe",
+     "utratę kości",
+     "zęby zatrzymane, torbiele",
+     "jakość wypełnienia kanałowego"
+    ]
+   },
+   "wskazania": {
+    "kiedy": [
+     "wg wskazań klinicznych (nie rutynowo)",
+     "leczenie endodontyczne (przed, w trakcie, po)",
+     "przed ekstrakcją chirurgiczną",
+     "diagnostyka próchnicy stycznej"
+    ],
+    "szczegolnie": [
+     "ciąża – tylko przy pilnym wskazaniu, z ochroną"
+    ],
+    "charakter": [
+     "diagnostyczne",
+     "kontrolne"
+    ]
+   },
+   "przebieg": [
+    {
+     "krok": "Uzasadnienie",
+     "opis": "Ustal wskazanie (zasada uzasadnienia); u kobiet w wieku rozrodczym – wywiad w kierunku ciąży."
+    },
+    {
+     "krok": "Wykonanie",
+     "opis": "Zgodnie z procedurami pracowni RTG gabinetu; osłony wg obowiązujących procedur."
+    },
+    {
+     "krok": "Opis",
+     "opis": "Systematycznie: jakość zdjęcia, zęby (korony, korzenie, kanały, wypełnienia), ozębna i blaszka zbita, kość wyrostka, inne struktury."
+    }
+   ],
+   "elementy_oceny": [
+    {
+     "element": "wskazanie",
+     "co": "uzasadnienie",
+     "pole": "POLE-RTG-WSKAZANIE"
+    },
+    {
+     "element": "opis",
+     "co": "wynik",
+     "pole": "POLE-RTG-OPIS"
+    }
+   ],
+   "wynik_prawidlowy": "Zdjęcie zgryzowo-skrzydłowe strony prawej: bez cech próchnicy stycznej, wyrostek bez cech utraty kości. (Przykład – wpisuje lekarz.)",
+   "nieprawidlowosci": [
+    "przejaśnienie okołowierzchołkowe",
+    "poszerzenie szpary ozębnej",
+    "próchnica styczna w zębinie",
+    "niedopełnione wypełnienie kanałowe",
+    "ząb zatrzymany"
+   ],
+   "dokumentacja": {
+    "niezbedne": [
+     {
+      "tekst": "Data i oznaczenie lekarza",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Opis zdjęcia w dokumentacji (warunek rozliczenia RTG)",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-DU-2025-615"
+      ],
+      "warunek": "rozliczenie 23.0301–23.0304"
+     },
+     {
+      "tekst": "Uzasadnienie wykonania",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ],
+      "warunek": "każde zdjęcie (prawo atomowe – do weryfikacji aktu)"
+     }
+    ],
+    "zalecane": [
+     {
+      "tekst": "Rodzaj zdjęcia i data",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ],
+    "sytuacyjne": []
+   },
+   "powiazania": {
+    "icd9": [
+     {
+      "kod": "23.0301",
+      "kiedy": "do 2 zdjęć wewnątrzustnych"
+     },
+     {
+      "kod": "23.0302",
+      "kiedy": "do 5 zdjęć"
+     },
+     {
+      "kod": "23.0303",
+      "kiedy": "do 8 zdjęć"
+     },
+     {
+      "kod": "23.0304",
+      "kiedy": "pantomogram z opisem"
+     }
+    ],
+    "icd10": [],
+    "reguly_nfz": [
+     "R-RTG-01",
+     "R-RTG-02",
+     "R-RTG-03"
+    ],
+    "uwaga": "Rozpoznanie wynika z całości badania, nie z samego zdjęcia."
+   },
+   "zrodla": [
+    "SRC-DU-2025-615",
+    "SRC-PRAKTYKA",
+    "SRC-DU-2026-1391"
+   ],
+   "uwagi": "Wymagania prawa atomowego (uzasadnienie, ochrona radiologiczna) – akt nieopisany w audycie; oznaczone do weryfikacji.",
+   "status": "draft"
+  },
+  {
+   "id": "BAD-PO-URAZIE",
+   "nazwa": "Badanie stomatologiczne i kontrolne po urazie zęba",
+   "nazwa_krotka": "Po urazie",
+   "kategoria": "specjalistyczne",
+   "cel": {
+    "oceniane": "Rodzaj i zakres urazu zębów i tkanek przyzębia, stan miazgi, tkanki miękkie.",
+    "informacje": [
+     "okoliczności",
+     "klasyfikacja urazu",
+     "testy żywotności (wyjściowe)",
+     "RTG",
+     "plan kontroli"
+    ],
+    "wykrywa": [
+     "złamania korony i korzenia",
+     "zwichnięcia",
+     "urazy tkanek miękkich",
+     "urazy wymagające pilnego leczenia (awulsja, obnażenie miazgi)"
+    ]
+   },
+   "wskazania": {
+    "kiedy": [
+     "uraz zęba – badanie pierwsze",
+     "kontrole po urazie (świadczenie kontrolne)"
+    ],
+    "szczegolnie": [
+     "awulsja – postępowanie natychmiastowe",
+     "dzieci – zęby mleczne i zawiązki zębów stałych"
+    ],
+    "charakter": [
+     "diagnostyczne",
+     "kontrolne"
+    ]
+   },
+   "przebieg": [
+    {
+     "krok": "Wywiad",
+     "opis": "Kiedy, gdzie, jak; utrata przytomności, wymioty, ból głowy (wskazanie do pilnej konsultacji lekarskiej); szczepienie p/tężcowi."
+    },
+    {
+     "krok": "Badanie zewnątrz- i wewnątrzustne",
+     "opis": "Rany, obrzęki, fragmenty zębów w tkankach, zgryz."
+    },
+    {
+     "krok": "Badanie zębów",
+     "opis": "Złamania, ruchomość, przemieszczenie, opukiwanie (dźwięk metaliczny – wtłoczenie), testy żywotności (wyjściowe)."
+    },
+    {
+     "krok": "RTG",
+     "opis": "Zdjęcia wewnątrzustne (różne kąty) zależnie od urazu; RTG tkanek miękkich przy podejrzeniu fragmentów."
+    },
+    {
+     "krok": "Klasyfikacja i plan",
+     "opis": "Rozpoznanie wg IADT, leczenie doraźne, plan kontroli (np. 4 tyg., 6–8 tyg., 4 mies., 6 mies., 1 rok – zależnie od urazu)."
+    }
+   ],
+   "elementy_oceny": [
+    {
+     "element": "okoliczności",
+     "co": "wywiad",
+     "pole": "POLE-UR-OKOLICZNOSCI"
+    },
+    {
+     "element": "rodzaj urazu",
+     "co": "klasyfikacja IADT",
+     "pole": "POLE-UR-RODZAJ"
+    },
+    {
+     "element": "ruchomość",
+     "co": "przemieszczenie",
+     "pole": "POLE-UR-RUCH"
+    },
+    {
+     "element": "tkanki miękkie",
+     "co": "rany",
+     "pole": "POLE-UR-TKANKI"
+    }
+   ],
+   "wynik_prawidlowy": "Nie dotyczy – badanie po urazie; wyniki wpisuje lekarz.",
+   "nieprawidlowosci": [
+    "złamanie korony z obnażeniem miazgi",
+    "wtłoczenie zęba",
+    "awulsja",
+    "złamanie korzenia na RTG",
+    "brak reakcji na testy (po urazie możliwy przejściowo)"
+   ],
+   "dokumentacja": {
+    "niezbedne": [
+     {
+      "tekst": "Data i oznaczenie lekarza",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Opis wykonanego badania i stwierdzonych odchyleń (lub informacja lekarza o braku odchyleń w badanych strukturach)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Okoliczności urazu, zęby objęte urazem (FDI), rodzaj urazu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ],
+    "zalecane": [
+     {
+      "tekst": "Testy żywotności i RTG wyjściowe; plan kontroli",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-IADT-OG-2020"
+      ]
+     }
+    ],
+    "sytuacyjne": [
+     {
+      "tekst": "Szczepienie p/tężcowi – weryfikacja",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-IADT-AWUL-2020"
+      ],
+      "warunek": "rana zanieczyszczona / awulsja"
+     },
+     {
+      "tekst": "Dokumentacja fotograficzna (na urządzeniu)",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-IADT-OG-2020"
+      ]
+     }
+    ]
+   },
+   "powiazania": {
+    "icd9": [
+     {
+      "kod": "23.0107",
+      "kiedy": "badanie i kontrola po urazie zęba (ST28)"
+     },
+     {
+      "kod": "23.02",
+      "kiedy": "testy żywotności"
+     },
+     {
+      "kod": "23.2101",
+      "kiedy": "repozycja i unieruchomienie zwichniętego zęba"
+     }
+    ],
+    "icd10": [
+     {
+      "kod": "S02.5",
+      "kiedy": "złamanie zęba – rozpoznanie lekarza"
+     },
+     {
+      "kod": "S03.2",
+      "kiedy": "zwichnięcie zęba"
+     }
+    ],
+    "reguly_nfz": []
+   },
+   "zrodla": [
+    "SRC-KLIN-IADT-OG-2020",
+    "SRC-KLIN-IADT-ZLAM-2020",
+    "SRC-KLIN-IADT-AWUL-2020",
+    "SRC-KLIN-IADT-MLECZ-2020",
+    "SRC-DU-2026-1391"
+   ],
+   "status": "draft"
+  },
+  {
+   "id": "BAD-DZIECKO",
+   "nazwa": "Badanie stomatologiczne dziecka",
+   "nazwa_krotka": "Badanie dziecka",
+   "kategoria": "dziecko",
+   "cel": {
+    "oceniane": "Uzębienie mleczne / mieszane, rozwój zgryzu, ryzyko próchnicy, nawyki, współpraca.",
+    "informacje": [
+     "stan uzębienia (dmft/DMFT)",
+     "rozwój i wyrzynanie",
+     "nawyki dietetyczne i higieniczne",
+     "ekspozycja na fluorki",
+     "współpraca"
+    ],
+    "wykrywa": [
+     "próchnicę wczesnego dzieciństwa",
+     "zaburzenia wyrzynania i rozwoju",
+     "szkodliwe nawyki",
+     "wady zgryzu do konsultacji ortodontycznej"
+    ]
+   },
+   "wskazania": {
+    "kiedy": [
+     "pierwsza wizyta (najpóźniej po wyrznięciu pierwszego zęba / ok. 1. r.ż.)",
+     "profilaktyczne świadczenia wg wieku (23.1009–23.1023)",
+     "kontrole wg ryzyka próchnicy"
+    ],
+    "szczegolnie": [
+     "wysokie ryzyko próchnicy",
+     "dzieci z niepełnosprawnością"
+    ],
+    "charakter": [
+     "rutynowe",
+     "kontrolne"
+    ]
+   },
+   "przebieg": [
+    {
+     "krok": "Wywiad z opiekunem",
+     "opis": "Dieta, karmienie nocne, higiena (kto szczotkuje), fluorki, nawyki, choroby, leki."
+    },
+    {
+     "krok": "Badanie",
+     "opis": "U małych dzieci – pozycja „kolano do kolana”; uzębienie, błona śluzowa, wędzidełka, zgryz."
+    },
+    {
+     "krok": "Ocena ryzyka",
+     "opis": "Ryzyko próchnicy (aktywne zmiany, dieta, higiena, fluorki)."
+    },
+    {
+     "krok": "Instruktaż i profilaktyka",
+     "opis": "Instruktaż opiekuna; ilość pasty i stężenie fluoru wg wieku (EAPD); lakier fluorkowy wg ryzyka."
+    },
+    {
+     "krok": "Plan",
+     "opis": "Termin kontroli wg ryzyka; ewentualne skierowanie do ortodonty."
+    }
+   ],
+   "elementy_oceny": [
+    {
+     "element": "uzębienie",
+     "co": "dmft/DMFT",
+     "pole": "POLE-UZ-DMFT"
+    },
+    {
+     "element": "rozwój",
+     "co": "wyrzynanie",
+     "pole": "POLE-DZ-ROZWOJ"
+    },
+    {
+     "element": "nawyki",
+     "co": "dieta, ssanie",
+     "pole": "POLE-DZ-NAWYKI"
+    },
+    {
+     "element": "fluorki",
+     "co": "ekspozycja",
+     "pole": "POLE-DZ-FLUOR"
+    },
+    {
+     "element": "współpraca",
+     "co": "Frankl",
+     "pole": "POLE-DZ-WSPOLPRACA"
+    }
+   ],
+   "wynik_prawidlowy": "Uzębienie mleczne pełne, bez próchnicy (dmft = 0), wyrzynanie zgodne z wiekiem; higiena prowadzona przez opiekuna, pasta z fluorem. Współpraca 4 (Frankl). (Przykład – wpisuje lekarz.)",
+   "nieprawidlowosci": [
+    "próchnica wczesnego dzieciństwa (powierzchnie wargowe siekaczy górnych)",
+    "nocne karmienie butelką ze słodkim płynem",
+    "pasta bez fluoru",
+    "ssanie smoczka po 3. r.ż.",
+    "opóźnione wyrzynanie"
+   ],
+   "dokumentacja": {
+    "niezbedne": [
+     {
+      "tekst": "Data i oznaczenie lekarza",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Opis wykonanego badania i stwierdzonych odchyleń (lub informacja lekarza o braku odchyleń w badanych strukturach)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Informacje przekazane opiekunowi (instruktaż, zalecenia)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ],
+      "warunek": "pacjent małoletni"
+     }
+    ],
+    "zalecane": [
+     {
+      "tekst": "Ocena ryzyka próchnicy i zalecenia fluorkowe",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-EAPD-F-2019"
+      ]
+     }
+    ],
+    "sytuacyjne": [
+     {
+      "tekst": "Skierowanie do ortodonty",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ],
+      "warunek": "wada zgryzu / nawyki"
+     }
+    ]
+   },
+   "powiazania": {
+    "icd9": [
+     {
+      "kod": "23.06",
+      "kiedy": "wizyta adaptacyjna małego dziecka"
+     },
+     {
+      "kod": "23.1009",
+      "kiedy": "profilaktyka – 6. miesiąc życia"
+     },
+     {
+      "kod": "23.1011",
+      "kiedy": "profilaktyka – 12. miesiąc"
+     },
+     {
+      "kod": "23.1023",
+      "kiedy": "profilaktyka – 3. rok życia (wariant NFZ 23.1012a – D5=B)"
+     },
+     {
+      "kod": "23.0101",
+      "kiedy": "badanie lekarskie"
+     }
+    ],
+    "icd10": [
+     {
+      "kod": "Z01.2",
+      "kiedy": "badanie stomatologiczne bez rozpoznania choroby"
+     },
+     {
+      "kod": "K02.1",
+      "kiedy": "próchnica zębiny – rozpoznanie lekarza"
+     }
+    ],
+    "reguly_nfz": [
+     "R-BAD-01"
+    ]
+   },
+   "zrodla": [
+    "SRC-KLIN-EAPD-F-2019",
+    "SRC-KLIN-ICDAS-2007",
+    "SRC-PRAWA-PACJENTA",
+    "SRC-DU-2026-1391"
+   ],
+   "status": "draft"
+  },
+  {
+   "id": "BAD-STOMATOLOGICZNE",
+   "nazwa": "Badanie lekarskie stomatologiczne z instruktażem higieny jamy ustnej (23.0101)",
+   "nazwa_krotka": "Badanie stomatologiczne",
+   "kategoria": "kontrolne",
+   "cel": {
+    "oceniane": "Pełna ocena stanu jamy ustnej: wywiad, badanie zewnątrz- i wewnątrzustne, uzębienie, przyzębie, higiena, zgryz; plan leczenia; instruktaż higieny.",
+    "informacje": [
+     "wyniki badań składowych",
+     "plan leczenia",
+     "instruktaż higieny"
+    ],
+    "wykrywa": [
+     "wszystkie odchylenia wykrywane w badaniach składowych"
+    ]
+   },
+   "wskazania": {
+    "kiedy": [
+     "pierwsza wizyta pacjenta",
+     "raz w roku kalendarzowym (NFZ)"
+    ],
+    "szczegolnie": [
+     "planowanie kompleksowego leczenia"
+    ],
+    "charakter": [
+     "rutynowe"
+    ]
+   },
+   "przebieg": [
+    {
+     "krok": "Wywiad",
+     "opis": "Badanie BAD-WYWIAD."
+    },
+    {
+     "krok": "Badanie zewnątrzustne",
+     "opis": "BAD-ZEWNATRZUSTNE."
+    },
+    {
+     "krok": "Badanie wewnątrzustne",
+     "opis": "BAD-WEWNATRZUSTNE (przy zmianie – BAD-BLONA)."
+    },
+    {
+     "krok": "Uzębienie, przyzębie, higiena, zgryz",
+     "opis": "BAD-UZEBIENIE, BAD-PRZYZEBIE (przesiewowo), BAD-HIGIENA, BAD-ZGRYZ."
+    },
+    {
+     "krok": "Instruktaż higieny",
+     "opis": "Instruktaż higieny jamy ustnej – składnik świadczenia 23.0101."
+    },
+    {
+     "krok": "Plan leczenia",
+     "opis": "Omówienie wyników i planu z pacjentem; termin kolejnej wizyty."
+    }
+   ],
+   "elementy_oceny": [
+    {
+     "element": "badania składowe",
+     "co": "wyniki z formularzy badań składowych"
+    }
+   ],
+   "wynik_prawidlowy": "Zestawienie wyników badań składowych – bez odchyleń (tylko jeśli lekarz tak ocenił każde z nich).",
+   "nieprawidlowosci": [
+    "dowolne odchylenia z badań składowych"
+   ],
+   "dokumentacja": {
+    "niezbedne": [
+     {
+      "tekst": "Data i oznaczenie lekarza",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Opis wykonanego badania i stwierdzonych odchyleń (lub informacja lekarza o braku odchyleń w badanych strukturach)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Instruktaż higieny jamy ustnej przeprowadzony",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-DU-2025-615"
+      ],
+      "warunek": "rozliczenie 23.0101 / ST33"
+     }
+    ],
+    "zalecane": [
+     {
+      "tekst": "Plan leczenia przekazany pacjentowi",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ],
+    "sytuacyjne": []
+   },
+   "powiazania": {
+    "icd9": [
+     {
+      "kod": "23.0101",
+      "kiedy": "świadczenie badania lekarskiego (ST33)"
+     }
+    ],
+    "icd10": [
+     {
+      "kod": "Z01.2",
+      "kiedy": "badanie bez rozpoznania choroby"
+     }
+    ],
+    "reguly_nfz": [
+     "R-BAD-01"
+    ],
+    "uwaga": "Przy rozpoznaniu choroby – kod choroby zamiast Z01.2 (podpowiedź audytu)."
+   },
+   "zrodla": [
+    "SRC-DU-2025-615",
+    "SRC-ZARZ-60-2023-TJ",
+    "SRC-DU-2026-1391"
+   ],
+   "uwagi": "Badanie złożone – nie powiela pól; opis składa się z szablonów badań składowych.",
+   "status": "draft"
+  },
+  {
+   "id": "BAD-KONTROLNE",
+   "nazwa": "Badanie lekarskie kontrolne (23.0102)",
+   "nazwa_krotka": "Badanie kontrolne",
+   "kategoria": "kontrolne",
+   "cel": {
+    "oceniane": "Zmiany od ostatniego badania, efekty leczenia, nowe ogniska chorobowe.",
+    "informacje": [
+     "aktualizacja wywiadu",
+     "nowe zmiany",
+     "ocena wcześniejszego leczenia"
+    ],
+    "wykrywa": [
+     "nowe ogniska próchnicy",
+     "niepowodzenia leczenia",
+     "progresję chorób przyzębia"
+    ]
+   },
+   "wskazania": {
+    "kiedy": [
+     "kontrola w trakcie / po leczeniu",
+     "odstęp zależny od ryzyka (NFZ: limit 3× w roku, ciąża – 1× na kwartał)"
+    ],
+    "szczegolnie": [
+     "wysokie ryzyko próchnicy / chorób przyzębia"
+    ],
+    "charakter": [
+     "kontrolne"
+    ]
+   },
+   "przebieg": [
+    {
+     "krok": "Aktualizacja wywiadu",
+     "opis": "Nowe dolegliwości, choroby, leki, ciąża."
+    },
+    {
+     "krok": "Badanie ukierunkowane",
+     "opis": "Uzębienie, przyzębie, błona śluzowa – z porównaniem do poprzedniego badania."
+    },
+    {
+     "krok": "Ocena i plan",
+     "opis": "Ocena leczenia, dalszy plan, termin kolejnej kontroli."
+    }
+   ],
+   "elementy_oceny": [
+    {
+     "element": "zmiany od ostatniej wizyty",
+     "co": "wywiad",
+     "pole": "POLE-KO-ZMIANY"
+    },
+    {
+     "element": "ocena",
+     "co": "stan jamy ustnej",
+     "pole": "POLE-KO-OCENA"
+    }
+   ],
+   "wynik_prawidlowy": "Bez nowych dolegliwości; bez nowych ognisk próchnicy; wypełnienia szczelne. (Przykład – wpisuje lekarz.)",
+   "nieprawidlowosci": [
+    "nowe ognisko próchnicy",
+    "nieszczelne wypełnienie",
+    "nasilenie krwawienia dziąseł"
+   ],
+   "dokumentacja": {
+    "niezbedne": [
+     {
+      "tekst": "Data i oznaczenie lekarza",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Opis wykonanego badania i stwierdzonych odchyleń (lub informacja lekarza o braku odchyleń w badanych strukturach)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ],
+    "zalecane": [
+     {
+      "tekst": "Porównanie z poprzednim badaniem",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ],
+    "sytuacyjne": []
+   },
+   "powiazania": {
+    "icd9": [
+     {
+      "kod": "23.0102",
+      "kiedy": "badanie lekarskie kontrolne (ST34)"
+     }
+    ],
+    "icd10": [
+     {
+      "kod": "Z01.2",
+      "kiedy": "bez rozpoznania choroby"
+     }
+    ],
+    "reguly_nfz": [
+     "R-BAD-02"
+    ]
+   },
+   "zrodla": [
+    "SRC-DU-2025-615",
+    "SRC-DU-2026-1391"
+   ],
+   "status": "draft"
+  },
+  {
+   "id": "BAD-PRZED-LECZENIEM",
+   "nazwa": "Kwalifikacja do leczenia (badanie przed zabiegiem)",
+   "nazwa_krotka": "Przed leczeniem",
+   "kategoria": "kwalifikacja",
+   "cel": {
+    "oceniane": "Wskazania, przeciwwskazania i ryzyko planowanego leczenia; świadoma zgoda.",
+    "informacje": [
+     "aktualny wywiad",
+     "wyniki badań dodatkowych",
+     "omówione alternatywy i ryzyka",
+     "zgoda"
+    ],
+    "wykrywa": [
+     "przeciwwskazania lub potrzebę modyfikacji leczenia",
+     "potrzebę konsultacji lekarskiej"
+    ]
+   },
+   "wskazania": {
+    "kiedy": [
+     "przed zabiegiem chirurgicznym, endodontycznym, protetycznym",
+     "przed leczeniem w znieczuleniu"
+    ],
+    "szczegolnie": [
+     "pacjenci z chorobami ogólnymi i lekami modyfikującymi krzepnięcie"
+    ],
+    "charakter": [
+     "diagnostyczne"
+    ]
+   },
+   "przebieg": [
+    {
+     "krok": "Aktualizacja wywiadu",
+     "opis": "Leki (w tym przeciwkrzepliwe – data ostatniej dawki, INR jeśli dotyczy), choroby, alergie, ciąża."
+    },
+    {
+     "krok": "Ocena miejscowa",
+     "opis": "Badanie okolicy zabiegu, RTG."
+    },
+    {
+     "krok": "Decyzja i informacja",
+     "opis": "Przedstaw rozpoznanie, proponowane leczenie, alternatywy, ryzyka i rokowanie."
+    },
+    {
+     "krok": "Zgoda",
+     "opis": "Uzyskaj zgodę (pisemną przy zabiegach o podwyższonym ryzyku)."
+    }
+   ],
+   "elementy_oceny": [
+    {
+     "element": "zabieg",
+     "co": "plan",
+     "pole": "POLE-PL-ZABIEG"
+    },
+    {
+     "element": "czynniki ryzyka",
+     "co": "wywiad",
+     "pole": "POLE-PL-RYZYKA"
+    },
+    {
+     "element": "badania dodatkowe",
+     "co": "wyniki",
+     "pole": "POLE-PL-BADANIA"
+    },
+    {
+     "element": "zgoda",
+     "co": "odnotowanie",
+     "pole": "POLE-ZGODA"
+    }
+   ],
+   "wynik_prawidlowy": "Brak przeciwwskazań do planowanego zabiegu wg wywiadu i badania; pacjent poinformowany, wyraził zgodę. (Wpisuje lekarz.)",
+   "nieprawidlowosci": [
+    "INR powyżej zakresu bezpiecznego dla zabiegu – odroczenie / konsultacja",
+    "leczenie antyresorpcyjne – ryzyko martwicy kości szczęk",
+    "niekontrolowane nadciśnienie"
+   ],
+   "dokumentacja": {
+    "niezbedne": [
+     {
+      "tekst": "Data i oznaczenie lekarza",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Opis wykonanego badania i stwierdzonych odchyleń (lub informacja lekarza o braku odchyleń w badanych strukturach)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta na zabieg (pisemna przy zabiegu o podwyższonym ryzyku)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ],
+      "warunek": "zabiegi chirurgiczne i o podwyższonym ryzyku"
+     }
+    ],
+    "zalecane": [
+     {
+      "tekst": "Omówione alternatywy i ryzyka",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     }
+    ],
+    "sytuacyjne": [
+     {
+      "tekst": "Konsultacja z lekarzem prowadzącym",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ],
+      "warunek": "choroby ogólne wymagające modyfikacji leczenia"
+     }
+    ]
+   },
+   "powiazania": {
+    "icd9": [
+     {
+      "kod": "23.0103",
+      "kiedy": "porada lekarska – jeśli dotyczy"
+     }
+    ],
+    "icd10": [],
+    "uwaga": "Kwalifikacja jest częścią leczenia; nie jest osobnym świadczeniem rozliczanym."
+   },
+   "zrodla": [
+    "SRC-PRAWA-PACJENTA",
+    "SRC-PRAKTYKA",
+    "SRC-DU-2026-1391"
+   ],
+   "status": "draft"
+  },
+  {
+   "id": "BAD-PO-LECZENIU",
+   "nazwa": "Badanie po zakończonym leczeniu (ocena wyniku)",
+   "nazwa_krotka": "Po leczeniu",
+   "kategoria": "kontrolne",
+   "cel": {
+    "oceniane": "Wynik zakończonego leczenia: objawy, funkcja, gojenie, obraz RTG.",
+    "informacje": [
+     "rodzaj leczenia",
+     "ocena kliniczna i RTG",
+     "wynik"
+    ],
+    "wykrywa": [
+     "niepowodzenia (np. zmiana okołowierzchołkowa po leczeniu kanałowym)",
+     "powikłania gojenia",
+     "nieszczelność odbudowy"
+    ]
+   },
+   "wskazania": {
+    "kiedy": [
+     "kontrola po leczeniu kanałowym (ESE: co najmniej po roku, dalej do 4 lat przy niepełnym gojeniu)",
+     "kontrola po ekstrakcji / zabiegu chirurgicznym",
+     "kontrola po leczeniu periodontologicznym"
+    ],
+    "charakter": [
+     "kontrolne"
+    ]
+   },
+   "przebieg": [
+    {
+     "krok": "Wywiad",
+     "opis": "Dolegliwości od zakończenia leczenia."
+    },
+    {
+     "krok": "Badanie kliniczne",
+     "opis": "Opukiwanie, palpacja, przetoki, szczelność odbudowy, kieszonki."
+    },
+    {
+     "krok": "RTG (wg wskazań)",
+     "opis": "Porównanie z RTG końcowym."
+    },
+    {
+     "krok": "Ocena",
+     "opis": "Powodzenie / niepewny / niepowodzenie; plan."
+    }
+   ],
+   "elementy_oceny": [
+    {
+     "element": "leczenie",
+     "co": "rodzaj, zęby",
+     "pole": "POLE-PO-LECZENIE"
+    },
+    {
+     "element": "ocena",
+     "co": "klinicznie / RTG",
+     "pole": "POLE-PO-OCENA"
+    },
+    {
+     "element": "wynik",
+     "co": "kategoria",
+     "pole": "POLE-PO-WYNIK"
+    }
+   ],
+   "wynik_prawidlowy": "Ząb 46 rok po leczeniu kanałowym: bez dolegliwości, opukiwanie niebolesne, na RTG prawidłowa szpara ozębnej – powodzenie leczenia. (Przykład – wpisuje lekarz.)",
+   "nieprawidlowosci": [
+    "nowa lub powiększona zmiana okołowierzchołkowa",
+    "przetoka",
+    "nieszczelna odbudowa"
+   ],
+   "dokumentacja": {
+    "niezbedne": [
+     {
+      "tekst": "Data i oznaczenie lekarza",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Opis wykonanego badania i stwierdzonych odchyleń (lub informacja lekarza o braku odchyleń w badanych strukturach)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ],
+    "zalecane": [
+     {
+      "tekst": "Kryteria oceny wyniku (kliniczne i RTG)",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-ESE-2006"
+      ]
+     }
+    ],
+    "sytuacyjne": [
+     {
+      "tekst": "Plan przy niepowodzeniu",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-ESE-S3-2023"
+      ],
+      "warunek": "niepowodzenie leczenia"
+     }
+    ]
+   },
+   "powiazania": {
+    "icd9": [
+     {
+      "kod": "23.0102",
+      "kiedy": "w ramach badania kontrolnego"
+     }
+    ],
+    "icd10": [
+     {
+      "kod": "K04.5",
+      "kiedy": "przewlekłe zapalenie okołowierzchołkowe – przy niepowodzeniu, rozpoznanie lekarza"
+     }
+    ]
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-2006",
+    "SRC-KLIN-ESE-S3-2023",
+    "SRC-DU-2026-1391"
+   ],
+   "status": "draft"
+  }
+ ]
 }

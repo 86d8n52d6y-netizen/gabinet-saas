@@ -1,4 +1,206 @@
 {
- "opis": "Pola wspólne formularzy (badania i procedury). Wartość pola wpisuje lekarz; brak wartości domyślnych wyników.",
- "pola": []
+ "opis": "Pola wspólne formularzy (badania i procedury). Wartość wpisuje lekarz; brak wartości domyślnych wyników (nie zaznaczamy „prawidłowo” ani „bez powikłań” za lekarza).",
+ "pola": [
+  {
+   "id": "POLE-ZAB",
+   "etykieta": "Ząb (FDI)",
+   "typ": "zab",
+   "opis": "Oznaczenie wg PN-EN ISO 3950 (FDI); ząb dodatkowy „ZD”.",
+   "zrodla": [
+    "SRC-NFZ-KOM-6113"
+   ]
+  },
+  {
+   "id": "POLE-ZEBY",
+   "etykieta": "Zęby / okolica (FDI)",
+   "typ": "zeby",
+   "zrodla": [
+    "SRC-NFZ-KOM-6113"
+   ]
+  },
+  {
+   "id": "POLE-POWIERZCHNIE",
+   "etykieta": "Powierzchnie",
+   "typ": "powierzchnie",
+   "opis": "M, O/I, D, B/L, P (kombinacje)"
+  },
+  {
+   "id": "POLE-LOKALIZACJA",
+   "etykieta": "Lokalizacja (tekstem)",
+   "typ": "tekst",
+   "opis": "np. ½ łuku górnego prawego, okolica 33–43, przedsionek"
+  },
+  {
+   "id": "POLE-LUK",
+   "etykieta": "Zakres łuku",
+   "typ": "wybor",
+   "opcje": [
+    "¼ łuku (ćwiartka)",
+    "½ łuku",
+    "cały łuk",
+    "całe uzębienie"
+   ],
+   "wlasna_wartosc": true
+  },
+  {
+   "id": "POLE-ROZPOZNANIE",
+   "etykieta": "Rozpoznanie (ICD-10)",
+   "typ": "tekst",
+   "opis": "Wybór lekarza; podpowiedzi z mapowań – nigdy automatycznie."
+  },
+  {
+   "id": "POLE-WSKAZANIE",
+   "etykieta": "Wskazanie kliniczne",
+   "typ": "tekst_dlugi"
+  },
+  {
+   "id": "POLE-ZNIECZ-RODZAJ",
+   "etykieta": "Znieczulenie",
+   "typ": "wybor",
+   "opcje": [
+    "nie stosowano",
+    "powierzchniowe",
+    "nasiękowe",
+    "przewodowe wewnątrzustne",
+    "przewodowe zewnątrzustne",
+    "śródwięzadłowe"
+   ],
+   "wlasna_wartosc": true
+  },
+  {
+   "id": "POLE-ZNIECZ-PREPARAT",
+   "etykieta": "Preparat znieczulający",
+   "typ": "tekst",
+   "opis": "substancja, stężenie, środek obkurczający (np. artykaina 4% z adrenaliną 1:100 000)"
+  },
+  {
+   "id": "POLE-ZNIECZ-DAWKA",
+   "etykieta": "Dawka (ml / ampułki)",
+   "typ": "tekst"
+  },
+  {
+   "id": "POLE-ZNIECZ-MIEJSCE",
+   "etykieta": "Miejsce podania",
+   "typ": "tekst"
+  },
+  {
+   "id": "POLE-IZOLACJA",
+   "etykieta": "Izolacja pola zabiegowego",
+   "typ": "wybor",
+   "opcje": [
+    "koferdam",
+    "wałki ligninowe i ślinociąg",
+    "OptraGate / rozwieracz",
+    "bez izolacji (uzasadnij)"
+   ],
+   "wlasna_wartosc": true
+  },
+  {
+   "id": "POLE-MATERIAL",
+   "etykieta": "Materiał",
+   "typ": "tekst",
+   "opis": "nazwa handlowa lub rodzaj materiału – wpisuje lekarz"
+  },
+  {
+   "id": "POLE-MATERIAL-PODKLAD",
+   "etykieta": "Materiał podkładowy / ochrona miazgi",
+   "typ": "tekst"
+  },
+  {
+   "id": "POLE-KOLOR",
+   "etykieta": "Kolor (skala)",
+   "typ": "tekst"
+  },
+  {
+   "id": "POLE-PRZEBIEG",
+   "etykieta": "Przebieg (opis czynności)",
+   "typ": "tekst_dlugi"
+  },
+  {
+   "id": "POLE-WYNIK",
+   "etykieta": "Wynik / ocena efektu",
+   "typ": "tekst_dlugi"
+  },
+  {
+   "id": "POLE-POWIKLANIA",
+   "etykieta": "Powikłania w trakcie / bezpośrednio po",
+   "typ": "wybor",
+   "opcje": [
+    "nie wystąpiły",
+    "wystąpiły – opis poniżej"
+   ],
+   "wlasna_wartosc": true
+  },
+  {
+   "id": "POLE-POWIKLANIA-OPIS",
+   "etykieta": "Opis powikłań i postępowania",
+   "typ": "tekst_dlugi"
+  },
+  {
+   "id": "POLE-ZALECENIA-FORMA",
+   "etykieta": "Forma przekazania zaleceń",
+   "typ": "wybor",
+   "opcje": [
+    "ustnie",
+    "ustnie i pisemnie"
+   ],
+   "wlasna_wartosc": true
+  },
+  {
+   "id": "POLE-ZALECENIA",
+   "etykieta": "Zalecenia dla pacjenta",
+   "typ": "tekst_dlugi"
+  },
+  {
+   "id": "POLE-KONTROLA",
+   "etykieta": "Termin / warunki kontroli",
+   "typ": "tekst"
+  },
+  {
+   "id": "POLE-DECYZJA",
+   "etykieta": "Decyzja lekarza / plan dalszego postępowania",
+   "typ": "tekst_dlugi"
+  },
+  {
+   "id": "POLE-UWAGI",
+   "etykieta": "Uwagi",
+   "typ": "tekst_dlugi"
+  },
+  {
+   "id": "POLE-ZGODA",
+   "etykieta": "Zgoda pacjenta (świadoma) – odnotowana",
+   "typ": "przelacznik",
+   "opis": "zgoda ustna lub pisemna zależnie od rodzaju zabiegu",
+   "zrodla": [
+    "SRC-PRAWA-PACJENTA"
+   ]
+  },
+  {
+   "id": "POLE-RTG",
+   "etykieta": "Zdjęcie RTG – numer / data / opis",
+   "typ": "tekst"
+  },
+  {
+   "id": "POLE-CZAS",
+   "etykieta": "Czas zabiegu",
+   "typ": "liczba",
+   "jednostka": "min",
+   "min": 0,
+   "max": 480
+  },
+  {
+   "id": "POLE-WIEK",
+   "etykieta": "Wiek pacjenta",
+   "typ": "liczba",
+   "jednostka": "lata",
+   "min": 0,
+   "max": 120,
+   "opis": "do reguł NFZ liczonych na urządzeniu (D2=A)"
+  },
+  {
+   "id": "POLE-DATA",
+   "etykieta": "Data",
+   "typ": "data"
+  }
+ ]
 }

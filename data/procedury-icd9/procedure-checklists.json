@@ -1,5 +1,110 @@
 {
  "opis": "Checklisty kompletności dokumentacji. obowiazkowe – tylko z podstawą prawną/NFZ i źródłem; zalecane / sytuacyjne / rozliczeniowe nie blokują zapisu.",
- "wspolne": [],
+ "wspolne": [
+  {
+   "id": "CHK-W-DATA",
+   "tekst": "Data udzielenia świadczenia",
+   "poziom": "obowiazkowe",
+   "podstawa": "wymaganie_prawne",
+   "zrodla": [
+    "SRC-DU-2026-1391"
+   ],
+   "pole": "POLE-DATA"
+  },
+  {
+   "id": "CHK-W-OPIS",
+   "tekst": "Opis udzielonego świadczenia (co wykonano, gdzie)",
+   "poziom": "obowiazkowe",
+   "podstawa": "wymaganie_prawne",
+   "zrodla": [
+    "SRC-DU-2026-1391"
+   ],
+   "pole": "POLE-PRZEBIEG"
+  },
+  {
+   "id": "CHK-W-ROZPOZNANIE",
+   "tekst": "Rozpoznanie (ICD-10) lub wskazanie do świadczenia",
+   "poziom": "obowiazkowe",
+   "podstawa": "wymaganie_prawne",
+   "zrodla": [
+    "SRC-DU-2026-1391",
+    "SRC-NFZ-KOM-8386"
+   ],
+   "pole": "POLE-ROZPOZNANIE"
+  },
+  {
+   "id": "CHK-W-LEKARZ",
+   "tekst": "Oznaczenie lekarza udzielającego świadczenia",
+   "poziom": "obowiazkowe",
+   "podstawa": "wymaganie_prawne",
+   "zrodla": [
+    "SRC-DU-2026-1391"
+   ],
+   "warunek": "w aplikacji – z konta lekarza"
+  },
+  {
+   "id": "CHK-W-ZGODNOSC",
+   "tekst": "Świadczenie przekazane do rozliczenia zgodne z dokumentacją",
+   "poziom": "rozliczeniowe",
+   "podstawa": "wymaganie_nfz",
+   "zrodla": [
+    "SRC-ZARZ-60-2023-TJ"
+   ],
+   "warunek": "przy rozliczeniu z NFZ (R-DOK-01)"
+  },
+  {
+   "id": "CHK-W-ZAB-ISO",
+   "tekst": "Lokalizacja zęba wg PN-EN ISO 3950 (FDI)",
+   "poziom": "rozliczeniowe",
+   "podstawa": "wymaganie_nfz",
+   "zrodla": [
+    "SRC-NFZ-KOM-6113"
+   ],
+   "warunek": "świadczenia na zębie, rozliczenie NFZ (R-DOK-02)",
+   "pole": "POLE-ZAB"
+  },
+  {
+   "id": "CHK-W-ZNIECZ",
+   "tekst": "Znieczulenie: rodzaj, preparat, dawka, miejsce",
+   "poziom": "sytuacyjne",
+   "podstawa": "zalecenie_kliniczne",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "warunek": "gdy zastosowano znieczulenie",
+   "pole": "POLE-ZNIECZ-PREPARAT"
+  },
+  {
+   "id": "CHK-W-ZALECENIA",
+   "tekst": "Zalecenia przekazane pacjentowi (i forma)",
+   "poziom": "zalecane",
+   "podstawa": "zalecenie_kliniczne",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "pole": "POLE-ZALECENIA"
+  },
+  {
+   "id": "CHK-W-POWIKLANIA",
+   "tekst": "Powikłania – odnotowane albo zaznaczony ich brak przez lekarza",
+   "poziom": "zalecane",
+   "podstawa": "zalecenie_kliniczne",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "pole": "POLE-POWIKLANIA"
+  },
+  {
+   "id": "CHK-W-ZGODA",
+   "tekst": "Zgoda pacjenta na zabieg (pisemna przy zabiegu o podwyższonym ryzyku)",
+   "poziom": "sytuacyjne",
+   "podstawa": "wymaganie_prawne",
+   "zrodla": [
+    "SRC-PRAWA-PACJENTA"
+   ],
+   "warunek": "zabiegi chirurgiczne i o podwyższonym ryzyku",
+   "pole": "POLE-ZGODA"
+  }
+ ],
  "checklisty": []
 }
