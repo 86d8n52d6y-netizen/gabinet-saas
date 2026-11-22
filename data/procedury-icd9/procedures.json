@@ -2363,22 +2363,372 @@
    "kod": "23.1102",
    "nazwa_oficjalna": "Całkowite opracowanie ubytku próchnicowego z założeniem podkładu",
    "kategoria": "leczenie próchnicy",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Opracowanie ubytku z podkładem",
+   "opis": "Opracowanie ubytku z podkładem (kod etapu opracowania – bez wypełnienia).",
+   "cel": {
+    "na_czym_polega": "Opracowanie ubytku z podkładem: usunięcie próchnicy i założenie podkładu jedno- warstwowego przed wypełnieniem.",
+    "cel_kliniczny": "Ochrona miazgi przed odbudową.",
+    "wskazania": [
+     "ubytek średni / głęboki – etap przed wypełnieniem"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "żywotność miazgi i objawy",
+     "głębokość ubytku (klinicznie / RTG)"
+    ],
+    "wywiad": [
+     "ból, alergie na materiały"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "nieodwracalne zapalenie / martwica miazgi – leczenie endodontyczne",
+      "rodzaj": "wzgledne"
+     }
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "diagnostyka zęba",
+     "zestaw zachowawczy"
+    ],
+    "sytuacyjne": [
+     "znieczulenie",
+     "izolacja (koferdam / względna)",
+     "formówka i klin"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-OPRACOWANIE-UBYTKU"
+    },
+    {
+     "krok": "KROK-OCHRONA-MIAZGI"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IZOL-WZGL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "alternatywa"
+    },
+    {
+     "mat": "MAT-MATRYCA",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-SYSTEM-WIAZ",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KOMPOZYT",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-GLASJONOMER",
+     "rola": "alternatywa"
+    },
+    {
+     "mat": "MAT-KRZEM-WAPN",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-LAMPA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-POLERY",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KALKA",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "szczelność brzeżna, brak nawisów",
+     "punkt styczny",
+     "zwarcie"
+    ],
+    "nieprawidlowosci": [
+     "nawis",
+     "brak punktu stycznego",
+     "nadwrażliwość pozabiegowa"
+    ],
+    "dalsze_postepowanie": [
+     "korekta; przy objawach miazgowych – ponowna diagnostyka"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Nie jeść do ustąpienia znieczulenia.",
+     "Przejściowa wrażliwość na zimno możliwa przez kilka dni."
+    ],
+    "kontakt_gdy": [
+     "ból samoistny / nocny",
+     "pęknięcie wypełnienia"
+    ],
+    "kontrola": "Na badaniu kontrolnym."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Materiał podkładowy",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-ESE-VPT-2019"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Kod etapu – w rozliczeniu NFZ stosuje się kody odbudowy 23.1502–23.1506. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-VPT-2019",
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1103",
    "kod": "23.1103",
    "nazwa_oficjalna": "Całkowite opracowanie rozległego ubytku próchnicowego z założeniem podwójnego podkładu",
    "kategoria": "leczenie próchnicy",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Opracowanie rozległego ubytku z podwójnym podkładem",
+   "opis": "Opracowanie rozległego ubytku z podwójnym podkładem (kod etapu opracowania – bez wypełnienia).",
+   "cel": {
+    "na_czym_polega": "Opracowanie rozległego ubytku z podwójnym podkładem: usunięcie próchnicy i założenie podkładu dwuwarstwowego przed wypełnieniem.",
+    "cel_kliniczny": "Ochrona miazgi przed odbudową.",
+    "wskazania": [
+     "ubytek średni / głęboki – etap przed wypełnieniem"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "żywotność miazgi i objawy",
+     "głębokość ubytku (klinicznie / RTG)"
+    ],
+    "wywiad": [
+     "ból, alergie na materiały"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "nieodwracalne zapalenie / martwica miazgi – leczenie endodontyczne",
+      "rodzaj": "wzgledne"
+     }
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "diagnostyka zęba",
+     "zestaw zachowawczy"
+    ],
+    "sytuacyjne": [
+     "znieczulenie",
+     "izolacja (koferdam / względna)",
+     "formówka i klin"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-OPRACOWANIE-UBYTKU"
+    },
+    {
+     "krok": "KROK-OCHRONA-MIAZGI"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IZOL-WZGL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "alternatywa"
+    },
+    {
+     "mat": "MAT-MATRYCA",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-SYSTEM-WIAZ",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KOMPOZYT",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-GLASJONOMER",
+     "rola": "alternatywa"
+    },
+    {
+     "mat": "MAT-KRZEM-WAPN",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-LAMPA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-POLERY",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KALKA",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "szczelność brzeżna, brak nawisów",
+     "punkt styczny",
+     "zwarcie"
+    ],
+    "nieprawidlowosci": [
+     "nawis",
+     "brak punktu stycznego",
+     "nadwrażliwość pozabiegowa"
+    ],
+    "dalsze_postepowanie": [
+     "korekta; przy objawach miazgowych – ponowna diagnostyka"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Nie jeść do ustąpienia znieczulenia.",
+     "Przejściowa wrażliwość na zimno możliwa przez kilka dni."
+    ],
+    "kontakt_gdy": [
+     "ból samoistny / nocny",
+     "pęknięcie wypełnienia"
+    ],
+    "kontrola": "Na badaniu kontrolnym."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Materiał podkładowy",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-ESE-VPT-2019"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Kod etapu – w rozliczeniu NFZ stosuje się kody odbudowy 23.1502–23.1506. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-VPT-2019",
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1104",
@@ -3532,44 +3882,788 @@
    "kod": "23.1109",
    "nazwa_oficjalna": "Wypełnienie ubytku korony zęba na 1 powierzchni",
    "kategoria": "leczenie próchnicy",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Wypełnienie – 1 powierzchni",
+   "opis": "Wypełnienie ubytku korony zęba na 1 powierzchni.",
+   "cel": {
+    "na_czym_polega": "Wypełnienie opracowanego ubytku na 1 powierzchni.",
+    "cel_kliniczny": "Odtworzenie kształtu i funkcji zęba.",
+    "wskazania": [
+     "opracowany ubytek próchnicowy / niepróchnicowy"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "żywotność miazgi i objawy",
+     "głębokość ubytku (klinicznie / RTG)"
+    ],
+    "wywiad": [
+     "ból, alergie na materiały"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "nieodwracalne zapalenie / martwica miazgi – leczenie endodontyczne",
+      "rodzaj": "wzgledne"
+     }
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "diagnostyka zęba",
+     "zestaw zachowawczy"
+    ],
+    "sytuacyjne": [
+     "znieczulenie",
+     "izolacja (koferdam / względna)",
+     "formówka i klin"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-DIAGNOSTYKA-ZEBA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-KOLOR"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-OPRACOWANIE-UBYTKU"
+    },
+    {
+     "krok": "KROK-OCHRONA-MIAZGI"
+    },
+    {
+     "krok": "KROK-MATRYCA"
+    },
+    {
+     "krok": "KROK-ADHEZJA"
+    },
+    {
+     "krok": "KROK-KOMPOZYT"
+    },
+    {
+     "krok": "KROK-WYKONCZENIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IZOL-WZGL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "alternatywa"
+    },
+    {
+     "mat": "MAT-MATRYCA",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-SYSTEM-WIAZ",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KOMPOZYT",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-GLASJONOMER",
+     "rola": "alternatywa"
+    },
+    {
+     "mat": "MAT-KRZEM-WAPN",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-LAMPA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-POLERY",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KALKA",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "szczelność brzeżna, brak nawisów",
+     "punkt styczny",
+     "zwarcie"
+    ],
+    "nieprawidlowosci": [
+     "nawis",
+     "brak punktu stycznego",
+     "nadwrażliwość pozabiegowa"
+    ],
+    "dalsze_postepowanie": [
+     "korekta; przy objawach miazgowych – ponowna diagnostyka"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Nie jeść do ustąpienia znieczulenia.",
+     "Przejściowa wrażliwość na zimno możliwa przez kilka dni."
+    ],
+    "kontakt_gdy": [
+     "ból samoistny / nocny",
+     "pęknięcie wypełnienia"
+    ],
+    "kontrola": "Na badaniu kontrolnym."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Starszy kod ICD-9 („wypełnienie”); w wykazie świadczeń gwarantowanych (audyt) stosowane są 23.1502–23.1506 – do potwierdzenia, czy NFZ akceptuje ten kod. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Kod obecny w ICD-9 PL 5.91 obok 23.1502–23.1506 – Patryk: czy jest jeszcze używany (raport, kwestia 6)."
   },
   {
    "id": "PROC-23.1110",
    "kod": "23.1110",
    "nazwa_oficjalna": "Wypełnienie ubytku korony zęba na 2 powierzchniach",
    "kategoria": "leczenie próchnicy",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Wypełnienie – 2 powierzchniach",
+   "opis": "Wypełnienie ubytku korony zęba na 2 powierzchniach.",
+   "cel": {
+    "na_czym_polega": "Wypełnienie opracowanego ubytku na 2 powierzchniach.",
+    "cel_kliniczny": "Odtworzenie kształtu i funkcji zęba.",
+    "wskazania": [
+     "opracowany ubytek próchnicowy / niepróchnicowy"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "żywotność miazgi i objawy",
+     "głębokość ubytku (klinicznie / RTG)"
+    ],
+    "wywiad": [
+     "ból, alergie na materiały"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "nieodwracalne zapalenie / martwica miazgi – leczenie endodontyczne",
+      "rodzaj": "wzgledne"
+     }
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "diagnostyka zęba",
+     "zestaw zachowawczy"
+    ],
+    "sytuacyjne": [
+     "znieczulenie",
+     "izolacja (koferdam / względna)",
+     "formówka i klin"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-DIAGNOSTYKA-ZEBA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-KOLOR"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-OPRACOWANIE-UBYTKU"
+    },
+    {
+     "krok": "KROK-OCHRONA-MIAZGI"
+    },
+    {
+     "krok": "KROK-MATRYCA"
+    },
+    {
+     "krok": "KROK-ADHEZJA"
+    },
+    {
+     "krok": "KROK-KOMPOZYT"
+    },
+    {
+     "krok": "KROK-WYKONCZENIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IZOL-WZGL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "alternatywa"
+    },
+    {
+     "mat": "MAT-MATRYCA",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-SYSTEM-WIAZ",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KOMPOZYT",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-GLASJONOMER",
+     "rola": "alternatywa"
+    },
+    {
+     "mat": "MAT-KRZEM-WAPN",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-LAMPA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-POLERY",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KALKA",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "szczelność brzeżna, brak nawisów",
+     "punkt styczny",
+     "zwarcie"
+    ],
+    "nieprawidlowosci": [
+     "nawis",
+     "brak punktu stycznego",
+     "nadwrażliwość pozabiegowa"
+    ],
+    "dalsze_postepowanie": [
+     "korekta; przy objawach miazgowych – ponowna diagnostyka"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Nie jeść do ustąpienia znieczulenia.",
+     "Przejściowa wrażliwość na zimno możliwa przez kilka dni."
+    ],
+    "kontakt_gdy": [
+     "ból samoistny / nocny",
+     "pęknięcie wypełnienia"
+    ],
+    "kontrola": "Na badaniu kontrolnym."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Starszy kod ICD-9 („wypełnienie”); w wykazie świadczeń gwarantowanych (audyt) stosowane są 23.1502–23.1506 – do potwierdzenia, czy NFZ akceptuje ten kod. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Kod obecny w ICD-9 PL 5.91 obok 23.1502–23.1506 – Patryk: czy jest jeszcze używany (raport, kwestia 6)."
   },
   {
    "id": "PROC-23.1111",
    "kod": "23.1111",
    "nazwa_oficjalna": "Wypełnienie ubytku korony zęba na 3 powierzchniach",
    "kategoria": "leczenie próchnicy",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Wypełnienie – 3 powierzchniach",
+   "opis": "Wypełnienie ubytku korony zęba na 3 powierzchniach.",
+   "cel": {
+    "na_czym_polega": "Wypełnienie opracowanego ubytku na 3 powierzchniach.",
+    "cel_kliniczny": "Odtworzenie kształtu i funkcji zęba.",
+    "wskazania": [
+     "opracowany ubytek próchnicowy / niepróchnicowy"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "żywotność miazgi i objawy",
+     "głębokość ubytku (klinicznie / RTG)"
+    ],
+    "wywiad": [
+     "ból, alergie na materiały"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "nieodwracalne zapalenie / martwica miazgi – leczenie endodontyczne",
+      "rodzaj": "wzgledne"
+     }
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "diagnostyka zęba",
+     "zestaw zachowawczy"
+    ],
+    "sytuacyjne": [
+     "znieczulenie",
+     "izolacja (koferdam / względna)",
+     "formówka i klin"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-DIAGNOSTYKA-ZEBA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-KOLOR"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-OPRACOWANIE-UBYTKU"
+    },
+    {
+     "krok": "KROK-OCHRONA-MIAZGI"
+    },
+    {
+     "krok": "KROK-MATRYCA"
+    },
+    {
+     "krok": "KROK-ADHEZJA"
+    },
+    {
+     "krok": "KROK-KOMPOZYT"
+    },
+    {
+     "krok": "KROK-WYKONCZENIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IZOL-WZGL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "alternatywa"
+    },
+    {
+     "mat": "MAT-MATRYCA",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-SYSTEM-WIAZ",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KOMPOZYT",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-GLASJONOMER",
+     "rola": "alternatywa"
+    },
+    {
+     "mat": "MAT-KRZEM-WAPN",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-LAMPA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-POLERY",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KALKA",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "szczelność brzeżna, brak nawisów",
+     "punkt styczny",
+     "zwarcie"
+    ],
+    "nieprawidlowosci": [
+     "nawis",
+     "brak punktu stycznego",
+     "nadwrażliwość pozabiegowa"
+    ],
+    "dalsze_postepowanie": [
+     "korekta; przy objawach miazgowych – ponowna diagnostyka"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Nie jeść do ustąpienia znieczulenia.",
+     "Przejściowa wrażliwość na zimno możliwa przez kilka dni."
+    ],
+    "kontakt_gdy": [
+     "ból samoistny / nocny",
+     "pęknięcie wypełnienia"
+    ],
+    "kontrola": "Na badaniu kontrolnym."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Starszy kod ICD-9 („wypełnienie”); w wykazie świadczeń gwarantowanych (audyt) stosowane są 23.1502–23.1506 – do potwierdzenia, czy NFZ akceptuje ten kod. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Kod obecny w ICD-9 PL 5.91 obok 23.1502–23.1506 – Patryk: czy jest jeszcze używany (raport, kwestia 6)."
   },
   {
    "id": "PROC-23.1112",
    "kod": "23.1112",
    "nazwa_oficjalna": "Wypełnienie ubytku korony zęba na więcej niż 3 powierzchniach",
    "kategoria": "leczenie próchnicy",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Wypełnienie – więcej niż 3 powierzchniach",
+   "opis": "Wypełnienie ubytku korony zęba na więcej niż 3 powierzchniach.",
+   "cel": {
+    "na_czym_polega": "Wypełnienie opracowanego ubytku na więcej niż 3 powierzchniach.",
+    "cel_kliniczny": "Odtworzenie kształtu i funkcji zęba.",
+    "wskazania": [
+     "opracowany ubytek próchnicowy / niepróchnicowy"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "żywotność miazgi i objawy",
+     "głębokość ubytku (klinicznie / RTG)"
+    ],
+    "wywiad": [
+     "ból, alergie na materiały"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "nieodwracalne zapalenie / martwica miazgi – leczenie endodontyczne",
+      "rodzaj": "wzgledne"
+     }
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "diagnostyka zęba",
+     "zestaw zachowawczy"
+    ],
+    "sytuacyjne": [
+     "znieczulenie",
+     "izolacja (koferdam / względna)",
+     "formówka i klin"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-DIAGNOSTYKA-ZEBA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-KOLOR"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-OPRACOWANIE-UBYTKU"
+    },
+    {
+     "krok": "KROK-OCHRONA-MIAZGI"
+    },
+    {
+     "krok": "KROK-MATRYCA"
+    },
+    {
+     "krok": "KROK-ADHEZJA"
+    },
+    {
+     "krok": "KROK-KOMPOZYT"
+    },
+    {
+     "krok": "KROK-WYKONCZENIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IZOL-WZGL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "alternatywa"
+    },
+    {
+     "mat": "MAT-MATRYCA",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-SYSTEM-WIAZ",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KOMPOZYT",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-GLASJONOMER",
+     "rola": "alternatywa"
+    },
+    {
+     "mat": "MAT-KRZEM-WAPN",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-LAMPA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-POLERY",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KALKA",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "szczelność brzeżna, brak nawisów",
+     "punkt styczny",
+     "zwarcie"
+    ],
+    "nieprawidlowosci": [
+     "nawis",
+     "brak punktu stycznego",
+     "nadwrażliwość pozabiegowa"
+    ],
+    "dalsze_postepowanie": [
+     "korekta; przy objawach miazgowych – ponowna diagnostyka"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Nie jeść do ustąpienia znieczulenia.",
+     "Przejściowa wrażliwość na zimno możliwa przez kilka dni."
+    ],
+    "kontakt_gdy": [
+     "ból samoistny / nocny",
+     "pęknięcie wypełnienia"
+    ],
+    "kontrola": "Na badaniu kontrolnym."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Starszy kod ICD-9 („wypełnienie”); w wykazie świadczeń gwarantowanych (audyt) stosowane są 23.1502–23.1506 – do potwierdzenia, czy NFZ akceptuje ten kod. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Kod obecny w ICD-9 PL 5.91 obok 23.1502–23.1506 – Patryk: czy jest jeszcze używany (raport, kwestia 6)."
   },
   {
    "id": "PROC-23.1201",
@@ -3789,22 +4883,326 @@
    "kod": "23.1202",
    "nazwa_oficjalna": "Dewitalizacja miazgi zęba z zaopatrzeniem ubytku opatrunkiem",
    "kategoria": "endodoncja – leczenie miazgi",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Dewitalizacja miazgi",
+   "opis": "Dewitalizacja miazgi zęba z zaopatrzeniem ubytku opatrunkiem.",
+   "cel": {
+    "na_czym_polega": "Założenie preparatu dewitalizującego na odsłoniętą miazgę i szczelny opatrunek; na kolejnej wizycie – amputacja / ekstyrpacja zdewitalizowanej miazgi.",
+    "cel_kliniczny": "Umrtwienie miazgi przed jej usunięciem.",
+    "wskazania": [
+     "sytuacje, w których skuteczne znieczulenie nie jest możliwe (decyzja lekarza)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "stan miazgi i tkanek okołowierzchołkowych",
+     "RTG przedzabiegowe",
+     "możliwość odbudowy"
+    ],
+    "wywiad": [
+     "ból, obrzęk, choroby ogólne, alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "brak możliwości szczelnego zamknięcia ubytku (ryzyko martwicy tkanek)",
+      "rodzaj": "bezwzgledne"
+     },
+     {
+      "tekst": "ubytek przydziąsłowy / poddziąsłowy",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do endodonty w przypadkach trudnych",
+     "ekstrakcja przy złym rokowaniu"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "koferdam",
+     "zestaw endodontyczny"
+    ],
+    "sytuacyjne": [
+     "endometr",
+     "powiększenie"
+    ],
+    "znieczulenie": "Przy żywej miazdze – konieczne; przy martwicy – zależnie od objawów."
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-OPRACOWANIE-UBYTKU"
+    },
+    {
+     "krok": "KROK-DEWITALIZACJA"
+    },
+    {
+     "krok": "KROK-OPATRUNEK"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-PREP-DEWIT",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-OPATR-TYMCZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IZOL-WZGL",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "szczelność opatrunku"
+    ],
+    "dalsze_postepowanie": [
+     "wizyta w terminie zgodnym z preparatem"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Konieczne zgłoszenie się w wyznaczonym terminie."
+    ],
+    "kontakt_gdy": [
+     "wypadnięcie opatrunku",
+     "ból dziąsła przy zębie"
+    ]
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Preparat, termin kolejnej wizyty",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.2312020 – 36 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy)",
+     "zał. 2 (<18)",
+     "zał. 2b (<18 (szkoła))"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Metoda z użyciem preparatu dewitalizującego – nadal w wykazie świadczeń gwarantowanych, ale współczesne wytyczne (ESE) preferują leczenie w znieczuleniu; do oceny Patryka, jak ją przedstawiać w aplikacji."
   },
   {
    "id": "PROC-23.1203",
    "kod": "23.1203",
    "nazwa_oficjalna": "Amputacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem",
    "kategoria": "endodoncja – leczenie miazgi",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Amputacja przyżyciowa – ząb niedojrzały",
+   "opis": "Amputacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem (apeksogeneza).",
+   "cel": {
+    "na_czym_polega": "Pulpotomia częściowa / całkowita z pokryciem materiałem krzemianowo-wapniowym, aby umożliwić dalszy rozwój korzenia.",
+    "cel_kliniczny": "Zachowanie żywej miazgi korzeniowej i dokończenie rozwoju korzenia.",
+    "wskazania": [
+     "obnażenie miazgi (uraz / próchnica) w zębie niedojrzałym z kontrolowanym krwawieniem"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "stan miazgi i tkanek okołowierzchołkowych",
+     "RTG przedzabiegowe",
+     "możliwość odbudowy"
+    ],
+    "wywiad": [
+     "ból, obrzęk, choroby ogólne, alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "martwica miazgi",
+      "rodzaj": "bezwzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do endodonty w przypadkach trudnych",
+     "ekstrakcja przy złym rokowaniu"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "koferdam",
+     "zestaw endodontyczny"
+    ],
+    "sytuacyjne": [
+     "endometr",
+     "powiększenie"
+    ],
+    "znieczulenie": "Przy żywej miazdze – konieczne; przy martwicy – zależnie od objawów."
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-AMPUTACJA"
+    },
+    {
+     "krok": "KROK-ADHEZJA"
+    },
+    {
+     "krok": "KROK-KOMPOZYT"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-KRZEM-WAPN",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NAOCL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KOMPOZYT",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza, szczelność"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola RTG rozwoju korzenia i żywotności"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Dolegliwości przy nagryzaniu kilka dni – leki przeciwbólowe wg zaleceń.",
+     "Nie gryźć twardych pokarmów do odbudowy ostatecznej."
+    ],
+    "kontakt_gdy": [
+     "narastający ból, obrzęk, gorączka"
+    ],
+    "kontrola": "Odbudowa ostateczna możliwie szybko; RTG kontrolne po ≥ 1 roku."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Stadium rozwoju korzenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-ESE-S3-2023"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia.",
+     "zał. 2 (<18)",
+     "zał. 2b (<18 (szkoła))"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023",
+    "SRC-KLIN-ESE-VPT-2019",
+    "SRC-KLIN-IADT-ZLAM-2020"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1204",
@@ -4021,11 +5419,194 @@
    "kod": "23.1205",
    "nazwa_oficjalna": "Ekstyrpacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem",
    "kategoria": "endodoncja – leczenie miazgi",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Ekstyrpacja przyżyciowa – ząb niedojrzały",
+   "opis": "Ekstyrpacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem.",
+   "cel": {
+    "na_czym_polega": "Usunięcie żywej miazgi z zęba niedojrzałego, gdy jej zachowanie nie jest możliwe; dalej zamknięcie wierzchołka.",
+    "cel_kliniczny": "Usunięcie zmienionej miazgi z zęba niedojrzałego.",
+    "wskazania": [
+     "nieodwracalne zapalenie miazgi w zębie niedojrzałym, gdy pulpotomia nie jest możliwa"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "stan miazgi i tkanek okołowierzchołkowych",
+     "RTG przedzabiegowe",
+     "możliwość odbudowy"
+    ],
+    "wywiad": [
+     "ból, obrzęk, choroby ogólne, alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ząb bez możliwości odbudowy / złamanie pionowe korzenia",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do endodonty w przypadkach trudnych",
+     "ekstrakcja przy złym rokowaniu"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "koferdam",
+     "zestaw endodontyczny"
+    ],
+    "sytuacyjne": [
+     "endometr",
+     "powiększenie"
+    ],
+    "znieczulenie": "Przy żywej miazdze – konieczne; przy martwicy – zależnie od objawów."
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-DOSTEP-ENDO"
+    },
+    {
+     "krok": "KROK-EKSTYRPACJA"
+    },
+    {
+     "krok": "KROK-DLUGOSC-ROBOCZA"
+    },
+    {
+     "krok": "KROK-IRYGACJA"
+    },
+    {
+     "krok": "KROK-WKLADKA"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-PILNIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ENDOMETR",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-NAOCL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-EDTA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SACZKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-RTG",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-CAOH",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-OPATR-TYMCZ",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "RTG końcowe: długość, szczelność, brak pustek",
+     "szczelne zamknięcie korony"
+    ],
+    "nieprawidlowosci": [
+     "wypełnienie za krótkie / przepchnięte",
+     "perforacja",
+     "złamane narzędzie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola kliniczna i RTG po co najmniej roku (ESE)"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Dolegliwości przy nagryzaniu kilka dni – leki przeciwbólowe wg zaleceń.",
+     "Nie gryźć twardych pokarmów do odbudowy ostatecznej."
+    ],
+    "kontakt_gdy": [
+     "narastający ból, obrzęk, gorączka"
+    ],
+    "kontrola": "Odbudowa ostateczna możliwie szybko; RTG kontrolne po ≥ 1 roku."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie (za każdy kanał) jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia.",
+     "zał. 2 (<18): Świadczenie – za każdy kanał.",
+     "zał. 2b (<18 (szkoła)): Świadczenie – za każdy kanał."
+    ],
+    "reguly": [
+     "R-ENDO-DZ"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1206",
@@ -4277,44 +5858,730 @@
    "kod": "23.1207",
    "nazwa_oficjalna": "Amputacja zdewitalizowanej miazgi zęba",
    "kategoria": "endodoncja – leczenie miazgi",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Amputacja zdewitalizowanej miazgi",
+   "opis": "Amputacja zdewitalizowanej miazgi.",
+   "cel": {
+    "na_czym_polega": "Usunięcie zdewitalizowanej miazgi koronowej po wcześniejszej dewitalizacji, opatrunek na kikuty, odbudowa.",
+    "cel_kliniczny": "Dokończenie leczenia po dewitalizacji.",
+    "wskazania": [
+     "stan po dewitalizacji miazgi (23.1202)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "stan miazgi i tkanek okołowierzchołkowych",
+     "RTG przedzabiegowe",
+     "możliwość odbudowy"
+    ],
+    "wywiad": [
+     "ból, obrzęk, choroby ogólne, alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ząb bez możliwości odbudowy / złamanie pionowe korzenia",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do endodonty w przypadkach trudnych",
+     "ekstrakcja przy złym rokowaniu"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "koferdam",
+     "zestaw endodontyczny"
+    ],
+    "sytuacyjne": [
+     "endometr",
+     "powiększenie"
+    ],
+    "znieczulenie": "Przy żywej miazdze – konieczne; przy martwicy – zależnie od objawów."
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-DOSTEP-ENDO"
+    },
+    {
+     "krok": "KROK-AMPUTACJA"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-PILNIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ENDOMETR",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-NAOCL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-EDTA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SACZKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-RTG",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-OPATR-TYMCZ",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "RTG końcowe: długość, szczelność, brak pustek",
+     "szczelne zamknięcie korony"
+    ],
+    "nieprawidlowosci": [
+     "wypełnienie za krótkie / przepchnięte",
+     "perforacja",
+     "złamane narzędzie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola kliniczna i RTG po co najmniej roku (ESE)"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Dolegliwości przy nagryzaniu kilka dni – leki przeciwbólowe wg zaleceń.",
+     "Nie gryźć twardych pokarmów do odbudowy ostatecznej."
+    ],
+    "kontakt_gdy": [
+     "narastający ból, obrzęk, gorączka"
+    ],
+    "kontrola": "Odbudowa ostateczna możliwie szybko; RTG kontrolne po ≥ 1 roku."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-2006"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Metoda z użyciem preparatu dewitalizującego – nadal w wykazie świadczeń gwarantowanych, ale współczesne wytyczne (ESE) preferują leczenie w znieczuleniu; do oceny Patryka, jak ją przedstawiać w aplikacji."
   },
   {
    "id": "PROC-23.1208",
    "kod": "23.1208",
    "nazwa_oficjalna": "Ekstyrpacja zdewitalizowanej miazgi zęba z nieuformowanym korzeniem",
    "kategoria": "endodoncja – leczenie miazgi",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Ekstyrpacja zdewitalizowanej miazgi – ząb niedojrzały",
+   "opis": "Ekstyrpacja zdewitalizowanej miazgi – ząb niedojrzały.",
+   "cel": {
+    "na_czym_polega": "Usunięcie zdewitalizowanej miazgi z kanałów po wcześniejszej dewitalizacji, opracowanie kanałów.",
+    "cel_kliniczny": "Dokończenie leczenia po dewitalizacji.",
+    "wskazania": [
+     "stan po dewitalizacji miazgi (23.1202)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "stan miazgi i tkanek okołowierzchołkowych",
+     "RTG przedzabiegowe",
+     "możliwość odbudowy"
+    ],
+    "wywiad": [
+     "ból, obrzęk, choroby ogólne, alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ząb bez możliwości odbudowy / złamanie pionowe korzenia",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do endodonty w przypadkach trudnych",
+     "ekstrakcja przy złym rokowaniu"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "koferdam",
+     "zestaw endodontyczny"
+    ],
+    "sytuacyjne": [
+     "endometr",
+     "powiększenie"
+    ],
+    "znieczulenie": "Przy żywej miazdze – konieczne; przy martwicy – zależnie od objawów."
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-DOSTEP-ENDO"
+    },
+    {
+     "krok": "KROK-EKSTYRPACJA"
+    },
+    {
+     "krok": "KROK-DLUGOSC-ROBOCZA"
+    },
+    {
+     "krok": "KROK-OPRACOWANIE-KANALU"
+    },
+    {
+     "krok": "KROK-IRYGACJA"
+    },
+    {
+     "krok": "KROK-WKLADKA"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-PILNIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ENDOMETR",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-NAOCL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-EDTA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SACZKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-RTG",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-OPATR-TYMCZ",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "RTG końcowe: długość, szczelność, brak pustek",
+     "szczelne zamknięcie korony"
+    ],
+    "nieprawidlowosci": [
+     "wypełnienie za krótkie / przepchnięte",
+     "perforacja",
+     "złamane narzędzie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola kliniczna i RTG po co najmniej roku (ESE)"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Dolegliwości przy nagryzaniu kilka dni – leki przeciwbólowe wg zaleceń.",
+     "Nie gryźć twardych pokarmów do odbudowy ostatecznej."
+    ],
+    "kontakt_gdy": [
+     "narastający ból, obrzęk, gorączka"
+    ],
+    "kontrola": "Odbudowa ostateczna możliwie szybko; RTG kontrolne po ≥ 1 roku."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie (za każdy kanał) jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia.",
+     "zał. 2 (<18): Świadczenie – za każdy kanał.",
+     "zał. 2b (<18 (szkoła)): Świadczenie – za każdy kanał."
+    ],
+    "reguly": [
+     "R-ENDO-DZ"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-2006"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Metoda z użyciem preparatu dewitalizującego – nadal w wykazie świadczeń gwarantowanych, ale współczesne wytyczne (ESE) preferują leczenie w znieczuleniu; do oceny Patryka, jak ją przedstawiać w aplikacji."
   },
   {
    "id": "PROC-23.1209",
    "kod": "23.1209",
    "nazwa_oficjalna": "Ekstyrpacja zdewitalizowanej miazgi zęba",
    "kategoria": "endodoncja – leczenie miazgi",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Ekstyrpacja zdewitalizowanej miazgi",
+   "opis": "Ekstyrpacja zdewitalizowanej miazgi.",
+   "cel": {
+    "na_czym_polega": "Usunięcie zdewitalizowanej miazgi z kanałów po wcześniejszej dewitalizacji, opracowanie kanałów.",
+    "cel_kliniczny": "Dokończenie leczenia po dewitalizacji.",
+    "wskazania": [
+     "stan po dewitalizacji miazgi (23.1202)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "stan miazgi i tkanek okołowierzchołkowych",
+     "RTG przedzabiegowe",
+     "możliwość odbudowy"
+    ],
+    "wywiad": [
+     "ból, obrzęk, choroby ogólne, alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ząb bez możliwości odbudowy / złamanie pionowe korzenia",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do endodonty w przypadkach trudnych",
+     "ekstrakcja przy złym rokowaniu"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "koferdam",
+     "zestaw endodontyczny"
+    ],
+    "sytuacyjne": [
+     "endometr",
+     "powiększenie"
+    ],
+    "znieczulenie": "Przy żywej miazdze – konieczne; przy martwicy – zależnie od objawów."
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-DOSTEP-ENDO"
+    },
+    {
+     "krok": "KROK-EKSTYRPACJA"
+    },
+    {
+     "krok": "KROK-DLUGOSC-ROBOCZA"
+    },
+    {
+     "krok": "KROK-OPRACOWANIE-KANALU"
+    },
+    {
+     "krok": "KROK-IRYGACJA"
+    },
+    {
+     "krok": "KROK-WKLADKA"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-PILNIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ENDOMETR",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-NAOCL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-EDTA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SACZKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-RTG",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-OPATR-TYMCZ",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "RTG końcowe: długość, szczelność, brak pustek",
+     "szczelne zamknięcie korony"
+    ],
+    "nieprawidlowosci": [
+     "wypełnienie za krótkie / przepchnięte",
+     "perforacja",
+     "złamane narzędzie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola kliniczna i RTG po co najmniej roku (ESE)"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Dolegliwości przy nagryzaniu kilka dni – leki przeciwbólowe wg zaleceń.",
+     "Nie gryźć twardych pokarmów do odbudowy ostatecznej."
+    ],
+    "kontakt_gdy": [
+     "narastający ból, obrzęk, gorączka"
+    ],
+    "kontrola": "Odbudowa ostateczna możliwie szybko; RTG kontrolne po ≥ 1 roku."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.2312090 – 40 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie (za każdy kanał) u dzieci i młodzieży do ukończenia 18. roku życia oraz kobiet w ciąży i w okresie połogu jest udzielane w całym uzębieniu. Świadczenie u osób powyżej 18. roku życia jest udzielane z wyłączeniem zębów przedtrzonowych i trzonowych.",
+     "zał. 2 (<18): Świadczenie – za każdy kanał.",
+     "zał. 2b (<18 (szkoła)): Świadczenie – za każdy kanał."
+    ],
+    "reguly": [
+     "R-ENDO-DZ"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-2006"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Metoda z użyciem preparatu dewitalizującego – nadal w wykazie świadczeń gwarantowanych, ale współczesne wytyczne (ESE) preferują leczenie w znieczuleniu; do oceny Patryka, jak ją przedstawiać w aplikacji."
   },
   {
    "id": "PROC-23.1210",
    "kod": "23.1210",
    "nazwa_oficjalna": "Amputacja zdewitalizowanej miazgi zęba mlecznego",
    "kategoria": "endodoncja – leczenie miazgi",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Amputacja zdewitalizowanej miazgi zęba mlecznego",
+   "opis": "Amputacja zdewitalizowanej miazgi zęba mlecznego.",
+   "cel": {
+    "na_czym_polega": "Usunięcie zdewitalizowanej miazgi koronowej po wcześniejszej dewitalizacji, opatrunek na kikuty, odbudowa.",
+    "cel_kliniczny": "Dokończenie leczenia po dewitalizacji.",
+    "wskazania": [
+     "stan po dewitalizacji miazgi (23.1202)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "stan miazgi i tkanek okołowierzchołkowych",
+     "RTG przedzabiegowe",
+     "możliwość odbudowy"
+    ],
+    "wywiad": [
+     "ból, obrzęk, choroby ogólne, alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ząb bez możliwości odbudowy / złamanie pionowe korzenia",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do endodonty w przypadkach trudnych",
+     "ekstrakcja przy złym rokowaniu"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "koferdam",
+     "zestaw endodontyczny"
+    ],
+    "sytuacyjne": [
+     "endometr",
+     "powiększenie"
+    ],
+    "znieczulenie": "Przy żywej miazdze – konieczne; przy martwicy – zależnie od objawów."
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-DOSTEP-ENDO"
+    },
+    {
+     "krok": "KROK-AMPUTACJA-MLECZ"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-PILNIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ENDOMETR",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-NAOCL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-EDTA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SACZKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-RTG",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-OPATR-TYMCZ",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "RTG końcowe: długość, szczelność, brak pustek",
+     "szczelne zamknięcie korony"
+    ],
+    "nieprawidlowosci": [
+     "wypełnienie za krótkie / przepchnięte",
+     "perforacja",
+     "złamane narzędzie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola kliniczna i RTG po co najmniej roku (ESE)"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Dolegliwości przy nagryzaniu kilka dni – leki przeciwbólowe wg zaleceń.",
+     "Nie gryźć twardych pokarmów do odbudowy ostatecznej."
+    ],
+    "kontakt_gdy": [
+     "narastający ból, obrzęk, gorączka"
+    ],
+    "kontrola": "Odbudowa ostateczna możliwie szybko; RTG kontrolne po ≥ 1 roku."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie obejmuje amputację mortalną zęba mlecznego. Świadczenie jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia.",
+     "zał. 2 (<18): Świadczenie obejmuje amputację mortalną zęba mlecznego.",
+     "zał. 2b (<18 (szkoła)): Świadczenie obejmuje amputację mortalną zęba mlecznego."
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-2006",
+    "SRC-KLIN-AAPD-VPT-2017"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Metoda z użyciem preparatu dewitalizującego – nadal w wykazie świadczeń gwarantowanych, ale współczesne wytyczne (ESE) preferują leczenie w znieczuleniu; do oceny Patryka, jak ją przedstawiać w aplikacji."
   },
   {
    "id": "PROC-23.1301",
@@ -4531,44 +6798,711 @@
    "kod": "23.1302",
    "nazwa_oficjalna": "Leczenie zgorzeli",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Leczenie zgorzeli",
+   "opis": "Leczenie zgorzeli miazgi.",
+   "cel": {
+    "na_czym_polega": "Opracowanie i dezynfekcja kanałów zęba ze zgorzelą (rozkładem) miazgi, wkładki lecznicze.",
+    "cel_kliniczny": "Eliminacja zakażenia systemu kanałowego.",
+    "wskazania": [
+     "zgorzel miazgi"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "stan miazgi i tkanek okołowierzchołkowych",
+     "RTG przedzabiegowe",
+     "możliwość odbudowy"
+    ],
+    "wywiad": [
+     "ból, obrzęk, choroby ogólne, alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ząb bez możliwości odbudowy / złamanie pionowe korzenia",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do endodonty w przypadkach trudnych",
+     "ekstrakcja przy złym rokowaniu"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "koferdam",
+     "zestaw endodontyczny"
+    ],
+    "sytuacyjne": [
+     "endometr",
+     "powiększenie"
+    ],
+    "znieczulenie": "Przy żywej miazdze – konieczne; przy martwicy – zależnie od objawów."
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-DOSTEP-ENDO"
+    },
+    {
+     "krok": "KROK-DLUGOSC-ROBOCZA"
+    },
+    {
+     "krok": "KROK-OPRACOWANIE-KANALU"
+    },
+    {
+     "krok": "KROK-IRYGACJA"
+    },
+    {
+     "krok": "KROK-WKLADKA"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-PILNIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ENDOMETR",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-NAOCL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-EDTA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SACZKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-RTG",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-CAOH",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-OPATR-TYMCZ",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "RTG końcowe: długość, szczelność, brak pustek",
+     "szczelne zamknięcie korony"
+    ],
+    "nieprawidlowosci": [
+     "wypełnienie za krótkie / przepchnięte",
+     "perforacja",
+     "złamane narzędzie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola kliniczna i RTG po co najmniej roku (ESE)"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Dolegliwości przy nagryzaniu kilka dni – leki przeciwbólowe wg zaleceń.",
+     "Nie gryźć twardych pokarmów do odbudowy ostatecznej."
+    ],
+    "kontakt_gdy": [
+     "narastający ból, obrzęk, gorączka"
+    ],
+    "kontrola": "Odbudowa ostateczna możliwie szybko; RTG kontrolne po ≥ 1 roku."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-2006",
+    "SRC-KLIN-ESE-S3-2023"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1303",
    "kod": "23.1303",
    "nazwa_oficjalna": "Leczenie zgorzeli całkowitej niepowikłanej zęba z nieuformowanym korzeniem",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Zgorzel – ząb z nieuformowanym korzeniem",
+   "opis": "Leczenie zgorzeli całkowitej niepowikłanej zęba z nieuformowanym korzeniem.",
+   "cel": {
+    "na_czym_polega": "Dezynfekcja kanału zęba niedojrzałego (delikatne opracowanie, płukanie, wkładka) z planem zamknięcia wierzchołka.",
+    "cel_kliniczny": "Eliminacja zakażenia i warunki do zamknięcia wierzchołka.",
+    "wskazania": [
+     "martwica miazgi w zębie z niezakończonym rozwojem korzenia"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "stan miazgi i tkanek okołowierzchołkowych",
+     "RTG przedzabiegowe",
+     "możliwość odbudowy"
+    ],
+    "wywiad": [
+     "ból, obrzęk, choroby ogólne, alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ząb bez możliwości odbudowy / złamanie pionowe korzenia",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do endodonty w przypadkach trudnych",
+     "ekstrakcja przy złym rokowaniu"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "koferdam",
+     "zestaw endodontyczny"
+    ],
+    "sytuacyjne": [
+     "endometr",
+     "powiększenie"
+    ],
+    "znieczulenie": "Przy żywej miazdze – konieczne; przy martwicy – zależnie od objawów."
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-DOSTEP-ENDO"
+    },
+    {
+     "krok": "KROK-DLUGOSC-ROBOCZA"
+    },
+    {
+     "krok": "KROK-IRYGACJA",
+     "uwaga": "delikatne płukanie – szeroki otwór wierzchołkowy"
+    },
+    {
+     "krok": "KROK-WKLADKA"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-PILNIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ENDOMETR",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-NAOCL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-EDTA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SACZKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-RTG",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-CAOH",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-OPATR-TYMCZ",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "RTG końcowe: długość, szczelność, brak pustek",
+     "szczelne zamknięcie korony"
+    ],
+    "nieprawidlowosci": [
+     "wypełnienie za krótkie / przepchnięte",
+     "perforacja",
+     "złamane narzędzie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola kliniczna i RTG po co najmniej roku (ESE)"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Dolegliwości przy nagryzaniu kilka dni – leki przeciwbólowe wg zaleceń.",
+     "Nie gryźć twardych pokarmów do odbudowy ostatecznej."
+    ],
+    "kontakt_gdy": [
+     "narastający ból, obrzęk, gorączka"
+    ],
+    "kontrola": "Odbudowa ostateczna możliwie szybko; RTG kontrolne po ≥ 1 roku."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Stadium rozwoju korzenia (RTG)",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-ESE-S3-2023"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1304",
    "kod": "23.1304",
    "nazwa_oficjalna": "Dodatkowe fizykochemiczne metody udrażniania i opracowywania kanału",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Dodatkowe metody opracowania kanału",
+   "opis": "Dodatkowe fizykochemiczne metody udrażniania i opracowywania kanału.",
+   "cel": {
+    "na_czym_polega": "Metody wspomagające: aktywacja płynów, chelatory, udrażnianie zwapniałych kanałów.",
+    "cel_kliniczny": "Skuteczniejsze oczyszczenie / udrożnienie kanału.",
+    "wskazania": [
+     "kanały zwapniałe, wąskie",
+     "złożona anatomia"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "stan miazgi i tkanek okołowierzchołkowych",
+     "RTG przedzabiegowe",
+     "możliwość odbudowy"
+    ],
+    "wywiad": [
+     "ból, obrzęk, choroby ogólne, alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ząb bez możliwości odbudowy / złamanie pionowe korzenia",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do endodonty w przypadkach trudnych",
+     "ekstrakcja przy złym rokowaniu"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "koferdam",
+     "zestaw endodontyczny"
+    ],
+    "sytuacyjne": [
+     "endometr",
+     "powiększenie"
+    ],
+    "znieczulenie": "Przy żywej miazdze – konieczne; przy martwicy – zależnie od objawów."
+   },
+   "kroki": [
+    {
+     "krok": "KROK-AKTYWACJA"
+    },
+    {
+     "krok": "KROK-IRYGACJA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-NAOCL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-EDTA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-PILNIKI",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "drożność kanału do długości roboczej"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Dolegliwości przy nagryzaniu kilka dni – leki przeciwbólowe wg zaleceń.",
+     "Nie gryźć twardych pokarmów do odbudowy ostatecznej."
+    ],
+    "kontakt_gdy": [
+     "narastający ból, obrzęk, gorączka"
+    ],
+    "kontrola": "Odbudowa ostateczna możliwie szybko; RTG kontrolne po ≥ 1 roku."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zastosowana metoda",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1305",
    "kod": "23.1305",
    "nazwa_oficjalna": "Ponowne udrożnienie wypełnionego kanału",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Ponowne leczenie kanałowe (rewizja)",
+   "opis": "Ponowne udrożnienie wypełnionego kanału.",
+   "cel": {
+    "na_czym_polega": "Usunięcie dotychczasowego wypełnienia kanału i ponowne opracowanie, dezynfekcja, wypełnienie.",
+    "cel_kliniczny": "Leczenie niepowodzenia endodontycznego.",
+    "wskazania": [
+     "zmiana okołowierzchołkowa po leczeniu kanałowym",
+     "nieszczelne / niepełne wypełnienie przed odbudową protetyczną",
+     "objawy po leczeniu"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "stan miazgi i tkanek okołowierzchołkowych",
+     "RTG przedzabiegowe",
+     "możliwość odbudowy"
+    ],
+    "wywiad": [
+     "ból, obrzęk, choroby ogólne, alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ząb bez możliwości odbudowy / złamanie pionowe korzenia",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "chirurgia endodontyczna (resekcja)",
+     "ekstrakcja"
+    ],
+    "dodatkowa_diagnostyka": [
+     "CBCT przy niejasnej przyczynie (poza gabinetem)"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "koferdam",
+     "zestaw endodontyczny"
+    ],
+    "sytuacyjne": [
+     "endometr",
+     "powiększenie"
+    ],
+    "znieczulenie": "Przy żywej miazdze – konieczne; przy martwicy – zależnie od objawów."
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-DOSTEP-ENDO"
+    },
+    {
+     "krok": "KROK-REWIZJA"
+    },
+    {
+     "krok": "KROK-DLUGOSC-ROBOCZA"
+    },
+    {
+     "krok": "KROK-OPRACOWANIE-KANALU"
+    },
+    {
+     "krok": "KROK-IRYGACJA"
+    },
+    {
+     "krok": "KROK-WKLADKA"
+    },
+    {
+     "krok": "KROK-OBTURACJA"
+    },
+    {
+     "krok": "KROK-RTG-KONTROLA"
+    },
+    {
+     "krok": "KROK-ODBUDOWA-PO-ENDO"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-PILNIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ENDOMETR",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-NAOCL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-EDTA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SACZKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-RTG",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-GUTAPERKA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-USZCZELNIACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-CAOH",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-OPATR-TYMCZ",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "RTG końcowe: długość, szczelność, brak pustek",
+     "szczelne zamknięcie korony"
+    ],
+    "nieprawidlowosci": [
+     "wypełnienie za krótkie / przepchnięte",
+     "perforacja",
+     "złamane narzędzie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola kliniczna i RTG po co najmniej roku (ESE)"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Dolegliwości przy nagryzaniu kilka dni – leki przeciwbólowe wg zaleceń.",
+     "Nie gryźć twardych pokarmów do odbudowy ostatecznej."
+    ],
+    "kontakt_gdy": [
+     "narastający ból, obrzęk, gorączka"
+    ],
+    "kontrola": "Odbudowa ostateczna możliwie szybko; RTG kontrolne po ≥ 1 roku."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przyczyna niepowodzenia, sposób usunięcia wypełnienia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-ESE-S3-2023"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023",
+    "SRC-KLIN-ESE-2006"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1306",
@@ -4973,33 +7907,616 @@
    "kod": "23.1308",
    "nazwa_oficjalna": "Leczenie endodontyczne z wypełnieniem 2 kanałów",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Leczenie kanałowe – 2 kanałów",
+   "opis": "Leczenie endodontyczne z wypełnieniem 2 kanałów.",
+   "cel": {
+    "na_czym_polega": "Kompletne leczenie kanałowe zęba 2 kanałów: opracowanie, dezynfekcja, wypełnienie.",
+    "cel_kliniczny": "Wyleczenie lub zapobieganie zapaleniu okołowierzchołkowemu.",
+    "wskazania": [
+     "nieodwracalne zapalenie miazgi",
+     "wskazania protetyczne"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "stan miazgi i tkanek okołowierzchołkowych",
+     "RTG przedzabiegowe",
+     "możliwość odbudowy"
+    ],
+    "wywiad": [
+     "ból, obrzęk, choroby ogólne, alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ząb bez możliwości odbudowy / złamanie pionowe korzenia",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do endodonty w przypadkach trudnych",
+     "ekstrakcja przy złym rokowaniu"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "koferdam",
+     "zestaw endodontyczny"
+    ],
+    "sytuacyjne": [
+     "endometr",
+     "powiększenie"
+    ],
+    "znieczulenie": "Przy żywej miazdze – konieczne; przy martwicy – zależnie od objawów."
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-DIAGNOSTYKA-ZEBA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-DOSTEP-ENDO"
+    },
+    {
+     "krok": "KROK-DLUGOSC-ROBOCZA"
+    },
+    {
+     "krok": "KROK-OPRACOWANIE-KANALU"
+    },
+    {
+     "krok": "KROK-IRYGACJA"
+    },
+    {
+     "krok": "KROK-WKLADKA"
+    },
+    {
+     "krok": "KROK-OBTURACJA"
+    },
+    {
+     "krok": "KROK-RTG-KONTROLA"
+    },
+    {
+     "krok": "KROK-ODBUDOWA-PO-ENDO"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-PILNIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ENDOMETR",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-NAOCL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-EDTA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SACZKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-RTG",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-GUTAPERKA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-USZCZELNIACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-CAOH",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-OPATR-TYMCZ",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "RTG końcowe: długość, szczelność, brak pustek",
+     "szczelne zamknięcie korony"
+    ],
+    "nieprawidlowosci": [
+     "wypełnienie za krótkie / przepchnięte",
+     "perforacja",
+     "złamane narzędzie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola kliniczna i RTG po co najmniej roku (ESE)"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Dolegliwości przy nagryzaniu kilka dni – leki przeciwbólowe wg zaleceń.",
+     "Nie gryźć twardych pokarmów do odbudowy ostatecznej."
+    ],
+    "kontakt_gdy": [
+     "narastający ból, obrzęk, gorączka"
+    ],
+    "kontrola": "Odbudowa ostateczna możliwie szybko; RTG kontrolne po ≥ 1 roku."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg leczenia na kolejnych wizytach",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-ESE-2006"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie nie obejmuje opracowania i odbudowy ubytku korony zęba. Świadczenie jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia oraz kobietom w ciąży i w okresie połogu.",
+     "zał. 2 (<18): Świadczenie nie obejmuje opracowania i odbudowy ubytku korony zęba.",
+     "zał. 2b (<18 (szkoła)): Świadczenie nie obejmuje opracowania i odbudowy ubytku korony zęba."
+    ],
+    "reguly": [
+     "R-ENDO-DZ"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-2006",
+    "SRC-KLIN-ESE-S3-2023"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1309",
    "kod": "23.1309",
    "nazwa_oficjalna": "Leczenie endodontyczne z wypełnieniem 3 kanałów",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Leczenie kanałowe – 3 kanałów",
+   "opis": "Leczenie endodontyczne z wypełnieniem 3 kanałów.",
+   "cel": {
+    "na_czym_polega": "Kompletne leczenie kanałowe zęba 3 kanałów: opracowanie, dezynfekcja, wypełnienie.",
+    "cel_kliniczny": "Wyleczenie lub zapobieganie zapaleniu okołowierzchołkowemu.",
+    "wskazania": [
+     "nieodwracalne zapalenie miazgi",
+     "wskazania protetyczne"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "stan miazgi i tkanek okołowierzchołkowych",
+     "RTG przedzabiegowe",
+     "możliwość odbudowy"
+    ],
+    "wywiad": [
+     "ból, obrzęk, choroby ogólne, alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ząb bez możliwości odbudowy / złamanie pionowe korzenia",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do endodonty w przypadkach trudnych",
+     "ekstrakcja przy złym rokowaniu"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "koferdam",
+     "zestaw endodontyczny"
+    ],
+    "sytuacyjne": [
+     "endometr",
+     "powiększenie"
+    ],
+    "znieczulenie": "Przy żywej miazdze – konieczne; przy martwicy – zależnie od objawów."
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-DIAGNOSTYKA-ZEBA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-DOSTEP-ENDO"
+    },
+    {
+     "krok": "KROK-DLUGOSC-ROBOCZA"
+    },
+    {
+     "krok": "KROK-OPRACOWANIE-KANALU"
+    },
+    {
+     "krok": "KROK-IRYGACJA"
+    },
+    {
+     "krok": "KROK-WKLADKA"
+    },
+    {
+     "krok": "KROK-OBTURACJA"
+    },
+    {
+     "krok": "KROK-RTG-KONTROLA"
+    },
+    {
+     "krok": "KROK-ODBUDOWA-PO-ENDO"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-PILNIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ENDOMETR",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-NAOCL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-EDTA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SACZKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-RTG",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-GUTAPERKA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-USZCZELNIACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-CAOH",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-OPATR-TYMCZ",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "RTG końcowe: długość, szczelność, brak pustek",
+     "szczelne zamknięcie korony"
+    ],
+    "nieprawidlowosci": [
+     "wypełnienie za krótkie / przepchnięte",
+     "perforacja",
+     "złamane narzędzie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola kliniczna i RTG po co najmniej roku (ESE)"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Dolegliwości przy nagryzaniu kilka dni – leki przeciwbólowe wg zaleceń.",
+     "Nie gryźć twardych pokarmów do odbudowy ostatecznej."
+    ],
+    "kontakt_gdy": [
+     "narastający ból, obrzęk, gorączka"
+    ],
+    "kontrola": "Odbudowa ostateczna możliwie szybko; RTG kontrolne po ≥ 1 roku."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg leczenia na kolejnych wizytach",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-ESE-2006"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie nie obejmuje opracowania i odbudowy ubytku korony zęba. Świadczenie jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia oraz kobietom w ciąży i w okresie połogu.",
+     "zał. 2 (<18): Świadczenie nie obejmuje opracowania i odbudowy ubytku korony zęba.",
+     "zał. 2b (<18 (szkoła)): Świadczenie nie obejmuje opracowania i odbudowy ubytku korony zęba."
+    ],
+    "reguly": [
+     "R-ENDO-DZ"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-2006",
+    "SRC-KLIN-ESE-S3-2023"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1310",
    "kod": "23.1310",
    "nazwa_oficjalna": "Leczenie endodontyczne metodą amputacyjno-ekstyrpacyjną",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Leczenie metodą amputacyjno-ekstyrpacyjną",
+   "opis": "Leczenie endodontyczne metodą amputacyjno-ekstyrpacyjną.",
+   "cel": {
+    "na_czym_polega": "Metoda historyczna łącząca amputację miazgi z ekstyrpacją części kanałów (zęby wielokorzeniowe).",
+    "cel_kliniczny": "Leczenie zęba wielokorzeniowego przy trudno dostępnych kanałach.",
+    "wskazania": [
+     "wyłącznie wg decyzji lekarza – współcześnie preferowane pełne leczenie kanałowe lub skierowanie"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "stan miazgi i tkanek okołowierzchołkowych",
+     "RTG przedzabiegowe",
+     "możliwość odbudowy"
+    ],
+    "wywiad": [
+     "ból, obrzęk, choroby ogólne, alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ząb bez możliwości odbudowy / złamanie pionowe korzenia",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do endodonty w przypadkach trudnych",
+     "ekstrakcja przy złym rokowaniu"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "koferdam",
+     "zestaw endodontyczny"
+    ],
+    "sytuacyjne": [
+     "endometr",
+     "powiększenie"
+    ],
+    "znieczulenie": "Przy żywej miazdze – konieczne; przy martwicy – zależnie od objawów."
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-DOSTEP-ENDO"
+    },
+    {
+     "krok": "KROK-AMPUTACJA"
+    },
+    {
+     "krok": "KROK-EKSTYRPACJA"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-PILNIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ENDOMETR",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-NAOCL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-EDTA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SACZKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-RTG",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "RTG końcowe: długość, szczelność, brak pustek",
+     "szczelne zamknięcie korony"
+    ],
+    "nieprawidlowosci": [
+     "wypełnienie za krótkie / przepchnięte",
+     "perforacja",
+     "złamane narzędzie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola kliniczna i RTG po co najmniej roku (ESE)"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Dolegliwości przy nagryzaniu kilka dni – leki przeciwbólowe wg zaleceń.",
+     "Nie gryźć twardych pokarmów do odbudowy ostatecznej."
+    ],
+    "kontakt_gdy": [
+     "narastający ból, obrzęk, gorączka"
+    ],
+    "kontrola": "Odbudowa ostateczna możliwie szybko; RTG kontrolne po ≥ 1 roku."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Metoda historyczna (brak w wykazie świadczeń gwarantowanych wg audytu) – do oceny Patryka."
   },
   {
    "id": "PROC-23.1311",
@@ -5252,88 +8769,1658 @@
    "kod": "23.1312",
    "nazwa_oficjalna": "Leczenie endodontyczne zęba z wypełnieniem 2 kanałów ze zgorzelą miazgi",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Leczenie kanałowe – 2 kanałów ze zgorzelą",
+   "opis": "Leczenie endodontyczne z wypełnieniem 2 kanałów ze zgorzelą.",
+   "cel": {
+    "na_czym_polega": "Kompletne leczenie kanałowe zęba 2 kanałów z martwicą / zgorzelą miazgi: opracowanie, dezynfekcja, wypełnienie.",
+    "cel_kliniczny": "Wyleczenie lub zapobieganie zapaleniu okołowierzchołkowemu.",
+    "wskazania": [
+     "martwica / zgorzel miazgi",
+     "przewlekłe zapalenie okołowierzchołkowe"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "stan miazgi i tkanek okołowierzchołkowych",
+     "RTG przedzabiegowe",
+     "możliwość odbudowy"
+    ],
+    "wywiad": [
+     "ból, obrzęk, choroby ogólne, alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ząb bez możliwości odbudowy / złamanie pionowe korzenia",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do endodonty w przypadkach trudnych",
+     "ekstrakcja przy złym rokowaniu"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "koferdam",
+     "zestaw endodontyczny"
+    ],
+    "sytuacyjne": [
+     "endometr",
+     "powiększenie"
+    ],
+    "znieczulenie": "Przy żywej miazdze – konieczne; przy martwicy – zależnie od objawów."
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-DIAGNOSTYKA-ZEBA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-DOSTEP-ENDO"
+    },
+    {
+     "krok": "KROK-DLUGOSC-ROBOCZA"
+    },
+    {
+     "krok": "KROK-OPRACOWANIE-KANALU"
+    },
+    {
+     "krok": "KROK-IRYGACJA"
+    },
+    {
+     "krok": "KROK-WKLADKA"
+    },
+    {
+     "krok": "KROK-OBTURACJA"
+    },
+    {
+     "krok": "KROK-RTG-KONTROLA"
+    },
+    {
+     "krok": "KROK-ODBUDOWA-PO-ENDO"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-PILNIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ENDOMETR",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-NAOCL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-EDTA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SACZKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-RTG",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-GUTAPERKA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-USZCZELNIACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-CAOH",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-OPATR-TYMCZ",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "RTG końcowe: długość, szczelność, brak pustek",
+     "szczelne zamknięcie korony"
+    ],
+    "nieprawidlowosci": [
+     "wypełnienie za krótkie / przepchnięte",
+     "perforacja",
+     "złamane narzędzie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola kliniczna i RTG po co najmniej roku (ESE)"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Dolegliwości przy nagryzaniu kilka dni – leki przeciwbólowe wg zaleceń.",
+     "Nie gryźć twardych pokarmów do odbudowy ostatecznej."
+    ],
+    "kontakt_gdy": [
+     "narastający ból, obrzęk, gorączka"
+    ],
+    "kontrola": "Odbudowa ostateczna możliwie szybko; RTG kontrolne po ≥ 1 roku."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg leczenia na kolejnych wizytach",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-ESE-2006"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie nie obejmuje opracowania i odbudowy ubytku korony zęba. Świadczenie jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia oraz kobietom w ciąży i w okresie połogu.",
+     "zał. 2 (<18): Świadczenie nie obejmuje opracowania i odbudowy ubytku korony zęba.",
+     "zał. 2b (<18 (szkoła)): Świadczenie nie obejmuje opracowania i odbudowy ubytku korony zęba."
+    ],
+    "reguly": [
+     "R-ENDO-DZ"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-2006",
+    "SRC-KLIN-ESE-S3-2023"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1313",
    "kod": "23.1313",
    "nazwa_oficjalna": "Leczenie endodontyczne zęba z wypełnieniem 3 kanałów ze zgorzelą miazgi",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Leczenie kanałowe – 3 kanałów ze zgorzelą",
+   "opis": "Leczenie endodontyczne z wypełnieniem 3 kanałów ze zgorzelą.",
+   "cel": {
+    "na_czym_polega": "Kompletne leczenie kanałowe zęba 3 kanałów z martwicą / zgorzelą miazgi: opracowanie, dezynfekcja, wypełnienie.",
+    "cel_kliniczny": "Wyleczenie lub zapobieganie zapaleniu okołowierzchołkowemu.",
+    "wskazania": [
+     "martwica / zgorzel miazgi",
+     "przewlekłe zapalenie okołowierzchołkowe"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "stan miazgi i tkanek okołowierzchołkowych",
+     "RTG przedzabiegowe",
+     "możliwość odbudowy"
+    ],
+    "wywiad": [
+     "ból, obrzęk, choroby ogólne, alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ząb bez możliwości odbudowy / złamanie pionowe korzenia",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do endodonty w przypadkach trudnych",
+     "ekstrakcja przy złym rokowaniu"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "koferdam",
+     "zestaw endodontyczny"
+    ],
+    "sytuacyjne": [
+     "endometr",
+     "powiększenie"
+    ],
+    "znieczulenie": "Przy żywej miazdze – konieczne; przy martwicy – zależnie od objawów."
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-DIAGNOSTYKA-ZEBA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-DOSTEP-ENDO"
+    },
+    {
+     "krok": "KROK-DLUGOSC-ROBOCZA"
+    },
+    {
+     "krok": "KROK-OPRACOWANIE-KANALU"
+    },
+    {
+     "krok": "KROK-IRYGACJA"
+    },
+    {
+     "krok": "KROK-WKLADKA"
+    },
+    {
+     "krok": "KROK-OBTURACJA"
+    },
+    {
+     "krok": "KROK-RTG-KONTROLA"
+    },
+    {
+     "krok": "KROK-ODBUDOWA-PO-ENDO"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-PILNIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ENDOMETR",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-NAOCL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-EDTA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SACZKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-RTG",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-GUTAPERKA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-USZCZELNIACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-CAOH",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-OPATR-TYMCZ",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "RTG końcowe: długość, szczelność, brak pustek",
+     "szczelne zamknięcie korony"
+    ],
+    "nieprawidlowosci": [
+     "wypełnienie za krótkie / przepchnięte",
+     "perforacja",
+     "złamane narzędzie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola kliniczna i RTG po co najmniej roku (ESE)"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Dolegliwości przy nagryzaniu kilka dni – leki przeciwbólowe wg zaleceń.",
+     "Nie gryźć twardych pokarmów do odbudowy ostatecznej."
+    ],
+    "kontakt_gdy": [
+     "narastający ból, obrzęk, gorączka"
+    ],
+    "kontrola": "Odbudowa ostateczna możliwie szybko; RTG kontrolne po ≥ 1 roku."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg leczenia na kolejnych wizytach",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-ESE-2006"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-2006",
+    "SRC-KLIN-ESE-S3-2023"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1314",
    "kod": "23.1314",
    "nazwa_oficjalna": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Leczenie zęba z nieuformowanym korzeniem – MTA (kod nadrzędny)",
+   "opis": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA – (kod nadrzędny).",
+   "cel": {
+    "na_czym_polega": "Dezynfekcja kanału i zamknięcie otwartego wierzchołka barierą z materiału krzemianowo-wapniowego, następnie wypełnienie kanału.",
+    "cel_kliniczny": "Szczelne zamknięcie wierzchołka zęba niedojrzałego.",
+    "wskazania": [
+     "martwica miazgi w zębie stałym z niezakończonym rozwojem korzenia"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "stan miazgi i tkanek okołowierzchołkowych",
+     "RTG przedzabiegowe",
+     "możliwość odbudowy"
+    ],
+    "wywiad": [
+     "ból, obrzęk, choroby ogólne, alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ząb bez możliwości odbudowy / złamanie pionowe korzenia",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do endodonty w przypadkach trudnych",
+     "ekstrakcja przy złym rokowaniu"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "koferdam",
+     "zestaw endodontyczny"
+    ],
+    "sytuacyjne": [
+     "endometr",
+     "powiększenie"
+    ],
+    "znieczulenie": "Przy żywej miazdze – konieczne; przy martwicy – zależnie od objawów."
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-DOSTEP-ENDO"
+    },
+    {
+     "krok": "KROK-DLUGOSC-ROBOCZA"
+    },
+    {
+     "krok": "KROK-IRYGACJA"
+    },
+    {
+     "krok": "KROK-WKLADKA"
+    },
+    {
+     "krok": "KROK-APEKSYFIKACJA"
+    },
+    {
+     "krok": "KROK-OBTURACJA"
+    },
+    {
+     "krok": "KROK-RTG-KONTROLA"
+    },
+    {
+     "krok": "KROK-ODBUDOWA-PO-ENDO"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-PILNIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ENDOMETR",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-NAOCL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-EDTA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SACZKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-RTG",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-GUTAPERKA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-USZCZELNIACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-CAOH",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-OPATR-TYMCZ",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KRZEM-WAPN",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "RTG końcowe: długość, szczelność, brak pustek",
+     "szczelne zamknięcie korony"
+    ],
+    "nieprawidlowosci": [
+     "wypełnienie za krótkie / przepchnięte",
+     "perforacja",
+     "złamane narzędzie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola kliniczna i RTG po co najmniej roku (ESE)"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Dolegliwości przy nagryzaniu kilka dni – leki przeciwbólowe wg zaleceń.",
+     "Nie gryźć twardych pokarmów do odbudowy ostatecznej."
+    ],
+    "kontakt_gdy": [
+     "narastający ból, obrzęk, gorączka"
+    ],
+    "kontrola": "Odbudowa ostateczna możliwie szybko; RTG kontrolne po ≥ 1 roku."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Grubość bariery i RTG",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-ESE-S3-2023"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "warunki": [
+     "zał. 2b (<18 (szkoła)): Świadczenie jest udzielane przez lekarza dentystę specjalistę w dziedzinie stomatologii dziecięcej lub lekarza specjalistę w dziedzinie stomatologii zachowawczej z endodoncją, lub lekarza"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615"
+    ],
+    "uwagi": "Kod nadrzędny – rozliczenie podkodami 23.13141–23.13149."
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.13141",
    "kod": "23.13141",
    "nazwa_oficjalna": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 1 kanału",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Leczenie zęba z nieuformowanym korzeniem – MTA 1 kanału",
+   "opis": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA – 1 kanału.",
+   "cel": {
+    "na_czym_polega": "Dezynfekcja kanału i zamknięcie otwartego wierzchołka barierą z materiału krzemianowo-wapniowego, następnie wypełnienie kanału.",
+    "cel_kliniczny": "Szczelne zamknięcie wierzchołka zęba niedojrzałego.",
+    "wskazania": [
+     "martwica miazgi w zębie stałym z niezakończonym rozwojem korzenia"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "stan miazgi i tkanek okołowierzchołkowych",
+     "RTG przedzabiegowe",
+     "możliwość odbudowy"
+    ],
+    "wywiad": [
+     "ból, obrzęk, choroby ogólne, alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ząb bez możliwości odbudowy / złamanie pionowe korzenia",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do endodonty w przypadkach trudnych",
+     "ekstrakcja przy złym rokowaniu"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "koferdam",
+     "zestaw endodontyczny"
+    ],
+    "sytuacyjne": [
+     "endometr",
+     "powiększenie"
+    ],
+    "znieczulenie": "Przy żywej miazdze – konieczne; przy martwicy – zależnie od objawów."
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-DOSTEP-ENDO"
+    },
+    {
+     "krok": "KROK-DLUGOSC-ROBOCZA"
+    },
+    {
+     "krok": "KROK-IRYGACJA"
+    },
+    {
+     "krok": "KROK-WKLADKA"
+    },
+    {
+     "krok": "KROK-APEKSYFIKACJA"
+    },
+    {
+     "krok": "KROK-OBTURACJA"
+    },
+    {
+     "krok": "KROK-RTG-KONTROLA"
+    },
+    {
+     "krok": "KROK-ODBUDOWA-PO-ENDO"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-PILNIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ENDOMETR",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-NAOCL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-EDTA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SACZKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-RTG",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-GUTAPERKA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-USZCZELNIACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-CAOH",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-OPATR-TYMCZ",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KRZEM-WAPN",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "RTG końcowe: długość, szczelność, brak pustek",
+     "szczelne zamknięcie korony"
+    ],
+    "nieprawidlowosci": [
+     "wypełnienie za krótkie / przepchnięte",
+     "perforacja",
+     "złamane narzędzie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola kliniczna i RTG po co najmniej roku (ESE)"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Dolegliwości przy nagryzaniu kilka dni – leki przeciwbólowe wg zaleceń.",
+     "Nie gryźć twardych pokarmów do odbudowy ostatecznej."
+    ],
+    "kontakt_gdy": [
+     "narastający ból, obrzęk, gorączka"
+    ],
+    "kontrola": "Odbudowa ostateczna możliwie szybko; RTG kontrolne po ≥ 1 roku."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Grubość bariery i RTG",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-ESE-S3-2023"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.2313141 – 200 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 2b (<18 (szkoła)): dentystę w trakcie specjalizacji w dziedzinie stomatologii dziecięcej lub stomatologii zachowawczej z endodoncją. Wyposażenie niezbędne do realizacji świadczenia: 1) endometr w miejscu udzielania świadczeń; 2) aparat RTG do zdjęć zębowych lub radiowizjografia w lokalizacji lub w dostępie."
+    ],
+    "reguly": [
+     "R-MTA-01"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "NFZ: świadczenie dla dzieci i młodzieży (warunki – audyt)."
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.13142",
    "kod": "23.13142",
    "nazwa_oficjalna": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 2 kanałów",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Leczenie zęba z nieuformowanym korzeniem – MTA 2 kanałów",
+   "opis": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA – 2 kanałów.",
+   "cel": {
+    "na_czym_polega": "Dezynfekcja kanału i zamknięcie otwartego wierzchołka barierą z materiału krzemianowo-wapniowego, następnie wypełnienie kanału.",
+    "cel_kliniczny": "Szczelne zamknięcie wierzchołka zęba niedojrzałego.",
+    "wskazania": [
+     "martwica miazgi w zębie stałym z niezakończonym rozwojem korzenia"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "stan miazgi i tkanek okołowierzchołkowych",
+     "RTG przedzabiegowe",
+     "możliwość odbudowy"
+    ],
+    "wywiad": [
+     "ból, obrzęk, choroby ogólne, alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ząb bez możliwości odbudowy / złamanie pionowe korzenia",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do endodonty w przypadkach trudnych",
+     "ekstrakcja przy złym rokowaniu"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "koferdam",
+     "zestaw endodontyczny"
+    ],
+    "sytuacyjne": [
+     "endometr",
+     "powiększenie"
+    ],
+    "znieczulenie": "Przy żywej miazdze – konieczne; przy martwicy – zależnie od objawów."
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-DOSTEP-ENDO"
+    },
+    {
+     "krok": "KROK-DLUGOSC-ROBOCZA"
+    },
+    {
+     "krok": "KROK-IRYGACJA"
+    },
+    {
+     "krok": "KROK-WKLADKA"
+    },
+    {
+     "krok": "KROK-APEKSYFIKACJA"
+    },
+    {
+     "krok": "KROK-OBTURACJA"
+    },
+    {
+     "krok": "KROK-RTG-KONTROLA"
+    },
+    {
+     "krok": "KROK-ODBUDOWA-PO-ENDO"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-PILNIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ENDOMETR",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-NAOCL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-EDTA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SACZKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-RTG",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-GUTAPERKA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-USZCZELNIACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-CAOH",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-OPATR-TYMCZ",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KRZEM-WAPN",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "RTG końcowe: długość, szczelność, brak pustek",
+     "szczelne zamknięcie korony"
+    ],
+    "nieprawidlowosci": [
+     "wypełnienie za krótkie / przepchnięte",
+     "perforacja",
+     "złamane narzędzie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola kliniczna i RTG po co najmniej roku (ESE)"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Dolegliwości przy nagryzaniu kilka dni – leki przeciwbólowe wg zaleceń.",
+     "Nie gryźć twardych pokarmów do odbudowy ostatecznej."
+    ],
+    "kontakt_gdy": [
+     "narastający ból, obrzęk, gorączka"
+    ],
+    "kontrola": "Odbudowa ostateczna możliwie szybko; RTG kontrolne po ≥ 1 roku."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Grubość bariery i RTG",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-ESE-S3-2023"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.2314142 – 400 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 2b (<18 (szkoła))"
+    ],
+    "reguly": [
+     "R-MTA-01"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "NFZ: świadczenie dla dzieci i młodzieży (warunki – audyt)."
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.13143",
    "kod": "23.13143",
    "nazwa_oficjalna": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 3 kanałów",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Leczenie zęba z nieuformowanym korzeniem – MTA 3 kanałów",
+   "opis": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA – 3 kanałów.",
+   "cel": {
+    "na_czym_polega": "Dezynfekcja kanału i zamknięcie otwartego wierzchołka barierą z materiału krzemianowo-wapniowego, następnie wypełnienie kanału.",
+    "cel_kliniczny": "Szczelne zamknięcie wierzchołka zęba niedojrzałego.",
+    "wskazania": [
+     "martwica miazgi w zębie stałym z niezakończonym rozwojem korzenia"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "stan miazgi i tkanek okołowierzchołkowych",
+     "RTG przedzabiegowe",
+     "możliwość odbudowy"
+    ],
+    "wywiad": [
+     "ból, obrzęk, choroby ogólne, alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ząb bez możliwości odbudowy / złamanie pionowe korzenia",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do endodonty w przypadkach trudnych",
+     "ekstrakcja przy złym rokowaniu"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "koferdam",
+     "zestaw endodontyczny"
+    ],
+    "sytuacyjne": [
+     "endometr",
+     "powiększenie"
+    ],
+    "znieczulenie": "Przy żywej miazdze – konieczne; przy martwicy – zależnie od objawów."
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-DOSTEP-ENDO"
+    },
+    {
+     "krok": "KROK-DLUGOSC-ROBOCZA"
+    },
+    {
+     "krok": "KROK-IRYGACJA"
+    },
+    {
+     "krok": "KROK-WKLADKA"
+    },
+    {
+     "krok": "KROK-APEKSYFIKACJA"
+    },
+    {
+     "krok": "KROK-OBTURACJA"
+    },
+    {
+     "krok": "KROK-RTG-KONTROLA"
+    },
+    {
+     "krok": "KROK-ODBUDOWA-PO-ENDO"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-PILNIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ENDOMETR",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-NAOCL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-EDTA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SACZKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-RTG",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-GUTAPERKA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-USZCZELNIACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-CAOH",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-OPATR-TYMCZ",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KRZEM-WAPN",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "RTG końcowe: długość, szczelność, brak pustek",
+     "szczelne zamknięcie korony"
+    ],
+    "nieprawidlowosci": [
+     "wypełnienie za krótkie / przepchnięte",
+     "perforacja",
+     "złamane narzędzie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola kliniczna i RTG po co najmniej roku (ESE)"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Dolegliwości przy nagryzaniu kilka dni – leki przeciwbólowe wg zaleceń.",
+     "Nie gryźć twardych pokarmów do odbudowy ostatecznej."
+    ],
+    "kontakt_gdy": [
+     "narastający ból, obrzęk, gorączka"
+    ],
+    "kontrola": "Odbudowa ostateczna możliwie szybko; RTG kontrolne po ≥ 1 roku."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Grubość bariery i RTG",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-ESE-S3-2023"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.2313143 – 600 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 2b (<18 (szkoła))"
+    ],
+    "reguly": [
+     "R-MTA-01"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "NFZ: świadczenie dla dzieci i młodzieży (warunki – audyt)."
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.13149",
    "kod": "23.13149",
    "nazwa_oficjalna": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA - inne",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Leczenie zęba z nieuformowanym korzeniem – MTA innej liczby kanałów",
+   "opis": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA – innej liczby kanałów.",
+   "cel": {
+    "na_czym_polega": "Dezynfekcja kanału i zamknięcie otwartego wierzchołka barierą z materiału krzemianowo-wapniowego, następnie wypełnienie kanału.",
+    "cel_kliniczny": "Szczelne zamknięcie wierzchołka zęba niedojrzałego.",
+    "wskazania": [
+     "martwica miazgi w zębie stałym z niezakończonym rozwojem korzenia"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "stan miazgi i tkanek okołowierzchołkowych",
+     "RTG przedzabiegowe",
+     "możliwość odbudowy"
+    ],
+    "wywiad": [
+     "ból, obrzęk, choroby ogólne, alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ząb bez możliwości odbudowy / złamanie pionowe korzenia",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do endodonty w przypadkach trudnych",
+     "ekstrakcja przy złym rokowaniu"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG",
+     "koferdam",
+     "zestaw endodontyczny"
+    ],
+    "sytuacyjne": [
+     "endometr",
+     "powiększenie"
+    ],
+    "znieczulenie": "Przy żywej miazdze – konieczne; przy martwicy – zależnie od objawów."
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-DOSTEP-ENDO"
+    },
+    {
+     "krok": "KROK-DLUGOSC-ROBOCZA"
+    },
+    {
+     "krok": "KROK-IRYGACJA"
+    },
+    {
+     "krok": "KROK-WKLADKA"
+    },
+    {
+     "krok": "KROK-APEKSYFIKACJA"
+    },
+    {
+     "krok": "KROK-OBTURACJA"
+    },
+    {
+     "krok": "KROK-RTG-KONTROLA"
+    },
+    {
+     "krok": "KROK-ODBUDOWA-PO-ENDO"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-KOFERDAM",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-PILNIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ENDOMETR",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-NAOCL",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-EDTA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SACZKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-RTG",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-GUTAPERKA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-USZCZELNIACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-CAOH",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-OPATR-TYMCZ",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KRZEM-WAPN",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "RTG końcowe: długość, szczelność, brak pustek",
+     "szczelne zamknięcie korony"
+    ],
+    "nieprawidlowosci": [
+     "wypełnienie za krótkie / przepchnięte",
+     "perforacja",
+     "złamane narzędzie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola kliniczna i RTG po co najmniej roku (ESE)"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Dolegliwości przy nagryzaniu kilka dni – leki przeciwbólowe wg zaleceń.",
+     "Nie gryźć twardych pokarmów do odbudowy ostatecznej."
+    ],
+    "kontakt_gdy": [
+     "narastający ból, obrzęk, gorączka"
+    ],
+    "kontrola": "Odbudowa ostateczna możliwie szybko; RTG kontrolne po ≥ 1 roku."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Grubość bariery i RTG",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-KLIN-ESE-S3-2023"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.2313149 – 700 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 2b (<18 (szkoła))"
+    ],
+    "reguly": [
+     "R-MTA-01"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "NFZ: świadczenie dla dzieci i młodzieży (warunki – audyt)."
+   },
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.14",
    "kod": "23.14",
    "nazwa_oficjalna": "Szczególne trudności w preparowaniu/ wypełnianiu zębów - usunięcie przerośniętej brodawki międzyzębowej, zatamowanie krwawienia z brodawki, separowanie zębów itp.",
    "kategoria": "stomatologia zachowawcza",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Szczególne trudności – usunięcie przerośniętej brodawki",
+   "opis": "Szczególne trudności w preparowaniu / wypełnianiu zębów – usunięcie przerośniętej brodawki międzyzębowej.",
+   "cel": {
+    "na_czym_polega": "Usunięcie przerośniętej brodawki zasłaniającej ubytek przydziąsłowy, aby umożliwić opracowanie i szczelne wypełnienie.",
+    "cel_kliniczny": "Dostęp i suche pole przy ubytku przydziąsłowym.",
+    "wskazania": [
+     "przerost brodawki do ubytku stycznego"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "żywotność miazgi i objawy",
+     "głębokość ubytku (klinicznie / RTG)"
+    ],
+    "wywiad": [
+     "ból, alergie na materiały"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "nieodwracalne zapalenie / martwica miazgi – leczenie endodontyczne",
+      "rodzaj": "wzgledne"
+     }
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "znieczulenie",
+     "skalpel / elektrochirurgia"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-GINGIWEKTOMIA-BRODAWKI"
+    },
+    {
+     "krok": "KROK-HEMOSTAZA"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-HEMOSTATYK",
+     "rola": "sytuacyjne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza i dostęp do ubytku"
+    ]
+   },
+   "zalecenia": {
+    "higiena": [
+     "Delikatne oczyszczanie okolicy przez kilka dni."
+    ],
+    "kontakt_gdy": [
+     "przedłużone krwawienie"
+    ]
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Ząb i zakres wycięcia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1501",
@@ -7132,55 +12219,686 @@
    "kod": "23.1508",
    "nazwa_oficjalna": "Kosmetyczne pokrycie niedorozwoju szkliwa",
    "kategoria": "odbudowa i estetyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Kosmetyczne pokrycie niedorozwoju szkliwa",
+   "opis": "Kosmetyczne pokrycie niedorozwoju szkliwa.",
+   "cel": {
+    "na_czym_polega": "Kosmetyczne pokrycie niedorozwoju szkliwa – zabieg estetyczny.",
+    "cel_kliniczny": "Poprawa estetyki uzębienia.",
+    "wskazania": [
+     "wskazania estetyczne zgłaszane przez pacjenta, po wykluczeniu chorób wymagających leczenia"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "oczekiwania pacjenta i realność efektu",
+     "stan miazgi i wypełnień",
+     "higiena"
+    ],
+    "wywiad": [
+     "nadwrażliwość, alergie",
+     "ciąża (wybielanie – odroczenie)"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "nieleczona próchnica, zapalenie dziąseł – najpierw leczenie",
+      "rodzaj": "wzgledne"
+     }
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "dobór koloru, dokumentacja koloru przed"
+    ],
+    "opcjonalne": [
+     "zdjęcia (na urządzeniu)"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-KOLOR"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-ADHEZJA"
+    },
+    {
+     "krok": "KROK-LICOWANIE-KOMPOZYT"
+    },
+    {
+     "krok": "KROK-WYKONCZENIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-KOMPOZYT",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SYSTEM-WIAZ",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-LAMPA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-POLERY",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "kolor i kształt wg oczekiwań",
+     "brzegi odbudowy"
+    ],
+    "nieprawidlowosci": [
+     "nadwrażliwość",
+     "niezgodność koloru"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Ograniczyć barwiące pokarmy (kawa, herbata) – szczególnie po wybielaniu."
+    ],
+    "kontrola": "Wg lekarza."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Kolor przed i po zabiegu, oczekiwania pacjenta",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.2315080 – 30 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie dotyczy zębów stałych. Świadczenie jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia.",
+     "zał. 2 (<18): Świadczenie dotyczy zębów stałych.",
+     "zał. 2b (<18 (szkoła)): Świadczenie dotyczy zębów stałych."
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "Świadczenie gwarantowane wg audytu (warunki – sekcja NFZ)."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1509",
    "kod": "23.1509",
    "nazwa_oficjalna": "Kosmetyczna korekta przebarwienia zębiny w zębach przednich",
    "kategoria": "odbudowa i estetyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Korekta przebarwienia zębiny (zęby przednie)",
+   "opis": "Korekta przebarwienia zębiny (zęby przednie).",
+   "cel": {
+    "na_czym_polega": "Korekta przebarwienia zębiny (zęby przednie) – zabieg estetyczny.",
+    "cel_kliniczny": "Poprawa estetyki uzębienia.",
+    "wskazania": [
+     "wskazania estetyczne zgłaszane przez pacjenta, po wykluczeniu chorób wymagających leczenia"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "oczekiwania pacjenta i realność efektu",
+     "stan miazgi i wypełnień",
+     "higiena"
+    ],
+    "wywiad": [
+     "nadwrażliwość, alergie",
+     "ciąża (wybielanie – odroczenie)"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "nieleczona próchnica, zapalenie dziąseł – najpierw leczenie",
+      "rodzaj": "wzgledne"
+     }
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "dobór koloru, dokumentacja koloru przed"
+    ],
+    "opcjonalne": [
+     "zdjęcia (na urządzeniu)"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-KOLOR"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-ADHEZJA"
+    },
+    {
+     "krok": "KROK-LICOWANIE-KOMPOZYT"
+    },
+    {
+     "krok": "KROK-WYKONCZENIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-KOMPOZYT",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SYSTEM-WIAZ",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-LAMPA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-POLERY",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "kolor i kształt wg oczekiwań",
+     "brzegi odbudowy"
+    ],
+    "nieprawidlowosci": [
+     "nadwrażliwość",
+     "niezgodność koloru"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Ograniczyć barwiące pokarmy (kawa, herbata) – szczególnie po wybielaniu."
+    ],
+    "kontrola": "Wg lekarza."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Kolor przed i po zabiegu, oczekiwania pacjenta",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1510",
    "kod": "23.1510",
    "nazwa_oficjalna": "Likwidacja diastemy",
    "kategoria": "odbudowa i estetyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Likwidacja diastemy",
+   "opis": "Likwidacja diastemy.",
+   "cel": {
+    "na_czym_polega": "Likwidacja diastemy – zabieg estetyczny.",
+    "cel_kliniczny": "Poprawa estetyki uzębienia.",
+    "wskazania": [
+     "wskazania estetyczne zgłaszane przez pacjenta, po wykluczeniu chorób wymagających leczenia"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "oczekiwania pacjenta i realność efektu",
+     "stan miazgi i wypełnień",
+     "higiena"
+    ],
+    "wywiad": [
+     "nadwrażliwość, alergie",
+     "ciąża (wybielanie – odroczenie)"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "nieleczona próchnica, zapalenie dziąseł – najpierw leczenie",
+      "rodzaj": "wzgledne"
+     }
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "dobór koloru, dokumentacja koloru przed"
+    ],
+    "opcjonalne": [
+     "zdjęcia (na urządzeniu)"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-KOLOR"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-ADHEZJA"
+    },
+    {
+     "krok": "KROK-DIASTEMA"
+    },
+    {
+     "krok": "KROK-WYKONCZENIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-KOMPOZYT",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SYSTEM-WIAZ",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-LAMPA",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-POLERY",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "kolor i kształt wg oczekiwań",
+     "brzegi odbudowy"
+    ],
+    "nieprawidlowosci": [
+     "nadwrażliwość",
+     "niezgodność koloru"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Ograniczyć barwiące pokarmy (kawa, herbata) – szczególnie po wybielaniu."
+    ],
+    "kontrola": "Wg lekarza."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Kolor przed i po zabiegu, oczekiwania pacjenta",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1511",
    "kod": "23.1511",
    "nazwa_oficjalna": "Wybielanie zęba metodą wewnętrzną",
    "kategoria": "odbudowa i estetyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Wybielanie wewnętrzne zęba",
+   "opis": "Wybielanie wewnętrzne zęba.",
+   "cel": {
+    "na_czym_polega": "Wybielanie wewnętrzne zęba – zabieg estetyczny.",
+    "cel_kliniczny": "Poprawa estetyki uzębienia.",
+    "wskazania": [
+     "wskazania estetyczne zgłaszane przez pacjenta, po wykluczeniu chorób wymagających leczenia"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "oczekiwania pacjenta i realność efektu",
+     "stan miazgi i wypełnień",
+     "higiena"
+    ],
+    "wywiad": [
+     "nadwrażliwość, alergie",
+     "ciąża (wybielanie – odroczenie)"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "nieleczona próchnica, zapalenie dziąseł – najpierw leczenie",
+      "rodzaj": "wzgledne"
+     }
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "dobór koloru, dokumentacja koloru przed"
+    ],
+    "opcjonalne": [
+     "zdjęcia (na urządzeniu)"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-RTG-KONTROLA"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-WYBIELANIE-WEWN"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-OPATR-TYMCZ",
+     "rola": "sytuacyjne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "kolor i kształt wg oczekiwań",
+     "brzegi odbudowy"
+    ],
+    "nieprawidlowosci": [
+     "nadwrażliwość",
+     "niezgodność koloru"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Ograniczyć barwiące pokarmy (kawa, herbata) – szczególnie po wybielaniu."
+    ],
+    "kontrola": "Wg lekarza."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Kolor przed i po zabiegu, oczekiwania pacjenta",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1512",
    "kod": "23.1512",
    "nazwa_oficjalna": "Wybielanie grupy zębów metodą zewnętrzną",
    "kategoria": "odbudowa i estetyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Wybielanie zewnętrzne grupy zębów",
+   "opis": "Wybielanie zewnętrzne grupy zębów.",
+   "cel": {
+    "na_czym_polega": "Wybielanie zewnętrzne grupy zębów – zabieg estetyczny.",
+    "cel_kliniczny": "Poprawa estetyki uzębienia.",
+    "wskazania": [
+     "wskazania estetyczne zgłaszane przez pacjenta, po wykluczeniu chorób wymagających leczenia"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "oczekiwania pacjenta i realność efektu",
+     "stan miazgi i wypełnień",
+     "higiena"
+    ],
+    "wywiad": [
+     "nadwrażliwość, alergie",
+     "ciąża (wybielanie – odroczenie)"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "nieleczona próchnica, zapalenie dziąseł – najpierw leczenie",
+      "rodzaj": "wzgledne"
+     }
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "dobór koloru, dokumentacja koloru przed"
+    ],
+    "opcjonalne": [
+     "zdjęcia (na urządzeniu)"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-KOLOR"
+    },
+    {
+     "krok": "KROK-WYBIELANIE-ZEWN"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-OPATR-TYMCZ",
+     "rola": "sytuacyjne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "kolor i kształt wg oczekiwań",
+     "brzegi odbudowy"
+    ],
+    "nieprawidlowosci": [
+     "nadwrażliwość",
+     "niezgodność koloru"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Ograniczyć barwiące pokarmy (kawa, herbata) – szczególnie po wybielaniu."
+    ],
+    "kontrola": "Wg lekarza."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie i ząb (FDI)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zakres wykonanej procedury",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Kolor przed i po zabiegu, oczekiwania pacjenta",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1601",

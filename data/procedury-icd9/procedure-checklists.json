@@ -1744,6 +1744,1126 @@
      "pole": "POLE-WSKAZANIE"
     }
    ]
+  },
+  {
+   "procedura": "PROC-23.1102",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1102-1",
+     "tekst": "Powierzchnie i materiał",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-POWIERZCHNIE"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1103",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1103-1",
+     "tekst": "Powierzchnie i materiał",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-POWIERZCHNIE"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1109",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1109-1",
+     "tekst": "Powierzchnie i materiał",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-POWIERZCHNIE"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1110",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1110-1",
+     "tekst": "Powierzchnie i materiał",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-POWIERZCHNIE"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1111",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1111-1",
+     "tekst": "Powierzchnie i materiał",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-POWIERZCHNIE"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1112",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1112-1",
+     "tekst": "Powierzchnie i materiał",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-POWIERZCHNIE"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.14",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": []
+  },
+  {
+   "procedura": "PROC-23.1308",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1308-1",
+     "tekst": "Kanały, długości robocze, punkt odniesienia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-ENDO-KANALY"
+    },
+    {
+     "id": "CHK-23.1308-2",
+     "tekst": "Liczba kanałów (świadczenie za kanał)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "pole": "POLE-ENDO-KANALY",
+     "warunek": "rozliczenie NFZ"
+    },
+    {
+     "id": "CHK-23.1308-3",
+     "tekst": "RTG",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1309",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1309-1",
+     "tekst": "Kanały, długości robocze, punkt odniesienia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-ENDO-KANALY"
+    },
+    {
+     "id": "CHK-23.1309-2",
+     "tekst": "Liczba kanałów (świadczenie za kanał)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "pole": "POLE-ENDO-KANALY",
+     "warunek": "rozliczenie NFZ"
+    },
+    {
+     "id": "CHK-23.1309-3",
+     "tekst": "RTG",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1312",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1312-1",
+     "tekst": "Kanały, długości robocze, punkt odniesienia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-ENDO-KANALY"
+    },
+    {
+     "id": "CHK-23.1312-2",
+     "tekst": "Liczba kanałów (świadczenie za kanał)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "pole": "POLE-ENDO-KANALY",
+     "warunek": "rozliczenie NFZ"
+    },
+    {
+     "id": "CHK-23.1312-3",
+     "tekst": "RTG",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1313",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1313-1",
+     "tekst": "Kanały, długości robocze, punkt odniesienia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-ENDO-KANALY"
+    },
+    {
+     "id": "CHK-23.1313-2",
+     "tekst": "Liczba kanałów (świadczenie za kanał)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "pole": "POLE-ENDO-KANALY",
+     "warunek": "rozliczenie NFZ"
+    },
+    {
+     "id": "CHK-23.1313-3",
+     "tekst": "RTG",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1302",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1302-1",
+     "tekst": "Kanały, długości robocze, punkt odniesienia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-ENDO-KANALY"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1303",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1303-1",
+     "tekst": "Kanały, długości robocze, punkt odniesienia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-ENDO-KANALY"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1304",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1304-1",
+     "tekst": "Kanały, długości robocze, punkt odniesienia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-ENDO-KANALY"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1305",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1305-1",
+     "tekst": "Kanały, długości robocze, punkt odniesienia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-ENDO-KANALY"
+    },
+    {
+     "id": "CHK-23.1305-2",
+     "tekst": "Liczba kanałów (świadczenie za kanał)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "pole": "POLE-ENDO-KANALY",
+     "warunek": "rozliczenie NFZ"
+    },
+    {
+     "id": "CHK-23.1305-3",
+     "tekst": "RTG",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.13141",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.13141-1",
+     "tekst": "Kanały, długości robocze, punkt odniesienia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-ENDO-KANALY"
+    },
+    {
+     "id": "CHK-23.13141-2",
+     "tekst": "Liczba kanałów (świadczenie za kanał)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "pole": "POLE-ENDO-KANALY",
+     "warunek": "rozliczenie NFZ"
+    },
+    {
+     "id": "CHK-23.13141-3",
+     "tekst": "RTG",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.13142",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.13142-1",
+     "tekst": "Kanały, długości robocze, punkt odniesienia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-ENDO-KANALY"
+    },
+    {
+     "id": "CHK-23.13142-2",
+     "tekst": "Liczba kanałów (świadczenie za kanał)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "pole": "POLE-ENDO-KANALY",
+     "warunek": "rozliczenie NFZ"
+    },
+    {
+     "id": "CHK-23.13142-3",
+     "tekst": "RTG",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.13143",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.13143-1",
+     "tekst": "Kanały, długości robocze, punkt odniesienia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-ENDO-KANALY"
+    },
+    {
+     "id": "CHK-23.13143-2",
+     "tekst": "Liczba kanałów (świadczenie za kanał)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "pole": "POLE-ENDO-KANALY",
+     "warunek": "rozliczenie NFZ"
+    },
+    {
+     "id": "CHK-23.13143-3",
+     "tekst": "RTG",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.13149",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.13149-1",
+     "tekst": "Kanały, długości robocze, punkt odniesienia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-ENDO-KANALY"
+    },
+    {
+     "id": "CHK-23.13149-2",
+     "tekst": "Liczba kanałów (świadczenie za kanał)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "pole": "POLE-ENDO-KANALY",
+     "warunek": "rozliczenie NFZ"
+    },
+    {
+     "id": "CHK-23.13149-3",
+     "tekst": "RTG",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1314",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1314-1",
+     "tekst": "Kanały, długości robocze, punkt odniesienia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-ENDO-KANALY"
+    },
+    {
+     "id": "CHK-23.1314-2",
+     "tekst": "Liczba kanałów (świadczenie za kanał)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "pole": "POLE-ENDO-KANALY",
+     "warunek": "rozliczenie NFZ"
+    },
+    {
+     "id": "CHK-23.1314-3",
+     "tekst": "RTG",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1203",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1203-1",
+     "tekst": "RTG",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1205",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1205-1",
+     "tekst": "Kanały, długości robocze, punkt odniesienia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-ENDO-KANALY"
+    },
+    {
+     "id": "CHK-23.1205-2",
+     "tekst": "Liczba kanałów (świadczenie za kanał)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "pole": "POLE-ENDO-KANALY",
+     "warunek": "rozliczenie NFZ"
+    },
+    {
+     "id": "CHK-23.1205-3",
+     "tekst": "RTG",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1202",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1202-1",
+     "tekst": "Termin kolejnej wizyty",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-KONTROLA"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1207",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1207-1",
+     "tekst": "RTG",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1208",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1208-1",
+     "tekst": "Kanały, długości robocze, punkt odniesienia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-ENDO-KANALY"
+    },
+    {
+     "id": "CHK-23.1208-2",
+     "tekst": "Liczba kanałów (świadczenie za kanał)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "pole": "POLE-ENDO-KANALY",
+     "warunek": "rozliczenie NFZ"
+    },
+    {
+     "id": "CHK-23.1208-3",
+     "tekst": "RTG",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1209",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1209-1",
+     "tekst": "Kanały, długości robocze, punkt odniesienia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-ENDO-KANALY"
+    },
+    {
+     "id": "CHK-23.1209-2",
+     "tekst": "Liczba kanałów (świadczenie za kanał)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "pole": "POLE-ENDO-KANALY",
+     "warunek": "rozliczenie NFZ"
+    },
+    {
+     "id": "CHK-23.1209-3",
+     "tekst": "RTG",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1210",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1210-1",
+     "tekst": "RTG",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1310",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1310-1",
+     "tekst": "Kanały, długości robocze, punkt odniesienia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-ENDO-KANALY"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1508",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1508-1",
+     "tekst": "Kolor przed zabiegiem",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-KOLOR"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1509",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1509-1",
+     "tekst": "Kolor przed zabiegiem",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-KOLOR"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1510",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1510-1",
+     "tekst": "Kolor przed zabiegiem",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-KOLOR"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1511",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1511-1",
+     "tekst": "Kolor przed zabiegiem",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-KOLOR"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1512",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1512-1",
+     "tekst": "Kolor przed zabiegiem",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-KOLOR"
+    }
+   ]
   }
  ]
 }

@@ -8,8 +8,9 @@ Wersja danych: 2026.11.22-1.
 
 | Status | Procedury |
 |---|---|
-| draft | 51 |
-| not_started | 215 |
+| draft | 74 |
+| not_started | 182 |
+| requires_expert_review | 10 |
 | **razem** | **266** |
 
 Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: draft, BAD-BLONA: draft, BAD-UZEBIENIE: draft, BAD-PRZYZEBIE: draft, BAD-HIGIENA: draft, BAD-ZGRYZ: draft, BAD-SSZ: draft, BAD-ZYWOTNOSC: draft, BAD-RTG: draft, BAD-PO-URAZIE: draft, BAD-DZIECKO: draft, BAD-STOMATOLOGICZNE: draft, BAD-KONTROLNE: draft, BAD-PRZED-LECZENIEM: draft, BAD-PO-LECZENIU: draft).
@@ -70,46 +71,46 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.1022 | Profilaktyczne świadczenie stomatologiczne zapobiegające wadom zgryzu | profilaktyka | not_started | Do opracowania w kolejnej partii. |
 | 23.1023 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 3. roku życia | profilaktyka | not_started | Do opracowania w kolejnej partii. |
 | 23.1101 | Leczenie próchnicy powierzchniowej - za każdy ząb | leczenie próchnicy | draft |  |
-| 23.1102 | Całkowite opracowanie ubytku próchnicowego z założeniem podkładu | leczenie próchnicy | not_started | Do opracowania w kolejnej partii. |
-| 23.1103 | Całkowite opracowanie rozległego ubytku próchnicowego z założeniem podwójnego podkładu | leczenie próchnicy | not_started | Do opracowania w kolejnej partii. |
+| 23.1102 | Całkowite opracowanie ubytku próchnicowego z założeniem podkładu | leczenie próchnicy | draft |  |
+| 23.1103 | Całkowite opracowanie rozległego ubytku próchnicowego z założeniem podwójnego podkładu | leczenie próchnicy | draft |  |
 | 23.1104 | Postępowanie przy próchnicy głębokiej - pośrednie pokrycie miazgi | leczenie próchnicy | draft |  |
 | 23.1105 | Postępowanie przy obnażeniu i skaleczeniu miazgi - bezpośrednie pokrycie miazgi | leczenie próchnicy | draft |  |
 | 23.1106 | Opatrunek leczniczy w zębie stałym | leczenie próchnicy | draft |  |
 | 23.1107 | Opatrunek leczniczy w zębie mlecznym | leczenie próchnicy | draft |  |
 | 23.1108 | Wypełnienie ubytku korony zęba mlecznego | leczenie próchnicy | draft |  |
-| 23.1109 | Wypełnienie ubytku korony zęba na 1 powierzchni | leczenie próchnicy | not_started | Do opracowania w kolejnej partii. |
-| 23.1110 | Wypełnienie ubytku korony zęba na 2 powierzchniach | leczenie próchnicy | not_started | Do opracowania w kolejnej partii. |
-| 23.1111 | Wypełnienie ubytku korony zęba na 3 powierzchniach | leczenie próchnicy | not_started | Do opracowania w kolejnej partii. |
-| 23.1112 | Wypełnienie ubytku korony zęba na więcej niż 3 powierzchniach | leczenie próchnicy | not_started | Do opracowania w kolejnej partii. |
+| 23.1109 | Wypełnienie ubytku korony zęba na 1 powierzchni | leczenie próchnicy | requires_expert_review | Kod obecny w ICD-9 PL 5.91 obok 23.1502–23.1506 – Patryk: czy jest jeszcze używany (raport, kwestia 6). |
+| 23.1110 | Wypełnienie ubytku korony zęba na 2 powierzchniach | leczenie próchnicy | requires_expert_review | Kod obecny w ICD-9 PL 5.91 obok 23.1502–23.1506 – Patryk: czy jest jeszcze używany (raport, kwestia 6). |
+| 23.1111 | Wypełnienie ubytku korony zęba na 3 powierzchniach | leczenie próchnicy | requires_expert_review | Kod obecny w ICD-9 PL 5.91 obok 23.1502–23.1506 – Patryk: czy jest jeszcze używany (raport, kwestia 6). |
+| 23.1112 | Wypełnienie ubytku korony zęba na więcej niż 3 powierzchniach | leczenie próchnicy | requires_expert_review | Kod obecny w ICD-9 PL 5.91 obok 23.1502–23.1506 – Patryk: czy jest jeszcze używany (raport, kwestia 6). |
 | 23.1201 | Trepanacja martwego zęba z zaopatrzeniem ubytku opatrunkiem | endodoncja – leczenie miazgi | draft |  |
-| 23.1202 | Dewitalizacja miazgi zęba z zaopatrzeniem ubytku opatrunkiem | endodoncja – leczenie miazgi | not_started | Do opracowania w kolejnej partii. |
-| 23.1203 | Amputacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem | endodoncja – leczenie miazgi | not_started | Do opracowania w kolejnej partii. |
+| 23.1202 | Dewitalizacja miazgi zęba z zaopatrzeniem ubytku opatrunkiem | endodoncja – leczenie miazgi | requires_expert_review | Metoda z użyciem preparatu dewitalizującego – nadal w wykazie świadczeń gwarantowanych, ale współczesne wytyczne (ESE) preferują leczenie w znieczuleniu; do oceny Patryka, jak ją przedstawiać w aplikacji. |
+| 23.1203 | Amputacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem | endodoncja – leczenie miazgi | draft |  |
 | 23.1204 | Amputacja przyżyciowa miazgi | endodoncja – leczenie miazgi | draft |  |
-| 23.1205 | Ekstyrpacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem | endodoncja – leczenie miazgi | not_started | Do opracowania w kolejnej partii. |
+| 23.1205 | Ekstyrpacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem | endodoncja – leczenie miazgi | draft |  |
 | 23.1206 | Ekstyrpacja przyżyciowa miazgi | endodoncja – leczenie miazgi | draft |  |
-| 23.1207 | Amputacja zdewitalizowanej miazgi zęba | endodoncja – leczenie miazgi | not_started | Do opracowania w kolejnej partii. |
-| 23.1208 | Ekstyrpacja zdewitalizowanej miazgi zęba z nieuformowanym korzeniem | endodoncja – leczenie miazgi | not_started | Do opracowania w kolejnej partii. |
-| 23.1209 | Ekstyrpacja zdewitalizowanej miazgi zęba | endodoncja – leczenie miazgi | not_started | Do opracowania w kolejnej partii. |
-| 23.1210 | Amputacja zdewitalizowanej miazgi zęba mlecznego | endodoncja – leczenie miazgi | not_started | Do opracowania w kolejnej partii. |
+| 23.1207 | Amputacja zdewitalizowanej miazgi zęba | endodoncja – leczenie miazgi | requires_expert_review | Metoda z użyciem preparatu dewitalizującego – nadal w wykazie świadczeń gwarantowanych, ale współczesne wytyczne (ESE) preferują leczenie w znieczuleniu; do oceny Patryka, jak ją przedstawiać w aplikacji. |
+| 23.1208 | Ekstyrpacja zdewitalizowanej miazgi zęba z nieuformowanym korzeniem | endodoncja – leczenie miazgi | requires_expert_review | Metoda z użyciem preparatu dewitalizującego – nadal w wykazie świadczeń gwarantowanych, ale współczesne wytyczne (ESE) preferują leczenie w znieczuleniu; do oceny Patryka, jak ją przedstawiać w aplikacji. |
+| 23.1209 | Ekstyrpacja zdewitalizowanej miazgi zęba | endodoncja – leczenie miazgi | requires_expert_review | Metoda z użyciem preparatu dewitalizującego – nadal w wykazie świadczeń gwarantowanych, ale współczesne wytyczne (ESE) preferują leczenie w znieczuleniu; do oceny Patryka, jak ją przedstawiać w aplikacji. |
+| 23.1210 | Amputacja zdewitalizowanej miazgi zęba mlecznego | endodoncja – leczenie miazgi | requires_expert_review | Metoda z użyciem preparatu dewitalizującego – nadal w wykazie świadczeń gwarantowanych, ale współczesne wytyczne (ESE) preferują leczenie w znieczuleniu; do oceny Patryka, jak ją przedstawiać w aplikacji. |
 | 23.1301 | Całkowite opracowanie i dezynfekcja kanału | endodoncja – leczenie kanałowe | draft |  |
-| 23.1302 | Leczenie zgorzeli | endodoncja – leczenie kanałowe | not_started | Do opracowania w kolejnej partii. |
-| 23.1303 | Leczenie zgorzeli całkowitej niepowikłanej zęba z nieuformowanym korzeniem | endodoncja – leczenie kanałowe | not_started | Do opracowania w kolejnej partii. |
-| 23.1304 | Dodatkowe fizykochemiczne metody udrażniania i opracowywania kanału | endodoncja – leczenie kanałowe | not_started | Do opracowania w kolejnej partii. |
-| 23.1305 | Ponowne udrożnienie wypełnionego kanału | endodoncja – leczenie kanałowe | not_started | Do opracowania w kolejnej partii. |
+| 23.1302 | Leczenie zgorzeli | endodoncja – leczenie kanałowe | draft |  |
+| 23.1303 | Leczenie zgorzeli całkowitej niepowikłanej zęba z nieuformowanym korzeniem | endodoncja – leczenie kanałowe | draft |  |
+| 23.1304 | Dodatkowe fizykochemiczne metody udrażniania i opracowywania kanału | endodoncja – leczenie kanałowe | draft |  |
+| 23.1305 | Ponowne udrożnienie wypełnionego kanału | endodoncja – leczenie kanałowe | draft |  |
 | 23.1306 | Czasowe wypełnienie kanału | endodoncja – leczenie kanałowe | draft |  |
 | 23.1307 | Wypełnienie kanału | endodoncja – leczenie kanałowe | draft |  |
-| 23.1308 | Leczenie endodontyczne z wypełnieniem 2 kanałów | endodoncja – leczenie kanałowe | not_started | Do opracowania w kolejnej partii. |
-| 23.1309 | Leczenie endodontyczne z wypełnieniem 3 kanałów | endodoncja – leczenie kanałowe | not_started | Do opracowania w kolejnej partii. |
-| 23.1310 | Leczenie endodontyczne metodą amputacyjno-ekstyrpacyjną | endodoncja – leczenie kanałowe | not_started | Do opracowania w kolejnej partii. |
+| 23.1308 | Leczenie endodontyczne z wypełnieniem 2 kanałów | endodoncja – leczenie kanałowe | draft |  |
+| 23.1309 | Leczenie endodontyczne z wypełnieniem 3 kanałów | endodoncja – leczenie kanałowe | draft |  |
+| 23.1310 | Leczenie endodontyczne metodą amputacyjno-ekstyrpacyjną | endodoncja – leczenie kanałowe | requires_expert_review | Metoda historyczna (brak w wykazie świadczeń gwarantowanych wg audytu) – do oceny Patryka. |
 | 23.1311 | Leczenie endodontyczne zęba z wypełnieniem 1 kanału ze zgorzelą miazgi | endodoncja – leczenie kanałowe | draft |  |
-| 23.1312 | Leczenie endodontyczne zęba z wypełnieniem 2 kanałów ze zgorzelą miazgi | endodoncja – leczenie kanałowe | not_started | Do opracowania w kolejnej partii. |
-| 23.1313 | Leczenie endodontyczne zęba z wypełnieniem 3 kanałów ze zgorzelą miazgi | endodoncja – leczenie kanałowe | not_started | Do opracowania w kolejnej partii. |
-| 23.1314 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA | endodoncja – leczenie kanałowe | not_started | Do opracowania w kolejnej partii. |
-| 23.13141 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 1 kanału | endodoncja – leczenie kanałowe | not_started | Do opracowania w kolejnej partii. |
-| 23.13142 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 2 kanałów | endodoncja – leczenie kanałowe | not_started | Do opracowania w kolejnej partii. |
-| 23.13143 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 3 kanałów | endodoncja – leczenie kanałowe | not_started | Do opracowania w kolejnej partii. |
-| 23.13149 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA - inne | endodoncja – leczenie kanałowe | not_started | Do opracowania w kolejnej partii. |
-| 23.14 | Szczególne trudności w preparowaniu/ wypełnianiu zębów - usunięcie przerośniętej brodawki międzyzębowej, zatamowanie krwawienia z brodawki, separowanie zębów itp. | stomatologia zachowawcza | not_started | Do opracowania w kolejnej partii. |
+| 23.1312 | Leczenie endodontyczne zęba z wypełnieniem 2 kanałów ze zgorzelą miazgi | endodoncja – leczenie kanałowe | draft |  |
+| 23.1313 | Leczenie endodontyczne zęba z wypełnieniem 3 kanałów ze zgorzelą miazgi | endodoncja – leczenie kanałowe | draft |  |
+| 23.1314 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA | endodoncja – leczenie kanałowe | draft |  |
+| 23.13141 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 1 kanału | endodoncja – leczenie kanałowe | draft |  |
+| 23.13142 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 2 kanałów | endodoncja – leczenie kanałowe | draft |  |
+| 23.13143 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 3 kanałów | endodoncja – leczenie kanałowe | draft |  |
+| 23.13149 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA - inne | endodoncja – leczenie kanałowe | draft |  |
+| 23.14 | Szczególne trudności w preparowaniu/ wypełnianiu zębów - usunięcie przerośniętej brodawki międzyzębowej, zatamowanie krwawienia z brodawki, separowanie zębów itp. | stomatologia zachowawcza | draft |  |
 | 23.1501 | Odbudowa zniszczonego, złamanego kąta w zębach siecznych | odbudowa i estetyka | draft |  |
 | 23.1502 | Całkowite opracowanie i odbudowa ubytku zęba na 1 powierzchni | odbudowa i estetyka | draft |  |
 | 23.1503 | Całkowite opracowanie i odbudowa ubytku na 2 powierzchniach | odbudowa i estetyka | draft |  |
@@ -117,11 +118,11 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.1505 | Całkowite opracowanie i odbudowa rozległego ubytku na 3 powierzchniach | odbudowa i estetyka | draft |  |
 | 23.1506 | Całkowite opracowanie i odbudowa rozległego ubytku na więcej niż 3 powierzchniach | odbudowa i estetyka | draft |  |
 | 23.1507 | Całkowite opracowanie i odbudowa zniszczonego kąta w zębach siecznych | odbudowa i estetyka | draft |  |
-| 23.1508 | Kosmetyczne pokrycie niedorozwoju szkliwa | odbudowa i estetyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1509 | Kosmetyczna korekta przebarwienia zębiny w zębach przednich | odbudowa i estetyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1510 | Likwidacja diastemy | odbudowa i estetyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1511 | Wybielanie zęba metodą wewnętrzną | odbudowa i estetyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1512 | Wybielanie grupy zębów metodą zewnętrzną | odbudowa i estetyka | not_started | Do opracowania w kolejnej partii. |
+| 23.1508 | Kosmetyczne pokrycie niedorozwoju szkliwa | odbudowa i estetyka | draft |  |
+| 23.1509 | Kosmetyczna korekta przebarwienia zębiny w zębach przednich | odbudowa i estetyka | draft |  |
+| 23.1510 | Likwidacja diastemy | odbudowa i estetyka | draft |  |
+| 23.1511 | Wybielanie zęba metodą wewnętrzną | odbudowa i estetyka | draft |  |
+| 23.1512 | Wybielanie grupy zębów metodą zewnętrzną | odbudowa i estetyka | draft |  |
 | 23.1601 | Usunięcie złogów nazębnych z 1/2 łuku zębowego | periodontologia i błona śluzowa | not_started | Kod nadrzędny – od 01.09.2026 do rozliczenia wykazuje się podkody (R-KOD-01): 23.16011 / 23.16012; karty w podkodach. |
 | 23.16011 | Usunięcie złogów nazębnych miękkich z 1/2 łuku zębowego | periodontologia i błona śluzowa | draft |  |
 | 23.16012 | Usunięcie złogów nazębnych twardych z 1/2 łuku zębowego | periodontologia i błona śluzowa | draft |  |

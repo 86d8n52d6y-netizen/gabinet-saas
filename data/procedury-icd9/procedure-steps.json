@@ -467,6 +467,91 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ]
+  },
+  {
+   "id": "KROK-DEWITALIZACJA",
+   "nazwa": "Założenie preparatu dewitalizującego",
+   "opis": "Po odsłonięciu miazgi: niewielka ilość preparatu dewitalizującego na miazgę, szczelne zamknięcie opatrunkiem; termin kolejnej wizyty zgodny z instrukcją preparatu.",
+   "uwaga": "Metoda historyczna – ryzyko martwicy tkanek przy nieszczelności; obecnie preferowane leczenie w znieczuleniu (ESE). Szczelność opatrunku krytyczna.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-APEKSYFIKACJA",
+   "nazwa": "Zamknięcie otwartego wierzchołka (bariera MTA)",
+   "opis": "Po dezynfekcji kanału: wprowadzenie materiału krzemianowo-wapniowego w okolicę wierzchołka (bariera kilku mm), kontrola RTG, po związaniu – wypełnienie pozostałej części kanału.",
+   "uwaga": "Ząb z niedojrzałym korzeniem; alternatywa – procedury regeneracyjne (poza zakresem karty).",
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023"
+   ]
+  },
+  {
+   "id": "KROK-REWIZJA",
+   "nazwa": "Usunięcie dotychczasowego wypełnienia kanału",
+   "opis": "Usunięcie odbudowy / wkładu, usunięcie gutaperki (narzędzia maszynowe / ręczne, rozpuszczalnik wg potrzeby), odnalezienie pominiętych kanałów, ponowne opracowanie do długości roboczej.",
+   "uwaga": "Ocena przyczyny niepowodzenia; przy wkładach, perforacjach, złamanych narzędziach – rozważ skierowanie do endodonty.",
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023",
+    "SRC-KLIN-ESE-2006"
+   ]
+  },
+  {
+   "id": "KROK-AKTYWACJA",
+   "nazwa": "Aktywacja płynów / dodatkowe metody opracowania",
+   "opis": "Aktywacja płynu płuczącego (ultradźwięki, aktywacja dźwiękowa lub ręczna), dodatkowe metody chemiczne udrażniania zwapniałych kanałów.",
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023"
+   ]
+  },
+  {
+   "id": "KROK-AMPUTACJA-MLECZ",
+   "nazwa": "Pulpotomia zęba mlecznego",
+   "opis": "Usunięcie miazgi koronowej, hemostaza, opatrunek na kikuty miazgi (materiał krzemianowo-wapniowy lub inny wg wytycznych), szczelna odbudowa (wypełnienie / korona stalowa).",
+   "zrodla": [
+    "SRC-KLIN-AAPD-VPT-2017"
+   ]
+  },
+  {
+   "id": "KROK-WYBIELANIE-WEWN",
+   "nazwa": "Wybielanie wewnętrzne",
+   "opis": "Po kontroli wypełnienia kanałowego: usunięcie materiału z komory, bariera szczelna 1–2 mm ponad połączeniem szkliwno-cementowym, preparat wybielający w komorze, szczelne zamknięcie; wymiana wg efektu.",
+   "uwaga": "Ryzyko resorpcji zewnętrznej przy braku bariery.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-WYBIELANIE-ZEWN",
+   "nazwa": "Wybielanie zewnętrzne",
+   "opis": "Ocena koloru wyjściowego, ochrona dziąseł, aplikacja preparatu (gabinetowo lub nakładki), kontrola nadwrażliwości; dokumentacja koloru przed i po.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-DIASTEMA",
+   "nazwa": "Zamknięcie diastemy materiałem złożonym",
+   "opis": "Planowanie proporcji (mock-up / klucz), przygotowanie szkliwa bez lub z minimalnym opracowaniem, odbudowa kompozytem z kontrolą profilu wyłaniania i brodawki.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-LICOWANIE-KOMPOZYT",
+   "nazwa": "Pokrycie powierzchni materiałem złożonym (licówka bezpośrednia)",
+   "opis": "Minimalne opracowanie lub bez opracowania, adhezja, warstwowe odtworzenie powierzchni wargowej, wykończenie.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-GINGIWEKTOMIA-BRODAWKI",
+   "nazwa": "Usunięcie przerośniętej brodawki",
+   "opis": "W znieczuleniu: wycięcie przerośniętej brodawki (skalpel / elektrochirurgia / laser) dla dostępu do ubytku, hemostaza.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
   }
  ]
 }

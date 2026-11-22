@@ -2293,6 +2293,1556 @@
     "POLE-KONTROLA"
    ],
    "tekst_aplikacji": "obiekt D w generator/nfz.html: ST19"
+  },
+  {
+   "id": "SZAB-PROC-23.1102-STD",
+   "dotyczy": "PROC-23.1102",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: opracowanie ubytku z podkładem – powierzchnie {{POLE-POWIERZCHNIE}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Podkład: {{POLE-MATERIAL-PODKLAD}}. Materiał: {{POLE-MATERIAL}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-POWIERZCHNIE",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-MATERIAL",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1102-SKR",
+   "dotyczy": "PROC-23.1102",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}} {{POLE-POWIERZCHNIE}}: opracowanie ubytku z podkładem, {{POLE-MATERIAL}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-POWIERZCHNIE",
+    "POLE-MATERIAL"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1102-ROZ",
+   "dotyczy": "PROC-23.1102",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. opracowanie ubytku z podkładem – powierzchnie {{POLE-POWIERZCHNIE}}. Przebieg: {{POLE-PRZEBIEG}}. Podkład: {{POLE-MATERIAL-PODKLAD}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-POWIERZCHNIE",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1103-STD",
+   "dotyczy": "PROC-23.1103",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: opracowanie rozległego ubytku z podwójnym podkładem – powierzchnie {{POLE-POWIERZCHNIE}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Podkład: {{POLE-MATERIAL-PODKLAD}}. Materiał: {{POLE-MATERIAL}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-POWIERZCHNIE",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-MATERIAL",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1103-SKR",
+   "dotyczy": "PROC-23.1103",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}} {{POLE-POWIERZCHNIE}}: opracowanie rozległego ubytku z podwójnym podkładem, {{POLE-MATERIAL}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-POWIERZCHNIE",
+    "POLE-MATERIAL"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1103-ROZ",
+   "dotyczy": "PROC-23.1103",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. opracowanie rozległego ubytku z podwójnym podkładem – powierzchnie {{POLE-POWIERZCHNIE}}. Przebieg: {{POLE-PRZEBIEG}}. Podkład: {{POLE-MATERIAL-PODKLAD}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-POWIERZCHNIE",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1109-STD",
+   "dotyczy": "PROC-23.1109",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: wypełnienie na 1 powierzchni – powierzchnie {{POLE-POWIERZCHNIE}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Podkład: {{POLE-MATERIAL-PODKLAD}}. Materiał: {{POLE-MATERIAL}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-POWIERZCHNIE",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-MATERIAL",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1109-SKR",
+   "dotyczy": "PROC-23.1109",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}} {{POLE-POWIERZCHNIE}}: wypełnienie na 1 powierzchni, {{POLE-MATERIAL}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-POWIERZCHNIE",
+    "POLE-MATERIAL"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1109-ROZ",
+   "dotyczy": "PROC-23.1109",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. wypełnienie na 1 powierzchni – powierzchnie {{POLE-POWIERZCHNIE}}. Przebieg: {{POLE-PRZEBIEG}}. Podkład: {{POLE-MATERIAL-PODKLAD}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-POWIERZCHNIE",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1110-STD",
+   "dotyczy": "PROC-23.1110",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: wypełnienie na 2 powierzchniach – powierzchnie {{POLE-POWIERZCHNIE}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Podkład: {{POLE-MATERIAL-PODKLAD}}. Materiał: {{POLE-MATERIAL}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-POWIERZCHNIE",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-MATERIAL",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1110-SKR",
+   "dotyczy": "PROC-23.1110",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}} {{POLE-POWIERZCHNIE}}: wypełnienie na 2 powierzchniach, {{POLE-MATERIAL}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-POWIERZCHNIE",
+    "POLE-MATERIAL"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1110-ROZ",
+   "dotyczy": "PROC-23.1110",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. wypełnienie na 2 powierzchniach – powierzchnie {{POLE-POWIERZCHNIE}}. Przebieg: {{POLE-PRZEBIEG}}. Podkład: {{POLE-MATERIAL-PODKLAD}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-POWIERZCHNIE",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1111-STD",
+   "dotyczy": "PROC-23.1111",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: wypełnienie na 3 powierzchniach – powierzchnie {{POLE-POWIERZCHNIE}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Podkład: {{POLE-MATERIAL-PODKLAD}}. Materiał: {{POLE-MATERIAL}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-POWIERZCHNIE",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-MATERIAL",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1111-SKR",
+   "dotyczy": "PROC-23.1111",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}} {{POLE-POWIERZCHNIE}}: wypełnienie na 3 powierzchniach, {{POLE-MATERIAL}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-POWIERZCHNIE",
+    "POLE-MATERIAL"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1111-ROZ",
+   "dotyczy": "PROC-23.1111",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. wypełnienie na 3 powierzchniach – powierzchnie {{POLE-POWIERZCHNIE}}. Przebieg: {{POLE-PRZEBIEG}}. Podkład: {{POLE-MATERIAL-PODKLAD}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-POWIERZCHNIE",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1112-STD",
+   "dotyczy": "PROC-23.1112",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: wypełnienie na więcej niż 3 powierzchniach – powierzchnie {{POLE-POWIERZCHNIE}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Podkład: {{POLE-MATERIAL-PODKLAD}}. Materiał: {{POLE-MATERIAL}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-POWIERZCHNIE",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-MATERIAL",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1112-SKR",
+   "dotyczy": "PROC-23.1112",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}} {{POLE-POWIERZCHNIE}}: wypełnienie na więcej niż 3 powierzchniach, {{POLE-MATERIAL}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-POWIERZCHNIE",
+    "POLE-MATERIAL"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1112-ROZ",
+   "dotyczy": "PROC-23.1112",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. wypełnienie na więcej niż 3 powierzchniach – powierzchnie {{POLE-POWIERZCHNIE}}. Przebieg: {{POLE-PRZEBIEG}}. Podkład: {{POLE-MATERIAL-PODKLAD}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-POWIERZCHNIE",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.14-STD",
+   "dotyczy": "PROC-23.14",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: usunięcie przerośniętej brodawki. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.14-SKR",
+   "dotyczy": "PROC-23.14",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: usunięcie brodawki.",
+   "pola": [
+    "POLE-ZAB"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.14-ROZ",
+   "dotyczy": "PROC-23.14",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}: przerośnięta brodawka utrudniająca leczenie. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Hemostaza: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1308-STD",
+   "dotyczy": "PROC-23.1308",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: leczenie kanałowe z wypełnieniem 2 kanałów. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-IZOLACJA",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-RTG",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1308-SKR",
+   "dotyczy": "PROC-23.1308",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: leczenie kanałowe z wypełnieniem 2 kanałów; kanały {{POLE-ENDO-KANALY}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ENDO-KANALY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1308-ROZ",
+   "dotyczy": "PROC-23.1308",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. leczenie kanałowe z wypełnieniem 2 kanałów. Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-PRZEBIEG",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-RTG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1309-STD",
+   "dotyczy": "PROC-23.1309",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: leczenie kanałowe z wypełnieniem 3 kanałów. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-IZOLACJA",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-RTG",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1309-SKR",
+   "dotyczy": "PROC-23.1309",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: leczenie kanałowe z wypełnieniem 3 kanałów; kanały {{POLE-ENDO-KANALY}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ENDO-KANALY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1309-ROZ",
+   "dotyczy": "PROC-23.1309",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. leczenie kanałowe z wypełnieniem 3 kanałów. Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-PRZEBIEG",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-RTG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1312-STD",
+   "dotyczy": "PROC-23.1312",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: leczenie kanałowe z wypełnieniem 2 kanałów ze zgorzelą. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-IZOLACJA",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-RTG",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1312-SKR",
+   "dotyczy": "PROC-23.1312",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: leczenie kanałowe z wypełnieniem 2 kanałów ze zgorzelą; kanały {{POLE-ENDO-KANALY}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ENDO-KANALY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1312-ROZ",
+   "dotyczy": "PROC-23.1312",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. leczenie kanałowe z wypełnieniem 2 kanałów ze zgorzelą. Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-PRZEBIEG",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-RTG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1313-STD",
+   "dotyczy": "PROC-23.1313",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: leczenie kanałowe z wypełnieniem 3 kanałów ze zgorzelą. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-IZOLACJA",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-RTG",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1313-SKR",
+   "dotyczy": "PROC-23.1313",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: leczenie kanałowe z wypełnieniem 3 kanałów ze zgorzelą; kanały {{POLE-ENDO-KANALY}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ENDO-KANALY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1313-ROZ",
+   "dotyczy": "PROC-23.1313",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. leczenie kanałowe z wypełnieniem 3 kanałów ze zgorzelą. Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-PRZEBIEG",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-RTG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1302-STD",
+   "dotyczy": "PROC-23.1302",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: leczenie zgorzeli. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-IZOLACJA",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-RTG",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1302-SKR",
+   "dotyczy": "PROC-23.1302",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: leczenie zgorzeli; kanały {{POLE-ENDO-KANALY}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ENDO-KANALY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1302-ROZ",
+   "dotyczy": "PROC-23.1302",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. leczenie zgorzeli. Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-PRZEBIEG",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-RTG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1303-STD",
+   "dotyczy": "PROC-23.1303",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: leczenie zgorzeli zęba z nieuformowanym korzeniem. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-IZOLACJA",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-RTG",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1303-SKR",
+   "dotyczy": "PROC-23.1303",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: leczenie zgorzeli zęba z nieuformowanym korzeniem; kanały {{POLE-ENDO-KANALY}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ENDO-KANALY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1303-ROZ",
+   "dotyczy": "PROC-23.1303",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. leczenie zgorzeli zęba z nieuformowanym korzeniem. Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-PRZEBIEG",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-RTG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1304-STD",
+   "dotyczy": "PROC-23.1304",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: dodatkowe metody udrażniania kanału. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-IZOLACJA",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-RTG",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1304-SKR",
+   "dotyczy": "PROC-23.1304",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: dodatkowe metody udrażniania kanału; kanały {{POLE-ENDO-KANALY}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ENDO-KANALY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1304-ROZ",
+   "dotyczy": "PROC-23.1304",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. dodatkowe metody udrażniania kanału. Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-PRZEBIEG",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-RTG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1305-STD",
+   "dotyczy": "PROC-23.1305",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: ponowne leczenie kanałowe. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-IZOLACJA",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-RTG",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1305-SKR",
+   "dotyczy": "PROC-23.1305",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: ponowne leczenie kanałowe; kanały {{POLE-ENDO-KANALY}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ENDO-KANALY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1305-ROZ",
+   "dotyczy": "PROC-23.1305",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. ponowne leczenie kanałowe. Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-PRZEBIEG",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-RTG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.13141-STD",
+   "dotyczy": "PROC-23.13141",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: leczenie z barierą MTA – 1 kanału. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-IZOLACJA",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-RTG",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.13141-SKR",
+   "dotyczy": "PROC-23.13141",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: leczenie z barierą MTA – 1 kanału; kanały {{POLE-ENDO-KANALY}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ENDO-KANALY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.13141-ROZ",
+   "dotyczy": "PROC-23.13141",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. leczenie z barierą MTA – 1 kanału. Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-PRZEBIEG",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-RTG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.13142-STD",
+   "dotyczy": "PROC-23.13142",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: leczenie z barierą MTA – 2 kanałów. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-IZOLACJA",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-RTG",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.13142-SKR",
+   "dotyczy": "PROC-23.13142",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: leczenie z barierą MTA – 2 kanałów; kanały {{POLE-ENDO-KANALY}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ENDO-KANALY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.13142-ROZ",
+   "dotyczy": "PROC-23.13142",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. leczenie z barierą MTA – 2 kanałów. Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-PRZEBIEG",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-RTG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.13143-STD",
+   "dotyczy": "PROC-23.13143",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: leczenie z barierą MTA – 3 kanałów. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-IZOLACJA",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-RTG",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.13143-SKR",
+   "dotyczy": "PROC-23.13143",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: leczenie z barierą MTA – 3 kanałów; kanały {{POLE-ENDO-KANALY}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ENDO-KANALY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.13143-ROZ",
+   "dotyczy": "PROC-23.13143",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. leczenie z barierą MTA – 3 kanałów. Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-PRZEBIEG",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-RTG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.13149-STD",
+   "dotyczy": "PROC-23.13149",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: leczenie z barierą MTA – innej liczby kanałów. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-IZOLACJA",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-RTG",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.13149-SKR",
+   "dotyczy": "PROC-23.13149",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: leczenie z barierą MTA – innej liczby kanałów; kanały {{POLE-ENDO-KANALY}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ENDO-KANALY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.13149-ROZ",
+   "dotyczy": "PROC-23.13149",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. leczenie z barierą MTA – innej liczby kanałów. Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-PRZEBIEG",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-RTG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1314-STD",
+   "dotyczy": "PROC-23.1314",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: leczenie z barierą MTA – (kod nadrzędny). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-IZOLACJA",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-RTG",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1314-SKR",
+   "dotyczy": "PROC-23.1314",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: leczenie z barierą MTA – (kod nadrzędny); kanały {{POLE-ENDO-KANALY}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ENDO-KANALY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1314-ROZ",
+   "dotyczy": "PROC-23.1314",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. leczenie z barierą MTA – (kod nadrzędny). Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-PRZEBIEG",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-RTG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1203-STD",
+   "dotyczy": "PROC-23.1203",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: amputacja przyżyciowa miazgi (ząb niedojrzały). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-IZOLACJA",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-RTG",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1203-SKR",
+   "dotyczy": "PROC-23.1203",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: amputacja przyżyciowa miazgi (ząb niedojrzały); kanały {{POLE-ENDO-KANALY}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ENDO-KANALY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1203-ROZ",
+   "dotyczy": "PROC-23.1203",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. amputacja przyżyciowa miazgi (ząb niedojrzały). Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-PRZEBIEG",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-RTG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1205-STD",
+   "dotyczy": "PROC-23.1205",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: ekstyrpacja przyżyciowa (ząb niedojrzały). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-IZOLACJA",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-RTG",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1205-SKR",
+   "dotyczy": "PROC-23.1205",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: ekstyrpacja przyżyciowa (ząb niedojrzały); kanały {{POLE-ENDO-KANALY}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ENDO-KANALY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1205-ROZ",
+   "dotyczy": "PROC-23.1205",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. ekstyrpacja przyżyciowa (ząb niedojrzały). Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-PRZEBIEG",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-RTG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1202-STD",
+   "dotyczy": "PROC-23.1202",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: dewitalizacja miazgi. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-IZOLACJA",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-RTG",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1202-SKR",
+   "dotyczy": "PROC-23.1202",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: dewitalizacja miazgi; kanały {{POLE-ENDO-KANALY}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ENDO-KANALY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1202-ROZ",
+   "dotyczy": "PROC-23.1202",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. dewitalizacja miazgi. Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-PRZEBIEG",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-RTG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1207-STD",
+   "dotyczy": "PROC-23.1207",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: amputacja zdewitalizowanej miazgi. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-IZOLACJA",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-RTG",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1207-SKR",
+   "dotyczy": "PROC-23.1207",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: amputacja zdewitalizowanej miazgi; kanały {{POLE-ENDO-KANALY}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ENDO-KANALY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1207-ROZ",
+   "dotyczy": "PROC-23.1207",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. amputacja zdewitalizowanej miazgi. Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-PRZEBIEG",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-RTG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1208-STD",
+   "dotyczy": "PROC-23.1208",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: ekstyrpacja zdewitalizowanej miazgi – ząb niedojrzały. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-IZOLACJA",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-RTG",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1208-SKR",
+   "dotyczy": "PROC-23.1208",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: ekstyrpacja zdewitalizowanej miazgi – ząb niedojrzały; kanały {{POLE-ENDO-KANALY}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ENDO-KANALY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1208-ROZ",
+   "dotyczy": "PROC-23.1208",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. ekstyrpacja zdewitalizowanej miazgi – ząb niedojrzały. Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-PRZEBIEG",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-RTG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1209-STD",
+   "dotyczy": "PROC-23.1209",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: ekstyrpacja zdewitalizowanej miazgi. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-IZOLACJA",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-RTG",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1209-SKR",
+   "dotyczy": "PROC-23.1209",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: ekstyrpacja zdewitalizowanej miazgi; kanały {{POLE-ENDO-KANALY}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ENDO-KANALY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1209-ROZ",
+   "dotyczy": "PROC-23.1209",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. ekstyrpacja zdewitalizowanej miazgi. Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-PRZEBIEG",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-RTG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1210-STD",
+   "dotyczy": "PROC-23.1210",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: amputacja zdewitalizowanej miazgi zęba mlecznego. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-IZOLACJA",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-RTG",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1210-SKR",
+   "dotyczy": "PROC-23.1210",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: amputacja zdewitalizowanej miazgi zęba mlecznego; kanały {{POLE-ENDO-KANALY}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ENDO-KANALY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1210-ROZ",
+   "dotyczy": "PROC-23.1210",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. amputacja zdewitalizowanej miazgi zęba mlecznego. Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-PRZEBIEG",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-RTG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1310-STD",
+   "dotyczy": "PROC-23.1310",
+   "wariant": "standardowy",
+   "tekst": "Ząb {{POLE-ZAB}}: leczenie metodą amputacyjno-ekstyrpacyjną. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-IZOLACJA",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-RTG",
+    "POLE-POWIKLANIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1310-SKR",
+   "dotyczy": "PROC-23.1310",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZAB}}: leczenie metodą amputacyjno-ekstyrpacyjną; kanały {{POLE-ENDO-KANALY}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ENDO-KANALY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1310-ROZ",
+   "dotyczy": "PROC-23.1310",
+   "wariant": "rozszerzony",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. leczenie metodą amputacyjno-ekstyrpacyjną. Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZAB",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-IZOLACJA",
+    "POLE-PRZEBIEG",
+    "POLE-ENDO-KANALY",
+    "POLE-ENDO-PLUKANIE",
+    "POLE-MATERIAL",
+    "POLE-MATERIAL-PODKLAD",
+    "POLE-RTG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1508-STD",
+   "dotyczy": "PROC-23.1508",
+   "wariant": "standardowy",
+   "tekst": "Zęby {{POLE-ZEBY}}: kosmetyczne pokrycie niedorozwoju szkliwa. Kolor przed: {{POLE-KOLOR}}. Materiał / preparat: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-KOLOR",
+    "POLE-MATERIAL",
+    "POLE-WYNIK"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1508-SKR",
+   "dotyczy": "PROC-23.1508",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZEBY}}: kosmetyczne pokrycie niedorozwoju szkliwa.",
+   "pola": [
+    "POLE-ZEBY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1508-ROZ",
+   "dotyczy": "PROC-23.1508",
+   "wariant": "rozszerzony",
+   "tekst": "Zęby {{POLE-ZEBY}}: kosmetyczne pokrycie niedorozwoju szkliwa. Wskazanie: {{POLE-WSKAZANIE}}. Kolor przed: {{POLE-KOLOR}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał / preparat: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-WSKAZANIE",
+    "POLE-KOLOR",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1509-STD",
+   "dotyczy": "PROC-23.1509",
+   "wariant": "standardowy",
+   "tekst": "Zęby {{POLE-ZEBY}}: korekta przebarwienia zębiny (zęby przednie). Kolor przed: {{POLE-KOLOR}}. Materiał / preparat: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-KOLOR",
+    "POLE-MATERIAL",
+    "POLE-WYNIK"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1509-SKR",
+   "dotyczy": "PROC-23.1509",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZEBY}}: korekta przebarwienia zębiny (zęby przednie).",
+   "pola": [
+    "POLE-ZEBY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1509-ROZ",
+   "dotyczy": "PROC-23.1509",
+   "wariant": "rozszerzony",
+   "tekst": "Zęby {{POLE-ZEBY}}: korekta przebarwienia zębiny (zęby przednie). Wskazanie: {{POLE-WSKAZANIE}}. Kolor przed: {{POLE-KOLOR}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał / preparat: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-WSKAZANIE",
+    "POLE-KOLOR",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1510-STD",
+   "dotyczy": "PROC-23.1510",
+   "wariant": "standardowy",
+   "tekst": "Zęby {{POLE-ZEBY}}: likwidacja diastemy. Kolor przed: {{POLE-KOLOR}}. Materiał / preparat: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-KOLOR",
+    "POLE-MATERIAL",
+    "POLE-WYNIK"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1510-SKR",
+   "dotyczy": "PROC-23.1510",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZEBY}}: likwidacja diastemy.",
+   "pola": [
+    "POLE-ZEBY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1510-ROZ",
+   "dotyczy": "PROC-23.1510",
+   "wariant": "rozszerzony",
+   "tekst": "Zęby {{POLE-ZEBY}}: likwidacja diastemy. Wskazanie: {{POLE-WSKAZANIE}}. Kolor przed: {{POLE-KOLOR}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał / preparat: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-WSKAZANIE",
+    "POLE-KOLOR",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1511-STD",
+   "dotyczy": "PROC-23.1511",
+   "wariant": "standardowy",
+   "tekst": "Zęby {{POLE-ZEBY}}: wybielanie wewnętrzne zęba. Kolor przed: {{POLE-KOLOR}}. Materiał / preparat: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-KOLOR",
+    "POLE-MATERIAL",
+    "POLE-WYNIK"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1511-SKR",
+   "dotyczy": "PROC-23.1511",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZEBY}}: wybielanie wewnętrzne zęba.",
+   "pola": [
+    "POLE-ZEBY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1511-ROZ",
+   "dotyczy": "PROC-23.1511",
+   "wariant": "rozszerzony",
+   "tekst": "Zęby {{POLE-ZEBY}}: wybielanie wewnętrzne zęba. Wskazanie: {{POLE-WSKAZANIE}}. Kolor przed: {{POLE-KOLOR}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał / preparat: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-WSKAZANIE",
+    "POLE-KOLOR",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1512-STD",
+   "dotyczy": "PROC-23.1512",
+   "wariant": "standardowy",
+   "tekst": "Zęby {{POLE-ZEBY}}: wybielanie zewnętrzne grupy zębów. Kolor przed: {{POLE-KOLOR}}. Materiał / preparat: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-KOLOR",
+    "POLE-MATERIAL",
+    "POLE-WYNIK"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1512-SKR",
+   "dotyczy": "PROC-23.1512",
+   "wariant": "skrocony",
+   "tekst": "{{POLE-ZEBY}}: wybielanie zewnętrzne grupy zębów.",
+   "pola": [
+    "POLE-ZEBY"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1512-ROZ",
+   "dotyczy": "PROC-23.1512",
+   "wariant": "rozszerzony",
+   "tekst": "Zęby {{POLE-ZEBY}}: wybielanie zewnętrzne grupy zębów. Wskazanie: {{POLE-WSKAZANIE}}. Kolor przed: {{POLE-KOLOR}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał / preparat: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-WSKAZANIE",
+    "POLE-KOLOR",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA"
+   ]
   }
  ]
 }
