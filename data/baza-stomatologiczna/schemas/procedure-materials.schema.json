@@ -1,0 +1,56 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "type": "object",
+ "required": [
+  "opis",
+  "materialy"
+ ],
+ "properties": {
+  "opis": {
+   "type": "string",
+   "minLength": 1
+  },
+  "materialy": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "nazwa",
+     "kategoria"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^MAT-[A-Z0-9-]+$"
+     },
+     "nazwa": {
+      "type": "string",
+      "minLength": 1
+     },
+     "kategoria": {
+      "enum": [
+       "narzedzie",
+       "material",
+       "preparat",
+       "srodek_pomocniczy",
+       "aparatura"
+      ]
+     },
+     "uwagi": {
+      "type": "string",
+      "minLength": 1
+     },
+     "alternatywy": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "minLength": 1
+      }
+     }
+    }
+   }
+  }
+ }
+}

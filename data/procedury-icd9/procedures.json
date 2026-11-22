@@ -1,0 +1,2931 @@
+{
+ "opis": "Karty procedur ICD-9 (rozdział 23 ICD-9 PL 5.91). Rejestr obejmuje każdy kod-procedurę ze słownika data/nfz/procedures.json (liście + kody nadrzędne używane w świadczeniach). Status: not_started | in_progress | draft | verified | requires_expert_review. 'verified' tylko po weryfikacji Patryka (pole zweryfikowal).",
+ "procedury": [
+  {
+   "id": "PROC-23.0101",
+   "kod": "23.0101",
+   "nazwa_oficjalna": "Badanie lekarskie stomatologiczne, które obejmuje również instruktaż higieny jamy ustnej",
+   "kategoria": "badanie i porada",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.0102",
+   "kod": "23.0102",
+   "nazwa_oficjalna": "Badanie lekarskie kontrolne",
+   "kategoria": "badanie i porada",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.0103",
+   "kod": "23.0103",
+   "nazwa_oficjalna": "Porada lekarska",
+   "kategoria": "badanie i porada",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.0104",
+   "kod": "23.0104",
+   "nazwa_oficjalna": "Wydanie orzeczenia lekarskiego",
+   "kategoria": "badanie i porada",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.0105",
+   "kod": "23.0105",
+   "nazwa_oficjalna": "Konsultacja specjalistyczna",
+   "kategoria": "badanie i porada",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.0106",
+   "kod": "23.0106",
+   "nazwa_oficjalna": "Wydanie krótkiego zaświadczenia lub świadectwa",
+   "kategoria": "badanie i porada",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.0107",
+   "kod": "23.0107",
+   "nazwa_oficjalna": "Badanie lekarskie stomatologiczne i kontrolne po urazie zęba",
+   "kategoria": "badanie i porada",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.02",
+   "kod": "23.02",
+   "nazwa_oficjalna": "Badanie żywotności zęba",
+   "kategoria": "diagnostyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.0301",
+   "kod": "23.0301",
+   "nazwa_oficjalna": "Rentgenodiagnostyka do 2 zdjęć wewnątrzustnych",
+   "kategoria": "radiologia",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.0302",
+   "kod": "23.0302",
+   "nazwa_oficjalna": "Rentgenodiagnostyka do 5 zdjęć wewnątrzustnych",
+   "kategoria": "radiologia",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.0303",
+   "kod": "23.0303",
+   "nazwa_oficjalna": "Rentgenodiagnostyka do 8 zdjęć wewnątrzustnych",
+   "kategoria": "radiologia",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.0304",
+   "kod": "23.0304",
+   "nazwa_oficjalna": "Rentgenodiagnostyka - zdjęcie pantomograficzne z opisem",
+   "kategoria": "radiologia",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.0401",
+   "kod": "23.0401",
+   "nazwa_oficjalna": "Znieczulenie miejscowe powierzchniowe",
+   "kategoria": "znieczulenie",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.0402",
+   "kod": "23.0402",
+   "nazwa_oficjalna": "Znieczulenie miejscowe nasiękowe",
+   "kategoria": "znieczulenie",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.0403",
+   "kod": "23.0403",
+   "nazwa_oficjalna": "Znieczulenie przewodowe wewnątrzustne",
+   "kategoria": "znieczulenie",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.0404",
+   "kod": "23.0404",
+   "nazwa_oficjalna": "Znieczulenie przewodowe zewnątrzustne",
+   "kategoria": "znieczulenie",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.05",
+   "kod": "23.05",
+   "nazwa_oficjalna": "Postępowanie w nagłych przypadkach",
+   "kategoria": "pomoc doraźna",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.06",
+   "kod": "23.06",
+   "nazwa_oficjalna": "Wizyta adaptacyjna -dotyczy pierwszych wizyt małych dzieci",
+   "kategoria": "dziecko",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.07",
+   "kod": "23.07",
+   "nazwa_oficjalna": "Pilne zabiegi poza godzinami pracy w dni świąteczne lub w domu pacjenta",
+   "kategoria": "pomoc doraźna",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.08",
+   "kod": "23.08",
+   "nazwa_oficjalna": "Instruktaż higieny jamy ustnej",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.0901",
+   "kod": "23.0901",
+   "nazwa_oficjalna": "Balneoterapia lub hydroterapia",
+   "kategoria": "fizykoterapia",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.0902",
+   "kod": "23.0902",
+   "nazwa_oficjalna": "Naświetlanie Sollux",
+   "kategoria": "fizykoterapia",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.0903",
+   "kod": "23.0903",
+   "nazwa_oficjalna": "Jonoforeza nadziąsłowa",
+   "kategoria": "fizykoterapia",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.0904",
+   "kod": "23.0904",
+   "nazwa_oficjalna": "Jonoforeza lub elektrosterylizacja kanału korzeniowego",
+   "kategoria": "fizykoterapia",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.0905",
+   "kod": "23.0905",
+   "nazwa_oficjalna": "Diadynamik 1/2 łuku zębowego",
+   "kategoria": "fizykoterapia",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.0906",
+   "kod": "23.0906",
+   "nazwa_oficjalna": "Hydroterapia",
+   "kategoria": "fizykoterapia",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.0907",
+   "kod": "23.0907",
+   "nazwa_oficjalna": "Laseroterapia biostymulacyjna",
+   "kategoria": "fizykoterapia",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1001",
+   "kod": "23.1001",
+   "nazwa_oficjalna": "Indywidualna fluoryzacja metodą kontaktową - za każdy zabieg",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1002",
+   "kod": "23.1002",
+   "nazwa_oficjalna": "Fluoryzacja kontaktowa zbiorowa, 1 zabieg u każdego dziecka",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1003",
+   "kod": "23.1003",
+   "nazwa_oficjalna": "Zabezpieczenie profilaktyczne bruzd lakiem szczelinowym - za każdy ząb",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1004",
+   "kod": "23.1004",
+   "nazwa_oficjalna": "Zabezpieczanie profilaktyczne bruzd innymi materiałami",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1006",
+   "kod": "23.1006",
+   "nazwa_oficjalna": "Lakierowanie zębów 1/4 łuku zębowego",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1007",
+   "kod": "23.1007",
+   "nazwa_oficjalna": "Leczenie nadwrażliwości zębów w obrębie 1/4 łuku zębowego",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1008",
+   "kod": "23.1008",
+   "nazwa_oficjalna": "Impregnacja zębiny",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1009",
+   "kod": "23.1009",
+   "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 6. miesiącu życia",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1010",
+   "kod": "23.1010",
+   "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 9. miesiącu życia",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1011",
+   "kod": "23.1011",
+   "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 12. miesiącu życia",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1012",
+   "kod": "23.1012",
+   "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 2. roku życia",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1013",
+   "kod": "23.1013",
+   "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 4. roku życia",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1014",
+   "kod": "23.1014",
+   "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 5. roku życia",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1015",
+   "kod": "23.1015",
+   "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 6. roku życia",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1016",
+   "kod": "23.1016",
+   "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 7. roku życia",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1017",
+   "kod": "23.1017",
+   "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 10. roku życia",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1018",
+   "kod": "23.1018",
+   "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla młodzieży w 12. roku życia",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1019",
+   "kod": "23.1019",
+   "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla młodzieży w 13. roku życia",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1020",
+   "kod": "23.1020",
+   "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla młodzieży w 16. roku życia",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1021",
+   "kod": "23.1021",
+   "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla młodzieży w 19. roku życia",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1022",
+   "kod": "23.1022",
+   "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne zapobiegające wadom zgryzu",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1023",
+   "kod": "23.1023",
+   "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 3. roku życia",
+   "kategoria": "profilaktyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1101",
+   "kod": "23.1101",
+   "nazwa_oficjalna": "Leczenie próchnicy powierzchniowej - za każdy ząb",
+   "kategoria": "leczenie próchnicy",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1102",
+   "kod": "23.1102",
+   "nazwa_oficjalna": "Całkowite opracowanie ubytku próchnicowego z założeniem podkładu",
+   "kategoria": "leczenie próchnicy",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1103",
+   "kod": "23.1103",
+   "nazwa_oficjalna": "Całkowite opracowanie rozległego ubytku próchnicowego z założeniem podwójnego podkładu",
+   "kategoria": "leczenie próchnicy",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1104",
+   "kod": "23.1104",
+   "nazwa_oficjalna": "Postępowanie przy próchnicy głębokiej - pośrednie pokrycie miazgi",
+   "kategoria": "leczenie próchnicy",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1105",
+   "kod": "23.1105",
+   "nazwa_oficjalna": "Postępowanie przy obnażeniu i skaleczeniu miazgi - bezpośrednie pokrycie miazgi",
+   "kategoria": "leczenie próchnicy",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1106",
+   "kod": "23.1106",
+   "nazwa_oficjalna": "Opatrunek leczniczy w zębie stałym",
+   "kategoria": "leczenie próchnicy",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1107",
+   "kod": "23.1107",
+   "nazwa_oficjalna": "Opatrunek leczniczy w zębie mlecznym",
+   "kategoria": "leczenie próchnicy",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1108",
+   "kod": "23.1108",
+   "nazwa_oficjalna": "Wypełnienie ubytku korony zęba mlecznego",
+   "kategoria": "leczenie próchnicy",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1109",
+   "kod": "23.1109",
+   "nazwa_oficjalna": "Wypełnienie ubytku korony zęba na 1 powierzchni",
+   "kategoria": "leczenie próchnicy",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1110",
+   "kod": "23.1110",
+   "nazwa_oficjalna": "Wypełnienie ubytku korony zęba na 2 powierzchniach",
+   "kategoria": "leczenie próchnicy",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1111",
+   "kod": "23.1111",
+   "nazwa_oficjalna": "Wypełnienie ubytku korony zęba na 3 powierzchniach",
+   "kategoria": "leczenie próchnicy",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1112",
+   "kod": "23.1112",
+   "nazwa_oficjalna": "Wypełnienie ubytku korony zęba na więcej niż 3 powierzchniach",
+   "kategoria": "leczenie próchnicy",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1201",
+   "kod": "23.1201",
+   "nazwa_oficjalna": "Trepanacja martwego zęba z zaopatrzeniem ubytku opatrunkiem",
+   "kategoria": "endodoncja – leczenie miazgi",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1202",
+   "kod": "23.1202",
+   "nazwa_oficjalna": "Dewitalizacja miazgi zęba z zaopatrzeniem ubytku opatrunkiem",
+   "kategoria": "endodoncja – leczenie miazgi",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1203",
+   "kod": "23.1203",
+   "nazwa_oficjalna": "Amputacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem",
+   "kategoria": "endodoncja – leczenie miazgi",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1204",
+   "kod": "23.1204",
+   "nazwa_oficjalna": "Amputacja przyżyciowa miazgi",
+   "kategoria": "endodoncja – leczenie miazgi",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1205",
+   "kod": "23.1205",
+   "nazwa_oficjalna": "Ekstyrpacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem",
+   "kategoria": "endodoncja – leczenie miazgi",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1206",
+   "kod": "23.1206",
+   "nazwa_oficjalna": "Ekstyrpacja przyżyciowa miazgi",
+   "kategoria": "endodoncja – leczenie miazgi",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1207",
+   "kod": "23.1207",
+   "nazwa_oficjalna": "Amputacja zdewitalizowanej miazgi zęba",
+   "kategoria": "endodoncja – leczenie miazgi",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1208",
+   "kod": "23.1208",
+   "nazwa_oficjalna": "Ekstyrpacja zdewitalizowanej miazgi zęba z nieuformowanym korzeniem",
+   "kategoria": "endodoncja – leczenie miazgi",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1209",
+   "kod": "23.1209",
+   "nazwa_oficjalna": "Ekstyrpacja zdewitalizowanej miazgi zęba",
+   "kategoria": "endodoncja – leczenie miazgi",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1210",
+   "kod": "23.1210",
+   "nazwa_oficjalna": "Amputacja zdewitalizowanej miazgi zęba mlecznego",
+   "kategoria": "endodoncja – leczenie miazgi",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1301",
+   "kod": "23.1301",
+   "nazwa_oficjalna": "Całkowite opracowanie i dezynfekcja kanału",
+   "kategoria": "endodoncja – leczenie kanałowe",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1302",
+   "kod": "23.1302",
+   "nazwa_oficjalna": "Leczenie zgorzeli",
+   "kategoria": "endodoncja – leczenie kanałowe",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1303",
+   "kod": "23.1303",
+   "nazwa_oficjalna": "Leczenie zgorzeli całkowitej niepowikłanej zęba z nieuformowanym korzeniem",
+   "kategoria": "endodoncja – leczenie kanałowe",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1304",
+   "kod": "23.1304",
+   "nazwa_oficjalna": "Dodatkowe fizykochemiczne metody udrażniania i opracowywania kanału",
+   "kategoria": "endodoncja – leczenie kanałowe",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1305",
+   "kod": "23.1305",
+   "nazwa_oficjalna": "Ponowne udrożnienie wypełnionego kanału",
+   "kategoria": "endodoncja – leczenie kanałowe",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1306",
+   "kod": "23.1306",
+   "nazwa_oficjalna": "Czasowe wypełnienie kanału",
+   "kategoria": "endodoncja – leczenie kanałowe",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1307",
+   "kod": "23.1307",
+   "nazwa_oficjalna": "Wypełnienie kanału",
+   "kategoria": "endodoncja – leczenie kanałowe",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1308",
+   "kod": "23.1308",
+   "nazwa_oficjalna": "Leczenie endodontyczne z wypełnieniem 2 kanałów",
+   "kategoria": "endodoncja – leczenie kanałowe",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1309",
+   "kod": "23.1309",
+   "nazwa_oficjalna": "Leczenie endodontyczne z wypełnieniem 3 kanałów",
+   "kategoria": "endodoncja – leczenie kanałowe",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1310",
+   "kod": "23.1310",
+   "nazwa_oficjalna": "Leczenie endodontyczne metodą amputacyjno-ekstyrpacyjną",
+   "kategoria": "endodoncja – leczenie kanałowe",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1311",
+   "kod": "23.1311",
+   "nazwa_oficjalna": "Leczenie endodontyczne zęba z wypełnieniem 1 kanału ze zgorzelą miazgi",
+   "kategoria": "endodoncja – leczenie kanałowe",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1312",
+   "kod": "23.1312",
+   "nazwa_oficjalna": "Leczenie endodontyczne zęba z wypełnieniem 2 kanałów ze zgorzelą miazgi",
+   "kategoria": "endodoncja – leczenie kanałowe",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1313",
+   "kod": "23.1313",
+   "nazwa_oficjalna": "Leczenie endodontyczne zęba z wypełnieniem 3 kanałów ze zgorzelą miazgi",
+   "kategoria": "endodoncja – leczenie kanałowe",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1314",
+   "kod": "23.1314",
+   "nazwa_oficjalna": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA",
+   "kategoria": "endodoncja – leczenie kanałowe",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.13141",
+   "kod": "23.13141",
+   "nazwa_oficjalna": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 1 kanału",
+   "kategoria": "endodoncja – leczenie kanałowe",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.13142",
+   "kod": "23.13142",
+   "nazwa_oficjalna": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 2 kanałów",
+   "kategoria": "endodoncja – leczenie kanałowe",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.13143",
+   "kod": "23.13143",
+   "nazwa_oficjalna": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 3 kanałów",
+   "kategoria": "endodoncja – leczenie kanałowe",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.13149",
+   "kod": "23.13149",
+   "nazwa_oficjalna": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA - inne",
+   "kategoria": "endodoncja – leczenie kanałowe",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.14",
+   "kod": "23.14",
+   "nazwa_oficjalna": "Szczególne trudności w preparowaniu/ wypełnianiu zębów - usunięcie przerośniętej brodawki międzyzębowej, zatamowanie krwawienia z brodawki, separowanie zębów itp.",
+   "kategoria": "stomatologia zachowawcza",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1501",
+   "kod": "23.1501",
+   "nazwa_oficjalna": "Odbudowa zniszczonego, złamanego kąta w zębach siecznych",
+   "kategoria": "odbudowa i estetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1502",
+   "kod": "23.1502",
+   "nazwa_oficjalna": "Całkowite opracowanie i odbudowa ubytku zęba na 1 powierzchni",
+   "kategoria": "odbudowa i estetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1503",
+   "kod": "23.1503",
+   "nazwa_oficjalna": "Całkowite opracowanie i odbudowa ubytku na 2 powierzchniach",
+   "kategoria": "odbudowa i estetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1504",
+   "kod": "23.1504",
+   "nazwa_oficjalna": "Całkowite opracowanie i odbudowa rozległego ubytku na 2 powierzchniach",
+   "kategoria": "odbudowa i estetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1505",
+   "kod": "23.1505",
+   "nazwa_oficjalna": "Całkowite opracowanie i odbudowa rozległego ubytku na 3 powierzchniach",
+   "kategoria": "odbudowa i estetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1506",
+   "kod": "23.1506",
+   "nazwa_oficjalna": "Całkowite opracowanie i odbudowa rozległego ubytku na więcej niż 3 powierzchniach",
+   "kategoria": "odbudowa i estetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1507",
+   "kod": "23.1507",
+   "nazwa_oficjalna": "Całkowite opracowanie i odbudowa zniszczonego kąta w zębach siecznych",
+   "kategoria": "odbudowa i estetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1508",
+   "kod": "23.1508",
+   "nazwa_oficjalna": "Kosmetyczne pokrycie niedorozwoju szkliwa",
+   "kategoria": "odbudowa i estetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1509",
+   "kod": "23.1509",
+   "nazwa_oficjalna": "Kosmetyczna korekta przebarwienia zębiny w zębach przednich",
+   "kategoria": "odbudowa i estetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1510",
+   "kod": "23.1510",
+   "nazwa_oficjalna": "Likwidacja diastemy",
+   "kategoria": "odbudowa i estetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1511",
+   "kod": "23.1511",
+   "nazwa_oficjalna": "Wybielanie zęba metodą wewnętrzną",
+   "kategoria": "odbudowa i estetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1512",
+   "kod": "23.1512",
+   "nazwa_oficjalna": "Wybielanie grupy zębów metodą zewnętrzną",
+   "kategoria": "odbudowa i estetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1601",
+   "kod": "23.1601",
+   "nazwa_oficjalna": "Usunięcie złogów nazębnych z 1/2 łuku zębowego",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.16011",
+   "kod": "23.16011",
+   "nazwa_oficjalna": "Usunięcie złogów nazębnych miękkich z 1/2 łuku zębowego",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.16012",
+   "kod": "23.16012",
+   "nazwa_oficjalna": "Usunięcie złogów nazębnych twardych z 1/2 łuku zębowego",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1602",
+   "kod": "23.1602",
+   "nazwa_oficjalna": "Usunięcie złogów nazębnych ze wszystkich zębów",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.16021",
+   "kod": "23.16021",
+   "nazwa_oficjalna": "Usunięcie złogów nazębnych miękkich ze wszystkich zębów",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.16022",
+   "kod": "23.16022",
+   "nazwa_oficjalna": "Usunięcie złogów nazębnych twardych ze wszystkich zębów",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1603",
+   "kod": "23.1603",
+   "nazwa_oficjalna": "Polerowanie zębów",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1604",
+   "kod": "23.1604",
+   "nazwa_oficjalna": "Płukanie kieszonki dziąsłowej i aplikacja leku",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1605",
+   "kod": "23.1605",
+   "nazwa_oficjalna": "Leczenie zmian na błonie śluzowej jamy ustnej",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1606",
+   "kod": "23.1606",
+   "nazwa_oficjalna": "Korekta zgryzu",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1607",
+   "kod": "23.1607",
+   "nazwa_oficjalna": "Kiretaż zwykły w obrębie 1/4 uzębienia",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1608",
+   "kod": "23.1608",
+   "nazwa_oficjalna": "Kiretaż otwarty w obrębie 1/4 uzębienia",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1609",
+   "kod": "23.1609",
+   "nazwa_oficjalna": "Gingwoplastyka",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1610",
+   "kod": "23.1610",
+   "nazwa_oficjalna": "Gingwoosteoplastyka",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1611",
+   "kod": "23.1611",
+   "nazwa_oficjalna": "Podcięcie wędzidełka, wargi, języka, policzka",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1612",
+   "kod": "23.1612",
+   "nazwa_oficjalna": "Plastyka wędzidełka ,wargi ,policzka",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1613",
+   "kod": "23.1613",
+   "nazwa_oficjalna": "Plastyka przedsionka jamy ustnej met. Clarka, Kazanjana",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1614",
+   "kod": "23.1614",
+   "nazwa_oficjalna": "Plastyka przedsionka jamy ustnej met. Nabersa",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1615",
+   "kod": "23.1615",
+   "nazwa_oficjalna": "Unieruchomienie zębów ligaturą drucianą",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1616",
+   "kod": "23.1616",
+   "nazwa_oficjalna": "Unieruchomienie zębów materiałem złożonym (kompozytowym)",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1617",
+   "kod": "23.1617",
+   "nazwa_oficjalna": "Unieruchomienie zębów szyną z materiału złożonego z dodatkowymi wzmocnieniami",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1618",
+   "kod": "23.1618",
+   "nazwa_oficjalna": "Zabieg wszczepiania hydroksyapatytu, bioglassu lub tp.",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1619",
+   "kod": "23.1619",
+   "nazwa_oficjalna": "Zabieg pokrycia obnażonych korzeni zębów metodą bocznie przesuniętego płata",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1620",
+   "kod": "23.1620",
+   "nazwa_oficjalna": "Założenie opatrunku parodontologicznego",
+   "kategoria": "periodontologia i błona śluzowa",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.17",
+   "kod": "23.17",
+   "nazwa_oficjalna": "Chirurgiczne usunięcie zęba",
+   "kategoria": "chirurgia – ekstrakcje",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1701",
+   "kod": "23.1701",
+   "nazwa_oficjalna": "Usunięcie zęba jednokorzeniowego",
+   "kategoria": "chirurgia – ekstrakcje",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1702",
+   "kod": "23.1702",
+   "nazwa_oficjalna": "Usunięcie zęba wielokorzeniowego",
+   "kategoria": "chirurgia – ekstrakcje",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1703",
+   "kod": "23.1703",
+   "nazwa_oficjalna": "Usunięcie głęboko złamanego zęba poprzez dłutowanie wewnątrzzębodołowe przy zastosowaniu wierteł, dźwigni",
+   "kategoria": "chirurgia – ekstrakcje",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1704",
+   "kod": "23.1704",
+   "nazwa_oficjalna": "Usunięcie zęba przez dłutowanie zewnątrzzębodołowe z wytworzeniem płata śluzówkowo-okostnowego",
+   "kategoria": "chirurgia – ekstrakcje",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1705",
+   "kod": "23.1705",
+   "nazwa_oficjalna": "Operacyjne usunięcie zęba zatrzymanego",
+   "kategoria": "chirurgia – ekstrakcje",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1706",
+   "kod": "23.1706",
+   "nazwa_oficjalna": "Operacyjne odsłonięcie zatrzymanego zęba z założeniem pętli drucianej dla celów ortodontycznych",
+   "kategoria": "chirurgia – ekstrakcje",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1707",
+   "kod": "23.1707",
+   "nazwa_oficjalna": "Operacyjne usunięcie zawiązków zębów ze wskazań ortodontycznych",
+   "kategoria": "chirurgia – ekstrakcje",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1708",
+   "kod": "23.1708",
+   "nazwa_oficjalna": "Usunięcie zębów w znieczuleniu ogólnym u pacjentów z niedorozwojem umysłowym",
+   "kategoria": "chirurgia – ekstrakcje",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): usuwanie zębów w znieczuleniu ogólnym – warunki szpitalne/anestezjologiczne."
+  },
+  {
+   "id": "PROC-23.1801",
+   "kod": "23.1801",
+   "nazwa_oficjalna": "Zamknięcie zatoki otwartej w przebiegu chirurgicznego usuwania zęba",
+   "kategoria": "chirurgia stomatologiczna",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1802",
+   "kod": "23.1802",
+   "nazwa_oficjalna": "Resekcja wierzchołka korzenia zęba przedniego",
+   "kategoria": "chirurgia stomatologiczna",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1803",
+   "kod": "23.1803",
+   "nazwa_oficjalna": "Resekcja wierzchołka korzenia zęba bocznego",
+   "kategoria": "chirurgia stomatologiczna",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1804",
+   "kod": "23.1804",
+   "nazwa_oficjalna": "Resekcja wierzchołka korzenia zęba każdego następnego zęba podczas tego samego zabiegu i dotyczy zębów",
+   "kategoria": "chirurgia stomatologiczna",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1805",
+   "kod": "23.1805",
+   "nazwa_oficjalna": "Hemisekcja zęba",
+   "kategoria": "chirurgia stomatologiczna",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1806",
+   "kod": "23.1806",
+   "nazwa_oficjalna": "Reimplantacja zęba",
+   "kategoria": "chirurgia stomatologiczna",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1807",
+   "kod": "23.1807",
+   "nazwa_oficjalna": "Wyłuszczenie torbieli zębopochodnej",
+   "kategoria": "chirurgia stomatologiczna",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1808",
+   "kod": "23.1808",
+   "nazwa_oficjalna": "Wyłuszczenie kamienia z przewodu ślinianki",
+   "kategoria": "chirurgia stomatologiczna",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1809",
+   "kod": "23.1809",
+   "nazwa_oficjalna": "Chirurgiczne zaopatrzenie małej rany obejmującej do 3 zębodołów włącznie ze szwem",
+   "kategoria": "chirurgia stomatologiczna",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1810",
+   "kod": "23.1810",
+   "nazwa_oficjalna": "Chirurgiczne zaopatrzenie małej rany obejmującej do 2-3 zębodołów włącznie z opracowaniem i szwami",
+   "kategoria": "chirurgia stomatologiczna",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1811",
+   "kod": "23.1811",
+   "nazwa_oficjalna": "Chirurgiczne zaopatrzenie dużej rany w obrębie połowy szczęki włącznie ze szwami",
+   "kategoria": "chirurgia stomatologiczna",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1812",
+   "kod": "23.1812",
+   "nazwa_oficjalna": "Chirurgiczne zaopatrzenie dużej, albo znacznie zanieczyszczonej rany w obrębie połowy szczęki włącznie z opracowaniem i szwami",
+   "kategoria": "chirurgia stomatologiczna",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1813",
+   "kod": "23.1813",
+   "nazwa_oficjalna": "Zatamowanie krwawienia w obrębie jamy ustnej - nie zaliczane w bezpośrednim połączeniu z zabiegiem chirurgicznym, chyba że zajmuje niewspółmiernie dużo czasu",
+   "kategoria": "chirurgia stomatologiczna",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1814",
+   "kod": "23.1814",
+   "nazwa_oficjalna": "Zatamowanie masywnego krwawienia w obrębie jamy ustnej przez podwiązanie, pokłucie naczyń bądź zatkanie kością",
+   "kategoria": "chirurgia stomatologiczna",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1815",
+   "kod": "23.1815",
+   "nazwa_oficjalna": "Założenie opatrunku chirurgicznego",
+   "kategoria": "chirurgia stomatologiczna",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1816",
+   "kod": "23.1816",
+   "nazwa_oficjalna": "Ograniczone, miejscowe wycięcie wargi, języka",
+   "kategoria": "chirurgia stomatologiczna",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1817",
+   "kod": "23.1817",
+   "nazwa_oficjalna": "Krioterapia niewielkich zmian w obrębie tkanek miękkich jamy ustnej",
+   "kategoria": "chirurgia stomatologiczna",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1819",
+   "kod": "23.1819",
+   "nazwa_oficjalna": "Ograniczone wycięcie, zniszczenie zmiany podniebienia twardego",
+   "kategoria": "chirurgia stomatologiczna",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1901",
+   "kod": "23.1901",
+   "nazwa_oficjalna": "Wycięcie małego guzka lub zmiany guzopodobnej, włókniaka",
+   "kategoria": "chirurgia – wycięcia i plastyki",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1902",
+   "kod": "23.1902",
+   "nazwa_oficjalna": "Wycięcie przerostu błony śluzowej (guzy łagodne, zmiany guzopodobnej, nadziąślaki) w obrębie połowy szczęki",
+   "kategoria": "chirurgia – wycięcia i plastyki",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1903",
+   "kod": "23.1903",
+   "nazwa_oficjalna": "Plastyka wyrostka zębodołowego w obrębie połowy szczęki",
+   "kategoria": "chirurgia – wycięcia i plastyki",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1904",
+   "kod": "23.1904",
+   "nazwa_oficjalna": "Plastyka wyrostka zębodołowego szczęki lub części zębodołowej żuchwy z użyciem przeszczepu lub wszczepu",
+   "kategoria": "chirurgia – wycięcia i plastyki",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1905",
+   "kod": "23.1905",
+   "nazwa_oficjalna": "Plastyka guza szczęki",
+   "kategoria": "chirurgia – wycięcia i plastyki",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.1906",
+   "kod": "23.1906",
+   "nazwa_oficjalna": "Plastyka połączenia lub przetoki ustno-zatokowej - jako samodzielne postępowanie lub jako następstwo ekstrakcji",
+   "kategoria": "chirurgia – wycięcia i plastyki",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.2001",
+   "kod": "23.2001",
+   "nazwa_oficjalna": "Nacięcie powierzchniowo, podśluzówkowo lub podskórnie leżącego ropnia włącznie z drenażem i opatrunkiem",
+   "kategoria": "chirurgia – zakażenia",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.2002",
+   "kod": "23.2002",
+   "nazwa_oficjalna": "Nacięcie z dojścia wewnątrz lub zewnątrzustnego głęboko leżącego ropnia włącznie z drenażem i opatrunkiem",
+   "kategoria": "chirurgia – zakażenia",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.2003",
+   "kod": "23.2003",
+   "nazwa_oficjalna": "Nacięcie ropowicy",
+   "kategoria": "chirurgia – zakażenia",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): nacięcie ropowicy – chirurgia szczękowo-twarzowa (szpital)."
+  },
+  {
+   "id": "PROC-23.2101",
+   "kod": "23.2101",
+   "nazwa_oficjalna": "Repozycja i unieruchomienie zwichniętego zęba lub grupy zębów",
+   "kategoria": "urazy zębów",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.2102",
+   "kod": "23.2102",
+   "nazwa_oficjalna": "Repozycja i unieruchomienie złamanego fragmentu wyrostka zębodołowego z zębem lub zębami",
+   "kategoria": "urazy zębów",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.2103",
+   "kod": "23.2103",
+   "nazwa_oficjalna": "Repozycja i unieruchomienie pośredniego, trudnego do repozycji lub wklinowanego fragmentu złamanego wyrostka zębodołowego",
+   "kategoria": "urazy zębów",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): repozycja trudnego, wklinowanego fragmentu złamania – chirurgia szczękowo-twarzowa."
+  },
+  {
+   "id": "PROC-23.2201",
+   "kod": "23.2201",
+   "nazwa_oficjalna": "Repozycja i unieruchomienie pojedynczego złamania żuchwy",
+   "kategoria": "chirurgia szczękowo-twarzowa – złamania",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): złamania szczęk – chirurgia szczękowo-twarzowa – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2202",
+   "kod": "23.2202",
+   "nazwa_oficjalna": "Repozycja i unieruchomienie wielokrotnego, z odłamami pośrednimi złamania żuchwy",
+   "kategoria": "chirurgia szczękowo-twarzowa – złamania",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): złamania szczęk – chirurgia szczękowo-twarzowa – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2203",
+   "kod": "23.2203",
+   "nazwa_oficjalna": "Repozycja i unieruchomienie poprzecznego lub strzałkowego złamania szczęki",
+   "kategoria": "chirurgia szczękowo-twarzowa – złamania",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): złamania szczęk – chirurgia szczękowo-twarzowa – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2204",
+   "kod": "23.2204",
+   "nazwa_oficjalna": "Repozycja i unieruchomienie złamania szczęki z przemieszczaniem odłamów ze złamaniami innych kości twarzy",
+   "kategoria": "chirurgia szczękowo-twarzowa – złamania",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): złamania szczęk – chirurgia szczękowo-twarzowa – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2205",
+   "kod": "23.2205",
+   "nazwa_oficjalna": "Tymczasowe zaopatrzenie złamanej szczęki lub szczęk",
+   "kategoria": "chirurgia szczękowo-twarzowa – złamania",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): złamania szczęk – chirurgia szczękowo-twarzowa – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2206",
+   "kod": "23.2206",
+   "nazwa_oficjalna": "Założenie szyny drucianej (nazębnej) przy zwichnięciach, reimplantacjach lub transplantacjach zębów, również założenie szyny przy zapaleniu kości, operacjachplastycznych lub resekcjach oraz szynowanie nieuszkodzonej, przeciwstawnej szczęki lub żuchwy",
+   "kategoria": "chirurgia szczękowo-twarzowa – złamania",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): złamania szczęk – chirurgia szczękowo-twarzowa – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2207",
+   "kod": "23.2207",
+   "nazwa_oficjalna": "Założenie szyny z pelotą lub płytą nagryzową przy złamaniach z przemieszczeniem szczęki lub dna oczodołu lub wyrostka kłykciowego żuchwy",
+   "kategoria": "chirurgia szczękowo-twarzowa – złamania",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): złamania szczęk – chirurgia szczękowo-twarzowa – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2208",
+   "kod": "23.2208",
+   "nazwa_oficjalna": "Badanie kontrolne w trakcie unieruchomienia złamanych szczęk",
+   "kategoria": "chirurgia szczękowo-twarzowa – złamania",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): złamania szczęk – chirurgia szczękowo-twarzowa – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2209",
+   "kod": "23.2209",
+   "nazwa_oficjalna": "Zdjęcie jednej szyny przy wymianie unieruchomienia lub zakończeniu leczenia zachowawczego złamania szczęk",
+   "kategoria": "chirurgia szczękowo-twarzowa – złamania",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): złamania szczęk – chirurgia szczękowo-twarzowa – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2210",
+   "kod": "23.2210",
+   "nazwa_oficjalna": "Repozycja i unieruchomienie zwichnięcia żuchwy",
+   "kategoria": "chirurgia szczękowo-twarzowa – złamania",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): złamania szczęk – chirurgia szczękowo-twarzowa – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2211",
+   "kod": "23.2211",
+   "nazwa_oficjalna": "Repozycja i unieruchomienie zastarzałego zwichnięcia żuchwy",
+   "kategoria": "chirurgia szczękowo-twarzowa – złamania",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): złamania szczęk – chirurgia szczękowo-twarzowa – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2301",
+   "kod": "23.2301",
+   "nazwa_oficjalna": "Opracowanie na piśmie, na zlecenie lub życzenie, planu leczenia ortodontycznego, włącznie z oceną modeli i kosztów",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2302",
+   "kod": "23.2302",
+   "nazwa_oficjalna": "Wycisk jednej szczęki dla diagnozy, planowania i kontroli",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2303",
+   "kod": "23.2303",
+   "nazwa_oficjalna": "Postępowanie przygotowujące do wykonania aparatu, wyciski , ustalenie zwarcia",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2304",
+   "kod": "23.2304",
+   "nazwa_oficjalna": "Fotografia (profilu i en face) z oceną (każdego zdjęcia)",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2305",
+   "kod": "23.2305",
+   "nazwa_oficjalna": "Zastosowanie dodatkowych metod diagnostycznych",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2306",
+   "kod": "23.2306",
+   "nazwa_oficjalna": "Analiza telerentgenogramu",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2307",
+   "kod": "23.2307",
+   "nazwa_oficjalna": "Wykonanie zgryzu konstrukcyjnego",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2308",
+   "kod": "23.2308",
+   "nazwa_oficjalna": "Korekcyjne szlifowanie zębów",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2309",
+   "kod": "23.2309",
+   "nazwa_oficjalna": "Środki do usunięcia szkodliwych przyzwyczajeń i dysfunkcji, również porady i pouczenia, jeżeli są związane z praktycznymi wskazaniami lub ćwiczeniami (każda wizyta)",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2310",
+   "kod": "23.2310",
+   "nazwa_oficjalna": "Utrzymywacz przestrzeni jako samodzielne postępowanie",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2312",
+   "kod": "23.2312",
+   "nazwa_oficjalna": "Środki do wprowadzenia pojedynczego przemieszczonego zęba do łuku, po chirurgicznym jego odsłonięciu",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2401",
+   "kod": "23.2401",
+   "nazwa_oficjalna": "Leczenie aparatem ortodontycznym ruchomym, jednoszczękowym",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2402",
+   "kod": "23.2402",
+   "nazwa_oficjalna": "Leczenie aparatem ortodontycznym ruchomym, dwuszczękowym nieelastycznym",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2403",
+   "kod": "23.2403",
+   "nazwa_oficjalna": "Leczenie wady zgryzu aparatem ruchomym ponadstandardowym",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2404",
+   "kod": "23.2404",
+   "nazwa_oficjalna": "Oddanie nowego aparatu ruchomego połączone z instruktażem właściwego postępowania",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2405",
+   "kod": "23.2405",
+   "nazwa_oficjalna": "Kontrola przebiegu leczenia bez aparatu",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2406",
+   "kod": "23.2406",
+   "nazwa_oficjalna": "Kontrola przebiegu leczenia z aparatem ruchomym",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2501",
+   "kod": "23.2501",
+   "nazwa_oficjalna": "Naprawa aparatu bez wycisku",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2502",
+   "kod": "23.2502",
+   "nazwa_oficjalna": "Naprawa aparatu z wyciskiem",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2503",
+   "kod": "23.2503",
+   "nazwa_oficjalna": "Rekonstrukcja aparatu ruchomego przy pacjencie w niewielkim zakresie",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2504",
+   "kod": "23.2504",
+   "nazwa_oficjalna": "Rekonstrukcja aparatu ruchomego obejmującego całą górną lub dolną część aparatu",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2601",
+   "kod": "23.2601",
+   "nazwa_oficjalna": "Środki dla przebudowy szczęki, łącznie z retencją w przypadkach prostych",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2602",
+   "kod": "23.2602",
+   "nazwa_oficjalna": "Środki dla przebudowy szczęki, łącznie z retencją w przypadkach średniotrudnych",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2603",
+   "kod": "23.2603",
+   "nazwa_oficjalna": "Środki dla przebudowy szczęki, łącznie z retencją w przypadkach trudnych",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2604",
+   "kod": "23.2604",
+   "nazwa_oficjalna": "Środki dla przebudowy szczęki, łącznie z retencją w przypadkach bardzo trudnych",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2605",
+   "kod": "23.2605",
+   "nazwa_oficjalna": "Środki dla ustawienia żuchwy w prawidłowym zgryzie w kierunku strzałkowym i bocznym, włącznie z retencją w przypadkach prostych",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2606",
+   "kod": "23.2606",
+   "nazwa_oficjalna": "Środki dla ustawienia żuchwy w prawidłowym zgryzie w kierunku strzałkowym i bocznym, włącznie z retencją w przypadkach średniotrudnych",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2607",
+   "kod": "23.2607",
+   "nazwa_oficjalna": "Środki dla ustawienia żuchwy w prawidłowym zgryzie w kierunku strzałkowym i bocznym, włącznie z retencją w przypadkach trudnych",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2608",
+   "kod": "23.2608",
+   "nazwa_oficjalna": "Środki dla ustawienia żuchwy w prawidłowym zgryzie w kierunku strzałkowym i bocznym, włącznie z retencją w przypadkach bardzo trudnych",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2609",
+   "kod": "23.2609",
+   "nazwa_oficjalna": "Osadzenie zamka ortodontycznego na zębie",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2610",
+   "kod": "23.2610",
+   "nazwa_oficjalna": "Kontrola leczenia aparatem stałym",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2611",
+   "kod": "23.2611",
+   "nazwa_oficjalna": "Proteza dziecięca częściowa",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2612",
+   "kod": "23.2612",
+   "nazwa_oficjalna": "Proteza dziecięca całkowita",
+   "kategoria": "ortodoncja",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego."
+  },
+  {
+   "id": "PROC-23.2701",
+   "kod": "23.2701",
+   "nazwa_oficjalna": "Opracowanie na piśmie na zlecenie lub życzenie planu leczenia i kosztów zaopatrzenia protetycznego włącznie z oceną modeli",
+   "kategoria": "protetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.2702",
+   "kod": "23.2702",
+   "nazwa_oficjalna": "Wycisk szczęki dla celów wykonania modelu sytuacyjnego, również wycisk częściowy lub wycisk zgryzowy dla celów diagnostycznych lub planowania",
+   "kategoria": "protetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.2703",
+   "kod": "23.2703",
+   "nazwa_oficjalna": "Zabiegi przygotowujące (pobieranie wycisków, proste ustalenie zgryzu lub tp. dla wykonania modelu obu szczęk celem oceny diagnostycznej i planowania łącznie z wyceną)",
+   "kategoria": "protetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.2704",
+   "kod": "23.2704",
+   "nazwa_oficjalna": "Przygotowanie uszkodzonego zęba do osadzenia korony poprzez odbudowę kikuta zęba wkładem koronowo-korzeniowym lanym lub śrubowym",
+   "kategoria": "protetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.2705",
+   "kod": "23.2705",
+   "nazwa_oficjalna": "Ochrona oszlifowanego zęba kształka, formówka",
+   "kategoria": "protetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.2706",
+   "kod": "23.2706",
+   "nazwa_oficjalna": "Ochrona oszlifowanego zęba i zabezpieczenie funkcji prowizoryczną koroną lub zastąpienia brakującego zęba elementem prowizorycznego mostu, za koronę lub element mostu",
+   "kategoria": "protetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.2715",
+   "kod": "23.2715",
+   "nazwa_oficjalna": "Wykonanie i zaopatrzenie w protezę twarzy",
+   "kategoria": "protetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): proteza twarzy – leczenie szpitalne / specjalistyczne."
+  },
+  {
+   "id": "PROC-23.2718",
+   "kod": "23.2718",
+   "nazwa_oficjalna": "Wykonanie i zaopatrzenie w protezę gałki ocznej, wargi i nosa",
+   "kategoria": "protetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): proteza gałki ocznej, wargi i nosa – leczenie specjalistyczne."
+  },
+  {
+   "id": "PROC-23.2801",
+   "kod": "23.2801",
+   "nazwa_oficjalna": "Odbudowa pojedynczego zęba przy zastosowaniu korony lanej",
+   "kategoria": "protetyka – korony",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.2802",
+   "kod": "23.2802",
+   "nazwa_oficjalna": "Odbudowa pojedynczego zęba przy zastosowaniu korony licowanej",
+   "kategoria": "protetyka – korony",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.2803",
+   "kod": "23.2803",
+   "nazwa_oficjalna": "Odbudowa pojedynczego zęba przy zastosowaniu korony pochewkowej lub częściowej (szlifowanie zęba ze stopniem okrężnym)",
+   "kategoria": "protetyka – korony",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.2804",
+   "kod": "23.2804",
+   "nazwa_oficjalna": "Czynności związane z odtworzeniem funkcji koron i prowizorycznych mostów - ponowne osadzenie korony, zęba ćwiekowego, licówki również zdjęcie korony żywiczej",
+   "kategoria": "protetyka – korony",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.2805",
+   "kod": "23.2805",
+   "nazwa_oficjalna": "Czynności związane z odtworzeniem funkcji koron i prowizorycznych mostów - odnowienie licówki, licowania korony itp.",
+   "kategoria": "protetyka – korony",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.2806",
+   "kod": "23.2806",
+   "nazwa_oficjalna": "Czynności związane z odtworzeniem funkcji koron i prowizorycznych mostów - zdjęcie i powtórne umocowanie prowizorycznej korony",
+   "kategoria": "protetyka – korony",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.2901",
+   "kod": "23.2901",
+   "nazwa_oficjalna": "Likwidacja dużych zaburzeń artykulacyjnych i zgryzowych przed uzupełnieniem braków zębowych protezami lub mostami",
+   "kategoria": "protetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.2902",
+   "kod": "23.2902",
+   "nazwa_oficjalna": "Zmiana położenia szczęki za pomocą płytki zgryzowej (prowadzącej , ustalającej zwarcie, relaksacyjnej)",
+   "kategoria": "protetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.2903",
+   "kod": "23.2903",
+   "nazwa_oficjalna": "Wycisk czynnościowy za pomocą łyżki indywidualnej",
+   "kategoria": "protetyka",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3001",
+   "kod": "23.3001",
+   "nazwa_oficjalna": "Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną laną",
+   "kategoria": "protetyka – mosty",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3002",
+   "kod": "23.3002",
+   "nazwa_oficjalna": "Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną licowaną",
+   "kategoria": "protetyka – mosty",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3003",
+   "kod": "23.3003",
+   "nazwa_oficjalna": "Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną pochewkową lub częściową",
+   "kategoria": "protetyka – mosty",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3004",
+   "kod": "23.3004",
+   "nazwa_oficjalna": "Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną teleskopową",
+   "kategoria": "protetyka – mosty",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3005",
+   "kod": "23.3005",
+   "nazwa_oficjalna": "Dalsze czynności przy uzupełnianiu braków zębowych za pomocą na stałe mocowanych mostów za każdy element (punkt) przęsła; liczy się również element jednobrzeżny",
+   "kategoria": "protetyka – mosty",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3006",
+   "kod": "23.3006",
+   "nazwa_oficjalna": "Uzupełnienie braków zębowych za pomocą złożonych na stałe umocowanych lub ruchomych mostów i/lub złożonych stałych/ruchomych uzupełnień - dodatkowo przy zastosowaniu przęsła, włącznie z elementem łączącym każde przęsło",
+   "kategoria": "protetyka – mosty",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3007",
+   "kod": "23.3007",
+   "nazwa_oficjalna": "Uzupełnienie braków zębowych za pomocą złożonych na stałe umocowanych lub ruchomych mostów i/lub złożonych stałych /ruchomych uzupełnień - dodatkowo przy zastosowaniu śrub, sztyftów sprężynowych lub tp. - za każdy element łączący",
+   "kategoria": "protetyka – mosty",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3008",
+   "kod": "23.3008",
+   "nazwa_oficjalna": "Uzupełnienie braków zębowych za pomocą złożonych na stałe umocowanych lub ruchomych mostów i/lub złożonych stałych /ruchomych uzupełnień - dodatkowo przy zastosowaniu zatrzasków, zawiasów, zasuw lub zakotwiczeń - za każdy element (matrycę i stempel należy traktować jako całość)",
+   "kategoria": "protetyka – mosty",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3009",
+   "kod": "23.3009",
+   "nazwa_oficjalna": "Czynności dla odtworzenia funkcji mostów lub mocowanych na stałe szyn -powtórne osadzenie mostu lub stałej szyny z dwoma zakotwiczeniami",
+   "kategoria": "protetyka – mosty",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3010",
+   "kod": "23.3010",
+   "nazwa_oficjalna": "Czynności dla odtworzenia funkcji mostów lub mocowanych na stałe szyn- powtórne osadzenie mostu lub stałej szyny z więcej niż dwoma zakotwiczeniami",
+   "kategoria": "protetyka – mosty",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3011",
+   "kod": "23.3011",
+   "nazwa_oficjalna": "Czynności dla odtworzenia funkcji mostu - odnowienie licówki, licowania korony filarowej",
+   "kategoria": "protetyka – mosty",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3101",
+   "kod": "23.3101",
+   "nazwa_oficjalna": "Uzupełnienie braków zębowych przy pomocy protezy częściowej włącznie z prostymi doginanymi klamrami w zakresie 1-4 brakujących zębów",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3102",
+   "kod": "23.3102",
+   "nazwa_oficjalna": "Uzupełnienie braków zębowych przy pomocy protezy częściowej włącznie z prostymi doginanymi klamrami w zakresie 5-8 brakujących zębów",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3103",
+   "kod": "23.3103",
+   "nazwa_oficjalna": "Uzupełnienie braków zębowych przy pomocy protezy częściowej włącznie z prostymi doginanymi klamrami w zakresie więcej niż 8 zębów",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3104",
+   "kod": "23.3104",
+   "nazwa_oficjalna": "Zaopatrzenie bezzębnej szczęki protezą całkowitą w szczęce",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.31041",
+   "kod": "23.31041",
+   "nazwa_oficjalna": "Proteza całkowita górna o charakterze overdenture oparta na zabezpieczonych korzeniach",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3105",
+   "kod": "23.3105",
+   "nazwa_oficjalna": "Zaopatrzenie bezzębnej szczęki protezą całkowitą w żuchwie",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.31051",
+   "kod": "23.31051",
+   "nazwa_oficjalna": "Proteza całkowita dolna o charakterze overdenture oparta na zabezpieczonych korzeniach",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3106",
+   "kod": "23.3106",
+   "nazwa_oficjalna": "Zastosowanie metalowej podstawy przy bezzębnej szczęce",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3107",
+   "kod": "23.3107",
+   "nazwa_oficjalna": "Zastosowanie prostych dwuramiennych elementów utrzymujących lub podpierających lub wieloramiennych elementów doginanych o podobnym działaniu dodatkowo do każdej protezy- przy prowizorycznych protezach jedynie w szczególnych przypadkach, za element",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3108",
+   "kod": "23.3108",
+   "nazwa_oficjalna": "Zastosowanie płyty metalowej z elementami utrzymującymi i podporami",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3109",
+   "kod": "23.3109",
+   "nazwa_oficjalna": "Zastosowanie odlewanych skomplikowanych elementów utrzymujących i podpierających przy zastosowaniu jednego elementu utrzymującego i podpierającego - nie przy protezach prowizorycznych",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3110",
+   "kod": "23.3110",
+   "nazwa_oficjalna": "Zastosowanie odlewanych skomplikowanych elementów utrzymujących i podpierających przy zastosowaniu przynajmniej dwóch elementów utrzymujących i podpierającychnie przy protezach prowizorycznych",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3111",
+   "kod": "23.3111",
+   "nazwa_oficjalna": "Czynności dla odtworzenia funkcji lub poszerzenia zakresu ruchomej protezy (naprawy) w małym zakresie bez wycisku",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3112",
+   "kod": "23.3112",
+   "nazwa_oficjalna": "Czynności dla odtworzenia funkcji lub poszerzenia zakresu ruchomej protezy (naprawy) w większym zakresie z wyciskiem",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3113",
+   "kod": "23.3113",
+   "nazwa_oficjalna": "Czynności dla odtworzenia funkcji lub poszerzenia zakresu ruchomej protezy (naprawy) - częściowe podścielenie jednej protezy",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3114",
+   "kod": "23.3114",
+   "nazwa_oficjalna": "Całkowite bezpośrednie podścielenie jednej protezy",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3115",
+   "kod": "23.3115",
+   "nazwa_oficjalna": "Całkowite podścielenie jednej protezy w sposób pośredni",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3116",
+   "kod": "23.3116",
+   "nazwa_oficjalna": "Całkowite podścielenie jednej protezy w sposób pośredni, włącznie z ukształtowaniem obrzeża - dla szczęki",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3117",
+   "kod": "23.3117",
+   "nazwa_oficjalna": "Całkowite podścielenie jednej protezy w sposób pośredni włącznie z czynnościowym ukształtowaniem obrzeża -dla żuchwy",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3118",
+   "kod": "23.3118",
+   "nazwa_oficjalna": "Czynności dla uzupełnienia brakujących tkanek miękkich, wyrównanie lub zamknięcie defektów w obrębie szczęki przy istniejącym uzębieniu resztkowym",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): obturatory, protezy poresekcyjne, epitezy – protetyka szczękowo-twarzowa (specjalistyczna)."
+  },
+  {
+   "id": "PROC-23.3119",
+   "kod": "23.3119",
+   "nazwa_oficjalna": "Czynności dla uzupełnienia brakujących tkanek miękkich, wyrównania lub zamknięcia defektów w obrębie bezzębnej szczęki",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): obturatory, protezy poresekcyjne, epitezy – protetyka szczękowo-twarzowa (specjalistyczna)."
+  },
+  {
+   "id": "PROC-23.3120",
+   "kod": "23.3120",
+   "nazwa_oficjalna": "Wykonanie obturatora dla zamknięcia podniebienia miękkiego",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): obturatory, protezy poresekcyjne, epitezy – protetyka szczękowo-twarzowa (specjalistyczna)."
+  },
+  {
+   "id": "PROC-23.3121",
+   "kod": "23.3121",
+   "nazwa_oficjalna": "Wykonanie tymczasowej protezy poresekcyjnej wypełniającej ubytki po resekcji lub uzupełniającej duże defekty szczęki",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): obturatory, protezy poresekcyjne, epitezy – protetyka szczękowo-twarzowa (specjalistyczna)."
+  },
+  {
+   "id": "PROC-23.3122",
+   "kod": "23.3122",
+   "nazwa_oficjalna": "Wykonanie protezy poresekcyjnej ostatecznej",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): obturatory, protezy poresekcyjne, epitezy – protetyka szczękowo-twarzowa (specjalistyczna)."
+  },
+  {
+   "id": "PROC-23.3123",
+   "kod": "23.3123",
+   "nazwa_oficjalna": "Wykonanie protezy lub epitezy dla uzupełnienia zewnątrzustrojowych defektów części miękkich lub dla uzupełnienia brakujących części twarzy w mniejszym zakresie",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): obturatory, protezy poresekcyjne, epitezy – protetyka szczękowo-twarzowa (specjalistyczna)."
+  },
+  {
+   "id": "PROC-23.3124",
+   "kod": "23.3124",
+   "nazwa_oficjalna": "Wykonanie protezy lub epitezy dla uzupełnienia zewnątrzustrojowych defektów części miękkich lub dla uzupełnienia brakujących części twarzy o większym zakresie",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): obturatory, protezy poresekcyjne, epitezy – protetyka szczękowo-twarzowa (specjalistyczna)."
+  },
+  {
+   "id": "PROC-23.3125",
+   "kod": "23.3125",
+   "nazwa_oficjalna": "Czynności związane z odtwarzaniem funkcji koron i mostów - zdjęcie korony lanej",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3126",
+   "kod": "23.3126",
+   "nazwa_oficjalna": "Czynności odtwarzające wysokość zwarcia poprzez zastosowanie elementów nakładowych w protezie",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+  },
+  {
+   "id": "PROC-23.3127",
+   "kod": "23.3127",
+   "nazwa_oficjalna": "Zastosowanie szyny lanej do repozycji i unieruchomienia złamania szczęk lub repozycji i unieruchomienia szczęk po zabiegach korygujących wady zgryzu - za każde 2 zęby kolejne objęte szyną",
+   "kategoria": "protetyka – protezy ruchome",
+   "status": "not_started",
+   "zrodla_kodu": [
+    "SRC-ICD9-PL-591"
+   ],
+   "uzasadnienie_statusu": "Pominięte decyzją Patryka (22.11.2026): szyna lana do złamań szczęk – chirurgia szczękowo-twarzowa."
+  }
+ ]
+}

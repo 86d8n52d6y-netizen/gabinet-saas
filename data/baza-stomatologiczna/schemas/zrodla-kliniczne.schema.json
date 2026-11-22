@@ -1,0 +1,75 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "type": "object",
+ "required": [
+  "opis",
+  "zrodla"
+ ],
+ "properties": {
+  "opis": {
+   "type": "string",
+   "minLength": 1
+  },
+  "zrodla": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "opis",
+     "rodzaj",
+     "status",
+     "sprawdzono"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^SRC-(KLIN|APP|PRAKTYKA)[A-Z0-9-]*$"
+     },
+     "opis": {
+      "type": "string",
+      "minLength": 1
+     },
+     "czasopismo": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "rok": {
+      "type": [
+       "integer",
+       "null"
+      ]
+     },
+     "pmid": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "pattern": "^[0-9]+$"
+     },
+     "doi": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "rodzaj": {
+      "type": "string",
+      "minLength": 1
+     },
+     "sprawdzono": {
+      "type": "string",
+      "format": "date"
+     },
+     "status": {
+      "type": "string",
+      "minLength": 1
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,236 @@
+{
+ "opis": "Źródła kliniczne bazy stomatologicznej (badania, karty procedur ICD-9). Źródła prawne i NFZ – data/nfz/sources.json (identyfikatory SRC-…). Każde źródło sprawdzone w PubMed (PMID, DOI) 22.11.2026.",
+ "zrodla": [
+  {
+   "id": "SRC-KLIN-ESE-2006",
+   "opis": "European Society of Endodontology. Quality guidelines for endodontic treatment: consensus report of the European Society of Endodontology",
+   "czasopismo": "Int Endod J",
+   "rok": 2006,
+   "pmid": "17180780",
+   "doi": "10.1111/j.1365-2591.2006.01180.x",
+   "rodzaj": "wytyczne",
+   "sprawdzono": "2026-11-22",
+   "status": "POTWIERDZONA (PubMed)"
+  },
+  {
+   "id": "SRC-KLIN-ESE-S3-2023",
+   "opis": "Duncan HF i wsp. Treatment of pulpal and apical disease: The European Society of Endodontology (ESE) S3-level clinical practice guideline",
+   "czasopismo": "Int Endod J",
+   "rok": 2023,
+   "pmid": "37772327",
+   "doi": "10.1111/iej.13974",
+   "rodzaj": "wytyczne S3",
+   "sprawdzono": "2026-11-22",
+   "status": "POTWIERDZONA (PubMed)"
+  },
+  {
+   "id": "SRC-KLIN-ESE-VPT-2019",
+   "opis": "Duncan HF i wsp. European Society of Endodontology position statement: Management of deep caries and the exposed pulp",
+   "czasopismo": "Int Endod J",
+   "rok": 2019,
+   "pmid": "30664240",
+   "doi": "10.1111/iej.13080",
+   "rodzaj": "stanowisko",
+   "sprawdzono": "2026-11-22",
+   "status": "POTWIERDZONA (PubMed)"
+  },
+  {
+   "id": "SRC-KLIN-EFP-S3-2020",
+   "opis": "Sanz M i wsp. Treatment of stage I–III periodontitis – The EFP S3 level clinical practice guideline",
+   "czasopismo": "J Clin Periodontol",
+   "rok": 2020,
+   "pmid": "32383274",
+   "doi": "10.1111/jcpe.13290",
+   "rodzaj": "wytyczne S3",
+   "sprawdzono": "2026-11-22",
+   "status": "POTWIERDZONA (PubMed)"
+  },
+  {
+   "id": "SRC-KLIN-PERIO-2018",
+   "opis": "Papapanou PN i wsp. Periodontitis: Consensus report of workgroup 2 of the 2017 World Workshop on the Classification of Periodontal and Peri-Implant Diseases and Conditions",
+   "czasopismo": "J Clin Periodontol",
+   "rok": 2018,
+   "pmid": "29926490",
+   "doi": "10.1111/jcpe.12946",
+   "rodzaj": "konsensus / klasyfikacja",
+   "sprawdzono": "2026-11-22",
+   "status": "POTWIERDZONA (PubMed)"
+  },
+  {
+   "id": "SRC-KLIN-KLASYF-2018",
+   "opis": "Caton JG i wsp. A new classification scheme for periodontal and peri-implant diseases and conditions – Introduction and key changes from the 1999 classification",
+   "czasopismo": "J Clin Periodontol",
+   "rok": 2018,
+   "pmid": "29926489",
+   "doi": "10.1111/jcpe.12935",
+   "rodzaj": "klasyfikacja",
+   "sprawdzono": "2026-11-22",
+   "status": "POTWIERDZONA (PubMed)"
+  },
+  {
+   "id": "SRC-KLIN-EAPD-F-2019",
+   "opis": "Toumba KJ i wsp. Guidelines on the use of fluoride for caries prevention in children: an updated EAPD policy document",
+   "czasopismo": "Eur Arch Paediatr Dent",
+   "rok": 2019,
+   "pmid": "31631242",
+   "doi": "10.1007/s40368-019-00464-2",
+   "rodzaj": "wytyczne",
+   "sprawdzono": "2026-11-22",
+   "status": "POTWIERDZONA (PubMed)"
+  },
+  {
+   "id": "SRC-KLIN-ADA-F-2013",
+   "opis": "Weyant RJ i wsp. Topical fluoride for caries prevention: executive summary of the updated clinical recommendations (ADA)",
+   "czasopismo": "J Am Dent Assoc",
+   "rok": 2013,
+   "pmid": "24177407",
+   "doi": "10.14219/jada.archive.2013.0057",
+   "rodzaj": "wytyczne",
+   "sprawdzono": "2026-11-22",
+   "status": "POTWIERDZONA (PubMed)"
+  },
+  {
+   "id": "SRC-KLIN-ADA-LAK-2016",
+   "opis": "Wright JT i wsp. Evidence-based clinical practice guideline for the use of pit-and-fissure sealants (ADA/AAPD)",
+   "czasopismo": "J Am Dent Assoc",
+   "rok": 2016,
+   "pmid": "27470525",
+   "doi": "10.1016/j.adaj.2016.06.001",
+   "rodzaj": "wytyczne",
+   "sprawdzono": "2026-11-22",
+   "status": "POTWIERDZONA (PubMed)"
+  },
+  {
+   "id": "SRC-KLIN-AAPD-VPT-2017",
+   "opis": "Dhar V i wsp. Use of vital pulp therapies in primary teeth with deep caries lesions (AAPD)",
+   "czasopismo": "Pediatr Dent",
+   "rok": 2017,
+   "pmid": "29179355",
+   "doi": null,
+   "rodzaj": "wytyczne",
+   "sprawdzono": "2026-11-22",
+   "status": "POTWIERDZONA (PubMed)"
+  },
+  {
+   "id": "SRC-KLIN-IADT-OG-2020",
+   "opis": "Levin L i wsp. IADT guidelines for the management of traumatic dental injuries: General introduction",
+   "czasopismo": "Dent Traumatol",
+   "rok": 2020,
+   "pmid": "32472740",
+   "doi": "10.1111/edt.12574",
+   "rodzaj": "wytyczne",
+   "sprawdzono": "2026-11-22",
+   "status": "POTWIERDZONA (PubMed)"
+  },
+  {
+   "id": "SRC-KLIN-IADT-ZLAM-2020",
+   "opis": "Bourguignon C i wsp. IADT guidelines: 1. Fractures and luxations",
+   "czasopismo": "Dent Traumatol",
+   "rok": 2020,
+   "pmid": "32475015",
+   "doi": "10.1111/edt.12578",
+   "rodzaj": "wytyczne",
+   "sprawdzono": "2026-11-22",
+   "status": "POTWIERDZONA (PubMed)"
+  },
+  {
+   "id": "SRC-KLIN-IADT-AWUL-2020",
+   "opis": "Fouad AF i wsp. IADT guidelines: 2. Avulsion of permanent teeth",
+   "czasopismo": "Dent Traumatol",
+   "rok": 2020,
+   "pmid": "32460393",
+   "doi": "10.1111/edt.12573",
+   "rodzaj": "wytyczne",
+   "sprawdzono": "2026-11-22",
+   "status": "POTWIERDZONA (PubMed)"
+  },
+  {
+   "id": "SRC-KLIN-IADT-MLECZ-2020",
+   "opis": "Day PF i wsp. IADT guidelines: 3. Injuries in the primary dentition",
+   "czasopismo": "Dent Traumatol",
+   "rok": 2020,
+   "pmid": "32458553",
+   "doi": "10.1111/edt.12576",
+   "rodzaj": "wytyczne",
+   "sprawdzono": "2026-11-22",
+   "status": "POTWIERDZONA (PubMed)"
+  },
+  {
+   "id": "SRC-KLIN-DCTMD-2014",
+   "opis": "Schiffman E i wsp. Diagnostic Criteria for Temporomandibular Disorders (DC/TMD) for Clinical and Research Applications",
+   "czasopismo": "J Oral Facial Pain Headache",
+   "rok": 2014,
+   "pmid": "24482784",
+   "doi": "10.11607/jop.1151",
+   "rodzaj": "kryteria diagnostyczne",
+   "sprawdzono": "2026-11-22",
+   "status": "POTWIERDZONA (PubMed)"
+  },
+  {
+   "id": "SRC-KLIN-ICDAS-2007",
+   "opis": "Ismail AI i wsp. The International Caries Detection and Assessment System (ICDAS)",
+   "czasopismo": "Community Dent Oral Epidemiol",
+   "rok": 2007,
+   "pmid": "17518963",
+   "doi": "10.1111/j.1600-0528.2007.00347.x",
+   "rodzaj": "system oceny",
+   "sprawdzono": "2026-11-22",
+   "status": "POTWIERDZONA (PubMed)"
+  },
+  {
+   "id": "SRC-KLIN-PCR-1972",
+   "opis": "O'Leary TJ i wsp. The plaque control record",
+   "czasopismo": "J Periodontol",
+   "rok": 1972,
+   "pmid": "4500182",
+   "doi": "10.1902/jop.1972.43.1.38",
+   "rodzaj": "wskaźnik",
+   "sprawdzono": "2026-11-22",
+   "status": "POTWIERDZONA (PubMed)"
+  },
+  {
+   "id": "SRC-KLIN-GI-1963",
+   "opis": "Löe H, Silness J. Periodontal disease in pregnancy. I. Prevalence and severity (wskaźnik GI)",
+   "czasopismo": "Acta Odontol Scand",
+   "rok": 1963,
+   "pmid": "14121956",
+   "doi": "10.3109/00016356309011240",
+   "rodzaj": "wskaźnik",
+   "sprawdzono": "2026-11-22",
+   "status": "POTWIERDZONA (PubMed)"
+  },
+  {
+   "id": "SRC-KLIN-ENDOCHIR-2006",
+   "opis": "Kim S, Kratchman S. Modern endodontic surgery concepts and practice: a review",
+   "czasopismo": "J Endod",
+   "rok": 2006,
+   "pmid": "16793466",
+   "doi": "10.1016/j.joen.2005.12.010",
+   "rodzaj": "przegląd",
+   "sprawdzono": "2026-11-22",
+   "status": "POTWIERDZONA (PubMed)"
+  },
+  {
+   "id": "SRC-APP-SZABLONY",
+   "opis": "Teksty opisów z plików gabinetu Patryka (generator/szablony.js, obiekt D w generator/nfz.html) – teksty używane dziś w Opisach NFZ",
+   "czasopismo": null,
+   "rok": 2026,
+   "pmid": null,
+   "doi": null,
+   "rodzaj": "tekst aplikacji",
+   "sprawdzono": "2026-11-22",
+   "status": "POTWIERDZONA (repozytorium)"
+  },
+  {
+   "id": "SRC-PRAKTYKA",
+   "opis": "Ogólna praktyka kliniczna (wiedza podręcznikowa) bez wskazania konkretnej publikacji – do weryfikacji przez Patryka",
+   "czasopismo": null,
+   "rok": null,
+   "pmid": null,
+   "doi": null,
+   "rodzaj": "praktyka kliniczna",
+   "sprawdzono": "2026-11-22",
+   "status": "WYMAGA WERYFIKACJI"
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "type": "object",
+ "required": [
+  "opis",
+  "kroki"
+ ],
+ "properties": {
+  "opis": {
+   "type": "string",
+   "minLength": 1
+  },
+  "kroki": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "nazwa",
+     "opis"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^KROK-[A-Z0-9-]+$"
+     },
+     "nazwa": {
+      "type": "string",
+      "minLength": 1
+     },
+     "opis": {
+      "type": "string",
+      "minLength": 1
+     },
+     "uwaga": {
+      "type": "string",
+      "minLength": 1
+     },
+     "warianty": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "minLength": 1
+      }
+     },
+     "zrodla": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^SRC-[A-Z0-9-]+$"
+      },
+      "uniqueItems": true
+     }
+    }
+   }
+  }
+ }
+}

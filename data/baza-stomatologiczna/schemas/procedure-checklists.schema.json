@@ -1,0 +1,148 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "type": "object",
+ "required": [
+  "opis",
+  "checklisty"
+ ],
+ "properties": {
+  "opis": {
+   "type": "string",
+   "minLength": 1
+  },
+  "wspolne": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "tekst",
+     "poziom",
+     "podstawa"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^CHK-[A-Z0-9.-]+$"
+     },
+     "tekst": {
+      "type": "string",
+      "minLength": 1
+     },
+     "poziom": {
+      "enum": [
+       "obowiazkowe",
+       "zalecane",
+       "sytuacyjne",
+       "rozliczeniowe"
+      ]
+     },
+     "podstawa": {
+      "enum": [
+       "wymaganie_prawne",
+       "wymaganie_nfz",
+       "zalecenie_kliniczne",
+       "propozycja_aplikacji"
+      ]
+     },
+     "zrodla": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^SRC-[A-Z0-9-]+$"
+      },
+      "uniqueItems": true
+     },
+     "warunek": {
+      "type": "string",
+      "minLength": 1
+     },
+     "pole": {
+      "type": "string",
+      "pattern": "^POLE-"
+     }
+    }
+   }
+  },
+  "checklisty": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "procedura",
+     "elementy"
+    ],
+    "properties": {
+     "procedura": {
+      "type": "string",
+      "pattern": "^PROC-"
+     },
+     "wspolne": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^CHK-"
+      }
+     },
+     "elementy": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "id",
+        "tekst",
+        "poziom",
+        "podstawa"
+       ],
+       "properties": {
+        "id": {
+         "type": "string",
+         "pattern": "^CHK-[A-Z0-9.-]+$"
+        },
+        "tekst": {
+         "type": "string",
+         "minLength": 1
+        },
+        "poziom": {
+         "enum": [
+          "obowiazkowe",
+          "zalecane",
+          "sytuacyjne",
+          "rozliczeniowe"
+         ]
+        },
+        "podstawa": {
+         "enum": [
+          "wymaganie_prawne",
+          "wymaganie_nfz",
+          "zalecenie_kliniczne",
+          "propozycja_aplikacji"
+         ]
+        },
+        "zrodla": {
+         "type": "array",
+         "items": {
+          "type": "string",
+          "pattern": "^SRC-[A-Z0-9-]+$"
+         },
+         "uniqueItems": true
+        },
+        "warunek": {
+         "type": "string",
+         "minLength": 1
+        },
+        "pole": {
+         "type": "string",
+         "pattern": "^POLE-"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

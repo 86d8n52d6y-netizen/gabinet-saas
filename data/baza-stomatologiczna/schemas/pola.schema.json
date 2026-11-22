@@ -1,0 +1,106 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "type": "object",
+ "required": [
+  "opis",
+  "pola"
+ ],
+ "properties": {
+  "opis": {
+   "type": "string",
+   "minLength": 1
+  },
+  "pola": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "etykieta",
+     "typ"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^POLE-[A-Z0-9-]+$"
+     },
+     "etykieta": {
+      "type": "string",
+      "minLength": 1
+     },
+     "typ": {
+      "enum": [
+       "tekst",
+       "tekst_dlugi",
+       "wybor",
+       "wybor_wielokrotny",
+       "przelacznik",
+       "liczba",
+       "data",
+       "zab",
+       "zeby",
+       "powierzchnie"
+      ]
+     },
+     "opcje": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "minLength": 1
+      }
+     },
+     "wlasna_wartosc": {
+      "type": "boolean"
+     },
+     "jednostka": {
+      "type": "string",
+      "minLength": 1
+     },
+     "min": {
+      "type": "number"
+     },
+     "max": {
+      "type": "number"
+     },
+     "opis": {
+      "type": "string",
+      "minLength": 1
+     },
+     "badanie": {
+      "type": "string",
+      "pattern": "^BAD-[A-Z0-9-]+$"
+     },
+     "zrodla": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^SRC-[A-Z0-9-]+$"
+      },
+      "uniqueItems": true
+     }
+    },
+    "allOf": [
+     {
+      "if": {
+       "properties": {
+        "typ": {
+         "enum": [
+          "wybor",
+          "wybor_wielokrotny"
+         ]
+        }
+       }
+      },
+      "then": {
+       "required": [
+        "opcje",
+        "wlasna_wartosc"
+       ]
+      }
+     }
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "nazwa": "baza-stomatologiczna",
+ "wersja": "2026.11.22-1",
+ "zalezy_od": "data/nfz (audyt NFZ)",
+ "pliki": [
+  {
+   "plik": "data/baza-stomatologiczna/zrodla-kliniczne.json",
+   "sha256": "a27532bba47f73ba2bf2eb23c46554b5a24c35603baf5ae3a5fe6642c801e37f",
+   "schemat": "data/baza-stomatologiczna/schemas/zrodla-kliniczne.schema.json",
+   "rekordy": 21
+  },
+  {
+   "plik": "data/baza-stomatologiczna/pola-wspolne.json",
+   "sha256": "50ffc091d6d618c5402e4a25e426d70180386778ad954db100f51cc459b91082",
+   "schemat": "data/baza-stomatologiczna/schemas/pola.schema.json",
+   "rekordy": 0
+  },
+  {
+   "plik": "data/badania/examinations.json",
+   "sha256": "3d551e75d55fbf11d850e2d2aa7114e1266dbbff04c82061c4ee003a1f40a678",
+   "schemat": "data/baza-stomatologiczna/schemas/examinations.schema.json",
+   "rekordy": 0
+  },
+  {
+   "plik": "data/badania/examination-fields.json",
+   "sha256": "12070a651cb50e90969db8f580aca808e8fac5c4fb2af2e46ceeae42b951be0c",
+   "schemat": "data/baza-stomatologiczna/schemas/pola.schema.json",
+   "rekordy": 0
+  },
+  {
+   "plik": "data/badania/examination-templates.json",
+   "sha256": "970775cce661a0093cc9c17d0e71ff83c9d708d9818c8aa437685ee76b10b0ad",
+   "schemat": "data/baza-stomatologiczna/schemas/szablony.schema.json",
+   "rekordy": 0
+  },
+  {
+   "plik": "data/procedury-icd9/procedures.json",
+   "sha256": "ce652f3917ec521c06ffb7accfcd244279f4ae215834ac12546ffcf93900fbe1",
+   "schemat": "data/baza-stomatologiczna/schemas/procedures.schema.json",
+   "rekordy": 266
+  },
+  {
+   "plik": "data/procedury-icd9/procedure-steps.json",
+   "sha256": "0e31627728cbffa8d419e4e76a9468b79d15afa9c2d25b5e9e4fe2ad02f227ef",
+   "schemat": "data/baza-stomatologiczna/schemas/procedure-steps.schema.json",
+   "rekordy": 0
+  },
+  {
+   "plik": "data/procedury-icd9/procedure-materials.json",
+   "sha256": "773e18b308383bdbd2249919f204b3864239374c1c2bd536f1f752c5450ae9b6",
+   "schemat": "data/baza-stomatologiczna/schemas/procedure-materials.schema.json",
+   "rekordy": 0
+  },
+  {
+   "plik": "data/procedury-icd9/procedure-templates.json",
+   "sha256": "29aad1b96cc651d851203a29ee9090ea362f9d40a5a455d19ed670874fd37f55",
+   "schemat": "data/baza-stomatologiczna/schemas/szablony.schema.json",
+   "rekordy": 0
+  },
+  {
+   "plik": "data/procedury-icd9/procedure-checklists.json",
+   "sha256": "2ab58b1abbb8a3263ffbcd2f6ef4ec8974058384059ea25ffe9b2488180ff1da",
+   "schemat": "data/baza-stomatologiczna/schemas/procedure-checklists.schema.json",
+   "rekordy": 0
+  },
+  {
+   "plik": "data/procedury-icd9/procedure-diagnosis-mappings.json",
+   "sha256": "e5c9d08d4a1c7d9465e697b9ffa7ad1ac24a19392601215da183c47a931d27a1",
+   "schemat": "data/baza-stomatologiczna/schemas/procedure-diagnosis-mappings.schema.json",
+   "rekordy": 0
+  }
+ ],
+ "liczniki": {
+  "badania": 0,
+  "procedury": 266,
+  "procedury_wg_statusu": {
+   "not_started": 266
+  },
+  "szablony": 0,
+  "pola": 0,
+  "kroki": 0,
+  "materialy": 0,
+  "mapowania_icd10": 0
+ }
+}

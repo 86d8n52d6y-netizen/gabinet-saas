@@ -1,0 +1,441 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "type": "object",
+ "required": [
+  "opis",
+  "procedury"
+ ],
+ "properties": {
+  "opis": {
+   "type": "string",
+   "minLength": 1
+  },
+  "procedury": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "kod",
+     "nazwa_oficjalna",
+     "kategoria",
+     "status",
+     "zrodla_kodu"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^PROC-23\\.[0-9]{2,5}$"
+     },
+     "kod": {
+      "type": "string",
+      "pattern": "^23\\.[0-9]{2,5}$"
+     },
+     "nazwa_oficjalna": {
+      "type": "string",
+      "minLength": 1
+     },
+     "nazwa_krotka": {
+      "type": "string",
+      "minLength": 1
+     },
+     "kategoria": {
+      "type": "string",
+      "minLength": 1
+     },
+     "opis": {
+      "type": "string",
+      "minLength": 1
+     },
+     "status": {
+      "enum": [
+       "not_started",
+       "in_progress",
+       "draft",
+       "verified",
+       "requires_expert_review"
+      ]
+     },
+     "uzasadnienie_statusu": {
+      "type": "string",
+      "minLength": 1
+     },
+     "zrodla_kodu": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^SRC-[A-Z0-9-]+$"
+      },
+      "uniqueItems": true
+     },
+     "kody_aplikacji": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "minLength": 1
+      }
+     },
+     "cel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "na_czym_polega",
+       "cel_kliniczny",
+       "wskazania"
+      ],
+      "properties": {
+       "na_czym_polega": {
+        "type": "string",
+        "minLength": 1
+       },
+       "cel_kliniczny": {
+        "type": "string",
+        "minLength": 1
+       },
+       "kiedy": {
+        "type": "string",
+        "minLength": 1
+       },
+       "wskazania": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        }
+       }
+      }
+     },
+     "kwalifikacja": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "ocena_przed",
+       "wywiad",
+       "przeciwwskazania"
+      ],
+      "properties": {
+       "ocena_przed": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        }
+       },
+       "wywiad": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        }
+       },
+       "przeciwwskazania": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "additionalProperties": false,
+         "required": [
+          "tekst",
+          "rodzaj"
+         ],
+         "properties": {
+          "tekst": {
+           "type": "string",
+           "minLength": 1
+          },
+          "rodzaj": {
+           "enum": [
+            "bezwzgledne",
+            "wzgledne",
+            "ograniczenie"
+           ]
+          }
+         }
+        }
+       },
+       "dodatkowa_diagnostyka": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        }
+       },
+       "inne_postepowanie": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        }
+       }
+      }
+     },
+     "przygotowanie": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "konieczne"
+      ],
+      "properties": {
+       "konieczne": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        }
+       },
+       "opcjonalne": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        }
+       },
+       "sytuacyjne": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        }
+       },
+       "znieczulenie": {
+        "type": "string",
+        "minLength": 1
+       }
+      }
+     },
+     "kroki": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "krok"
+       ],
+       "properties": {
+        "krok": {
+         "type": "string",
+         "pattern": "^KROK-"
+        },
+        "uwaga": {
+         "type": "string",
+         "minLength": 1
+        },
+        "warunek": {
+         "type": "string",
+         "minLength": 1
+        }
+       }
+      }
+     },
+     "materialy": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "mat"
+       ],
+       "properties": {
+        "mat": {
+         "type": "string",
+         "pattern": "^MAT-"
+        },
+        "rola": {
+         "enum": [
+          "konieczne",
+          "typowe",
+          "alternatywa",
+          "sytuacyjne"
+         ]
+        },
+        "uwaga": {
+         "type": "string",
+         "minLength": 1
+        }
+       }
+      }
+     },
+     "kontrola_efektu": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "sprawdzic"
+      ],
+      "properties": {
+       "sprawdzic": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        }
+       },
+       "nieprawidlowosci": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        }
+       },
+       "dalsze_postepowanie": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        }
+       }
+      }
+     },
+     "zalecenia": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+       "dla_pacjenta": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        }
+       },
+       "higiena": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        }
+       },
+       "ograniczenia": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        }
+       },
+       "kontakt_gdy": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        }
+       },
+       "kontrola": {
+        "type": "string",
+        "minLength": 1
+       }
+      }
+     },
+     "dokumentacja": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "elementy"
+      ],
+      "properties": {
+       "elementy": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "additionalProperties": false,
+         "required": [
+          "tekst",
+          "podstawa"
+         ],
+         "properties": {
+          "tekst": {
+           "type": "string",
+           "minLength": 1
+          },
+          "podstawa": {
+           "enum": [
+            "wymaganie_prawne",
+            "wymaganie_nfz",
+            "zalecenie_kliniczne",
+            "propozycja_aplikacji"
+           ]
+          },
+          "zrodla": {
+           "type": "array",
+           "items": {
+            "type": "string",
+            "pattern": "^SRC-[A-Z0-9-]+$"
+           },
+           "uniqueItems": true
+          },
+          "warunek": {
+           "type": "string",
+           "minLength": 1
+          }
+         }
+        }
+       }
+      }
+     },
+     "nfz": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "swiadczenie_gwarantowane"
+      ],
+      "properties": {
+       "swiadczenie_gwarantowane": {
+        "enum": [
+         "tak",
+         "nie",
+         "wymaga_weryfikacji"
+        ]
+       },
+       "produkty": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        }
+       },
+       "warunki": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        }
+       },
+       "reguly": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "pattern": "^R-[A-Z0-9-]+$"
+        }
+       },
+       "uwagi": {
+        "type": "string",
+        "minLength": 1
+       },
+       "zrodla": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "pattern": "^SRC-[A-Z0-9-]+$"
+        },
+        "uniqueItems": true
+       }
+      }
+     },
+     "zrodla": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^SRC-[A-Z0-9-]+$"
+      },
+      "uniqueItems": true
+     },
+     "opracowano": {
+      "type": "string",
+      "format": "date"
+     },
+     "zweryfikowal": {
+      "type": "string",
+      "minLength": 1
+     }
+    }
+   }
+  }
+ }
+}
