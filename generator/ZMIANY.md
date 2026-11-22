@@ -59,6 +59,12 @@ Plik `wspolne.js` (sejf z hasłem w przeglądarce) zastąpiony przez `gabinet-sa
 | P32 | audyt NFZ R-KIR-DZ (decyzja D4=A): kiretaż ST04 u dziecka – INFORMACJA „wymaga weryfikacji” (komunikat NFZ z 22.07.2026, stan prawny nieustalony) |
 | P33 | audyt NFZ R-ZNI-02 (decyzja Patryka 22.11.2026 – ostrzeżenie): znieczulenie wpisane osobno przy ekstrakcji (ST01/ST02) lub kiretażu (ST04) – jest wliczone w pakiet; osobno tylko do wypełnienia, 1105 lub 1206 (źródło: Zarządzenie 60/2023/DSOZ t.j., zał. 1c/1d – lista ST1) |
 | P34 | komunikaty NFZ: INFORMACJA (reguły „wymaga weryfikacji”) wyświetlana jako notatka, nie ostrzeżenie (D4=A) |
+| P35 | audyt NFZ N1: dane audytu (generator/nfz-dane.js z data/nfz/, scripts/nfz_dane_przegladarka.py) ładowane razem z szablonami – tylko do odczytu na urządzeniu |
+| P36 | audyt NFZ N2: silnik reguł z danych audytu (łączenie spoza tabeli „nie sumuje się”, limity jako informacja – D7=B, przełom roku – D6=A, ocena wg daty wizyty) – tylko na urządzeniu (D2=A) |
+| P36a | audyt NFZ N2: funkcje silnika reguł (przed nfzIssues) |
+| P37 | audyt NFZ N2: rozwijana lista „Zasady NFZ dla wybranych kodów” (treść, poziom, status, źródło) pod komunikatami NFZ |
+| P37a | lista zasad NFZ widoczna także bez błędów i ostrzeżeń |
+| P37b | lista zasad NFZ na końcu okienka komunikatów |
 
 ## Opisy prywatne (`prywatne.html`)
 

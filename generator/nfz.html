@@ -276,6 +276,7 @@ table.stat td::first-letter{text-transform:none}
 
 <!--GABINET_DANE--><script src="/opisy-nfz/zasoby/gabinet-saas.js"></script>
 <script src="/opisy-nfz/zasoby/szablony.js"></script>
+<script src="/opisy-nfz/zasoby/nfz-dane.js"></script>
 <script>
 /* ---------- użytkownik i jego przestrzeń danych (wspolne.js) ----------
    Dane każdego użytkownika są w osobnej bazie (opisyNFZ@<id>) i są szyfrowane jego kluczem; sesję i klucz sprawdza dbInit (G.ready). */
@@ -610,6 +611,29 @@ function aotEst(c){const n=Math.max(1,teethOf(c).length);
 const NFZ_LIMIT={ST30E:'max 4× w roku',ST30G:'max 1× w roku',ST33:'1× w roku kalendarzowym'};
 function nfzPackages(c){if(c==='ST30'||c==='ST30E'){const q=(state.quads[c]||[]).length;return Math.max(1,q);}return 1;}
 function nfzMin(c){return NFZ_MIN[c]?NFZ_MIN[c]*nfzPackages(c):null;}
+/* ---------- audyt NFZ – etap N2: reguły z data/nfz (window.NFZ_DANE, docs/nfz/) liczone tylko na urządzeniu (D2=A) ----------
+   łączenie: pary z listy audytu, których nie obejmuje NFZ_NOSUM (BLOKADA tylko dla reguł POTWIERDZONYCH);
+   limity zależne od historii – zawsze INFORMACJA (D7=B); rok kalendarzowy + ostrzeżenie na przełomie roku (D6=A);
+   reguła obowiązuje według daty wizyty (od/do). */
+const NA_KOD=c=>/^ST/.test(c)?c:'23.'+c, Z_KOD=k=>/^23\./.test(k)?k.slice(3):k;
+function nfzRegulaAkt(r,date){return !!r&&(!/^\d{4}-\d{2}-\d{2}$/.test(r.od||'')||r.od<=date)&&(!r.do||date<=r.do);}
+function nfzAudyt(cs,date){
+  const N=window.NFZ_DANE,out=[];if(!N||!cs.length)return out;
+  const R={};N.reguly.forEach(r=>{R[r.id]=r;});
+  const kody=cs.map(NA_KOD),seen=new Set(),src=r=>r&&r.zrodla.length?' (źródło: '+r.zrodla[0].split(' – ')[0]+')':'';
+  N.laczenie.forEach(p=>{const i=kody.indexOf(p.a),j=kody.indexOf(p.b);if(i<0||j<0||i===j)return;
+    const key=[p.a,p.b].sort().join('+');if(seen.has(key))return;seen.add(key);
+    const x=Z_KOD(p.a),y=Z_KOD(p.b),r=R[p.regula];if(!nfzRegulaAkt(r,date))return;
+    if((NFZ_NOSUM[x]||[]).includes(y)||(NFZ_NOSUM[y]||[]).includes(x))return;               // już zgłaszane przez tabelę „nie sumuje się”
+    if(p.status==='NIEDOZWOLONE')out.push({lvl:r.poziom==='BLOKADA'&&r.status==='POTWIERDZONA'?'err':'warn',codes:[x,y],msg:`${x} i ${y}: ${r.tresc}${src(r)}`});
+    else if(p.status!=='DOZWOLONE')out.push({lvl:'info',codes:[x,y],msg:`Informacja (${p.status.toLowerCase()}): ${x} + ${y} – ${p.uwagi||r.tresc}`});});
+  const mies=date.slice(5,7),przelom=mies==='12'||mies==='01';let roczny=false;
+  N.limity.forEach(l=>{const c=l.kod.filter(k=>kody.includes(k));if(!c.length)return;const r=R[l.regula];if(!nfzRegulaAkt(r,date))return;
+    if(/w roku|rok kalendarzow/.test(l.tresc))roczny=true;
+    out.push({lvl:'info',codes:c.map(Z_KOD),msg:`Limit NFZ (${c.map(Z_KOD).join(', ')}): ${l.tresc} Sprawdź w historii pacjenta – aplikacja nie zna wizyt z innych gabinetów.`});});
+  if(roczny&&przelom)out.push({lvl:'warn',codes:[],msg:`Przełom roku: limity NFZ liczone są w roku kalendarzowym – ta wizyta (${date}) liczy się do limitów roku ${date.slice(0,4)}.`});
+  return out;
+}
 function nfzIssues(){
   const err=[],warn=[],cs=state.codes,a=AGE();
   for(let i=0;i<cs.length;i++)for(let j=i+1;j<cs.length;j++){const x=cs[i],y=cs[j];
@@ -632,15 +656,22 @@ function nfzIssues(){
   if(['ST01','ST02','ST04'].some(has)&&Object.keys(PTS_AN).some(k=>parseInt(str(state.a['pt.an'+k]),10)>0))warn.push({codes:['ST01','ST02','ST04'].filter(has),msg:'Znieczulenie przy ekstrakcji i kiretażu jest wliczone w pakiet (Zarządzenie 60/2023/DSOZ t.j. od 1.09.2026, lista ST1). W „znieczulenia rozliczane osobno” wpisz tylko znieczulenia do wypełnień, 1105 lub 1206.'});
   if(has('ST04')&&a!==null&&a<18)warn.push({codes:['ST04'],info:true,msg:'Informacja (wymaga weryfikacji): kiretaż u dzieci i młodzieży – komunikat NFZ z 22.07.2026 i stanowisko NIL są sprzeczne; stan prawny nieustalony. Sprawdź w OW NFZ przed rozliczeniem.'});
   cs.forEach(c=>{if(NFZ_LIMIT[c])warn.push({codes:[c],msg:`${c}: limit NFZ – ${NFZ_LIMIT[c]}.`,soft:true});});
+  nfzAudyt(cs,saveDate()).forEach(x=>{if(x.lvl==='err')err.push({codes:x.codes,msg:x.msg});else warn.push({codes:x.codes,msg:x.msg,info:x.lvl==='info'});});
   return {err,warn,tot,vt};
+}
+function nfzZasadyHTML(){
+  const N=window.NFZ_DANE;if(!N||!state.codes.length)return '';const date=saveDate(),kody=state.codes.map(NA_KOD);
+  const rs=N.reguly.filter(r=>r.dotyczy.some(k=>kody.includes(k))&&nfzRegulaAkt(r,date));if(!rs.length)return '';
+  return `<details class="nfz-zas"><summary>Zasady NFZ dla wybranych kodów (${rs.length}) – dane audytu ${esc(N.wersja)}</summary><ul>${rs.map(r=>`<li><b>${esc(r.poziom)}</b> · ${esc(r.tresc)}<span class="sub-n">${esc(r.id)} · ${esc(r.status.toLowerCase())} · od ${esc(r.od)} · ${esc(r.zrodla.join('; '))}</span></li>`).join('')}</ul><div class="nfz-src">${esc(N.uwaga)}</div></details>`;
 }
 function nfzBox(){
   const {err,warn,tot,vt}=nfzIssues();
   const hard=warn.filter(w=>!w.soft);
   if(!state.codes.length) return '<div id="nfz-box"></div>';
   const timeLine=tot?`<div class="note">Minimalny czas wg NFZ dla wybranych pakietów: <b>${tot} min</b> (pozostałe kody – zarządzenie nie określa minimum).${vt.extra?` Do czasu wizyty doliczono <b>10 min</b>: pakiet higienizacyjny i ${esc(vt.extraCodes.join(', '))} na jednej wizycie – raz, niezależnie od liczby zębów i procedur. Czas wizyty: <b>${vt.sug} min</b> (${vt.base} + 10).`:''}</div>`:'';
-  if(!err.length&&!hard.length&&!timeLine) return '<div id="nfz-box"></div>';
-  return `<div id="nfz-box" class="nfz">${err.map(e=>`<div class="err" role="alert"><b>Błąd NFZ:</b> ${esc(e.msg)}</div>`).join('')}${hard.map(w=>`<div class="${w.info?'note':'warn'}">${esc(w.msg)}</div>`).join('')}${timeLine}${err.length||hard.length?`<div class="nfz-src">${esc(NFZ_SRC)}</div>`:''}</div>`;
+  const zas=nfzZasadyHTML();
+  if(!err.length&&!hard.length&&!timeLine&&!zas) return '<div id="nfz-box"></div>';
+  return `<div id="nfz-box" class="nfz">${err.map(e=>`<div class="err" role="alert"><b>Błąd NFZ:</b> ${esc(e.msg)}</div>`).join('')}${hard.map(w=>`<div class="${w.info?'note':'warn'}">${esc(w.msg)}</div>`).join('')}${timeLine}${err.length||hard.length?`<div class="nfz-src">${esc(NFZ_SRC)}</div>`:''}${zas}</div>`;
 }
 function refreshNfz(){const el=document.getElementById('nfz-box');if(el){const t=document.createElement('div');t.innerHTML=nfzBox();el.replaceWith(t.firstElementChild);}}
 
