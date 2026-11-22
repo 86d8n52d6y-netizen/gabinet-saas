@@ -241,6 +241,52 @@ PATCHES = [
    "function fullTxt(){return state.ed?state.ed.txt:genTxt();}\n"
    "if(window.OpisZKarty)OpisZKarty.podlacz({moze:()=>state.codes.length&&state.step===3?true:'Najpierw wybierz zabiegi i przejdź do opisu.',"
    "wstaw:t=>{const g=genTxt();if(!state.ed)state.ed={txt:g,gen:g};state.ed.txt=String(state.ed.txt||'').replace(/\\s+$/,'')+(state.ed.txt?'\\n\\n':'')+t;render();autoSave();refreshSave();draftSched();}});"),
+  ('P44 ST30D i ST30F w Opisach NFZ (decyzja Patryka 22.11.2026, 1A): profesjonalna higienizacja z instruktażem – ½ łuku (66 pkt) i całe uzębienie (138 pkt); zał. 1c/1d – Zarządzenie 95/2026/DSOZ; komunikaty Centrali NFZ z 23.09.2026 i 9.11.2026',
+   " ST26:{name:'Leczenie zmian na błonie śluzowej',",
+   " ST30D:{name:'Profesjonalna higienizacja z instruktażem – ½ łuku',icd:'K03.6 + Z01.2',tips:['z badaniem lekarskim i instruktażem higieny (23.0101)','NFZ: 1× w roku kalendarzowym – badanie z instruktażem 1× w roku (zamiast ST33)','1 pakiet = ½ łuku = 1 ćwiartka; pozostałe ćwiartki jako ST30E (przy ST30D maks. 3)','dla dzieci i młodzieży do 18 r.ż.'],exam:true,instr:true,\n"
+   "   diag:{mode:'quad',label:'Kliknij ząb w ćwiartce, z której usunięto złogi miękkie (ST30D = 1 ćwiartka; pozostałe zaznacz w ST30E)'},\n"
+   "   fields:()=>[{k:'ST30D.czas',label:'Czas procedury (min. NFZ '+nfzMin('ST30D')+' min)',type:'num',unit:'min',w:'s'}],\n"
+   "   render:()=>{const q=(state.quads.ST30D||[]).slice().sort();const rem=SEG.ST30G_REMOVAL.replace('w kwadrantach jamy ustnej – zgodnie z diagramem','w kwadrancie jamy ustnej '+(q.length?q.join(', '):MISS('ćwiartka (diagram)'))+' – zgodnie z diagramem');\n"
+   "     return ['PROFESJONALNA HIGIENIZACJA Z INSTRUKTAŻEM HIGIENY ½ ŁUKU ZĘBOWEGO (ST30D)','Badanie lekarskie stomatologiczne, które obejmuje również instruktaż higieny jamy ustnej;',SEG.ST30G_EXAM_A,examMid(),SEG.EXAM_B,rem,'Czas wykonania procedury '+V('ST30D.czas','czas')+' min.',SEG.INSTR_HEAD,instr()].join('\\n');}},\n"
+   " ST30F:{name:'Profesjonalna higienizacja z instruktażem – całe uzębienie',icd:'K03.6 + Z01.2',tips:['z badaniem lekarskim i instruktażem higieny (23.0101)','NFZ: 1× w roku kalendarzowym – badanie z instruktażem 1× w roku (zamiast ST33)','do ST30F można dosumować tylko 1101','dla dzieci i młodzieży do 18 r.ż.'],exam:true,instr:true,\n"
+   "   fields:()=>[{k:'ST30F.czas',label:'Czas procedury (min. NFZ '+nfzMin('ST30F')+' min)',type:'num',unit:'min',w:'s'}],\n"
+   "   render:()=>['PROFESJONALNA HIGIENIZACJA Z INSTRUKTAŻEM HIGIENY CAŁE UZĘBIENIE (ST30F)','Usunięcie złogów nazębnych miękkich. Badanie lekarskie stomatologiczne, które obejmuje również instruktaż higieny jamy ustnej;',SEG.ST30G_EXAM_A,examMid(),SEG.EXAM_B,SEG.ST30G_REMOVAL,'Czas wykonania procedury '+V('ST30F.czas','czas')+' min.',SEG.INSTR_HEAD,instr()].join('\\n')},\n"
+   " ST26:{name:'Leczenie zmian na błonie śluzowej',"),
+  ('P44a ST30G zgodnie z nazwą pakietu – BEZ instruktażu (decyzja Patryka 22.11.2026, 2A): usunięta sekcja instruktażu z opisu; z instruktażem = ST30F',
+   "ST30G:{name:'Profesjonalna higienizacja – całe uzębienie',icd:'K03.6 + Z01.2',tips:['dokładny diagram','dla dzieci i młodzieży do 18 r.ż.'],exam:true,instr:true,",
+   "ST30G:{name:'Profesjonalna higienizacja – całe uzębienie (bez instruktażu)',icd:'K03.6 + Z01.2',tips:['bez instruktażu higieny – z instruktażem rozlicz ST30F (138 pkt)','dokładny diagram','dla dzieci i młodzieży do 18 r.ż.'],exam:true,"),
+  ('P44b ST30G – opis bez sekcji instruktażu higieny',
+   "'Czas wykonania procedury '+V('ST30G.czas','czas')+' min.',SEG.INSTR_HEAD,instr()].join('\\n')}",
+   "'Czas wykonania procedury '+V('ST30G.czas','czas')+' min.'].join('\\n')}"),
+  ('P44c ST30D i ST30F na liście kodów (Profilaktyka i higienizacja) i domyślny czas',
+   " ['Profilaktyka i higienizacja',['ST30','ST30G','ST30E','1101','1006']],",
+   " ['Profilaktyka i higienizacja',['ST30','ST30F','ST30G','ST30D','ST30E','1101','1006']],"),
+  ('P44d czas minimalny, „nie sumuje się” i „dosumować wyłącznie” dla ST30D / ST30F (zał. 1d – Zarządzenie 95/2026/DSOZ)',
+   "const NFZ_MIN={ST30:10,ST30E:5,ST30G:20};",
+   "const NFZ_MIN={ST30:10,ST30D:15,ST30E:5,ST30F:30,ST30G:20};\n"
+   "const NFZ_ONLY={ST30D:['ST30E','1101'],ST30F:['1101']};   // zał. 1d: „do świadczenia można dosumować wyłącznie…”"),
+  ('P44e limity roczne ST30D / ST30F / ST33 – badanie z instruktażem (23.0101) 1× w roku kalendarzowym (komunikat Centrali NFZ 9.11.2026)',
+   "const NFZ_LIMIT={ST30E:'max 4× w roku',ST30G:'max 1× w roku',ST33:'1× w roku kalendarzowym'};",
+   "const NFZ_LIMIT={ST30D:'1× w roku kalendarzowym – zawiera badanie z instruktażem (23.0101); jeśli w tym roku był ST33 lub ST30F, NFZ nie zapłaci',ST30E:'max 4× w roku (3×, jeśli w tym roku był ST30D)',ST30F:'1× w roku kalendarzowym – zawiera badanie z instruktażem (23.0101); jeśli w tym roku był ST33 lub ST30D, NFZ nie zapłaci',ST30G:'max 1× w roku',ST33:'1× w roku kalendarzowym – jeśli w tym roku był ST30D lub ST30F (zawierają badanie z instruktażem), NFZ nie zapłaci'};"),
+  ('P44f wycena: ST30D 66 pkt, ST30F 138 pkt (zał. 1c – Zarządzenie 95/2026/DSOZ)',
+   "const PTS={ST01:93,ST02:104,ST04:130,ST19:86,ST26:51,ST28:96,ST30:44,ST30E:24,ST30G:96,",
+   "const PTS={ST01:93,ST02:104,ST04:130,ST19:86,ST26:51,ST28:96,ST30:44,ST30D:66,ST30E:24,ST30F:138,ST30G:96,"),
+  ('P44g jednostka ST30D (½ łuku = 1 ćwiartka)',
+   "const PTS_UNIT={ST01:'ząb',ST02:'ząb',ST30:'ćwiartka',ST30E:'ćwiartka',",
+   "const PTS_UNIT={ST01:'ząb',ST02:'ząb',ST30:'ćwiartka',ST30D:'ćwiartka',ST30E:'ćwiartka',"),
+  ('P44h ostrzeżenia ST30D / ST30F: wiek < 18, „dosumować wyłącznie”, ST30D = 1 ćwiartka, maks. 3 × ST30E przy ST30D, podpowiedź 1× ST30D + ST30E, ST30G bez instruktażu',
+   "  ['ST30E','ST30G'].forEach(c=>{if(!has(c))return;if(a!==null&&a>=18)",
+   "  Object.keys(NFZ_ONLY).forEach(c=>{if(!has(c))return;const zle=cs.filter(o=>o!==c&&!NFZ_ONLY[c].includes(o)&&!((NFZ_NOSUM[c]||[]).includes(o)));\n"
+   "    if(zle.length)err.push({codes:[c,...zle],msg:`${c}: NFZ nie zapłaci – do ${c} można dosumować wyłącznie ${NFZ_ONLY[c].join(' i ')} (zał. 1d, Zarządzenie 95/2026/DSOZ). Usuń: ${zle.join(', ')}.`});});\n"
+   "  if(has('ST30D')){const q=(state.quads.ST30D||[]).length,qe=(state.quads.ST30E||[]).length;\n"
+   "    if(q>1)warn.push({codes:['ST30D'],msg:'ST30D obejmuje ½ łuku (1 ćwiartkę) – pozostałe ćwiartki zaznacz w ST30E (komunikat Centrali NFZ 23.09.2026).'});\n"
+   "    if(has('ST30E')&&qe>3)warn.push({codes:['ST30D','ST30E'],msg:`Przy ST30D NFZ zapłaci maks. za 3 × ST30E w roku – zaznaczono ${qe} ćwiartki ST30E.`});}\n"
+   "  if(has('ST30E')&&!has('ST30D')&&!has('ST33'))warn.push({codes:['ST30E'],info:true,msg:'Jeśli na wizycie był instruktaż higieny: NFZ zaleca 1× ST30D (½ łuku z badaniem i instruktażem, 66 pkt) + pozostałe ćwiartki jako ST30E (komunikat Centrali NFZ 23.09.2026).'});\n"
+   "  if(has('ST30G'))warn.push({codes:['ST30G'],info:true,msg:'ST30G jest bez instruktażu higieny – jeśli był instruktaż, rozlicz ST30F (138 pkt zamiast 96; zał. 1c, Zarządzenie 95/2026/DSOZ).'});\n"
+   "  ['ST30D','ST30E','ST30F','ST30G'].forEach(c=>{if(!has(c))return;if(a!==null&&a>=18)"),
+  ('P44i domyślny czas ST30D 16 min i ST30F 31 min (jak ST30E/ST30G: minimum NFZ + 1 min)',
+   "state.a['ST30E.czas']='11';",
+   "state.a['ST30E.czas']='11'; state.a['ST30D.czas']='16'; state.a['ST30F.czas']='31';"),
 ]
 
 PATCHES_PRYW = [

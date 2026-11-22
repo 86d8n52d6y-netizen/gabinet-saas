@@ -270,3 +270,10 @@ Sposób weryfikacji: grupy w pytaniach do klikania („Zatwierdzam” / pojedync
 **Uwagi techniczne:** po restarcie kontenera najpierw `bash tests/pg-start.sh`; pełna regresja ~40 min (pętla po `tests/e2e/t_*.py` z `OPISY_DIR=/home/user/opisy-nfz`); vitest bez `DATABASE_URL` pokazuje 2 „failed” (db.test, nfz-zgodnosc) – to brak bazy, nie błąd.
 
 **Odpowiedź Patryka (22.11.2026):** Opisy NFZ zostają w obecnej postaci; Katalog procedur zostaje jak jest (link z Katalogu NFZ) – bez osobnej pozycji w menu.
+
+## 12. W toku (22.11.2026, wieczór) – ST30D i ST30F w Opisach NFZ
+
+Gałąź `st30d-st30f` (wypchnięta, NIE scalona). Decyzje Patryka: 1A – dodać ST30D (66 pkt, ½ łuku z badaniem i instruktażem 23.0101) i ST30F (138 pkt, całe uzębienie z instruktażem); 2A – ST30G zgodnie z nazwą BEZ sekcji instruktażu (z instruktażem = ST30F). Źródła: zał. 1c/1d Zarządzenia 95/2026/DSOZ, komunikaty Centrali NFZ 23.09.2026 i 9.11.2026 (artykuł infodent24 128519 – zrzuty od Patryka).
+- Zrobione: poprawki P44–P44i w `tests/tools/przenies_generator.py` (kody, teksty, punkty, NFZ_MIN, NFZ_ONLY „dosumować wyłącznie”, limity roczne ST30D/ST30F/ST33, ostrzeżenia, podpowiedź „1× ST30D + reszta ST30E”), test `tests/e2e/t_12_st30d_st30f.py`.
+- Do zrobienia: uruchomić t_12 (poprawić test/kod przy błędach), t_4b (ST30G zmienione celowo – porównanie ze starą aplikacją może wymagać wyjątku), pełna regresja, wiersz w POSTEP.md, PR i scalenie, potem testy Patryka na Macu (lista w rozmowie: aktualizacja ZIP + `bash zainstaluj-mac.command`, sprawdzić Opis z karty/badanie, kiretaż 14/15 lat, ST30D/ST30F).
+- Katalog NFZ (tabela `app.nfz_catalog`) nie ma ST30D/ST30F – serwer ich nie potrzebuje (punkty liczy przeglądarka); dopisanie wymaga migracji 0009 – tylko za zgodą Patryka.
