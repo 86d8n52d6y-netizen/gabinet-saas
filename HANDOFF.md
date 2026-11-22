@@ -244,3 +244,26 @@ Commit + PR + **scalenie przez Claude bez pytania** dla gotowych, przetestowanyc
 - Opisy prywatne „Wczytuję…” w Safari – zabezpieczenia wdrożone (PR #6), czeka na potwierdzenie Patryka.
 - „Inne kwoty” tego samego gabinetu w Kalendarzu i Zarobkach – czeka na przykład od Patryka (gabinet, miesiąc, obie kwoty).
 - Rozliczenia i Podsumowanie przeniesione do Zarobków (PR #7) – do sprawdzenia na Macu.
+
+## 11. Stan na 22.11.2026 (przekazanie do nowego okna)
+
+`main` @ PR #17. Wszystko poniżej scalone po pełnej regresji (15 plików e2e, 0 błędów).
+
+| PR | Etap |
+|---|---|
+| #9–#11 | Zlecenia protetyczne E0–E8 |
+| #12–#13 | Audyt NFZ N1–N6 (dane `data/nfz/`, silnik reguł, ICD-10, katalog) + decyzje D1–D7 |
+| #14 | Baza stomatologiczna (PROMPT 2): `data/badania`, `data/procedury-icd9`, `data/baza-stomatologiczna` |
+| #15 | Integracja I1: strona „Katalog procedur i badań” (`/katalog-procedur`, link w Katalogu NFZ) + panel „Kontrola kompletności” w Opisach NFZ (krok 3, ostrzeżenie bez blokady) |
+| #16 | Weryfikacja kart (23 zatwierdzone, 51 odrzuconych) |
+| #17 | Weryfikacja protetyki (36 zatwierdzonych, 11 specjalistycznych odrzuconych) |
+
+**Karty procedur (266 kodów):** 59 `verified`, 85 `draft`, 62 odrzucone (status `not_started` + uzasadnienie „Odrzucone decyzją Patryka…”, ukryte, treść zachowana), 57 pominiętych, 3 nadrzędne.
+Zostały do weryfikacji (draft): profilaktyka 21, endodoncja 21, periodontologia 10, odbudowa i estetyka 8, chirurgia 7, leczenie próchnicy 5, badanie/porada + radiologia 8, pozostałe 5.
+Sposób weryfikacji: grupy w pytaniach do klikania („Zatwierdzam” / pojedynczo / „Nie umieszczać”); verified = `zweryfikowal: "Patryk Barysz"`, `zweryfikowano: RRRR-MM-DD`; potem `python3 -I scripts/waliduj_baze.py --manifest`, `buduj_docs_bazy.py`, `baza_dane_przegladarka.py`, sekcja 7 w `docs/RAPORT_BAZA_STOMATOLOGICZNA.md`, wiersz w `POSTEP.md`, build, `t_10`, pełna regresja, PR, merge.
+
+**Opisy NFZ (generator) a baza stomatologiczna – rozdzielone:** generator Opisów NFZ to nadal przeniesienie 1:1 ze starej aplikacji (teksty opisów i schematy bez zmian, test `genTxt` identyczny). Baza dodała tylko panel „Kontrola kompletności” (P41–P42a, nie trafia do opisu) i osobną stronę Katalogu procedur. Stara aplikacja `opisy-nfz` – nietknięta.
+
+**Uwagi techniczne:** po restarcie kontenera najpierw `bash tests/pg-start.sh`; pełna regresja ~40 min (pętla po `tests/e2e/t_*.py` z `OPISY_DIR=/home/user/opisy-nfz`); vitest bez `DATABASE_URL` pokazuje 2 „failed” (db.test, nfz-zgodnosc) – to brak bazy, nie błąd.
+
+**Pytanie otwarte:** Patryk chce, żeby pierwotne Opisy NFZ zostały w obecnej postaci (schematy, opisy), a baza była wyraźnie oddzielona – ustalić nazwę/miejsce działu w menu.
