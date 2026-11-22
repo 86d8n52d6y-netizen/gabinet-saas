@@ -25857,7 +25857,7 @@
    "kod": "23.2701",
    "nazwa_oficjalna": "Opracowanie na piśmie na zlecenie lub życzenie planu leczenia i kosztów zaopatrzenia protetycznego włącznie z oceną modeli",
    "kategoria": "protetyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -25955,14 +25955,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.2702",
    "kod": "23.2702",
    "nazwa_oficjalna": "Wycisk szczęki dla celów wykonania modelu sytuacyjnego, również wycisk częściowy lub wycisk zgryzowy dla celów diagnostycznych lub planowania",
    "kategoria": "protetyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -26068,14 +26070,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.2703",
    "kod": "23.2703",
    "nazwa_oficjalna": "Zabiegi przygotowujące (pobieranie wycisków, proste ustalenie zgryzu lub tp. dla wykonania modelu obu szczęk celem oceny diagnostycznej i planowania łącznie z wyceną)",
    "kategoria": "protetyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -26184,14 +26188,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.2704",
    "kod": "23.2704",
    "nazwa_oficjalna": "Przygotowanie uszkodzonego zęba do osadzenia korony poprzez odbudowę kikuta zęba wkładem koronowo-korzeniowym lanym lub śrubowym",
    "kategoria": "protetyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -26376,14 +26382,16 @@
     "SRC-PRAKTYKA",
     "SRC-KLIN-ESE-2006"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.2705",
    "kod": "23.2705",
    "nazwa_oficjalna": "Ochrona oszlifowanego zęba kształka, formówka",
    "kategoria": "protetyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -26505,14 +26513,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.2706",
    "kod": "23.2706",
    "nazwa_oficjalna": "Ochrona oszlifowanego zęba i zabezpieczenie funkcji prowizoryczną koroną lub zastąpienia brakującego zęba elementem prowizorycznego mostu, za koronę lub element mostu",
    "kategoria": "protetyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -26638,7 +26648,9 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.2715",
@@ -26667,7 +26679,7 @@
    "kod": "23.2801",
    "nazwa_oficjalna": "Odbudowa pojedynczego zęba przy zastosowaniu korony lanej",
    "kategoria": "protetyka – korony",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -26856,14 +26868,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.2802",
    "kod": "23.2802",
    "nazwa_oficjalna": "Odbudowa pojedynczego zęba przy zastosowaniu korony licowanej",
    "kategoria": "protetyka – korony",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -27052,14 +27066,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.2803",
    "kod": "23.2803",
    "nazwa_oficjalna": "Odbudowa pojedynczego zęba przy zastosowaniu korony pochewkowej lub częściowej (szlifowanie zęba ze stopniem okrężnym)",
    "kategoria": "protetyka – korony",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -27248,14 +27264,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.2804",
    "kod": "23.2804",
    "nazwa_oficjalna": "Czynności związane z odtworzeniem funkcji koron i prowizorycznych mostów - ponowne osadzenie korony, zęba ćwiekowego, licówki również zdjęcie korony żywiczej",
    "kategoria": "protetyka – korony",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -27380,14 +27398,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.2805",
    "kod": "23.2805",
    "nazwa_oficjalna": "Czynności związane z odtworzeniem funkcji koron i prowizorycznych mostów - odnowienie licówki, licowania korony itp.",
    "kategoria": "protetyka – korony",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -27509,14 +27529,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.2806",
    "kod": "23.2806",
    "nazwa_oficjalna": "Czynności związane z odtworzeniem funkcji koron i prowizorycznych mostów - zdjęcie i powtórne umocowanie prowizorycznej korony",
    "kategoria": "protetyka – korony",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -27641,14 +27663,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.2901",
    "kod": "23.2901",
    "nazwa_oficjalna": "Likwidacja dużych zaburzeń artykulacyjnych i zgryzowych przed uzupełnieniem braków zębowych protezami lub mostami",
    "kategoria": "protetyka",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -27757,14 +27781,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Rozwiązanie protetyczne specjalistyczne – treść do weryfikacji (Patryk / protetyk)."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – protetyka specjalistyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.2902",
    "kod": "23.2902",
    "nazwa_oficjalna": "Zmiana położenia szczęki za pomocą płytki zgryzowej (prowadzącej , ustalającej zwarcie, relaksacyjnej)",
    "kategoria": "protetyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -27910,14 +27934,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.2903",
    "kod": "23.2903",
    "nazwa_oficjalna": "Wycisk czynnościowy za pomocą łyżki indywidualnej",
    "kategoria": "protetyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -28019,14 +28045,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3001",
    "kod": "23.3001",
    "nazwa_oficjalna": "Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną laną",
    "kategoria": "protetyka – mosty",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -28214,14 +28242,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3002",
    "kod": "23.3002",
    "nazwa_oficjalna": "Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną licowaną",
    "kategoria": "protetyka – mosty",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -28409,14 +28439,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3003",
    "kod": "23.3003",
    "nazwa_oficjalna": "Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną pochewkową lub częściową",
    "kategoria": "protetyka – mosty",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -28604,14 +28636,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3004",
    "kod": "23.3004",
    "nazwa_oficjalna": "Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną teleskopową",
    "kategoria": "protetyka – mosty",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -28791,14 +28825,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Rozwiązanie protetyczne specjalistyczne – treść do weryfikacji (Patryk / protetyk)."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – protetyka specjalistyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.3005",
    "kod": "23.3005",
    "nazwa_oficjalna": "Dalsze czynności przy uzupełnianiu braków zębowych za pomocą na stałe mocowanych mostów za każdy element (punkt) przęsła; liczy się również element jednobrzeżny",
    "kategoria": "protetyka – mosty",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -28986,14 +29020,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3006",
    "kod": "23.3006",
    "nazwa_oficjalna": "Uzupełnienie braków zębowych za pomocą złożonych na stałe umocowanych lub ruchomych mostów i/lub złożonych stałych/ruchomych uzupełnień - dodatkowo przy zastosowaniu przęsła, włącznie z elementem łączącym każde przęsło",
    "kategoria": "protetyka – mosty",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -29173,14 +29209,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Rozwiązanie protetyczne specjalistyczne – treść do weryfikacji (Patryk / protetyk)."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – protetyka specjalistyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.3007",
    "kod": "23.3007",
    "nazwa_oficjalna": "Uzupełnienie braków zębowych za pomocą złożonych na stałe umocowanych lub ruchomych mostów i/lub złożonych stałych /ruchomych uzupełnień - dodatkowo przy zastosowaniu śrub, sztyftów sprężynowych lub tp. - za każdy element łączący",
    "kategoria": "protetyka – mosty",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -29360,14 +29396,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Rozwiązanie protetyczne specjalistyczne – treść do weryfikacji (Patryk / protetyk)."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – protetyka specjalistyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.3008",
    "kod": "23.3008",
    "nazwa_oficjalna": "Uzupełnienie braków zębowych za pomocą złożonych na stałe umocowanych lub ruchomych mostów i/lub złożonych stałych /ruchomych uzupełnień - dodatkowo przy zastosowaniu zatrzasków, zawiasów, zasuw lub zakotwiczeń - za każdy element (matrycę i stempel należy traktować jako całość)",
    "kategoria": "protetyka – mosty",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -29547,14 +29583,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Rozwiązanie protetyczne specjalistyczne – treść do weryfikacji (Patryk / protetyk)."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – protetyka specjalistyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.3009",
    "kod": "23.3009",
    "nazwa_oficjalna": "Czynności dla odtworzenia funkcji mostów lub mocowanych na stałe szyn -powtórne osadzenie mostu lub stałej szyny z dwoma zakotwiczeniami",
    "kategoria": "protetyka – mosty",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -29679,14 +29715,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3010",
    "kod": "23.3010",
    "nazwa_oficjalna": "Czynności dla odtworzenia funkcji mostów lub mocowanych na stałe szyn- powtórne osadzenie mostu lub stałej szyny z więcej niż dwoma zakotwiczeniami",
    "kategoria": "protetyka – mosty",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -29811,14 +29849,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3011",
    "kod": "23.3011",
    "nazwa_oficjalna": "Czynności dla odtworzenia funkcji mostu - odnowienie licówki, licowania korony filarowej",
    "kategoria": "protetyka – mosty",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -29936,14 +29976,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3101",
    "kod": "23.3101",
    "nazwa_oficjalna": "Uzupełnienie braków zębowych przy pomocy protezy częściowej włącznie z prostymi doginanymi klamrami w zakresie 1-4 brakujących zębów",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -30105,14 +30147,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3102",
    "kod": "23.3102",
    "nazwa_oficjalna": "Uzupełnienie braków zębowych przy pomocy protezy częściowej włącznie z prostymi doginanymi klamrami w zakresie 5-8 brakujących zębów",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -30287,14 +30331,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3103",
    "kod": "23.3103",
    "nazwa_oficjalna": "Uzupełnienie braków zębowych przy pomocy protezy częściowej włącznie z prostymi doginanymi klamrami w zakresie więcej niż 8 zębów",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -30469,14 +30515,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3104",
    "kod": "23.3104",
    "nazwa_oficjalna": "Zaopatrzenie bezzębnej szczęki protezą całkowitą w szczęce",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -30652,14 +30700,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.31041",
    "kod": "23.31041",
    "nazwa_oficjalna": "Proteza całkowita górna o charakterze overdenture oparta na zabezpieczonych korzeniach",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -30822,14 +30872,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Rozwiązanie protetyczne specjalistyczne – treść do weryfikacji (Patryk / protetyk)."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – protetyka specjalistyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.3105",
    "kod": "23.3105",
    "nazwa_oficjalna": "Zaopatrzenie bezzębnej szczęki protezą całkowitą w żuchwie",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -31005,14 +31055,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.31051",
    "kod": "23.31051",
    "nazwa_oficjalna": "Proteza całkowita dolna o charakterze overdenture oparta na zabezpieczonych korzeniach",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -31175,14 +31227,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Rozwiązanie protetyczne specjalistyczne – treść do weryfikacji (Patryk / protetyk)."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – protetyka specjalistyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.3106",
    "kod": "23.3106",
    "nazwa_oficjalna": "Zastosowanie metalowej podstawy przy bezzębnej szczęce",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -31342,14 +31394,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Rozwiązanie protetyczne specjalistyczne – treść do weryfikacji (Patryk / protetyk)."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – protetyka specjalistyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.3107",
    "kod": "23.3107",
    "nazwa_oficjalna": "Zastosowanie prostych dwuramiennych elementów utrzymujących lub podpierających lub wieloramiennych elementów doginanych o podobnym działaniu dodatkowo do każdej protezy- przy prowizorycznych protezach jedynie w szczególnych przypadkach, za element",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -31508,14 +31560,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3108",
    "kod": "23.3108",
    "nazwa_oficjalna": "Zastosowanie płyty metalowej z elementami utrzymującymi i podporami",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -31674,14 +31728,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3109",
    "kod": "23.3109",
    "nazwa_oficjalna": "Zastosowanie odlewanych skomplikowanych elementów utrzymujących i podpierających przy zastosowaniu jednego elementu utrzymującego i podpierającego - nie przy protezach prowizorycznych",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -31841,14 +31897,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Rozwiązanie protetyczne specjalistyczne – treść do weryfikacji (Patryk / protetyk)."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – protetyka specjalistyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.3110",
    "kod": "23.3110",
    "nazwa_oficjalna": "Zastosowanie odlewanych skomplikowanych elementów utrzymujących i podpierających przy zastosowaniu przynajmniej dwóch elementów utrzymujących i podpierającychnie przy protezach prowizorycznych",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -32008,14 +32064,14 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Rozwiązanie protetyczne specjalistyczne – treść do weryfikacji (Patryk / protetyk)."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – protetyka specjalistyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.3111",
    "kod": "23.3111",
    "nazwa_oficjalna": "Czynności dla odtworzenia funkcji lub poszerzenia zakresu ruchomej protezy (naprawy) w małym zakresie bez wycisku",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -32159,14 +32215,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3112",
    "kod": "23.3112",
    "nazwa_oficjalna": "Czynności dla odtworzenia funkcji lub poszerzenia zakresu ruchomej protezy (naprawy) w większym zakresie z wyciskiem",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -32333,14 +32391,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3113",
    "kod": "23.3113",
    "nazwa_oficjalna": "Czynności dla odtworzenia funkcji lub poszerzenia zakresu ruchomej protezy (naprawy) - częściowe podścielenie jednej protezy",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -32484,14 +32544,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3114",
    "kod": "23.3114",
    "nazwa_oficjalna": "Całkowite bezpośrednie podścielenie jednej protezy",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -32635,14 +32697,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3115",
    "kod": "23.3115",
    "nazwa_oficjalna": "Całkowite podścielenie jednej protezy w sposób pośredni",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -32799,14 +32863,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3116",
    "kod": "23.3116",
    "nazwa_oficjalna": "Całkowite podścielenie jednej protezy w sposób pośredni, włącznie z ukształtowaniem obrzeża - dla szczęki",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -32973,14 +33039,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3117",
    "kod": "23.3117",
    "nazwa_oficjalna": "Całkowite podścielenie jednej protezy w sposób pośredni włącznie z czynnościowym ukształtowaniem obrzeża -dla żuchwy",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -33147,7 +33215,9 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3118",
@@ -33231,7 +33301,7 @@
    "kod": "23.3125",
    "nazwa_oficjalna": "Czynności związane z odtwarzaniem funkcji koron i mostów - zdjęcie korony lanej",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -33356,14 +33426,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.3126",
    "kod": "23.3126",
    "nazwa_oficjalna": "Czynności odtwarzające wysokość zwarcia poprzez zastosowanie elementów nakładowych w protezie",
    "kategoria": "protetyka – protezy ruchome",
-   "status": "requires_expert_review",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -33514,7 +33586,7 @@
     "SRC-PRAKTYKA"
    ],
    "opracowano": "2026-11-22",
-   "uzasadnienie_statusu": "Rozwiązanie protetyczne specjalistyczne – treść do weryfikacji (Patryk / protetyk)."
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – protetyka specjalistyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.3127",
