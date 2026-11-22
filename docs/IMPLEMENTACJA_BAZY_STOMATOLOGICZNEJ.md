@@ -8,7 +8,7 @@ Stan: 22.11.2026 · gałąź `baza-stomatologiczna` · prompt Patryka „PROMPT 
 | Katalog | Zawartość | Rekordy (stan na dziś) |
 |---|---|---|
 | `data/badania/` | `examinations.json` (katalog A), `examination-fields.json` (pola badań), `examination-templates.json` (opisy: standardowy / skrócony / rozszerzony) | 17 badań, 104 pola, 51 szablonów |
-| `data/procedury-icd9/` | `procedures.json` (rejestr + karty), `procedure-steps.json`, `procedure-materials.json`, `procedure-templates.json`, `procedure-checklists.json`, `procedure-diagnosis-mappings.json` | 266 kodów w rejestrze (stan 22.11.2026: 96 `verified`, 43 `draft`, 67 odrzucone decyzją Patryka – ukryte, treść zachowana; 3 nadrzędne; 57 pominiętych), 114 kroków, 70 materiałów, 618 szablonów procedur, 206 checklist, 401 mapowań ICD-10 |
+| `data/procedury-icd9/` | `procedures.json` (rejestr + karty), `procedure-steps.json`, `procedure-materials.json`, `procedure-templates.json`, `procedure-checklists.json`, `procedure-diagnosis-mappings.json` | 266 kodów w rejestrze (stan 22.11.2026: 110 `verified`, 18 `draft`, 78 odrzucone decyzją Patryka – ukryte, treść zachowana; 3 nadrzędne; 57 pominiętych), 114 kroków, 70 materiałów, 618 szablonów procedur, 206 checklist, 401 mapowań ICD-10 |
 | `data/baza-stomatologiczna/` | `pola-wspolne.json`, `zrodla-kliniczne.json`, `manifest.json` (wersja, sumy SHA-256, liczniki), `schemas/` (JSON Schema 2020-12) | 31 pól wspólnych, 21 źródeł z PubMed + 2 pomocnicze |
 | `data/nfz/` | **audyt NFZ** – słownik ICD-9 PL 5.91, ICD-10, reguły, produkty, źródła prawne (podstawa; baza z niego korzysta, nie kopiuje go) | – |
 | `docs/badania/`, `docs/procedury-icd9/` | dokumentacja **generowana z JSON** (`scripts/buduj_docs_bazy.py`) | – |
@@ -89,7 +89,7 @@ Zasady importu: upsert po id; rekordy usunięte z JSON **nie są kasowane automa
 | Kody i nazwy ICD-9 | zgodne z ICD-9 PL 5.91 (walidator porównuje nazwę z plikiem Patryka) |
 | Warunki NFZ w kartach | wyliczone z audytu NFZ (statusy źródeł jak w audycie) |
 | Źródła kliniczne | 21 publikacji sprawdzonych w PubMed (PMID; DOI gdy zwrócony) |
-| Treść kart i badań | 96 kart `verified` (Patryk, 22.11.2026), 43 `draft` – wymagają weryfikacji; badania – draft |
+| Treść kart i badań | 110 kart `verified` (Patryk, 22.11.2026), 18 `draft` – wymagają weryfikacji; badania – draft |
 | Wymagania prawne dokumentacji | oparte na `SRC-DU-2026-1391` – **akt nieodczytany w audycie (wymaga weryfikacji)** |
 | Nazwy ICD-10 | robocze (audyt, N8) – do porównania z wydaniem CeZ |
 

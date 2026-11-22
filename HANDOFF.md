@@ -258,8 +258,8 @@ Commit + PR + **scalenie przez Claude bez pytania** dla gotowych, przetestowanyc
 | #16 | Weryfikacja kart (23 zatwierdzone, 51 odrzuconych) |
 | #17 | Weryfikacja protetyki (36 zatwierdzonych, 11 specjalistycznych odrzuconych) |
 
-**Karty procedur (266 kodów):** 96 `verified`, 43 `draft`, 67 odrzucone (profilaktyka i endodoncja zweryfikowane) (status `not_started` + uzasadnienie „Odrzucone decyzją Patryka…”, ukryte, treść zachowana), 57 pominiętych, 3 nadrzędne.
-Zostały do weryfikacji (draft): periodontologia 10, odbudowa i estetyka 8, chirurgia 7, leczenie próchnicy 5, badanie/porada + radiologia 8, pozostałe 5.
+**Karty procedur (266 kodów):** 110 `verified`, 18 `draft`, 78 odrzucone (zweryfikowane: protetyka, profilaktyka, endodoncja, perio, odbudowa, chirurgia) (status `not_started` + uzasadnienie „Odrzucone decyzją Patryka…”, ukryte, treść zachowana), 57 pominiętych, 3 nadrzędne.
+Zostały do weryfikacji (draft): badanie i porada 4, diagnostyka 1, radiologia 4, pomoc doraźna 1, dziecko 1, leczenie próchnicy 5, stomatologia zachowawcza 1, urazy zębów 1.
 Sposób weryfikacji: grupy w pytaniach do klikania („Zatwierdzam” / pojedynczo / „Nie umieszczać”); verified = `zweryfikowal: "Patryk Barysz"`, `zweryfikowano: RRRR-MM-DD`; potem `python3 -I scripts/waliduj_baze.py --manifest`, `buduj_docs_bazy.py`, `baza_dane_przegladarka.py`, sekcja 7 w `docs/RAPORT_BAZA_STOMATOLOGICZNA.md`, wiersz w `POSTEP.md`, build, `t_10`, pełna regresja, PR, merge.
 
 **Opisy NFZ (generator) a baza stomatologiczna – rozdzielone:** generator Opisów NFZ to nadal przeniesienie 1:1 ze starej aplikacji (teksty opisów i schematy bez zmian, test `genTxt` identyczny). Baza dodała tylko panel „Kontrola kompletności” (P41–P42a, nie trafia do opisu) i osobną stronę Katalogu procedur. Stara aplikacja `opisy-nfz` – nietknięta.

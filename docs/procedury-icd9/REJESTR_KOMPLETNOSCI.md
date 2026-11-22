@@ -8,9 +8,9 @@ Wersja danych: 2026.11.22-1.
 
 | Status | Procedury |
 |---|---|
-| draft | 43 |
-| not_started | 127 |
-| verified | 96 |
+| draft | 18 |
+| not_started | 138 |
+| verified | 110 |
 | **razem** | **266** |
 
 Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: draft, BAD-BLONA: draft, BAD-UZEBIENIE: draft, BAD-PRZYZEBIE: draft, BAD-HIGIENA: draft, BAD-ZGRYZ: draft, BAD-SSZ: draft, BAD-ZYWOTNOSC: draft, BAD-RTG: draft, BAD-PO-URAZIE: draft, BAD-DZIECKO: draft, BAD-STOMATOLOGICZNE: draft, BAD-KONTROLNE: draft, BAD-PRZED-LECZENIEM: draft, BAD-PO-LECZENIU: draft).
@@ -111,47 +111,47 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.13143 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 3 kanałów | endodoncja – leczenie kanałowe | verified |  |
 | 23.13149 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA - inne | endodoncja – leczenie kanałowe | verified |  |
 | 23.14 | Szczególne trudności w preparowaniu/ wypełnianiu zębów - usunięcie przerośniętej brodawki międzyzębowej, zatamowanie krwawienia z brodawki, separowanie zębów itp. | stomatologia zachowawcza | draft |  |
-| 23.1501 | Odbudowa zniszczonego, złamanego kąta w zębach siecznych | odbudowa i estetyka | draft |  |
+| 23.1501 | Odbudowa zniszczonego, złamanego kąta w zębach siecznych | odbudowa i estetyka | verified |  |
 | 23.1502 | Całkowite opracowanie i odbudowa ubytku zęba na 1 powierzchni | odbudowa i estetyka | verified |  |
 | 23.1503 | Całkowite opracowanie i odbudowa ubytku na 2 powierzchniach | odbudowa i estetyka | verified |  |
 | 23.1504 | Całkowite opracowanie i odbudowa rozległego ubytku na 2 powierzchniach | odbudowa i estetyka | verified |  |
 | 23.1505 | Całkowite opracowanie i odbudowa rozległego ubytku na 3 powierzchniach | odbudowa i estetyka | verified |  |
-| 23.1506 | Całkowite opracowanie i odbudowa rozległego ubytku na więcej niż 3 powierzchniach | odbudowa i estetyka | draft |  |
-| 23.1507 | Całkowite opracowanie i odbudowa zniszczonego kąta w zębach siecznych | odbudowa i estetyka | draft |  |
-| 23.1508 | Kosmetyczne pokrycie niedorozwoju szkliwa | odbudowa i estetyka | draft |  |
-| 23.1509 | Kosmetyczna korekta przebarwienia zębiny w zębach przednich | odbudowa i estetyka | draft |  |
-| 23.1510 | Likwidacja diastemy | odbudowa i estetyka | draft |  |
-| 23.1511 | Wybielanie zęba metodą wewnętrzną | odbudowa i estetyka | draft |  |
-| 23.1512 | Wybielanie grupy zębów metodą zewnętrzną | odbudowa i estetyka | draft |  |
+| 23.1506 | Całkowite opracowanie i odbudowa rozległego ubytku na więcej niż 3 powierzchniach | odbudowa i estetyka | verified |  |
+| 23.1507 | Całkowite opracowanie i odbudowa zniszczonego kąta w zębach siecznych | odbudowa i estetyka | verified |  |
+| 23.1508 | Kosmetyczne pokrycie niedorozwoju szkliwa | odbudowa i estetyka | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.1509 | Kosmetyczna korekta przebarwienia zębiny w zębach przednich | odbudowa i estetyka | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.1510 | Likwidacja diastemy | odbudowa i estetyka | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.1511 | Wybielanie zęba metodą wewnętrzną | odbudowa i estetyka | verified |  |
+| 23.1512 | Wybielanie grupy zębów metodą zewnętrzną | odbudowa i estetyka | verified |  |
 | 23.1601 | Usunięcie złogów nazębnych z 1/2 łuku zębowego | periodontologia i błona śluzowa | not_started | Kod nadrzędny – od 01.09.2026 do rozliczenia wykazuje się podkody (R-KOD-01): 23.16011 / 23.16012; karty w podkodach. |
 | 23.16011 | Usunięcie złogów nazębnych miękkich z 1/2 łuku zębowego | periodontologia i błona śluzowa | verified |  |
 | 23.16012 | Usunięcie złogów nazębnych twardych z 1/2 łuku zębowego | periodontologia i błona śluzowa | verified |  |
 | 23.1602 | Usunięcie złogów nazębnych ze wszystkich zębów | periodontologia i błona śluzowa | not_started | Kod nadrzędny – od 01.09.2026 do rozliczenia wykazuje się podkody (R-KOD-01): 23.16021 / 23.16022; karty w podkodach. |
 | 23.16021 | Usunięcie złogów nazębnych miękkich ze wszystkich zębów | periodontologia i błona śluzowa | verified |  |
-| 23.16022 | Usunięcie złogów nazębnych twardych ze wszystkich zębów | periodontologia i błona śluzowa | draft |  |
-| 23.1603 | Polerowanie zębów | periodontologia i błona śluzowa | draft |  |
-| 23.1604 | Płukanie kieszonki dziąsłowej i aplikacja leku | periodontologia i błona śluzowa | draft |  |
+| 23.16022 | Usunięcie złogów nazębnych twardych ze wszystkich zębów | periodontologia i błona śluzowa | verified |  |
+| 23.1603 | Polerowanie zębów | periodontologia i błona śluzowa | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.1604 | Płukanie kieszonki dziąsłowej i aplikacja leku | periodontologia i błona śluzowa | verified |  |
 | 23.1605 | Leczenie zmian na błonie śluzowej jamy ustnej | periodontologia i błona śluzowa | verified |  |
 | 23.1606 | Korekta zgryzu | periodontologia i błona śluzowa | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1607 | Kiretaż zwykły w obrębie 1/4 uzębienia | periodontologia i błona śluzowa | verified |  |
 | 23.1608 | Kiretaż otwarty w obrębie 1/4 uzębienia | periodontologia i błona śluzowa | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1609 | Gingwoplastyka | periodontologia i błona śluzowa | draft |  |
+| 23.1609 | Gingwoplastyka | periodontologia i błona śluzowa | verified |  |
 | 23.1610 | Gingwoosteoplastyka | periodontologia i błona śluzowa | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1611 | Podcięcie wędzidełka, wargi, języka, policzka | periodontologia i błona śluzowa | draft |  |
-| 23.1612 | Plastyka wędzidełka ,wargi ,policzka | periodontologia i błona śluzowa | draft |  |
+| 23.1611 | Podcięcie wędzidełka, wargi, języka, policzka | periodontologia i błona śluzowa | verified |  |
+| 23.1612 | Plastyka wędzidełka ,wargi ,policzka | periodontologia i błona śluzowa | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1613 | Plastyka przedsionka jamy ustnej met. Clarka, Kazanjana | periodontologia i błona śluzowa | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1614 | Plastyka przedsionka jamy ustnej met. Nabersa | periodontologia i błona śluzowa | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1615 | Unieruchomienie zębów ligaturą drucianą | periodontologia i błona śluzowa | draft |  |
-| 23.1616 | Unieruchomienie zębów materiałem złożonym (kompozytowym) | periodontologia i błona śluzowa | draft |  |
-| 23.1617 | Unieruchomienie zębów szyną z materiału złożonego z dodatkowymi wzmocnieniami | periodontologia i błona śluzowa | draft |  |
+| 23.1615 | Unieruchomienie zębów ligaturą drucianą | periodontologia i błona śluzowa | verified |  |
+| 23.1616 | Unieruchomienie zębów materiałem złożonym (kompozytowym) | periodontologia i błona śluzowa | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.1617 | Unieruchomienie zębów szyną z materiału złożonego z dodatkowymi wzmocnieniami | periodontologia i błona śluzowa | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1618 | Zabieg wszczepiania hydroksyapatytu, bioglassu lub tp. | periodontologia i błona śluzowa | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1619 | Zabieg pokrycia obnażonych korzeni zębów metodą bocznie przesuniętego płata | periodontologia i błona śluzowa | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1620 | Założenie opatrunku parodontologicznego | periodontologia i błona śluzowa | draft |  |
+| 23.1620 | Założenie opatrunku parodontologicznego | periodontologia i błona śluzowa | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.17 | Chirurgiczne usunięcie zęba | chirurgia – ekstrakcje | not_started | Kod nadrzędny używany w składzie pakietów NFZ – karty w podkodach: 23.1701–23.1708. |
 | 23.1701 | Usunięcie zęba jednokorzeniowego | chirurgia – ekstrakcje | verified |  |
 | 23.1702 | Usunięcie zęba wielokorzeniowego | chirurgia – ekstrakcje | verified |  |
-| 23.1703 | Usunięcie głęboko złamanego zęba poprzez dłutowanie wewnątrzzębodołowe przy zastosowaniu wierteł, dźwigni | chirurgia – ekstrakcje | draft |  |
-| 23.1704 | Usunięcie zęba przez dłutowanie zewnątrzzębodołowe z wytworzeniem płata śluzówkowo-okostnowego | chirurgia – ekstrakcje | draft |  |
+| 23.1703 | Usunięcie głęboko złamanego zęba poprzez dłutowanie wewnątrzzębodołowe przy zastosowaniu wierteł, dźwigni | chirurgia – ekstrakcje | verified |  |
+| 23.1704 | Usunięcie zęba przez dłutowanie zewnątrzzębodołowe z wytworzeniem płata śluzówkowo-okostnowego | chirurgia – ekstrakcje | verified |  |
 | 23.1705 | Operacyjne usunięcie zęba zatrzymanego | chirurgia – ekstrakcje | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1706 | Operacyjne odsłonięcie zatrzymanego zęba z założeniem pętli drucianej dla celów ortodontycznych | chirurgia – ekstrakcje | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1707 | Operacyjne usunięcie zawiązków zębów ze wskazań ortodontycznych | chirurgia – ekstrakcje | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
@@ -161,16 +161,16 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.1803 | Resekcja wierzchołka korzenia zęba bocznego | chirurgia stomatologiczna | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1804 | Resekcja wierzchołka korzenia zęba każdego następnego zęba podczas tego samego zabiegu i dotyczy zębów | chirurgia stomatologiczna | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1805 | Hemisekcja zęba | chirurgia stomatologiczna | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1806 | Reimplantacja zęba | chirurgia stomatologiczna | draft |  |
+| 23.1806 | Reimplantacja zęba | chirurgia stomatologiczna | verified |  |
 | 23.1807 | Wyłuszczenie torbieli zębopochodnej | chirurgia stomatologiczna | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1808 | Wyłuszczenie kamienia z przewodu ślinianki | chirurgia stomatologiczna | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1809 | Chirurgiczne zaopatrzenie małej rany obejmującej do 3 zębodołów włącznie ze szwem | chirurgia stomatologiczna | draft |  |
-| 23.1810 | Chirurgiczne zaopatrzenie małej rany obejmującej do 2-3 zębodołów włącznie z opracowaniem i szwami | chirurgia stomatologiczna | draft |  |
+| 23.1809 | Chirurgiczne zaopatrzenie małej rany obejmującej do 3 zębodołów włącznie ze szwem | chirurgia stomatologiczna | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.1810 | Chirurgiczne zaopatrzenie małej rany obejmującej do 2-3 zębodołów włącznie z opracowaniem i szwami | chirurgia stomatologiczna | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1811 | Chirurgiczne zaopatrzenie dużej rany w obrębie połowy szczęki włącznie ze szwami | chirurgia stomatologiczna | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1812 | Chirurgiczne zaopatrzenie dużej, albo znacznie zanieczyszczonej rany w obrębie połowy szczęki włącznie z opracowaniem i szwami | chirurgia stomatologiczna | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1813 | Zatamowanie krwawienia w obrębie jamy ustnej - nie zaliczane w bezpośrednim połączeniu z zabiegiem chirurgicznym, chyba że zajmuje niewspółmiernie dużo czasu | chirurgia stomatologiczna | draft |  |
+| 23.1813 | Zatamowanie krwawienia w obrębie jamy ustnej - nie zaliczane w bezpośrednim połączeniu z zabiegiem chirurgicznym, chyba że zajmuje niewspółmiernie dużo czasu | chirurgia stomatologiczna | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1814 | Zatamowanie masywnego krwawienia w obrębie jamy ustnej przez podwiązanie, pokłucie naczyń bądź zatkanie kością | chirurgia stomatologiczna | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1815 | Założenie opatrunku chirurgicznego | chirurgia stomatologiczna | draft |  |
+| 23.1815 | Założenie opatrunku chirurgicznego | chirurgia stomatologiczna | verified |  |
 | 23.1816 | Ograniczone, miejscowe wycięcie wargi, języka | chirurgia stomatologiczna | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1817 | Krioterapia niewielkich zmian w obrębie tkanek miękkich jamy ustnej | chirurgia stomatologiczna | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1819 | Ograniczone wycięcie, zniszczenie zmiany podniebienia twardego | chirurgia stomatologiczna | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
