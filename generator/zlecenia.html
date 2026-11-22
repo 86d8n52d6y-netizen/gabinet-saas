@@ -343,7 +343,19 @@ function poleHTML(z, f) {
       (f.own !== false ? '<input class="zl-in" data-own="' + f.k + '" data-m="' + (f.t === 'chipsN' ? 'N' : '1') + '" placeholder="inne – wpisz i Enter" aria-label="' + esc(f.l) + ' – inna wartość">' : '');
   } else if (f.t === 'area') h = '<label for="' + id + '">' + esc(f.l) + tag + '</label><textarea class="zl-in" id="' + id + '" data-k="' + f.k + '">' + esc(v || '') + '</textarea>';
   else h = '<label for="' + id + '">' + esc(f.l) + tag + '</label><input class="zl-in" id="' + id + '" data-k="' + f.k + '" type="' + (f.t === 'date' ? 'date' : 'text') + '" value="' + esc(v || '') + '"' + (f.dl ? ' list="' + f.dl + '"' : '') + (f.max ? ' maxlength="' + f.max + '"' : '') + ' autocomplete="off">';
+  if (f.dl && f.t !== 'date') h += podpHTML(z, f);
   return '<div class="zl-f' + (f.w ? ' w' : '') + '">' + h + (f.hint ? '<span class="zl-hint">' + esc(f.hint) + '</span>' : '') + '</div>';
+}
+/* podpowiedzi „3 najczęstsze” (decyzja Patryka 22.11.2026, pkt 5): wartości najczęściej wpisywane w Twoich zleceniach na tym urządzeniu,
+   potem „Moje materiały” i lista wbudowana; klik ustawia wartość, własny wpis nadal możliwy (pole tekstowe i lista podpowiedzi) */
+function podpowiedzi(k, base) {
+  const c = new Map(); for (const x of S.list) { const v = String((x.a || {})[k] || '').trim(); if (v) c.set(v, (c.get(v) || 0) + 1); }
+  return [...new Set([...c.keys()].sort((a, b) => c.get(b) - c.get(a)).concat(base))].slice(0, 3);
+}
+function podpHTML(z, f) {
+  const base = f.k === 'lab' ? G.mat('lab', []) : f.k === 'implSys' ? G.mat('implant', []) : f.k === 'kolor' ? G.mat('kolor', KOLORY[(z.a || {}).skala] || KOLORY['Vita Classic']) : [];
+  const v = val(z, f.k), l = podpowiedzi(f.k, base);
+  return l.length ? '<div class="zl-ch" data-testid="podp-' + f.k + '">' + l.map(o => '<button type="button" data-a="ch" data-m="1" data-k="' + f.k + '" data-v="' + esc(o) + '" aria-pressed="' + (v === o) + '">' + esc(o) + '</button>').join('') + '</div>' : '';
 }
 function edytor() {
   const z = S.cur, t = typOf(z), br = braki(z), w = br.filter(x => x[0] === 'W'), zal = br.filter(x => x[0] === 'Z');
