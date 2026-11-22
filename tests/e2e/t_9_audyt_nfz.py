@@ -84,6 +84,9 @@ with sync_playwright() as p:
     chk('N5: ponowne kliknięcie – powrót do domyślnego opisu kodu', '(wybrane)' not in pg.inner_text('#card-ST30 h2') and 'K03.6 Złogi nazębne' in pg.inner_text('#card-ST30 h2'), pg.inner_text('#card-ST30 h2'))
     chk('N5: podpowiedzi z dopiskiem o nazwach roboczych', 'Nazwy robocze' in pg.inner_text('#card-ST30 details.icd-sug'))
 
+    wiz(pg, ['ST30E'], '30', {'sv.date': '2026-11-20'}); pg.evaluate("document.querySelector('details.nfz-zas').open=true"); zas = pg.inner_text('details.nfz-zas')
+    chk('N2: lista zasad pokazuje poziom w aplikacji i decyzję (ST30D–ST30G: ostrzeżenie, audyt: blokada – D1=B)', 'ostrzeżenie (audyt: blokada – D1=B)' in zas, zas[:500])
+    chk('N2: identyfikator reguły w osobnej linii (nie sklejony z treścią)', pg.evaluate("[...document.querySelectorAll('details.nfz-zas li .sub-n')].some(e=>getComputedStyle(e).display==='block')"))
     # N1 – dane audytu w przeglądarce (generator/nfz-dane.js z data/nfz/)
     import json, os, sys as _s
     _s.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'scripts'))
@@ -105,6 +108,12 @@ with sync_playwright() as p:
     chk('N6: każda reguła w tabeli (47 wierszy) ze źródłem', sek.locator('tbody tr').count() == 47 and 'Zarządzenie nr 60/2023/DSOZ' in sek.inner_text())
     wiersz = sek.locator('tbody tr', has_text='R-KIR-DZ').inner_text()
     chk('N6: reguła „wymaga weryfikacji” pokazana jako informacja (D4=A)', 'informacja' in wiersz and 'wymaga weryfikacji' in wiersz, wiersz)
+    w2 = sek.locator('tbody tr', has_text='R-ST30DG-WIEK').inner_text()
+    chk('N6: poziom w aplikacji wg decyzji (R-ST30DG-WIEK: ostrzeżenie, audyt: blokada – D1=B)', 'ostrzeżenie' in w2 and 'audyt: blokada – D1=B' in w2, w2)
+    poz_kat = {tr.split('\n')[0].strip(): tr for tr in sek.locator('tbody tr').all_inner_texts()}
+    poz_nfz = {r['id']: r['poziom'].lower() for r in wzor['reguly']}
+    roz = [i for i, pz in poz_nfz.items() if not any(pz in t.split('\t')[2] for k, t in poz_kat.items() if k.startswith(i))]
+    chk('N6: Katalog i Opisy NFZ – ten sam poziom każdej reguły (jedno źródło decyzji)', not roz, roz)
     chk('N6: kody z katalogu bez zmian (punkty ST30E = 24)', '24 / ćwiartka' in pg.locator('section', has_text='Kody z zarządzeń DSOZ').first.inner_text())
     chk('brak błędów JavaScript', not errs, errs)
     br.close()

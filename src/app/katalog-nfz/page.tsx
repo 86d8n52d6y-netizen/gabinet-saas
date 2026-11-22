@@ -35,13 +35,13 @@ export default async function KatalogNfz() {
         <p className="muted" style={{ marginTop: 0 }}>Z audytu NFZ (wersja {audyt.wersja}, stan prawny na {d(audyt.stan)}). Opisy NFZ sprawdzają je na Twoim urządzeniu według daty wizyty.
           Reguły „wymaga weryfikacji” są tylko informacją. Limity zależne od historii pacjenta – zawsze informacja (aplikacja nie zna wizyt z innych gabinetów).</p>
         <div style={{ overflowX: 'auto' }}><table>
-          <thead><tr><th>Reguła</th><th>Treść</th><th>Poziom</th><th>Status</th><th>Od</th><th>Źródło</th></tr></thead>
+          <thead><tr><th>Reguła</th><th>Treść</th><th>W aplikacji</th><th>Status</th><th>Od</th><th>Źródło</th></tr></thead>
           <tbody>{audyt.reguly.map(r => (
-            <tr key={r.id}><td><b>{r.id}</b><br /><span className="muted">{r.obszar}</span></td><td>{r.tresc}</td><td>{r.poziom.toLowerCase()}</td>
+            <tr key={r.id}><td><b>{r.id}</b><br /><span className="muted">{r.obszar}</span></td><td>{r.tresc}</td><td>{r.poziom.toLowerCase()}{r.decyzja ? <span className="muted"><br />audyt: {r.poziomAudyt.toLowerCase()} – {r.decyzja}</span> : null}</td>
               <td className="muted">{r.status.toLowerCase()}</td><td className="muted">{/^\d{4}-/.test(r.od) ? d(r.od) : r.od.toLowerCase()}</td>
               <td className="muted">{r.zrodla.join('; ')}</td></tr>))}
           </tbody></table></div>
-        <p className="src">Źródła i pełny raport: docs/nfz/ (AUDYT_RAPORT.md, REGULY_ROZLICZEN.md, REJESTR_ZRODEL.md). Do sprawdzenia przy nowym zarządzeniu NFZ.</p>
+        <p className="src">„W aplikacji” – poziom po decyzjach z 22.11.2026 (D1=B, D4=A, D7=B, znieczulenie przy ekstrakcji i kiretażu – ostrzeżenie; data/decyzje-nfz.json). Źródła i pełny raport: docs/nfz/ (AUDYT_RAPORT.md, REGULY_ROZLICZEN.md, REJESTR_ZRODEL.md). Do sprawdzenia przy nowym zarządzeniu NFZ.</p>
       </section>
     </main>
   );

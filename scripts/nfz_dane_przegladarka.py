@@ -11,6 +11,19 @@ D = ROOT / 'data' / 'nfz'
 OUT = ROOT / 'generator' / 'nfz-dane.js'
 
 
+DEC = json.loads((ROOT / 'data' / 'decyzje-nfz.json').read_text(encoding='utf-8'))
+
+
+def poziom_w_aplikacji(r, limity):
+    """Poziom reguły w aplikacji wg decyzji Patryka (data/decyzje-nfz.json); poziom z audytu zostaje w 'poziom_audyt'."""
+    z = DEC['zasady_ogolne']
+    if r['status'] == 'WYMAGA WERYFIKACJI': d = z['wymaga_weryfikacji']        # D4=A: nigdy powyżej informacji
+    elif r['id'] in DEC['reguly']: d = DEC['reguly'][r['id']]
+    elif r['id'] in limity: d = z['limity_z_historii']                           # D7=B
+    else: return {'poziom_app': r['poziom'], 'decyzja': ''}
+    return {'poziom_app': d['poziom'], 'decyzja': d['decyzja'] if d['poziom'] != r['poziom'] else ''}
+
+
 def zbuduj():
     L = lambda p: json.loads((D / p).read_text(encoding='utf-8'))
     man, src, rules = L('manifest.json'), L('sources.json'), L('billing-rules.json')
@@ -25,13 +38,10 @@ def zbuduj():
     for m in mp['mapowania']:                                                  # tylko podpowiedzi (D3=A) – nigdy wymagane ani blokujące
         if m['icd10'] == 'NIE DOTYCZY' or m['wymagane_przez_nfz'] or m['poziom_kontroli'] != 'INFORMACJA': continue
         sug.setdefault(m['icd9'], []).append({'k': m['icd10'], 'u': m.get('uwagi', '')})
-    reguly = []
-    for r in rules['reguly']:
-        poziom = r['poziom']
-        if r['status'] == 'WYMAGA WERYFIKACJI': poziom = 'INFORMACJA'           # D4=A: nigdy powyżej informacji
-        reguly.append({'id': r['id'], 'obszar': r['obszar'], 'poziom': poziom, 'status': r['status'], 'od': r['obowiazuje_od'],
+    reguly = [dict(r, **poziom_w_aplikacji(r, {l['regula'] for l in lim['limity']})) for r in rules['reguly']]
+    reguly = [{'id': r['id'], 'obszar': r['obszar'], 'poziom': r['poziom_app'], 'poziom_audyt': r['poziom'], 'decyzja': r['decyzja'], 'status': r['status'], 'od': r['obowiazuje_od'],
                        'do': r.get('obowiazuje_do'), 'dotyczy': r['dotyczy'], 'wyzwalacz': r['wyzwalacz'], 'tresc': r['tresc'],
-                       'zrodla': [zr.get(z, z) for z in r['zrodla']]})
+               'zrodla': [zr.get(z, z) for z in r['zrodla']]} for r in reguly]
     return {'wersja': man['wersja'], 'stan_prawny_na': man['stan_prawny_na'],
             'uwaga': 'Dane audytu NFZ (docs/nfz/). Nazwy ICD-10 robocze – do porównania z Tomem I CeZ. Mapowania ICD-9→ICD-10 to podpowiedzi, wybiera lekarz.',
             'reguly': reguly, 'limity': lim['limity'], 'laczenie': lim['laczenie'], 'zasada_laczenia': lim['zasada_domyslna'],

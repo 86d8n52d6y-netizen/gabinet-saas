@@ -1,0 +1,27 @@
+{
+  "opis": "Decyzje Patryka do audytu NFZ (22.11.2026) – jak aplikacja traktuje reguły z data/nfz/billing-rules.json. Nie zmienia danych audytu (sumy SHA-256 w data/nfz/manifest.json).",
+  "zasady_ogolne": {
+    "wymaga_weryfikacji": {
+      "poziom": "INFORMACJA",
+      "decyzja": "D4=A"
+    },
+    "limity_z_historii": {
+      "poziom": "INFORMACJA",
+      "decyzja": "D7=B"
+    }
+  },
+  "reguly": {
+    "R-ST30DG-WIEK": {
+      "poziom": "OSTRZEŻENIE",
+      "decyzja": "D1=B"
+    },
+    "R-ZNI-02": {
+      "poziom": "OSTRZEŻENIE",
+      "decyzja": "decyzja Patryka 22.11.2026 (ekstrakcja i wypełnienie na jednej wizycie)"
+    },
+    "R-LAKIER-01": {
+      "poziom": "OSTRZEŻENIE",
+      "decyzja": "wiek ≥ 18 – ostrzeżenie; częstotliwość (1×/kwartał) – informacja wg D7=B"
+    }
+  }
+}

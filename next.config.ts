@@ -20,7 +20,7 @@ const security = [
 const config: NextConfig = {
   output: 'standalone',
   // generator Opisów NFZ czytany z dysku w trasach /opisy-nfz – dołączany do wersji produkcyjnej
-  outputFileTracingIncludes: { '/opisy-nfz': ['./generator/**/*'], '/opisy-prywatne': ['./generator/**/*'], '/kalendarz': ['./generator/**/*'], '/import': ['./generator/**/*'], '/zarobki': ['./generator/kalendarz.html'], '/opisy-nfz/zasoby/[plik]': ['./generator/**/*'], '/katalog-nfz': ['./data/nfz/*.json'] },
+  outputFileTracingIncludes: { '/opisy-nfz': ['./generator/**/*'], '/opisy-prywatne': ['./generator/**/*'], '/kalendarz': ['./generator/**/*'], '/import': ['./generator/**/*'], '/zarobki': ['./generator/kalendarz.html'], '/opisy-nfz/zasoby/[plik]': ['./generator/**/*'], '/katalog-nfz': ['./data/nfz/*.json', './data/decyzje-nfz.json'] },
   poweredByHeader: false,
   reactStrictMode: true,
   async headers() { return [{ source: '/:path*', headers: security }]; },

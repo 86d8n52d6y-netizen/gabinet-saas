@@ -663,7 +663,7 @@ function nfzIssues(){
 function nfzZasadyHTML(){
   const N=window.NFZ_DANE;if(!N||!state.codes.length)return '';const date=saveDate(),kody=state.codes.map(NA_KOD);
   const rs=N.reguly.filter(r=>r.dotyczy.some(k=>kody.includes(k))&&nfzRegulaAkt(r,date));if(!rs.length)return '';
-  return `<details class="nfz-zas"><summary>Zasady NFZ dla wybranych kodów (${rs.length}) – dane audytu ${esc(N.wersja)}</summary><ul>${rs.map(r=>`<li><b>${esc(r.poziom)}</b> · ${esc(r.tresc)}<span class="sub-n">${esc(r.id)} · ${esc(r.status.toLowerCase())} · od ${esc(r.od)} · ${esc(r.zrodla.join('; '))}</span></li>`).join('')}</ul><div class="nfz-src">${esc(N.uwaga)}</div></details>`;
+  return `<details class="nfz-zas" style="font-size:13.5px"><summary>Zasady NFZ dla wybranych kodów (${rs.length}) – dane audytu ${esc(N.wersja)}</summary><ul>${rs.map(r=>`<li><b>${esc(r.poziom.toLowerCase())}</b>${r.decyzja?` <span class="sub-n" style="display:inline">(audyt: ${esc(r.poziom_audyt.toLowerCase())} – ${esc(r.decyzja)})</span>`:''} · ${esc(r.tresc)}<span class="sub-n" style="display:block;font-size:12px">${esc(r.id)} · ${esc(r.status.toLowerCase())} · od ${esc(r.od)} · ${esc(r.zrodla.map(z=>z.split(' – ')[0]).join('; '))}</span></li>`).join('')}</ul><div class="nfz-src">${esc(N.uwaga)}</div></details>`;
 }
 function nfzBox(){
   const {err,warn,tot,vt}=nfzIssues();
