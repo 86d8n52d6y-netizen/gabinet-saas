@@ -8,9 +8,9 @@ Wersja danych: 2026.11.22-1.
 
 | Status | Procedury |
 |---|---|
-| draft | 85 |
-| not_started | 122 |
-| verified | 59 |
+| draft | 64 |
+| not_started | 127 |
+| verified | 75 |
 | **razem** | **266** |
 
 Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: draft, BAD-BLONA: draft, BAD-UZEBIENIE: draft, BAD-PRZYZEBIE: draft, BAD-HIGIENA: draft, BAD-ZGRYZ: draft, BAD-SSZ: draft, BAD-ZYWOTNOSC: draft, BAD-RTG: draft, BAD-PO-URAZIE: draft, BAD-DZIECKO: draft, BAD-STOMATOLOGICZNE: draft, BAD-KONTROLNE: draft, BAD-PRZED-LECZENIEM: draft, BAD-PO-LECZENIU: draft).
@@ -40,7 +40,7 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.05 | Postępowanie w nagłych przypadkach | pomoc doraźna | draft |  |
 | 23.06 | Wizyta adaptacyjna -dotyczy pierwszych wizyt małych dzieci | dziecko | draft |  |
 | 23.07 | Pilne zabiegi poza godzinami pracy w dni świąteczne lub w domu pacjenta | pomoc doraźna | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.08 | Instruktaż higieny jamy ustnej | profilaktyka | draft |  |
+| 23.08 | Instruktaż higieny jamy ustnej | profilaktyka | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – profilaktyka spoza używanego zakresu. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.0901 | Balneoterapia lub hydroterapia | fizykoterapia | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.0902 | Naświetlanie Sollux | fizykoterapia | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.0903 | Jonoforeza nadziąsłowa | fizykoterapia | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
@@ -48,28 +48,28 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.0905 | Diadynamik 1/2 łuku zębowego | fizykoterapia | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.0906 | Hydroterapia | fizykoterapia | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.0907 | Laseroterapia biostymulacyjna | fizykoterapia | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1001 | Indywidualna fluoryzacja metodą kontaktową - za każdy zabieg | profilaktyka | draft |  |
-| 23.1002 | Fluoryzacja kontaktowa zbiorowa, 1 zabieg u każdego dziecka | profilaktyka | draft |  |
-| 23.1003 | Zabezpieczenie profilaktyczne bruzd lakiem szczelinowym - za każdy ząb | profilaktyka | draft |  |
-| 23.1004 | Zabezpieczanie profilaktyczne bruzd innymi materiałami | profilaktyka | draft |  |
+| 23.1001 | Indywidualna fluoryzacja metodą kontaktową - za każdy zabieg | profilaktyka | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – profilaktyka spoza używanego zakresu. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.1002 | Fluoryzacja kontaktowa zbiorowa, 1 zabieg u każdego dziecka | profilaktyka | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – profilaktyka spoza używanego zakresu. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.1003 | Zabezpieczenie profilaktyczne bruzd lakiem szczelinowym - za każdy ząb | profilaktyka | verified |  |
+| 23.1004 | Zabezpieczanie profilaktyczne bruzd innymi materiałami | profilaktyka | verified |  |
 | 23.1006 | Lakierowanie zębów 1/4 łuku zębowego | profilaktyka | verified |  |
-| 23.1007 | Leczenie nadwrażliwości zębów w obrębie 1/4 łuku zębowego | profilaktyka | draft |  |
+| 23.1007 | Leczenie nadwrażliwości zębów w obrębie 1/4 łuku zębowego | profilaktyka | verified |  |
 | 23.1008 | Impregnacja zębiny | profilaktyka | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1009 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 6. miesiącu życia | profilaktyka | draft |  |
-| 23.1010 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 9. miesiącu życia | profilaktyka | draft |  |
-| 23.1011 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 12. miesiącu życia | profilaktyka | draft |  |
-| 23.1012 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 2. roku życia | profilaktyka | draft |  |
-| 23.1013 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 4. roku życia | profilaktyka | draft |  |
-| 23.1014 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 5. roku życia | profilaktyka | draft |  |
-| 23.1015 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 6. roku życia | profilaktyka | draft |  |
-| 23.1016 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 7. roku życia | profilaktyka | draft |  |
-| 23.1017 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 10. roku życia | profilaktyka | draft |  |
-| 23.1018 | Profilaktyczne świadczenie stomatologiczne dla młodzieży w 12. roku życia | profilaktyka | draft |  |
-| 23.1019 | Profilaktyczne świadczenie stomatologiczne dla młodzieży w 13. roku życia | profilaktyka | draft |  |
-| 23.1020 | Profilaktyczne świadczenie stomatologiczne dla młodzieży w 16. roku życia | profilaktyka | draft |  |
-| 23.1021 | Profilaktyczne świadczenie stomatologiczne dla młodzieży w 19. roku życia | profilaktyka | draft |  |
-| 23.1022 | Profilaktyczne świadczenie stomatologiczne zapobiegające wadom zgryzu | profilaktyka | draft |  |
-| 23.1023 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 3. roku życia | profilaktyka | draft |  |
+| 23.1009 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 6. miesiącu życia | profilaktyka | verified |  |
+| 23.1010 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 9. miesiącu życia | profilaktyka | verified |  |
+| 23.1011 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 12. miesiącu życia | profilaktyka | verified |  |
+| 23.1012 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 2. roku życia | profilaktyka | verified |  |
+| 23.1013 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 4. roku życia | profilaktyka | verified |  |
+| 23.1014 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 5. roku życia | profilaktyka | verified |  |
+| 23.1015 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 6. roku życia | profilaktyka | verified |  |
+| 23.1016 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 7. roku życia | profilaktyka | verified |  |
+| 23.1017 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 10. roku życia | profilaktyka | verified |  |
+| 23.1018 | Profilaktyczne świadczenie stomatologiczne dla młodzieży w 12. roku życia | profilaktyka | verified |  |
+| 23.1019 | Profilaktyczne świadczenie stomatologiczne dla młodzieży w 13. roku życia | profilaktyka | verified |  |
+| 23.1020 | Profilaktyczne świadczenie stomatologiczne dla młodzieży w 16. roku życia | profilaktyka | verified |  |
+| 23.1021 | Profilaktyczne świadczenie stomatologiczne dla młodzieży w 19. roku życia | profilaktyka | verified |  |
+| 23.1022 | Profilaktyczne świadczenie stomatologiczne zapobiegające wadom zgryzu | profilaktyka | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – profilaktyka spoza używanego zakresu. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
+| 23.1023 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 3. roku życia | profilaktyka | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – profilaktyka spoza używanego zakresu. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1101 | Leczenie próchnicy powierzchniowej - za każdy ząb | leczenie próchnicy | verified |  |
 | 23.1102 | Całkowite opracowanie ubytku próchnicowego z założeniem podkładu | leczenie próchnicy | draft |  |
 | 23.1103 | Całkowite opracowanie rozległego ubytku próchnicowego z założeniem podwójnego podkładu | leczenie próchnicy | draft |  |

@@ -77,3 +77,11 @@ Zatwierdzone (`verified`): 36 kart – przygotowanie i korony (23.2701–23.2706
 Odrzucone – nie umieszczać: 11 kart protetyki specjalistycznej (23.2901, 23.3004, 23.3006–23.3008, 23.31041, 23.31051, 23.3106, 23.3109, 23.3110, 23.3126) – decyzja po przeglądzie pojedynczych kart.
 
 Stan: 59 verified, 85 draft, 0 requires_expert_review, 62 odrzucone, 57 pominięte, 3 nadrzędne (razem 266).
+
+### Weryfikacja profilaktyki (22.11.2026)
+
+Zatwierdzone (`verified`): 16 kart – bilanse NFZ dla dzieci 23.1009–23.1021 (13, każdy zatwierdzony pojedynczo), lakowanie 23.1003 i 23.1004, leczenie nadwrażliwości 23.1007.
+Odrzucone – nie umieszczać: 23.08 (instruktaż), 23.1001 (fluoryzacja indywidualna), 23.1002 (fluoryzacja zbiorowa), 23.1022 (profilaktyka wad zgryzu), 23.1023 (profilaktyka 3. r.ż. – brak w wykazie NFZ wg audytu).
+Uwagi pozostawione bez zmian (decyzja: zatwierdzone bez poprawek): szablony 23.1009–23.1011 i 23.1021 zawierają zdania puw/PUW lub „Fluorki” nieobowiązkowe w danym wieku – puste pole usuwa całe zdanie. Kod produktu przy 23.1003 (`5.13.00.2310090`) nadal „WYMAGA WERYFIKACJI” w audycie NFZ.
+
+Stan: 75 verified, 64 draft, 0 requires_expert_review, 67 odrzucone, 57 pominięte, 3 nadrzędne (razem 266).

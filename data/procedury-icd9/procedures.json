@@ -1910,7 +1910,7 @@
    "kod": "23.08",
    "nazwa_oficjalna": "Instruktaż higieny jamy ustnej",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -1993,7 +1993,8 @@
     "SRC-KLIN-PCR-1972",
     "SRC-KLIN-EAPD-F-2019"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – profilaktyka spoza używanego zakresu. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.0901",
@@ -2504,7 +2505,7 @@
    "kod": "23.1001",
    "nazwa_oficjalna": "Indywidualna fluoryzacja metodą kontaktową - za każdy zabieg",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -2576,14 +2577,15 @@
     "SRC-KLIN-ADA-F-2013",
     "SRC-KLIN-ADA-LAK-2016"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – profilaktyka spoza używanego zakresu. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1002",
    "kod": "23.1002",
    "nazwa_oficjalna": "Fluoryzacja kontaktowa zbiorowa, 1 zabieg u każdego dziecka",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -2649,14 +2651,15 @@
     "SRC-KLIN-ADA-F-2013",
     "SRC-KLIN-ADA-LAK-2016"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – profilaktyka spoza używanego zakresu. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1003",
    "kod": "23.1003",
    "nazwa_oficjalna": "Zabezpieczenie profilaktyczne bruzd lakiem szczelinowym - za każdy ząb",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -2791,14 +2794,16 @@
    "zrodla": [
     "SRC-KLIN-ADA-LAK-2016"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1004",
    "kod": "23.1004",
    "nazwa_oficjalna": "Zabezpieczanie profilaktyczne bruzd innymi materiałami",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -2891,7 +2896,9 @@
     "SRC-KLIN-ADA-F-2013",
     "SRC-KLIN-ADA-LAK-2016"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1006",
@@ -3025,7 +3032,7 @@
    "kod": "23.1007",
    "nazwa_oficjalna": "Leczenie nadwrażliwości zębów w obrębie 1/4 łuku zębowego",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -3158,7 +3165,9 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1008",
@@ -3253,7 +3262,7 @@
    "kod": "23.1009",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 6. miesiącu życia",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -3349,14 +3358,16 @@
     "SRC-DU-2025-615",
     "SRC-KLIN-EAPD-F-2019"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1010",
    "kod": "23.1010",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 9. miesiącu życia",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -3455,14 +3466,16 @@
     "SRC-DU-2025-615",
     "SRC-KLIN-EAPD-F-2019"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1011",
    "kod": "23.1011",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 12. miesiącu życia",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -3564,14 +3577,16 @@
     "SRC-DU-2025-615",
     "SRC-KLIN-EAPD-F-2019"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1012",
    "kod": "23.1012",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 2. roku życia",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -3676,14 +3691,16 @@
     "SRC-DU-2025-615",
     "SRC-KLIN-EAPD-F-2019"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1013",
    "kod": "23.1013",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 4. roku życia",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -3788,14 +3805,16 @@
     "SRC-DU-2025-615",
     "SRC-KLIN-EAPD-F-2019"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1014",
    "kod": "23.1014",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 5. roku życia",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -3900,14 +3919,16 @@
     "SRC-DU-2025-615",
     "SRC-KLIN-EAPD-F-2019"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1015",
    "kod": "23.1015",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 6. roku życia",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -4009,14 +4030,16 @@
     "SRC-DU-2025-615",
     "SRC-KLIN-EAPD-F-2019"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1016",
    "kod": "23.1016",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 7. roku życia",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -4118,14 +4141,16 @@
     "SRC-DU-2025-615",
     "SRC-KLIN-EAPD-F-2019"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1017",
    "kod": "23.1017",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 10. roku życia",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -4227,14 +4252,16 @@
     "SRC-DU-2025-615",
     "SRC-KLIN-EAPD-F-2019"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1018",
    "kod": "23.1018",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla młodzieży w 12. roku życia",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -4336,14 +4363,16 @@
     "SRC-DU-2025-615",
     "SRC-KLIN-EAPD-F-2019"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1019",
    "kod": "23.1019",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla młodzieży w 13. roku życia",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -4445,14 +4474,16 @@
     "SRC-DU-2025-615",
     "SRC-KLIN-EAPD-F-2019"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1020",
    "kod": "23.1020",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla młodzieży w 16. roku życia",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -4554,14 +4585,16 @@
     "SRC-DU-2025-615",
     "SRC-KLIN-EAPD-F-2019"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1021",
    "kod": "23.1021",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla młodzieży w 19. roku życia",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -4660,14 +4693,16 @@
     "SRC-DU-2025-615",
     "SRC-KLIN-EAPD-F-2019"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1022",
    "kod": "23.1022",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne zapobiegające wadom zgryzu",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -4737,14 +4772,15 @@
    "zrodla": [
     "SRC-DU-2025-615"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – profilaktyka spoza używanego zakresu. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1023",
    "kod": "23.1023",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 3. roku życia",
    "kategoria": "profilaktyka",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -4839,7 +4875,8 @@
     "SRC-DU-2025-615",
     "SRC-KLIN-EAPD-F-2019"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – profilaktyka spoza używanego zakresu. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1101",
