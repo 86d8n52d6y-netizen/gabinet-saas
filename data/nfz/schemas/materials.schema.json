@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "nfz/materials.schema.json",
+  "title": "materials",
+  "type": "object",
+  "properties": {
+    "stan_na": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "materialy": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "grupa": {
+            "enum": [
+              "wszyscy",
+              "<18",
+              "ciąża/połóg"
+            ]
+          },
+          "nazwa": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "POTWIERDZONA",
+              "CZĘŚCIOWO POTWIERDZONA",
+              "WYMAGA WERYFIKACJI"
+            ]
+          }
+        },
+        "required": [
+          "grupa",
+          "nazwa",
+          "status"
+        ],
+        "additionalProperties": true
+      }
+    }
+  },
+  "required": [
+    "stan_na",
+    "materialy"
+  ],
+  "additionalProperties": true
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "nfz/procedure-diagnosis-mappings.schema.json",
+  "title": "procedure-diagnosis-mappings",
+  "type": "object",
+  "properties": {
+    "stan_na": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "zasada": {
+      "type": "string"
+    },
+    "mapowania": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "icd9": {
+            "type": "string"
+          },
+          "icd10": {
+            "type": "string"
+          },
+          "typ": {
+            "const": "sugestia kliniczna"
+          },
+          "wymagane_przez_nfz": {
+            "const": false
+          },
+          "status": {
+            "enum": [
+              "POTWIERDZONA",
+              "CZĘŚCIOWO POTWIERDZONA",
+              "WYMAGA WERYFIKACJI"
+            ]
+          },
+          "poziom_kontroli": {
+            "const": "INFORMACJA"
+          }
+        },
+        "required": [
+          "icd9",
+          "icd10",
+          "typ",
+          "wymagane_przez_nfz",
+          "status",
+          "poziom_kontroli",
+          "zrodla"
+        ],
+        "additionalProperties": true
+      }
+    }
+  },
+  "required": [
+    "stan_na",
+    "zasada",
+    "mapowania"
+  ],
+  "additionalProperties": true
+}

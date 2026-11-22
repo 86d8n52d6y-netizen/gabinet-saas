@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "nfz/manifest.schema.json",
+  "title": "manifest",
+  "type": "object",
+  "properties": {
+    "nazwa": {
+      "type": "string"
+    },
+    "wersja": {
+      "type": "string"
+    },
+    "audyt_rozpoczety": {
+      "type": "string"
+    },
+    "pliki": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "plik": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "bajty": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "plik",
+          "sha256",
+          "bajty"
+        ],
+        "additionalProperties": true
+      }
+    }
+  },
+  "required": [
+    "nazwa",
+    "wersja",
+    "audyt_rozpoczety",
+    "stan_prawny_na",
+    "pliki",
+    "braki_krytyczne"
+  ],
+  "additionalProperties": true
+}

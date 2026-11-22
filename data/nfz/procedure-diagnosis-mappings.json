@@ -1,0 +1,5154 @@
+{
+  "stan_na": "2026-11-21",
+  "zasada": "NFZ wymaga podania ICD-10 w sprawozdaniu, ale w przeczytanych przepisach NIE znaleziono obowiązkowych par ICD-9↔ICD-10. Mapowania są wyłącznie podpowiedziami klinicznymi: nie blokują, nie generują automatycznie rozpoznania, lekarz wybiera kod.",
+  "mapowania": [
+    {
+      "icd9": "23.0101",
+      "icd10": "Z01.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Badanie kontrolne bez rozpoznania choroby; przy rozpoznaniu choroby – kod choroby",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.0102",
+      "icd10": "Z01.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Badanie kontrolne bez rozpoznania choroby; przy rozpoznaniu choroby – kod choroby",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.0105",
+      "icd10": "Z01.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Konsultacja – kod zależny od problemu konsultowanego",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.02",
+      "icd10": "K04.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Zależnie od wskazania",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.02",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Zależnie od wskazania",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.02",
+      "icd10": "K02.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Zależnie od wskazania",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.02",
+      "icd10": "S02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Zależnie od wskazania",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.0301",
+      "icd10": "K02.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "RTG – kod wskazania klinicznego",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.0301",
+      "icd10": "K04.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "RTG – kod wskazania klinicznego",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.0301",
+      "icd10": "K01.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "RTG – kod wskazania klinicznego",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.0301",
+      "icd10": "K08.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "RTG – kod wskazania klinicznego",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.0301",
+      "icd10": "K07.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "RTG – kod wskazania klinicznego",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.0302",
+      "icd10": "K02.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "RTG – kod wskazania klinicznego",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.0302",
+      "icd10": "K04.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "RTG – kod wskazania klinicznego",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.0302",
+      "icd10": "K01.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "RTG – kod wskazania klinicznego",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.0302",
+      "icd10": "K08.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "RTG – kod wskazania klinicznego",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.0302",
+      "icd10": "K07.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "RTG – kod wskazania klinicznego",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.0304",
+      "icd10": "K02.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "RTG – kod wskazania klinicznego",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.0304",
+      "icd10": "K04.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "RTG – kod wskazania klinicznego",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.0304",
+      "icd10": "K01.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "RTG – kod wskazania klinicznego",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.0304",
+      "icd10": "K08.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "RTG – kod wskazania klinicznego",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.0304",
+      "icd10": "K07.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "RTG – kod wskazania klinicznego",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.0401",
+      "icd10": "NIE DOTYCZY",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Znieczulenie dziedziczy rozpoznanie zabiegu głównego",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.0402",
+      "icd10": "NIE DOTYCZY",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Znieczulenie dziedziczy rozpoznanie zabiegu głównego",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.0403",
+      "icd10": "NIE DOTYCZY",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Znieczulenie dziedziczy rozpoznanie zabiegu głównego",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1101",
+      "icd10": "K02.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1101",
+      "icd10": "K02.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1101",
+      "icd10": "K02.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1101",
+      "icd10": "K02.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1101",
+      "icd10": "K02.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1101",
+      "icd10": "K02.9",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1101",
+      "icd10": "K03.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1101",
+      "icd10": "K03.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1101",
+      "icd10": "K03.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1101",
+      "icd10": "S02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1105",
+      "icd10": "K02.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1105",
+      "icd10": "K02.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1105",
+      "icd10": "K02.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1105",
+      "icd10": "K02.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1105",
+      "icd10": "K02.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1105",
+      "icd10": "K02.9",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1105",
+      "icd10": "K03.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1105",
+      "icd10": "K03.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1105",
+      "icd10": "K03.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1105",
+      "icd10": "S02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1106",
+      "icd10": "K02.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1106",
+      "icd10": "K02.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1106",
+      "icd10": "K02.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1106",
+      "icd10": "K02.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1106",
+      "icd10": "K02.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1106",
+      "icd10": "K02.9",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1106",
+      "icd10": "K03.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1106",
+      "icd10": "K03.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1106",
+      "icd10": "K03.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1106",
+      "icd10": "S02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1107",
+      "icd10": "K02.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1107",
+      "icd10": "K02.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1107",
+      "icd10": "K02.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1107",
+      "icd10": "K02.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1107",
+      "icd10": "K02.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1107",
+      "icd10": "K02.9",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1107",
+      "icd10": "K03.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1107",
+      "icd10": "K03.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1107",
+      "icd10": "K03.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1107",
+      "icd10": "S02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1108",
+      "icd10": "K02.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1108",
+      "icd10": "K02.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1108",
+      "icd10": "K02.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1108",
+      "icd10": "K02.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1108",
+      "icd10": "K02.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1108",
+      "icd10": "K02.9",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1108",
+      "icd10": "K03.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1108",
+      "icd10": "K03.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1108",
+      "icd10": "K03.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1108",
+      "icd10": "S02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1502",
+      "icd10": "K02.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1502",
+      "icd10": "K02.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1502",
+      "icd10": "K02.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1502",
+      "icd10": "K02.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1502",
+      "icd10": "K02.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1502",
+      "icd10": "K02.9",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1502",
+      "icd10": "K03.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1502",
+      "icd10": "K03.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1502",
+      "icd10": "K03.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1502",
+      "icd10": "S02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1503",
+      "icd10": "K02.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1503",
+      "icd10": "K02.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1503",
+      "icd10": "K02.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1503",
+      "icd10": "K02.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1503",
+      "icd10": "K02.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1503",
+      "icd10": "K02.9",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1503",
+      "icd10": "K03.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1503",
+      "icd10": "K03.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1503",
+      "icd10": "K03.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1503",
+      "icd10": "S02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1504",
+      "icd10": "K02.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1504",
+      "icd10": "K02.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1504",
+      "icd10": "K02.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1504",
+      "icd10": "K02.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1504",
+      "icd10": "K02.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1504",
+      "icd10": "K02.9",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1504",
+      "icd10": "K03.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1504",
+      "icd10": "K03.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1504",
+      "icd10": "K03.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1504",
+      "icd10": "S02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1505",
+      "icd10": "K02.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1505",
+      "icd10": "K02.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1505",
+      "icd10": "K02.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1505",
+      "icd10": "K02.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1505",
+      "icd10": "K02.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1505",
+      "icd10": "K02.9",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1505",
+      "icd10": "K03.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1505",
+      "icd10": "K03.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1505",
+      "icd10": "K03.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1505",
+      "icd10": "S02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1507",
+      "icd10": "K02.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1507",
+      "icd10": "K02.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1507",
+      "icd10": "K02.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1507",
+      "icd10": "K02.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1507",
+      "icd10": "K02.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1507",
+      "icd10": "K02.9",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1507",
+      "icd10": "K03.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1507",
+      "icd10": "K03.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1507",
+      "icd10": "K03.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1507",
+      "icd10": "S02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1508",
+      "icd10": "K02.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1508",
+      "icd10": "K02.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1508",
+      "icd10": "K02.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1508",
+      "icd10": "K02.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1508",
+      "icd10": "K02.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1508",
+      "icd10": "K02.9",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1508",
+      "icd10": "K03.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1508",
+      "icd10": "K03.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1508",
+      "icd10": "K03.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1508",
+      "icd10": "S02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wypełnienia: próchnica lub ubytki niepróchnicowe / uraz",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1201",
+      "icd10": "K04.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1201",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1201",
+      "icd10": "K02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1202",
+      "icd10": "K04.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1202",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1202",
+      "icd10": "K02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1203",
+      "icd10": "K04.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1203",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1203",
+      "icd10": "K02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1204",
+      "icd10": "K04.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1204",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1204",
+      "icd10": "K02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1205",
+      "icd10": "K04.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1205",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1205",
+      "icd10": "K02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1206",
+      "icd10": "K04.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1206",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1206",
+      "icd10": "K02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1208",
+      "icd10": "K04.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1208",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1208",
+      "icd10": "K02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1209",
+      "icd10": "K04.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1209",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1209",
+      "icd10": "K02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1210",
+      "icd10": "K04.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1210",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1210",
+      "icd10": "K02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1306",
+      "icd10": "K04.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1306",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1306",
+      "icd10": "K04.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1306",
+      "icd10": "K04.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1306",
+      "icd10": "K04.6",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1306",
+      "icd10": "K04.7",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1307",
+      "icd10": "K04.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1307",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1307",
+      "icd10": "K04.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1307",
+      "icd10": "K04.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1307",
+      "icd10": "K04.6",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1307",
+      "icd10": "K04.7",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1308",
+      "icd10": "K04.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1308",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1308",
+      "icd10": "K04.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1308",
+      "icd10": "K04.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1308",
+      "icd10": "K04.6",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1308",
+      "icd10": "K04.7",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1309",
+      "icd10": "K04.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1309",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1309",
+      "icd10": "K04.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1309",
+      "icd10": "K04.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1309",
+      "icd10": "K04.6",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1309",
+      "icd10": "K04.7",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1311",
+      "icd10": "K04.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1311",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1311",
+      "icd10": "K04.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1311",
+      "icd10": "K04.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1311",
+      "icd10": "K04.6",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1311",
+      "icd10": "K04.7",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1312",
+      "icd10": "K04.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1312",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1312",
+      "icd10": "K04.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1312",
+      "icd10": "K04.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1312",
+      "icd10": "K04.6",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1312",
+      "icd10": "K04.7",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Leczenie kanałowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.13141",
+      "icd10": "K04.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "MTA – wskazania WYMAGAJĄ WERYFIKACJI w zarządzeniu",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.13141",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "MTA – wskazania WYMAGAJĄ WERYFIKACJI w zarządzeniu",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.13141",
+      "icd10": "K04.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "MTA – wskazania WYMAGAJĄ WERYFIKACJI w zarządzeniu",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.13141",
+      "icd10": "K02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "MTA – wskazania WYMAGAJĄ WERYFIKACJI w zarządzeniu",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.13142",
+      "icd10": "K04.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "MTA – wskazania WYMAGAJĄ WERYFIKACJI w zarządzeniu",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.13142",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "MTA – wskazania WYMAGAJĄ WERYFIKACJI w zarządzeniu",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.13142",
+      "icd10": "K04.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "MTA – wskazania WYMAGAJĄ WERYFIKACJI w zarządzeniu",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.13142",
+      "icd10": "K02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "MTA – wskazania WYMAGAJĄ WERYFIKACJI w zarządzeniu",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.13143",
+      "icd10": "K04.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "MTA – wskazania WYMAGAJĄ WERYFIKACJI w zarządzeniu",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.13143",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "MTA – wskazania WYMAGAJĄ WERYFIKACJI w zarządzeniu",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.13143",
+      "icd10": "K04.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "MTA – wskazania WYMAGAJĄ WERYFIKACJI w zarządzeniu",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.13143",
+      "icd10": "K02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "MTA – wskazania WYMAGAJĄ WERYFIKACJI w zarządzeniu",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.13149",
+      "icd10": "K04.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "MTA – wskazania WYMAGAJĄ WERYFIKACJI w zarządzeniu",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.13149",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "MTA – wskazania WYMAGAJĄ WERYFIKACJI w zarządzeniu",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.13149",
+      "icd10": "K04.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "MTA – wskazania WYMAGAJĄ WERYFIKACJI w zarządzeniu",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.13149",
+      "icd10": "K02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "MTA – wskazania WYMAGAJĄ WERYFIKACJI w zarządzeniu",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1601",
+      "icd10": "K03.6",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Złogi; K03.6 = osady na zębach",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1601",
+      "icd10": "K05.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Złogi; K03.6 = osady na zębach",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1601",
+      "icd10": "K05.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Złogi; K03.6 = osady na zębach",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.16011",
+      "icd10": "K03.6",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Złogi; K03.6 = osady na zębach",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.16011",
+      "icd10": "K05.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Złogi; K03.6 = osady na zębach",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.16011",
+      "icd10": "K05.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Złogi; K03.6 = osady na zębach",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.16012",
+      "icd10": "K03.6",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Złogi; K03.6 = osady na zębach",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.16012",
+      "icd10": "K05.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Złogi; K03.6 = osady na zębach",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.16012",
+      "icd10": "K05.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Złogi; K03.6 = osady na zębach",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1602",
+      "icd10": "K03.6",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Złogi; K03.6 = osady na zębach",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1602",
+      "icd10": "K05.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Złogi; K03.6 = osady na zębach",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1602",
+      "icd10": "K05.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Złogi; K03.6 = osady na zębach",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.16021",
+      "icd10": "K03.6",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Złogi; K03.6 = osady na zębach",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.16021",
+      "icd10": "K05.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Złogi; K03.6 = osady na zębach",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.16021",
+      "icd10": "K05.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Złogi; K03.6 = osady na zębach",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.16022",
+      "icd10": "K03.6",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Złogi; K03.6 = osady na zębach",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.16022",
+      "icd10": "K05.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Złogi; K03.6 = osady na zębach",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.16022",
+      "icd10": "K05.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Złogi; K03.6 = osady na zębach",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1607",
+      "icd10": "K05.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Kiretaż",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1607",
+      "icd10": "K05.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Kiretaż",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1608",
+      "icd10": "K05.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Kiretaż",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1608",
+      "icd10": "K05.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Kiretaż",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1701",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1701",
+      "icd10": "K04.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1701",
+      "icd10": "K04.7",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1701",
+      "icd10": "K02.9",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1701",
+      "icd10": "K05.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1701",
+      "icd10": "K08.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1701",
+      "icd10": "K01.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1701",
+      "icd10": "S02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1701",
+      "icd10": "K07.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1702",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1702",
+      "icd10": "K04.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1702",
+      "icd10": "K04.7",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1702",
+      "icd10": "K02.9",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1702",
+      "icd10": "K05.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1702",
+      "icd10": "K08.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1702",
+      "icd10": "K01.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1702",
+      "icd10": "S02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1702",
+      "icd10": "K07.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.17",
+      "icd10": "K04.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.17",
+      "icd10": "K04.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.17",
+      "icd10": "K04.7",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.17",
+      "icd10": "K02.9",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.17",
+      "icd10": "K05.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.17",
+      "icd10": "K08.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.17",
+      "icd10": "K01.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.17",
+      "icd10": "S02.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.17",
+      "icd10": "K07.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ekstrakcje – wiele możliwych wskazań",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1003",
+      "icd10": "Z29.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyka (lakowanie, lakierowanie, PRR)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1003",
+      "icd10": "K02.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyka (lakowanie, lakierowanie, PRR)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1003",
+      "icd10": "K02.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyka (lakowanie, lakierowanie, PRR)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1004",
+      "icd10": "Z29.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyka (lakowanie, lakierowanie, PRR)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1004",
+      "icd10": "K02.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyka (lakowanie, lakierowanie, PRR)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1004",
+      "icd10": "K02.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyka (lakowanie, lakierowanie, PRR)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1006",
+      "icd10": "Z29.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyka (lakowanie, lakierowanie, PRR)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1006",
+      "icd10": "K02.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyka (lakowanie, lakierowanie, PRR)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1006",
+      "icd10": "K02.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyka (lakowanie, lakierowanie, PRR)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1008",
+      "icd10": "Z29.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyka (lakowanie, lakierowanie, PRR)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1008",
+      "icd10": "K02.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyka (lakowanie, lakierowanie, PRR)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1008",
+      "icd10": "K02.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyka (lakowanie, lakierowanie, PRR)",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1009",
+      "icd10": "Z29.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1009",
+      "icd10": "Z01.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1010",
+      "icd10": "Z29.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1010",
+      "icd10": "Z01.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1011",
+      "icd10": "Z29.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1011",
+      "icd10": "Z01.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1012",
+      "icd10": "Z29.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1012",
+      "icd10": "Z01.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1012a",
+      "icd10": "Z29.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1012a",
+      "icd10": "Z01.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1013",
+      "icd10": "Z29.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1013",
+      "icd10": "Z01.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1014",
+      "icd10": "Z29.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1014",
+      "icd10": "Z01.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1015",
+      "icd10": "Z29.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1015",
+      "icd10": "Z01.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1016",
+      "icd10": "Z29.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1016",
+      "icd10": "Z01.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1017",
+      "icd10": "Z29.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1017",
+      "icd10": "Z01.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1018",
+      "icd10": "Z29.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1018",
+      "icd10": "Z01.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1019",
+      "icd10": "Z29.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1019",
+      "icd10": "Z01.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1020",
+      "icd10": "Z29.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1020",
+      "icd10": "Z01.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1021",
+      "icd10": "Z29.8",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.1021",
+      "icd10": "Z01.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Profilaktyczne świadczenia wiekowe",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.06",
+      "icd10": "Z01.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Wizyta adaptacyjna",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3102",
+      "icd10": "K08.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Protezy",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3102",
+      "icd10": "K08.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Protezy",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3103",
+      "icd10": "K08.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Protezy",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3103",
+      "icd10": "K08.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Protezy",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3104",
+      "icd10": "K08.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Protezy",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3104",
+      "icd10": "K08.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Protezy",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3105",
+      "icd10": "K08.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Protezy",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3105",
+      "icd10": "K08.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Protezy",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3104a",
+      "icd10": "K08.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Protezy",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3104a",
+      "icd10": "K08.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Protezy",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3105a",
+      "icd10": "K08.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Protezy",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3105a",
+      "icd10": "K08.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Protezy",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3112",
+      "icd10": "Z46.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3112",
+      "icd10": "K08.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3112",
+      "icd10": "K08.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3116",
+      "icd10": "Z46.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3116",
+      "icd10": "K08.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3116",
+      "icd10": "K08.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3117",
+      "icd10": "Z46.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3117",
+      "icd10": "K08.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3117",
+      "icd10": "K08.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3118",
+      "icd10": "Z46.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3118",
+      "icd10": "K08.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3118",
+      "icd10": "K08.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3119",
+      "icd10": "Z46.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3119",
+      "icd10": "K08.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3119",
+      "icd10": "K08.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3120",
+      "icd10": "Z46.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3120",
+      "icd10": "K08.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3120",
+      "icd10": "K08.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3121",
+      "icd10": "Z46.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3121",
+      "icd10": "K08.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3121",
+      "icd10": "K08.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3122",
+      "icd10": "Z46.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3122",
+      "icd10": "K08.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3122",
+      "icd10": "K08.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3123",
+      "icd10": "Z46.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3123",
+      "icd10": "K08.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3123",
+      "icd10": "K08.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3124",
+      "icd10": "Z46.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3124",
+      "icd10": "K08.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.3124",
+      "icd10": "K08.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Naprawy / podścielenia",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2302",
+      "icd10": "K07.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2302",
+      "icd10": "K07.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2302",
+      "icd10": "K07.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2302",
+      "icd10": "K07.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2302",
+      "icd10": "K07.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2302",
+      "icd10": "Z46.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2306",
+      "icd10": "K07.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2306",
+      "icd10": "K07.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2306",
+      "icd10": "K07.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2306",
+      "icd10": "K07.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2306",
+      "icd10": "K07.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2306",
+      "icd10": "Z46.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2307",
+      "icd10": "K07.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2307",
+      "icd10": "K07.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2307",
+      "icd10": "K07.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2307",
+      "icd10": "K07.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2307",
+      "icd10": "K07.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2307",
+      "icd10": "Z46.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2308",
+      "icd10": "K07.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2308",
+      "icd10": "K07.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2308",
+      "icd10": "K07.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2308",
+      "icd10": "K07.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2308",
+      "icd10": "K07.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2308",
+      "icd10": "Z46.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2310",
+      "icd10": "K07.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2310",
+      "icd10": "K07.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2310",
+      "icd10": "K07.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2310",
+      "icd10": "K07.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2310",
+      "icd10": "K07.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2310",
+      "icd10": "Z46.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2312",
+      "icd10": "K07.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2312",
+      "icd10": "K07.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2312",
+      "icd10": "K07.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2312",
+      "icd10": "K07.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2312",
+      "icd10": "K07.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2312",
+      "icd10": "Z46.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2401",
+      "icd10": "K07.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2401",
+      "icd10": "K07.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2401",
+      "icd10": "K07.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2401",
+      "icd10": "K07.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2401",
+      "icd10": "K07.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2401",
+      "icd10": "Z46.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2402",
+      "icd10": "K07.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2402",
+      "icd10": "K07.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2402",
+      "icd10": "K07.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2402",
+      "icd10": "K07.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2402",
+      "icd10": "K07.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2402",
+      "icd10": "Z46.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2406",
+      "icd10": "K07.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2406",
+      "icd10": "K07.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2406",
+      "icd10": "K07.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2406",
+      "icd10": "K07.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2406",
+      "icd10": "K07.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2406",
+      "icd10": "Z46.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2502",
+      "icd10": "K07.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2502",
+      "icd10": "K07.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2502",
+      "icd10": "K07.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2502",
+      "icd10": "K07.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2502",
+      "icd10": "K07.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2502",
+      "icd10": "Z46.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2503",
+      "icd10": "K07.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2503",
+      "icd10": "K07.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2503",
+      "icd10": "K07.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2503",
+      "icd10": "K07.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2503",
+      "icd10": "K07.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2503",
+      "icd10": "Z46.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2611",
+      "icd10": "K07.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2611",
+      "icd10": "K07.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2611",
+      "icd10": "K07.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2611",
+      "icd10": "K07.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2611",
+      "icd10": "K07.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2611",
+      "icd10": "Z46.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2612",
+      "icd10": "K07.0",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2612",
+      "icd10": "K07.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2612",
+      "icd10": "K07.2",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2612",
+      "icd10": "K07.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2612",
+      "icd10": "K07.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "23.2612",
+      "icd10": "Z46.4",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Ortodoncja",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "87.121",
+      "icd10": "K07.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Pantomogram (87.121) – kod wskazania",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "87.121",
+      "icd10": "K01.1",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Pantomogram (87.121) – kod wskazania",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "87.121",
+      "icd10": "K08.3",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Pantomogram (87.121) – kod wskazania",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "87.121",
+      "icd10": "K04.5",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Pantomogram (87.121) – kod wskazania",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    },
+    {
+      "icd9": "87.121",
+      "icd10": "K07.6",
+      "typ": "sugestia kliniczna",
+      "wymagane_przez_nfz": false,
+      "status": "WYMAGA WERYFIKACJI",
+      "poziom_kontroli": "INFORMACJA",
+      "uwagi": "Pantomogram (87.121) – kod wskazania",
+      "zrodla": [
+        "SRC-ICD10-WHO-2016"
+      ]
+    }
+  ]
+}

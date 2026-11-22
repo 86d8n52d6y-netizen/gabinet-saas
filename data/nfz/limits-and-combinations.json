@@ -1,0 +1,655 @@
+{
+  "stan_na": "2026-11-21",
+  "statusy": [
+    "DOZWOLONE",
+    "NIEDOZWOLONE",
+    "WARUNKOWO DOZWOLONE",
+    "WYMAGA DODATKOWEJ WERYFIKACJI",
+    "NIE DOTYCZY"
+  ],
+  "zasada_domyslna": "Para spoza listy = WYMAGA DODATKOWEJ WERYFIKACJI (nie DOZWOLONE). Brak znalezionego zakazu nie oznacza zgody.",
+  "limity": [
+    {
+      "kod": [
+        "23.0101",
+        "ST33",
+        "ST33A"
+      ],
+      "regula": "R-BAD-01",
+      "tresc": "Badanie lekarskie stomatologiczne – 1 raz w roku kalendarzowym.",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "kod": [
+        "23.0102",
+        "ST34",
+        "ST34A"
+      ],
+      "regula": "R-BAD-02",
+      "tresc": "Badanie kontrolne – 3 razy w roku kalendarzowym; ciąża/połóg – nie częściej niż 1 raz na kwartał.",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "kod": [
+        "23.0301"
+      ],
+      "regula": "R-RTG-01",
+      "tresc": "Do 2 zdjęć wewnątrzustnych w roku kalendarzowym, w połączeniu z innymi świadczeniami, z opisem w dokumentacji.",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "kod": [
+        "23.1601",
+        "23.16011",
+        "23.16012"
+      ],
+      "regula": "R-ZLOG-01",
+      "tresc": "Usunięcie złogów (½ łuku) – 1 raz w roku kalendarzowym w obrębie całego uzębienia (zał. 1 i 2).",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "kod": [
+        "23.1602",
+        "23.16021",
+        "23.16022"
+      ],
+      "regula": "R-ZLOG-02",
+      "tresc": "Usunięcie złogów ze wszystkich zębów – nie częściej niż 1 raz na 6 miesięcy (zał. 2).",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "kod": [
+        "ST30E"
+      ],
+      "regula": "R-ST30E-LIMIT",
+      "tresc": "ST30E – maks. 4× w roku; 3×, jeśli w roku wykonano ST30D.",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "kod": [
+        "ST30D",
+        "ST30F",
+        "ST30G"
+      ],
+      "regula": "R-ST30DFG-LIMIT",
+      "tresc": "ST30D, ST30F, ST30G – 1× w roku.",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "kod": [
+        "23.1006"
+      ],
+      "regula": "R-LAKIER-01",
+      "tresc": "Lakierowanie 23.1006 – tylko dzieci i młodzież do 18. r.ż.; zęby mleczne i stałe; nie częściej niż 1× na kwartał za każdą ¼ łuku.",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "kod": [
+        "23.1003"
+      ],
+      "regula": "R-LAKOW-01",
+      "tresc": "Lakowanie bruzd: pierwsze trzonowce stałe – 1 raz do ukończenia 8. r.ż.; drugie trzonowce stałe – 1 raz do ukończenia 14. r.ż.",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "kod": [
+        "23.3104",
+        "23.3105"
+      ],
+      "regula": "R-PROT-01",
+      "tresc": "1 raz na 5 lat (nie dotyczy pacjentów po leczeniu onkologicznym).",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "kod": [
+        "23.3112",
+        "23.3116",
+        "23.3117"
+      ],
+      "regula": "R-PROT-02",
+      "tresc": "Naprawa z wyciskiem – 1×/2 lata; podścielenie – 1×/2 lata.",
+      "status": "POTWIERDZONA"
+    }
+  ],
+  "laczenie": [
+    {
+      "a": "ST30",
+      "b": "23.1006",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-LAKIER",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30",
+      "b": "ST30A",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30",
+      "b": "ST30B",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30",
+      "b": "ST30C",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30",
+      "b": "ST30D",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30",
+      "b": "ST30E",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30",
+      "b": "ST30F",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30",
+      "b": "ST30G",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30A",
+      "b": "23.1006",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-LAKIER",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30A",
+      "b": "ST30",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30A",
+      "b": "ST30B",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30A",
+      "b": "ST30C",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30A",
+      "b": "ST30D",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30A",
+      "b": "ST30E",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30A",
+      "b": "ST30F",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30A",
+      "b": "ST30G",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30B",
+      "b": "23.1006",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-LAKIER",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30B",
+      "b": "ST30",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30B",
+      "b": "ST30A",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30B",
+      "b": "ST30C",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30B",
+      "b": "ST30D",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30B",
+      "b": "ST30E",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30B",
+      "b": "ST30F",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30B",
+      "b": "ST30G",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30C",
+      "b": "23.1006",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-LAKIER",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30C",
+      "b": "ST30",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30C",
+      "b": "ST30A",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30C",
+      "b": "ST30B",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30C",
+      "b": "ST30D",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30C",
+      "b": "ST30E",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30C",
+      "b": "ST30F",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30C",
+      "b": "ST30G",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30E",
+      "b": "23.1006",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-LAKIER",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30E",
+      "b": "ST30",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30E",
+      "b": "ST30A",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30E",
+      "b": "ST30B",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30E",
+      "b": "ST30C",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30E",
+      "b": "ST30F",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30E",
+      "b": "ST30G",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30E",
+      "b": "ST33",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30E",
+      "b": "ST33A",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30E",
+      "b": "ST34",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30E",
+      "b": "ST34A",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30G",
+      "b": "23.1006",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-LAKIER",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30G",
+      "b": "ST30",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30G",
+      "b": "ST30A",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30G",
+      "b": "ST30B",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30G",
+      "b": "ST30C",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30G",
+      "b": "ST30D",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30G",
+      "b": "ST30E",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30G",
+      "b": "ST30F",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30G",
+      "b": "ST33",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30G",
+      "b": "ST33A",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30G",
+      "b": "ST34",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30G",
+      "b": "ST34A",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST30D",
+      "b": "ST30E",
+      "status": "WARUNKOWO DOZWOLONE",
+      "regula": "R-ST30E-LIMIT",
+      "uwagi": "ST30E maks. 3× w roku z ST30D"
+    },
+    {
+      "a": "ST30D",
+      "b": "23.1101",
+      "status": "DOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": "wprost dopuszczone w zał. 1d"
+    },
+    {
+      "a": "ST30F",
+      "b": "23.1101",
+      "status": "DOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": "wprost dopuszczone w zał. 1d"
+    },
+    {
+      "a": "ST30D",
+      "b": "23.1006",
+      "status": "DOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": "23.1006 jest składnikiem (lista ST5) pakietu ST30D – nie rozliczać osobno"
+    },
+    {
+      "a": "ST30",
+      "b": "ST1",
+      "status": "WARUNKOWO DOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": "ST1 opcjonalnie w składzie pakietu ST30"
+    },
+    {
+      "a": "ST30",
+      "b": "23.02",
+      "status": "WARUNKOWO DOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": "lista ST4 – składnik opcjonalny"
+    },
+    {
+      "a": "23.0401",
+      "b": "(brak innego świadczenia)",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ZNI-01",
+      "uwagi": ""
+    },
+    {
+      "a": "23.0402",
+      "b": "(brak innego świadczenia)",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ZNI-01",
+      "uwagi": ""
+    },
+    {
+      "a": "23.0403",
+      "b": "(brak innego świadczenia)",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ZNI-01",
+      "uwagi": ""
+    },
+    {
+      "a": "23.0105",
+      "b": "(dowolne inne świadczenie)",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-KONS-01",
+      "uwagi": ""
+    },
+    {
+      "a": "23.06",
+      "b": "(dowolne inne świadczenie)",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ADAPT-01",
+      "uwagi": ""
+    },
+    {
+      "a": "ST04",
+      "b": "produkt jednostkowy znieczulenia (23.0401/0402/0403)",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ZNI-02",
+      "uwagi": "znieczulenie wliczone w pakiet ST04 – tylko jako składnik, bez osobnych punktów"
+    },
+    {
+      "a": "ST01",
+      "b": "produkt jednostkowy znieczulenia (23.0401/0402/0403)",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ZNI-02",
+      "uwagi": "znieczulenie wliczone w pakiet ST01 – tylko jako składnik, bez osobnych punktów"
+    },
+    {
+      "a": "ST01",
+      "b": "ST1",
+      "status": "DOZWOLONE",
+      "regula": "R-ZNI-02",
+      "uwagi": "ST1 wymagane w ST01"
+    },
+    {
+      "a": "ST04",
+      "b": "ST1",
+      "status": "DOZWOLONE",
+      "regula": "R-ZNI-02",
+      "uwagi": "ST1 wymagane w ST04"
+    },
+    {
+      "a": "ST04",
+      "b": "(pacjent < 18)",
+      "status": "WYMAGA DODATKOWEJ WERYFIKACJI",
+      "regula": "R-KIR-DZ",
+      "uwagi": ""
+    },
+    {
+      "a": "ST33",
+      "b": "ST30E",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST34",
+      "b": "ST30E",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST33",
+      "b": "ST30G",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST34",
+      "b": "ST30G",
+      "status": "NIEDOZWOLONE",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": ""
+    },
+    {
+      "a": "ST33",
+      "b": "ST34",
+      "status": "WYMAGA DODATKOWEJ WERYFIKACJI",
+      "regula": "R-BAD-02",
+      "uwagi": "badanie i kontrola tego samego dnia – brak wyraźnej reguły w przeczytanych źródłach"
+    },
+    {
+      "a": "ST30D",
+      "b": "ST33",
+      "status": "WYMAGA DODATKOWEJ WERYFIKACJI",
+      "regula": "R-ST30-WZAJEM",
+      "uwagi": "ST30D zawiera 23.0101; pytanie z komunikatu 9017 – odpowiedź do przeniesienia"
+    }
+  ]
+}

@@ -176,6 +176,48 @@ PATCHES = [
   ('P40c obsługa wyłącznika podsumowania',
    "  if(a==='basis'){",
    "  if(a==='sumopt'){cfg.sum=el.dataset.v!=='off';cfgSave();render();return;}\n  if(a==='basis'){"),
+  ('P30 audyt NFZ R-ST30DG-WIEK (decyzja Patryka D1=B, 22.11.2026): ST30E/ST30G u pacjenta ≥ 18 lat – ostrzeżenie zamiast błędu; bez wpisanego wieku – przypomnienie (źródło: Zarządzenie 60/2023/DSOZ t.j. od 1.09.2026, 95/2026/DSOZ)',
+   "  ['ST30E','ST30G'].forEach(c=>{if(has(c)&&a!==null&&a>=18)err.push({codes:[c],msg:`${c}: pakiety profesjonalnej higienizacji (ST30D–ST30G) są przeznaczone dla dzieci i młodzieży do 18 r.ż.`});});",
+   "  ['ST30E','ST30G'].forEach(c=>{if(!has(c))return;if(a!==null&&a>=18)warn.push({codes:[c],msg:`${c}: pakiety profesjonalnej higienizacji (ST30D–ST30G) są przeznaczone dla dzieci i młodzieży do 18 r.ż. (Zarządzenie 60/2023/DSOZ t.j. od 1.09.2026, 95/2026/DSOZ). U dorosłych rozlicz ST30 (złogi twarde).`});\n    else if(a===null)warn.push({codes:[c],msg:`${c}: wpisz wiek pacjenta – pakiety ST30D–ST30G tylko do 18 r.ż. (Zarządzenie 60/2023/DSOZ t.j. od 1.09.2026, 95/2026/DSOZ).`});});"),
+  ('P31 audyt NFZ R-LAKIER-01: lakierowanie 1006 u pacjenta ≥ 18 lat – ostrzeżenie; bez wieku – przypomnienie (źródło: rozporządzenie koszykowe, t.j. Dz.U. 2025 poz. 615)',
+   "  const vt=visitTime(),tot=vt.nfz;",
+   "  if(has('1006')){if(a!==null&&a>=18)warn.push({codes:['1006'],msg:'1006: lakierowanie zębów jest świadczeniem gwarantowanym tylko dla dzieci i młodzieży do 18 r.ż. (rozporządzenie MZ, t.j. Dz.U. 2025 poz. 615).'});\n    else if(a===null)warn.push({codes:['1006'],msg:'1006: wpisz wiek pacjenta – lakierowanie tylko do 18 r.ż. (Dz.U. 2025 poz. 615).'});}\n  const vt=visitTime(),tot=vt.nfz;"),
+  ('P32 audyt NFZ R-KIR-DZ (decyzja D4=A): kiretaż ST04 u dziecka – INFORMACJA „wymaga weryfikacji” (komunikat NFZ z 22.07.2026, stan prawny nieustalony)',
+   "  cs.forEach(c=>{if(NFZ_LIMIT[c])warn.push(",
+   "  if(has('ST04')&&a!==null&&a<18)warn.push({codes:['ST04'],info:true,msg:'Informacja (wymaga weryfikacji): kiretaż u dzieci i młodzieży – komunikat NFZ z 22.07.2026 i stanowisko NIL są sprzeczne; stan prawny nieustalony. Sprawdź w OW NFZ przed rozliczeniem.'});\n  cs.forEach(c=>{if(NFZ_LIMIT[c])warn.push("),
+  ('P33 audyt NFZ R-ZNI-02 (decyzja Patryka 22.11.2026 – ostrzeżenie): znieczulenie wpisane osobno przy ekstrakcji (ST01/ST02) lub kiretażu (ST04) – jest wliczone w pakiet; osobno tylko do wypełnienia, 1105 lub 1206 (źródło: Zarządzenie 60/2023/DSOZ t.j., zał. 1c/1d – lista ST1)',
+   "  if(has('ST04')&&a!==null&&a<18)warn.push(",
+   "  if(['ST01','ST02','ST04'].some(has)&&Object.keys(PTS_AN).some(k=>parseInt(str(state.a['pt.an'+k]),10)>0))warn.push({codes:['ST01','ST02','ST04'].filter(has),msg:'Znieczulenie przy ekstrakcji i kiretażu jest wliczone w pakiet (Zarządzenie 60/2023/DSOZ t.j. od 1.09.2026, lista ST1). W „znieczulenia rozliczane osobno” wpisz tylko znieczulenia do wypełnień, 1105 lub 1206.'});\n  if(has('ST04')&&a!==null&&a<18)warn.push("),
+  ('P34 komunikaty NFZ: INFORMACJA (reguły „wymaga weryfikacji”) wyświetlana jako notatka, nie ostrzeżenie (D4=A)',
+   "${hard.map(w=>`<div class=\"warn\">${esc(w.msg)}</div>`).join('')}",
+   "${hard.map(w=>`<div class=\"${w.info?'note':'warn'}\">${esc(w.msg)}</div>`).join('')}"),
+  ('P35 audyt NFZ N1: dane audytu (generator/nfz-dane.js z data/nfz/, scripts/nfz_dane_przegladarka.py) ładowane razem z szablonami – tylko do odczytu na urządzeniu',
+   '<script src="/opisy-nfz/zasoby/szablony.js"></script>',
+   '<script src="/opisy-nfz/zasoby/szablony.js"></script>\n<script src="/opisy-nfz/zasoby/nfz-dane.js"></script>'),
+  ('P36 audyt NFZ N2: silnik reguł z danych audytu (łączenie spoza tabeli „nie sumuje się”, limity jako informacja – D7=B, przełom roku – D6=A, ocena wg daty wizyty) – tylko na urządzeniu (D2=A)',
+   "  return {err,warn,tot,vt};",
+   "  nfzAudyt(cs,saveDate()).forEach(x=>{if(x.lvl==='err')err.push({codes:x.codes,msg:x.msg});else warn.push({codes:x.codes,msg:x.msg,info:x.lvl==='info'});});\n  return {err,warn,tot,vt};"),
+  ('P36a audyt NFZ N2: funkcje silnika reguł (przed nfzIssues)',
+   "function nfzIssues(){",
+   "/* ---------- audyt NFZ – etap N2: reguły z data/nfz (window.NFZ_DANE, docs/nfz/) liczone tylko na urządzeniu (D2=A) ----------\n   łączenie: pary z listy audytu, których nie obejmuje NFZ_NOSUM (BLOKADA tylko dla reguł POTWIERDZONYCH);\n   limity zależne od historii – zawsze INFORMACJA (D7=B); rok kalendarzowy + ostrzeżenie na przełomie roku (D6=A);\n   reguła obowiązuje według daty wizyty (od/do). */\nconst NA_KOD=c=>/^ST/.test(c)?c:'23.'+c, Z_KOD=k=>/^23\\./.test(k)?k.slice(3):k;\nfunction nfzRegulaAkt(r,date){return !!r&&(!/^\\d{4}-\\d{2}-\\d{2}$/.test(r.od||'')||r.od<=date)&&(!r.do||date<=r.do);}\nfunction nfzAudyt(cs,date){\n  const N=window.NFZ_DANE,out=[];if(!N||!cs.length)return out;\n  const R={};N.reguly.forEach(r=>{R[r.id]=r;});\n  const kody=cs.map(NA_KOD),seen=new Set(),src=r=>r&&r.zrodla.length?' (źródło: '+r.zrodla[0].split(' – ')[0]+')':'';\n  N.laczenie.forEach(p=>{const i=kody.indexOf(p.a),j=kody.indexOf(p.b);if(i<0||j<0||i===j)return;\n    const key=[p.a,p.b].sort().join('+');if(seen.has(key))return;seen.add(key);\n    const x=Z_KOD(p.a),y=Z_KOD(p.b),r=R[p.regula];if(!nfzRegulaAkt(r,date))return;\n    if((NFZ_NOSUM[x]||[]).includes(y)||(NFZ_NOSUM[y]||[]).includes(x))return;               // już zgłaszane przez tabelę „nie sumuje się”\n    if(p.status==='NIEDOZWOLONE')out.push({lvl:r.poziom==='BLOKADA'&&r.status==='POTWIERDZONA'?'err':'warn',codes:[x,y],msg:`${x} i ${y}: ${r.tresc}${src(r)}`});\n    else if(p.status!=='DOZWOLONE')out.push({lvl:'info',codes:[x,y],msg:`Informacja (${p.status.toLowerCase()}): ${x} + ${y} – ${p.uwagi||r.tresc}`});});\n  const mies=date.slice(5,7),przelom=mies==='12'||mies==='01';let roczny=false;\n  N.limity.forEach(l=>{const c=l.kod.filter(k=>kody.includes(k));if(!c.length)return;const r=R[l.regula];if(!nfzRegulaAkt(r,date))return;\n    if(/w roku|rok kalendarzow/.test(l.tresc))roczny=true;\n    out.push({lvl:'info',codes:c.map(Z_KOD),msg:`Limit NFZ (${c.map(Z_KOD).join(', ')}): ${l.tresc} Sprawdź w historii pacjenta – aplikacja nie zna wizyt z innych gabinetów.`});});\n  if(roczny&&przelom)out.push({lvl:'warn',codes:[],msg:`Przełom roku: limity NFZ liczone są w roku kalendarzowym – ta wizyta (${date}) liczy się do limitów roku ${date.slice(0,4)}.`});\n  return out;\n}\nfunction nfzIssues(){"),
+  ('P37 audyt NFZ N2: rozwijana lista „Zasady NFZ dla wybranych kodów” (treść, poziom, status, źródło) pod komunikatami NFZ',
+   "function nfzBox(){",
+   'function nfzZasadyHTML(){\n  const N=window.NFZ_DANE;if(!N||!state.codes.length)return \'\';const date=saveDate(),kody=state.codes.map(NA_KOD);\n  const rs=N.reguly.filter(r=>r.dotyczy.some(k=>kody.includes(k))&&nfzRegulaAkt(r,date));if(!rs.length)return \'\';\n  return `<details class="nfz-zas" style="font-size:13.5px"><summary>Zasady NFZ dla wybranych kodów (${rs.length}) – dane audytu ${esc(N.wersja)}</summary><ul>${rs.map(r=>`<li><b>${esc(r.poziom.toLowerCase())}</b>${r.decyzja?` <span class="sub-n" style="display:inline">(audyt: ${esc(r.poziom_audyt.toLowerCase())} – ${esc(r.decyzja)})</span>`:\'\'} · ${esc(r.tresc)}<span class="sub-n" style="display:block;font-size:12px">${esc(r.id)} · ${esc(r.status.toLowerCase())} · od ${esc(r.od)} · ${esc(r.zrodla.map(z=>z.split(\' – \')[0]).join(\'; \'))}</span></li>`).join(\'\')}</ul><div class="nfz-src">${esc(N.uwaga)}</div></details>`;\n}\nfunction nfzBox(){'),
+  ('P37a lista zasad NFZ widoczna także bez błędów i ostrzeżeń',
+   "  if(!err.length&&!hard.length&&!timeLine) return '<div id=\"nfz-box\"></div>';",
+   "  const zas=nfzZasadyHTML();\n  if(!err.length&&!hard.length&&!timeLine&&!zas) return '<div id=\"nfz-box\"></div>';"),
+  ('P37b lista zasad NFZ na końcu okienka komunikatów',
+   "${err.length||hard.length?`<div class=\"nfz-src\">${esc(NFZ_SRC)}</div>`:''}</div>`;",
+   "${err.length||hard.length?`<div class=\"nfz-src\">${esc(NFZ_SRC)}</div>`:''}${zas}</div>`;"),
+  ('P38 audyt NFZ N5 (D3=A): rozpoznanie ICD-10 wybrane przez lekarza z podpowiedzi pokazywane przy kodzie i w tabeli (domyślnie jak dotąd)',
+   "const icdOf=c=>typeof D[c].icd==='function'?D[c].icd():D[c].icd;",
+   "const icdOf0=c=>typeof D[c].icd==='function'?D[c].icd():D[c].icd;\nconst icdOf=c=>{const w=str(state.a[c+'.icd10']);return w?w+' (wybrane)':icdOf0(c);};"),
+  ('P39 audyt NFZ N5: podpowiedzi ICD-10 z mapowań audytu w karcie każdej procedury (pakiet → procedury kierunkowe; brak podkodu → kod nadrzędny)',
+   "function renderStep2(){return linkBanner()+nfzBox()+sharedCard()+state.codes.map(cardHTML).join('')+ptsExtraCard();}",
+   'function icdSug(c){const N=window.NFZ_DANE;if(!N)return [];const P=N.podpowiedzi_icd10,seen=new Set(),out=[];\n  const src=/^ST/.test(c)?(N.pakiety[c]||[]):[\'23.\'+c];\n  src.forEach(k=>{let q=k;while(q.length>5&&!P[q])q=q.slice(0,-1);(P[q]||[]).forEach(x=>{if(seen.has(x.k))return;seen.add(x.k);out.push(Object.assign({n:(N.icd10[x.k]||{}).n||\'\'},x));});});\n  return out;}\nfunction icdSugHTML(c){const L=icdSug(c);if(!L.length)return \'\';const w=str(state.a[c+\'.icd10\']),op=ui.icdOpen&&ui.icdOpen[c];\n  return `<details class="icd-sug"${op?\' open\':\'\'}><summary>Podpowiedzi ICD-10 (${L.length}) – wybiera lekarz</summary><div class="chips">${L.map(x=>`<button type="button" class="chip" data-act="icd10" data-c="${esc(c)}" data-v="${esc(x.k)}" aria-pressed="${w===x.k}" title="${esc(x.u||\'\')}">${esc(x.k)} ${esc(x.n)}</button>`).join(\'\')}</div><p class="note" style="margin:6px 0 0">Nazwy robocze z audytu NFZ (do porównania z wydaniem CeZ). NFZ nie narzuca pary procedura–rozpoznanie. Wybór pokazuje się przy kodzie i w tabeli – nie zmienia treści opisu ani wyceny; zostaje na tym urządzeniu.</p></details>`;}\nfunction renderStep2(){'+"return linkBanner()+nfzBox()+sharedCard()+state.codes.map(c=>cardHTML(c).replace(/<\\/section>\\s*$/,icdSugHTML(c)+'</section>')).join('')+ptsExtraCard();}"),
+  ('P40 audyt NFZ N5: wybór / odznaczenie podpowiedzi ICD-10',
+   "  if(a==='rmcode'){state.codes.splice(state.codes.indexOf(el.dataset.c),1);render();return;}",
+   "  if(a==='rmcode'){state.codes.splice(state.codes.indexOf(el.dataset.c),1);render();return;}\n  if(a==='icd10'){const k=el.dataset.c+'.icd10';state.a[k]=str(state.a[k])===el.dataset.v?'':el.dataset.v;ui.icdOpen=Object.assign({},ui.icdOpen,{[el.dataset.c]:true});render();return;}"),
 ]
 
 PATCHES_PRYW = [
@@ -431,6 +473,8 @@ przenies('prywatne.html', PATCHES_PRYW)
 przenies('kalendarz.html', PATCHES_KAL)
 shutil.copy(os.path.join(OLD, 'prywatne-katalog.js'), os.path.join(OUT, 'prywatne-katalog.js'))
 shutil.copy(os.path.join(OLD, 'szablony.js'), os.path.join(OUT, 'szablony.js'))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'scripts'))
+import nfz_dane_przegladarka; nfz_dane_przegladarka.zapisz()   # audyt NFZ (N1): data/nfz → generator/nfz-dane.js
 shutil.copy(os.path.join(OLD, 'wspolne.css'), os.path.join(OUT, 'wspolne.css'))
 with open(os.path.join(OUT, 'ZMIANY.md'), 'w', encoding='utf-8') as f:
     f.write(f'# Moduły Opisy NFZ, Opisy prywatne i Kalendarz – zmiany względem obecnej aplikacji\n\nŹródło: repo `opisy-nfz`, commit `{commit}` – pliki `nfz.html`, `szablony.js`, `prywatne.html`, `prywatne-katalog.js`, `kalendarz.html`, `wspolne.css` (logika, pytania, reguły NFZ, szablony i teksty bez zmian).\n'
