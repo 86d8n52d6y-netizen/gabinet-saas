@@ -225,12 +225,12 @@ Prompt Patryka: „Inteligentne zlecenia protetyczne dla technika dentystycznego
 | E1 | moduł `/zlecenia` (`generator/zlecenia.html`, ręcznie pisany – nie z `przenies_generator.py`): lista, nowe zlecenie, rodzaje prac A–F, własne wartości, kontrola kompletności, statusy, historia zmian, kopiowanie, usuwanie; zapis tylko na urządzeniu (`G.store('zlecenia')`, baza przeglądarki v3) | ✅ na `main` |
 | E2 | sekcje zależne od rodzaju pracy: most, implanty, All-on-X, proteza, szyna, kolor (skale Vita), preparacja, zgryz (VDO, rejestracja, Angle, TMD) | ✅ na `main` (test 64/64 razem z E3, E5, E6) |
 | E3 | schemat zębów FDI z rolami (korona, przęsło, implant, brak, filar, uwaga, kontakt) | ✅ na `main` |
-| E4 | dopracowanie modułów szczegółowych (po przeglądzie [W] przez Patryka) | do zrobienia |
+| E4 | przegląd [W] przez Patryka (22.11): rejestracja zwarcia przy każdym moście, „próba szkieletu”; reszta zaakceptowana | ✅ na `main` |
 | E5–E6 | zdjęcia na urządzeniu, wydruk / PDF | ✅ na `main` |
 | E7 | chmura dla zleceń | ✅ na `main` – migracja 0008 (akceptacja Patryka 22.11), `/api/zlecenia`, synchronizacja w `gabinet-saas.js`; zdjęcia tylko na urządzeniu |
 | E8 | testy końcowe wg promptu (korona, most, korona na implancie, All-on-4/6/X, protezy, licówka, szyna, izolacja, druk, responsywność) | ✅ `t_8b_zlecenia_koncowe.py` 53/53 |
 
-Pełna regresja e2e po E1–E6: wszystkie pliki bez błędów (21.11.2026). Uwaga: pełny `uruchom.sh` trwa > 30 min – w Claude Code uruchamiać plik po pliku w tle. Pozostaje E4 (po przeglądzie [W] przez Patryka) i osobny etap: treść Opisów NFZ/prywatnych i inicjały w chmurze (decyzja 17).
+Pełna regresja e2e po E1–E6: wszystkie pliki bez błędów (21.11.2026). Uwaga: pełny `uruchom.sh` trwa > 30 min – w Claude Code uruchamiać plik po pliku w tle. Moduł Zleceń E0–E8 zakończony. Następny osobny etap (na polecenie Patryka): treść Opisów NFZ/prywatnych i inicjały w chmurze (decyzja 17).
 
 ### Decyzja otwarta (najpierw zapytać Patryka – pytania do klikania)
 21.11 Patryk najpierw wybrał **chmurę szyfrowaną swoim kluczem**, a potem napisał: „numery zębów mogą być, pozwalam na przechowywanie wszystkich danych, aby nie było imienia i nazwiska”. To **zmiana zasady nr 1 `CLAUDE.md`** – nie zapisano jej jeszcze. Ustalić: (1) które dane czytelnie na serwerze (zęby/zgryz/kolory, inicjały, treść opisów, zdjęcia), (2) tylko Zlecenia czy też Opisy, (3) czy zmienić zasadę nr 1 w `CLAUDE.md` i dopisać decyzję w `docs/AUDYT_SAAS.md`. Uwaga dla Patryka: bez imienia i nazwiska to nadal dane o zdrowiu (RODO) – przed hostingiem umowa powierzenia, DPIA, opinia prawna; Claude nie deklaruje zgodności z RODO. Do decyzji – E7 nie zaczynać; nowa tabela = migracja do pokazania przed wykonaniem (zasada 12).
