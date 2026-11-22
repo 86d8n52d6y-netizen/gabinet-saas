@@ -137,6 +137,8 @@ textarea.pw-txted{min-height:260px;font-size:14.5px}
 <div id="toast" class="pw-toast" role="status" aria-live="polite"></div>
 <!--GABINET_DANE--><script src="/opisy-nfz/zasoby/gabinet-saas.js"></script>
 <script src="/opisy-nfz/zasoby/prywatne-katalog.js"></script>
+<script src="/opisy-nfz/zasoby/karty-opisy.js"></script>
+<script src="/opisy-nfz/zasoby/opis-z-karty.js"></script>
 <script>
 /* Opisy prywatne: wizyta z wieloma procedurami → opis do dokumentacji; cennik dla każdego gabinetu, wynagrodzenie lekarza
    (% po odjęciu kosztów albo kwota), historia, zarobki. Dane zaszyfrowane w przestrzeni użytkownika (G.store); bez punktów NFZ. */
@@ -275,6 +277,8 @@ function visitText(v) {
   return parts.join('\n\n');
 }
 const curText = () => V.edited && typeof V.txt === 'string' ? V.txt : visitText();
+if (window.OpisZKarty) OpisZKarty.podlacz({ moze: () => V.items.length ? true : 'Najpierw dodaj procedurę do wizyty.',
+  wstaw: t => { if (!V.edited) { V.edited = true; V.txt = visitText(); V.genAtEdit = V.txt; } V.txt = String(V.txt || '').replace(/\s+$/, '') + (V.txt ? '\n\n' : '') + t; refreshSide(); draftSched(); } });
 const countMiss = t => (String(t).match(/\[UZUPEŁNIJ/g) || []).length;
 
 /* ---------- wizyta ---------- */
@@ -434,7 +438,7 @@ function sideParts() {
   const btn = V.items.length ? (S.quick && !saved ? '<div class="pw-btns"><button type="button" class="g-btn" data-a="copysave" id="b_cs">Kopiuj i zapisz</button></div>' : '') + '<div class="pw-btns"><button type="button" class="g-btn' + (S.quick && !saved ? ' ghost' : '') + '" data-a="copy" id="b_copy">Kopiuj opis</button>' +
     '<button type="button" class="g-btn" data-a="save" id="b_save"' + (saved ? ' disabled' : '') + '>' + (V.id ? (saved ? 'Zapisano ✓' : 'Zapisz zmiany') : 'Zapisz wizytę') + '</button></div>' +
     '<div class="pw-btns">' + (V.edited ? '<button type="button" class="g-btn ghost sm" data-a="regen" id="b_regen">Wygeneruj tekst z formularza</button>' : '<button type="button" class="g-btn ghost sm" data-a="edit" id="b_edit">Edytuj tekst</button>') +
-    '<button type="button" class="g-btn ghost sm" data-a="new" id="b_new">Nowa wizyta</button></div>' : '';
+    (window.OpisZKarty ? OpisZKarty.przycisk('g-btn ghost sm') : '') + '<button type="button" class="g-btn ghost sm" data-a="new" id="b_new">Nowa wizyta</button></div>' : '';
   return { sum, head, body, btn };
 }
 const SIDE_LAST = {};

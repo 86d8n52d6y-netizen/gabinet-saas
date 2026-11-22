@@ -278,6 +278,8 @@ table.stat td::first-letter{text-transform:none}
 <script src="/opisy-nfz/zasoby/szablony.js"></script>
 <script src="/opisy-nfz/zasoby/nfz-dane.js"></script>
 <script src="/opisy-nfz/zasoby/baza-dane.js"></script>
+<script src="/opisy-nfz/zasoby/karty-opisy.js"></script>
+<script src="/opisy-nfz/zasoby/opis-z-karty.js"></script>
 <script>
 /* ---------- użytkownik i jego przestrzeń danych (wspolne.js) ----------
    Dane każdego użytkownika są w osobnej bazie (opisyNFZ@<id>) i są szyfrowane jego kluczem; sesję i klucz sprawdza dbInit (G.ready). */
@@ -1806,7 +1808,8 @@ function sumItem(c){const d=D[c];let s=d.name.charAt(0).toLowerCase()+d.name.sli
   return s;}
 function sumPrefix(){if(cfg.sum===false||!state.codes.length)return '';return 'Wykonano: '+state.codes.map(sumItem).join('; ')+'.\n\n';}
 function genTxt(){return sumPrefix()+buildOut().map(o=>plain(o.text)).join('\n\n');}
-function fullTxt(){return state.ed?state.ed.txt:genTxt();}                 // tekst edytowany ręcznie ma pierwszeństwo przed wygenerowanym
+function fullTxt(){return state.ed?state.ed.txt:genTxt();}
+if(window.OpisZKarty)OpisZKarty.podlacz({moze:()=>state.codes.length&&state.step===3?true:'Najpierw wybierz zabiegi i przejdź do opisu.',wstaw:t=>{const g=genTxt();if(!state.ed)state.ed={txt:g,gen:g};state.ed.txt=String(state.ed.txt||'').replace(/\s+$/,'')+(state.ed.txt?'\n\n':'')+t;render();autoSave();refreshSave();draftSched();}});                 // tekst edytowany ręcznie ma pierwszeństwo przed wygenerowanym
 const edMiss=()=>(String(state.ed.txt).match(/\[UZUPEŁNIJ/g)||[]).length;
 const htmlOut=s=>esc(s).replace(/\u0001([^\u0002]*)\u0002/g,'<mark>[UZUPEŁNIJ: $1]</mark>');
 function missCount(){return buildOut().reduce((n,o)=>n+(o.text.match(/\u0001/g)||[]).length,0);}
@@ -1874,9 +1877,9 @@ function icdSugHTML(c){const L=icdSug(c);if(!L.length)return '';const w=str(stat
   return `<details class="icd-sug"${op?' open':''}><summary>Podpowiedzi ICD-10 (${L.length}) – wybiera lekarz</summary><div class="chips">${L.map(x=>`<button type="button" class="chip" data-act="icd10" data-c="${esc(c)}" data-v="${esc(x.k)}" aria-pressed="${w===x.k}" title="${esc(x.u||'')}">${esc(x.k)} ${esc(x.n)}</button>`).join('')}</div><p class="note" style="margin:6px 0 0">Nazwy robocze z audytu NFZ (do porównania z wydaniem CeZ). NFZ nie narzuca pary procedura–rozpoznanie. Wybór pokazuje się przy kodzie i w tabeli – nie zmienia treści opisu ani wyceny; zostaje na tym urządzeniu.</p></details>`;}
 function renderStep2(){return linkBanner()+nfzBox()+sharedCard()+state.codes.map(c=>cardHTML(c).replace(/<\/section>\s*$/,icdSugHTML(c)+'</section>')).join('')+ptsExtraCard();}
 function edBoxHTML(outs,m){                            // cały opis: podgląd wygenerowanego tekstu albo edycja ręczna przed zapisem
-  if(!state.ed)return `${m?`<div class="warn">Uwaga: w opisie ${m===1?'zostało':'zostały'} ${m} ${plural(m,'pole','pola','pól')} [UZUPEŁNIJ].</div>`:''}<div class="out all">${htmlOut(sumPrefix()+outs.map(o=>o.text).join('\n\n'))}</div><div class="row" style="margin-top:8px"><button type="button" class="btn ghost sm" data-act="edtxt" id="edTxtBtn">Edytuj tekst</button><span class="note">Poprawki ręczne zapiszą się w historii zamiast tekstu z formularza.</span></div>`;
+  if(!state.ed)return `${m?`<div class="warn">Uwaga: w opisie ${m===1?'zostało':'zostały'} ${m} ${plural(m,'pole','pola','pól')} [UZUPEŁNIJ].</div>`:''}<div class="out all">${htmlOut(sumPrefix()+outs.map(o=>o.text).join('\n\n'))}</div><div class="row" style="margin-top:8px"><button type="button" class="btn ghost sm" data-act="edtxt" id="edTxtBtn">Edytuj tekst</button>${window.OpisZKarty?OpisZKarty.przycisk('btn ghost sm'):''}<span class="note">Poprawki ręczne zapiszą się w historii zamiast tekstu z formularza.</span></div>`;
   const n=edMiss(),chg=genTxt()!==state.ed.gen;
-  return `<div class="warn" id="ed-note">${chg?'Formularz zmienił się po edycji tekstu – Twój tekst nie został nadpisany.':'Tekst edytowany ręcznie – zmiany w formularzu go nie nadpiszą.'}${n?` W tekście ${n===1?'jest':'są'} ${n} ${plural(n,'pole','pola','pól')} [UZUPEŁNIJ].`:''}</div><textarea id="edTxt" class="edtxt" aria-label="Tekst opisu (edycja)">${esc(state.ed.txt)}</textarea><div class="row" style="margin-top:8px"><button type="button" class="btn ghost sm" data-act="regen" id="regenBtn">Wygeneruj tekst z formularza</button></div>`;
+  return `<div class="warn" id="ed-note">${chg?'Formularz zmienił się po edycji tekstu – Twój tekst nie został nadpisany.':'Tekst edytowany ręcznie – zmiany w formularzu go nie nadpiszą.'}${n?` W tekście ${n===1?'jest':'są'} ${n} ${plural(n,'pole','pola','pól')} [UZUPEŁNIJ].`:''}</div><textarea id="edTxt" class="edtxt" aria-label="Tekst opisu (edycja)">${esc(state.ed.txt)}</textarea><div class="row" style="margin-top:8px"><button type="button" class="btn ghost sm" data-act="regen" id="regenBtn">Wygeneruj tekst z formularza</button>${window.OpisZKarty?OpisZKarty.przycisk('btn ghost sm'):''}</div>`;
 }
 /* ---------- baza stomatologiczna (integracja I1): kontrola kompletności dokumentacji – ostrzeżenie, bez blokady (decyzja Patryka 22.11.2026) ----------
    Elementy z checklist kart (data/procedury-icd9, generator/baza-dane.js). Automatycznie sprawdzane: zęby / ćwiartki na diagramie, wiek, data, opis,

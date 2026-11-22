@@ -1,7 +1,7 @@
 # Baza stomatologiczna – instrukcja przyszłej integracji z aplikacją Gabinet
 
 Stan: 22.11.2026 · gałąź `baza-stomatologiczna` · prompt Patryka „PROMPT 2 – badania stomatologiczne i karty procedur ICD-9”.
-**Stan integracji:** etap I1 (22.11.2026) – „Katalog procedur i badań” (`/katalog-procedur`, link w Katalogu NFZ; `src/lib/baza.ts`) oraz kontrola kompletności dokumentacji w Opisach NFZ (krok 3, `generator/baza-dane.js` ze `scripts/baza_dane_przegladarka.py`, poprawki P41–P42a) – ostrzeżenie bez blokady; treść opisów i wycena bez zmian. Pozostałe funkcje (§8) – na Twoje polecenie.
+**Stan integracji:** etap I1 (22.11.2026) – „Katalog procedur i badań” (`/katalog-procedur`, link w Katalogu NFZ; `src/lib/baza.ts`) oraz kontrola kompletności dokumentacji w Opisach NFZ (krok 3, `generator/baza-dane.js` ze `scripts/baza_dane_przegladarka.py`, poprawki P41–P42a) – ostrzeżenie bez blokady; treść opisów i wycena bez zmian. Etap I2 (22.11.2026) – „Opis z karty procedury” w Opisach prywatnych i NFZ (osobny przycisk; `generator/opis-z-karty.js`, dane `generator/karty-opisy.js` ze `scripts/karty_opisy_przegladarka.py`, poprawki P43–P43c, R13–R13b): tylko karty zweryfikowane, domyślnie wariant standardowy, formularz z typami pól, tekst dopisywany do opisu jako edycja ręczna; generator opisu NFZ bez zmian. Pozostałe funkcje (§8) – na Twoje polecenie.
 
 ## 1. Gdzie są dane
 
@@ -55,6 +55,8 @@ function opis(BAZA, id, wariant, wartosci) {                     // wartosci: {'
 // → „Ząb 36: odbudowa jednej powierzchni – powierzchnie O. Rozpoznanie: K02.1. … Materiał: kompozyt, kolor A2.”
 ```
 
+**W aplikacji (I2, `generator/opis-z-karty.js`)** zasada składania jest łagodniejsza: zdanie bez żadnej wartości jest pomijane, a w zdaniu wypełnionym częściowo brak = `[UZUPEŁNIJ: pole]` (ten sam znacznik co w modułach, liczony jako „do uzupełnienia”).
+
 **Kontrola kompletności** – checklista: `obowiazkowe` → ostrzeżenie przed zapisem, **bez blokady** (decyzja Patryka 22.11.2026 – do czasu odczytania rozporządzenia o dokumentacji, `SRC-DU-2026-1391`), `zalecane` / `sytuacyjne` → podpowiedź, `rozliczeniowe` → tylko przy rozliczeniu NFZ.
 
 **Podpowiedzi ICD-10** – `procedure-diagnosis-mappings.json` + nazwy z `data/nfz/diagnoses.json` (robocze); to samo zachowanie co etap N5 audytu: wybiera lekarz, nigdy automatycznie.
@@ -95,4 +97,4 @@ Zasady importu: upsert po id; rekordy usunięte z JSON **nie są kasowane automa
 
 ## 8. Elementy aplikacji, które mogą korzystać z bazy
 
-Katalog badań i procedur (strona), dynamiczne formularze w Opisach NFZ / prywatnych, generowanie opisów z szablonów, podpowiedzi przebiegu (kroki), checklisty kompletności przed zapisem, podpowiedzi ICD-10, moduł kontroli rozliczeń NFZ (reguły z audytu). Zaimplementowane w I1: katalog (strona) i checklisty kompletności (Opisy NFZ). Pozostałe – wymagają Twojego zlecenia.
+Katalog badań i procedur (strona), dynamiczne formularze w Opisach NFZ / prywatnych, generowanie opisów z szablonów, podpowiedzi przebiegu (kroki), checklisty kompletności przed zapisem, podpowiedzi ICD-10, moduł kontroli rozliczeń NFZ (reguły z audytu). Zaimplementowane: I1 – katalog (strona) i checklisty kompletności (Opisy NFZ); I2 – generowanie opisów z szablonów kart (Opisy prywatne i NFZ). Pozostałe – wymagają Twojego zlecenia.

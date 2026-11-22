@@ -227,6 +227,20 @@ PATCHES = [
   ('P42a kontrola kompletności w kroku 3 (Opis) – przed opisem; treść opisu i wycena bez zmian',
    "  return nfzBox()+all+ptsCard()+sum2+each;",
    "  return nfzBox()+bazaChkHTML()+all+ptsCard()+sum2+each;"),
+  ('P43 opis z karty procedury (etap I2, decyzja Patryka 22.11.2026): dane kart zweryfikowanych (generator/karty-opisy.js) i okienko (generator/opis-z-karty.js) – tylko na urządzeniu',
+   '<script src="/opisy-nfz/zasoby/baza-dane.js"></script>',
+   '<script src="/opisy-nfz/zasoby/baza-dane.js"></script>\n<script src="/opisy-nfz/zasoby/karty-opisy.js"></script>\n<script src="/opisy-nfz/zasoby/opis-z-karty.js"></script>'),
+  ('P43a przycisk „Opis z karty” obok „Edytuj tekst” (krok 3) – generator opisu NFZ bez zmian',
+   '<button type="button" class="btn ghost sm" data-act="edtxt" id="edTxtBtn">Edytuj tekst</button>',
+   '<button type="button" class="btn ghost sm" data-act="edtxt" id="edTxtBtn">Edytuj tekst</button>${window.OpisZKarty?OpisZKarty.przycisk(\'btn ghost sm\'):\'\'}'),
+  ('P43b przycisk „Opis z karty” także w trybie edycji tekstu',
+   '<button type="button" class="btn ghost sm" data-act="regen" id="regenBtn">Wygeneruj tekst z formularza</button>',
+   '<button type="button" class="btn ghost sm" data-act="regen" id="regenBtn">Wygeneruj tekst z formularza</button>${window.OpisZKarty?OpisZKarty.przycisk(\'btn ghost sm\'):\'\'}'),
+  ('P43c wstawienie: tekst z karty dopisany na końcu opisu jako edycja ręczna (state.ed) – zapis, szkic i historia jak przy „Edytuj tekst”',
+   "function fullTxt(){return state.ed?state.ed.txt:genTxt();}",
+   "function fullTxt(){return state.ed?state.ed.txt:genTxt();}\n"
+   "if(window.OpisZKarty)OpisZKarty.podlacz({moze:()=>state.codes.length&&state.step===3?true:'Najpierw wybierz zabiegi i przejdź do opisu.',"
+   "wstaw:t=>{const g=genTxt();if(!state.ed)state.ed={txt:g,gen:g};state.ed.txt=String(state.ed.txt||'').replace(/\\s+$/,'')+(state.ed.txt?'\\n\\n':'')+t;render();autoSave();refreshSave();draftSched();}});"),
 ]
 
 PATCHES_PRYW = [
@@ -322,6 +336,17 @@ PATCHES_PRYW = [
    "    $('#main').innerHTML = '<div class=\"g-err\" role=\"alert\">Wczytywanie Opisów prywatnych trwa dłużej niż zwykle (przeglądarka nie udostępnia lokalnej bazy). Dane są bezpieczne. <button type=\"button\" class=\"g-btn sm\" onclick=\"location.reload()\">Odśwież</button> – jeśli nie pomoże, zamknij inne karty z Gabinetem.</div>'; }, 8000);\n"
    "}\n"
    "async function init() {\n  startGuard();\n  await G.ready('prywatne');"),
+  ('R13 opis z karty procedury (etap I2, decyzja Patryka 22.11.2026): dane kart zweryfikowanych i okienko – tylko na urządzeniu',
+   '<script src="/opisy-nfz/zasoby/prywatne-katalog.js"></script>',
+   '<script src="/opisy-nfz/zasoby/prywatne-katalog.js"></script>\n<script src="/opisy-nfz/zasoby/karty-opisy.js"></script>\n<script src="/opisy-nfz/zasoby/opis-z-karty.js"></script>'),
+  ('R13a przycisk „Opis z karty” obok „Edytuj tekst” / „Wygeneruj tekst z formularza”',
+   "'<button type=\"button\" class=\"g-btn ghost sm\" data-a=\"new\" id=\"b_new\">Nowa wizyta</button></div>'",
+   "(window.OpisZKarty ? OpisZKarty.przycisk('g-btn ghost sm') : '') + '<button type=\"button\" class=\"g-btn ghost sm\" data-a=\"new\" id=\"b_new\">Nowa wizyta</button></div>'"),
+  ('R13b wstawienie: tekst z karty dopisany na końcu opisu jako edycja ręczna (V.edited) – zapis i szkic jak przy „Edytuj tekst”',
+   "const curText = () => V.edited && typeof V.txt === 'string' ? V.txt : visitText();",
+   "const curText = () => V.edited && typeof V.txt === 'string' ? V.txt : visitText();\n"
+   "if (window.OpisZKarty) OpisZKarty.podlacz({ moze: () => V.items.length ? true : 'Najpierw dodaj procedurę do wizyty.',\n"
+   "  wstaw: t => { if (!V.edited) { V.edited = true; V.txt = visitText(); V.genAtEdit = V.txt; } V.txt = String(V.txt || '').replace(/\\s+$/, '') + (V.txt ? '\\n\\n' : '') + t; refreshSide(); draftSched(); } });"),
 ]
 
 PATCHES_KAL = [
@@ -485,6 +510,7 @@ shutil.copy(os.path.join(OLD, 'szablony.js'), os.path.join(OUT, 'szablony.js'))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'scripts'))
 import nfz_dane_przegladarka; nfz_dane_przegladarka.zapisz()   # audyt NFZ (N1): data/nfz → generator/nfz-dane.js
 import baza_dane_przegladarka; baza_dane_przegladarka.zapisz()   # baza stomatologiczna (I1): checklisty → generator/baza-dane.js
+import karty_opisy_przegladarka; karty_opisy_przegladarka.zapisz()   # opis z karty (I2): szablony kart zweryfikowanych → generator/karty-opisy.js
 shutil.copy(os.path.join(OLD, 'wspolne.css'), os.path.join(OUT, 'wspolne.css'))
 with open(os.path.join(OUT, 'ZMIANY.md'), 'w', encoding='utf-8') as f:
     f.write(f'# Moduły Opisy NFZ, Opisy prywatne i Kalendarz – zmiany względem obecnej aplikacji\n\nŹródło: repo `opisy-nfz`, commit `{commit}` – pliki `nfz.html`, `szablony.js`, `prywatne.html`, `prywatne-katalog.js`, `kalendarz.html`, `wspolne.css` (logika, pytania, reguły NFZ, szablony i teksty bez zmian).\n'
