@@ -108,6 +108,7 @@ for p in procs.values():
 # 4. Badania
 for b in badania.values():
     g = b['id']; src_ok(b['zrodla'], g)
+    if b['status'] == 'verified' and (not b.get('zweryfikowal') or not b.get('zweryfikowano')): bledy.append(f'{g}: verified bez osoby weryfikującej lub daty')
     for s in ('niezbedne', 'zalecane', 'sytuacyjne'): poz_ok(b['dokumentacja'][s], g + ' dokumentacja')
     for e in b['elementy_oceny']:
         if e.get('pole') and e['pole'] not in pola: bledy.append(f'{g}: nieznane pole {e["pole"]}')

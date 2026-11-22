@@ -118,3 +118,16 @@ Przywrócone i zatwierdzone (25): 23.0103, 23.0104, 23.0106, 23.02, 23.0404, 23.
 Pozostają odrzucone: 62. Pominięte kody (57: ortodoncja, chirurgia szczękowo-twarzowa, znieczulenie ogólne, epitezy) – bez zmian, decyzja: nie opracowywać.
 
 **Stan:** 144 verified, 0 draft, 62 odrzucone, 57 pominięte, 3 nadrzędne (razem 266).
+
+### Weryfikacja badań (22.11.2026)
+
+Patryk zatwierdził wszystkie 17 badań (`verified`, z osobą i datą – schemat badań rozszerzony o `zweryfikowal`, `zweryfikowano`, `uzasadnienie_statusu`; walidator wymaga osoby i daty przy `verified`). Dodany mechanizm odrzucania badań (status `not_started` + „Odrzucone…” → ukryte w katalogu, jak karty procedur) – obecnie nieużywany.
+**Prośba Patryka – nowa funkcja (do zaplanowania):** w aplikacji wybór, które części badania mają się pojawić w opisie (np. bez wywiadu i bez oceny zmian na błonie, ale z badaniem wewnątrz- i zewnątrzustnym).
+
+### Uwagi do audytu NFZ – sprawdzenie (22.11.2026)
+
+| Uwaga | Wynik | Źródło |
+|---|---|---|
+| 23.1313 (3 kanały ze zgorzelą) brak w NFZ | **Potwierdzone – nie jest świadczeniem gwarantowanym.** Rozporządzenie wymienia 23.1308, 23.1309, 23.1311, 23.1312, 23.1314 (MTA), a 23.1313 nie występuje w żadnym załączniku (1, 2, 2a, 2b, 3, 4). Karta zostaje z oznaczeniem „poza NFZ”. | Dz.U. 2025 poz. 615 (t.j. rozporządzenia MZ), pobrany z api.sejm.gov.pl 22.11.2026; zmian rozporządzenia po t.j. nie sprawdzano |
+| 23.1308 / 23.1309 / 23.1312 – warunki | Zgodne z kartami: tylko dzieci i młodzież do 18 r.ż. oraz kobiety w ciąży i połogu; bez opracowania i odbudowy korony | jw. |
+| Kody produktów 23.13142 (`2314142`?), 23.1003 (`2310090`?) i nieodczytane (23.1203–23.1205, 23.1308, 23.1309, 23.1312 i in.) | **Nie sprawdzone** – strona baw.nfz.gov.pl blokuje pobieranie automatyczne; potrzebny zał. 1b do zarządzenia 60/2023/DSOZ (t.j.) od Patryka (PDF/XLSX) albo odczyt w portalu NFZ | SRC-ZARZ-60-2023-TJ |

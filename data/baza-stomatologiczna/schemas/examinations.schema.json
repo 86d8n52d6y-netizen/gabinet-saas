@@ -382,6 +382,18 @@
      "uwagi": {
       "type": "string",
       "minLength": 1
+     },
+     "zweryfikowal": {
+      "type": "string",
+      "minLength": 1
+     },
+     "zweryfikowano": {
+      "type": "string",
+      "format": "date"
+     },
+     "uzasadnienie_statusu": {
+      "type": "string",
+      "minLength": 1
      }
     }
    }

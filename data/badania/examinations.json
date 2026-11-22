@@ -166,7 +166,9 @@
     "SRC-PRAKTYKA",
     "SRC-DU-2026-1391"
    ],
-   "status": "draft"
+   "status": "verified",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "BAD-ZEWNATRZUSTNE",
@@ -308,7 +310,9 @@
     "SRC-PRAKTYKA",
     "SRC-DU-2026-1391"
    ],
-   "status": "draft"
+   "status": "verified",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "BAD-WEWNATRZUSTNE",
@@ -468,7 +472,9 @@
     "SRC-PRAKTYKA",
     "SRC-DU-2026-1391"
    ],
-   "status": "draft"
+   "status": "verified",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "BAD-BLONA",
@@ -637,7 +643,9 @@
     "SRC-PRAKTYKA",
     "SRC-DU-2026-1391"
    ],
-   "status": "draft"
+   "status": "verified",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "BAD-UZEBIENIE",
@@ -828,7 +836,9 @@
     "SRC-NFZ-KOM-6113",
     "SRC-DU-2026-1391"
    ],
-   "status": "draft"
+   "status": "verified",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "BAD-PRZYZEBIE",
@@ -1003,7 +1013,9 @@
     "SRC-KLIN-KLASYF-2018",
     "SRC-DU-2026-1391"
    ],
-   "status": "draft"
+   "status": "verified",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "BAD-HIGIENA",
@@ -1152,7 +1164,9 @@
     "SRC-DU-2025-615",
     "SRC-DU-2026-1391"
    ],
-   "status": "draft"
+   "status": "verified",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "BAD-ZGRYZ",
@@ -1294,7 +1308,9 @@
     "SRC-PRAKTYKA",
     "SRC-DU-2026-1391"
    ],
-   "status": "draft"
+   "status": "verified",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "BAD-SSZ",
@@ -1446,7 +1462,9 @@
     "SRC-KLIN-DCTMD-2014",
     "SRC-DU-2026-1391"
    ],
-   "status": "draft"
+   "status": "verified",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "BAD-ZYWOTNOSC",
@@ -1615,7 +1633,9 @@
     "SRC-DU-2025-615",
     "SRC-DU-2026-1391"
    ],
-   "status": "draft"
+   "status": "verified",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "BAD-RTG",
@@ -1755,7 +1775,9 @@
     "SRC-DU-2026-1391"
    ],
    "uwagi": "Wymagania prawa atomowego (uzasadnienie, ochrona radiologiczna) – akt nieopisany w audycie; oznaczone do weryfikacji.",
-   "status": "draft"
+   "status": "verified",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "BAD-PO-URAZIE",
@@ -1929,7 +1951,9 @@
     "SRC-KLIN-IADT-MLECZ-2020",
     "SRC-DU-2026-1391"
    ],
-   "status": "draft"
+   "status": "verified",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "BAD-DZIECKO",
@@ -2112,7 +2136,9 @@
     "SRC-PRAWA-PACJENTA",
     "SRC-DU-2026-1391"
    ],
-   "status": "draft"
+   "status": "verified",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "BAD-STOMATOLOGICZNE",
@@ -2238,7 +2264,9 @@
     "SRC-DU-2026-1391"
    ],
    "uwagi": "Badanie złożone – nie powiela pól; opis składa się z szablonów badań składowych.",
-   "status": "draft"
+   "status": "verified",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "BAD-KONTROLNE",
@@ -2351,7 +2379,9 @@
     "SRC-DU-2025-615",
     "SRC-DU-2026-1391"
    ],
-   "status": "draft"
+   "status": "verified",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "BAD-PRZED-LECZENIEM",
@@ -2489,7 +2519,9 @@
     "SRC-PRAKTYKA",
     "SRC-DU-2026-1391"
    ],
-   "status": "draft"
+   "status": "verified",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "BAD-PO-LECZENIU",
@@ -2616,7 +2648,9 @@
     "SRC-KLIN-ESE-S3-2023",
     "SRC-DU-2026-1391"
    ],
-   "status": "draft"
+   "status": "verified",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   }
  ]
 }

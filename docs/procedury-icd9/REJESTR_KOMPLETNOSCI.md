@@ -12,7 +12,7 @@ Wersja danych: 2026.11.22-1.
 | verified | 144 |
 | **razem** | **266** |
 
-Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: draft, BAD-BLONA: draft, BAD-UZEBIENIE: draft, BAD-PRZYZEBIE: draft, BAD-HIGIENA: draft, BAD-ZGRYZ: draft, BAD-SSZ: draft, BAD-ZYWOTNOSC: draft, BAD-RTG: draft, BAD-PO-URAZIE: draft, BAD-DZIECKO: draft, BAD-STOMATOLOGICZNE: draft, BAD-KONTROLNE: draft, BAD-PRZED-LECZENIEM: draft, BAD-PO-LECZENIU: draft).
+Badania: 17 (BAD-WYWIAD: verified, BAD-ZEWNATRZUSTNE: verified, BAD-WEWNATRZUSTNE: verified, BAD-BLONA: verified, BAD-UZEBIENIE: verified, BAD-PRZYZEBIE: verified, BAD-HIGIENA: verified, BAD-ZGRYZ: verified, BAD-SSZ: verified, BAD-ZYWOTNOSC: verified, BAD-RTG: verified, BAD-PO-URAZIE: verified, BAD-DZIECKO: verified, BAD-STOMATOLOGICZNE: verified, BAD-KONTROLNE: verified, BAD-PRZED-LECZENIEM: verified, BAD-PO-LECZENIU: verified).
 
 `draft` = opracowane, niezweryfikowane przez Patryka; `verified` – wyłącznie po weryfikacji (pole zweryfikowal).
 

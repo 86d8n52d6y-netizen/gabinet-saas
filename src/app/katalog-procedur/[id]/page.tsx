@@ -21,10 +21,11 @@ export default async function Karta({ params }: { params: Promise<{ id: string }
   if (id.startsWith('BAD-')) {
     const x = b.badania.find(e => e.id === id) as R | undefined;
     if (!x) notFound();
+    if (x.status === 'not_started') return <main className="wrap"><p><a href="/katalog-procedur">← Katalog procedur i badań</a></p><h1>{String(x.nazwa)}</h1><p>Badanie odrzucone – nie jest wyświetlane w aplikacji.</p></main>;
     const cel = x.cel as R, wsk = x.wskazania as R, dok = x.dokumentacja as Record<string, Poz[]>, pw = x.powiazania as R;
     return (
       <main className="wrap"><p><a href="/katalog-procedur">← Katalog procedur i badań</a></p>
-        <h1>{String(x.nazwa)}</h1><p><span className={x.status === 'verified' ? 'badge' : 'badge warn'} data-testid="kp-status">{STATUS[String(x.status)]}</span> <span className="muted">{String(x.id)} · {String(x.kategoria)}</span></p>
+        <h1>{String(x.nazwa)}</h1><p><span className={x.status === 'verified' ? 'badge' : 'badge warn'} data-testid="kp-status">{STATUS[String(x.status)]}</span>{x.zweryfikowal ? <span className="muted"> · zweryfikował: {String(x.zweryfikowal)}, {String(x.zweryfikowano ?? '')}</span> : null} <span className="muted">{String(x.id)} · {String(x.kategoria)}</span></p>
         <section className="card"><p><b>Cel:</b> {String(cel.oceniane)}</p><Lista t="Informacje" x={cel.informacje} /><Lista t="Wykrywa" x={cel.wykrywa} /><Lista t="Wskazania" x={wsk.kiedy} /><Lista t="Szczególnie" x={wsk.szczegolnie} /></section>
         <section className="card"><h2 style={{ marginTop: 0 }}>Przebieg</h2><ol>{(x.przebieg as { krok: string; opis: string }[]).map((k, i) => <li key={i}><b>{k.krok}</b> – {k.opis}</li>)}</ol>
           <h3>Elementy oceny</h3><ul>{(x.elementy_oceny as { element: string; co: string; pole?: string }[]).map((e, i) => <li key={i}>{e.element} – {e.co}{e.pole ? <span className="muted"> (pole: {b.pola.get(e.pole)?.etykieta})</span> : null}</li>)}</ul>
