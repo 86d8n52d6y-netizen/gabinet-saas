@@ -1,0 +1,93 @@
+{
+  "stan_na": "2026-11-21",
+  "zrodlo": "SRC-DU-2025-615",
+  "zalacznik": "11",
+  "uwaga": "Kompozyty światłoutwardzalne u dorosłych z niepełnosprawnością i dzieci niepełnosprawnych – § 4 rozporządzenia (poza zał. 11).",
+  "materialy": [
+    {
+      "grupa": "wszyscy",
+      "nazwa": "materiał do wypełnień czasowych",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "grupa": "wszyscy",
+      "nazwa": "cementy podkładowe na bazie wodorotlenku wapnia, cement fosforanowy",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "grupa": "wszyscy",
+      "nazwa": "cement szkłojonomerowy",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "grupa": "wszyscy",
+      "nazwa": "cement szkłojonomerowy o zwiększonej gęstości",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "grupa": "wszyscy",
+      "nazwa": "cement szkłojonomerowy wzmocniony żywicą",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "grupa": "wszyscy",
+      "nazwa": "kompozytowy materiał chemoutwardzalny do wypełniania ubytków w zębach przednich górnych i dolnych (od 3+ do +3, od 3- do -3)",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "grupa": "wszyscy",
+      "nazwa": "materiały do wypełnień kanałów korzeniowych",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "grupa": "wszyscy",
+      "nazwa": "ćwieki gutaperkowe",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "grupa": "wszyscy",
+      "nazwa": "masa wyciskowa alginatowa",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "grupa": "wszyscy",
+      "nazwa": "masa do wycisków czynnościowych przy bezzębiu",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "grupa": "wszyscy",
+      "nazwa": "nici chirurgiczne",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "grupa": "wszyscy",
+      "nazwa": "szyny unieruchamiające, drut ligaturowy",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "grupa": "<18",
+      "nazwa": "światłoutwardzalny materiał kompozytowy do wypełniania ubytków w zębach siecznych i kłach w szczęce i żuchwie",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "grupa": "<18",
+      "nazwa": "laki szczelinowe",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "grupa": "<18",
+      "nazwa": "lakiery",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "grupa": "<18",
+      "nazwa": "cement chirurgiczny jako opatrunek przy zabiegach w obrębie przyzębia",
+      "status": "POTWIERDZONA"
+    },
+    {
+      "grupa": "ciąża/połóg",
+      "nazwa": "cement chirurgiczny jako opatrunek przy zabiegach w obrębie przyzębia",
+      "status": "POTWIERDZONA"
+    }
+  ]
+}

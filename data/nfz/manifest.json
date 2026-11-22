@@ -1,0 +1,70 @@
+{
+  "nazwa": "nfz-stomatologia-audyt",
+  "wersja": "2026.11.21-1",
+  "audyt_rozpoczety": "2026-11-21T17:28+01:00",
+  "stan_prawny_na": "2026-11-21",
+  "autor": "Claude (czat), do zatwierdzenia przez Patryka",
+  "pliki": [
+    {
+      "plik": "sources.json",
+      "sha256": "321e00e1abaf6b24414acd1deef21cef396858a84ff6ff03ef1d8bdece80aaf8",
+      "bajty": 13124
+    },
+    {
+      "plik": "procedures.json",
+      "sha256": "d605f5274d32f0bbfe91a4582bc829a0faf400d07ec7d20976ab805e5dc14da8",
+      "bajty": 205909
+    },
+    {
+      "plik": "products.json",
+      "sha256": "60da21e5392d8502c1a17013f6efe6d0a01704d49bfd7d94f0f20467cf9ecf01",
+      "bajty": 63227
+    },
+    {
+      "plik": "diagnoses.json",
+      "sha256": "9b6b305966c8cc601d84c69439046ce8ed180e235c895be843a00a29001ea621",
+      "bajty": 51103
+    },
+    {
+      "plik": "procedure-diagnosis-mappings.json",
+      "sha256": "e8ba3585faa33266224ace782f560c9de10c6d3ab7415d728449978fa2b981a1",
+      "bajty": 137033
+    },
+    {
+      "plik": "billing-rules.json",
+      "sha256": "05f03d8ddebe3285ad943e44701ddf9d4570bdbb2c0e1c15518ed6c4f9405e48",
+      "bajty": 29168
+    },
+    {
+      "plik": "limits-and-combinations.json",
+      "sha256": "c8bd6414dd68c09b9bd103d3ab9cd94b9cade7f99cd691f8274a523217b74773",
+      "bajty": 14349
+    },
+    {
+      "plik": "materials.json",
+      "sha256": "b240cd0017adaa9b18982a6da35a5339c3a22f43355790d78af5dac6150385a9",
+      "bajty": 2587
+    }
+  ],
+  "liczniki": {
+    "zrodla": 26,
+    "swiadczenia_koszyk": 217,
+    "slownik_icd9": 290,
+    "produkty_1b": 84,
+    "pakiety": 43,
+    "diagnozy": 131,
+    "mapowania": 429,
+    "reguly": 47,
+    "pary_laczenia": 77,
+    "materialy": 17
+  },
+  "braki_krytyczne": [
+    "Rozporządzenie: zał. 2a, 3–9, 10a nieprzeczytane (plik 57/118 stron)",
+    "Zakresy (maska 12 zakresów) dla wierszy zał. 1b nie przeniesione",
+    "Kody produktów dla części wierszy 1b (protetyka, ortodoncja, część endo) – brak",
+    "Skład pakietów ST06–ST13, ST15–ST17, ST19–ST25, ST31, ST32 – niepełny",
+    "Polskie urzędowe nazwy ICD-10 – robocze",
+    "Komunikat NFZ 22.07.2026 (kiretaż u dzieci) – do odczytu",
+    "OWU (kary umowne) i rozporządzenie o dokumentacji – paragrafy do odczytu"
+  ]
+}

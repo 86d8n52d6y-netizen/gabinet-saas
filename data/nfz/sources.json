@@ -1,0 +1,291 @@
+{
+  "stan_na": "2026-11-21",
+  "zrodla": [
+    {
+      "id": "SRC-DU-2025-615",
+      "typ": "rozporządzenie",
+      "tytul": "Rozporządzenie MZ w sprawie świadczeń gwarantowanych z zakresu leczenia stomatologicznego – tekst jednolity Dz.U. 2025 poz. 615",
+      "url": "https://api.sejm.gov.pl/eli/acts/DU/2025/615/text.pdf",
+      "obowiazuje_od": "2025-05-13",
+      "stan": "obowiązuje",
+      "uwagi": "Sprawdzono w ELI API 21.11.2026 – brak późniejszych zmian. Plik od użytkownika ma 57 z 118 stron: przeczytano zał. 1, 2, 2b, 10, 10b, 10c, 11 + część ogólną (§ 1–8). BRAK zał. 2a, 3–9, 10a.",
+      "status": "CZĘŚCIOWO POTWIERDZONA",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-DU-2025-615-P4-1A",
+      "typ": "rozporządzenie (przepis)",
+      "tytul": "§ 4 ust. 1a rozporządzenia (znieczulenie ogólne dzieci < 18) – w brzmieniu obowiązującym od 1.01.2026",
+      "url": "https://api.sejm.gov.pl/eli/acts/DU/2025/615/text.pdf",
+      "obowiazuje_od": "2026-01-01",
+      "stan": "obowiązuje",
+      "uwagi": "Odczytane z tekstu w pliku użytkownika.",
+      "status": "POTWIERDZONA",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-ZARZ-60-2023-TJ",
+      "typ": "zarządzenie Prezesa NFZ",
+      "tytul": "Zarządzenie nr 60/2023/DSOZ (leczenie stomatologiczne) – tekst ujednolicony wg stanu od 01.09.2026 (BAW dok. 44022), zał. 1a, 1b, 1c, 1d + treść",
+      "url": "https://baw.nfz.gov.pl/NFZ/document/44022/",
+      "obowiazuje_od": "2023-04-06",
+      "stan": "obowiązuje (tekst ujednolicony)",
+      "uwagi": "Odczyt z akt.xml (EDAP) w przeglądarce. Zmiany: 105/2023, 119/2023, 38/2025, 44/2025, 95/2026.",
+      "status": "POTWIERDZONA",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-ZARZ-95-2026",
+      "typ": "zarządzenie Prezesa NFZ (zmieniające)",
+      "tytul": "Zarządzenie nr 95/2026/DSOZ zmieniające zarządzenie 60/2023/DSOZ",
+      "url": "https://baw.nfz.gov.pl/NFZ/document/44021/Zarzadzenie-95_2026_DSOZ",
+      "obowiazuje_od": "2026-09-01",
+      "stan": "obowiązuje",
+      "uwagi": "Nowe pakiety ST30D–ST30G (higienizacja < 18), rozdzielenie 23.16011/12/21/22.",
+      "status": "POTWIERDZONA",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-ICD9-PL-591",
+      "typ": "słownik",
+      "tytul": "Międzynarodowa Klasyfikacja Procedur Medycznych ICD-9 PL wersja 5.91 (plik użytkownika icd-9_pl_cm_v_5.91.xlsx), rozdz. 23–24 – 290 kodów na wszystkich poziomach",
+      "url": "https://ezdrowie.gov.pl",
+      "obowiazuje_od": "WYMAGA WERYFIKACJI",
+      "stan": "najnowsza znana",
+      "uwagi": "Wcześniejsze: 5.89 (od 01.09.2026, kod 23.16022), 5.90 (25.09.2026).",
+      "status": "POTWIERDZONA",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-ICD10-WHO-2016",
+      "typ": "klasyfikacja",
+      "tytul": "ICD-10 WHO 5th edition (2016), blok K00–K14 – struktura kodów (NHS Classifications Browser)",
+      "url": "https://classbrowser.nhs.uk/ICD-10-5TH-Edition/vol1/block-k00-k14.htm",
+      "obowiazuje_od": "NIE DOTYCZY",
+      "stan": "referencja struktury",
+      "uwagi": "Polska obowiązuje ICD-10 wyd. polskie (CeZ, 2008). Kody dodane przez WHO po 2008 (np. K02.5) mogą nie istnieć w wydaniu PL. Polskie nazwy w paczce = robocze, do porównania z Tomem I CeZ.",
+      "status": "CZĘŚCIOWO POTWIERDZONA",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-ICD10-CEZ",
+      "typ": "klasyfikacja",
+      "tytul": "ICD-10 Tom I, wydanie polskie (CeZ) – urzędowe nazwy polskie",
+      "url": "https://ezdrowie.gov.pl",
+      "obowiazuje_od": "NIE DOTYCZY",
+      "stan": "obowiązuje (ICD-11 nie wdrożono)",
+      "uwagi": "W poprzedniej części audytu przeczytano K00–K14, S00.5, S01.5, S02.x, S03.x, Z01.x, Z46.3–4, Z29.8, Z96.5, Z97.2, Z98.8; urzędowe nazwy PL trzeba zestawić 1:1 przed użyciem produkcyjnym.",
+      "status": "WYMAGA WERYFIKACJI",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-NFZ-KOM-9017",
+      "typ": "komunikat NFZ",
+      "tytul": "Komunikat dla świadczeniodawców – rozliczanie świadczeń stomatologicznych (Q&A ST30, 23.16011/12/21/22)",
+      "url": "https://www.nfz.gov.pl/aktualnosci/aktualnosci-centrali/komunikat-dla-swiadczeniodawcow-dotyczacy-rozliczania-swiadczen-leczenia-stomatologicznego-,9017.html",
+      "obowiazuje_od": "2026-09-23",
+      "stan": "opublikowany",
+      "uwagi": "Interpretacja płatnika, nie przepis.",
+      "status": "POTWIERDZONA",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-NFZ-KOM-9054",
+      "typ": "komunikat NFZ",
+      "tytul": "Komunikat – rozliczanie świadczeń stomatologicznych (Q&A ST30/ST30F)",
+      "url": "https://www.nfz.gov.pl/aktualnosci/aktualnosci-centrali/komunikat-dla-swiadczeniodawcow-dotyczacy-rozliczania-swiadczen-leczenia-stomatologicznego,9054.html",
+      "obowiazuje_od": "2026-11-09",
+      "stan": "opublikowany",
+      "uwagi": "Interpretacja płatnika.",
+      "status": "POTWIERDZONA",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-NFZ-KOM-8924",
+      "typ": "komunikat NFZ",
+      "tytul": "Komunikat – ST30–ST30C wyłącznie złogi twarde; wycena obejmuje lakierowanie; nieprawidłowość: lakierowanie + złogi na 1 wizycie",
+      "url": "https://www.nfz.gov.pl/aktualnosci/aktualnosci-centrali/komunikat-dla-swiadczeniodawcow,8924.html",
+      "obowiazuje_od": "2026-04-13",
+      "stan": "opublikowany, SPORNY",
+      "uwagi": "Kwestionowany przez NIL/LIL; od 01.09.2026 wyłączenie 23.1006 przy ST30–ST30C jest już w zał. 1d zarządzenia.",
+      "status": "POTWIERDZONA",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-NFZ-KOM-8386",
+      "typ": "komunikat NFZ",
+      "tytul": "Komunikat 8386 – elementy komunikatu XML (SWIAD), kody WKR/WKC",
+      "url": "https://www.nfz.gov.pl",
+      "obowiazuje_od": "2023-04-28",
+      "stan": "opublikowany",
+      "uwagi": "WKR – kolejny pakiet (0,8), WKC – ciąża/połóg (1,2).",
+      "status": "CZĘŚCIOWO POTWIERDZONA",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-NFZ-KOM-6113",
+      "typ": "komunikat NFZ",
+      "tytul": "Komunikat 6113 – oznaczanie zębów wg PN-EN ISO 3950, ząb dodatkowy „ZD”",
+      "url": "https://www.nfz.gov.pl",
+      "obowiazuje_od": "WYMAGA WERYFIKACJI",
+      "stan": "opublikowany",
+      "uwagi": "",
+      "status": "CZĘŚCIOWO POTWIERDZONA",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-NFZ-WEBINAR",
+      "typ": "materiał NFZ",
+      "tytul": "Webinaria NFZ – leczenie stomatologiczne (odpowiedzi na pytania: 1 pakiet = 1 ząb/lokalizacja; ½ łuku; 1,0/0,8)",
+      "url": "https://www.nfz.gov.pl/dla-swiadczeniodawcy/webinaria-nfz/leczenie-stomatologiczne/",
+      "obowiazuje_od": "NIE DOTYCZY",
+      "stan": "opublikowany",
+      "uwagi": "Interpretacja płatnika.",
+      "status": "POTWIERDZONA",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-NFZ-KOM-KIRETAZ-DZ",
+      "typ": "komunikat NFZ",
+      "tytul": "Komunikat NFZ z 22.07.2026 dot. kiretażu u dzieci",
+      "url": "https://www.nfz.gov.pl",
+      "obowiazuje_od": "2026-07-22",
+      "stan": "opublikowany, SPORNY",
+      "uwagi": "Protest NIL (nil.org.pl/articleToPdf/9349). Treści komunikatu nie zacytowano – WYMAGA ponownego odczytu.",
+      "status": "WYMAGA WERYFIKACJI",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-SEJM-INT-16442",
+      "typ": "interpelacja poselska",
+      "tytul": "Interpelacja nr 16442 (08.04.2026) – komunikaty NFZ nr 1292084 (25.03.2026) i 819330 (24.03.2026), ST30–ST30C, lakierowanie, korekty wsteczne",
+      "url": "https://api.sejm.gov.pl/sejm/term10/interpellations/16442/body",
+      "obowiazuje_od": "NIE DOTYCZY",
+      "stan": "brak odpowiedzi w źródle",
+      "uwagi": "Opinia konsultanta krajowego ds. periodontologii (23.07.2024); stanowisko Prezydium NRL 30/26/P-IX.",
+      "status": "POTWIERDZONA",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-NIL-39-26",
+      "typ": "stanowisko samorządu",
+      "tytul": "Stanowisko Prezydium NRL nr 39/26/P-IX (15.05.2026)",
+      "url": "https://nil.org.pl",
+      "obowiazuje_od": "NIE DOTYCZY",
+      "stan": "opinia",
+      "uwagi": "",
+      "status": "CZĘŚCIOWO POTWIERDZONA",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-LEWIATAN-2026-05",
+      "typ": "stanowisko organizacji",
+      "tytul": "Stanowisko Konfederacji Lewiatan i PdZ do projektu zarządzenia (19.05.2026) – zawężenie świadczenia „usunięcie złogów”",
+      "url": "https://lewiatan.org/wp-content/uploads/2026/05/2026.05.19-Stanowisko-KL-i-PdZ_stomatologia-NFZ.pdf",
+      "obowiazuje_od": "NIE DOTYCZY",
+      "stan": "opinia",
+      "uwagi": "",
+      "status": "POTWIERDZONA",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-DU-2026-1391",
+      "typ": "rozporządzenie",
+      "tytul": "Rozporządzenie MZ w sprawie rodzajów, zakresu i wzorów dokumentacji medycznej – t.j. Dz.U. 2026 poz. 1391",
+      "url": "https://eli.gov.pl",
+      "obowiazuje_od": "WYMAGA WERYFIKACJI",
+      "stan": "obowiązuje",
+      "uwagi": "Szczegółowe paragrafy nie zostały przeczytane w tym audycie.",
+      "status": "WYMAGA WERYFIKACJI",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-DU-2026-712",
+      "typ": "rozporządzenie",
+      "tytul": "OWU – ogólne warunki umów o udzielanie świadczeń (t.j. Dz.U. 2026 poz. 712, zm. 863, 1137, 1409)",
+      "url": "https://eli.gov.pl",
+      "obowiazuje_od": "WYMAGA WERYFIKACJI",
+      "stan": "obowiązuje",
+      "uwagi": "Kary umowne, zwrot nienależnych środków – paragrafy do odczytu.",
+      "status": "WYMAGA WERYFIKACJI",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-USTAWA-SWIADCZENIA",
+      "typ": "ustawa",
+      "tytul": "Ustawa o świadczeniach opieki zdrowotnej finansowanych ze środków publicznych – t.j. Dz.U. 2025 poz. 1461",
+      "url": "https://eli.gov.pl",
+      "obowiazuje_od": "NIE DOTYCZY",
+      "stan": "obowiązuje",
+      "uwagi": "art. 50 – potwierdzanie prawa (eWUŚ).",
+      "status": "CZĘŚCIOWO POTWIERDZONA",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-PRAWA-PACJENTA",
+      "typ": "ustawa",
+      "tytul": "Ustawa o prawach pacjenta i RPP – t.j. Dz.U. 2024 poz. 581",
+      "url": "https://eli.gov.pl",
+      "obowiazuje_od": "NIE DOTYCZY",
+      "stan": "obowiązuje",
+      "uwagi": "Dokumentacja medyczna (rozdz. 7).",
+      "status": "CZĘŚCIOWO POTWIERDZONA",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-WYR-SO-SIEDLCE-IIKa168-24",
+      "typ": "orzeczenie",
+      "tytul": "Wyrok SO w Siedlcach z 31.01.2025, II Ka 168/24 (ortodoncja NFZ, art. 286 § 1 k.k.)",
+      "url": "https://www.saos.org.pl/judgments/523200",
+      "obowiazuje_od": "NIE DOTYCZY",
+      "stan": "prawomocny",
+      "uwagi": "Fikcyjne terminy wizyt, wpisy niewykonanych świadczeń, poprawki bez autoryzacji, podpisy rodziców bez dat. 5-letni zakaz udzielania świadczeń publicznych.",
+      "status": "POTWIERDZONA",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-WYR-SR-BIALYSTOK-IIC992-22",
+      "typ": "orzeczenie",
+      "tytul": "Wyrok SR w Białymstoku z 01.03.2024, II C 992/22 (laryngologia – NIE stomatologia)",
+      "url": "https://www.saos.org.pl/judgments/544836",
+      "obowiazuje_od": "NIE DOTYCZY",
+      "stan": "wyrok I instancji",
+      "uwagi": "Spór o kod rozliczeniowy; ciężar dowodu na NFZ; niejasności zarządzenia obciążają autora. Analogia, nie precedens stomatologiczny.",
+      "status": "POTWIERDZONA",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-WYR-SN-IIICSK296-16",
+      "typ": "orzeczenie",
+      "tytul": "Wyrok SN z 24.11.2017, III CSK 296/16 (zwrot nienależnych środków, kara umowna za dokumentację)",
+      "url": "https://www.sn.pl/sites/orzecznictwo/Orzeczenia3/III%20CSK%20296-16-3.pdf",
+      "obowiazuje_od": "NIE DOTYCZY",
+      "stan": "—",
+      "uwagi": "Treść nie została pobrana (błąd serwera). Opis tylko z wyników wyszukiwania – nie cytować.",
+      "status": "WYMAGA WERYFIKACJI",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-NIK-P-23-043",
+      "typ": "raport NIK",
+      "tytul": "NIK P/23/043 – dostępność świadczeń stomatologicznych",
+      "url": "https://www.nik.gov.pl",
+      "obowiazuje_od": "NIE DOTYCZY",
+      "stan": "opublikowany",
+      "uwagi": "Tło systemowe; wnioski szczegółowe nie były czytane.",
+      "status": "WYMAGA WERYFIKACJI",
+      "data_dostepu": "2026-11-21"
+    },
+    {
+      "id": "SRC-PREZ-STOMAT",
+      "typ": "materiał szkoleniowy (plik użytkownika)",
+      "tytul": "prezentacja_stomatologia__11.05.pdf",
+      "url": "NIE DOTYCZY",
+      "obowiazuje_od": "NIE DOTYCZY",
+      "stan": "nieaktualna",
+      "uwagi": "Tylko tło – sprzed zarządzenia 95/2026.",
+      "status": "CZĘŚCIOWO POTWIERDZONA",
+      "data_dostepu": "2026-11-21"
+    }
+  ]
+}

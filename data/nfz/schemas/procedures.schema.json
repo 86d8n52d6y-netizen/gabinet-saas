@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "nfz/procedures.schema.json",
+  "title": "procedures",
+  "type": "object",
+  "properties": {
+    "stan_na": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "swiadczenia_gwarantowane": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "zalacznik": {
+            "enum": [
+              "1",
+              "2",
+              "2b",
+              "10",
+              "10b",
+              "10c"
+            ]
+          },
+          "kod_icd9": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "nazwa_rozporzadzenie": {
+            "type": "string",
+            "minLength": 3
+          },
+          "warunki_tekst": {
+            "type": "string"
+          },
+          "grupa_wiekowa": {
+            "type": "string"
+          },
+          "zrodlo": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "POTWIERDZONA",
+              "CZĘŚCIOWO POTWIERDZONA",
+              "WYMAGA WERYFIKACJI"
+            ]
+          }
+        },
+        "required": [
+          "zalacznik",
+          "kod_icd9",
+          "nazwa_rozporzadzenie",
+          "zrodlo",
+          "status"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "warianty_nfz_vs_icd9": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "kod_nfz": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "POTWIERDZONA",
+              "CZĘŚCIOWO POTWIERDZONA",
+              "WYMAGA WERYFIKACJI"
+            ]
+          }
+        },
+        "required": [
+          "kod_nfz",
+          "kod_icd9_591",
+          "status"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "slownik_icd9_591": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "kod": {
+            "type": "string",
+            "pattern": "^\\d{2}(\\.\\d{1,5})?$"
+          },
+          "nazwa": {
+            "type": "string",
+            "minLength": 2
+          },
+          "poziom": {
+            "type": "integer"
+          },
+          "ma_podkody": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "kod",
+          "nazwa",
+          "poziom"
+        ],
+        "additionalProperties": true
+      }
+    }
+  },
+  "required": [
+    "stan_na",
+    "swiadczenia_gwarantowane",
+    "slownik_icd9_591",
+    "warianty_nfz_vs_icd9"
+  ],
+  "additionalProperties": true
+}

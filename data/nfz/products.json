@@ -1,0 +1,2191 @@
+{
+  "stan_na": "2026-11-21",
+  "zakresy": [
+    {
+      "kod": "07.0000.218.02",
+      "nazwa": "świadczenia ogólnostomatologiczne"
+    },
+    {
+      "kod": "07.0000.221.02",
+      "nazwa": "świadczenia ogólnostomatologiczne dla dzieci i młodzieży do 18 r.ż."
+    },
+    {
+      "kod": "07.0000.219.02",
+      "nazwa": "świadczenia stomatologiczne w znieczuleniu ogólnym"
+    },
+    {
+      "kod": "07.0000.311.02",
+      "nazwa": "świadczenia dla pacjentów z chorobą AIDS / wysokiego ryzyka"
+    },
+    {
+      "kod": "07.0000.223.02",
+      "nazwa": "świadczenia periodontologii"
+    },
+    {
+      "kod": "07.0000.220.02",
+      "nazwa": "świadczenia chirurgii stomatologicznej i periodontologii"
+    },
+    {
+      "kod": "07.0000.213.02",
+      "nazwa": "świadczenia ortodontyczne dla dzieci i młodzieży"
+    },
+    {
+      "kod": "07.0000.214.02",
+      "nazwa": "świadczenia protetyki stomatologicznej"
+    },
+    {
+      "kod": "07.0000.217.02",
+      "nazwa": "świadczenia protetyki po leczeniu onkologicznym"
+    },
+    {
+      "kod": "07.1850.118.03",
+      "nazwa": "stomatologiczna pomoc doraźna"
+    },
+    {
+      "kod": "07.0000.400.02",
+      "nazwa": "świadczenia w dentobusie"
+    },
+    {
+      "kod": "07.0000.500.02",
+      "nazwa": "świadczenia w gabinecie szkolnym"
+    }
+  ],
+  "listy_pomocnicze_zal_1d": {
+    "ST1": [
+      "23.0401",
+      "23.0402",
+      "23.0403"
+    ],
+    "ST2": [
+      "23.1809",
+      "23.1812",
+      "23.1815"
+    ],
+    "ST3": [
+      "23.1604",
+      "23.1620"
+    ],
+    "ST4": [
+      "23.02",
+      "23.1604"
+    ],
+    "ST5": [
+      "23.1006"
+    ]
+  },
+  "jednostkowe_zal_1b": [
+    {
+      "id": "1b-1",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 1,
+      "kod_icd9": "23.0301",
+      "kod_produktu": "5.13.00.2303010",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Rentgenodiagnostyka do 2 zdjęć wewnątrzustnych",
+      "w_slowniku_591": true,
+      "punkty": 20,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "Przypis: rozliczane także 23.0302",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-2",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 2,
+      "kod_icd9": "23.0401",
+      "kod_produktu": "5.13.00.2304010",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Znieczulenie miejscowe powierzchniowe",
+      "w_slowniku_591": true,
+      "punkty": 3,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-3",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 3,
+      "kod_icd9": "23.0402",
+      "kod_produktu": "5.13.00.2304020",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Znieczulenie miejscowe nasiękowe",
+      "w_slowniku_591": true,
+      "punkty": 12,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-4",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 4,
+      "kod_icd9": "23.0403",
+      "kod_produktu": "5.13.00.2304030",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Znieczulenie przewodowe wewnątrzustne",
+      "w_slowniku_591": true,
+      "punkty": 20,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-5",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 5,
+      "kod_icd9": "23.1101",
+      "kod_produktu": "5.13.00.2311010",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Leczenie próchnicy powierzchniowej - za każdy ząb",
+      "w_slowniku_591": true,
+      "punkty": 6,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-6",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 6,
+      "kod_icd9": "23.1105",
+      "kod_produktu": "5.13.00.2311050",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Postępowanie przy obnażeniu i skaleczeniu miazgi - bezpośrednie pokrycie miazgi",
+      "w_slowniku_591": true,
+      "punkty": 40,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-7",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 7,
+      "kod_icd9": "23.1106",
+      "kod_produktu": "5.13.00.2311060",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Opatrunek leczniczy w zębie stałym",
+      "w_slowniku_591": true,
+      "punkty": 11,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-8",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 8,
+      "kod_icd9": "23.1502",
+      "kod_produktu": "5.13.00.2315020",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Całkowite opracowanie i odbudowa ubytku zęba na 1 powierzchni",
+      "w_slowniku_591": true,
+      "punkty": 45,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-9",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 9,
+      "kod_icd9": "23.1503",
+      "kod_produktu": "5.13.00.2315030",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Całkowite opracowanie i odbudowa ubytku na 2 powierzchniach",
+      "w_slowniku_591": true,
+      "punkty": 54,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-11",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 11,
+      "kod_icd9": "23.1504",
+      "kod_produktu": "5.13.00.2315040",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Całkowite opracowanie i odbudowa rozległego ubytku na 2 powierzchniach",
+      "w_slowniku_591": true,
+      "punkty": 71,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-12",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 12,
+      "kod_icd9": "23.1505",
+      "kod_produktu": "5.13.00.2315050",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Całkowite opracowanie i odbudowa rozległego ubytku na 3 powierzchniach",
+      "w_slowniku_591": true,
+      "punkty": 74,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-13",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 13,
+      "kod_icd9": "23.1201",
+      "kod_produktu": "5.13.00.2312010",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Trepanacja martwego zęba z zaopatrzeniem ubytku opatrunkiem",
+      "w_slowniku_591": true,
+      "punkty": 30,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-14",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 14,
+      "kod_icd9": "23.1202",
+      "kod_produktu": "5.13.00.2312020",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Dewitalizacja miazgi zęba z zaopatrzeniem ubytku opatrunkiem",
+      "w_slowniku_591": true,
+      "punkty": 36,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-15",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 15,
+      "kod_icd9": "23.1206",
+      "kod_produktu": "5.13.00.2312060",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Ekstyrpacja przyżyciowa miazgi",
+      "w_slowniku_591": true,
+      "punkty": 70,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-16",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 16,
+      "kod_icd9": "23.1209",
+      "kod_produktu": "5.13.00.2312090",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Ekstyrpacja zdewitalizowanej miazgi zęba",
+      "w_slowniku_591": true,
+      "punkty": 40,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-17",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 17,
+      "kod_icd9": "23.1306",
+      "kod_produktu": "5.13.00.2313060",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Czasowe wypełnienie kanału",
+      "w_slowniku_591": true,
+      "punkty": 30,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-18",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 18,
+      "kod_icd9": "23.1307",
+      "kod_produktu": "5.13.00.2313070",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Wypełnienie kanału",
+      "w_slowniku_591": true,
+      "punkty": 60,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-19",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 19,
+      "kod_icd9": "23.1311",
+      "kod_produktu": "5.13.00.2313110",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Leczenie endodontyczne zęba z wypełnieniem 1 kanału ze zgorzelą miazgi",
+      "w_slowniku_591": true,
+      "punkty": 200,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-20",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 20,
+      "kod_icd9": "23.3102",
+      "kod_produktu": "5.13.00.2331020",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Uzupełnienie braków zębowych przy pomocy protezy częściowej włącznie z prostymi doginanymi klamrami w zakresie 5-8 brakujących zębów",
+      "w_slowniku_591": true,
+      "punkty": 470,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-21",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 21,
+      "kod_icd9": "23.3103",
+      "kod_produktu": "5.13.00.2331030",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Uzupełnienie braków zębowych przy pomocy protezy częściowej włącznie z prostymi doginanymi klamrami w zakresie więcej niż 8 zębów",
+      "w_slowniku_591": true,
+      "punkty": 470,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-22",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 22,
+      "kod_icd9": "23.3104",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Zaopatrzenie bezzębnej szczęki protezą całkowitą w szczęce",
+      "w_slowniku_591": true,
+      "punkty": 536,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-23",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 23,
+      "kod_icd9": "23.3105",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Zaopatrzenie bezzębnej szczęki protezą całkowitą w żuchwie",
+      "w_slowniku_591": true,
+      "punkty": 536,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-24",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 24,
+      "kod_icd9": "23.3112",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Czynności dla odtworzenia funkcji lub poszerzenia zakresu ruchomej protezy (naprawy) w większym zakresie z wyciskiem",
+      "w_slowniku_591": true,
+      "punkty": 172,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-25",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 25,
+      "kod_icd9": "23.3116",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Całkowite podścielenie jednej protezy w sposób pośredni, włącznie z ukształtowaniem obrzeża - dla szczęki",
+      "w_slowniku_591": true,
+      "punkty": 240,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-26",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 26,
+      "kod_icd9": "23.3117",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Całkowite podścielenie jednej protezy w sposób pośredni włącznie z czynnościowym ukształtowaniem obrzeża -dla żuchwy",
+      "w_slowniku_591": true,
+      "punkty": 240,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-27",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 27,
+      "kod_icd9": "23.3118",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Czynności dla uzupełnienia brakujących tkanek miękkich, wyrównanie lub zamknięcie defektów w obrębie szczęki przy istniejącym uzębieniu resztkowym",
+      "w_slowniku_591": true,
+      "punkty": 200,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-28",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 28,
+      "kod_icd9": "23.3119",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Czynności dla uzupełnienia brakujących tkanek miękkich, wyrównania lub zamknięcia defektów w obrębie bezzębnej szczęki",
+      "w_slowniku_591": true,
+      "punkty": 200,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-29",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 29,
+      "kod_icd9": "23.3120",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Wykonanie obturatora dla zamknięcia podniebienia miękkiego",
+      "w_slowniku_591": true,
+      "punkty": 450,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-30",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 30,
+      "kod_icd9": "23.3121",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Wykonanie tymczasowej protezy poresekcyjnej wypełniającej ubytki po resekcji lub uzupełniającej duże defekty szczęki",
+      "w_slowniku_591": true,
+      "punkty": 400,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-31",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 31,
+      "kod_icd9": "23.3122",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Wykonanie protezy poresekcyjnej ostatecznej",
+      "w_slowniku_591": true,
+      "punkty": 624,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-32",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 32,
+      "kod_icd9": "23.3123",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Wykonanie protezy lub epitezy dla uzupełnienia zewnątrzustrojowych defektów części miękkich lub dla uzupełnienia brakujących części twarzy w mniejszym zakresie",
+      "w_slowniku_591": true,
+      "punkty": 624,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-33",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 33,
+      "kod_icd9": "23.3124",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Wykonanie protezy lub epitezy dla uzupełnienia zewnątrzustrojowych defektów części miękkich lub dla uzupełnienia brakujących części twarzy o większym zakresie",
+      "w_slowniku_591": true,
+      "punkty": 960,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-34",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 34,
+      "kod_icd9": "23.06",
+      "kod_produktu": "5.13.00.2306000",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Wizyta adaptacyjna -dotyczy pierwszych wizyt małych dzieci",
+      "w_slowniku_591": true,
+      "punkty": 85,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-35",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 35,
+      "kod_icd9": "23.0304",
+      "kod_produktu": "5.13.00.2303040",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Rentgenodiagnostyka - zdjęcie pantomograficzne z opisem",
+      "w_slowniku_591": true,
+      "punkty": 74,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-36",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 36,
+      "kod_icd9": "87.121",
+      "kod_produktu": "5.13.00.8712100",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": null,
+      "w_slowniku_591": false,
+      "punkty": 85,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-37",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 37,
+      "kod_icd9": "23.1003",
+      "kod_produktu": "5.13.00.2310090",
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Zabezpieczenie profilaktyczne bruzd lakiem szczelinowym - za każdy ząb",
+      "w_slowniku_591": true,
+      "punkty": 11,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "Kod produktu 2310090 przy ICD-9 23.1003 – odczytany tak w zał. 1b; zweryfikować znak po znaku",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-38",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 38,
+      "kod_icd9": "23.1006",
+      "kod_produktu": "5.13.00.2310060",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Lakierowanie zębów 1/4 łuku zębowego",
+      "w_slowniku_591": true,
+      "punkty": 5,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-39",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 39,
+      "kod_icd9": "23.1008",
+      "kod_produktu": "5.13.00.2310080",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Impregnacja zębiny",
+      "w_slowniku_591": true,
+      "punkty": 3,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-40",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 40,
+      "kod_icd9": "23.1507",
+      "kod_produktu": "5.13.00.2315070",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Całkowite opracowanie i odbudowa zniszczonego kąta w zębach siecznych",
+      "w_slowniku_591": true,
+      "punkty": 70,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-41",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 41,
+      "kod_icd9": "23.1508",
+      "kod_produktu": "5.13.00.2315080",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Kosmetyczne pokrycie niedorozwoju szkliwa",
+      "w_slowniku_591": true,
+      "punkty": 30,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-42",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 42,
+      "kod_icd9": "23.1108",
+      "kod_produktu": "5.13.00.2311080",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Wypełnienie ubytku korony zęba mlecznego",
+      "w_slowniku_591": true,
+      "punkty": 52,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-43",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 43,
+      "kod_icd9": "23.1107",
+      "kod_produktu": "5.13.00.2311070",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Opatrunek leczniczy w zębie mlecznym",
+      "w_slowniku_591": true,
+      "punkty": 14,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-44",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 44,
+      "kod_icd9": "23.1203",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Amputacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem",
+      "w_slowniku_591": true,
+      "punkty": 50,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-45",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 45,
+      "kod_icd9": "23.1204",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Amputacja przyżyciowa miazgi",
+      "w_slowniku_591": true,
+      "punkty": 50,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-46",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 46,
+      "kod_icd9": "23.1205",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Ekstyrpacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem",
+      "w_slowniku_591": true,
+      "punkty": 80,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-47",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 47,
+      "kod_icd9": "23.1208",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Ekstyrpacja zdewitalizowanej miazgi zęba z nieuformowanym korzeniem",
+      "w_slowniku_591": true,
+      "punkty": 60,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-48",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 48,
+      "kod_icd9": "23.1210",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Amputacja zdewitalizowanej miazgi zęba mlecznego",
+      "w_slowniku_591": true,
+      "punkty": 40,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-49",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 49,
+      "kod_icd9": "23.1308",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Leczenie endodontyczne z wypełnieniem 2 kanałów",
+      "w_slowniku_591": true,
+      "punkty": 200,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-50",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 50,
+      "kod_icd9": "23.1309",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Leczenie endodontyczne z wypełnieniem 3 kanałów",
+      "w_slowniku_591": true,
+      "punkty": 250,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-51",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 51,
+      "kod_icd9": "23.1312",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Leczenie endodontyczne zęba z wypełnieniem 2 kanałów ze zgorzelą miazgi",
+      "w_slowniku_591": true,
+      "punkty": 240,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-52",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 52,
+      "kod_icd9": "23.2302",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Wycisk jednej szczęki dla diagnozy, planowania i kontroli",
+      "w_slowniku_591": true,
+      "punkty": 18,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-53",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 53,
+      "kod_icd9": "23.2308",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Korekcyjne szlifowanie zębów",
+      "w_slowniku_591": true,
+      "punkty": 30,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-54",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 54,
+      "kod_icd9": "23.2307",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Wykonanie zgryzu konstrukcyjnego",
+      "w_slowniku_591": true,
+      "punkty": 33,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-55",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 55,
+      "kod_icd9": "23.2306",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Analiza telerentgenogramu",
+      "w_slowniku_591": true,
+      "punkty": 30,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-56",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 56,
+      "kod_icd9": "23.2310",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Utrzymywacz przestrzeni jako samodzielne postępowanie",
+      "w_slowniku_591": true,
+      "punkty": 110,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-57",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 57,
+      "kod_icd9": "23.2312",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Środki do wprowadzenia pojedynczego przemieszczonego zęba do łuku, po chirurgicznym jego odsłonięciu",
+      "w_slowniku_591": true,
+      "punkty": 50,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-58",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 58,
+      "kod_icd9": "23.2401",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Leczenie aparatem ortodontycznym ruchomym, jednoszczękowym",
+      "w_slowniku_591": true,
+      "punkty": 450,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-59",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 59,
+      "kod_icd9": "23.2402",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Leczenie aparatem ortodontycznym ruchomym, dwuszczękowym nieelastycznym",
+      "w_slowniku_591": true,
+      "punkty": 600,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-60",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 60,
+      "kod_icd9": "23.2406",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Kontrola przebiegu leczenia z aparatem ruchomym",
+      "w_slowniku_591": true,
+      "punkty": 22,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-61",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 61,
+      "kod_icd9": "23.2502",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Naprawa aparatu z wyciskiem",
+      "w_slowniku_591": true,
+      "punkty": 60,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-62",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 62,
+      "kod_icd9": "23.2503",
+      "kod_produktu": "5.13.00.2325040",
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Rekonstrukcja aparatu ruchomego przy pacjencie w niewielkim zakresie",
+      "w_slowniku_591": true,
+      "punkty": 33,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "Kod produktu 2325040 przy ICD-9 23.2503 – zweryfikować",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-63",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 63,
+      "kod_icd9": "23.2611",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Proteza dziecięca częściowa",
+      "w_slowniku_591": true,
+      "punkty": 420,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-64",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 64,
+      "kod_icd9": "23.2612",
+      "kod_produktu": null,
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Proteza dziecięca całkowita",
+      "w_slowniku_591": true,
+      "punkty": 536,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-65",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 65,
+      "kod_icd9": "23.1009",
+      "kod_produktu": "5.13.00.0000001",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 6. miesiącu życia",
+      "w_slowniku_591": true,
+      "punkty": 85,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-66",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 66,
+      "kod_icd9": "23.1010",
+      "kod_produktu": "5.13.00.0000002",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 9. miesiącu życia",
+      "w_slowniku_591": true,
+      "punkty": 115,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-67",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 67,
+      "kod_icd9": "23.1011",
+      "kod_produktu": "5.13.00.0000003",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 12. miesiącu życia",
+      "w_slowniku_591": true,
+      "punkty": 115,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-68",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 68,
+      "kod_icd9": "23.1012",
+      "kod_produktu": "5.13.00.0000004",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 2. roku życia",
+      "w_slowniku_591": true,
+      "punkty": 144,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-69",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 69,
+      "kod_icd9": "23.1013",
+      "kod_produktu": "5.13.00.0000005",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 4. roku życia",
+      "w_slowniku_591": true,
+      "punkty": 144,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-70",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 70,
+      "kod_icd9": "23.1014",
+      "kod_produktu": "5.13.00.0000006",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 5. roku życia",
+      "w_slowniku_591": true,
+      "punkty": 144,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-71",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 71,
+      "kod_icd9": "23.1015",
+      "kod_produktu": "5.13.00.0000007",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 6. roku życia",
+      "w_slowniku_591": true,
+      "punkty": 144,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-72",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 72,
+      "kod_icd9": "23.1016",
+      "kod_produktu": "5.13.00.0000008",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 7. roku życia",
+      "w_slowniku_591": true,
+      "punkty": 131,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-73",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 73,
+      "kod_icd9": "23.1017",
+      "kod_produktu": "5.13.00.0000009",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 10. roku życia",
+      "w_slowniku_591": true,
+      "punkty": 131,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-74",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 74,
+      "kod_icd9": "23.1018",
+      "kod_produktu": "5.13.00.0000010",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Profilaktyczne świadczenie stomatologiczne dla młodzieży w 12. roku życia",
+      "w_slowniku_591": true,
+      "punkty": 131,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-75",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 75,
+      "kod_icd9": "23.1019",
+      "kod_produktu": "5.13.00.0000011",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Profilaktyczne świadczenie stomatologiczne dla młodzieży w 13. roku życia",
+      "w_slowniku_591": true,
+      "punkty": 131,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-76",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 76,
+      "kod_icd9": "23.1020",
+      "kod_produktu": "5.13.00.0000012",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Profilaktyczne świadczenie stomatologiczne dla młodzieży w 16. roku życia",
+      "w_slowniku_591": true,
+      "punkty": 131,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-77",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 77,
+      "kod_icd9": "23.1021",
+      "kod_produktu": "5.13.00.0000013",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Profilaktyczne świadczenie stomatologiczne dla młodzieży w 19. roku życia",
+      "w_slowniku_591": true,
+      "punkty": 131,
+      "zakresy": [
+        "07.0000.218.02"
+      ],
+      "uwagi": "Tylko zakres 07.0000.218.02",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-78",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 78,
+      "kod_icd9": "23.13141",
+      "kod_produktu": "5.13.00.2313141",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 1 kanału",
+      "w_slowniku_591": true,
+      "punkty": 200,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "Wiersz z przesuniętą komórką w XML – punkty odczytane ręcznie",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-79",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 79,
+      "kod_icd9": "23.13142",
+      "kod_produktu": "5.13.00.2314142",
+      "kod_produktu_status": "WYMAGA WERYFIKACJI",
+      "nazwa": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 2 kanałów",
+      "w_slowniku_591": true,
+      "punkty": 400,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "Kod produktu 2314142 (nie 2313142?) – zweryfikować; wiersz z przesuniętą komórką",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-80",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 80,
+      "kod_icd9": "23.13143",
+      "kod_produktu": "5.13.00.2313143",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 3 kanałów",
+      "w_slowniku_591": true,
+      "punkty": 600,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "Wiersz z przesuniętą komórką",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-81",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 81,
+      "kod_icd9": "23.13149",
+      "kod_produktu": "5.13.00.2313149",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA - inne",
+      "w_slowniku_591": true,
+      "punkty": 700,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-82",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 82,
+      "kod_icd9": "23.1004",
+      "kod_produktu": "5.13.00.2310040",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "Zabezpieczanie profilaktyczne bruzd innymi materiałami",
+      "w_slowniku_591": true,
+      "punkty": 42,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-83",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 83,
+      "kod_icd9": "23.3104a",
+      "kod_produktu": "5.13.00.2331041",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "proteza całkowita górna overdenture",
+      "w_slowniku_591": false,
+      "punkty": 1036,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "Overdenture",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-84",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 84,
+      "kod_icd9": "23.3105a",
+      "kod_produktu": "5.13.00.2331051",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "proteza całkowita dolna overdenture",
+      "w_slowniku_591": false,
+      "punkty": 1036,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "Overdenture",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "1b-85",
+      "typ": "jednostkowe",
+      "zalacznik": "1b",
+      "lp": 85,
+      "kod_icd9": "23.1012a",
+      "kod_produktu": "5.13.00.0000014",
+      "kod_produktu_status": "POTWIERDZONA",
+      "nazwa": "profilaktyka – dziecko w 3. roku życia",
+      "w_slowniku_591": false,
+      "punkty": 144,
+      "zakresy": "WYMAGA WERYFIKACJI",
+      "uwagi": "3. rok życia",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    }
+  ],
+  "pakiety_zal_1c_1d": [
+    {
+      "id": "ST01",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000001",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 93,
+      "sklad": {
+        "kierunkowa": [
+          "23.1701"
+        ],
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "opcjonalne_listy": [
+          "ST2"
+        ]
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST02",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000002",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 104,
+      "sklad": {
+        "kierunkowa": [
+          "23.1702"
+        ]
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST03",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000003",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 166,
+      "sklad": {
+        "kierunkowa": [
+          "23.17"
+        ]
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST04",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000004",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 130,
+      "sklad": {
+        "kierunkowa": [
+          "23.1607"
+        ],
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "opcjonalne_listy": [
+          "ST2",
+          "ST3"
+        ]
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST05",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000005",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 260,
+      "sklad": {
+        "kierunkowa": [
+          "23.1608"
+        ]
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": [
+        "07.0000.219.02",
+        "07.0000.223.02",
+        "07.0000.220.02"
+      ]
+    },
+    {
+      "id": "ST06",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000006",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 162,
+      "sklad": {
+        "uwagi": "Skład pakietu z zał. 1d nie został przeniesiony do paczki – WYMAGA WERYFIKACJI"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": [
+        "07.0000.219.02",
+        "07.0000.223.02",
+        "07.0000.220.02"
+      ]
+    },
+    {
+      "id": "ST07",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000007",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 177,
+      "sklad": {
+        "uwagi": "Skład pakietu z zał. 1d nie został przeniesiony do paczki – WYMAGA WERYFIKACJI"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": [
+        "07.0000.219.02",
+        "07.0000.223.02",
+        "07.0000.220.02"
+      ]
+    },
+    {
+      "id": "ST08",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000008",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 138,
+      "sklad": {
+        "uwagi": "Skład pakietu z zał. 1d nie został przeniesiony do paczki – WYMAGA WERYFIKACJI"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": [
+        "07.0000.219.02",
+        "07.0000.223.02",
+        "07.0000.220.02"
+      ]
+    },
+    {
+      "id": "ST09",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000009",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 162,
+      "sklad": {
+        "uwagi": "Skład pakietu z zał. 1d nie został przeniesiony do paczki – WYMAGA WERYFIKACJI"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": [
+        "07.0000.219.02",
+        "07.0000.223.02",
+        "07.0000.220.02"
+      ]
+    },
+    {
+      "id": "ST10",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000010",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 298,
+      "sklad": {
+        "uwagi": "+ badanie histopatologiczne (Y90)"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": [
+        "07.0000.219.02",
+        "07.0000.223.02",
+        "07.0000.220.02"
+      ]
+    },
+    {
+      "id": "ST11",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000011",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 269,
+      "sklad": {
+        "uwagi": "+ badanie histopatologiczne (Y90)"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": [
+        "07.0000.219.02",
+        "07.0000.223.02",
+        "07.0000.220.02"
+      ]
+    },
+    {
+      "id": "ST12",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000012",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 266,
+      "sklad": {
+        "uwagi": "Skład pakietu z zał. 1d nie został przeniesiony do paczki – WYMAGA WERYFIKACJI"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": [
+        "07.0000.223.02",
+        "07.0000.220.02"
+      ]
+    },
+    {
+      "id": "ST13",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000013",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 223,
+      "sklad": {
+        "uwagi": "Skład pakietu z zał. 1d nie został przeniesiony do paczki – WYMAGA WERYFIKACJI"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST14",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000014",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 266,
+      "sklad": {
+        "kierunkowa": [
+          "23.1705",
+          "23.1707"
+        ],
+        "tryb": "jedna z"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": [
+        "07.0000.219.02",
+        "07.0000.223.02",
+        "07.0000.220.02"
+      ]
+    },
+    {
+      "id": "ST15",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000015",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 220,
+      "sklad": {
+        "uwagi": "Skład pakietu z zał. 1d nie został przeniesiony do paczki – WYMAGA WERYFIKACJI"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": [
+        "07.0000.219.02",
+        "07.0000.223.02",
+        "07.0000.220.02"
+      ]
+    },
+    {
+      "id": "ST16",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000016",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 269,
+      "sklad": {
+        "uwagi": "Skład pakietu z zał. 1d nie został przeniesiony do paczki – WYMAGA WERYFIKACJI"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": [
+        "07.0000.219.02",
+        "07.0000.223.02",
+        "07.0000.220.02"
+      ]
+    },
+    {
+      "id": "ST17",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000017",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 222,
+      "sklad": {
+        "uwagi": "Skład pakietu z zał. 1d nie został przeniesiony do paczki – WYMAGA WERYFIKACJI"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": [
+        "07.0000.219.02",
+        "07.0000.223.02",
+        "07.0000.220.02"
+      ]
+    },
+    {
+      "id": "ST18",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000018",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 222,
+      "sklad": {
+        "kierunkowa": [
+          "23.1613",
+          "23.1614"
+        ],
+        "tryb": "jedna z"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": [
+        "07.0000.219.02",
+        "07.0000.223.02",
+        "07.0000.220.02"
+      ]
+    },
+    {
+      "id": "ST19",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000019",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 86,
+      "sklad": {
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "uwagi": "procedura kierunkowa + ST1 – kod kierunkowy WYMAGA WERYFIKACJI"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST20",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000020",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 202,
+      "sklad": {
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "uwagi": "procedura kierunkowa + ST1 – kod kierunkowy WYMAGA WERYFIKACJI"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST21",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000021",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 251,
+      "sklad": {
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "uwagi": "procedura kierunkowa + ST1 – kod kierunkowy WYMAGA WERYFIKACJI"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST22",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000022",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 91,
+      "sklad": {
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "uwagi": "procedura kierunkowa + ST1 – kod kierunkowy WYMAGA WERYFIKACJI"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST23",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000023",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 171,
+      "sklad": {
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "uwagi": "procedura kierunkowa + ST1 – kod kierunkowy WYMAGA WERYFIKACJI"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST24",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000024",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 104,
+      "sklad": {
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "uwagi": "procedura kierunkowa + ST1 – kod kierunkowy WYMAGA WERYFIKACJI"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST25",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000025",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 218,
+      "sklad": {
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "uwagi": "procedura kierunkowa + ST1 – kod kierunkowy WYMAGA WERYFIKACJI"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST26",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000026",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 51,
+      "sklad": {
+        "kierunkowa": [
+          "23.1605",
+          "23.1815"
+        ],
+        "tryb": "jedna z"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST27",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000027",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 95,
+      "sklad": {
+        "kierunkowa": [
+          "23.1809"
+        ]
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST28",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000028",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 96,
+      "sklad": {
+        "kierunkowa": [
+          "23.0107",
+          "23.02"
+        ]
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST29",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000029",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 73,
+      "sklad": {
+        "kierunkowa": [
+          "23.0105"
+        ]
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST30",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000030",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 44,
+      "sklad": {
+        "kierunkowa": [
+          "23.16012"
+        ],
+        "opcjonalne_listy": [
+          "ST1",
+          "ST4"
+        ],
+        "nie_sumuje_z": [
+          "23.1006",
+          "ST30A",
+          "ST30B",
+          "ST30C",
+          "ST30D",
+          "ST30E",
+          "ST30F",
+          "ST30G"
+        ],
+        "czas_min": 10,
+        "grupa": "złogi twarde"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST30A",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000130",
+      "kod_produktu_status": "POTWIERDZONA",
+      "punkty": 75,
+      "sklad": {
+        "kierunkowa": [
+          "23.16022"
+        ],
+        "nie_sumuje_z": [
+          "23.1006",
+          "ST30",
+          "ST30B",
+          "ST30C",
+          "ST30D",
+          "ST30E",
+          "ST30F",
+          "ST30G"
+        ],
+        "czas_min": 40,
+        "grupa": "złogi twarde"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST30B",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000230",
+      "kod_produktu_status": "POTWIERDZONA",
+      "punkty": 44,
+      "sklad": {
+        "kierunkowa": [
+          "23.16012"
+        ],
+        "nie_sumuje_z": [
+          "23.1006",
+          "ST30",
+          "ST30A",
+          "ST30C",
+          "ST30D",
+          "ST30E",
+          "ST30F",
+          "ST30G"
+        ],
+        "czas_min": 10,
+        "grupa": "złogi twarde",
+        "wykonawca": "lekarz periodontolog"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST30C",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000330",
+      "kod_produktu_status": "POTWIERDZONA",
+      "punkty": 88,
+      "sklad": {
+        "kierunkowa": [
+          "23.16012"
+        ],
+        "nie_sumuje_z": [
+          "23.1006",
+          "ST30",
+          "ST30A",
+          "ST30B",
+          "ST30D",
+          "ST30E",
+          "ST30F",
+          "ST30G"
+        ],
+        "czas_min": 10,
+        "grupa": "złogi twarde",
+        "wykonawca": "WYMAGA WERYFIKACJI (wg przypisu – zakresy perio/chir-perio)"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST30D",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000430",
+      "kod_produktu_status": "POTWIERDZONA",
+      "punkty": 66,
+      "sklad": {
+        "kierunkowa": [
+          "23.16011",
+          "23.0101"
+        ],
+        "opcjonalne_listy": [
+          "ST5"
+        ],
+        "tylko_sumuje_z": [
+          "ST30E",
+          "23.1101"
+        ],
+        "limit": "1×/rok",
+        "czas_min": 15,
+        "wiek_max_wylacznie": 18,
+        "grupa": "higienizacja <18"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST30E",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000530",
+      "kod_produktu_status": "POTWIERDZONA",
+      "punkty": 24,
+      "sklad": {
+        "kierunkowa": [
+          "23.16011"
+        ],
+        "nie_sumuje_z": [
+          "23.1006",
+          "ST30",
+          "ST30A",
+          "ST30B",
+          "ST30C",
+          "ST30F",
+          "ST30G",
+          "ST33",
+          "ST33A",
+          "ST34",
+          "ST34A"
+        ],
+        "limit": "4×/rok (3×/rok gdy w roku wykonano ST30D)",
+        "czas_min": 5,
+        "wiek_max_wylacznie": 18,
+        "grupa": "higienizacja <18",
+        "bez_wspolczynnika_08": true
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST30F",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000630",
+      "kod_produktu_status": "POTWIERDZONA",
+      "punkty": 138,
+      "sklad": {
+        "kierunkowa": [
+          "23.16021",
+          "23.0101"
+        ],
+        "tylko_sumuje_z": [
+          "23.1101"
+        ],
+        "limit": "1×/rok",
+        "czas_min": 30,
+        "wiek_max_wylacznie": 18,
+        "grupa": "higienizacja <18"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST30G",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000730",
+      "kod_produktu_status": "POTWIERDZONA",
+      "punkty": 96,
+      "sklad": {
+        "kierunkowa": [
+          "23.16021"
+        ],
+        "nie_sumuje_z": [
+          "23.1006",
+          "ST30",
+          "ST30A",
+          "ST30B",
+          "ST30C",
+          "ST30D",
+          "ST30E",
+          "ST30F",
+          "ST33",
+          "ST33A",
+          "ST34",
+          "ST34A"
+        ],
+        "limit": "1×/rok",
+        "czas_min": 20,
+        "wiek_max_wylacznie": 18,
+        "grupa": "higienizacja <18",
+        "bez_wspolczynnika_08": true
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST31",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000031",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 92,
+      "sklad": {
+        "kierunkowa": [
+          "23.1815"
+        ]
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST32",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000032",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 117,
+      "sklad": {
+        "kierunkowa": [
+          "23.1620"
+        ]
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST33",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000033",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 56,
+      "sklad": {
+        "kierunkowa": [
+          "23.0101"
+        ]
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST33A",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000133",
+      "kod_produktu_status": "POTWIERDZONA",
+      "punkty": 75,
+      "sklad": {
+        "kierunkowa": [
+          "23.0101"
+        ],
+        "wykonawca": "specjaliści w zakresach periodontologia / chirurgia i periodontologia"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST34",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000034",
+      "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
+      "punkty": 47,
+      "sklad": {
+        "kierunkowa": [
+          "23.0102"
+        ]
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    },
+    {
+      "id": "ST34A",
+      "typ": "pakiet",
+      "zalacznik": "1c/1d",
+      "kod_produktu": "5.13.00.7000134",
+      "kod_produktu_status": "POTWIERDZONA",
+      "punkty": 63,
+      "sklad": {
+        "kierunkowa": [
+          "23.0102"
+        ],
+        "wykonawca": "specjaliści w zakresach periodontologia / chirurgia i periodontologia"
+      },
+      "zrodlo": "SRC-ZARZ-60-2023-TJ",
+      "zakresy": "WYMAGA WERYFIKACJI"
+    }
+  ],
+  "wspolczynniki": [
+    {
+      "id": "WSP-1.5",
+      "wartosc": 1.5,
+      "dotyczy": "dzieci < 18 w zakresach 218, 221, dentobus, gabinet szkolny",
+      "wylaczenia": [
+        "23.06 wizyta adaptacyjna",
+        "23.0304 pantomogram",
+        "profilaktyka § 3 ust. 1 pkt 10",
+        "ST30D",
+        "ST30E",
+        "ST30F",
+        "ST30G"
+      ],
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "WSP-1.2",
+      "wartosc": 1.2,
+      "kod_specjalny": "WKC",
+      "dotyczy": "kobiety w ciąży i połogu, zakres 218",
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    },
+    {
+      "id": "WSP-0.8",
+      "wartosc": 0.8,
+      "kod_specjalny": "WKR",
+      "dotyczy": "kolejny pakiet na tej samej wizycie (najwyżej wyceniony 1,0)",
+      "wylaczenia": [
+        "ST30E",
+        "ST30G"
+      ],
+      "zrodlo": "SRC-ZARZ-60-2023-TJ"
+    }
+  ]
+}

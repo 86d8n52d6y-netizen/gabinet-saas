@@ -1,0 +1,934 @@
+{
+  "stan_na": "2026-11-21",
+  "zasady_poziomow": {
+    "BLOKADA": "tylko reguła POTWIERDZONA; blokuje wyłącznie eksport/rozliczenie, nigdy zapis kliniczny",
+    "OSTRZEŻENIE": "lekarz widzi komunikat i może kontynuować (z zapisem świadomej decyzji)",
+    "INFORMACJA": "podpowiedź bez wpływu na zapis"
+  },
+  "warstwy": [
+    "medyczna",
+    "dokumentacyjna",
+    "rozliczeniowa"
+  ],
+  "reguly": [
+    {
+      "id": "R-BAD-01",
+      "obszar": "badanie",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "dodanie 23.0101 / ST33 / ST33A",
+      "tresc": "Badanie lekarskie stomatologiczne – 1 raz w roku kalendarzowym.",
+      "poziom": "BLOKADA",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-DU-2025-615",
+        "SRC-ZARZ-60-2023-TJ"
+      ],
+      "obowiazuje_od": "2025-05-13",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.0101",
+        "ST33",
+        "ST33A"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-BAD-02",
+      "obszar": "badanie",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "dodanie 23.0102 / ST34 / ST34A",
+      "tresc": "Badanie kontrolne – 3 razy w roku kalendarzowym; ciąża/połóg – nie częściej niż 1 raz na kwartał.",
+      "poziom": "OSTRZEŻENIE",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-DU-2025-615"
+      ],
+      "obowiazuje_od": "2025-05-13",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.0102",
+        "ST34",
+        "ST34A"
+      ],
+      "uwagi": "Brzmienie dla ciąży („nie częściej niż 1×/kwartał”) – zinterpretować łącznie z limitem rocznym; dlatego OSTRZEŻENIE."
+    },
+    {
+      "id": "R-KONS-01",
+      "obszar": "konsultacja",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "23.0105 + inne świadczenie tego dnia",
+      "tresc": "Konsultacja specjalistyczna bez połączenia z innymi świadczeniami gwarantowanymi.",
+      "poziom": "BLOKADA",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-DU-2025-615"
+      ],
+      "obowiazuje_od": "2025-05-13",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.0105",
+        "ST29"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-ZYW-01",
+      "obszar": "diagnostyka",
+      "warstwa": "dokumentacyjna",
+      "wyzwalacz": "dodanie 23.02",
+      "tresc": "Badanie żywotności obejmuje ząb + 3 zęby sąsiednie lub przeciwstawne – dokumentować wyniki.",
+      "poziom": "INFORMACJA",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-DU-2025-615"
+      ],
+      "obowiazuje_od": "2025-05-13",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.02"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-RTG-01",
+      "obszar": "RTG",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "dodanie 23.0301 (wszyscy)",
+      "tresc": "Do 2 zdjęć wewnątrzustnych w roku kalendarzowym, w połączeniu z innymi świadczeniami, z opisem w dokumentacji.",
+      "poziom": "OSTRZEŻENIE",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-DU-2025-615"
+      ],
+      "obowiazuje_od": "2025-05-13",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.0301"
+      ],
+      "uwagi": "Limit dla dzieci różny (23.0302 – do 5 zdjęć) – sprawdzić, który limit dotyczy danego zakresu."
+    },
+    {
+      "id": "R-RTG-02",
+      "obszar": "RTG",
+      "warstwa": "dokumentacyjna",
+      "wyzwalacz": "RTG bez opisu",
+      "tresc": "Opis zdjęcia musi być wpisany do dokumentacji medycznej.",
+      "poziom": "OSTRZEŻENIE",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-DU-2025-615"
+      ],
+      "obowiazuje_od": "2025-05-13",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.0301",
+        "23.0302",
+        "23.0304",
+        "87.121"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-RTG-03",
+      "obszar": "RTG",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "23.0304 u dziecka",
+      "tresc": "Pantomogram: dorośli – na potrzeby leczenia endodontycznego oraz (wszyscy) przed protetyką, 1 raz na 5 lat; dzieci 5–18 lat – w uzasadnionych medycznie przypadkach, 1 raz na 3 lata; zawsze w połączeniu z innymi świadczeniami, z opisem w dokumentacji.",
+      "poziom": "OSTRZEŻENIE",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-DU-2025-615"
+      ],
+      "obowiazuje_od": "2025-05-13",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.0304"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-ZNI-01",
+      "obszar": "znieczulenie",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "znieczulenie jako jedyne świadczenie wizyty",
+      "tresc": "Znieczulenie (23.0401/0402/0403) – tylko w połączeniu z innymi świadczeniami.",
+      "poziom": "BLOKADA",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-DU-2025-615"
+      ],
+      "obowiazuje_od": "2025-05-13",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.0401",
+        "23.0402",
+        "23.0403"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-ZNI-02",
+      "obszar": "znieczulenie",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "znieczulenie przy ekstrakcji (ST01) lub kiretażu (ST04)",
+      "tresc": "Znieczulenie jest wliczone w pakiet ST01/ST04 (lista ST1 = składnik pakietu). Nie rozlicza się go jako osobnego produktu jednostkowego (5.13.00.2304010/020/030). Kod ICD-9 znieczulenia podaje się tylko jako element pakietu.",
+      "poziom": "BLOKADA",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-ZARZ-60-2023-TJ",
+        "SRC-DU-2025-615"
+      ],
+      "obowiazuje_od": "2026-09-01",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.1607",
+        "23.1701",
+        "23.1702",
+        "23.17",
+        "23.0401",
+        "23.0402",
+        "23.0403",
+        "ST01",
+        "ST04"
+      ],
+      "uwagi": "Rozporządzenie (koszyk) pisze przy 23.1607 i 23.2001 „nie obejmuje odpowiedniego znieczulenia” – to dotyczy definicji świadczenia gwarantowanego, a NIE rozliczenia: w zarządzeniu NFZ znieczulenie jest w wycenie pakietu. Potwierdzone praktyką rozliczeniową lekarza (Patryk, 21.11.2026). Czy ST1 jest w pakiecie obowiązkowy czy opcjonalny – sprawdzić w zał. 1d."
+    },
+    {
+      "id": "R-ST1-ZO",
+      "obszar": "znieczulenie",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "lista ST1 w zakresie 07.0000.219.02",
+      "tresc": "Lista ST1 (znieczulenia miejscowe) nie ma zastosowania w znieczuleniu ogólnym.",
+      "poziom": "OSTRZEŻENIE",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-ZARZ-60-2023-TJ"
+      ],
+      "obowiazuje_od": "2026-09-01",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "ST1"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-ZLOG-01",
+      "obszar": "złogi",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "23.1601 / ST30–ST30C",
+      "tresc": "Usunięcie złogów (½ łuku) – 1 raz w roku kalendarzowym w obrębie całego uzębienia (zał. 1 i 2).",
+      "poziom": "OSTRZEŻENIE",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-DU-2025-615"
+      ],
+      "obowiazuje_od": "2025-05-13",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.1601",
+        "23.16011",
+        "23.16012"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-ZLOG-02",
+      "obszar": "złogi",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "23.1602 u dziecka (zał. 2)",
+      "tresc": "Usunięcie złogów ze wszystkich zębów – nie częściej niż 1 raz na 6 miesięcy (zał. 2).",
+      "poziom": "OSTRZEŻENIE",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-DU-2025-615"
+      ],
+      "obowiazuje_od": "2025-05-13",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.1602",
+        "23.16021",
+        "23.16022"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-ST30-TWARDE",
+      "obszar": "złogi",
+      "warstwa": "medyczna+rozliczeniowa",
+      "wyzwalacz": "ST30/ST30A/ST30B/ST30C",
+      "tresc": "Pakiety ST30–ST30C dotyczą wyłącznie złogów twardych (23.16012 / 23.16022). Złogi miękkie u dorosłych nie są osobno rozliczanym świadczeniem.",
+      "poziom": "OSTRZEŻENIE",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-ZARZ-60-2023-TJ",
+        "SRC-NFZ-KOM-8924"
+      ],
+      "obowiazuje_od": "2026-09-01",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "ST30",
+        "ST30A",
+        "ST30B",
+        "ST30C"
+      ],
+      "uwagi": "Spór środowiska (LIL, NRL, Lewiatan) – stan przepisów jednoznaczny od 01.09.2026, interpretacja historyczna (przed 01.09.2026) SPORNA."
+    },
+    {
+      "id": "R-ST30-LAKIER",
+      "obszar": "złogi",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "ST30–ST30C + 23.1006 tego dnia",
+      "tresc": "Pakiety ST30, ST30A, ST30B, ST30C nie sumują się z 23.1006 (lakierowanie) – wycena pakietu obejmuje lakierowanie.",
+      "poziom": "BLOKADA",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-ZARZ-60-2023-TJ",
+        "SRC-NFZ-KOM-8924"
+      ],
+      "obowiazuje_od": "2026-09-01",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "ST30",
+        "ST30A",
+        "ST30B",
+        "ST30C",
+        "23.1006"
+      ],
+      "uwagi": "Przed 01.09.2026: korekty wsteczne NFZ na podstawie komunikatów 1292084/819330 – SPORNE (interpelacja 16442). Aplikacja nie ocenia przeszłych rozliczeń."
+    },
+    {
+      "id": "R-ST30-WZAJEM",
+      "obszar": "złogi",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "dwa pakiety z grupy ST30–ST30G tego dnia",
+      "tresc": "Pakiety ST30–ST30G wzajemnie się wykluczają (wg listy „nie sumuje się” w zał. 1d); ST30D może być z ST30E i 23.1101; ST30F tylko z 23.1101.",
+      "poziom": "BLOKADA",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-ZARZ-60-2023-TJ"
+      ],
+      "obowiazuje_od": "2026-09-01",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "ST30",
+        "ST30A",
+        "ST30B",
+        "ST30C",
+        "ST30D",
+        "ST30E",
+        "ST30F",
+        "ST30G"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-ST30-CZAS",
+      "obszar": "złogi",
+      "warstwa": "dokumentacyjna",
+      "wyzwalacz": "zapis pakietu ST30–ST30G",
+      "tresc": "Minimalny czas: ST30 10, ST30A 40, ST30B 10, ST30C 10, ST30D 15, ST30E 5, ST30F 30, ST30G 20 minut – czas trzeba móc wykazać w dokumentacji.",
+      "poziom": "OSTRZEŻENIE",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-ZARZ-60-2023-TJ"
+      ],
+      "obowiazuje_od": "2026-09-01",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "ST30",
+        "ST30A",
+        "ST30B",
+        "ST30C",
+        "ST30D",
+        "ST30E",
+        "ST30F",
+        "ST30G"
+      ],
+      "uwagi": "Sposób dokumentowania czasu (godzina rozpoczęcia/zakończenia?) – WYMAGA WERYFIKACJI."
+    },
+    {
+      "id": "R-ST30DG-WIEK",
+      "obszar": "higienizacja",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "ST30D/E/F/G u pacjenta ≥ 18 lat",
+      "tresc": "Pakiety ST30D–ST30G – profesjonalna higienizacja wyłącznie u dzieci i młodzieży do 18. r.ż.",
+      "poziom": "BLOKADA",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-ZARZ-60-2023-TJ",
+        "SRC-ZARZ-95-2026"
+      ],
+      "obowiazuje_od": "2026-09-01",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "ST30D",
+        "ST30E",
+        "ST30F",
+        "ST30G"
+      ],
+      "uwagi": "RYZYKO W APLIKACJI: obecne etykiety ST30E/ST30G nie pokazują ograniczenia wieku."
+    },
+    {
+      "id": "R-ST30E-LIMIT",
+      "obszar": "higienizacja",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "kolejny ST30E w roku",
+      "tresc": "ST30E – maks. 4× w roku; 3×, jeśli w roku wykonano ST30D.",
+      "poziom": "BLOKADA",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-ZARZ-60-2023-TJ"
+      ],
+      "obowiazuje_od": "2026-09-01",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "ST30E"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-ST30DFG-LIMIT",
+      "obszar": "higienizacja",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "kolejny ST30D/ST30F/ST30G w roku",
+      "tresc": "ST30D, ST30F, ST30G – 1× w roku.",
+      "poziom": "BLOKADA",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-ZARZ-60-2023-TJ"
+      ],
+      "obowiazuje_od": "2026-09-01",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "ST30D",
+        "ST30F",
+        "ST30G"
+      ],
+      "uwagi": "„rok” – kalendarzowy czy 12 miesięcy? WYMAGA WERYFIKACJI; do czasu wyjaśnienia liczyć kalendarzowo i oznaczać OSTRZEŻENIE dla granicznych przypadków."
+    },
+    {
+      "id": "R-ST30BC-WYK",
+      "obszar": "higienizacja",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "ST30B/ST30C, ST33A/ST34A",
+      "tresc": "ST30B (i ST30C wg przypisu) wykonuje periodontolog; ST33A/ST34A – specjaliści w zakresach periodontologia / chirurgia i periodontologia.",
+      "poziom": "OSTRZEŻENIE",
+      "status": "CZĘŚCIOWO POTWIERDZONA",
+      "zrodla": [
+        "SRC-ZARZ-60-2023-TJ"
+      ],
+      "obowiazuje_od": "2026-09-01",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "ST30B",
+        "ST30C",
+        "ST33A",
+        "ST34A"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-LAKIER-01",
+      "obszar": "profilaktyka",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "23.1006 u dziecka",
+      "tresc": "Lakierowanie 23.1006 – tylko dzieci i młodzież do 18. r.ż.; zęby mleczne i stałe; nie częściej niż 1× na kwartał za każdą ¼ łuku.",
+      "poziom": "OSTRZEŻENIE",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-DU-2025-615"
+      ],
+      "obowiazuje_od": "2025-05-13",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.1006"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-LAKOW-01",
+      "obszar": "profilaktyka",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "23.1003",
+      "tresc": "Lakowanie bruzd: pierwsze trzonowce stałe – 1 raz do ukończenia 8. r.ż.; drugie trzonowce stałe – 1 raz do ukończenia 14. r.ż.",
+      "poziom": "BLOKADA",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-DU-2025-615"
+      ],
+      "obowiazuje_od": "2025-05-13",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.1003"
+      ],
+      "uwagi": "BLOKADA tylko gdy na tym koncie jest już zapis lakowania tego zęba; inaczej INFORMACJA."
+    },
+    {
+      "id": "R-ADAPT-01",
+      "obszar": "wizyta adaptacyjna",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "23.06 + inne świadczenie",
+      "tresc": "Wizyta adaptacyjna – bez połączenia z innymi świadczeniami; pierwsza wizyta dziecka do ukończenia 6. r.ż.",
+      "poziom": "BLOKADA",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-DU-2025-615"
+      ],
+      "obowiazuje_od": "2025-05-13",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.06"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-ENDO-DZ",
+      "obszar": "endodoncja",
+      "warstwa": "dokumentacyjna",
+      "wyzwalacz": "endodoncja u dziecka",
+      "tresc": "Część świadczeń endodontycznych liczona per kanał (23.1206, 23.1209, 23.1306, 23.1307, 23.1205, 23.1208); 23.1311/1308/1309/1312 nie obejmują opracowania i odbudowy korony.",
+      "poziom": "INFORMACJA",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-DU-2025-615"
+      ],
+      "obowiazuje_od": "2025-05-13",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.1206",
+        "23.1209",
+        "23.1306",
+        "23.1307",
+        "23.1205",
+        "23.1208",
+        "23.1311",
+        "23.1308",
+        "23.1309",
+        "23.1312"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-1204-DOK",
+      "obszar": "endodoncja",
+      "warstwa": "dokumentacyjna",
+      "wyzwalacz": "23.1204",
+      "tresc": "Świadczenie „w udokumentowanych przypadkach” – wymagany opis uzasadnienia.",
+      "poziom": "OSTRZEŻENIE",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-DU-2025-615"
+      ],
+      "obowiazuje_od": "2025-05-13",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.1204"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-PROT-01",
+      "obszar": "protetyka",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "protezy całkowite 23.3104/23.3105",
+      "tresc": "1 raz na 5 lat (nie dotyczy pacjentów po leczeniu onkologicznym).",
+      "poziom": "BLOKADA",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-DU-2025-615"
+      ],
+      "obowiazuje_od": "2025-05-13",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.3104",
+        "23.3105"
+      ],
+      "uwagi": "Aplikacja nie zna protez z innych gabinetów – BLOKADA tylko na podstawie danych z własnego konta, w pozostałych przypadkach INFORMACJA."
+    },
+    {
+      "id": "R-PROT-02",
+      "obszar": "protetyka",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "naprawa z wyciskiem 23.3112; podścielenie 23.3116/23.3117",
+      "tresc": "Naprawa z wyciskiem – 1×/2 lata; podścielenie – 1×/2 lata.",
+      "poziom": "OSTRZEŻENIE",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-DU-2025-615"
+      ],
+      "obowiazuje_od": "2025-05-13",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.3112",
+        "23.3116",
+        "23.3117"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-PROT-03",
+      "obszar": "protetyka",
+      "warstwa": "dokumentacyjna",
+      "wyzwalacz": "dowolna proteza NFZ",
+      "tresc": "Pisemne oświadczenie pacjenta o uprawnieniu dołączone do dokumentacji; odbiór protezy potwierdzony podpisem pacjenta na zleceniu (zał. 3 zarządzenia).",
+      "poziom": "OSTRZEŻENIE",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-ZARZ-60-2023-TJ"
+      ],
+      "obowiazuje_od": "2023-04-06",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.3102",
+        "23.3103",
+        "23.3104",
+        "23.3105",
+        "23.3104a",
+        "23.3105a"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-PROT-04",
+      "obszar": "protetyka",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "23.3104a/23.3105a",
+      "tresc": "Proteza overdenture – warunki z zał. 6 rozporządzenia NIE ZOSTAŁY PRZECZYTANE.",
+      "poziom": "INFORMACJA",
+      "status": "WYMAGA WERYFIKACJI",
+      "zrodla": [
+        "SRC-DU-2025-615",
+        "SRC-ZARZ-60-2023-TJ"
+      ],
+      "obowiazuje_od": "WYMAGA WERYFIKACJI",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.3104a",
+        "23.3105a"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-WSP-15",
+      "obszar": "współczynniki",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "pacjent < 18 w zakresie 218/221/dentobus/szkoła",
+      "tresc": "Współczynnik 1,5 – poza wizytą adaptacyjną, pantomogramem, profilaktyką i ST30D–G.",
+      "poziom": "INFORMACJA",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-ZARZ-60-2023-TJ"
+      ],
+      "obowiazuje_od": "2026-09-01",
+      "obowiazuje_do": null,
+      "dotyczy": [],
+      "uwagi": ""
+    },
+    {
+      "id": "R-WSP-12",
+      "obszar": "współczynniki",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "ciąża/połóg, zakres 218",
+      "tresc": "Współczynnik 1,2 (kod WKC); ciąża potwierdzona kartą przebiegu ciąży (§ 5 rozporządzenia).",
+      "poziom": "OSTRZEŻENIE",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-ZARZ-60-2023-TJ",
+        "SRC-DU-2025-615",
+        "SRC-NFZ-KOM-8386"
+      ],
+      "obowiazuje_od": "2025-05-13",
+      "obowiazuje_do": null,
+      "dotyczy": [],
+      "uwagi": ""
+    },
+    {
+      "id": "R-WSP-08",
+      "obszar": "współczynniki",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "≥ 2 pakiety na wizycie",
+      "tresc": "Najwyżej wyceniony pakiet 1,0, kolejne 0,8 (kod WKR); nie stosuje się do ST30E i ST30G.",
+      "poziom": "INFORMACJA",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-ZARZ-60-2023-TJ",
+        "SRC-NFZ-WEBINAR",
+        "SRC-NFZ-KOM-8386"
+      ],
+      "obowiazuje_od": "2026-09-01",
+      "obowiazuje_do": null,
+      "dotyczy": [],
+      "uwagi": ""
+    },
+    {
+      "id": "R-ZO-01",
+      "obszar": "znieczulenie ogólne",
+      "warstwa": "medyczna",
+      "wyzwalacz": "zakres 07.0000.219.02 u dziecka",
+      "tresc": "Kryteria § 4 ust. 1a (od 1.01.2026): alergia; choroby ogólne z opinią specjalisty; < 3 lat, brak współpracy i ≥ 8 ognisk próchnicy lub ≥ 4 zęby do leczenia; < 18, brak współpracy i ≥ 4 zęby lub zabieg chirurgiczny; ostry stan zapalny. Dodatkowo § 4 ust. 1 i 2 (niepełnosprawność).",
+      "poziom": "OSTRZEŻENIE",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-DU-2025-615-P4-1A"
+      ],
+      "obowiazuje_od": "2026-01-01",
+      "obowiazuje_do": null,
+      "dotyczy": [],
+      "uwagi": "Szczegółowe brzmienie każdego punktu – w pełnym tekście; aplikacja tylko przypomina o udokumentowaniu kryterium."
+    },
+    {
+      "id": "R-BOL-01",
+      "obszar": "organizacja",
+      "warstwa": "dokumentacyjna",
+      "wyzwalacz": "wizyta bólowa",
+      "tresc": "Pacjent z bólem – udzielenie świadczenia w dniu zgłoszenia (§ 6).",
+      "poziom": "INFORMACJA",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-DU-2025-615"
+      ],
+      "obowiazuje_od": "2025-05-13",
+      "obowiazuje_do": null,
+      "dotyczy": [],
+      "uwagi": ""
+    },
+    {
+      "id": "R-DOK-01",
+      "obszar": "dokumentacja",
+      "warstwa": "dokumentacyjna",
+      "wyzwalacz": "eksport/rozliczenie",
+      "tresc": "Świadczenia przedstawiane do rozliczenia muszą być zgodne z indywidualną dokumentacją medyczną.",
+      "poziom": "BLOKADA",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-ZARZ-60-2023-TJ",
+        "SRC-WYR-SO-SIEDLCE-IIKa168-24"
+      ],
+      "obowiazuje_od": "2023-04-06",
+      "obowiazuje_do": null,
+      "dotyczy": [],
+      "uwagi": "BLOKADA = aplikacja nie pozwala wyeksportować świadczenia bez zapisanego opisu wizyty z tą samą datą."
+    },
+    {
+      "id": "R-DOK-02",
+      "obszar": "dokumentacja",
+      "warstwa": "dokumentacyjna",
+      "wyzwalacz": "świadczenie na zębie",
+      "tresc": "Lokalizacja zęba wg PN-EN ISO 3950; ząb dodatkowy – „ZD”.",
+      "poziom": "OSTRZEŻENIE",
+      "status": "CZĘŚCIOWO POTWIERDZONA",
+      "zrodla": [
+        "SRC-NFZ-KOM-6113"
+      ],
+      "obowiazuje_od": "NIE DOTYCZY",
+      "obowiazuje_do": null,
+      "dotyczy": [],
+      "uwagi": "Uwaga: numer zęba to dana pacjenta? W SaaS – tylko na urządzeniu (zasada „zero danych pacjentów w chmurze”)."
+    },
+    {
+      "id": "R-DOK-03",
+      "obszar": "dokumentacja",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "pakiet na zębie",
+      "tresc": "Jeden pakiet = jeden ząb / jedna lokalizacja (½ łuku przy złogach – także przy niepełnym łuku).",
+      "poziom": "INFORMACJA",
+      "status": "CZĘŚCIOWO POTWIERDZONA",
+      "zrodla": [
+        "SRC-NFZ-WEBINAR"
+      ],
+      "obowiazuje_od": "NIE DOTYCZY",
+      "obowiazuje_do": null,
+      "dotyczy": [],
+      "uwagi": ""
+    },
+    {
+      "id": "R-DOK-04",
+      "obszar": "dokumentacja",
+      "warstwa": "dokumentacyjna",
+      "wyzwalacz": "zmiana daty / dopisanie świadczenia po fakcie",
+      "tresc": "Aplikacja nie podpowiada dopisywania czynności ani zmiany daty wstecz; każda zmiana po zapisaniu jest jawnie oznaczona (kto, kiedy).",
+      "poziom": "BLOKADA",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-WYR-SO-SIEDLCE-IIKa168-24"
+      ],
+      "obowiazuje_od": "NIE DOTYCZY",
+      "obowiazuje_do": null,
+      "dotyczy": [],
+      "uwagi": "Zasada projektowa wynikająca z wymogów audytu i orzecznictwa."
+    },
+    {
+      "id": "R-DOK-05",
+      "obszar": "dokumentacja",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "kod ICD-9 spoza słownika",
+      "tresc": "Kod ICD-9 nieobecny w ICD-9 PL 5.91 (np. 23.1513) nie może trafić do rozliczenia.",
+      "poziom": "BLOKADA",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-ICD9-PL-591"
+      ],
+      "obowiazuje_od": "NIE DOTYCZY",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.1513"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-KOD-01",
+      "obszar": "kody",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "23.1601 / 23.1602 bez podkodu (data ≥ 2026-09-01)",
+      "tresc": "Od 01.09.2026 wykazuje się podkody: 23.16011/23.16012 (½ łuku miękkie/twarde), 23.16021/23.16022 (wszystkie zęby).",
+      "poziom": "BLOKADA",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-ZARZ-60-2023-TJ",
+        "SRC-ZARZ-95-2026",
+        "SRC-NFZ-KOM-9017",
+        "SRC-ICD9-PL-591"
+      ],
+      "obowiazuje_od": "2026-09-01",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.1601",
+        "23.1602"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-KOD-02",
+      "obszar": "kody",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "23.1012a / 23.3104a / 23.3105a",
+      "tresc": "Kody NFZ z literą „a” nie występują w ICD-9 PL 5.91 (odpowiedniki: 23.1023, 23.31041, 23.31051). Sposób wykazania w SWIAD do potwierdzenia.",
+      "poziom": "INFORMACJA",
+      "status": "WYMAGA WERYFIKACJI",
+      "zrodla": [
+        "SRC-ZARZ-60-2023-TJ",
+        "SRC-ICD9-PL-591"
+      ],
+      "obowiazuje_od": "NIE DOTYCZY",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.1012a",
+        "23.3104a",
+        "23.3105a"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-AMALG-01",
+      "obszar": "materiały",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "usunięcie wypełnienia amalgamatowego",
+      "tresc": "Tylko przy 23.1108, 23.1502–23.1505; stanowisko z separatorem amalgamatu (zał. 10c).",
+      "poziom": "OSTRZEŻENIE",
+      "status": "POTWIERDZONA",
+      "zrodla": [
+        "SRC-DU-2025-615"
+      ],
+      "obowiazuje_od": "2025-05-13",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.1108",
+        "23.1502",
+        "23.1503",
+        "23.1504",
+        "23.1505"
+      ],
+      "uwagi": "Kod ICD-9 / produkt NFZ dla tego świadczenia – WYMAGA WERYFIKACJI."
+    },
+    {
+      "id": "R-ICD10-01",
+      "obszar": "rozpoznania",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "świadczenie bez ICD-10",
+      "tresc": "Sprawozdanie wymaga ICD-10; brak obowiązkowych par ICD-9↔ICD-10 – podpowiedź, nie blokada.",
+      "poziom": "INFORMACJA",
+      "status": "CZĘŚCIOWO POTWIERDZONA",
+      "zrodla": [
+        "SRC-NFZ-KOM-8386"
+      ],
+      "obowiazuje_od": "NIE DOTYCZY",
+      "obowiazuje_do": null,
+      "dotyczy": [],
+      "uwagi": ""
+    },
+    {
+      "id": "R-KIR-DZ",
+      "obszar": "periodontologia",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "ST04 / 23.1607 u dziecka",
+      "tresc": "Kiretaż u dzieci – komunikat NFZ z 22.07.2026 vs protest NIL. Stan prawny NIE ustalony w tym audycie.",
+      "poziom": "INFORMACJA",
+      "status": "WYMAGA WERYFIKACJI",
+      "zrodla": [
+        "SRC-NFZ-KOM-KIRETAZ-DZ"
+      ],
+      "obowiazuje_od": "2026-07-22",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "ST04",
+        "23.1607"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-UPR-01",
+      "obszar": "uprawnienia",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "każda wizyta NFZ",
+      "tresc": "Potwierdzenie prawa do świadczeń (eWUŚ / art. 50 ustawy) – dokument potwierdzający w razie braku potwierdzenia elektronicznego.",
+      "poziom": "INFORMACJA",
+      "status": "CZĘŚCIOWO POTWIERDZONA",
+      "zrodla": [
+        "SRC-USTAWA-SWIADCZENIA",
+        "SRC-ZARZ-60-2023-TJ"
+      ],
+      "obowiazuje_od": "NIE DOTYCZY",
+      "obowiazuje_do": null,
+      "dotyczy": [],
+      "uwagi": ""
+    },
+    {
+      "id": "R-MTA-01",
+      "obszar": "endodoncja",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "23.13141–23.13149",
+      "tresc": "Wskazania i ograniczenia MTA – nie przeniesione z zarządzenia.",
+      "poziom": "INFORMACJA",
+      "status": "WYMAGA WERYFIKACJI",
+      "zrodla": [
+        "SRC-ZARZ-60-2023-TJ"
+      ],
+      "obowiazuje_od": "WYMAGA WERYFIKACJI",
+      "obowiazuje_do": null,
+      "dotyczy": [
+        "23.13141",
+        "23.13142",
+        "23.13143",
+        "23.13149"
+      ],
+      "uwagi": ""
+    },
+    {
+      "id": "R-PROF-01",
+      "obszar": "profilaktyka",
+      "warstwa": "rozliczeniowa",
+      "wyzwalacz": "23.1009–23.1021, 23.1012a",
+      "tresc": "Profilaktyczne świadczenia wiekowe (zał. 10/10b); 23.1012a – 3. rok życia; 23.1021 – tylko zakres 218 (19. r.ż.). Warunki wieku dla każdego kodu – patrz warunki_tekst.",
+      "poziom": "OSTRZEŻENIE",
+      "status": "CZĘŚCIOWO POTWIERDZONA",
+      "zrodla": [
+        "SRC-DU-2025-615",
+        "SRC-ZARZ-60-2023-TJ"
+      ],
+      "obowiazuje_od": "2025-05-13",
+      "obowiazuje_do": null,
+      "dotyczy": [],
+      "uwagi": ""
+    }
+  ]
+}
