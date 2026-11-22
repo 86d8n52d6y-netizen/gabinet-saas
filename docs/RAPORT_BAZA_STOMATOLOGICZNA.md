@@ -46,7 +46,7 @@
 
 | # | Kwestia | Propozycja |
 |---|---|---|
-| 1 | Rozporządzenie o dokumentacji medycznej (Dz.U. 2026 poz. 1391) nieodczytane – 4 elementy „obowiązkowe” opierają się na nim | dołączyć tekst aktu albo uznać je za zalecenia |
+| 1 | Rozporządzenie o dokumentacji medycznej (Dz.U. 2026 poz. 1391) nieodczytane – 4 elementy „obowiązkowe” opierają się na nim | **Decyzja Patryka 22.11.2026: przy integracji – ostrzeżenie przed zapisem, bez blokady** (do czasu odczytania aktu) |
 | 2 | Prawo atomowe (uzasadnienie i opis RTG) – akt nieopisany w audycie | jw. |
 | 3 | Kody ICD-10 oznaczone „do weryfikacji kodu” (np. K03.8, K13.7, K00.4, K08.8, S02.6) | porównać z wydaniem CeZ (N8 audytu) |
 | 4 | Brak stałych powiązań ICD-10 dla porady, zaopatrzenia ran, krwawień (rozpoznanie zależy od przyczyny) | zostawić – wybiera lekarz |
@@ -58,5 +58,5 @@
 ## 6. Rekomendowane kolejne kroki
 
 1. **Weryfikacja Patryka** – zacznij od kart z kodami używanymi w Opisach NFZ (ST33, ST34, ST28, ST26, ST30*, ST04, ST01, ST02, ST19, 1101, 1105, 1108, 1206, 1502–1505, 1006, 0401–0403); zatwierdzone → `verified`.
-2. Decyzje do kwestii 1, 5 i 6.
+2. Decyzje do kwestii 5 i 6 (kwestia 1 – rozstrzygnięta: ostrzeżenie).
 3. Integracja (na zlecenie): `generator/baza-dane.js` jak `nfz-dane.js` → katalog procedur, podpowiedzi przebiegu, checklisty przed zapisem, generowanie opisów z szablonów (przykład w instrukcji, sprawdzony na danych).

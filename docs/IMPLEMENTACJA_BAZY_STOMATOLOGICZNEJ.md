@@ -55,7 +55,7 @@ function opis(BAZA, id, wariant, wartosci) {                     // wartosci: {'
 // → „Ząb 36: odbudowa jednej powierzchni – powierzchnie O. Rozpoznanie: K02.1. … Materiał: kompozyt, kolor A2.”
 ```
 
-**Kontrola kompletności** – checklista: `obowiazkowe` → ostrzeżenie przed zapisem (nie blokada, dopóki źródło `SRC-DU-2026-1391` ma status „wymaga weryfikacji”), `zalecane` / `sytuacyjne` → podpowiedź, `rozliczeniowe` → tylko przy rozliczeniu NFZ.
+**Kontrola kompletności** – checklista: `obowiazkowe` → ostrzeżenie przed zapisem, **bez blokady** (decyzja Patryka 22.11.2026 – do czasu odczytania rozporządzenia o dokumentacji, `SRC-DU-2026-1391`), `zalecane` / `sytuacyjne` → podpowiedź, `rozliczeniowe` → tylko przy rozliczeniu NFZ.
 
 **Podpowiedzi ICD-10** – `procedure-diagnosis-mappings.json` + nazwy z `data/nfz/diagnoses.json` (robocze); to samo zachowanie co etap N5 audytu: wybiera lekarz, nigdy automatycznie.
 
