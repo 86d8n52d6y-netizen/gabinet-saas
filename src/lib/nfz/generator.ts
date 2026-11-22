@@ -63,7 +63,11 @@ export async function page(uid: string, name: string, mod: 'nfz' | 'nfzk' | 'pry
         cfg: { ...cleanNfz(st.nfz), ...cleanUi(st.nfzUi) }, seg: st.nfzSeg ?? null };
     }
     if (mod === 'zlecenia') return { uid, name, mod, clinics, mat: cleanMat(st.mat) };
-    if (mod === 'nfzk') return { uid, name, mod, clinics, mat: cleanMat(st.mat), cfg: cleanNfz(st.nfz) };   // zakładka „NFZ” (E4): stawki z Ustawień, bez historii Opisów NFZ   // Zlecenia protetyczne: treść tylko na urządzeniu (zasada nr 1)
+    if (mod === 'nfzk') {                                                                // zakładka „NFZ” (E4): stawki z Ustawień, własna historia (k-…);
+      const od = addDays(-60), op = (await listVisits(c, 'opisy')).live as { date: string; gab: string; codes: string[] }[];   // z Opisów NFZ tylko data, gabinet, kody – do ostrzeżenia o duplikacie
+      return { uid, name, mod, clinics, mat: cleanMat(st.mat), cfg: cleanNfz(st.nfz), visits: await listVisits(c, 'karty'),
+        opisy: op.filter(v => v.date >= od).map(v => ({ date: v.date, gab: v.gab, codes: v.codes })) };
+    }   // Zlecenia protetyczne: treść tylko na urządzeniu (zasada nr 1)
     const shifts = await shiftsByDay(c, addDays(-400), addDays(60));
     const mat = cleanMat(st.mat);                                                       // własne materiały (pkt 1.2) – nazwy preparatów, bez danych pacjentów
     if (mod === 'prywatne') return { uid, name, mod, clinics, shifts, mat, blobs: await getBlobs(c, BLOB_KEYS), blobVer: await getBlobVers(c, BLOB_KEYS), visits: await listPryw(c) };

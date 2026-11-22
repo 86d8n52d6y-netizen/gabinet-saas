@@ -34,7 +34,6 @@ export default async function Konto({ searchParams }: { searchParams: Promise<{ 
         <nav className="g-tiles" aria-label="Moduły">
           <a className="tile" href="/kalendarz"><b>Kalendarz</b><span className="muted">{dyz.length ? `Dziś: ${dyz.join(', ')}` : 'Dziś bez dyżuru'}</span></a>
           <a className="tile" href="/opisy-nfz"><b>Opisy NFZ</b><span className="muted">{dzis.nv ? `Dziś: ${wiz(dzis.nv)} · ${fmtC(dzis.e1)}` : 'Dziś brak zapisanych wizyt'}</span></a>
-          <a className="tile" href="/nfz"><b>NFZ</b><span className="muted">Opis i punkty z kart procedur</span></a>
           <a className="tile" href="/opisy-prywatne"><b>Opisy prywatne</b><span className="muted">{dzis.pv ? `Dziś: ${wiz(dzis.pv)} · ${fmtC(dzis.e2)}` : 'Dziś brak zapisanych wizyt'}</span></a>
           <Link className="tile" href="/zarobki"><b>Zarobki</b><span className="muted">{dzis.sum ? `Dziś razem: ${fmtC(dzis.sum)}` : 'Wszystkie gabinety, okresy, CSV'}</span></Link>
         </nav>)}

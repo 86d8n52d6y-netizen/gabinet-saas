@@ -6,7 +6,7 @@ import { cleanMeta, deleteVisit, listVisits, upsertVisit } from '@/lib/nfz/wizyt
 export async function POST(req: Request) {
   const a = await apiAuth(req);
   if (a instanceof Response) return a;
-  const b = (a.body ?? {}) as { put?: unknown[]; del?: { id?: unknown; at?: unknown }[]; list?: boolean };
+  const b = (a.body ?? {}) as { put?: unknown[]; del?: { id?: unknown; at?: unknown }[]; list?: boolean; zrodlo?: unknown };
   const put = Array.isArray(b.put) ? b.put.slice(0, 500) : [], del = Array.isArray(b.del) ? b.del.slice(0, 500) : [];
   let saved = 0, rejected = 0;
   const out = await withUser(a.s.userId, async c => {
@@ -15,7 +15,7 @@ export async function POST(req: Request) {
       if (typeof d?.id === 'string' && /^[A-Za-z0-9_-]{1,40}$/.test(d.id) && typeof d.at === 'string' && !isNaN(Date.parse(d.at)))
         await deleteVisit(c, d.id, new Date(d.at).toISOString());
     }
-    return b.list ? listVisits(c) : null;
+    return b.list ? listVisits(c, b.zrodlo === 'karty' ? 'karty' : 'opisy') : null;   // „karty” – zakładka NFZ (E4)
   });
   return json({ ok: true, saved, rejected, ...(out ?? {}) });
 }

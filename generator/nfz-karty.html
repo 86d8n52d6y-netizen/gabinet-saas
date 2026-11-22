@@ -82,7 +82,8 @@ function qTop(it, f) { const base = (QBASE[f.k] || []).concat(G.mat(f.k === 'mat
   const c = qCounts()[f.qloc ? it.pid + '|' + f.k : f.k] || {};
   return [...new Set(Object.keys(c).sort((a, b) => c[b] - c[a]).concat(base))].slice(0, 3); }
 
-const S = { date: G.today(), gab: '', wiek: '', ciaza: false, items: [], q: '', kat: '', ready: false };
+const S = { date: G.today(), gab: '', wiek: '', ciaza: false, items: [], q: '', kat: '', ready: false, id: null, no: 0, created: null, savedSig: null };
+const H = new Map();                                                                   // historia: id → wpis (lokalny z treścią albo z chmury bez treści)
 const uid = () => Math.random().toString(36).slice(2, 10);
 const FDI = /^([1-4][1-8]|[5-8][1-5])$/;
 const teethOf = s => String(s || '').split(/[^0-9]+/).filter(Boolean);
@@ -125,6 +126,62 @@ function visitText() {
   return ['Wykonano: ' + sum.join('; ') + '.'].concat(parts).concat(kody ? ['Świadczenia NFZ: ' + kody + '.'] : []).join('\n\n');
 }
 
+/* ---------- zapis: treść na urządzeniu (zaszyfrowana, kv „nfzk:w:…”), do chmury tylko metadane jak w Opisach NFZ ---------- */
+const KV = G.store('kv'), WK = id => 'nfzk:w:' + id, QKEY = 'nfzk:kolejka', API = '/api/nfz/wizyty';
+const newId = () => 'k-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);   // „k-” – serwer rozdziela listy (Opisy NFZ nie widzą tych wpisów)
+function metaOf() {
+  const W = wycena(), t = visitText(), now = new Date().toISOString();
+  return { id: S.id, v: 2, no: S.no, date: S.date, created: S.created || now, at: now, src: 'gen', codes: W.wiersze.map(r => r.kod), pts: W.suma,
+    price: CFG.price, pct: CFG.pct, revH: 0, revRate: CFG.rev || 350, ex: [], min: null, miss: (t.match(/\[UZUPEŁNIJ/g) || []).length, gab: S.gab || '' };
+}
+const cloudOf = m => { const o = Object.assign({}, m); delete o.body; delete o.cloud; return o; };      // bez treści, pól, wieku
+const sig = () => JSON.stringify([S.date, S.gab, S.wiek, S.ciaza, S.items.map(it => [it.pid, it.vals, it.n, it.war])]);
+async function kolejka(op) { const q = (await KV.get(QKEY).catch(() => null)) || []; if (op) q.push(op); await KV.put(QKEY, q); return q; }
+function syncInfo(t) { const el = document.getElementById('gsync'); if (el) el.textContent = t ? '⚠ ' + t : 'Historia zsynchronizowana'; }
+async function wyslij() {
+  const q = (await KV.get(QKEY).catch(() => null)) || []; if (!q.length) { syncInfo(''); return true; }
+  try { await G._post(API, { put: q.filter(o => o.put).map(o => o.put), del: q.filter(o => o.del).map(o => o.del) }); await KV.put(QKEY, []); syncInfo(''); return true; }
+  catch (e) { syncInfo(e && e.login ? 'sesja wygasła – zaloguj się ponownie (wizyta zapisana na tym urządzeniu)' : 'brak połączenia – wizyta zapisana na tym urządzeniu, wyślę później'); return false; }
+}
+async function zapisz() {
+  if (!S.items.length) return;
+  if (!S.id) { S.id = newId(); S.created = new Date().toISOString(); S.no = Math.max(0, ...[...H.values()].map(m => m.no || 0)) + 1; }
+  const m = metaOf(); m.body = { items: S.items.map(it => ({ pid: it.pid, vals: it.vals, n: it.n, war: it.war })), wiek: S.wiek, ciaza: S.ciaza, txt: visitText() };
+  await KV.put(WK(m.id), m); H.set(m.id, m); qLearn(); S.savedSig = sig();
+  await kolejka({ put: cloudOf(m) }); await wyslij(); render();
+}
+async function usun(id) {
+  const at = new Date().toISOString(); await KV.del(WK(id)).catch(() => { }); H.delete(id);
+  await kolejka({ del: { id, at } }); await wyslij(); if (S.id === id) Object.assign(S, { id: null, items: [], savedSig: null }); render();
+}
+function otworz(id) {
+  const m = H.get(id); if (!m || !m.body) return;
+  Object.assign(S, { id: m.id, no: m.no, created: m.created, date: m.date, gab: m.gab || '', wiek: m.body.wiek || '', ciaza: !!m.body.ciaza,
+    items: m.body.items.filter(x => PROC.has(x.pid)).map(x => ({ u: uid(), pid: x.pid, vals: JSON.parse(JSON.stringify(x.vals || {})), n: x.n || 1, war: x.war || '' })) });
+  S.savedSig = sig(); render(); scrollTo(0, 0);
+}
+async function wczytaj() {                                                               // urządzenie + chmura (stan z chwili otwarcia strony)
+  const loc = (await KV.all().catch(() => [])).filter(([k]) => String(k).startsWith('nfzk:w:')).map(([, v]) => v);
+  loc.forEach(m => H.set(m.id, m));
+  const live = (C.visits && C.visits.live) || [], gone = (C.visits && C.visits.gone) || [];
+  for (const g of gone) { const L = H.get(g.id); if (L && L.at <= g.at) { H.delete(g.id); await KV.del(WK(g.id)).catch(() => { }); } }
+  for (const m of live) { const L = H.get(m.id); if (!L) H.set(m.id, Object.assign({}, m, { cloud: true })); else if (m.at > L.at && L.body) H.set(m.id, Object.assign({}, m, { body: L.body })); }
+  const q = (await KV.get(QKEY).catch(() => null)) || [], czeka = new Set(q.filter(o => o.put).map(o => o.put.id));
+  for (const L of loc) if (!live.some(m => m.id === L.id) && !gone.some(g => g.id === L.id) && !czeka.has(L.id)) await kolejka({ put: cloudOf(L) });   // zapis sprzed utraty połączenia
+  await wyslij();
+}
+function duplikat(W) {                                                                    // ta sama wizyta opisana też w Opisach NFZ? (Zarobki policzyłyby obie)
+  const kody = W.wiersze.map(r => r.kod).concat(S.items.map(it => PROC.get(it.pid).karta.replace(/^23\./, '')));
+  return (C.opisy || []).filter(v => v.date === S.date && (v.gab || '') === (S.gab || '') && (v.codes || []).some(c => kody.includes(c)));
+}
+function histHTML() {
+  const L = [...H.values()].sort((a, b) => (b.date + b.created).localeCompare(a.date + a.created)).slice(0, 40);
+  const gab = id => ((C.clinics || []).find(c => c.id === id) || {}).name || 'bez gabinetu';
+  return '<section class="nk-card" data-testid="nk-hist"><h2>Historia wizyt (zakładka NFZ)</h2>' + (L.length ? L.map(m => '<div class="nk-ih" style="border-top:1px solid var(--g-line);padding-top:8px" data-hid="' + esc(m.id) + '"><span><b>' + esc(m.date.split('-').reverse().join('.')) + '</b> · ' + esc(gab(m.gab)) + ' · ' + esc((m.codes || []).join(', ')) + ' · <b>' + E.fmt(m.pts) + ' pkt</b>' + (m.miss ? ' · <span style="color:var(--g-warn)">do uzupełnienia: ' + m.miss + '</span>' : '') + (m.body ? '' : ' · <span class="g-muted">z innego urządzenia – bez treści</span>') + '</span><span class="sp"></span>' +
+    (m.body ? '<button type="button" class="nk-chip" data-a="hopen" data-id="' + esc(m.id) + '">Otwórz</button>' : '') + '<button type="button" class="nk-chip" data-a="hdel" data-id="' + esc(m.id) + '">Usuń</button></div>').join('') : '<p class="g-muted">Brak zapisanych wizyt.</p>') +
+    '<p class="nk-src">Treść opisu – tylko na tym urządzeniu (zaszyfrowana). Na konto trafiają: data, gabinet, kody, punkty i stawki – do Zarobków.</p></section>';
+}
+
 /* ---------- widok ---------- */
 function fieldHTML(it, i, f) {
   const id = 'f_' + it.u + '_' + f.k, v = it.vals[f.k], d = ' data-i="' + i + '" data-k="' + esc(f.k) + '"';
@@ -165,7 +222,8 @@ function pickHTML() {
 function sideHTML() {
   if (!S.items.length) return '<section class="nk-card"><h2>Wycena i opis</h2><p class="g-muted">Dodaj procedurę z karty – punkty NFZ, pakiety i opis pojawią się tutaj.</p><p class="nk-src">' + esc(D.zrodlo) + '</p></section>';
   const W = wycena(), pc = centsPts(W.suma, CFG.price), sh = Math.round(pc * CFG.pct / 100);
-  const msg = W.bledy.map(m => '<div class="nk-msg err" data-testid="nk-err">' + esc(m) + '</div>').join('') + W.ostrz.map(m => '<div class="nk-msg warn" data-testid="nk-warn">' + esc(m) + '</div>').join('') + W.info.map(m => '<div class="nk-msg info">' + esc(m) + '</div>').join('');
+  const dup = duplikat(W);
+  const msg = (dup.length ? '<div class="nk-msg warn" data-testid="nk-dup">Tego dnia w tym gabinecie masz już wizytę w Opisach NFZ z tym samym kodem (' + esc(dup.map(v => v.codes.join(', ')).join('; ')) + '). Jeśli to ta sama wizyta – zapisz ją tylko w jednym miejscu, bo Zarobki policzą obie.</div>' : '') + W.bledy.map(m => '<div class="nk-msg err" data-testid="nk-err">' + esc(m) + '</div>').join('') + W.ostrz.map(m => '<div class="nk-msg warn" data-testid="nk-warn">' + esc(m) + '</div>').join('') + W.info.map(m => '<div class="nk-msg info">' + esc(m) + '</div>').join('');
   const tr = W.wiersze.map(r => '<tr><td><b>' + esc(r.kod) + '</b><br><span class="g-muted" style="font-size:12px">' + esc(nazwaKodu(r)) + '</span></td><td class="r">' + r.q + '</td><td class="r">' + E.fmt(r.base) + '</td><td>' + esc(r.kn || '—') + '</td><td>' + esc(E.opisWiersza(r)) + '</td><td class="r"><b>' + E.fmt(r.pts) + '</b></td></tr>').join('');
   const sk = W.skladowe.length ? '<div class="nk-msg info" data-testid="nk-sklad"><b>W pakiecie (0 pkt, bez osobnego rozliczenia):</b> ' + W.skladowe.map(s => esc(s.kod + (s.zn ? ' (znieczulenie z karty)' : '') + ' → ' + s.pakiet)).join('; ') + '</div>' : '';
   const nl = W.nieliczone.length ? '<div class="nk-msg warn" data-testid="nk-nie"><b>Niewliczone do sumy:</b> ' + W.nieliczone.map(n => esc(n.kod + ' – ' + n.powod)).join('; ') + '</div>' : '';
@@ -175,7 +233,7 @@ function sideHTML() {
     '<p class="nk-src">' + esc(D.zrodlo) + '. Stawka: ' + String(CFG.price).replace('.', ',') + ' zł/pkt (Ustawienia).</p></section>' +
     '<section class="nk-card"><h2>Opis wizyty ' + (miss ? '<span class="nk-msg warn" style="font-size:12px;padding:2px 8px">do uzupełnienia: ' + miss + '</span>' : '<span class="nk-msg info" style="font-size:12px;padding:2px 8px">kompletny</span>') + '</h2>' +
     '<div class="nk-out" id="nk-opis" data-testid="nk-opis">' + esc(t).replace(/\[UZUPEŁNIJ: [^\]]*\]/g, m => '<mark>' + m + '</mark>') + '</div>' +
-    '<div class="nk-btns"><button type="button" class="g-btn" data-a="copy" id="b_copy">Kopiuj opis</button><button type="button" class="g-btn ghost" data-a="new">Nowa wizyta</button></div>' +
+    '<div class="nk-btns"><button type="button" class="g-btn" data-a="copy" id="b_copy">Kopiuj opis</button><button type="button" class="g-btn" data-a="save" id="b_save"' + (S.savedSig === sig() ? ' disabled' : '') + '>' + (S.id ? (S.savedSig === sig() ? 'Zapisano ✓' : 'Zapisz zmiany') : 'Zapisz wizytę') + '</button><button type="button" class="g-btn ghost" data-a="new">Nowa wizyta</button></div>' +
     '<p class="nk-src">Aplikacja przygotowuje propozycję wpisu – sprawdź ją i wklej do dokumentacji w systemie gabinetu. Opis tylko z kart procedur zweryfikowanych; Opisy NFZ działają bez zmian.</p></section>';
 }
 function render() {
@@ -185,7 +243,7 @@ function render() {
     '<label class="nk-l" style="min-width:110px">Wiek pacjenta (lata)<input class="nk-in" id="v_wiek" inputmode="numeric" maxlength="3" value="' + esc(S.wiek) + '"></label>' +
     '<label style="display:flex;gap:6px;align-items:center;font-size:13.5px"><input type="checkbox" id="v_ciaza"' + (S.ciaza ? ' checked' : '') + '> ciąża / połóg (×1,2)</label></div>' +
     '<p class="g-muted" style="font-size:12.5px;margin:8px 0 0">Wiek liczy współczynnik ×1,5 i granice wiekowe NFZ; zostaje na tym urządzeniu (nie trafia na serwer).</p></section>';
-  $('#main').innerHTML = '<h1 style="margin:0 0 12px;font-size:24px">NFZ – opis i wycena z kart procedur</h1><div class="nk-grid"><div>' + head + S.items.map(itemHTML).join('') + pickHTML() + '</div><div id="side">' + sideHTML() + '</div></div>';
+  $('#main').innerHTML = '<h1 style="margin:0 0 12px;font-size:24px">NFZ – opis i wycena z kart procedur</h1><div class="nk-grid"><div>' + head + S.items.map(itemHTML).join('') + pickHTML() + histHTML() + '</div><div id="side">' + sideHTML() + '</div></div>';
 }
 const refreshSide = () => { const s = $('#side'); if (s) s.innerHTML = sideHTML(); };
 function rerenderItem(i) { const el = document.getElementById('it-' + S.items[i].u); if (el) el.outerHTML = itemHTML(S.items[i], i); refreshSide(); }
@@ -203,8 +261,8 @@ document.addEventListener('input', e => {
 });
 document.addEventListener('change', e => {
   const t = e.target;
-  if (t.id === 'v_date') { S.date = t.value; return; }
-  if (t.id === 'v_gab') { S.gab = t.value; return; }
+  if (t.id === 'v_date') { S.date = t.value; refreshSide(); return; }
+  if (t.id === 'v_gab') { S.gab = t.value; refreshSide(); return; }
   if (t.id === 'v_ciaza') { S.ciaza = t.checked; refreshSide(); return; }
   if (t.id === 'v_wiek') { render(); return; }
   if (t.dataset.war) { S.items[+t.dataset.war].war = t.value; refreshSide(); return; }
@@ -224,13 +282,17 @@ document.addEventListener('click', async e => {
   if (a === 'pick') { S.pick = true; render(); return; }
   if (a === 'rm') { S.items.splice(+t.dataset.i, 1); render(); return; }
   if (a === 'qset') { const i = +t.dataset.i; S.items[i].vals[t.dataset.k] = t.dataset.v; rerenderItem(i); return; }
-  if (a === 'new') { if (S.items.length && !t.dataset.arm) { t.dataset.arm = '1'; t.textContent = 'Kliknij ponownie – wyczyścić wizytę?'; return; } Object.assign(S, { items: [], wiek: '', ciaza: false, q: '', kat: '' }); render(); return; }
+  if (a === 'new') { if (S.items.length && S.savedSig !== sig() && !t.dataset.arm) { t.dataset.arm = '1'; t.textContent = 'Niezapisane zmiany – kliknij ponownie'; return; } Object.assign(S, { items: [], wiek: '', ciaza: false, q: '', kat: '', id: null, no: 0, created: null, savedSig: null, date: G.today() }); render(); return; }
+  if (a === 'save') { t.disabled = true; await zapisz(); return; }
+  if (a === 'hopen') { if (S.items.length && S.savedSig !== sig() && S.id !== t.dataset.id && !t.dataset.arm) { t.dataset.arm = '1'; t.textContent = 'Niezapisane zmiany – kliknij ponownie'; return; } otworz(t.dataset.id); return; }
+  if (a === 'hdel') { if (!t.dataset.arm) { t.dataset.arm = '1'; t.textContent = 'Na pewno usunąć?'; return; } await usun(t.dataset.id); return; }
   if (a === 'copy') { const txt = visitText(); try { await navigator.clipboard.writeText(txt); } catch (err) { const r = document.createRange(); r.selectNodeContents($('#nk-opis')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); document.execCommand('copy'); }
     qLearn(); t.textContent = 'Skopiowano ✓'; setTimeout(() => { t.textContent = 'Kopiuj opis'; }, 1500); }
 });
 (async function init() {
   try { await G.ready('nfzk'); } catch (e) { }
   if (!D || !E || !KP) { $('#main').innerHTML = '<div class="nk-msg err">Nie wczytano danych modułu – odśwież stronę.</div>'; return; }
+  await wczytaj().catch(() => { });
   S.ready = true; render();
 })();
 </script>

@@ -55,7 +55,7 @@ with sync_playwright() as p:
     resp = pg.goto(URL + '/opisy-nfz'); ready(pg)
     chk('generator otwiera się na koncie SaaS', resp.status == 200 and pg.locator('#steps').count() == 1)
     chk('CSP także na stronie generatora', "default-src 'self'" in (resp.headers.get('content-security-policy') or ''))
-    chk('pasek: Kalendarz, Opisy NFZ (aktywne), Opisy prywatne, Zlecenia, Zarobki, Katalog NFZ, Gabinety, Ustawienia, Konto', pg.locator('#gbar a.on').inner_text() == 'Opisy NFZ' and pg.locator('#gbar nav a').count() == 9)
+    chk('pasek: Kalendarz, Opisy NFZ (aktywne), NFZ (zakładka E4), Opisy prywatne, Zlecenia, Zarobki, Katalog NFZ, Gabinety, Ustawienia, Konto', pg.locator('#gbar a.on').inner_text() == 'Opisy NFZ' and pg.locator('#gbar nav a').count() == 10 and pg.locator('#gbar nav a[href="/nfz"]').count() == 1)
     chk('czcionki lokalnie (bez Google Fonts)', 'fonts.googleapis.com' not in pg.content())
     chk('stawki z konta (1,84 zł / 40% / 350 zł)', pg.evaluate("[cfg.price,cfg.pct,cfg.rev].join('|')") == '1.84|40|350')
     chk('gabinet z konta na liście generatora', pg.evaluate(f"state.clinics.some(c=>c.id==='{gab}')"))
