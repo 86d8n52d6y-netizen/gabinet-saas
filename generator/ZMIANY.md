@@ -116,6 +116,14 @@ Plik `wspolne.js` (sejf z hasłem w przeglądarce) zastąpiony przez `gabinet-sa
 | R13 | opis z karty procedury (etap I2, decyzja Patryka 22.11.2026): dane kart zweryfikowanych i okienko – tylko na urządzeniu |
 | R13a | przycisk „Opis z karty” obok „Edytuj tekst” / „Wygeneruj tekst z formularza” |
 | R13b | wstawienie: tekst z karty dopisany na końcu opisu jako edycja ręczna (V.edited) – zapis i szkic jak przy „Edytuj tekst” |
+| R14 | karty procedur do klikania (etap K1, decyzja Patryka 22.11.2026): 144 karty zweryfikowane jako procedury w Opisach prywatnych (generator/prywatne-karty.js – tylko na urządzeniu) |
+| R14a | tekst procedury z karty: szablon standardowy karty + blok dokumentacyjny (rozpoznanie, znieczulenie z dawką, powikłania, informacja i zgoda); puste obowiązkowe → [UZUPEŁNIJ] |
+| R14b | zapis wersji szablonu karty w wizycie (otwarcie z historii odtwarza ten sam tekst) |
+| R14c | zdanie o informacji / zgodzie pacjenta przy kilku procedurach z kart – w opisie wizyty tylko raz |
+| R14d | podpowiedzi rozpoznania z karty liczone tylko z wizyt tej samej procedury (nie podpowiada próchnicy przy ekstrakcji) |
+| R14e | wywołanie podpowiedzi z identyfikatorem procedury (pola z kart) |
+| R14f | Szablony: karty procedur bez edycji i duplikowania (tekst z bazy kart zweryfikowanych) – ulubione i ukrywanie działają |
+| R14g | karty: Dentocaine wpisywane samo przy znieczuleniu iniekcyjnym (decyzja Patryka 22.11.2026: „tylko Dentocaine”), jak dawka 1,7 ml – do zmiany; przy powierzchniowym nic |
 
 ## Kalendarz (`kalendarz.html`)
 

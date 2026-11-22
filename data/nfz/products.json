@@ -1438,7 +1438,18 @@
       "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
       "punkty": 162,
       "sklad": {
-        "uwagi": "Skład pakietu z zał. 1d nie został przeniesiony do paczki – WYMAGA WERYFIKACJI"
+        "kierunkowa": [
+          "23.1612"
+        ],
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "opcjonalne_listy": [
+          "ST2"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zweryfikowal": "Patryk Barysz",
+        "zweryfikowano": "2026-11-22"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": [
@@ -1455,7 +1466,15 @@
       "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
       "punkty": 177,
       "sklad": {
-        "uwagi": "Skład pakietu z zał. 1d nie został przeniesiony do paczki – WYMAGA WERYFIKACJI"
+        "kierunkowa": [
+          "23.1812"
+        ],
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zweryfikowal": "Patryk Barysz",
+        "zweryfikowano": "2026-11-22"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": [
@@ -1472,7 +1491,19 @@
       "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
       "punkty": 138,
       "sklad": {
-        "uwagi": "Skład pakietu z zał. 1d nie został przeniesiony do paczki – WYMAGA WERYFIKACJI"
+        "kierunkowa": [
+          "23.1814"
+        ],
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "opcjonalne_listy": [
+          "ST2"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zweryfikowal": "Patryk Barysz",
+        "zweryfikowano": "2026-11-22",
+        "uwagi": "W tekście zał. 1d błąd redakcyjny („…zatkanie kością z listy procedur dodatkowych ST1”); przyjęto ST1 jako wymagane jak w pakietach sąsiednich – decyzja Patryka 22.11.2026."
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": [
@@ -1489,7 +1520,18 @@
       "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
       "punkty": 162,
       "sklad": {
-        "uwagi": "Skład pakietu z zał. 1d nie został przeniesiony do paczki – WYMAGA WERYFIKACJI"
+        "kierunkowa": [
+          "23.1808"
+        ],
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "opcjonalne_listy": [
+          "ST2"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zweryfikowal": "Patryk Barysz",
+        "zweryfikowano": "2026-11-22"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": [
@@ -1540,7 +1582,18 @@
       "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
       "punkty": 266,
       "sklad": {
-        "uwagi": "Skład pakietu z zał. 1d nie został przeniesiony do paczki – WYMAGA WERYFIKACJI"
+        "kierunkowa": [
+          "23.1802"
+        ],
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "opcjonalne_listy": [
+          "ST2"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zweryfikowal": "Patryk Barysz",
+        "zweryfikowano": "2026-11-22"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": [
@@ -1556,7 +1609,18 @@
       "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
       "punkty": 223,
       "sklad": {
-        "uwagi": "Skład pakietu z zał. 1d nie został przeniesiony do paczki – WYMAGA WERYFIKACJI"
+        "kierunkowa": [
+          "23.1906"
+        ],
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "opcjonalne_listy": [
+          "ST2"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zweryfikowal": "Patryk Barysz",
+        "zweryfikowano": "2026-11-22"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": "WYMAGA WERYFIKACJI"
@@ -1590,7 +1654,18 @@
       "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
       "punkty": 220,
       "sklad": {
-        "uwagi": "Skład pakietu z zał. 1d nie został przeniesiony do paczki – WYMAGA WERYFIKACJI"
+        "kierunkowa": [
+          "23.1704"
+        ],
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "opcjonalne_listy": [
+          "ST2"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zweryfikowal": "Patryk Barysz",
+        "zweryfikowano": "2026-11-22"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": [
@@ -1607,7 +1682,18 @@
       "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
       "punkty": 269,
       "sklad": {
-        "uwagi": "Skład pakietu z zał. 1d nie został przeniesiony do paczki – WYMAGA WERYFIKACJI"
+        "kierunkowa": [
+          "23.1706"
+        ],
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "opcjonalne_listy": [
+          "ST2"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zweryfikowal": "Patryk Barysz",
+        "zweryfikowano": "2026-11-22"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": [
@@ -1624,7 +1710,18 @@
       "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
       "punkty": 222,
       "sklad": {
-        "uwagi": "Skład pakietu z zał. 1d nie został przeniesiony do paczki – WYMAGA WERYFIKACJI"
+        "kierunkowa": [
+          "23.1610"
+        ],
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "opcjonalne_listy": [
+          "ST2"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zweryfikowal": "Patryk Barysz",
+        "zweryfikowano": "2026-11-22"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": [
@@ -1662,10 +1759,15 @@
       "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
       "punkty": 86,
       "sklad": {
+        "kierunkowa": [
+          "23.2001"
+        ],
         "wymagane_listy": [
           "ST1"
         ],
-        "uwagi": "procedura kierunkowa + ST1 – kod kierunkowy WYMAGA WERYFIKACJI"
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zweryfikowal": "Patryk Barysz",
+        "zweryfikowano": "2026-11-22"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": "WYMAGA WERYFIKACJI"
@@ -1678,10 +1780,15 @@
       "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
       "punkty": 202,
       "sklad": {
+        "kierunkowa": [
+          "23.2101"
+        ],
         "wymagane_listy": [
           "ST1"
         ],
-        "uwagi": "procedura kierunkowa + ST1 – kod kierunkowy WYMAGA WERYFIKACJI"
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zweryfikowal": "Patryk Barysz",
+        "zweryfikowano": "2026-11-22"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": "WYMAGA WERYFIKACJI"
@@ -1694,10 +1801,18 @@
       "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
       "punkty": 251,
       "sklad": {
+        "kierunkowa": [
+          "23.2102"
+        ],
         "wymagane_listy": [
           "ST1"
         ],
-        "uwagi": "procedura kierunkowa + ST1 – kod kierunkowy WYMAGA WERYFIKACJI"
+        "opcjonalne_listy": [
+          "ST2"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zweryfikowal": "Patryk Barysz",
+        "zweryfikowano": "2026-11-22"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": "WYMAGA WERYFIKACJI"
@@ -1710,10 +1825,15 @@
       "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
       "punkty": 91,
       "sklad": {
+        "kierunkowa": [
+          "23.2205"
+        ],
         "wymagane_listy": [
           "ST1"
         ],
-        "uwagi": "procedura kierunkowa + ST1 – kod kierunkowy WYMAGA WERYFIKACJI"
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zweryfikowal": "Patryk Barysz",
+        "zweryfikowano": "2026-11-22"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": "WYMAGA WERYFIKACJI"
@@ -1726,10 +1846,15 @@
       "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
       "punkty": 171,
       "sklad": {
-        "wymagane_listy": [
+        "kierunkowa": [
+          "23.2209"
+        ],
+        "opcjonalne_listy": [
           "ST1"
         ],
-        "uwagi": "procedura kierunkowa + ST1 – kod kierunkowy WYMAGA WERYFIKACJI"
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zweryfikowal": "Patryk Barysz",
+        "zweryfikowano": "2026-11-22"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": "WYMAGA WERYFIKACJI"
@@ -1742,10 +1867,15 @@
       "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
       "punkty": 104,
       "sklad": {
-        "wymagane_listy": [
+        "kierunkowa": [
+          "23.2210"
+        ],
+        "opcjonalne_listy": [
           "ST1"
         ],
-        "uwagi": "procedura kierunkowa + ST1 – kod kierunkowy WYMAGA WERYFIKACJI"
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zweryfikowal": "Patryk Barysz",
+        "zweryfikowano": "2026-11-22"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": "WYMAGA WERYFIKACJI"
@@ -1758,10 +1888,15 @@
       "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
       "punkty": 218,
       "sklad": {
-        "wymagane_listy": [
+        "kierunkowa": [
+          "23.1615"
+        ],
+        "opcjonalne_listy": [
           "ST1"
         ],
-        "uwagi": "procedura kierunkowa + ST1 – kod kierunkowy WYMAGA WERYFIKACJI"
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zweryfikowal": "Patryk Barysz",
+        "zweryfikowano": "2026-11-22"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": "WYMAGA WERYFIKACJI"

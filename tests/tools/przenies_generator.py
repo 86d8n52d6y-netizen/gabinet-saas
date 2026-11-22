@@ -393,6 +393,32 @@ PATCHES_PRYW = [
    "const curText = () => V.edited && typeof V.txt === 'string' ? V.txt : visitText();\n"
    "if (window.OpisZKarty) OpisZKarty.podlacz({ moze: () => V.items.length ? true : 'Najpierw dodaj procedurę do wizyty.',\n"
    "  wstaw: t => { if (!V.edited) { V.edited = true; V.txt = visitText(); V.genAtEdit = V.txt; } V.txt = String(V.txt || '').replace(/\\s+$/, '') + (V.txt ? '\\n\\n' : '') + t; refreshSide(); draftSched(); } });"),
+  ('R14 karty procedur do klikania (etap K1, decyzja Patryka 22.11.2026): 144 karty zweryfikowane jako procedury w Opisach prywatnych (generator/prywatne-karty.js – tylko na urządzeniu)',
+   '<script src="/opisy-nfz/zasoby/opis-z-karty.js"></script>',
+   '<script src="/opisy-nfz/zasoby/opis-z-karty.js"></script>\n<script src="/opisy-nfz/zasoby/prywatne-karty.js"></script>'),
+  ('R14a tekst procedury z karty: szablon standardowy karty + blok dokumentacyjny (rozpoznanie, znieczulenie z dawką, powikłania, informacja i zgoda); puste obowiązkowe → [UZUPEŁNIJ]',
+   "function itemText(it) {\n  const p = procOf(it), fm = fieldsOf(p), vals = it.vals || {};\n",
+   "function itemText(it) {\n  const p = procOf(it), fm = fieldsOf(p), vals = it.vals || {};\n"
+   "  if (p.ktpl && window.KartyPryw) return tidy(KartyPryw.tekst(p, k => { const f = fm.get(k); return f && visible(f, vals) ? fmtVal(f, vals[k]) : ''; }, k => (fm.get(k) || {}).l || k,\n"
+   "    k => { const f = fm.get(k); return !!(f && f.req && visible(f, vals)); }, k => vals[k]));\n"),
+  ('R14b zapis wersji szablonu karty w wizycie (otwarcie z historii odtwarza ten sam tekst)',
+   "def: { name: d.name, kat: d.kat, fields: d.fields || [], tpl: d.tpl || '', ver: d._ver || d.ver || 1 } };",
+   "def: { name: d.name, kat: d.kat, fields: d.fields || [], tpl: d.tpl || '', ver: d._ver || d.ver || 1, ktpl: d.ktpl, karta: d.karta, zab: d.zab } };"),
+  ('R14c zdanie o informacji / zgodzie pacjenta przy kilku procedurach z kart – w opisie wizyty tylko raz',
+   "  v = v || V; const parts = v.items.map(itemText).filter(Boolean);\n",
+   "  v = v || V; let parts = v.items.map(itemText).filter(Boolean); if (window.KartyPryw) parts = KartyPryw.dedupe(parts);\n"),
+  ('R14d podpowiedzi rozpoznania z karty liczone tylko z wizyt tej samej procedury (nie podpowiada próchnicy przy ekstrakcji)',
+   "function quickTop(k, list) { const c = new Map(); for (const m of S.visits.values()) for (const x of (m.items || [])) { const v = x.vals && x.vals[k];",
+   "function quickTop(k, list, pid) { const c = new Map(); for (const m of S.visits.values()) for (const x of (m.items || [])) { if (pid && x.pid !== pid) continue; const v = x.vals && x.vals[k];"),
+  ('R14e wywołanie podpowiedzi z identyfikatorem procedury (pola z kart)',
+   "if (l.length) q = quickTop(f.k, l).map(",
+   "if (l.length) q = quickTop(f.k, l, f.qloc ? it.pid : null).map("),
+  ('R14f Szablony: karty procedur bez edycji i duplikowania (tekst z bazy kart zweryfikowanych) – ulubione i ukrywanie działają',
+   """<button type="button" class="pw-ib" data-a="tedit" data-id="' + p.id + '">Edytuj</button><button type="button" class="pw-ib" data-a="tdup" data-id="' + p.id + '">Duplikuj</button>' +""",
+   """' + (p.karta ? '<span class="pw-tag">karta ' + esc(p.karta) + ' – tekst z bazy kart</span>' : '<button type="button" class="pw-ib" data-a="tedit" data-id="' + p.id + '">Edytuj</button><button type="button" class="pw-ib" data-a="tdup" data-id="' + p.id + '">Duplikuj</button>') +"""),
+  ('R14g karty: Dentocaine wpisywane samo przy znieczuleniu iniekcyjnym (decyzja Patryka 22.11.2026: „tylko Dentocaine”), jak dawka 1,7 ml – do zmiany; przy powierzchniowym nic',
+   "  let q = [];\n  if (f.k === 'wywiad'",
+   "  let q = [];\n  if (f.k === 'znprep' && p.karta && it.vals.zn && !['nie stosowano', 'powierzchniowe'].includes(it.vals.zn) && it.vals[f.k] === undefined) it.vals[f.k] = QBASE.znprep[0];\n  if (f.k === 'wywiad'"),
 ]
 
 PATCHES_KAL = [

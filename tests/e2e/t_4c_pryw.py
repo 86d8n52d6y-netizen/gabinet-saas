@@ -52,7 +52,7 @@ with sync_playwright() as p:
     pg.on('console', lambda m: errs.append('console: ' + m.text) if m.type == 'error' else None)
     r = pg.goto(URL + '/opisy-prywatne'); ready(pg)
     chk('moduł otwiera się na koncie SaaS (pasek: „Opisy prywatne” aktywne)', r.status == 200 and pg.inner_text('#gbar a.on') == 'Opisy prywatne')
-    chk('katalog: 19 procedur', pg.locator('button[data-add]').count() == 19, pg.locator('button[data-add]').count())
+    chk('katalog: 19 procedur własnych + 144 karty procedur (etap K1)', pg.locator('button[data-add]').count() == 163 and pg.locator('button[data-add]:not([data-add^="karta-"])').count() == 19, pg.locator('button[data-add]').count())
     chk('gabinety z konta w module', pg.evaluate(f"S.clinics.map(c=>c.id).join(',')") == f'{A},{B}', pg.evaluate("S.clinics.map(c=>c.name)"))
     chk('przykładowe zestawy przy pierwszym uruchomieniu → zapisane na koncie', pg.wait_for_timeout(600) or 'zx1' in sql("SELECT data::text FROM app.user_blobs WHERE key='pryw:zestawy'"))
 
@@ -132,7 +132,7 @@ with sync_playwright() as p:
         pg.evaluate("V.zalUst=false;S.ust.sum=false")   # R11: bez podsumowania; R9 (21.11.2026): zdanie o zaleceniach ustnych wyłączone – reszta tekstu co do znaku jak w starej aplikacji
         a, b = pg.evaluate("curText()"), po.evaluate("curText()")
         chk(f'tekst opisu (kompozyt + skaling + e-ZLA) = stara aplikacja ({len(a)} znaków)', a == b and len(a) > 300, (len(a), len(b)))
-        ids = pg.evaluate("KAT.proc.map(p=>p.id)")
+        ids = pg.evaluate("KAT.proc.filter(p=>!p.karta).map(p=>p.id)")   # K1: karty procedur nie istnieją w starej aplikacji – porównanie 1:1 dla 19 własnych
         same = 0
         for pid in ids:
             for x in (pg, po):

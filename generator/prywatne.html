@@ -139,6 +139,7 @@ textarea.pw-txted{min-height:260px;font-size:14.5px}
 <script src="/opisy-nfz/zasoby/prywatne-katalog.js"></script>
 <script src="/opisy-nfz/zasoby/karty-opisy.js"></script>
 <script src="/opisy-nfz/zasoby/opis-z-karty.js"></script>
+<script src="/opisy-nfz/zasoby/prywatne-karty.js"></script>
 <script>
 /* Opisy prywatne: wizyta z wieloma procedurami → opis do dokumentacji; cennik dla każdego gabinetu, wynagrodzenie lekarza
    (% po odjęciu kosztów albo kwota), historia, zarobki. Dane zaszyfrowane w przestrzeni użytkownika (G.store); bez punktów NFZ. */
@@ -258,6 +259,8 @@ function tidy(s) {
 function procOf(it) { return it.snap || PROC.get(it.pid) || { id: it.pid, name: it.name || 'Procedura', fields: [], tpl: '' }; }   // wizyta otwarta z historii: wersja szablonu z dnia zapisu
 function itemText(it) {
   const p = procOf(it), fm = fieldsOf(p), vals = it.vals || {};
+  if (p.ktpl && window.KartyPryw) return tidy(KartyPryw.tekst(p, k => { const f = fm.get(k); return f && visible(f, vals) ? fmtVal(f, vals[k]) : ''; }, k => (fm.get(k) || {}).l || k,
+    k => { const f = fm.get(k); return !!(f && f.req && visible(f, vals)); }, k => vals[k]));
   return tidy(tplRun(tplOf(p.tpl), (k, test) => {
     const f = fm.get(k); if (!f) return '';
     const v = visible(f, vals) ? fmtVal(f, vals[k]) : '';
@@ -269,7 +272,7 @@ function sumP(it) { const p = procOf(it), n = String(p.name || ''), z = fieldsOf
   for (const f of z.values()) if ((f.t === 'tooth' || f.t === 'teeth') && it.vals[f.k]) { const ts = String(it.vals[f.k]); s += ' – ' + (/[,;]/.test(ts) ? 'zęby ' : 'ząb ') + ts; break; }
   return s + (it.qty > 1 ? ' ×' + it.qty : ''); }
 function visitText(v) {
-  v = v || V; const parts = v.items.map(itemText).filter(Boolean);
+  v = v || V; let parts = v.items.map(itemText).filter(Boolean); if (window.KartyPryw) parts = KartyPryw.dedupe(parts);
   if (v.items.length && S.ust.sum !== false) parts.unshift('Wykonano: ' + v.items.map(sumP).join('; ') + '.');
   if (v.ezla && v.ezla.on) parts.push('Wystawiono zwolnienie lekarskie (e-ZLA)' + (v.ezla.od ? ' od ' + fmtD(v.ezla.od) : '') + (v.ezla.do ? ' do ' + fmtD(v.ezla.do) : '') + '.');
   if (v.items.length && v.zalUst !== false) parts.push('Zalecenia przekazano pacjentowi w formie ustnej.');
@@ -300,7 +303,7 @@ function repriceAll() { V.items.forEach(it => { if (!it.man) Object.assign(it, p
 function metaOf() {
   const items = V.items.map(it => { const r = payOf(it), d = procOf(it);
     return { pid: it.pid, name: it.name, kat: it.kat, qty: r.q, c: it.c, m: it.m, p: it.p, kw: it.kw, cost: it.m === 'kw' ? 0 : (it.cost || 0), val: r.val, pay: r.pay || 0, vals: it.vals,
-      def: { name: d.name, kat: d.kat, fields: d.fields || [], tpl: d.tpl || '', ver: d._ver || d.ver || 1 } }; });
+      def: { name: d.name, kat: d.kat, fields: d.fields || [], tpl: d.tpl || '', ver: d._ver || d.ver || 1, ktpl: d.ktpl, karta: d.karta, zab: d.zab } }; });
   const t = totals();
   return { id: V.id, v: 1, no: V.no, date: V.date, gab: resolveGab(), ini: normIni(V.ini), items, n: items.length, val: t.val, pay: t.pay, cost: t.cost,
     ezla: V.ezla.on ? { od: V.ezla.od || '', do: V.ezla.do || '' } : null, edited: !!V.edited, body: true, created: V.created };
@@ -465,14 +468,15 @@ const QMAT = { mat: ['kompozyt', 'inne'], podklad: ['podklad'], matz: ['inne'] }
 const DOLEGL = ['ból samoistny', 'ból na zimno/ciepło', 'ból przy nagryzaniu', 'nadwrażliwość', 'ukruszenie/złamanie zęba (lub wypełnienia)'];
 const ZN_DOSE = [['0,85', '½ amp. (0,85 ml)'], ['1,7', '1 amp. (1,7 ml)'], ['3,4', '2 amp. (3,4 ml)']];
 function qSug(f) { const base = (QBASE[f.k] || []).concat(f.sug || []); const all = (QMAT[f.k] ? G.mat(QMAT[f.k], []) : []).concat(base); return all.filter((x, j) => all.indexOf(x) === j); }   // własne materiały przed wbudowanymi
-function quickTop(k, list) { const c = new Map(); for (const m of S.visits.values()) for (const x of (m.items || [])) { const v = x.vals && x.vals[k]; if (typeof v === 'string' && v.trim()) c.set(v.trim(), (c.get(v.trim()) || 0) + 1); }
+function quickTop(k, list, pid) { const c = new Map(); for (const m of S.visits.values()) for (const x of (m.items || [])) { if (pid && x.pid !== pid) continue; const v = x.vals && x.vals[k]; if (typeof v === 'string' && v.trim()) c.set(v.trim(), (c.get(v.trim()) || 0) + 1); }
   return [...new Set([...c.keys()].sort((a, b) => c.get(b) - c.get(a)).concat(list))].slice(0, 3); }
 function quickHTML(it, i, f) {
   const p = procOf(it), v = it.vals[f.k], b = (a, val, lab, on) => '<button type="button" class="pw-ib pw-qb' + (on ? ' on' : '') + '" data-a="' + a + '" data-i="' + i + '" data-k="' + esc(f.k) + '" data-v="' + esc(val) + '" aria-pressed="' + !!on + '">' + esc(lab) + '</button>';
   let q = [];
+  if (f.k === 'znprep' && p.karta && it.vals.zn && !['nie stosowano', 'powierzchniowe'].includes(it.vals.zn) && it.vals[f.k] === undefined) it.vals[f.k] = QBASE.znprep[0];
   if (f.k === 'wywiad' && ['zach', 'endo', 'diag'].includes(p.kat)) { const cur = String(v || '').split(',').map(x => x.trim()); q = DOLEGL.map(d => b('qtog', d, d, cur.includes(d))); }
   else if (f.k === 'zndawka') { const zn = it.vals.zn; if (!zn || zn === 'nie stosowano') return ''; if (v === undefined || v === '') it.vals[f.k] = '1,7'; q = ZN_DOSE.map(d => b('qset', d[0], d[1], String(it.vals[f.k]) === d[0])); }
-  else if (f.t !== 'area' && f.t !== 'multi' && f.t !== 'select' && f.t !== 'bool' && f.t !== 'rows' && f.t !== 'num' && f.t !== 'date' && f.t !== 'tooth' && f.t !== 'teeth') { const l = qSug(f); if (l.length) q = quickTop(f.k, l).map(x => b('qset', x, x, v === x)); }
+  else if (f.t !== 'area' && f.t !== 'multi' && f.t !== 'select' && f.t !== 'bool' && f.t !== 'rows' && f.t !== 'num' && f.t !== 'date' && f.t !== 'tooth' && f.t !== 'teeth') { const l = qSug(f); if (l.length) q = quickTop(f.k, l, f.qloc ? it.pid : null).map(x => b('qset', x, x, v === x)); }
   return q.length ? '<div class="pw-q">' + q.join('') + '</div>' : ''; }
 function fieldHTML(it, i, f) {
   const id = 'f_' + it.u + '_' + f.k, v = it.vals[f.k], d = ' data-i="' + i + '" data-k="' + f.k + '"';
@@ -721,7 +725,7 @@ function htmlTpl() {
     const ps = ALL.filter(p => p.kat === k.id && (!q || p.name.toLowerCase().includes(q))); if (!ps.length) return;
     out += '<section class="g-card"><h2>' + esc(k.name) + '</h2>' + ps.map(p => '<div class="pw-tl" id="t-' + p.id + '"><div><button type="button" class="pw-star" style="position:static;transform:none" data-fav="' + p.id + '" aria-pressed="' + (UK.fav || []).includes(p.id) + '" aria-label="Ulubiona: ' + esc(p.name) + '">★</button> <b>' + esc(p.name) + '</b>' +
       '<span class="pw-tag">v' + p._ver + '</span>' + (p._custom ? '<span class="pw-tag own">własna</span>' : isModified(p) ? '<span class="pw-tag mod">zmieniona</span>' : '') + (hid.includes(p.id) ? '<span class="pw-tag">ukryta</span>' : '') +
-      '<div class="pw-hp">' + esc(p.desc || '') + '</div></div><div class="g-row" style="gap:6px"><button type="button" class="pw-ib" data-a="tedit" data-id="' + p.id + '">Edytuj</button><button type="button" class="pw-ib" data-a="tdup" data-id="' + p.id + '">Duplikuj</button>' +
+      '<div class="pw-hp">' + esc(p.desc || '') + '</div></div><div class="g-row" style="gap:6px">' + (p.karta ? '<span class="pw-tag">karta ' + esc(p.karta) + ' – tekst z bazy kart</span>' : '<button type="button" class="pw-ib" data-a="tedit" data-id="' + p.id + '">Edytuj</button><button type="button" class="pw-ib" data-a="tdup" data-id="' + p.id + '">Duplikuj</button>') +
       '<button type="button" class="pw-ib" data-a="thide" data-id="' + p.id + '">' + (hid.includes(p.id) ? 'Pokaż' : 'Ukryj') + '</button>' +
       (!p._custom && isModified(p) ? '<button type="button" class="pw-ib" data-a="tdefault" data-id="' + p.id + '">Przywróć domyślny</button>' : '') +
       (p._custom ? '<button type="button" class="pw-ib danger" data-a="tdel" data-id="' + p.id + '">Usuń</button>' : '') + '</div></div>').join('') + '</section>';
