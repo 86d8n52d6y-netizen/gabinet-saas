@@ -131,3 +131,10 @@ Patryk zatwierdził wszystkie 17 badań (`verified`, z osobą i datą – schema
 | 23.1313 (3 kanały ze zgorzelą) brak w NFZ | **Potwierdzone – nie jest świadczeniem gwarantowanym.** Rozporządzenie wymienia 23.1308, 23.1309, 23.1311, 23.1312, 23.1314 (MTA), a 23.1313 nie występuje w żadnym załączniku (1, 2, 2a, 2b, 3, 4). Karta zostaje z oznaczeniem „poza NFZ”. | Dz.U. 2025 poz. 615 (t.j. rozporządzenia MZ), pobrany z api.sejm.gov.pl 22.11.2026; zmian rozporządzenia po t.j. nie sprawdzano |
 | 23.1308 / 23.1309 / 23.1312 – warunki | Zgodne z kartami: tylko dzieci i młodzież do 18 r.ż. oraz kobiety w ciąży i połogu; bez opracowania i odbudowy korony | jw. |
 | Kody produktów 23.13142 (`2314142`?), 23.1003 (`2310090`?) i nieodczytane (23.1203–23.1205, 23.1308, 23.1309, 23.1312 i in.) | **Nie sprawdzone** – strona baw.nfz.gov.pl blokuje pobieranie automatyczne; potrzebny zał. 1b do zarządzenia 60/2023/DSOZ (t.j.) od Patryka (PDF/XLSX) albo odczyt w portalu NFZ | SRC-ZARZ-60-2023-TJ |
+
+### Kody produktów NFZ – sprawdzenie z zarządzeniami (22.11.2026)
+
+Patryk dostarczył zarządzenia 60/2023 (pierwotne), 105/2023, 119/2023, 38/2025, 44/2025 i 95/2026 – według przypisu w 95/2026 to pełny łańcuch zmian 60/2023/DSOZ.
+- **Katalog jednostkowy (zał. 1b)** – ostatnia zmiana: 44/2025 (95/2026 go nie zmienia). Audyt zgodny w 83/83 pozycjach (kody i punkty); 23.13143 = `5.13.00.2313143` (poprawione przez NFZ w 44/2025), 23.2612 = 536 pkt.
+- **Pakiety (zał. 1c)** – 95/2026: punkty 43/43 pakietów zgodne z audytem.
+- **Uzupełnione:** 35 kodów produktów (33 brakujące + potwierdzenie 23.1003 `2310090` i 23.13142 `2314142`) ze źródłem `SRC-ZARZ-44-2025`; karty 23.1203–23.1205, 23.1208, 23.1210, 23.1308, 23.1309, 23.1312, 23.3104, 23.3105, 23.3112, 23.3116, 23.3117 mają teraz kod produktu.

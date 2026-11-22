@@ -35,6 +35,17 @@
       "data_dostepu": "2026-11-21"
     },
     {
+      "id": "SRC-ZARZ-44-2025",
+      "typ": "zarządzenie Prezesa NFZ (zmieniające)",
+      "tytul": "Zarządzenie nr 44/2025/DSOZ zmieniające zarządzenie 60/2023/DSOZ – zał. 1: katalog jednostkowych świadczeń stomatologicznych (aktualny – 95/2026 zmienia tylko zał. 1c i 1d)",
+      "url": "https://baw.nfz.gov.pl",
+      "obowiazuje_od": "2025-06-18",
+      "stan": "obowiązuje",
+      "uwagi": "Plik EDAP dostarczony przez Patryka 22.11.2026; łańcuch zmian 60/2023 wg przypisu w 95/2026: 105/2023, 119/2023, 38/2025, 44/2025, 95/2026.",
+      "status": "POTWIERDZONA",
+      "data_dostepu": "2026-11-22"
+    },
+    {
       "id": "SRC-ZARZ-95-2026",
       "typ": "zarządzenie Prezesa NFZ (zmieniające)",
       "tytul": "Zarządzenie nr 95/2026/DSOZ zmieniające zarządzenie 60/2023/DSOZ",
