@@ -38,8 +38,12 @@ with sync_playwright() as p:
 
     pg.goto(URL + '/katalog-procedur/PROC-23.1502')
     chk('Karta 23.1502: status „zweryfikowana” + kto i kiedy', 'zweryfikowana' in pg.inner_text('[data-testid="kp-status"]') and 'zweryfikował: Patryk Barysz' in pg.inner_text('main'))
-    pg.goto(URL + '/katalog-procedur/PROC-23.1206')
-    chk('Karta niezatwierdzona (23.1206): „wersja robocza – do weryfikacji”', 'wersja robocza' in pg.inner_text('[data-testid="kp-status"]'))
+    pg.goto(URL + '/katalog-procedur/PROC-23.1307')
+    chk('Karta niezatwierdzona (23.1307): „wersja robocza – do weryfikacji”', 'wersja robocza' in pg.inner_text('[data-testid="kp-status"]'))
+    pg.goto(URL + '/katalog-procedur/PROC-23.1202')
+    chk('Karta odrzucona (23.1202 dewitalizacja): informacja o odrzuceniu, bez treści karty', 'odrzucona' in pg.inner_text('main') and pg.locator('[data-testid="kp-kroki"]').count() == 0)
+    pg.goto(URL + '/katalog-procedur?q=23.1202')
+    chk('Karta odrzucona nie pojawia się na liście', pg.locator('[data-testid="kp-procedury"] li').count() == 0)
     pg.goto(URL + '/katalog-procedur/PROC-23.1502')
     chk('Karta 23.1502: kroki, checklista, ICD-10, 3 szablony', pg.locator('[data-testid="kp-kroki"] li').count() >= 8 and pg.locator('[data-testid="kp-checklista"] li').count() >= 5
         and pg.locator('[data-testid="kp-icd10"] li').count() >= 3 and all(pg.locator(f'[data-testid="szablon-{w}"]').count() == 1 for w in ('standardowy', 'skrocony', 'rozszerzony')))
