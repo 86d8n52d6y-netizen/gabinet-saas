@@ -82,12 +82,12 @@
       "id": "SRC-ICD10-CEZ",
       "typ": "klasyfikacja",
       "tytul": "ICD-10 Tom I, wydanie polskie (CeZ) – urzędowe nazwy polskie",
-      "url": "https://ezdrowie.gov.pl",
+      "url": "https://ezdrowie.gov.pl/pobierz/icd_10_tom_i",
       "obowiazuje_od": "NIE DOTYCZY",
       "stan": "obowiązuje (ICD-11 nie wdrożono)",
-      "uwagi": "W poprzedniej części audytu przeczytano K00–K14, S00.5, S01.5, S02.x, S03.x, Z01.x, Z46.3–4, Z29.8, Z96.5, Z97.2, Z98.8; urzędowe nazwy PL trzeba zestawić 1:1 przed użyciem produkcyjnym.",
-      "status": "WYMAGA WERYFIKACJI",
-      "data_dostepu": "2026-11-21"
+      "uwagi": "Tom I wydania polskiego (CSIOZ, wyd. 2008, © 2012) pobrany 22.11.2026; nazwy urzędowe zapisane w diagnoses.json (nazwa_pl_urzedowa); w aplikacji wyświetlane nazwy robocze (decyzja Patryka). K02.5 i K12.3 nie występują w wydaniu polskim.",
+      "status": "POTWIERDZONA",
+      "data_dostepu": "2026-11-22"
     },
     {
       "id": "SRC-NFZ-KOM-9017",

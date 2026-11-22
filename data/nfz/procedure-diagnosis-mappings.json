@@ -1647,18 +1647,6 @@
       ]
     },
     {
-      "icd9": "23.1201",
-      "icd10": "K02.5",
-      "typ": "sugestia kliniczna",
-      "wymagane_przez_nfz": false,
-      "status": "WYMAGA WERYFIKACJI",
-      "poziom_kontroli": "INFORMACJA",
-      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
-      "zrodla": [
-        "SRC-ICD10-WHO-2016"
-      ]
-    },
-    {
       "icd9": "23.1202",
       "icd10": "K04.0",
       "typ": "sugestia kliniczna",
@@ -1673,18 +1661,6 @@
     {
       "icd9": "23.1202",
       "icd10": "K04.1",
-      "typ": "sugestia kliniczna",
-      "wymagane_przez_nfz": false,
-      "status": "WYMAGA WERYFIKACJI",
-      "poziom_kontroli": "INFORMACJA",
-      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
-      "zrodla": [
-        "SRC-ICD10-WHO-2016"
-      ]
-    },
-    {
-      "icd9": "23.1202",
-      "icd10": "K02.5",
       "typ": "sugestia kliniczna",
       "wymagane_przez_nfz": false,
       "status": "WYMAGA WERYFIKACJI",
@@ -1719,18 +1695,6 @@
       ]
     },
     {
-      "icd9": "23.1203",
-      "icd10": "K02.5",
-      "typ": "sugestia kliniczna",
-      "wymagane_przez_nfz": false,
-      "status": "WYMAGA WERYFIKACJI",
-      "poziom_kontroli": "INFORMACJA",
-      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
-      "zrodla": [
-        "SRC-ICD10-WHO-2016"
-      ]
-    },
-    {
       "icd9": "23.1204",
       "icd10": "K04.0",
       "typ": "sugestia kliniczna",
@@ -1745,18 +1709,6 @@
     {
       "icd9": "23.1204",
       "icd10": "K04.1",
-      "typ": "sugestia kliniczna",
-      "wymagane_przez_nfz": false,
-      "status": "WYMAGA WERYFIKACJI",
-      "poziom_kontroli": "INFORMACJA",
-      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
-      "zrodla": [
-        "SRC-ICD10-WHO-2016"
-      ]
-    },
-    {
-      "icd9": "23.1204",
-      "icd10": "K02.5",
       "typ": "sugestia kliniczna",
       "wymagane_przez_nfz": false,
       "status": "WYMAGA WERYFIKACJI",
@@ -1791,18 +1743,6 @@
       ]
     },
     {
-      "icd9": "23.1205",
-      "icd10": "K02.5",
-      "typ": "sugestia kliniczna",
-      "wymagane_przez_nfz": false,
-      "status": "WYMAGA WERYFIKACJI",
-      "poziom_kontroli": "INFORMACJA",
-      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
-      "zrodla": [
-        "SRC-ICD10-WHO-2016"
-      ]
-    },
-    {
       "icd9": "23.1206",
       "icd10": "K04.0",
       "typ": "sugestia kliniczna",
@@ -1817,18 +1757,6 @@
     {
       "icd9": "23.1206",
       "icd10": "K04.1",
-      "typ": "sugestia kliniczna",
-      "wymagane_przez_nfz": false,
-      "status": "WYMAGA WERYFIKACJI",
-      "poziom_kontroli": "INFORMACJA",
-      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
-      "zrodla": [
-        "SRC-ICD10-WHO-2016"
-      ]
-    },
-    {
-      "icd9": "23.1206",
-      "icd10": "K02.5",
       "typ": "sugestia kliniczna",
       "wymagane_przez_nfz": false,
       "status": "WYMAGA WERYFIKACJI",
@@ -1863,18 +1791,6 @@
       ]
     },
     {
-      "icd9": "23.1208",
-      "icd10": "K02.5",
-      "typ": "sugestia kliniczna",
-      "wymagane_przez_nfz": false,
-      "status": "WYMAGA WERYFIKACJI",
-      "poziom_kontroli": "INFORMACJA",
-      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
-      "zrodla": [
-        "SRC-ICD10-WHO-2016"
-      ]
-    },
-    {
       "icd9": "23.1209",
       "icd10": "K04.0",
       "typ": "sugestia kliniczna",
@@ -1889,18 +1805,6 @@
     {
       "icd9": "23.1209",
       "icd10": "K04.1",
-      "typ": "sugestia kliniczna",
-      "wymagane_przez_nfz": false,
-      "status": "WYMAGA WERYFIKACJI",
-      "poziom_kontroli": "INFORMACJA",
-      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
-      "zrodla": [
-        "SRC-ICD10-WHO-2016"
-      ]
-    },
-    {
-      "icd9": "23.1209",
-      "icd10": "K02.5",
       "typ": "sugestia kliniczna",
       "wymagane_przez_nfz": false,
       "status": "WYMAGA WERYFIKACJI",
@@ -1935,18 +1839,6 @@
       ]
     },
     {
-      "icd9": "23.1210",
-      "icd10": "K02.5",
-      "typ": "sugestia kliniczna",
-      "wymagane_przez_nfz": false,
-      "status": "WYMAGA WERYFIKACJI",
-      "poziom_kontroli": "INFORMACJA",
-      "uwagi": "Leczenie miazgi (dewitalizacja, amputacja, ekstyrpacja)",
-      "zrodla": [
-        "SRC-ICD10-WHO-2016"
-      ]
-    },
-    {
       "icd9": "23.1306",
       "icd10": "K04.0",
       "typ": "sugestia kliniczna",
@@ -2415,18 +2307,6 @@
       ]
     },
     {
-      "icd9": "23.13141",
-      "icd10": "K02.5",
-      "typ": "sugestia kliniczna",
-      "wymagane_przez_nfz": false,
-      "status": "WYMAGA WERYFIKACJI",
-      "poziom_kontroli": "INFORMACJA",
-      "uwagi": "MTA – wskazania WYMAGAJĄ WERYFIKACJI w zarządzeniu",
-      "zrodla": [
-        "SRC-ICD10-WHO-2016"
-      ]
-    },
-    {
       "icd9": "23.13142",
       "icd10": "K04.0",
       "typ": "sugestia kliniczna",
@@ -2453,18 +2333,6 @@
     {
       "icd9": "23.13142",
       "icd10": "K04.5",
-      "typ": "sugestia kliniczna",
-      "wymagane_przez_nfz": false,
-      "status": "WYMAGA WERYFIKACJI",
-      "poziom_kontroli": "INFORMACJA",
-      "uwagi": "MTA – wskazania WYMAGAJĄ WERYFIKACJI w zarządzeniu",
-      "zrodla": [
-        "SRC-ICD10-WHO-2016"
-      ]
-    },
-    {
-      "icd9": "23.13142",
-      "icd10": "K02.5",
       "typ": "sugestia kliniczna",
       "wymagane_przez_nfz": false,
       "status": "WYMAGA WERYFIKACJI",
@@ -2511,18 +2379,6 @@
       ]
     },
     {
-      "icd9": "23.13143",
-      "icd10": "K02.5",
-      "typ": "sugestia kliniczna",
-      "wymagane_przez_nfz": false,
-      "status": "WYMAGA WERYFIKACJI",
-      "poziom_kontroli": "INFORMACJA",
-      "uwagi": "MTA – wskazania WYMAGAJĄ WERYFIKACJI w zarządzeniu",
-      "zrodla": [
-        "SRC-ICD10-WHO-2016"
-      ]
-    },
-    {
       "icd9": "23.13149",
       "icd10": "K04.0",
       "typ": "sugestia kliniczna",
@@ -2549,18 +2405,6 @@
     {
       "icd9": "23.13149",
       "icd10": "K04.5",
-      "typ": "sugestia kliniczna",
-      "wymagane_przez_nfz": false,
-      "status": "WYMAGA WERYFIKACJI",
-      "poziom_kontroli": "INFORMACJA",
-      "uwagi": "MTA – wskazania WYMAGAJĄ WERYFIKACJI w zarządzeniu",
-      "zrodla": [
-        "SRC-ICD10-WHO-2016"
-      ]
-    },
-    {
-      "icd9": "23.13149",
-      "icd10": "K02.5",
       "typ": "sugestia kliniczna",
       "wymagane_przez_nfz": false,
       "status": "WYMAGA WERYFIKACJI",
