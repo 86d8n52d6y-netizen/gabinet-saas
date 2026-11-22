@@ -35,7 +35,7 @@
   },
   {
    "plik": "data/procedury-icd9/procedures.json",
-   "sha256": "d01d86e50eab95eb8117f23fd2582a2b7aadec896e50f2793edfe3f370045252",
+   "sha256": "de9e458609157155e0c886bc993b3fd76bf7abedb1693d4ca86735ae72635b89",
    "schemat": "data/baza-stomatologiczna/schemas/procedures.schema.json",
    "rekordy": 266
   },

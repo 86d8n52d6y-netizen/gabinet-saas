@@ -3555,7 +3555,7 @@ Wskazania: obnażenie miazgi (uraz / próchnica) w zębie niedojrzałym z kontro
 - Stadium rozwoju korzenia — *zalecenie kliniczne* (`SRC-KLIN-ESE-S3-2023` (PMID 37772327))
 - Znieczulenie, powikłania, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
 
-**NFZ** – świadczenie gwarantowane: **tak**
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: 5.13.00.2312030 – 50 pkt (zał. 1b)
 
 - zał. 1 (wszyscy): Świadczenie jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia.
 - zał. 2 (<18)
@@ -3645,7 +3645,7 @@ Wskazania: obnażenie miazgi z możliwością kontroli krwawienia; wybrane przyp
 - Znieczulenie: rodzaj, preparat, dawka — *zalecenie kliniczne*, warunek: gdy zastosowano (`SRC-PRAKTYKA`)
 - Powikłania i zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
 
-**NFZ** – świadczenie gwarantowane: **tak**
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: 5.13.00.2312040 – 50 pkt (zał. 1b)
 
 - zał. 1 (wszyscy): Świadczenie jest udzielane w udokumentowanych przypadkach. Świadczenie jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia.
 - zał. 2 (<18): Świadczenie jest udzielane w udokumentowanych przypadkach.
@@ -3733,7 +3733,7 @@ Wskazania: nieodwracalne zapalenie miazgi w zębie niedojrzałym, gdy pulpotomia
 - Zakres wykonanej procedury — *prawne* (`SRC-DU-2026-1391`)
 - Znieczulenie, powikłania, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
 
-**NFZ** – świadczenie gwarantowane: **tak**
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: 5.13.00.2312050 – 80 pkt (zał. 1b)
 
 - zał. 1 (wszyscy): Świadczenie (za każdy kanał) jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia.
 - zał. 2 (<18): Świadczenie – za każdy kanał.
@@ -3919,7 +3919,7 @@ Wskazania: stan po dewitalizacji miazgi (23.1202)
 - Zakres wykonanej procedury — *prawne* (`SRC-DU-2026-1391`)
 - Znieczulenie, powikłania, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
 
-**NFZ** – świadczenie gwarantowane: **tak**
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: 5.13.00.2312080 – 60 pkt (zał. 1b)
 
 - zał. 1 (wszyscy): Świadczenie (za każdy kanał) jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia.
 - zał. 2 (<18): Świadczenie – za każdy kanał.
@@ -4696,7 +4696,7 @@ Wskazania: nieodwracalne zapalenie miazgi; wskazania protetyczne
 - Przebieg leczenia na kolejnych wizytach — *zalecenie kliniczne* (`SRC-KLIN-ESE-2006` (PMID 17180780))
 - Znieczulenie, powikłania, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
 
-**NFZ** – świadczenie gwarantowane: **tak**
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: 5.13.00.2313080 – 200 pkt (zał. 1b)
 
 - zał. 1 (wszyscy): Świadczenie nie obejmuje opracowania i odbudowy ubytku korony zęba. Świadczenie jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia oraz kobietom w ciąży i w okresie połogu.
 - zał. 2 (<18): Świadczenie nie obejmuje opracowania i odbudowy ubytku korony zęba.
@@ -4789,7 +4789,7 @@ Wskazania: nieodwracalne zapalenie miazgi; wskazania protetyczne
 - Przebieg leczenia na kolejnych wizytach — *zalecenie kliniczne* (`SRC-KLIN-ESE-2006` (PMID 17180780))
 - Znieczulenie, powikłania, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
 
-**NFZ** – świadczenie gwarantowane: **tak**
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: 5.13.00.2313090 – 250 pkt (zał. 1b)
 
 - zał. 1 (wszyscy): Świadczenie nie obejmuje opracowania i odbudowy ubytku korony zęba. Świadczenie jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia oraz kobietom w ciąży i w okresie połogu.
 - zał. 2 (<18): Świadczenie nie obejmuje opracowania i odbudowy ubytku korony zęba.
@@ -4981,7 +4981,7 @@ Wskazania: martwica / zgorzel miazgi; przewlekłe zapalenie okołowierzchołkowe
 - Przebieg leczenia na kolejnych wizytach — *zalecenie kliniczne* (`SRC-KLIN-ESE-2006` (PMID 17180780))
 - Znieczulenie, powikłania, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
 
-**NFZ** – świadczenie gwarantowane: **tak**
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: 5.13.00.2313120 – 240 pkt (zał. 1b)
 
 - zał. 1 (wszyscy): Świadczenie nie obejmuje opracowania i odbudowy ubytku korony zęba. Świadczenie jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia oraz kobietom w ciąży i w okresie połogu.
 - zał. 2 (<18): Świadczenie nie obejmuje opracowania i odbudowy ubytku korony zęba.
@@ -10595,7 +10595,7 @@ Wskazania: bezzębie
 - Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
 - Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
 
-**NFZ** – świadczenie gwarantowane: **tak**
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: 5.13.00.2331040 – 536 pkt (zał. 1b)
 
 - zał. 1 (wszyscy): Świadczenie obejmuje zaopatrzenie za pomocą protezy akrylowej całkowitej w szczęce łącznie z pobraniem wycisku czynnościowego na łyżce indywidualnej 1 raz na 5 lat (ograniczenie nie dotyczy osób po operacyjnym usunięciu nowotworów w obrębie twarzoczaszki).
 
@@ -10761,7 +10761,7 @@ Wskazania: bezzębie
 - Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
 - Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
 
-**NFZ** – świadczenie gwarantowane: **tak**
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: 5.13.00.2331050 – 536 pkt (zał. 1b)
 
 - zał. 1 (wszyscy): Świadczenie obejmuje zaopatrzenie za pomocą protezy akrylowej całkowitej w żuchwie łącznie z pobraniem wycisku czynnościowego na łyżce indywidualnej 1 raz na 5 lat (ograniczenie nie dotyczy osób po operacyjnym usunięciu nowotworów w obrębie twarzoczaszki).
 
@@ -11150,7 +11150,7 @@ Wskazania: uszkodzenie protezy
 - Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
 - Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
 
-**NFZ** – świadczenie gwarantowane: **tak**
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: 5.13.00.2331120 – 172 pkt (zał. 1b)
 
 - zał. 1 (wszyscy): Świadczenie obejmuje odtworzenie funkcji żucia przez naprawę protez ruchomych w większym zakresie z wyciskiem, 1 raz na 2 lata.
 
@@ -11449,7 +11449,7 @@ Wskazania: utrata dopasowania protezy (zanik podłoża)
 - Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
 - Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
 
-**NFZ** – świadczenie gwarantowane: **tak**
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: 5.13.00.2331160 – 240 pkt (zał. 1b)
 
 - zał. 1 (wszyscy): Świadczenie jest udzielane 1 raz na 2 lata.
 
@@ -11531,7 +11531,7 @@ Wskazania: utrata dopasowania protezy (zanik podłoża)
 - Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
 - Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
 
-**NFZ** – świadczenie gwarantowane: **tak**
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: 5.13.00.2331170 – 240 pkt (zał. 1b)
 
 - zał. 1 (wszyscy): Świadczenie jest udzielane 1 raz na 2 lata.
 
