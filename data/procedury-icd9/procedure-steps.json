@@ -1,4 +1,246 @@
 {
  "opis": "Kroki procedur – wspólne rekordy wielokrotnego użytku (karta procedury odwołuje się do nich i może dodać uwagę).",
- "kroki": []
+ "kroki": [
+  {
+   "id": "KROK-KWALIFIKACJA",
+   "nazwa": "Aktualizacja wywiadu, informacja i zgoda",
+   "opis": "Sprawdź aktualny wywiad (leki, alergie, ciąża), przedstaw rozpoznanie, plan, alternatywy i ryzyka; uzyskaj zgodę pacjenta.",
+   "uwaga": "Szczegóły: badanie BAD-PRZED-LECZENIEM.",
+   "zrodla": [
+    "SRC-PRAWA-PACJENTA"
+   ]
+  },
+  {
+   "id": "KROK-DIAGNOSTYKA-ZEBA",
+   "nazwa": "Diagnostyka zęba",
+   "opis": "Badanie kliniczne zęba, testy żywotności, opukiwanie; RTG wg wskazań (zgryzowo-skrzydłowe / okołowierzchołkowe).",
+   "uwaga": "Szczegóły: BAD-ZYWOTNOSC, BAD-RTG.",
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023"
+   ]
+  },
+  {
+   "id": "KROK-ZNIECZULENIE",
+   "nazwa": "Znieczulenie miejscowe",
+   "opis": "Dobierz metodę (nasiękowe / przewodowe / śródwięzadłowe) do zęba i zabiegu; znieczulenie powierzchniowe miejsca wkłucia (opcjonalnie); aspiracja przed podaniem; podawaj powoli; odnotuj preparat, dawkę i miejsce.",
+   "uwaga": "Sprawdź maksymalną dawkę dla masy ciała i choroby ogólne (środek obkurczający naczynia).",
+   "warianty": [
+    "bez znieczulenia – przy zabiegach nieinwazyjnych lub na życzenie pacjenta, jeśli nie powoduje bólu"
+   ],
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-IZOLACJA",
+   "nazwa": "Izolacja pola zabiegowego",
+   "opis": "Koferdam (izolacja bezwzględna) albo izolacja względna (wałki ligninowe, ślinociąg) – zależnie od zabiegu.",
+   "uwaga": "W leczeniu endodontycznym koferdam jest standardem (ESE).",
+   "warianty": [
+    "izolacja względna, gdy założenie koferdamu nie jest możliwe – uzasadnij w dokumentacji"
+   ],
+   "zrodla": [
+    "SRC-KLIN-ESE-2006"
+   ]
+  },
+  {
+   "id": "KROK-KOLOR",
+   "nazwa": "Dobór koloru",
+   "opis": "Dobór koloru materiału przed izolacją, przy nawilżonych zębach, w świetle dziennym / lampie z dobrym odwzorowaniem barw.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-OPRACOWANIE-UBYTKU",
+   "nazwa": "Opracowanie ubytku i usunięcie próchnicy",
+   "opis": "Dostęp do zmiany, usunięcie zdemineralizowanej zębiny do twardej przy granicy szkliwno-zębinowej; w ubytkach głębokich (ząb żywy, bez objawów nieodwracalnego zapalenia) – selektywne usunięcie próchnicy przy miazdze.",
+   "uwaga": "Unikaj obnażenia miazgi; oceń grubość zębiny nad miazgą.",
+   "warianty": [
+    "usunięcie etapowe (stepwise) – w bardzo głębokich zmianach"
+   ],
+   "zrodla": [
+    "SRC-KLIN-ESE-VPT-2019"
+   ]
+  },
+  {
+   "id": "KROK-OCHRONA-MIAZGI",
+   "nazwa": "Ochrona miazgi / podkład",
+   "opis": "W ubytkach głębokich – podkład lub pokrycie pośrednie (np. materiał krzemianowo-wapniowy, glasjonomer) zgodnie z głębokością ubytku i stosowanym systemem adhezyjnym.",
+   "uwaga": "Dobór materiału zależy od przypadku.",
+   "zrodla": [
+    "SRC-KLIN-ESE-VPT-2019"
+   ]
+  },
+  {
+   "id": "KROK-POKRYCIE-BEZPOSREDNIE",
+   "nazwa": "Bezpośrednie pokrycie miazgi",
+   "opis": "Przy niewielkim obnażeniu żywej miazgi w warunkach izolacji: hemostaza (np. podchloryn sodu), pokrycie materiałem krzemianowo-wapniowym (MTA / bioceramika) lub wodorotlenkiem wapnia, szczelne zamknięcie.",
+   "uwaga": "Rokowanie zależy od kontroli krwawienia i szczelności; konieczna kontrola żywotności.",
+   "warianty": [
+    "przy braku kontroli krwawienia – rozważ pulpotomię częściową"
+   ],
+   "zrodla": [
+    "SRC-KLIN-ESE-VPT-2019",
+    "SRC-KLIN-ESE-S3-2023"
+   ]
+  },
+  {
+   "id": "KROK-MATRYCA",
+   "nazwa": "Formówka i klin",
+   "opis": "Odtworzenie ściany stycznej: formówka (sekcyjna / okrężna) i klin; kontrola dopasowania do brzegu przydziąsłowego.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ADHEZJA",
+   "nazwa": "Przygotowanie powierzchni i system wiążący",
+   "opis": "Wytrawianie (total-etch / selektywne szkliwa / self-etch – zgodnie z instrukcją systemu), aplikacja systemu wiążącego, polimeryzacja.",
+   "uwaga": "Przestrzegaj instrukcji producenta materiału.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-KOMPOZYT",
+   "nazwa": "Odbudowa materiałem złożonym",
+   "opis": "Nakładanie kompozytu warstwami (zwykle ≤ 2 mm) z polimeryzacją; odtworzenie anatomii i punktu stycznego.",
+   "uwaga": "Technika zależy od materiału (np. bulk-fill wg instrukcji).",
+   "warianty": [
+    "glasjonomer / kompomer – np. zęby mleczne, ograniczona izolacja"
+   ],
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-WYKONCZENIE",
+   "nazwa": "Kontrola zwarcia, wykończenie i polerowanie",
+   "opis": "Usunięcie nadmiarów, kontrola zwarcia i ruchów (kalka), kontrola punktu stycznego (nić), polerowanie.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-OPATRUNEK",
+   "nazwa": "Opatrunek czasowy",
+   "opis": "Szczelne zamknięcie ubytku materiałem tymczasowym (np. cement tlenkowo-cynkowy, glasjonomer) do kolejnej wizyty.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-LECZ-NIEINWAZYJNE",
+   "nazwa": "Leczenie nieinwazyjne zmian w szkliwie",
+   "opis": "Oczyszczenie powierzchni, osuszenie, aplikacja preparatu remineralizującego / fluorkowego; instruktaż i kontrola aktywności zmiany.",
+   "uwaga": "Dotyczy zmian bez ubytku (ICDAS 1–2).",
+   "warianty": [
+    "infiltracja żywicą (prywatnie)"
+   ],
+   "zrodla": [
+    "SRC-KLIN-ICDAS-2007",
+    "SRC-KLIN-EAPD-F-2019"
+   ]
+  },
+  {
+   "id": "KROK-DOSTEP-ENDO",
+   "nazwa": "Dostęp do komory",
+   "opis": "Usunięcie próchnicy i nieszczelnych wypełnień, otwarcie komory z usunięciem stropu, lokalizacja ujść kanałów.",
+   "uwaga": "Przed rozpoczęciem – ocena możliwości szczelnej odbudowy.",
+   "zrodla": [
+    "SRC-KLIN-ESE-2006"
+   ]
+  },
+  {
+   "id": "KROK-AMPUTACJA",
+   "nazwa": "Amputacja miazgi (pulpotomia)",
+   "opis": "Usunięcie miazgi koronowej (częściowe lub całkowite), hemostaza, ocena miazgi korzeniowej, pokrycie materiałem krzemianowo-wapniowym, szczelne zamknięcie.",
+   "uwaga": "Brak kontroli krwawienia w kilka minut – wskazanie do ekstyrpacji.",
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023",
+    "SRC-KLIN-ESE-VPT-2019",
+    "SRC-KLIN-AAPD-VPT-2017"
+   ]
+  },
+  {
+   "id": "KROK-EKSTYRPACJA",
+   "nazwa": "Usunięcie miazgi z kanałów",
+   "opis": "Usunięcie miazgi z komory i kanałów narzędziami ręcznymi / maszynowymi przy płukaniu.",
+   "zrodla": [
+    "SRC-KLIN-ESE-2006"
+   ]
+  },
+  {
+   "id": "KROK-DLUGOSC-ROBOCZA",
+   "nazwa": "Ustalenie długości roboczej",
+   "opis": "Endometr i/lub RTG z narzędziem w kanale; zapis długości i punktu odniesienia dla każdego kanału.",
+   "uwaga": "Opracowanie i wypełnienie zwykle kończy się 0,5–2 mm od wierzchołka radiologicznego.",
+   "zrodla": [
+    "SRC-KLIN-ESE-2006"
+   ]
+  },
+  {
+   "id": "KROK-OPRACOWANIE-KANALU",
+   "nazwa": "Opracowanie chemomechaniczne kanału",
+   "opis": "Udrożnienie, opracowanie kanału do ustalonej długości i rozmiaru z obfitym płukaniem.",
+   "uwaga": "Zachowanie przebiegu kanału; kontrola drożności.",
+   "zrodla": [
+    "SRC-KLIN-ESE-2006",
+    "SRC-KLIN-ESE-S3-2023"
+   ]
+  },
+  {
+   "id": "KROK-IRYGACJA",
+   "nazwa": "Płukanie kanałów",
+   "opis": "Podchloryn sodu w trakcie opracowania; na końcu usunięcie warstwy mazistej (np. EDTA) i płukanie końcowe; aktywacja płynu – opcjonalnie.",
+   "uwaga": "Unikaj wtłoczenia podchlorynu poza otwór wierzchołkowy.",
+   "zrodla": [
+    "SRC-KLIN-ESE-2006",
+    "SRC-KLIN-ESE-S3-2023"
+   ]
+  },
+  {
+   "id": "KROK-WKLADKA",
+   "nazwa": "Wkładka do kanałów i zamknięcie czasowe",
+   "opis": "Wodorotlenek wapnia w kanałach między wizytami; szczelny opatrunek czasowy.",
+   "zrodla": [
+    "SRC-KLIN-ESE-2006"
+   ]
+  },
+  {
+   "id": "KROK-OBTURACJA",
+   "nazwa": "Wypełnienie kanałów",
+   "opis": "Osuszenie, wypełnienie gutaperką z uszczelniaczem (technika zależna od przypadku) do długości roboczej; usunięcie nadmiaru z komory.",
+   "uwaga": "Wypełnienie szczelne, bez pustek, na pełnej długości.",
+   "zrodla": [
+    "SRC-KLIN-ESE-2006"
+   ]
+  },
+  {
+   "id": "KROK-RTG-KONTROLA",
+   "nazwa": "RTG kontrolne",
+   "opis": "Zdjęcie po wypełnieniu kanałów – ocena długości, szczelności i kształtu wypełnienia.",
+   "zrodla": [
+    "SRC-KLIN-ESE-2006"
+   ]
+  },
+  {
+   "id": "KROK-ODBUDOWA-PO-ENDO",
+   "nazwa": "Szczelna odbudowa po leczeniu kanałowym",
+   "opis": "Jak najszybciej szczelna odbudowa korony (ostatecznie albo trwałe zamknięcie i plan protetyczny – korona przy rozległej utracie tkanek).",
+   "zrodla": [
+    "SRC-KLIN-ESE-2006",
+    "SRC-KLIN-ESE-S3-2023"
+   ]
+  },
+  {
+   "id": "KROK-ZALECENIA",
+   "nazwa": "Przekazanie zaleceń",
+   "opis": "Przekaż zalecenia pozabiegowe (ustnie lub ustnie i pisemnie) i ustal termin kontroli.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  }
+ ]
 }

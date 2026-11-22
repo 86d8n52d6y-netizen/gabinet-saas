@@ -201,6 +201,25 @@
    "id": "POLE-DATA",
    "etykieta": "Data",
    "typ": "data"
+  },
+  {
+   "id": "POLE-ENDO-KANALY",
+   "etykieta": "Kanały: nazwa – długość robocza – punkt odniesienia – rozmiar",
+   "typ": "tekst_dlugi",
+   "opis": "np. MB 21 mm (guzek MB) #30; D 20,5 mm (guzek D) #35"
+  },
+  {
+   "id": "POLE-ENDO-PLUKANIE",
+   "etykieta": "Płukanie kanałów (preparaty)",
+   "typ": "wybor_wielokrotny",
+   "opcje": [
+    "podchloryn sodu",
+    "EDTA",
+    "chlorheksydyna",
+    "sól fizjologiczna",
+    "aktywacja płynu"
+   ],
+   "wlasna_wartosc": true
   }
  ]
 }

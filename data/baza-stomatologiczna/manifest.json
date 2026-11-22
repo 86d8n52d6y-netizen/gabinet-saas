@@ -11,9 +11,9 @@
   },
   {
    "plik": "data/baza-stomatologiczna/pola-wspolne.json",
-   "sha256": "0f25a033b055bffb7a8e00693c2f4851f35fe1c418521180d5593f9d02e04a13",
+   "sha256": "60ed707c5479d6cdf537736286b7050734a4ada4d4d7fd9ad04bb5a1170cd366",
    "schemat": "data/baza-stomatologiczna/schemas/pola.schema.json",
-   "rekordy": 29
+   "rekordy": 31
   },
   {
    "plik": "data/badania/examinations.json",
@@ -35,51 +35,52 @@
   },
   {
    "plik": "data/procedury-icd9/procedures.json",
-   "sha256": "ce652f3917ec521c06ffb7accfcd244279f4ae215834ac12546ffcf93900fbe1",
+   "sha256": "7dbec99284a0033837421b6e10f287442df42bc1b47f6049a019f17fdb3a6f76",
    "schemat": "data/baza-stomatologiczna/schemas/procedures.schema.json",
    "rekordy": 266
   },
   {
    "plik": "data/procedury-icd9/procedure-steps.json",
-   "sha256": "0e31627728cbffa8d419e4e76a9468b79d15afa9c2d25b5e9e4fe2ad02f227ef",
+   "sha256": "abab3f49c0f7d434960f31cd4aaeb7d8fead49b317bc4f4ef309c5adf45824e3",
    "schemat": "data/baza-stomatologiczna/schemas/procedure-steps.schema.json",
-   "rekordy": 0
+   "rekordy": 25
   },
   {
    "plik": "data/procedury-icd9/procedure-materials.json",
-   "sha256": "773e18b308383bdbd2249919f204b3864239374c1c2bd536f1f752c5450ae9b6",
+   "sha256": "87e178afcbc9d4ed8f898550c3f945621eed8bf5e80b7826dc07bf5084eaa673",
    "schemat": "data/baza-stomatologiczna/schemas/procedure-materials.schema.json",
-   "rekordy": 0
+   "rekordy": 28
   },
   {
    "plik": "data/procedury-icd9/procedure-templates.json",
-   "sha256": "29aad1b96cc651d851203a29ee9090ea362f9d40a5a455d19ed670874fd37f55",
+   "sha256": "b7f701967ce772394d02ba9fabdbd2642d42c54bacb845c9b3156eb4d1421470",
    "schemat": "data/baza-stomatologiczna/schemas/szablony.schema.json",
-   "rekordy": 0
+   "rekordy": 63
   },
   {
    "plik": "data/procedury-icd9/procedure-checklists.json",
-   "sha256": "1bf94ce8787ae050f1a3b9f6f7778bb897853fc859a67765185087dab6374c66",
+   "sha256": "9dde3e7b984dac0b35a825d635fb736287a687307ea9ac17cb1362a7a2774a1d",
    "schemat": "data/baza-stomatologiczna/schemas/procedure-checklists.schema.json",
-   "rekordy": 0
+   "rekordy": 21
   },
   {
    "plik": "data/procedury-icd9/procedure-diagnosis-mappings.json",
-   "sha256": "e5c9d08d4a1c7d9465e697b9ffa7ad1ac24a19392601215da183c47a931d27a1",
+   "sha256": "862f449f38e44ca7c98f239c6ce77ed6967f3fd31d0d5467146a249b1a6fb251",
    "schemat": "data/baza-stomatologiczna/schemas/procedure-diagnosis-mappings.schema.json",
-   "rekordy": 0
+   "rekordy": 79
   }
  ],
  "liczniki": {
   "badania": 17,
   "procedury": 266,
   "procedury_wg_statusu": {
-   "not_started": 266
+   "not_started": 245,
+   "draft": 21
   },
-  "szablony": 51,
-  "pola": 133,
-  "kroki": 0,
-  "materialy": 0,
-  "mapowania_icd10": 0
+  "szablony": 114,
+  "pola": 135,
+  "kroki": 25,
+  "materialy": 28,
+  "mapowania_icd10": 79
  }
 }

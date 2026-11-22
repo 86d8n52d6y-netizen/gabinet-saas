@@ -106,5 +106,866 @@
    "pole": "POLE-ZGODA"
   }
  ],
- "checklisty": []
+ "checklisty": [
+  {
+   "procedura": "PROC-23.1502",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1502-1",
+     "tekst": "Powierzchnie odbudowy (oznaczenie)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-ZARZ-60-2023-TJ"
+     ],
+     "warunek": "produkt zależy od liczby powierzchni",
+     "pole": "POLE-POWIERZCHNIE"
+    },
+    {
+     "id": "CHK-23.1502-2",
+     "tekst": "Materiał odbudowy",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-MATERIAL"
+    },
+    {
+     "id": "CHK-23.1502-3",
+     "tekst": "Ochrona miazgi / podkład przy ubytku głębokim",
+     "poziom": "sytuacyjne",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-VPT-2019"
+     ],
+     "warunek": "ubytek głęboki",
+     "pole": "POLE-MATERIAL-PODKLAD"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1503",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1503-1",
+     "tekst": "Powierzchnie odbudowy (oznaczenie)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-ZARZ-60-2023-TJ"
+     ],
+     "warunek": "produkt zależy od liczby powierzchni",
+     "pole": "POLE-POWIERZCHNIE"
+    },
+    {
+     "id": "CHK-23.1503-2",
+     "tekst": "Materiał odbudowy",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-MATERIAL"
+    },
+    {
+     "id": "CHK-23.1503-3",
+     "tekst": "Ochrona miazgi / podkład przy ubytku głębokim",
+     "poziom": "sytuacyjne",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-VPT-2019"
+     ],
+     "warunek": "ubytek głęboki",
+     "pole": "POLE-MATERIAL-PODKLAD"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1504",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1504-1",
+     "tekst": "Powierzchnie odbudowy (oznaczenie)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-ZARZ-60-2023-TJ"
+     ],
+     "warunek": "produkt zależy od liczby powierzchni",
+     "pole": "POLE-POWIERZCHNIE"
+    },
+    {
+     "id": "CHK-23.1504-2",
+     "tekst": "Materiał odbudowy",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-MATERIAL"
+    },
+    {
+     "id": "CHK-23.1504-3",
+     "tekst": "Ochrona miazgi / podkład przy ubytku głębokim",
+     "poziom": "sytuacyjne",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-VPT-2019"
+     ],
+     "warunek": "ubytek głęboki",
+     "pole": "POLE-MATERIAL-PODKLAD"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1505",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1505-1",
+     "tekst": "Powierzchnie odbudowy (oznaczenie)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-ZARZ-60-2023-TJ"
+     ],
+     "warunek": "produkt zależy od liczby powierzchni",
+     "pole": "POLE-POWIERZCHNIE"
+    },
+    {
+     "id": "CHK-23.1505-2",
+     "tekst": "Materiał odbudowy",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-MATERIAL"
+    },
+    {
+     "id": "CHK-23.1505-3",
+     "tekst": "Ochrona miazgi / podkład przy ubytku głębokim",
+     "poziom": "sytuacyjne",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-VPT-2019"
+     ],
+     "warunek": "ubytek głęboki",
+     "pole": "POLE-MATERIAL-PODKLAD"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1506",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1506-1",
+     "tekst": "Powierzchnie odbudowy (oznaczenie)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-ZARZ-60-2023-TJ"
+     ],
+     "warunek": "produkt zależy od liczby powierzchni",
+     "pole": "POLE-POWIERZCHNIE"
+    },
+    {
+     "id": "CHK-23.1506-2",
+     "tekst": "Materiał odbudowy",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-MATERIAL"
+    },
+    {
+     "id": "CHK-23.1506-3",
+     "tekst": "Ochrona miazgi / podkład przy ubytku głębokim",
+     "poziom": "sytuacyjne",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-VPT-2019"
+     ],
+     "warunek": "ubytek głęboki",
+     "pole": "POLE-MATERIAL-PODKLAD"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1501",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1501-1",
+     "tekst": "Materiał odbudowy",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-MATERIAL"
+    },
+    {
+     "id": "CHK-23.1501-2",
+     "tekst": "Ochrona miazgi / podkład przy ubytku głębokim",
+     "poziom": "sytuacyjne",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-VPT-2019"
+     ],
+     "warunek": "ubytek głęboki",
+     "pole": "POLE-MATERIAL-PODKLAD"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1507",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1507-1",
+     "tekst": "Powierzchnie odbudowy (oznaczenie)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-ZARZ-60-2023-TJ"
+     ],
+     "warunek": "produkt zależy od liczby powierzchni",
+     "pole": "POLE-POWIERZCHNIE"
+    },
+    {
+     "id": "CHK-23.1507-2",
+     "tekst": "Materiał odbudowy",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-MATERIAL"
+    },
+    {
+     "id": "CHK-23.1507-3",
+     "tekst": "Ochrona miazgi / podkład przy ubytku głębokim",
+     "poziom": "sytuacyjne",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-VPT-2019"
+     ],
+     "warunek": "ubytek głęboki",
+     "pole": "POLE-MATERIAL-PODKLAD"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1108",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1108-1",
+     "tekst": "Materiał odbudowy",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-MATERIAL"
+    },
+    {
+     "id": "CHK-23.1108-2",
+     "tekst": "Ochrona miazgi / podkład przy ubytku głębokim",
+     "poziom": "sytuacyjne",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-VPT-2019"
+     ],
+     "warunek": "ubytek głęboki",
+     "pole": "POLE-MATERIAL-PODKLAD"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1101",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1101-1",
+     "tekst": "Zęby objęte leczeniem (każdy ząb = świadczenie)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-ZARZ-60-2023-TJ"
+     ],
+     "pole": "POLE-ZEBY"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1104",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1104-1",
+     "tekst": "Ochrona miazgi / podkład przy ubytku głębokim",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-VPT-2019"
+     ],
+     "warunek": "zawsze przy tej procedurze",
+     "pole": "POLE-MATERIAL-PODKLAD"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1105",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1105-1",
+     "tekst": "Materiał pokrycia miazgi",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-VPT-2019"
+     ],
+     "pole": "POLE-MATERIAL-PODKLAD"
+    },
+    {
+     "id": "CHK-23.1105-2",
+     "tekst": "Plan kontroli żywotności",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-VPT-2019"
+     ],
+     "pole": "POLE-KONTROLA"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1106",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1106-1",
+     "tekst": "Plan kolejnego etapu leczenia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-DECYZJA"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1107",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1107-1",
+     "tekst": "Plan kolejnego etapu leczenia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-DECYZJA"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1206",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1206-1",
+     "tekst": "Kanały: nazwa, długość robocza i punkt odniesienia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-ENDO-KANALY"
+    },
+    {
+     "id": "CHK-23.1206-2",
+     "tekst": "Liczba kanałów (świadczenie za każdy kanał)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "rozliczenie NFZ",
+     "pole": "POLE-ENDO-KANALY"
+    },
+    {
+     "id": "CHK-23.1206-3",
+     "tekst": "Izolacja koferdamem lub uzasadnienie braku",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-IZOLACJA"
+    },
+    {
+     "id": "CHK-23.1206-4",
+     "tekst": "RTG (przed / kontrolne)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1204",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1204-1",
+     "tekst": "Izolacja koferdamem lub uzasadnienie braku",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-IZOLACJA"
+    },
+    {
+     "id": "CHK-23.1204-2",
+     "tekst": "RTG (przed / kontrolne)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1201",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1201-1",
+     "tekst": "Izolacja koferdamem lub uzasadnienie braku",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-IZOLACJA"
+    },
+    {
+     "id": "CHK-23.1201-2",
+     "tekst": "RTG (przed / kontrolne)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1301",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1301-1",
+     "tekst": "Kanały: nazwa, długość robocza i punkt odniesienia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-ENDO-KANALY"
+    },
+    {
+     "id": "CHK-23.1301-2",
+     "tekst": "Liczba kanałów (świadczenie za każdy kanał)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "rozliczenie NFZ",
+     "pole": "POLE-ENDO-KANALY"
+    },
+    {
+     "id": "CHK-23.1301-3",
+     "tekst": "Izolacja koferdamem lub uzasadnienie braku",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-IZOLACJA"
+    },
+    {
+     "id": "CHK-23.1301-4",
+     "tekst": "RTG (przed / kontrolne)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1306",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1306-1",
+     "tekst": "Kanały: nazwa, długość robocza i punkt odniesienia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-ENDO-KANALY"
+    },
+    {
+     "id": "CHK-23.1306-2",
+     "tekst": "Liczba kanałów (świadczenie za każdy kanał)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "rozliczenie NFZ",
+     "pole": "POLE-ENDO-KANALY"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1307",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1307-1",
+     "tekst": "Kanały: nazwa, długość robocza i punkt odniesienia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-ENDO-KANALY"
+    },
+    {
+     "id": "CHK-23.1307-2",
+     "tekst": "Liczba kanałów (świadczenie za każdy kanał)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "rozliczenie NFZ",
+     "pole": "POLE-ENDO-KANALY"
+    },
+    {
+     "id": "CHK-23.1307-3",
+     "tekst": "Izolacja koferdamem lub uzasadnienie braku",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-IZOLACJA"
+    },
+    {
+     "id": "CHK-23.1307-4",
+     "tekst": "RTG (przed / kontrolne)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1311",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZNIECZ",
+    "CHK-W-ZALECENIA",
+    "CHK-W-POWIKLANIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1311-1",
+     "tekst": "Kanały: nazwa, długość robocza i punkt odniesienia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-ENDO-KANALY"
+    },
+    {
+     "id": "CHK-23.1311-2",
+     "tekst": "Liczba kanałów (świadczenie za każdy kanał)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "rozliczenie NFZ",
+     "pole": "POLE-ENDO-KANALY"
+    },
+    {
+     "id": "CHK-23.1311-3",
+     "tekst": "Izolacja koferdamem lub uzasadnienie braku",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-IZOLACJA"
+    },
+    {
+     "id": "CHK-23.1311-4",
+     "tekst": "RTG (przed / kontrolne)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1007",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1007-1",
+     "tekst": "Zakres (¼ łuku) i preparat",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-LUK"
+    }
+   ]
+  }
+ ]
 }
