@@ -8,8 +8,8 @@ Stan: 22.11.2026 · gałąź `baza-stomatologiczna` · prompt Patryka „PROMPT 
 | Katalog | Zawartość | Rekordy (stan na dziś) |
 |---|---|---|
 | `data/badania/` | `examinations.json` (katalog A), `examination-fields.json` (pola badań), `examination-templates.json` (opisy: standardowy / skrócony / rozszerzony) | 17 badań, 104 pola, 51 szablonów |
-| `data/procedury-icd9/` | `procedures.json` (rejestr + karty), `procedure-steps.json`, `procedure-materials.json`, `procedure-templates.json`, `procedure-checklists.json`, `procedure-diagnosis-mappings.json` | 266 kodów w rejestrze (51 kart `draft`), 52 kroki, 51 materiałów, 153 szablony, 51 checklist, 142 mapowania ICD-10 |
-| `data/baza-stomatologiczna/` | `pola-wspolne.json`, `zrodla-kliniczne.json`, `manifest.json` (wersja, sumy SHA-256, liczniki), `schemas/` (JSON Schema 2020-12) | 31 pól wspólnych, 21 źródeł PubMed + 2 pomocnicze |
+| `data/procedury-icd9/` | `procedures.json` (rejestr + karty), `procedure-steps.json`, `procedure-materials.json`, `procedure-templates.json`, `procedure-checklists.json`, `procedure-diagnosis-mappings.json` | 266 kodów w rejestrze (206 kart: 144 `draft`, 62 `requires_expert_review`; 3 nadrzędne; 57 pominiętych), 114 kroków, 70 materiałów, 618 szablonów procedur, 206 checklist, 401 mapowań ICD-10 |
+| `data/baza-stomatologiczna/` | `pola-wspolne.json`, `zrodla-kliniczne.json`, `manifest.json` (wersja, sumy SHA-256, liczniki), `schemas/` (JSON Schema 2020-12) | 31 pól wspólnych, 21 źródeł z PubMed + 2 pomocnicze |
 | `data/nfz/` | **audyt NFZ** – słownik ICD-9 PL 5.91, ICD-10, reguły, produkty, źródła prawne (podstawa; baza z niego korzysta, nie kopiuje go) | – |
 | `docs/badania/`, `docs/procedury-icd9/` | dokumentacja **generowana z JSON** (`scripts/buduj_docs_bazy.py`) | – |
 

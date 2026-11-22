@@ -4813,6 +4813,1210 @@
      "pole": "POLE-ZNIECZ-PREPARAT"
     }
    ]
+  },
+  {
+   "procedura": "PROC-23.2701",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.2701-1",
+     "tekst": "Warianty leczenia z kosztami i zgoda pacjenta",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-DECYZJA"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.2702",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": []
+  },
+  {
+   "procedura": "PROC-23.2703",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": []
+  },
+  {
+   "procedura": "PROC-23.2704",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.2704-1",
+     "tekst": "RTG – szczelność leczenia kanałowego przed wkładem",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-ESE-2006"
+     ],
+     "pole": "POLE-RTG"
+    },
+    {
+     "id": "CHK-23.2704-2",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.2705",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": []
+  },
+  {
+   "procedura": "PROC-23.2706",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": []
+  },
+  {
+   "procedura": "PROC-23.2801",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.2801-1",
+     "tekst": "Żywotność / leczenie kanałowe filara (RTG)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-RTG"
+    },
+    {
+     "id": "CHK-23.2801-2",
+     "tekst": "Kolor i materiał korony",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-KOLOR"
+    },
+    {
+     "id": "CHK-23.2801-3",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.2802",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.2802-1",
+     "tekst": "Żywotność / leczenie kanałowe filara (RTG)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-RTG"
+    },
+    {
+     "id": "CHK-23.2802-2",
+     "tekst": "Kolor i materiał korony",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-KOLOR"
+    },
+    {
+     "id": "CHK-23.2802-3",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.2803",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.2803-1",
+     "tekst": "Żywotność / leczenie kanałowe filara (RTG)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-RTG"
+    },
+    {
+     "id": "CHK-23.2803-2",
+     "tekst": "Kolor i materiał korony",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-KOLOR"
+    },
+    {
+     "id": "CHK-23.2803-3",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.2804",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.2804-1",
+     "tekst": "Stan filara (próchnica, ruchomość) przed ponownym osadzeniem",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-WYNIK"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.2806",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.2806-1",
+     "tekst": "Stan filara (próchnica, ruchomość) przed ponownym osadzeniem",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-WYNIK"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.2805",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": []
+  },
+  {
+   "procedura": "PROC-23.2901",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": []
+  },
+  {
+   "procedura": "PROC-23.2902",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.2902-1",
+     "tekst": "Rozpoznanie TMD / bruksizmu (BAD-SSZ)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-KLIN-DCTMD-2014"
+     ],
+     "pole": "POLE-SSZ-OPIS"
+    },
+    {
+     "id": "CHK-23.2902-2",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.2903",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": []
+  },
+  {
+   "procedura": "PROC-23.3001",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3001-1",
+     "tekst": "Filary i przęsła (zęby FDI)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-ZEBY"
+    },
+    {
+     "id": "CHK-23.3001-2",
+     "tekst": "Rejestracja zwarcia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-WYNIK"
+    },
+    {
+     "id": "CHK-23.3001-3",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.3002",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3002-1",
+     "tekst": "Filary i przęsła (zęby FDI)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-ZEBY"
+    },
+    {
+     "id": "CHK-23.3002-2",
+     "tekst": "Rejestracja zwarcia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-WYNIK"
+    },
+    {
+     "id": "CHK-23.3002-3",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.3003",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3003-1",
+     "tekst": "Filary i przęsła (zęby FDI)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-ZEBY"
+    },
+    {
+     "id": "CHK-23.3003-2",
+     "tekst": "Rejestracja zwarcia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-WYNIK"
+    },
+    {
+     "id": "CHK-23.3003-3",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.3005",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3005-1",
+     "tekst": "Filary i przęsła (zęby FDI)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-ZEBY"
+    },
+    {
+     "id": "CHK-23.3005-2",
+     "tekst": "Rejestracja zwarcia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-WYNIK"
+    },
+    {
+     "id": "CHK-23.3005-3",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.3004",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3004-1",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.3006",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3006-1",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.3007",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3007-1",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.3008",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3008-1",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.3009",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": []
+  },
+  {
+   "procedura": "PROC-23.3010",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": []
+  },
+  {
+   "procedura": "PROC-23.3011",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": []
+  },
+  {
+   "procedura": "PROC-23.3101",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3101-1",
+     "tekst": "Braki zębowe (FDI) i elementy retencyjne",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-ZEBY"
+    },
+    {
+     "id": "CHK-23.3101-2",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.3102",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3102-1",
+     "tekst": "Braki zębowe (FDI) i elementy retencyjne",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-ZEBY"
+    },
+    {
+     "id": "CHK-23.3102-2",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.3103",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3103-1",
+     "tekst": "Braki zębowe (FDI) i elementy retencyjne",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-ZEBY"
+    },
+    {
+     "id": "CHK-23.3103-2",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.3104",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3104-1",
+     "tekst": "Wysokość zwarcia (VDO) i ustawienie zębów zaakceptowane",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-WYNIK"
+    },
+    {
+     "id": "CHK-23.3104-2",
+     "tekst": "Limit NFZ: 1× na 5 lat (R-PROT-01)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "rozliczenie NFZ – informacja (D7=B)"
+    },
+    {
+     "id": "CHK-23.3104-3",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.3105",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3105-1",
+     "tekst": "Wysokość zwarcia (VDO) i ustawienie zębów zaakceptowane",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-WYNIK"
+    },
+    {
+     "id": "CHK-23.3105-2",
+     "tekst": "Limit NFZ: 1× na 5 lat (R-PROT-01)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "rozliczenie NFZ – informacja (D7=B)"
+    },
+    {
+     "id": "CHK-23.3105-3",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.31041",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.31041-1",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.31051",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.31051-1",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.3106",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3106-1",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.3107",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3107-1",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.3108",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3108-1",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.3109",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3109-1",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.3110",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3110-1",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.3111",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": []
+  },
+  {
+   "procedura": "PROC-23.3112",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3112-1",
+     "tekst": "Limit NFZ: naprawa z wyciskiem / podścielenie 1× na 2 lata (R-PROT-02)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "rozliczenie NFZ – informacja (D7=B)"
+    },
+    {
+     "id": "CHK-23.3112-2",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.3113",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": []
+  },
+  {
+   "procedura": "PROC-23.3114",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": []
+  },
+  {
+   "procedura": "PROC-23.3115",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3115-1",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.3116",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3116-1",
+     "tekst": "Limit NFZ: naprawa z wyciskiem / podścielenie 1× na 2 lata (R-PROT-02)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "rozliczenie NFZ – informacja (D7=B)"
+    },
+    {
+     "id": "CHK-23.3116-2",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.3117",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3117-1",
+     "tekst": "Limit NFZ: naprawa z wyciskiem / podścielenie 1× na 2 lata (R-PROT-02)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "rozliczenie NFZ – informacja (D7=B)"
+    },
+    {
+     "id": "CHK-23.3117-2",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.3125",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": []
+  },
+  {
+   "procedura": "PROC-23.3126",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC",
+    "CHK-W-ZAB-ISO",
+    "CHK-W-ZALECENIA"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.3126-1",
+     "tekst": "Zlecenie dla pracowni",
+     "poziom": "zalecane",
+     "podstawa": "propozycja_aplikacji",
+     "zrodla": [
+      "SRC-APP-SZABLONY"
+     ]
+    }
+   ]
   }
  ]
 }

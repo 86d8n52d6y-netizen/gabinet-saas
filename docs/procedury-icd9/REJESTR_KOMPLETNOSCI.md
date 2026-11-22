@@ -8,9 +8,9 @@ Wersja danych: 2026.11.22-1.
 
 | Status | Procedury |
 |---|---|
-| draft | 108 |
-| not_started | 107 |
-| requires_expert_review | 51 |
+| draft | 144 |
+| not_started | 60 |
+| requires_expert_review | 62 |
 | **razem** | **266** |
 
 Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: draft, BAD-BLONA: draft, BAD-UZEBIENIE: draft, BAD-PRZYZEBIE: draft, BAD-HIGIENA: draft, BAD-ZGRYZ: draft, BAD-SSZ: draft, BAD-ZYWOTNOSC: draft, BAD-RTG: draft, BAD-PO-URAZIE: draft, BAD-DZIECKO: draft, BAD-STOMATOLOGICZNE: draft, BAD-KONTROLNE: draft, BAD-PRZED-LECZENIEM: draft, BAD-PO-LECZENIU: draft).
@@ -230,53 +230,53 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.2610 | Kontrola leczenia aparatem stałym | ortodoncja | not_started | Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego. |
 | 23.2611 | Proteza dziecięca częściowa | ortodoncja | not_started | Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego. |
 | 23.2612 | Proteza dziecięca całkowita | ortodoncja | not_started | Pominięte decyzją Patryka (22.11.2026): ortodoncja – poza zakresem gabinetu ogólnostomatologicznego. |
-| 23.2701 | Opracowanie na piśmie na zlecenie lub życzenie planu leczenia i kosztów zaopatrzenia protetycznego włącznie z oceną modeli | protetyka | not_started | Do opracowania w kolejnej partii. |
-| 23.2702 | Wycisk szczęki dla celów wykonania modelu sytuacyjnego, również wycisk częściowy lub wycisk zgryzowy dla celów diagnostycznych lub planowania | protetyka | not_started | Do opracowania w kolejnej partii. |
-| 23.2703 | Zabiegi przygotowujące (pobieranie wycisków, proste ustalenie zgryzu lub tp. dla wykonania modelu obu szczęk celem oceny diagnostycznej i planowania łącznie z wyceną) | protetyka | not_started | Do opracowania w kolejnej partii. |
-| 23.2704 | Przygotowanie uszkodzonego zęba do osadzenia korony poprzez odbudowę kikuta zęba wkładem koronowo-korzeniowym lanym lub śrubowym | protetyka | not_started | Do opracowania w kolejnej partii. |
-| 23.2705 | Ochrona oszlifowanego zęba kształka, formówka | protetyka | not_started | Do opracowania w kolejnej partii. |
-| 23.2706 | Ochrona oszlifowanego zęba i zabezpieczenie funkcji prowizoryczną koroną lub zastąpienia brakującego zęba elementem prowizorycznego mostu, za koronę lub element mostu | protetyka | not_started | Do opracowania w kolejnej partii. |
+| 23.2701 | Opracowanie na piśmie na zlecenie lub życzenie planu leczenia i kosztów zaopatrzenia protetycznego włącznie z oceną modeli | protetyka | draft |  |
+| 23.2702 | Wycisk szczęki dla celów wykonania modelu sytuacyjnego, również wycisk częściowy lub wycisk zgryzowy dla celów diagnostycznych lub planowania | protetyka | draft |  |
+| 23.2703 | Zabiegi przygotowujące (pobieranie wycisków, proste ustalenie zgryzu lub tp. dla wykonania modelu obu szczęk celem oceny diagnostycznej i planowania łącznie z wyceną) | protetyka | draft |  |
+| 23.2704 | Przygotowanie uszkodzonego zęba do osadzenia korony poprzez odbudowę kikuta zęba wkładem koronowo-korzeniowym lanym lub śrubowym | protetyka | draft |  |
+| 23.2705 | Ochrona oszlifowanego zęba kształka, formówka | protetyka | draft |  |
+| 23.2706 | Ochrona oszlifowanego zęba i zabezpieczenie funkcji prowizoryczną koroną lub zastąpienia brakującego zęba elementem prowizorycznego mostu, za koronę lub element mostu | protetyka | draft |  |
 | 23.2715 | Wykonanie i zaopatrzenie w protezę twarzy | protetyka | not_started | Pominięte decyzją Patryka (22.11.2026): proteza twarzy – leczenie szpitalne / specjalistyczne. |
 | 23.2718 | Wykonanie i zaopatrzenie w protezę gałki ocznej, wargi i nosa | protetyka | not_started | Pominięte decyzją Patryka (22.11.2026): proteza gałki ocznej, wargi i nosa – leczenie specjalistyczne. |
-| 23.2801 | Odbudowa pojedynczego zęba przy zastosowaniu korony lanej | protetyka – korony | not_started | Do opracowania w kolejnej partii. |
-| 23.2802 | Odbudowa pojedynczego zęba przy zastosowaniu korony licowanej | protetyka – korony | not_started | Do opracowania w kolejnej partii. |
-| 23.2803 | Odbudowa pojedynczego zęba przy zastosowaniu korony pochewkowej lub częściowej (szlifowanie zęba ze stopniem okrężnym) | protetyka – korony | not_started | Do opracowania w kolejnej partii. |
-| 23.2804 | Czynności związane z odtworzeniem funkcji koron i prowizorycznych mostów - ponowne osadzenie korony, zęba ćwiekowego, licówki również zdjęcie korony żywiczej | protetyka – korony | not_started | Do opracowania w kolejnej partii. |
-| 23.2805 | Czynności związane z odtworzeniem funkcji koron i prowizorycznych mostów - odnowienie licówki, licowania korony itp. | protetyka – korony | not_started | Do opracowania w kolejnej partii. |
-| 23.2806 | Czynności związane z odtworzeniem funkcji koron i prowizorycznych mostów - zdjęcie i powtórne umocowanie prowizorycznej korony | protetyka – korony | not_started | Do opracowania w kolejnej partii. |
-| 23.2901 | Likwidacja dużych zaburzeń artykulacyjnych i zgryzowych przed uzupełnieniem braków zębowych protezami lub mostami | protetyka | not_started | Do opracowania w kolejnej partii. |
-| 23.2902 | Zmiana położenia szczęki za pomocą płytki zgryzowej (prowadzącej , ustalającej zwarcie, relaksacyjnej) | protetyka | not_started | Do opracowania w kolejnej partii. |
-| 23.2903 | Wycisk czynnościowy za pomocą łyżki indywidualnej | protetyka | not_started | Do opracowania w kolejnej partii. |
-| 23.3001 | Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną laną | protetyka – mosty | not_started | Do opracowania w kolejnej partii. |
-| 23.3002 | Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną licowaną | protetyka – mosty | not_started | Do opracowania w kolejnej partii. |
-| 23.3003 | Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną pochewkową lub częściową | protetyka – mosty | not_started | Do opracowania w kolejnej partii. |
-| 23.3004 | Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną teleskopową | protetyka – mosty | not_started | Do opracowania w kolejnej partii. |
-| 23.3005 | Dalsze czynności przy uzupełnianiu braków zębowych za pomocą na stałe mocowanych mostów za każdy element (punkt) przęsła; liczy się również element jednobrzeżny | protetyka – mosty | not_started | Do opracowania w kolejnej partii. |
-| 23.3006 | Uzupełnienie braków zębowych za pomocą złożonych na stałe umocowanych lub ruchomych mostów i/lub złożonych stałych/ruchomych uzupełnień - dodatkowo przy zastosowaniu przęsła, włącznie z elementem łączącym każde przęsło | protetyka – mosty | not_started | Do opracowania w kolejnej partii. |
-| 23.3007 | Uzupełnienie braków zębowych za pomocą złożonych na stałe umocowanych lub ruchomych mostów i/lub złożonych stałych /ruchomych uzupełnień - dodatkowo przy zastosowaniu śrub, sztyftów sprężynowych lub tp. - za każdy element łączący | protetyka – mosty | not_started | Do opracowania w kolejnej partii. |
-| 23.3008 | Uzupełnienie braków zębowych za pomocą złożonych na stałe umocowanych lub ruchomych mostów i/lub złożonych stałych /ruchomych uzupełnień - dodatkowo przy zastosowaniu zatrzasków, zawiasów, zasuw lub zakotwiczeń - za każdy element (matrycę i stempel należy traktować jako całość) | protetyka – mosty | not_started | Do opracowania w kolejnej partii. |
-| 23.3009 | Czynności dla odtworzenia funkcji mostów lub mocowanych na stałe szyn -powtórne osadzenie mostu lub stałej szyny z dwoma zakotwiczeniami | protetyka – mosty | not_started | Do opracowania w kolejnej partii. |
-| 23.3010 | Czynności dla odtworzenia funkcji mostów lub mocowanych na stałe szyn- powtórne osadzenie mostu lub stałej szyny z więcej niż dwoma zakotwiczeniami | protetyka – mosty | not_started | Do opracowania w kolejnej partii. |
-| 23.3011 | Czynności dla odtworzenia funkcji mostu - odnowienie licówki, licowania korony filarowej | protetyka – mosty | not_started | Do opracowania w kolejnej partii. |
-| 23.3101 | Uzupełnienie braków zębowych przy pomocy protezy częściowej włącznie z prostymi doginanymi klamrami w zakresie 1-4 brakujących zębów | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
-| 23.3102 | Uzupełnienie braków zębowych przy pomocy protezy częściowej włącznie z prostymi doginanymi klamrami w zakresie 5-8 brakujących zębów | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
-| 23.3103 | Uzupełnienie braków zębowych przy pomocy protezy częściowej włącznie z prostymi doginanymi klamrami w zakresie więcej niż 8 zębów | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
-| 23.3104 | Zaopatrzenie bezzębnej szczęki protezą całkowitą w szczęce | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii (protetyka) – samodzielne świadczenie NFZ; podkod = wariant overdenture. |
-| 23.31041 | Proteza całkowita górna o charakterze overdenture oparta na zabezpieczonych korzeniach | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
-| 23.3105 | Zaopatrzenie bezzębnej szczęki protezą całkowitą w żuchwie | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii (protetyka) – samodzielne świadczenie NFZ; podkod = wariant overdenture. |
-| 23.31051 | Proteza całkowita dolna o charakterze overdenture oparta na zabezpieczonych korzeniach | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
-| 23.3106 | Zastosowanie metalowej podstawy przy bezzębnej szczęce | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
-| 23.3107 | Zastosowanie prostych dwuramiennych elementów utrzymujących lub podpierających lub wieloramiennych elementów doginanych o podobnym działaniu dodatkowo do każdej protezy- przy prowizorycznych protezach jedynie w szczególnych przypadkach, za element | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
-| 23.3108 | Zastosowanie płyty metalowej z elementami utrzymującymi i podporami | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
-| 23.3109 | Zastosowanie odlewanych skomplikowanych elementów utrzymujących i podpierających przy zastosowaniu jednego elementu utrzymującego i podpierającego - nie przy protezach prowizorycznych | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
-| 23.3110 | Zastosowanie odlewanych skomplikowanych elementów utrzymujących i podpierających przy zastosowaniu przynajmniej dwóch elementów utrzymujących i podpierającychnie przy protezach prowizorycznych | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
-| 23.3111 | Czynności dla odtworzenia funkcji lub poszerzenia zakresu ruchomej protezy (naprawy) w małym zakresie bez wycisku | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
-| 23.3112 | Czynności dla odtworzenia funkcji lub poszerzenia zakresu ruchomej protezy (naprawy) w większym zakresie z wyciskiem | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
-| 23.3113 | Czynności dla odtworzenia funkcji lub poszerzenia zakresu ruchomej protezy (naprawy) - częściowe podścielenie jednej protezy | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
-| 23.3114 | Całkowite bezpośrednie podścielenie jednej protezy | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
-| 23.3115 | Całkowite podścielenie jednej protezy w sposób pośredni | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
-| 23.3116 | Całkowite podścielenie jednej protezy w sposób pośredni, włącznie z ukształtowaniem obrzeża - dla szczęki | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
-| 23.3117 | Całkowite podścielenie jednej protezy w sposób pośredni włącznie z czynnościowym ukształtowaniem obrzeża -dla żuchwy | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
+| 23.2801 | Odbudowa pojedynczego zęba przy zastosowaniu korony lanej | protetyka – korony | draft |  |
+| 23.2802 | Odbudowa pojedynczego zęba przy zastosowaniu korony licowanej | protetyka – korony | draft |  |
+| 23.2803 | Odbudowa pojedynczego zęba przy zastosowaniu korony pochewkowej lub częściowej (szlifowanie zęba ze stopniem okrężnym) | protetyka – korony | draft |  |
+| 23.2804 | Czynności związane z odtworzeniem funkcji koron i prowizorycznych mostów - ponowne osadzenie korony, zęba ćwiekowego, licówki również zdjęcie korony żywiczej | protetyka – korony | draft |  |
+| 23.2805 | Czynności związane z odtworzeniem funkcji koron i prowizorycznych mostów - odnowienie licówki, licowania korony itp. | protetyka – korony | draft |  |
+| 23.2806 | Czynności związane z odtworzeniem funkcji koron i prowizorycznych mostów - zdjęcie i powtórne umocowanie prowizorycznej korony | protetyka – korony | draft |  |
+| 23.2901 | Likwidacja dużych zaburzeń artykulacyjnych i zgryzowych przed uzupełnieniem braków zębowych protezami lub mostami | protetyka | requires_expert_review | Rozwiązanie protetyczne specjalistyczne – treść do weryfikacji (Patryk / protetyk). |
+| 23.2902 | Zmiana położenia szczęki za pomocą płytki zgryzowej (prowadzącej , ustalającej zwarcie, relaksacyjnej) | protetyka | draft |  |
+| 23.2903 | Wycisk czynnościowy za pomocą łyżki indywidualnej | protetyka | draft |  |
+| 23.3001 | Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną laną | protetyka – mosty | draft |  |
+| 23.3002 | Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną licowaną | protetyka – mosty | draft |  |
+| 23.3003 | Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną pochewkową lub częściową | protetyka – mosty | draft |  |
+| 23.3004 | Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną teleskopową | protetyka – mosty | requires_expert_review | Rozwiązanie protetyczne specjalistyczne – treść do weryfikacji (Patryk / protetyk). |
+| 23.3005 | Dalsze czynności przy uzupełnianiu braków zębowych za pomocą na stałe mocowanych mostów za każdy element (punkt) przęsła; liczy się również element jednobrzeżny | protetyka – mosty | draft |  |
+| 23.3006 | Uzupełnienie braków zębowych za pomocą złożonych na stałe umocowanych lub ruchomych mostów i/lub złożonych stałych/ruchomych uzupełnień - dodatkowo przy zastosowaniu przęsła, włącznie z elementem łączącym każde przęsło | protetyka – mosty | requires_expert_review | Rozwiązanie protetyczne specjalistyczne – treść do weryfikacji (Patryk / protetyk). |
+| 23.3007 | Uzupełnienie braków zębowych za pomocą złożonych na stałe umocowanych lub ruchomych mostów i/lub złożonych stałych /ruchomych uzupełnień - dodatkowo przy zastosowaniu śrub, sztyftów sprężynowych lub tp. - za każdy element łączący | protetyka – mosty | requires_expert_review | Rozwiązanie protetyczne specjalistyczne – treść do weryfikacji (Patryk / protetyk). |
+| 23.3008 | Uzupełnienie braków zębowych za pomocą złożonych na stałe umocowanych lub ruchomych mostów i/lub złożonych stałych /ruchomych uzupełnień - dodatkowo przy zastosowaniu zatrzasków, zawiasów, zasuw lub zakotwiczeń - za każdy element (matrycę i stempel należy traktować jako całość) | protetyka – mosty | requires_expert_review | Rozwiązanie protetyczne specjalistyczne – treść do weryfikacji (Patryk / protetyk). |
+| 23.3009 | Czynności dla odtworzenia funkcji mostów lub mocowanych na stałe szyn -powtórne osadzenie mostu lub stałej szyny z dwoma zakotwiczeniami | protetyka – mosty | draft |  |
+| 23.3010 | Czynności dla odtworzenia funkcji mostów lub mocowanych na stałe szyn- powtórne osadzenie mostu lub stałej szyny z więcej niż dwoma zakotwiczeniami | protetyka – mosty | draft |  |
+| 23.3011 | Czynności dla odtworzenia funkcji mostu - odnowienie licówki, licowania korony filarowej | protetyka – mosty | draft |  |
+| 23.3101 | Uzupełnienie braków zębowych przy pomocy protezy częściowej włącznie z prostymi doginanymi klamrami w zakresie 1-4 brakujących zębów | protetyka – protezy ruchome | draft |  |
+| 23.3102 | Uzupełnienie braków zębowych przy pomocy protezy częściowej włącznie z prostymi doginanymi klamrami w zakresie 5-8 brakujących zębów | protetyka – protezy ruchome | draft |  |
+| 23.3103 | Uzupełnienie braków zębowych przy pomocy protezy częściowej włącznie z prostymi doginanymi klamrami w zakresie więcej niż 8 zębów | protetyka – protezy ruchome | draft |  |
+| 23.3104 | Zaopatrzenie bezzębnej szczęki protezą całkowitą w szczęce | protetyka – protezy ruchome | draft |  |
+| 23.31041 | Proteza całkowita górna o charakterze overdenture oparta na zabezpieczonych korzeniach | protetyka – protezy ruchome | requires_expert_review | Rozwiązanie protetyczne specjalistyczne – treść do weryfikacji (Patryk / protetyk). |
+| 23.3105 | Zaopatrzenie bezzębnej szczęki protezą całkowitą w żuchwie | protetyka – protezy ruchome | draft |  |
+| 23.31051 | Proteza całkowita dolna o charakterze overdenture oparta na zabezpieczonych korzeniach | protetyka – protezy ruchome | requires_expert_review | Rozwiązanie protetyczne specjalistyczne – treść do weryfikacji (Patryk / protetyk). |
+| 23.3106 | Zastosowanie metalowej podstawy przy bezzębnej szczęce | protetyka – protezy ruchome | requires_expert_review | Rozwiązanie protetyczne specjalistyczne – treść do weryfikacji (Patryk / protetyk). |
+| 23.3107 | Zastosowanie prostych dwuramiennych elementów utrzymujących lub podpierających lub wieloramiennych elementów doginanych o podobnym działaniu dodatkowo do każdej protezy- przy prowizorycznych protezach jedynie w szczególnych przypadkach, za element | protetyka – protezy ruchome | draft |  |
+| 23.3108 | Zastosowanie płyty metalowej z elementami utrzymującymi i podporami | protetyka – protezy ruchome | draft |  |
+| 23.3109 | Zastosowanie odlewanych skomplikowanych elementów utrzymujących i podpierających przy zastosowaniu jednego elementu utrzymującego i podpierającego - nie przy protezach prowizorycznych | protetyka – protezy ruchome | requires_expert_review | Rozwiązanie protetyczne specjalistyczne – treść do weryfikacji (Patryk / protetyk). |
+| 23.3110 | Zastosowanie odlewanych skomplikowanych elementów utrzymujących i podpierających przy zastosowaniu przynajmniej dwóch elementów utrzymujących i podpierającychnie przy protezach prowizorycznych | protetyka – protezy ruchome | requires_expert_review | Rozwiązanie protetyczne specjalistyczne – treść do weryfikacji (Patryk / protetyk). |
+| 23.3111 | Czynności dla odtworzenia funkcji lub poszerzenia zakresu ruchomej protezy (naprawy) w małym zakresie bez wycisku | protetyka – protezy ruchome | draft |  |
+| 23.3112 | Czynności dla odtworzenia funkcji lub poszerzenia zakresu ruchomej protezy (naprawy) w większym zakresie z wyciskiem | protetyka – protezy ruchome | draft |  |
+| 23.3113 | Czynności dla odtworzenia funkcji lub poszerzenia zakresu ruchomej protezy (naprawy) - częściowe podścielenie jednej protezy | protetyka – protezy ruchome | draft |  |
+| 23.3114 | Całkowite bezpośrednie podścielenie jednej protezy | protetyka – protezy ruchome | draft |  |
+| 23.3115 | Całkowite podścielenie jednej protezy w sposób pośredni | protetyka – protezy ruchome | draft |  |
+| 23.3116 | Całkowite podścielenie jednej protezy w sposób pośredni, włącznie z ukształtowaniem obrzeża - dla szczęki | protetyka – protezy ruchome | draft |  |
+| 23.3117 | Całkowite podścielenie jednej protezy w sposób pośredni włącznie z czynnościowym ukształtowaniem obrzeża -dla żuchwy | protetyka – protezy ruchome | draft |  |
 | 23.3118 | Czynności dla uzupełnienia brakujących tkanek miękkich, wyrównanie lub zamknięcie defektów w obrębie szczęki przy istniejącym uzębieniu resztkowym | protetyka – protezy ruchome | not_started | Pominięte decyzją Patryka (22.11.2026): obturatory, protezy poresekcyjne, epitezy – protetyka szczękowo-twarzowa (specjalistyczna). |
 | 23.3119 | Czynności dla uzupełnienia brakujących tkanek miękkich, wyrównania lub zamknięcia defektów w obrębie bezzębnej szczęki | protetyka – protezy ruchome | not_started | Pominięte decyzją Patryka (22.11.2026): obturatory, protezy poresekcyjne, epitezy – protetyka szczękowo-twarzowa (specjalistyczna). |
 | 23.3120 | Wykonanie obturatora dla zamknięcia podniebienia miękkiego | protetyka – protezy ruchome | not_started | Pominięte decyzją Patryka (22.11.2026): obturatory, protezy poresekcyjne, epitezy – protetyka szczękowo-twarzowa (specjalistyczna). |
@@ -284,6 +284,6 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.3122 | Wykonanie protezy poresekcyjnej ostatecznej | protetyka – protezy ruchome | not_started | Pominięte decyzją Patryka (22.11.2026): obturatory, protezy poresekcyjne, epitezy – protetyka szczękowo-twarzowa (specjalistyczna). |
 | 23.3123 | Wykonanie protezy lub epitezy dla uzupełnienia zewnątrzustrojowych defektów części miękkich lub dla uzupełnienia brakujących części twarzy w mniejszym zakresie | protetyka – protezy ruchome | not_started | Pominięte decyzją Patryka (22.11.2026): obturatory, protezy poresekcyjne, epitezy – protetyka szczękowo-twarzowa (specjalistyczna). |
 | 23.3124 | Wykonanie protezy lub epitezy dla uzupełnienia zewnątrzustrojowych defektów części miękkich lub dla uzupełnienia brakujących części twarzy o większym zakresie | protetyka – protezy ruchome | not_started | Pominięte decyzją Patryka (22.11.2026): obturatory, protezy poresekcyjne, epitezy – protetyka szczękowo-twarzowa (specjalistyczna). |
-| 23.3125 | Czynności związane z odtwarzaniem funkcji koron i mostów - zdjęcie korony lanej | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
-| 23.3126 | Czynności odtwarzające wysokość zwarcia poprzez zastosowanie elementów nakładowych w protezie | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
+| 23.3125 | Czynności związane z odtwarzaniem funkcji koron i mostów - zdjęcie korony lanej | protetyka – protezy ruchome | draft |  |
+| 23.3126 | Czynności odtwarzające wysokość zwarcia poprzez zastosowanie elementów nakładowych w protezie | protetyka – protezy ruchome | requires_expert_review | Rozwiązanie protetyczne specjalistyczne – treść do weryfikacji (Patryk / protetyk). |
 | 23.3127 | Zastosowanie szyny lanej do repozycji i unieruchomienia złamania szczęk lub repozycji i unieruchomienia szczęk po zabiegach korygujących wady zgryzu - za każde 2 zęby kolejne objęte szyną | protetyka – protezy ruchome | not_started | Pominięte decyzją Patryka (22.11.2026): szyna lana do złamań szczęk – chirurgia szczękowo-twarzowa. |

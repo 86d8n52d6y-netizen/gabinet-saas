@@ -2424,6 +2424,790 @@
    "potwierdzenie": "ocena_kliniczna",
    "w_audycie_nfz": false,
    "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2701",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2701",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2702",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2702",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2703",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2703",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2704",
+   "icd10": "K02.1",
+   "okolicznosci": "zniszczenie korony przez próchnicę",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2704",
+   "icd10": "K03.0",
+   "okolicznosci": "nadmierne starcie",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2704",
+   "icd10": "S02.5",
+   "okolicznosci": "złamanie korony",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2704",
+   "icd10": "K08.8",
+   "okolicznosci": "stan po leczeniu kanałowym – osłabiony ząb (do weryfikacji kodu)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2705",
+   "icd10": "K02.1",
+   "okolicznosci": "zniszczenie korony przez próchnicę",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2705",
+   "icd10": "K03.0",
+   "okolicznosci": "nadmierne starcie",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2705",
+   "icd10": "S02.5",
+   "okolicznosci": "złamanie korony",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2705",
+   "icd10": "K08.8",
+   "okolicznosci": "stan po leczeniu kanałowym – osłabiony ząb (do weryfikacji kodu)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2706",
+   "icd10": "K02.1",
+   "okolicznosci": "zniszczenie korony przez próchnicę",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2706",
+   "icd10": "K03.0",
+   "okolicznosci": "nadmierne starcie",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2706",
+   "icd10": "S02.5",
+   "okolicznosci": "złamanie korony",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2706",
+   "icd10": "K08.8",
+   "okolicznosci": "stan po leczeniu kanałowym – osłabiony ząb (do weryfikacji kodu)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2801",
+   "icd10": "K02.1",
+   "okolicznosci": "zniszczenie korony przez próchnicę",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2801",
+   "icd10": "K03.0",
+   "okolicznosci": "nadmierne starcie",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2801",
+   "icd10": "S02.5",
+   "okolicznosci": "złamanie korony",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2801",
+   "icd10": "K08.8",
+   "okolicznosci": "stan po leczeniu kanałowym – osłabiony ząb (do weryfikacji kodu)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2802",
+   "icd10": "K02.1",
+   "okolicznosci": "zniszczenie korony przez próchnicę",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2802",
+   "icd10": "K03.0",
+   "okolicznosci": "nadmierne starcie",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2802",
+   "icd10": "S02.5",
+   "okolicznosci": "złamanie korony",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2802",
+   "icd10": "K08.8",
+   "okolicznosci": "stan po leczeniu kanałowym – osłabiony ząb (do weryfikacji kodu)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2803",
+   "icd10": "K02.1",
+   "okolicznosci": "zniszczenie korony przez próchnicę",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2803",
+   "icd10": "K03.0",
+   "okolicznosci": "nadmierne starcie",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2803",
+   "icd10": "S02.5",
+   "okolicznosci": "złamanie korony",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2803",
+   "icd10": "K08.8",
+   "okolicznosci": "stan po leczeniu kanałowym – osłabiony ząb (do weryfikacji kodu)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2804",
+   "icd10": "K02.1",
+   "okolicznosci": "zniszczenie korony przez próchnicę",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2804",
+   "icd10": "K03.0",
+   "okolicznosci": "nadmierne starcie",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2804",
+   "icd10": "S02.5",
+   "okolicznosci": "złamanie korony",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2804",
+   "icd10": "K08.8",
+   "okolicznosci": "stan po leczeniu kanałowym – osłabiony ząb (do weryfikacji kodu)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2806",
+   "icd10": "K02.1",
+   "okolicznosci": "zniszczenie korony przez próchnicę",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2806",
+   "icd10": "K03.0",
+   "okolicznosci": "nadmierne starcie",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2806",
+   "icd10": "S02.5",
+   "okolicznosci": "złamanie korony",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2806",
+   "icd10": "K08.8",
+   "okolicznosci": "stan po leczeniu kanałowym – osłabiony ząb (do weryfikacji kodu)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2901",
+   "icd10": "K07.6",
+   "okolicznosci": "zaburzenia SSŻ – jeśli współistnieją",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2901",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów z zaburzeniami zwarcia",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2902",
+   "icd10": "K07.6",
+   "okolicznosci": "zaburzenia stawu skroniowo-żuchwowego – rozpoznanie lekarza",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2903",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.2903",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3001",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3001",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3002",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3002",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3003",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3003",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3005",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3005",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3004",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3004",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3006",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3006",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3007",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3007",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3008",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3008",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3009",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3009",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3010",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3010",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3101",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3101",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3102",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": true,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3102",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3103",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": true,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3103",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3104",
+   "icd10": "K08.1",
+   "okolicznosci": "bezzębie (utrata zębów)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": true,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3105",
+   "icd10": "K08.1",
+   "okolicznosci": "bezzębie (utrata zębów)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": true,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.31041",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.31041",
+   "icd10": "K08.3",
+   "okolicznosci": "pozostawione korzenie – zabezpieczone",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.31051",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.31051",
+   "icd10": "K08.3",
+   "okolicznosci": "pozostawione korzenie – zabezpieczone",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3106",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3106",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3107",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3107",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3108",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3108",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3109",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3109",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3110",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3110",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3111",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów – użytkownik protezy",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3112",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów – użytkownik protezy",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": true,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3113",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów – użytkownik protezy",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3114",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów – użytkownik protezy",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3115",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów – użytkownik protezy",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3116",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów – użytkownik protezy",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": true,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3117",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów – użytkownik protezy",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": true,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3125",
+   "icd10": "K02.1",
+   "okolicznosci": "zniszczenie korony przez próchnicę",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3125",
+   "icd10": "K03.0",
+   "okolicznosci": "nadmierne starcie",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3125",
+   "icd10": "S02.5",
+   "okolicznosci": "złamanie korony",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3125",
+   "icd10": "K08.8",
+   "okolicznosci": "stan po leczeniu kanałowym – osłabiony ząb (do weryfikacji kodu)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3126",
+   "icd10": "K08.1",
+   "okolicznosci": "utrata zębów (wypadek, ekstrakcja, choroba przyzębia)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.3126",
+   "icd10": "K00.0",
+   "okolicznosci": "braki wrodzone (anodoncja / hipodoncja)",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
   }
  ]
 }

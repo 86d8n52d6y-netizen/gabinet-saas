@@ -1,23 +1,25 @@
-# Raport – baza stomatologiczna (PROMPT 2), stan 22.11.2026
+# Raport końcowy – baza stomatologiczna (PROMPT 2), 22.11.2026
 
-**Status: praca w toku – NIE zakończona** (kryterium 5: 47 procedur ma jeszcze status `not_started` – protetyka). Gałąź: `baza-stomatologiczna` (bez scalania do `main`, bez zmian w aplikacji).
+**Status: opracowanie zakończone, dane NIE są zweryfikowane i NIE są zintegrowane z aplikacją.** Każdy kod-procedura z ICD-9 PL 5.91 ma kartę albo jawny status z uzasadnieniem; żaden rekord nie ma statusu `verified` (weryfikacja należy do Patryka). Gałąź: `baza-stomatologiczna` – bez scalania do `main`, bez zmian w `generator/`, `src/`, `data/nfz/`, `CLAUDE.md`, `HANDOFF.md`, `POSTEP.md`, `docs/AUDYT_SAAS.md`.
 
-## 1. Etapy promptu
+## 1. Kryteria zakończenia (sekcja 12 promptu)
 
-| Etap | Stan |
-|---|---|
-| 1 Analiza poprzedniego etapu | ✅ audyt NFZ (`data/nfz`, `docs/nfz`), architektura (generator + Next.js + PostgreSQL), istniejące teksty (`generator/szablony.js`) |
-| 2 Inwentaryzacja | ✅ rejestr 266 kodów-procedur (260 liści ICD-9 PL 5.91 + 6 kodów nadrzędnych używanych w świadczeniach) |
-| 3 Badania | ✅ 17 badań (draft) – pola, 3 warianty opisu |
-| 4 Karty procedur | ⏳ 159 kart (108 draft + 51 requires_expert_review) + 3 kody nadrzędne; 47 not_started (protetyka); 57 pominiętych |
-| 5 Powiązania | ⏳ 303 mapowania ICD-10 dla opracowanych kart; badania – warunkowe ICD-9/ICD-10 |
-| 6 Zapis i integracja | ✅ JSON + JSON Schema + manifest + `docs/IMPLEMENTACJA_BAZY_STOMATOLOGICZNEJ.md` + `scripts/import_bazy.py` |
-| 7 Walidacja | ✅ `scripts/waliduj_baze.py` – WYNIK OK (3 ostrzeżenia – patrz §5) |
-| 8 Raport | ⏳ ten dokument (częściowy) |
+| # | Kryterium | Stan |
+|---|---|---|
+| 1–4 | Katalog badań, opisy wg standardu, 3 warianty tekstów, pola formularzy | ✅ 17 badań, 135 pól (31 wspólnych), szablony 3 × badanie |
+| 5 | Każda procedura ICD-9 – karta lub jawny status | ✅ 206 kart + 3 kody nadrzędne z odesłaniem + 57 pominiętych z uzasadnieniem; 0 bez statusu |
+| 6–7 | Przebieg krok po kroku, schemat opisu | ✅ 114 kroków w bibliotece (karta = kroki + uwagi dla procedury), 669 szablonów |
+| 8 | Powiązania ICD-9 ↔ ICD-10 uzasadnione | ✅ 401 podpowiedzi z okolicznościami (146 obecnych też w audycie NFZ); wszystkie „ocena kliniczna”, nigdy automatyczne |
+| 9 | Wymagania NFZ oddzielone od zaleceń | ✅ sekcja `nfz` z danych audytu; elementy dokumentacji i checklist z podstawą (prawna / NFZ / kliniczna / aplikacja) |
+| 10–11 | Dane w repozytorium, walidacja | ✅ JSON + 10 schematów; `scripts/waliduj_baze.py` – WYNIK OK |
+| 12 | Źródła i status weryfikacji | ✅ 21 publikacji z PubMed (PMID) + źródła prawne audytu; `SRC-PRAKTYKA` jawnie „wymaga weryfikacji” |
+| 13 | Rejestr kompletności | ✅ `docs/procedury-icd9/REJESTR_KOMPLETNOSCI.md` |
+| 14–15 | Instrukcja integracji, zgodność z architekturą | ✅ `docs/IMPLEMENTACJA_BAZY_STOMATOLOGICZNEJ.md` (format jak audyt NFZ, bez tabel i migracji) |
+| 16 | Raport końcowy | ✅ ten dokument |
 
 ## 2. Procedury wg grup
 
-| Grupa | draft | requires_expert_review | not_started | kody nadrzędne (odesłanie) | pominięte |
+| Grupa | draft | requires_expert_review | not_started | kody nadrzędne | pominięte |
 |---|---|---|---|---|---|
 | badanie, diagnostyka, RTG, znieczulenie | 15 | 1 | – | – | – |
 | profilaktyka (w tym świadczenia dla dzieci wg wieku) | 23 | 1 | – | – | – |
@@ -26,41 +28,35 @@
 | periodontologia i błona śluzowa | 15 | 7 | – | 2 | – |
 | chirurgia (ekstrakcje, stomatologiczna, wycięcia, zakażenia, urazy) | 11 | 24 | – | 1 | 3 |
 | fizykoterapia, pomoc doraźna | 1 | 8 | – | – | – |
-| protetyka (korony, mosty, protezy ruchome) | – | – | 47 | – | 10 |
+| protetyka (korony, mosty, protezy ruchome) | 36 | 11 | – | – | 10 |
 | ortodoncja, złamania szczęk | – | – | – | – | 44 |
-| **razem (266)** | **108** | **51** | **47** | **3** | **57** |
+| **razem (266)** | **144** | **62** | **0** | **3** | **57** |
 
-`requires_expert_review`: zabiegi specjalistyczne chirurgii i periodontologii, metody historyczne nadal w wykazie NFZ (dewitalizacja, miazga zdewitalizowana, 23.1310), stare kody „wypełnienie” 23.1109–23.1112, fizykoterapia, impregnacja zębiny, pomoc poza godzinami, znieczulenie zewnątrzustne – do decyzji / weryfikacji eksperckiej.
+**requires_expert_review (62)** – treść gotowa, ale wymaga oceny eksperta lub Twojej decyzji: zabiegi specjalistyczne chirurgii i periodontologii (31), protetyka specjalistyczna (teleskopy, uzupełnienia złożone, overdenture, odlewane elementy, metalowa podstawa, odtworzenie zwarcia, likwidacja dużych zaburzeń zgryzowych), metody historyczne nadal w wykazie NFZ (dewitalizacja 23.1202, miazga zdewitalizowana 23.1207–23.1210, 23.1310), stare kody „wypełnienie” 23.1109–23.1112, fizykoterapia, impregnacja zębiny, pomoc poza godzinami, znieczulenie zewnątrzustne.
 
-Pełna lista kodów ze statusami: `docs/procedury-icd9/REJESTR_KOMPLETNOSCI.md`.
+## 3. Checklisty kompletności
 
-## 3. Utworzone pliki
+10 elementów wspólnych + elementy procedur: zalecane, rozliczeniowe (NFZ, z warunkiem), sytuacyjne. **Żaden element procedury nie jest „obowiązkowy”**; obowiązkowe są tylko 4 elementy wspólne z rozporządzenia o dokumentacji (data, opis, rozpoznanie, lekarz), a to źródło ma status „wymaga weryfikacji” – do czasu weryfikacji aplikacja powinna je pokazywać jako ostrzeżenie, nie blokadę. Świadczenia profilaktyczne dla dzieci (23.1009–23.1023): checklista = punkty z zał. 10 rozporządzenia (wyciągnięte z danych audytu, nie przepisane ręcznie).
 
-`data/baza-stomatologiczna/` (schemas – 10 schematów, `zrodla-kliniczne.json`, `pola-wspolne.json`, `manifest.json`), `data/badania/` (3 pliki), `data/procedury-icd9/` (6 plików), `scripts/waliduj_baze.py`, `scripts/buduj_docs_bazy.py`, `scripts/import_bazy.py`, `docs/IMPLEMENTACJA_BAZY_STOMATOLOGICZNEJ.md`, `docs/badania/*` (README, OPISY_BADAN, STRUKTURA_POL), `docs/procedury-icd9/*` (README, KARTY_PROCEDUR, REJESTR_KOMPLETNOSCI), ten raport.
-**Nie zmieniono:** aplikacji (`generator/`, `src/`), `data/nfz/`, `CLAUDE.md`, `HANDOFF.md`, `POSTEP.md`, `docs/AUDYT_SAAS.md`.
+## 4. Utworzone pliki
 
-## 4. Źródła i weryfikacja
-
-- 21 publikacji sprawdzonych w PubMed (PMID): ESE 2006, ESE S3 2023, ESE 2019 (próchnica głęboka), EFP S3 2020, klasyfikacja 2017 (3), EAPD 2019, ADA 2013 i 2016, AAPD 2017, IADT 2020 (4), DC/TMD 2014, ICDAS 2007, PCR 1972, GI 1963, OPMD 2021, chirurgia endodontyczna 2006.
-- Wymagania NFZ – z audytu NFZ (statusy źródeł bez zmian).
-- `SRC-PRAKTYKA` (praktyka kliniczna bez publikacji) – wszędzie tam, gdzie nie znalazłem źródła; **do weryfikacji przez Patryka** (m.in. chirurgia, znieczulenia, RTG).
-- Żaden rekord nie ma statusu `verified` – weryfikacja należy do Patryka.
+`data/baza-stomatologiczna/` (10 schematów, `zrodla-kliniczne.json`, `pola-wspolne.json`, `manifest.json`), `data/badania/` (3), `data/procedury-icd9/` (6), `scripts/waliduj_baze.py`, `scripts/buduj_docs_bazy.py`, `scripts/import_bazy.py`, `docs/IMPLEMENTACJA_BAZY_STOMATOLOGICZNEJ.md`, `docs/badania/` (README, OPISY_BADAN, STRUKTURA_POL), `docs/procedury-icd9/` (README, KARTY_PROCEDUR, REJESTR_KOMPLETNOSCI), ten raport.
 
 ## 5. Nierozstrzygnięte kwestie
 
 | # | Kwestia | Propozycja |
 |---|---|---|
-| 1 | Rozporządzenie o dokumentacji medycznej (Dz.U. 2026 poz. 1391) nieodczytane – elementy „obowiązkowe” oparte na nim mają status „wymaga weryfikacji” | dołączyć tekst aktu albo zaakceptować listę jako zalecenia |
+| 1 | Rozporządzenie o dokumentacji medycznej (Dz.U. 2026 poz. 1391) nieodczytane – 4 elementy „obowiązkowe” opierają się na nim | dołączyć tekst aktu albo uznać je za zalecenia |
 | 2 | Prawo atomowe (uzasadnienie i opis RTG) – akt nieopisany w audycie | jw. |
-| 3 | Kody ICD-10 do weryfikacji: K03.8 (nadwrażliwość), K13.7 (odleżyna), K00.4 (MIH) | porównać z wydaniem CeZ (N8 audytu) |
-| 4 | Brak stałych powiązań ICD-10 dla 23.0103, 23.1809, 23.1813 (rozpoznanie zależy od przyczyny) | zostawić – lekarz wybiera przy wizycie |
-| 5 | Teksty gabinetu (`szablony.js`) mają wyniki prawidłowe wpisane z góry – baza tego nie robi | decyzja przy integracji: zostawić czy przejść na pola |
-| 6 | 23.1109–23.1112 (stare kody „wypełnienie na n powierzchniach”) obok 23.1502–23.1506 | sprawdzić, czy NFZ ich jeszcze używa – na razie not_started |
+| 3 | Kody ICD-10 oznaczone „do weryfikacji kodu” (np. K03.8, K13.7, K00.4, K08.8, S02.6) | porównać z wydaniem CeZ (N8 audytu) |
+| 4 | Brak stałych powiązań ICD-10 dla porady, zaopatrzenia ran, krwawień (rozpoznanie zależy od przyczyny) | zostawić – wybiera lekarz |
+| 5 | Teksty gabinetu (`szablony.js`) mają wyniki prawidłowe wpisane z góry; baza – nie | decyzja przy integracji |
+| 6 | 23.1109–23.1112 obok 23.1502–23.1506 | czy NFZ jeszcze ich używa |
+| 7 | Zał. 6 (protetyka) nieczytany – warunki NFZ protetyki tylko z danych odczytanych | przy rozliczaniu protez NFZ – dołączyć zał. 6 |
+| 8 | Treść kart oparta w dużej części na `SRC-PRAKTYKA` (chirurgia, protetyka, znieczulenia, RTG) | weryfikacja Patryka; dla kluczowych obszarów – dodatkowe wytyczne (np. postępowanie przy lekach przeciwkrzepliwych) |
 
-## 6. Rekomendowane kolejne partie
+## 6. Rekomendowane kolejne kroki
 
-1. ✅ Endodoncja, leczenie próchnicy, estetyka (partia 3).
-2. ✅ Periodontologia i chirurgia stomatologiczna (partia 4 – zabiegi specjalistyczne jako requires_expert_review).
-3. ✅ Profilaktyka dzieci wg wieku, fizykoterapia, pomoc doraźna, dokumenty (partia 5; checklista świadczeń profilaktycznych = punkty z zał. 10 rozporządzenia).
-4. Protetyka (47) – ważne dla przyszłej implantoprotetyki.
-5. Po każdej partii: walidator, manifest, dokumentacja, commit na gałąź; na koniec – weryfikacja Patryka (`verified`) i decyzja o integracji.
+1. **Weryfikacja Patryka** – zacznij od kart z kodami używanymi w Opisach NFZ (ST33, ST34, ST28, ST26, ST30*, ST04, ST01, ST02, ST19, 1101, 1105, 1108, 1206, 1502–1505, 1006, 0401–0403); zatwierdzone → `verified`.
+2. Decyzje do kwestii 1, 5 i 6.
+3. Integracja (na zlecenie): `generator/baza-dane.js` jak `nfz-dane.js` → katalog procedur, podpowiedzi przebiegu, checklisty przed zapisem, generowanie opisów z szablonów (przykład w instrukcji, sprawdzony na danych).

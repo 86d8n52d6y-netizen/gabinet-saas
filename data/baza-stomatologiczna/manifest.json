@@ -35,53 +35,53 @@
   },
   {
    "plik": "data/procedury-icd9/procedures.json",
-   "sha256": "a75c5d33ec1bf2528a8337259fc8bffb93277f39688f2cbc2e2303a0c0a6c6f4",
+   "sha256": "a483613dcc317cb47040c2af967eedda194c808f3d7d1dc8990d85c8412b6636",
    "schemat": "data/baza-stomatologiczna/schemas/procedures.schema.json",
    "rekordy": 266
   },
   {
    "plik": "data/procedury-icd9/procedure-steps.json",
-   "sha256": "d3e110f1ce79a428c738fe60e88f61f75aa4529ba99c613b2a89f1fd5cf49667",
+   "sha256": "d487ef13ceabb23e7ea59c5345560e15446c02026cf646670371c182ff62dbd7",
    "schemat": "data/baza-stomatologiczna/schemas/procedure-steps.schema.json",
-   "rekordy": 94
+   "rekordy": 114
   },
   {
    "plik": "data/procedury-icd9/procedure-materials.json",
-   "sha256": "b5eed39dfc0577d24a67da23721f01db1a1fd7213597a2277d0ce374060f1451",
+   "sha256": "f728687031c147cd1ade3e3bc4207ec769375b049b50d43b05bb37fa25c0d530",
    "schemat": "data/baza-stomatologiczna/schemas/procedure-materials.schema.json",
-   "rekordy": 58
+   "rekordy": 70
   },
   {
    "plik": "data/procedury-icd9/procedure-templates.json",
-   "sha256": "88ee67e44927390ca215ced6f87d00ee4a0b20f298553a9434f2cb603d42a24f",
+   "sha256": "9693a5237eeb20158be0b67746a00a1859272ab0f8071b0714a11cbacbf53e61",
    "schemat": "data/baza-stomatologiczna/schemas/szablony.schema.json",
-   "rekordy": 477
+   "rekordy": 618
   },
   {
    "plik": "data/procedury-icd9/procedure-checklists.json",
-   "sha256": "ae40645ae03622311d3b74c55edb682951d575da690b32cffbf3100fc438ef55",
+   "sha256": "9c860cf89e21baf3d48f5b4955204af294e31553ad326d124f8cfbdec8e3a5ae",
    "schemat": "data/baza-stomatologiczna/schemas/procedure-checklists.schema.json",
-   "rekordy": 159
+   "rekordy": 206
   },
   {
    "plik": "data/procedury-icd9/procedure-diagnosis-mappings.json",
-   "sha256": "b9b32dd4463c3f2d89f8ccf6bd547d471eb3defd1d618ecfb539e54492a12833",
+   "sha256": "7a3cbe160c2f7b7961da62c0f45f596d9945c337656cc194fc4f973d137f9d6e",
    "schemat": "data/baza-stomatologiczna/schemas/procedure-diagnosis-mappings.schema.json",
-   "rekordy": 303
+   "rekordy": 401
   }
  ],
  "liczniki": {
   "badania": 17,
   "procedury": 266,
   "procedury_wg_statusu": {
-   "draft": 108,
-   "requires_expert_review": 51,
-   "not_started": 107
+   "draft": 144,
+   "requires_expert_review": 62,
+   "not_started": 60
   },
-  "szablony": 528,
+  "szablony": 669,
   "pola": 135,
-  "kroki": 94,
-  "materialy": 58,
-  "mapowania_icd10": 303
+  "kroki": 114,
+  "materialy": 70,
+  "mapowania_icd10": 401
  }
 }

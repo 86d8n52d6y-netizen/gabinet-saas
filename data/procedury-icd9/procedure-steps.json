@@ -818,6 +818,167 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ]
+  },
+  {
+   "id": "KROK-PLAN-PROTETYCZNY",
+   "nazwa": "Plan leczenia protetycznego",
+   "opis": "Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-WYCISK-ANATOMICZNY",
+   "nazwa": "Wycisk anatomiczny / sytuacyjny",
+   "opis": "Dobór łyżki standardowej, wycisk (alginat / silikon) lub skan wewnątrzustny, kontrola odwzorowania, dezynfekcja wycisku.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-WYCISK-CZYNNOSCIOWY",
+   "nazwa": "Wycisk czynnościowy łyżką indywidualną",
+   "opis": "Przymiarka łyżki indywidualnej, opracowanie brzegów (czynnościowe ukształtowanie), wycisk właściwy materiałem o odpowiedniej płynności.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-REJESTRACJA-ZWARCIA",
+   "nazwa": "Ustalenie zwarcia",
+   "opis": "Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-PROBA-USTAWIENIA",
+   "nazwa": "Próba ustawienia zębów / konstrukcji",
+   "opis": "Przymiarka (zęby w wosku, szkielet, podbudowa): estetyka, fonetyka, zwarcie, dopasowanie; akceptacja pacjenta.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ODDANIE-PROTEZY",
+   "nazwa": "Oddanie uzupełnienia ruchomego",
+   "opis": "Kontrola wewnętrznej powierzchni i brzegów, zwarcia (kalka), korekta; instruktaż zakładania, higieny i użytkowania.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-KONTROLA-PROTEZY",
+   "nazwa": "Kontrola po oddaniu",
+   "opis": "Ocena podłoża (odleżyny), zwarcia, retencji; korekty.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-PREPARACJA-KORONA",
+   "nazwa": "Szlifowanie zęba pod koronę",
+   "opis": "Preparacja z zachowaniem grubości materiału, zbieżności ścian i kształtu granicy (stopień / zaokrąglony stopień) adekwatnie do rodzaju korony; ochrona miazgi zębów żywych (chłodzenie).",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-WYCISK-PRECYZYJNY",
+   "nazwa": "Retrakcja dziąsła i wycisk precyzyjny",
+   "opis": "Retrakcja (nić / pasta), wycisk dwuwarstwowy / jednoczasowy silikonem lub polieterem albo skan wewnątrzustny; kontrola granicy preparacji.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-TYMCZASOWA",
+   "nazwa": "Uzupełnienie tymczasowe",
+   "opis": "Wykonanie korony / mostu tymczasowego (klucz silikonowy, materiał akrylowy / kompozytowy), cementowanie tymczasowe, kontrola zwarcia i brzegów.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-PROBA-KONSTRUKCJI",
+   "nazwa": "Przymiarka konstrukcji",
+   "opis": "Ocena dopasowania brzeżnego, punktów stycznych, zwarcia, koloru; ewentualnie RTG dopasowania.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-CEMENTOWANIE",
+   "nazwa": "Osadzenie (cementowanie)",
+   "opis": "Przygotowanie zęba i uzupełnienia wg materiału (cement konwencjonalny / adhezyjny), osadzenie, usunięcie nadmiaru cementu (szczególnie poddziąsłowo), kontrola zwarcia.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-WKLAD-KK",
+   "nazwa": "Wkład koronowo-korzeniowy",
+   "opis": "Ocena leczenia kanałowego (RTG), usunięcie gutaperki z pozostawieniem szczelnego wypełnienia przywierzchołkowego (zwykle 4–5 mm), opracowanie kanału, wkład standardowy (np. z włókna) z odbudową kikuta albo wycisk na wkład indywidualny.",
+   "uwaga": "Zachowanie efektu obręczy (ferrule) – ocena ilości tkanek koronowych.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ZDJECIE-KORONY",
+   "nazwa": "Zdjęcie korony / mostu",
+   "opis": "Rozcięcie lub zdjęcie uzupełnienia (narzędzia do zdejmowania), ochrona zęba filarowego, ocena filara.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-NAPRAWA-PROTEZY",
+   "nazwa": "Naprawa protezy",
+   "opis": "Ocena uszkodzenia; naprawa przy fotelu (mała) lub wycisk z protezą do laboratorium; kontrola po naprawie.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-PODSCIELENIE",
+   "nazwa": "Podścielenie protezy",
+   "opis": "Bezpośrednie (materiał przy fotelu) lub pośrednie (wycisk w protezie, praca laboratorium), z ewentualnym ukształtowaniem brzegów; kontrola zwarcia po podścieleniu.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-SZYNA-ZGRYZOWA",
+   "nazwa": "Szyna zgryzowa (płytka)",
+   "opis": "Wyciski obu łuków, rejestracja zwarcia, oddanie szyny z korektą kontaktów (równomierne kontakty, prowadzenie), instruktaż; kontrole.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ELEMENT-RETENCYJNY",
+   "nazwa": "Elementy utrzymujące i podpierające",
+   "opis": "Projekt klamer / zasuw / zatrzasków i podpór wg przebiegu linii przetrwania i warunków zgryzowych; przygotowanie zębów (miejsca na podpory).",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-LICOWANIE-NAPRAWA",
+   "nazwa": "Naprawa licowania",
+   "opis": "Ocena uszkodzenia licówki / licowania, naprawa wewnątrzustna (system naprawczy) albo odnowienie w laboratorium.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ZLECENIE-LAB",
+   "nazwa": "Zlecenie dla pracowni",
+   "opis": "Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
   }
  ]
 }

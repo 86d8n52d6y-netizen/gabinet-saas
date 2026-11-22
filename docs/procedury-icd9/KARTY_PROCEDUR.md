@@ -2,7 +2,7 @@
 
 > Plik generowany: `python3 scripts/buduj_docs_bazy.py` z danych w `data/`. Nie edytuj ręcznie – popraw JSON.
 
-Wersja danych: 2026.11.22-1. Kart opracowanych: 159 z 266 (rejestr: `REJESTR_KOMPLETNOSCI.md`). Wymagania NFZ są oddzielone od zaleceń klinicznych; elementy oznaczone podstawą i źródłem.
+Wersja danych: 2026.11.22-1. Kart opracowanych: 206 z 266 (rejestr: `REJESTR_KOMPLETNOSCI.md`). Wymagania NFZ są oddzielone od zaleceń klinicznych; elementy oznaczone podstawą i źródłem.
 
 ## 23.0101 – Badanie lekarskie stomatologiczne, które obejmuje również instruktaż higieny jamy ustnej
 
@@ -12601,3 +12601,3655 @@ Wskazania: złamanie wyrostka zębodołowego z przemieszczeniem fragmentu (IADT)
 > REPOZYCJA FRAGMENTU WYROSTKA Z ZĘBAMI: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.
 
 **Źródła kliniczne:** `SRC-KLIN-IADT-ZLAM-2020` (PMID 32475015)
+
+## 23.2701 – Opracowanie na piśmie na zlecenie lub życzenie planu leczenia i kosztów zaopatrzenia protetycznego włącznie z oceną modeli
+
+`PROC-23.2701` · **Plan leczenia protetycznego z kosztorysem** · protetyka · status: **draft**
+
+Plan leczenia protetycznego z kosztorysem.
+
+**Na czym polega.** Opracowanie na piśmie planu leczenia i kosztów zaopatrzenia protetycznego. **Cel:** Opracowanie na piśmie planu leczenia i kosztów zaopatrzenia protetycznego.
+
+Wskazania: planowanie uzupełnień protetycznych
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne)
+
+**Kontrola efektu:** jakość wycisku / zapisu
+
+**Zalecenia pozabiegowe:**  Kontrola: Wg planu leczenia.
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | nie |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Warianty leczenia z kosztami i zgoda pacjenta — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Plan leczenia protetycznego z kosztorysem: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Plan leczenia protetycznego z kosztorysem {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> PLAN LECZENIA PROTETYCZNEGO Z KOSZTORYSEM: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.2702 – Wycisk szczęki dla celów wykonania modelu sytuacyjnego, również wycisk częściowy lub wycisk zgryzowy dla celów diagnostycznych lub planowania
+
+`PROC-23.2702` · **Wycisk do modelu sytuacyjnego** · protetyka · status: **draft**
+
+Wycisk do modelu sytuacyjnego.
+
+**Na czym polega.** Wycisk szczęki do modelu sytuacyjnego / diagnostycznego. **Cel:** Wycisk szczęki do modelu sytuacyjnego / diagnostycznego.
+
+Wskazania: diagnostyka i planowanie
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Wycisk anatomiczny / sytuacyjny** – Dobór łyżki standardowej, wycisk (alginat / silikon) lub skan wewnątrzustny, kontrola odwzorowania, dezynfekcja wycisku.
+
+**Materiały i narzędzia:** Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (konieczne); Skaner wewnątrzustny (alternatywa)
+
+**Kontrola efektu:** jakość wycisku / zapisu
+
+**Zalecenia pozabiegowe:**  Kontrola: Wg planu leczenia.
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | nie |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Wycisk do modelu sytuacyjnego: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Wycisk do modelu sytuacyjnego {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> WYCISK DO MODELU SYTUACYJNEGO: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.2703 – Zabiegi przygotowujące (pobieranie wycisków, proste ustalenie zgryzu lub tp. dla wykonania modelu obu szczęk celem oceny diagnostycznej i planowania łącznie z wyceną)
+
+`PROC-23.2703` · **Wyciski i ustalenie zgryzu (modele obu szczęk)** · protetyka · status: **draft**
+
+Wyciski i ustalenie zgryzu (modele obu szczęk).
+
+**Na czym polega.** Zabiegi przygotowujące: wyciski obu szczęk i proste ustalenie zgryzu. **Cel:** wyciski obu szczęk i proste ustalenie zgryzu.
+
+Wskazania: planowanie, modele diagnostyczne
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Wycisk anatomiczny / sytuacyjny** – Dobór łyżki standardowej, wycisk (alginat / silikon) lub skan wewnątrzustny, kontrola odwzorowania, dezynfekcja wycisku.
+2. **Ustalenie zwarcia** – Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.
+
+**Materiały i narzędzia:** Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (konieczne); Wosk, wzorniki zwarciowe, kolornik, linijka (VDO) (typowe)
+
+**Kontrola efektu:** jakość wycisku / zapisu
+
+**Zalecenia pozabiegowe:**  Kontrola: Wg planu leczenia.
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | nie |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Wyciski i ustalenie zgryzu (modele obu szczęk): {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Wyciski i ustalenie zgryzu (modele obu szczęk) {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> WYCISKI I USTALENIE ZGRYZU (MODELE OBU SZCZĘK): zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.2704 – Przygotowanie uszkodzonego zęba do osadzenia korony poprzez odbudowę kikuta zęba wkładem koronowo-korzeniowym lanym lub śrubowym
+
+`PROC-23.2704` · **Wkład koronowo-korzeniowy (odbudowa kikuta)** · protetyka · status: **draft**
+
+Wkład koronowo-korzeniowy (odbudowa kikuta).
+
+**Na czym polega.** Odbudowa kikuta zęba wkładem koronowo-korzeniowym przed koroną. **Cel:** Odbudowa kikuta zęba wkładem koronowo-korzeniowym przed koroną.
+
+Wskazania: ząb po leczeniu kanałowym z dużą utratą tkanek koronowych
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Izolacja pola zabiegowego** – Koferdam (izolacja bezwzględna) albo izolacja względna (wałki ligninowe, ślinociąg) – zależnie od zabiegu. *Uwaga: W leczeniu endodontycznym koferdam jest standardem (ESE).* Warianty: izolacja względna, gdy założenie koferdamu nie jest możliwe – uzasadnij w dokumentacji.
+3. **Wkład koronowo-korzeniowy** – Ocena leczenia kanałowego (RTG), usunięcie gutaperki z pozostawieniem szczelnego wypełnienia przywierzchołkowego (zwykle 4–5 mm), opracowanie kanału, wkład standardowy (np. z włókna) z odbudową kikuta albo wycisk na wkład indywidualny. *Uwaga: Zachowanie efektu obręczy (ferrule) – ocena ilości tkanek koronowych.*
+4. **Przygotowanie powierzchni i system wiążący** – Wytrawianie (total-etch / selektywne szkliwa / self-etch – zgodnie z instrukcją systemu), aplikacja systemu wiążącego, polimeryzacja. *Uwaga: Przestrzegaj instrukcji producenta materiału.*
+5. **Odbudowa materiałem złożonym** – Nakładanie kompozytu warstwami (zwykle ≤ 2 mm) z polimeryzacją; odtworzenie anatomii i punktu stycznego. *Uwaga: Technika zależy od materiału (np. bulk-fill wg instrukcji).* Warianty: glasjonomer / kompomer – np. zęby mleczne, ograniczona izolacja.
+6. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Strzykawka, igła, środek znieczulający miejscowo (sytuacyjne); Wiertła i końcówki (turbina, kątnica), ekskawator (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masy silikonowe / polieterowe (precyzyjne) (typowe); Skaner wewnątrzustny (alternatywa); Nici / pasty retrakcyjne (typowe); Materiał na uzupełnienia tymczasowe (typowe); Cementy (tymczasowe, konwencjonalne, adhezyjne) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne); Wkłady standardowe (np. z włókna) / materiał na wkład indywidualny (konieczne); Koferdam (płachta, klamry, ramka) (typowe)
+
+**Kontrola efektu:** szczelność brzeżna; punkty styczne; zwarcie i ruchy; usunięcie nadmiaru cementu. Nieprawidłowości: nadmiar cementu poddziąsłowo; kontakt przedwczesny; szpara brzeżna. Dalej: korekta / ponowne wykonanie
+
+**Zalecenia pozabiegowe:** Pacjent: Unikać twardych / lepkich pokarmów na uzupełnieniu tymczasowym.. Higiena: Oczyszczanie przestrzeni pod przęsłem / przy koronie (nici z usztywnieniem, szczoteczki międzyzębowe).. Kontakt z gabinetem, gdy: odcementowanie, ból, pęknięcie. Kontrola: Kontrola po osadzeniu i okresowo (co najmniej raz w roku).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K02.1 | Próchnica zębiny | zniszczenie korony przez próchnicę | ocena_kliniczna | nie |
+| K03.0 | Nadmierne ścieranie zębów | nadmierne starcie | ocena_kliniczna | nie |
+| S02.5 | Złamanie zęba | złamanie korony | ocena_kliniczna | nie |
+| K08.8 | Inne określone zaburzenia zębów i tkanek podporowych | stan po leczeniu kanałowym – osłabiony ząb (do weryfikacji kodu) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] RTG – szczelność leczenia kanałowego przed wkładem — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Wkład koronowo-korzeniowy (odbudowa kikuta): {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Wkład koronowo-korzeniowy (odbudowa kikuta) {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> WKŁAD KORONOWO-KORZENIOWY (ODBUDOWA KIKUTA): zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`; `SRC-KLIN-ESE-2006` (PMID 17180780)
+
+## 23.2705 – Ochrona oszlifowanego zęba kształka, formówka
+
+`PROC-23.2705` · **Ochrona oszlifowanego zęba (kształtka, formówka)** · protetyka · status: **draft**
+
+Ochrona oszlifowanego zęba (kształtka, formówka).
+
+**Na czym polega.** Ochrona oszlifowanego zęba kształtką / formówką. **Cel:** Ochrona oszlifowanego zęba kształtką / formówką.
+
+Wskazania: ząb oszlifowany do czasu osadzenia korony
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Uzupełnienie tymczasowe** – Wykonanie korony / mostu tymczasowego (klucz silikonowy, materiał akrylowy / kompozytowy), cementowanie tymczasowe, kontrola zwarcia i brzegów.
+
+**Materiały i narzędzia:** Materiał na uzupełnienia tymczasowe (konieczne); Cementy (tymczasowe, konwencjonalne, adhezyjne) (konieczne)
+
+**Kontrola efektu:** szczelność brzeżna; punkty styczne; zwarcie i ruchy; usunięcie nadmiaru cementu. Nieprawidłowości: nadmiar cementu poddziąsłowo; kontakt przedwczesny; szpara brzeżna. Dalej: korekta / ponowne wykonanie
+
+**Zalecenia pozabiegowe:** Pacjent: Unikać twardych / lepkich pokarmów na uzupełnieniu tymczasowym.. Higiena: Oczyszczanie przestrzeni pod przęsłem / przy koronie (nici z usztywnieniem, szczoteczki międzyzębowe).. Kontakt z gabinetem, gdy: odcementowanie, ból, pęknięcie. Kontrola: Kontrola po osadzeniu i okresowo (co najmniej raz w roku).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K02.1 | Próchnica zębiny | zniszczenie korony przez próchnicę | ocena_kliniczna | nie |
+| K03.0 | Nadmierne ścieranie zębów | nadmierne starcie | ocena_kliniczna | nie |
+| S02.5 | Złamanie zęba | złamanie korony | ocena_kliniczna | nie |
+| K08.8 | Inne określone zaburzenia zębów i tkanek podporowych | stan po leczeniu kanałowym – osłabiony ząb (do weryfikacji kodu) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Ochrona oszlifowanego zęba (kształtka, formówka): {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Ochrona oszlifowanego zęba (kształtka, formówka) {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> OCHRONA OSZLIFOWANEGO ZĘBA (KSZTAŁTKA, FORMÓWKA): zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.2706 – Ochrona oszlifowanego zęba i zabezpieczenie funkcji prowizoryczną koroną lub zastąpienia brakującego zęba elementem prowizorycznego mostu, za koronę lub element mostu
+
+`PROC-23.2706` · **Korona / most tymczasowy** · protetyka · status: **draft**
+
+Korona / most tymczasowy.
+
+**Na czym polega.** Ochrona oszlifowanego zęba prowizoryczną koroną lub zastąpienie brakującego zęba elementem tymczasowym. **Cel:** Ochrona oszlifowanego zęba prowizoryczną koroną lub zastąpienie brakującego zęba elementem tymczasowym.
+
+Wskazania: okres między preparacją a osadzeniem uzupełnienia stałego
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Uzupełnienie tymczasowe** – Wykonanie korony / mostu tymczasowego (klucz silikonowy, materiał akrylowy / kompozytowy), cementowanie tymczasowe, kontrola zwarcia i brzegów.
+
+**Materiały i narzędzia:** Materiał na uzupełnienia tymczasowe (konieczne); Cementy (tymczasowe, konwencjonalne, adhezyjne) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** szczelność brzeżna; punkty styczne; zwarcie i ruchy; usunięcie nadmiaru cementu. Nieprawidłowości: nadmiar cementu poddziąsłowo; kontakt przedwczesny; szpara brzeżna. Dalej: korekta / ponowne wykonanie
+
+**Zalecenia pozabiegowe:** Pacjent: Unikać twardych / lepkich pokarmów na uzupełnieniu tymczasowym.. Higiena: Oczyszczanie przestrzeni pod przęsłem / przy koronie (nici z usztywnieniem, szczoteczki międzyzębowe).. Kontakt z gabinetem, gdy: odcementowanie, ból, pęknięcie. Kontrola: Kontrola po osadzeniu i okresowo (co najmniej raz w roku).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K02.1 | Próchnica zębiny | zniszczenie korony przez próchnicę | ocena_kliniczna | nie |
+| K03.0 | Nadmierne ścieranie zębów | nadmierne starcie | ocena_kliniczna | nie |
+| S02.5 | Złamanie zęba | złamanie korony | ocena_kliniczna | nie |
+| K08.8 | Inne określone zaburzenia zębów i tkanek podporowych | stan po leczeniu kanałowym – osłabiony ząb (do weryfikacji kodu) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Korona / most tymczasowy: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Korona / most tymczasowy {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> KORONA / MOST TYMCZASOWY: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.2801 – Odbudowa pojedynczego zęba przy zastosowaniu korony lanej
+
+`PROC-23.2801` · **Korona lana** · protetyka – korony · status: **draft**
+
+Korona lana.
+
+**Na czym polega.** Odbudowa pojedynczego zęba koroną (korona lana). **Cel:** Odbudowa pojedynczego zęba koroną (korona lana).
+
+Wskazania: ząb z dużą utratą tkanek, po leczeniu kanałowym (zęby boczne); wskazania estetyczne / funkcjonalne
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Znieczulenie miejscowe** – Dobierz metodę (nasiękowe / przewodowe / śródwięzadłowe) do zęba i zabiegu; znieczulenie powierzchniowe miejsca wkłucia (opcjonalnie); aspiracja przed podaniem; podawaj powoli; odnotuj preparat, dawkę i miejsce. *Uwaga: Sprawdź maksymalną dawkę dla masy ciała i choroby ogólne (środek obkurczający naczynia).* Warianty: bez znieczulenia – przy zabiegach nieinwazyjnych lub na życzenie pacjenta, jeśli nie powoduje bólu.
+3. **Szlifowanie zęba pod koronę** – Preparacja z zachowaniem grubości materiału, zbieżności ścian i kształtu granicy (stopień / zaokrąglony stopień) adekwatnie do rodzaju korony; ochrona miazgi zębów żywych (chłodzenie).
+4. **Retrakcja dziąsła i wycisk precyzyjny** – Retrakcja (nić / pasta), wycisk dwuwarstwowy / jednoczasowy silikonem lub polieterem albo skan wewnątrzustny; kontrola granicy preparacji.
+5. **Ustalenie zwarcia** – Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.
+6. **Uzupełnienie tymczasowe** – Wykonanie korony / mostu tymczasowego (klucz silikonowy, materiał akrylowy / kompozytowy), cementowanie tymczasowe, kontrola zwarcia i brzegów.
+7. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+8. **Przymiarka konstrukcji** – Ocena dopasowania brzeżnego, punktów stycznych, zwarcia, koloru; ewentualnie RTG dopasowania.
+9. **Osadzenie (cementowanie)** – Przygotowanie zęba i uzupełnienia wg materiału (cement konwencjonalny / adhezyjny), osadzenie, usunięcie nadmiaru cementu (szczególnie poddziąsłowo), kontrola zwarcia.
+10. **Przekazanie zaleceń** – Przekaż zalecenia pozabiegowe (ustnie lub ustnie i pisemnie) i ustal termin kontroli.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Strzykawka, igła, środek znieczulający miejscowo (sytuacyjne); Wiertła i końcówki (turbina, kątnica), ekskawator (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masy silikonowe / polieterowe (precyzyjne) (typowe); Skaner wewnątrzustny (alternatywa); Nici / pasty retrakcyjne (typowe); Materiał na uzupełnienia tymczasowe (typowe); Cementy (tymczasowe, konwencjonalne, adhezyjne) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** szczelność brzeżna; punkty styczne; zwarcie i ruchy; usunięcie nadmiaru cementu. Nieprawidłowości: nadmiar cementu poddziąsłowo; kontakt przedwczesny; szpara brzeżna. Dalej: korekta / ponowne wykonanie
+
+**Zalecenia pozabiegowe:** Pacjent: Unikać twardych / lepkich pokarmów na uzupełnieniu tymczasowym.. Higiena: Oczyszczanie przestrzeni pod przęsłem / przy koronie (nici z usztywnieniem, szczoteczki międzyzębowe).. Kontakt z gabinetem, gdy: odcementowanie, ból, pęknięcie. Kontrola: Kontrola po osadzeniu i okresowo (co najmniej raz w roku).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K02.1 | Próchnica zębiny | zniszczenie korony przez próchnicę | ocena_kliniczna | nie |
+| K03.0 | Nadmierne ścieranie zębów | nadmierne starcie | ocena_kliniczna | nie |
+| S02.5 | Złamanie zęba | złamanie korony | ocena_kliniczna | nie |
+| K08.8 | Inne określone zaburzenia zębów i tkanek podporowych | stan po leczeniu kanałowym – osłabiony ząb (do weryfikacji kodu) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Żywotność / leczenie kanałowe filara (RTG) — *zalecenie kliniczne*
+- [zalecane] Kolor i materiał korony — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Korona lana: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Korona lana {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> KORONA LANA: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.2802 – Odbudowa pojedynczego zęba przy zastosowaniu korony licowanej
+
+`PROC-23.2802` · **Korona licowana** · protetyka – korony · status: **draft**
+
+Korona licowana.
+
+**Na czym polega.** Odbudowa pojedynczego zęba koroną (korona licowana). **Cel:** Odbudowa pojedynczego zęba koroną (korona licowana).
+
+Wskazania: ząb z dużą utratą tkanek, po leczeniu kanałowym (zęby boczne); wskazania estetyczne / funkcjonalne
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Znieczulenie miejscowe** – Dobierz metodę (nasiękowe / przewodowe / śródwięzadłowe) do zęba i zabiegu; znieczulenie powierzchniowe miejsca wkłucia (opcjonalnie); aspiracja przed podaniem; podawaj powoli; odnotuj preparat, dawkę i miejsce. *Uwaga: Sprawdź maksymalną dawkę dla masy ciała i choroby ogólne (środek obkurczający naczynia).* Warianty: bez znieczulenia – przy zabiegach nieinwazyjnych lub na życzenie pacjenta, jeśli nie powoduje bólu.
+3. **Szlifowanie zęba pod koronę** – Preparacja z zachowaniem grubości materiału, zbieżności ścian i kształtu granicy (stopień / zaokrąglony stopień) adekwatnie do rodzaju korony; ochrona miazgi zębów żywych (chłodzenie).
+4. **Retrakcja dziąsła i wycisk precyzyjny** – Retrakcja (nić / pasta), wycisk dwuwarstwowy / jednoczasowy silikonem lub polieterem albo skan wewnątrzustny; kontrola granicy preparacji.
+5. **Ustalenie zwarcia** – Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.
+6. **Uzupełnienie tymczasowe** – Wykonanie korony / mostu tymczasowego (klucz silikonowy, materiał akrylowy / kompozytowy), cementowanie tymczasowe, kontrola zwarcia i brzegów.
+7. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+8. **Przymiarka konstrukcji** – Ocena dopasowania brzeżnego, punktów stycznych, zwarcia, koloru; ewentualnie RTG dopasowania.
+9. **Osadzenie (cementowanie)** – Przygotowanie zęba i uzupełnienia wg materiału (cement konwencjonalny / adhezyjny), osadzenie, usunięcie nadmiaru cementu (szczególnie poddziąsłowo), kontrola zwarcia.
+10. **Przekazanie zaleceń** – Przekaż zalecenia pozabiegowe (ustnie lub ustnie i pisemnie) i ustal termin kontroli.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Strzykawka, igła, środek znieczulający miejscowo (sytuacyjne); Wiertła i końcówki (turbina, kątnica), ekskawator (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masy silikonowe / polieterowe (precyzyjne) (typowe); Skaner wewnątrzustny (alternatywa); Nici / pasty retrakcyjne (typowe); Materiał na uzupełnienia tymczasowe (typowe); Cementy (tymczasowe, konwencjonalne, adhezyjne) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** szczelność brzeżna; punkty styczne; zwarcie i ruchy; usunięcie nadmiaru cementu. Nieprawidłowości: nadmiar cementu poddziąsłowo; kontakt przedwczesny; szpara brzeżna. Dalej: korekta / ponowne wykonanie
+
+**Zalecenia pozabiegowe:** Pacjent: Unikać twardych / lepkich pokarmów na uzupełnieniu tymczasowym.. Higiena: Oczyszczanie przestrzeni pod przęsłem / przy koronie (nici z usztywnieniem, szczoteczki międzyzębowe).. Kontakt z gabinetem, gdy: odcementowanie, ból, pęknięcie. Kontrola: Kontrola po osadzeniu i okresowo (co najmniej raz w roku).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K02.1 | Próchnica zębiny | zniszczenie korony przez próchnicę | ocena_kliniczna | nie |
+| K03.0 | Nadmierne ścieranie zębów | nadmierne starcie | ocena_kliniczna | nie |
+| S02.5 | Złamanie zęba | złamanie korony | ocena_kliniczna | nie |
+| K08.8 | Inne określone zaburzenia zębów i tkanek podporowych | stan po leczeniu kanałowym – osłabiony ząb (do weryfikacji kodu) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Żywotność / leczenie kanałowe filara (RTG) — *zalecenie kliniczne*
+- [zalecane] Kolor i materiał korony — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Korona licowana: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Korona licowana {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> KORONA LICOWANA: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.2803 – Odbudowa pojedynczego zęba przy zastosowaniu korony pochewkowej lub częściowej (szlifowanie zęba ze stopniem okrężnym)
+
+`PROC-23.2803` · **Korona częściowa / pochewkowa** · protetyka – korony · status: **draft**
+
+Korona częściowa / pochewkowa.
+
+**Na czym polega.** Odbudowa pojedynczego zęba koroną (korona częściowa / pochewkowa). **Cel:** Odbudowa pojedynczego zęba koroną (korona częściowa / pochewkowa).
+
+Wskazania: ząb z dużą utratą tkanek, po leczeniu kanałowym (zęby boczne); wskazania estetyczne / funkcjonalne
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Znieczulenie miejscowe** – Dobierz metodę (nasiękowe / przewodowe / śródwięzadłowe) do zęba i zabiegu; znieczulenie powierzchniowe miejsca wkłucia (opcjonalnie); aspiracja przed podaniem; podawaj powoli; odnotuj preparat, dawkę i miejsce. *Uwaga: Sprawdź maksymalną dawkę dla masy ciała i choroby ogólne (środek obkurczający naczynia).* Warianty: bez znieczulenia – przy zabiegach nieinwazyjnych lub na życzenie pacjenta, jeśli nie powoduje bólu.
+3. **Szlifowanie zęba pod koronę** – Preparacja z zachowaniem grubości materiału, zbieżności ścian i kształtu granicy (stopień / zaokrąglony stopień) adekwatnie do rodzaju korony; ochrona miazgi zębów żywych (chłodzenie).
+4. **Retrakcja dziąsła i wycisk precyzyjny** – Retrakcja (nić / pasta), wycisk dwuwarstwowy / jednoczasowy silikonem lub polieterem albo skan wewnątrzustny; kontrola granicy preparacji.
+5. **Ustalenie zwarcia** – Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.
+6. **Uzupełnienie tymczasowe** – Wykonanie korony / mostu tymczasowego (klucz silikonowy, materiał akrylowy / kompozytowy), cementowanie tymczasowe, kontrola zwarcia i brzegów.
+7. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+8. **Przymiarka konstrukcji** – Ocena dopasowania brzeżnego, punktów stycznych, zwarcia, koloru; ewentualnie RTG dopasowania.
+9. **Osadzenie (cementowanie)** – Przygotowanie zęba i uzupełnienia wg materiału (cement konwencjonalny / adhezyjny), osadzenie, usunięcie nadmiaru cementu (szczególnie poddziąsłowo), kontrola zwarcia.
+10. **Przekazanie zaleceń** – Przekaż zalecenia pozabiegowe (ustnie lub ustnie i pisemnie) i ustal termin kontroli.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Strzykawka, igła, środek znieczulający miejscowo (sytuacyjne); Wiertła i końcówki (turbina, kątnica), ekskawator (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masy silikonowe / polieterowe (precyzyjne) (typowe); Skaner wewnątrzustny (alternatywa); Nici / pasty retrakcyjne (typowe); Materiał na uzupełnienia tymczasowe (typowe); Cementy (tymczasowe, konwencjonalne, adhezyjne) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** szczelność brzeżna; punkty styczne; zwarcie i ruchy; usunięcie nadmiaru cementu. Nieprawidłowości: nadmiar cementu poddziąsłowo; kontakt przedwczesny; szpara brzeżna. Dalej: korekta / ponowne wykonanie
+
+**Zalecenia pozabiegowe:** Pacjent: Unikać twardych / lepkich pokarmów na uzupełnieniu tymczasowym.. Higiena: Oczyszczanie przestrzeni pod przęsłem / przy koronie (nici z usztywnieniem, szczoteczki międzyzębowe).. Kontakt z gabinetem, gdy: odcementowanie, ból, pęknięcie. Kontrola: Kontrola po osadzeniu i okresowo (co najmniej raz w roku).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K02.1 | Próchnica zębiny | zniszczenie korony przez próchnicę | ocena_kliniczna | nie |
+| K03.0 | Nadmierne ścieranie zębów | nadmierne starcie | ocena_kliniczna | nie |
+| S02.5 | Złamanie zęba | złamanie korony | ocena_kliniczna | nie |
+| K08.8 | Inne określone zaburzenia zębów i tkanek podporowych | stan po leczeniu kanałowym – osłabiony ząb (do weryfikacji kodu) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Żywotność / leczenie kanałowe filara (RTG) — *zalecenie kliniczne*
+- [zalecane] Kolor i materiał korony — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Korona częściowa / pochewkowa: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Korona częściowa / pochewkowa {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> KORONA CZĘŚCIOWA / POCHEWKOWA: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.2804 – Czynności związane z odtworzeniem funkcji koron i prowizorycznych mostów - ponowne osadzenie korony, zęba ćwiekowego, licówki również zdjęcie korony żywiczej
+
+`PROC-23.2804` · **Ponowne osadzenie korony / zęba ćwiekowego** · protetyka – korony · status: **draft**
+
+Ponowne osadzenie korony / zęba ćwiekowego.
+
+**Na czym polega.** Ponowne osadzenie korony / zęba ćwiekowego: przywrócenie funkcji uzupełnienia. **Cel:** przywrócenie funkcji uzupełnienia.
+
+Wskazania: odcementowana korona / uzupełnienie tymczasowe przy zachowanym filarze
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Osadzenie (cementowanie)** – Przygotowanie zęba i uzupełnienia wg materiału (cement konwencjonalny / adhezyjny), osadzenie, usunięcie nadmiaru cementu (szczególnie poddziąsłowo), kontrola zwarcia.
+2. **Przekazanie zaleceń** – Przekaż zalecenia pozabiegowe (ustnie lub ustnie i pisemnie) i ustal termin kontroli.
+
+**Materiały i narzędzia:** Cementy (tymczasowe, konwencjonalne, adhezyjne) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** szczelność brzeżna; punkty styczne; zwarcie i ruchy; usunięcie nadmiaru cementu. Nieprawidłowości: nadmiar cementu poddziąsłowo; kontakt przedwczesny; szpara brzeżna. Dalej: korekta / ponowne wykonanie
+
+**Zalecenia pozabiegowe:** Pacjent: Unikać twardych / lepkich pokarmów na uzupełnieniu tymczasowym.. Higiena: Oczyszczanie przestrzeni pod przęsłem / przy koronie (nici z usztywnieniem, szczoteczki międzyzębowe).. Kontakt z gabinetem, gdy: odcementowanie, ból, pęknięcie. Kontrola: Kontrola po osadzeniu i okresowo (co najmniej raz w roku).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K02.1 | Próchnica zębiny | zniszczenie korony przez próchnicę | ocena_kliniczna | nie |
+| K03.0 | Nadmierne ścieranie zębów | nadmierne starcie | ocena_kliniczna | nie |
+| S02.5 | Złamanie zęba | złamanie korony | ocena_kliniczna | nie |
+| K08.8 | Inne określone zaburzenia zębów i tkanek podporowych | stan po leczeniu kanałowym – osłabiony ząb (do weryfikacji kodu) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Stan filara (próchnica, ruchomość) przed ponownym osadzeniem — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Ponowne osadzenie korony / zęba ćwiekowego: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Ponowne osadzenie korony / zęba ćwiekowego {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> PONOWNE OSADZENIE KORONY / ZĘBA ĆWIEKOWEGO: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.2805 – Czynności związane z odtworzeniem funkcji koron i prowizorycznych mostów - odnowienie licówki, licowania korony itp.
+
+`PROC-23.2805` · **Odnowienie licówki / licowania korony** · protetyka – korony · status: **draft**
+
+Odnowienie licówki / licowania korony.
+
+**Na czym polega.** Odnowienie licówki lub licowania korony. **Cel:** Odnowienie licówki lub licowania korony.
+
+Wskazania: uszkodzone licowanie
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Naprawa licowania** – Ocena uszkodzenia licówki / licowania, naprawa wewnątrzustna (system naprawczy) albo odnowienie w laboratorium.
+
+**Materiały i narzędzia:** System do naprawy ceramiki / licowania (konieczne); Materiał złożony (kompozyt) (typowe)
+
+**Kontrola efektu:** szczelność brzeżna; punkty styczne; zwarcie i ruchy; usunięcie nadmiaru cementu. Nieprawidłowości: nadmiar cementu poddziąsłowo; kontakt przedwczesny; szpara brzeżna. Dalej: korekta / ponowne wykonanie
+
+**Zalecenia pozabiegowe:** Pacjent: Unikać twardych / lepkich pokarmów na uzupełnieniu tymczasowym.. Higiena: Oczyszczanie przestrzeni pod przęsłem / przy koronie (nici z usztywnieniem, szczoteczki międzyzębowe).. Kontakt z gabinetem, gdy: odcementowanie, ból, pęknięcie. Kontrola: Kontrola po osadzeniu i okresowo (co najmniej raz w roku).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Odnowienie licówki / licowania korony: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Odnowienie licówki / licowania korony {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> ODNOWIENIE LICÓWKI / LICOWANIA KORONY: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.2806 – Czynności związane z odtworzeniem funkcji koron i prowizorycznych mostów - zdjęcie i powtórne umocowanie prowizorycznej korony
+
+`PROC-23.2806` · **Ponowne umocowanie uzupełnienia tymczasowego** · protetyka – korony · status: **draft**
+
+Ponowne umocowanie uzupełnienia tymczasowego.
+
+**Na czym polega.** Ponowne umocowanie uzupełnienia tymczasowego: przywrócenie funkcji uzupełnienia. **Cel:** przywrócenie funkcji uzupełnienia.
+
+Wskazania: odcementowana korona / uzupełnienie tymczasowe przy zachowanym filarze
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Osadzenie (cementowanie)** – Przygotowanie zęba i uzupełnienia wg materiału (cement konwencjonalny / adhezyjny), osadzenie, usunięcie nadmiaru cementu (szczególnie poddziąsłowo), kontrola zwarcia.
+2. **Przekazanie zaleceń** – Przekaż zalecenia pozabiegowe (ustnie lub ustnie i pisemnie) i ustal termin kontroli.
+
+**Materiały i narzędzia:** Cementy (tymczasowe, konwencjonalne, adhezyjne) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** szczelność brzeżna; punkty styczne; zwarcie i ruchy; usunięcie nadmiaru cementu. Nieprawidłowości: nadmiar cementu poddziąsłowo; kontakt przedwczesny; szpara brzeżna. Dalej: korekta / ponowne wykonanie
+
+**Zalecenia pozabiegowe:** Pacjent: Unikać twardych / lepkich pokarmów na uzupełnieniu tymczasowym.. Higiena: Oczyszczanie przestrzeni pod przęsłem / przy koronie (nici z usztywnieniem, szczoteczki międzyzębowe).. Kontakt z gabinetem, gdy: odcementowanie, ból, pęknięcie. Kontrola: Kontrola po osadzeniu i okresowo (co najmniej raz w roku).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K02.1 | Próchnica zębiny | zniszczenie korony przez próchnicę | ocena_kliniczna | nie |
+| K03.0 | Nadmierne ścieranie zębów | nadmierne starcie | ocena_kliniczna | nie |
+| S02.5 | Złamanie zęba | złamanie korony | ocena_kliniczna | nie |
+| K08.8 | Inne określone zaburzenia zębów i tkanek podporowych | stan po leczeniu kanałowym – osłabiony ząb (do weryfikacji kodu) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Stan filara (próchnica, ruchomość) przed ponownym osadzeniem — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Ponowne umocowanie uzupełnienia tymczasowego: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Ponowne umocowanie uzupełnienia tymczasowego {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> PONOWNE UMOCOWANIE UZUPEŁNIENIA TYMCZASOWEGO: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.2901 – Likwidacja dużych zaburzeń artykulacyjnych i zgryzowych przed uzupełnieniem braków zębowych protezami lub mostami
+
+`PROC-23.2901` · **Likwidacja dużych zaburzeń zgryzowych przed protezowaniem** · protetyka · status: **requires_expert_review**
+
+Likwidacja dużych zaburzeń zgryzowych przed protezowaniem.
+
+**Na czym polega.** Likwidacja dużych zaburzeń artykulacyjnych i zgryzowych przed uzupełnieniem braków. **Cel:** Likwidacja dużych zaburzeń artykulacyjnych i zgryzowych przed uzupełnieniem braków.
+
+Wskazania: duże zaburzenia zwarcia (np. obniżona wysokość zwarcia, kontakty urazowe) przed leczeniem protetycznym
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Ustalenie zwarcia** – Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.
+3. **Selektywne szlifowanie (korekta zgryzu)** – Lokalizacja kontaktów przedwczesnych / urazowych kalką, selektywne szlifowanie, polerowanie, ponowna kontrola. *Uwaga: Zabieg nieodwracalny – tylko przy jasnym wskazaniu.*
+
+**Materiały i narzędzia:** Kalka zgryzowa, nić dentystyczna (konieczne); Wosk, wzorniki zwarciowe, kolornik, linijka (VDO) (typowe)
+
+**Kontrola efektu:** jakość wycisku / zapisu
+
+**Zalecenia pozabiegowe:**  Kontrola: Wg planu leczenia.
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K07.6 | Zaburzenia stawu skroniowo-żuchwowego | zaburzenia SSŻ – jeśli współistnieją | ocena_kliniczna | nie |
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów z zaburzeniami zwarcia | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Likwidacja dużych zaburzeń zgryzowych przed protezowaniem: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Likwidacja dużych zaburzeń zgryzowych przed protezowaniem {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> LIKWIDACJA DUŻYCH ZABURZEŃ ZGRYZOWYCH PRZED PROTEZOWANIEM: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.2902 – Zmiana położenia szczęki za pomocą płytki zgryzowej (prowadzącej , ustalającej zwarcie, relaksacyjnej)
+
+`PROC-23.2902` · **Szyna zgryzowa (płytka relaksacyjna / prowadząca)** · protetyka · status: **draft**
+
+Szyna zgryzowa (płytka relaksacyjna / prowadząca).
+
+**Na czym polega.** Zmiana położenia żuchwy płytką zgryzową (prowadzącą, ustalającą zwarcie, relaksacyjną). **Cel:** Zmiana położenia żuchwy płytką zgryzową (prowadzącą, ustalającą zwarcie, relaksacyjną).
+
+Wskazania: bruksizm; dolegliwości mięśniowo-stawowe (TMD) – po diagnostyce; ustalenie zwarcia przed leczeniem protetycznym
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Badanie wg katalogu badań** – Wykonaj badania składowe z katalogu A odpowiednie do świadczenia (formularze i szablony BAD-…). *Uwaga: Wynik każdego elementu wpisuje lekarz.*
+2. **Wycisk anatomiczny / sytuacyjny** – Dobór łyżki standardowej, wycisk (alginat / silikon) lub skan wewnątrzustny, kontrola odwzorowania, dezynfekcja wycisku.
+3. **Ustalenie zwarcia** – Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.
+4. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+5. **Szyna zgryzowa (płytka)** – Wyciski obu łuków, rejestracja zwarcia, oddanie szyny z korektą kontaktów (równomierne kontakty, prowadzenie), instruktaż; kontrole.
+
+**Materiały i narzędzia:** Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** dopasowanie, brzegi, retencja i stabilizacja; zwarcie; estetyka i fonetyka. Nieprawidłowości: odleżyny; brak retencji; kontakty przedwczesne. Dalej: korekty na kontrolach; podścielenie przy utracie dopasowania
+
+**Zalecenia pozabiegowe:** Pacjent: Okres adaptacji – możliwe ucisk, ślinienie, trudności w mowie.. Higiena: Codzienne mycie protezy szczoteczką do protez, wyjmowanie na noc (wg zaleceń), przechowywanie na sucho / w pojemniku.. Kontakt z gabinetem, gdy: odleżyna, ból, pęknięcie protezy. Kontrola: Kontrola po 24–48 h i wg potrzeb; okresowo podłoże (zanik wyrostka).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K07.6 | Zaburzenia stawu skroniowo-żuchwowego | zaburzenia stawu skroniowo-żuchwowego – rozpoznanie lekarza | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Rozpoznanie TMD / bruksizmu (BAD-SSZ) — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Szyna zgryzowa (płytka relaksacyjna / prowadząca): {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Szyna zgryzowa (płytka relaksacyjna / prowadząca) {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> SZYNA ZGRYZOWA (PŁYTKA RELAKSACYJNA / PROWADZĄCA): zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.2903 – Wycisk czynnościowy za pomocą łyżki indywidualnej
+
+`PROC-23.2903` · **Wycisk czynnościowy łyżką indywidualną** · protetyka · status: **draft**
+
+Wycisk czynnościowy łyżką indywidualną.
+
+**Na czym polega.** Wycisk czynnościowy za pomocą łyżki indywidualnej. **Cel:** Wycisk czynnościowy za pomocą łyżki indywidualnej.
+
+Wskazania: proteza całkowita / szkieletowa – etap wycisku
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Wycisk czynnościowy łyżką indywidualną** – Przymiarka łyżki indywidualnej, opracowanie brzegów (czynnościowe ukształtowanie), wycisk właściwy materiałem o odpowiedniej płynności.
+
+**Materiały i narzędzia:** Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masy silikonowe / polieterowe (precyzyjne) (typowe)
+
+**Kontrola efektu:** jakość wycisku / zapisu
+
+**Zalecenia pozabiegowe:**  Kontrola: Wg planu leczenia.
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | nie |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Wycisk czynnościowy łyżką indywidualną: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Wycisk czynnościowy łyżką indywidualną {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> WYCISK CZYNNOŚCIOWY ŁYŻKĄ INDYWIDUALNĄ: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3001 – Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną laną
+
+`PROC-23.3001` · **Most – filar z koroną laną** · protetyka – mosty · status: **draft**
+
+Most – filar z koroną laną.
+
+**Na czym polega.** Uzupełnienie braków zębowych mostem: most – filar z koroną laną. **Cel:** most – filar z koroną laną.
+
+Wskazania: brak zęba / zębów z filarami o dobrym rokowaniu
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Znieczulenie miejscowe** – Dobierz metodę (nasiękowe / przewodowe / śródwięzadłowe) do zęba i zabiegu; znieczulenie powierzchniowe miejsca wkłucia (opcjonalnie); aspiracja przed podaniem; podawaj powoli; odnotuj preparat, dawkę i miejsce. *Uwaga: Sprawdź maksymalną dawkę dla masy ciała i choroby ogólne (środek obkurczający naczynia).* Warianty: bez znieczulenia – przy zabiegach nieinwazyjnych lub na życzenie pacjenta, jeśli nie powoduje bólu.
+3. **Szlifowanie zęba pod koronę** – Preparacja z zachowaniem grubości materiału, zbieżności ścian i kształtu granicy (stopień / zaokrąglony stopień) adekwatnie do rodzaju korony; ochrona miazgi zębów żywych (chłodzenie).
+4. **Retrakcja dziąsła i wycisk precyzyjny** – Retrakcja (nić / pasta), wycisk dwuwarstwowy / jednoczasowy silikonem lub polieterem albo skan wewnątrzustny; kontrola granicy preparacji.
+5. **Ustalenie zwarcia** – Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.
+6. **Uzupełnienie tymczasowe** – Wykonanie korony / mostu tymczasowego (klucz silikonowy, materiał akrylowy / kompozytowy), cementowanie tymczasowe, kontrola zwarcia i brzegów.
+7. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+8. **Przymiarka konstrukcji** – Ocena dopasowania brzeżnego, punktów stycznych, zwarcia, koloru; ewentualnie RTG dopasowania.
+9. **Osadzenie (cementowanie)** – Przygotowanie zęba i uzupełnienia wg materiału (cement konwencjonalny / adhezyjny), osadzenie, usunięcie nadmiaru cementu (szczególnie poddziąsłowo), kontrola zwarcia.
+10. **Przekazanie zaleceń** – Przekaż zalecenia pozabiegowe (ustnie lub ustnie i pisemnie) i ustal termin kontroli.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Strzykawka, igła, środek znieczulający miejscowo (sytuacyjne); Wiertła i końcówki (turbina, kątnica), ekskawator (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masy silikonowe / polieterowe (precyzyjne) (typowe); Skaner wewnątrzustny (alternatywa); Nici / pasty retrakcyjne (typowe); Materiał na uzupełnienia tymczasowe (typowe); Cementy (tymczasowe, konwencjonalne, adhezyjne) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** szczelność brzeżna; punkty styczne; zwarcie i ruchy; usunięcie nadmiaru cementu. Nieprawidłowości: nadmiar cementu poddziąsłowo; kontakt przedwczesny; szpara brzeżna. Dalej: korekta / ponowne wykonanie
+
+**Zalecenia pozabiegowe:** Pacjent: Unikać twardych / lepkich pokarmów na uzupełnieniu tymczasowym.. Higiena: Oczyszczanie przestrzeni pod przęsłem / przy koronie (nici z usztywnieniem, szczoteczki międzyzębowe).. Kontakt z gabinetem, gdy: odcementowanie, ból, pęknięcie. Kontrola: Kontrola po osadzeniu i okresowo (co najmniej raz w roku).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | nie |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Filary i przęsła (zęby FDI) — *zalecenie kliniczne*
+- [zalecane] Rejestracja zwarcia — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Most – filar z koroną laną: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Most – filar z koroną laną {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> MOST – FILAR Z KORONĄ LANĄ: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3002 – Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną licowaną
+
+`PROC-23.3002` · **Most – filar z koroną licowaną** · protetyka – mosty · status: **draft**
+
+Most – filar z koroną licowaną.
+
+**Na czym polega.** Uzupełnienie braków zębowych mostem: most – filar z koroną licowaną. **Cel:** most – filar z koroną licowaną.
+
+Wskazania: brak zęba / zębów z filarami o dobrym rokowaniu
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Znieczulenie miejscowe** – Dobierz metodę (nasiękowe / przewodowe / śródwięzadłowe) do zęba i zabiegu; znieczulenie powierzchniowe miejsca wkłucia (opcjonalnie); aspiracja przed podaniem; podawaj powoli; odnotuj preparat, dawkę i miejsce. *Uwaga: Sprawdź maksymalną dawkę dla masy ciała i choroby ogólne (środek obkurczający naczynia).* Warianty: bez znieczulenia – przy zabiegach nieinwazyjnych lub na życzenie pacjenta, jeśli nie powoduje bólu.
+3. **Szlifowanie zęba pod koronę** – Preparacja z zachowaniem grubości materiału, zbieżności ścian i kształtu granicy (stopień / zaokrąglony stopień) adekwatnie do rodzaju korony; ochrona miazgi zębów żywych (chłodzenie).
+4. **Retrakcja dziąsła i wycisk precyzyjny** – Retrakcja (nić / pasta), wycisk dwuwarstwowy / jednoczasowy silikonem lub polieterem albo skan wewnątrzustny; kontrola granicy preparacji.
+5. **Ustalenie zwarcia** – Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.
+6. **Uzupełnienie tymczasowe** – Wykonanie korony / mostu tymczasowego (klucz silikonowy, materiał akrylowy / kompozytowy), cementowanie tymczasowe, kontrola zwarcia i brzegów.
+7. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+8. **Przymiarka konstrukcji** – Ocena dopasowania brzeżnego, punktów stycznych, zwarcia, koloru; ewentualnie RTG dopasowania.
+9. **Osadzenie (cementowanie)** – Przygotowanie zęba i uzupełnienia wg materiału (cement konwencjonalny / adhezyjny), osadzenie, usunięcie nadmiaru cementu (szczególnie poddziąsłowo), kontrola zwarcia.
+10. **Przekazanie zaleceń** – Przekaż zalecenia pozabiegowe (ustnie lub ustnie i pisemnie) i ustal termin kontroli.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Strzykawka, igła, środek znieczulający miejscowo (sytuacyjne); Wiertła i końcówki (turbina, kątnica), ekskawator (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masy silikonowe / polieterowe (precyzyjne) (typowe); Skaner wewnątrzustny (alternatywa); Nici / pasty retrakcyjne (typowe); Materiał na uzupełnienia tymczasowe (typowe); Cementy (tymczasowe, konwencjonalne, adhezyjne) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** szczelność brzeżna; punkty styczne; zwarcie i ruchy; usunięcie nadmiaru cementu. Nieprawidłowości: nadmiar cementu poddziąsłowo; kontakt przedwczesny; szpara brzeżna. Dalej: korekta / ponowne wykonanie
+
+**Zalecenia pozabiegowe:** Pacjent: Unikać twardych / lepkich pokarmów na uzupełnieniu tymczasowym.. Higiena: Oczyszczanie przestrzeni pod przęsłem / przy koronie (nici z usztywnieniem, szczoteczki międzyzębowe).. Kontakt z gabinetem, gdy: odcementowanie, ból, pęknięcie. Kontrola: Kontrola po osadzeniu i okresowo (co najmniej raz w roku).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | nie |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Filary i przęsła (zęby FDI) — *zalecenie kliniczne*
+- [zalecane] Rejestracja zwarcia — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Most – filar z koroną licowaną: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Most – filar z koroną licowaną {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> MOST – FILAR Z KORONĄ LICOWANĄ: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3003 – Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną pochewkową lub częściową
+
+`PROC-23.3003` · **Most – filar z koroną częściową** · protetyka – mosty · status: **draft**
+
+Most – filar z koroną częściową.
+
+**Na czym polega.** Uzupełnienie braków zębowych mostem: most – filar z koroną częściową. **Cel:** most – filar z koroną częściową.
+
+Wskazania: brak zęba / zębów z filarami o dobrym rokowaniu
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Znieczulenie miejscowe** – Dobierz metodę (nasiękowe / przewodowe / śródwięzadłowe) do zęba i zabiegu; znieczulenie powierzchniowe miejsca wkłucia (opcjonalnie); aspiracja przed podaniem; podawaj powoli; odnotuj preparat, dawkę i miejsce. *Uwaga: Sprawdź maksymalną dawkę dla masy ciała i choroby ogólne (środek obkurczający naczynia).* Warianty: bez znieczulenia – przy zabiegach nieinwazyjnych lub na życzenie pacjenta, jeśli nie powoduje bólu.
+3. **Szlifowanie zęba pod koronę** – Preparacja z zachowaniem grubości materiału, zbieżności ścian i kształtu granicy (stopień / zaokrąglony stopień) adekwatnie do rodzaju korony; ochrona miazgi zębów żywych (chłodzenie).
+4. **Retrakcja dziąsła i wycisk precyzyjny** – Retrakcja (nić / pasta), wycisk dwuwarstwowy / jednoczasowy silikonem lub polieterem albo skan wewnątrzustny; kontrola granicy preparacji.
+5. **Ustalenie zwarcia** – Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.
+6. **Uzupełnienie tymczasowe** – Wykonanie korony / mostu tymczasowego (klucz silikonowy, materiał akrylowy / kompozytowy), cementowanie tymczasowe, kontrola zwarcia i brzegów.
+7. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+8. **Przymiarka konstrukcji** – Ocena dopasowania brzeżnego, punktów stycznych, zwarcia, koloru; ewentualnie RTG dopasowania.
+9. **Osadzenie (cementowanie)** – Przygotowanie zęba i uzupełnienia wg materiału (cement konwencjonalny / adhezyjny), osadzenie, usunięcie nadmiaru cementu (szczególnie poddziąsłowo), kontrola zwarcia.
+10. **Przekazanie zaleceń** – Przekaż zalecenia pozabiegowe (ustnie lub ustnie i pisemnie) i ustal termin kontroli.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Strzykawka, igła, środek znieczulający miejscowo (sytuacyjne); Wiertła i końcówki (turbina, kątnica), ekskawator (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masy silikonowe / polieterowe (precyzyjne) (typowe); Skaner wewnątrzustny (alternatywa); Nici / pasty retrakcyjne (typowe); Materiał na uzupełnienia tymczasowe (typowe); Cementy (tymczasowe, konwencjonalne, adhezyjne) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** szczelność brzeżna; punkty styczne; zwarcie i ruchy; usunięcie nadmiaru cementu. Nieprawidłowości: nadmiar cementu poddziąsłowo; kontakt przedwczesny; szpara brzeżna. Dalej: korekta / ponowne wykonanie
+
+**Zalecenia pozabiegowe:** Pacjent: Unikać twardych / lepkich pokarmów na uzupełnieniu tymczasowym.. Higiena: Oczyszczanie przestrzeni pod przęsłem / przy koronie (nici z usztywnieniem, szczoteczki międzyzębowe).. Kontakt z gabinetem, gdy: odcementowanie, ból, pęknięcie. Kontrola: Kontrola po osadzeniu i okresowo (co najmniej raz w roku).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | nie |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Filary i przęsła (zęby FDI) — *zalecenie kliniczne*
+- [zalecane] Rejestracja zwarcia — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Most – filar z koroną częściową: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Most – filar z koroną częściową {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> MOST – FILAR Z KORONĄ CZĘŚCIOWĄ: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3004 – Uzupełnienie braków zębowych mostem - za każdy ząb filarowy odbudowany koroną teleskopową
+
+`PROC-23.3004` · **Most – filar z koroną teleskopową** · protetyka – mosty · status: **requires_expert_review**
+
+Most – filar z koroną teleskopową.
+
+**Na czym polega.** Most – filar z koroną teleskopową: uzupełnienie braków konstrukcją złożoną. **Cel:** uzupełnienie braków konstrukcją złożoną.
+
+Wskazania: złożone braki zębowe – wg planu specjalistycznego
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Szlifowanie zęba pod koronę** – Preparacja z zachowaniem grubości materiału, zbieżności ścian i kształtu granicy (stopień / zaokrąglony stopień) adekwatnie do rodzaju korony; ochrona miazgi zębów żywych (chłodzenie).
+3. **Retrakcja dziąsła i wycisk precyzyjny** – Retrakcja (nić / pasta), wycisk dwuwarstwowy / jednoczasowy silikonem lub polieterem albo skan wewnątrzustny; kontrola granicy preparacji.
+4. **Ustalenie zwarcia** – Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.
+5. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+6. **Przymiarka konstrukcji** – Ocena dopasowania brzeżnego, punktów stycznych, zwarcia, koloru; ewentualnie RTG dopasowania.
+7. **Osadzenie (cementowanie)** – Przygotowanie zęba i uzupełnienia wg materiału (cement konwencjonalny / adhezyjny), osadzenie, usunięcie nadmiaru cementu (szczególnie poddziąsłowo), kontrola zwarcia.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Strzykawka, igła, środek znieczulający miejscowo (sytuacyjne); Wiertła i końcówki (turbina, kątnica), ekskawator (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masy silikonowe / polieterowe (precyzyjne) (typowe); Skaner wewnątrzustny (alternatywa); Nici / pasty retrakcyjne (typowe); Materiał na uzupełnienia tymczasowe (typowe); Cementy (tymczasowe, konwencjonalne, adhezyjne) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** szczelność brzeżna; punkty styczne; zwarcie i ruchy; usunięcie nadmiaru cementu. Nieprawidłowości: nadmiar cementu poddziąsłowo; kontakt przedwczesny; szpara brzeżna. Dalej: korekta / ponowne wykonanie
+
+**Zalecenia pozabiegowe:** Pacjent: Unikać twardych / lepkich pokarmów na uzupełnieniu tymczasowym.. Higiena: Oczyszczanie przestrzeni pod przęsłem / przy koronie (nici z usztywnieniem, szczoteczki międzyzębowe).. Kontakt z gabinetem, gdy: odcementowanie, ból, pęknięcie. Kontrola: Kontrola po osadzeniu i okresowo (co najmniej raz w roku).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | nie |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Most – filar z koroną teleskopową: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Most – filar z koroną teleskopową {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> MOST – FILAR Z KORONĄ TELESKOPOWĄ: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3005 – Dalsze czynności przy uzupełnianiu braków zębowych za pomocą na stałe mocowanych mostów za każdy element (punkt) przęsła; liczy się również element jednobrzeżny
+
+`PROC-23.3005` · **Most – dalszy element (przęsło)** · protetyka – mosty · status: **draft**
+
+Most – dalszy element (przęsło).
+
+**Na czym polega.** Uzupełnienie braków zębowych mostem: most – dalszy element (przęsło). **Cel:** most – dalszy element (przęsło).
+
+Wskazania: brak zęba / zębów z filarami o dobrym rokowaniu
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Znieczulenie miejscowe** – Dobierz metodę (nasiękowe / przewodowe / śródwięzadłowe) do zęba i zabiegu; znieczulenie powierzchniowe miejsca wkłucia (opcjonalnie); aspiracja przed podaniem; podawaj powoli; odnotuj preparat, dawkę i miejsce. *Uwaga: Sprawdź maksymalną dawkę dla masy ciała i choroby ogólne (środek obkurczający naczynia).* Warianty: bez znieczulenia – przy zabiegach nieinwazyjnych lub na życzenie pacjenta, jeśli nie powoduje bólu.
+3. **Szlifowanie zęba pod koronę** – Preparacja z zachowaniem grubości materiału, zbieżności ścian i kształtu granicy (stopień / zaokrąglony stopień) adekwatnie do rodzaju korony; ochrona miazgi zębów żywych (chłodzenie).
+4. **Retrakcja dziąsła i wycisk precyzyjny** – Retrakcja (nić / pasta), wycisk dwuwarstwowy / jednoczasowy silikonem lub polieterem albo skan wewnątrzustny; kontrola granicy preparacji.
+5. **Ustalenie zwarcia** – Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.
+6. **Uzupełnienie tymczasowe** – Wykonanie korony / mostu tymczasowego (klucz silikonowy, materiał akrylowy / kompozytowy), cementowanie tymczasowe, kontrola zwarcia i brzegów.
+7. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+8. **Przymiarka konstrukcji** – Ocena dopasowania brzeżnego, punktów stycznych, zwarcia, koloru; ewentualnie RTG dopasowania.
+9. **Osadzenie (cementowanie)** – Przygotowanie zęba i uzupełnienia wg materiału (cement konwencjonalny / adhezyjny), osadzenie, usunięcie nadmiaru cementu (szczególnie poddziąsłowo), kontrola zwarcia.
+10. **Przekazanie zaleceń** – Przekaż zalecenia pozabiegowe (ustnie lub ustnie i pisemnie) i ustal termin kontroli.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Strzykawka, igła, środek znieczulający miejscowo (sytuacyjne); Wiertła i końcówki (turbina, kątnica), ekskawator (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masy silikonowe / polieterowe (precyzyjne) (typowe); Skaner wewnątrzustny (alternatywa); Nici / pasty retrakcyjne (typowe); Materiał na uzupełnienia tymczasowe (typowe); Cementy (tymczasowe, konwencjonalne, adhezyjne) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** szczelność brzeżna; punkty styczne; zwarcie i ruchy; usunięcie nadmiaru cementu. Nieprawidłowości: nadmiar cementu poddziąsłowo; kontakt przedwczesny; szpara brzeżna. Dalej: korekta / ponowne wykonanie
+
+**Zalecenia pozabiegowe:** Pacjent: Unikać twardych / lepkich pokarmów na uzupełnieniu tymczasowym.. Higiena: Oczyszczanie przestrzeni pod przęsłem / przy koronie (nici z usztywnieniem, szczoteczki międzyzębowe).. Kontakt z gabinetem, gdy: odcementowanie, ból, pęknięcie. Kontrola: Kontrola po osadzeniu i okresowo (co najmniej raz w roku).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | nie |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Filary i przęsła (zęby FDI) — *zalecenie kliniczne*
+- [zalecane] Rejestracja zwarcia — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Most – dalszy element (przęsło): {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Most – dalszy element (przęsło) {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> MOST – DALSZY ELEMENT (PRZĘSŁO): zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3006 – Uzupełnienie braków zębowych za pomocą złożonych na stałe umocowanych lub ruchomych mostów i/lub złożonych stałych/ruchomych uzupełnień - dodatkowo przy zastosowaniu przęsła, włącznie z elementem łączącym każde przęsło
+
+`PROC-23.3006` · **Uzupełnienie złożone (mosty / szyny) – wariant 1** · protetyka – mosty · status: **requires_expert_review**
+
+Uzupełnienie złożone (mosty / szyny) – wariant 1.
+
+**Na czym polega.** Uzupełnienie złożone (mosty / szyny) – wariant 1: uzupełnienie braków konstrukcją złożoną. **Cel:** uzupełnienie braków konstrukcją złożoną.
+
+Wskazania: złożone braki zębowe – wg planu specjalistycznego
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Szlifowanie zęba pod koronę** – Preparacja z zachowaniem grubości materiału, zbieżności ścian i kształtu granicy (stopień / zaokrąglony stopień) adekwatnie do rodzaju korony; ochrona miazgi zębów żywych (chłodzenie).
+3. **Retrakcja dziąsła i wycisk precyzyjny** – Retrakcja (nić / pasta), wycisk dwuwarstwowy / jednoczasowy silikonem lub polieterem albo skan wewnątrzustny; kontrola granicy preparacji.
+4. **Ustalenie zwarcia** – Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.
+5. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+6. **Przymiarka konstrukcji** – Ocena dopasowania brzeżnego, punktów stycznych, zwarcia, koloru; ewentualnie RTG dopasowania.
+7. **Osadzenie (cementowanie)** – Przygotowanie zęba i uzupełnienia wg materiału (cement konwencjonalny / adhezyjny), osadzenie, usunięcie nadmiaru cementu (szczególnie poddziąsłowo), kontrola zwarcia.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Strzykawka, igła, środek znieczulający miejscowo (sytuacyjne); Wiertła i końcówki (turbina, kątnica), ekskawator (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masy silikonowe / polieterowe (precyzyjne) (typowe); Skaner wewnątrzustny (alternatywa); Nici / pasty retrakcyjne (typowe); Materiał na uzupełnienia tymczasowe (typowe); Cementy (tymczasowe, konwencjonalne, adhezyjne) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** szczelność brzeżna; punkty styczne; zwarcie i ruchy; usunięcie nadmiaru cementu. Nieprawidłowości: nadmiar cementu poddziąsłowo; kontakt przedwczesny; szpara brzeżna. Dalej: korekta / ponowne wykonanie
+
+**Zalecenia pozabiegowe:** Pacjent: Unikać twardych / lepkich pokarmów na uzupełnieniu tymczasowym.. Higiena: Oczyszczanie przestrzeni pod przęsłem / przy koronie (nici z usztywnieniem, szczoteczki międzyzębowe).. Kontakt z gabinetem, gdy: odcementowanie, ból, pęknięcie. Kontrola: Kontrola po osadzeniu i okresowo (co najmniej raz w roku).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | nie |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Uzupełnienie złożone (mosty / szyny) – wariant 1: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Uzupełnienie złożone (mosty / szyny) – wariant 1 {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> UZUPEŁNIENIE ZŁOŻONE (MOSTY / SZYNY) – WARIANT 1: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3007 – Uzupełnienie braków zębowych za pomocą złożonych na stałe umocowanych lub ruchomych mostów i/lub złożonych stałych /ruchomych uzupełnień - dodatkowo przy zastosowaniu śrub, sztyftów sprężynowych lub tp. - za każdy element łączący
+
+`PROC-23.3007` · **Uzupełnienie złożone (mosty / szyny) – wariant 2** · protetyka – mosty · status: **requires_expert_review**
+
+Uzupełnienie złożone (mosty / szyny) – wariant 2.
+
+**Na czym polega.** Uzupełnienie złożone (mosty / szyny) – wariant 2: uzupełnienie braków konstrukcją złożoną. **Cel:** uzupełnienie braków konstrukcją złożoną.
+
+Wskazania: złożone braki zębowe – wg planu specjalistycznego
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Szlifowanie zęba pod koronę** – Preparacja z zachowaniem grubości materiału, zbieżności ścian i kształtu granicy (stopień / zaokrąglony stopień) adekwatnie do rodzaju korony; ochrona miazgi zębów żywych (chłodzenie).
+3. **Retrakcja dziąsła i wycisk precyzyjny** – Retrakcja (nić / pasta), wycisk dwuwarstwowy / jednoczasowy silikonem lub polieterem albo skan wewnątrzustny; kontrola granicy preparacji.
+4. **Ustalenie zwarcia** – Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.
+5. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+6. **Przymiarka konstrukcji** – Ocena dopasowania brzeżnego, punktów stycznych, zwarcia, koloru; ewentualnie RTG dopasowania.
+7. **Osadzenie (cementowanie)** – Przygotowanie zęba i uzupełnienia wg materiału (cement konwencjonalny / adhezyjny), osadzenie, usunięcie nadmiaru cementu (szczególnie poddziąsłowo), kontrola zwarcia.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Strzykawka, igła, środek znieczulający miejscowo (sytuacyjne); Wiertła i końcówki (turbina, kątnica), ekskawator (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masy silikonowe / polieterowe (precyzyjne) (typowe); Skaner wewnątrzustny (alternatywa); Nici / pasty retrakcyjne (typowe); Materiał na uzupełnienia tymczasowe (typowe); Cementy (tymczasowe, konwencjonalne, adhezyjne) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** szczelność brzeżna; punkty styczne; zwarcie i ruchy; usunięcie nadmiaru cementu. Nieprawidłowości: nadmiar cementu poddziąsłowo; kontakt przedwczesny; szpara brzeżna. Dalej: korekta / ponowne wykonanie
+
+**Zalecenia pozabiegowe:** Pacjent: Unikać twardych / lepkich pokarmów na uzupełnieniu tymczasowym.. Higiena: Oczyszczanie przestrzeni pod przęsłem / przy koronie (nici z usztywnieniem, szczoteczki międzyzębowe).. Kontakt z gabinetem, gdy: odcementowanie, ból, pęknięcie. Kontrola: Kontrola po osadzeniu i okresowo (co najmniej raz w roku).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | nie |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Uzupełnienie złożone (mosty / szyny) – wariant 2: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Uzupełnienie złożone (mosty / szyny) – wariant 2 {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> UZUPEŁNIENIE ZŁOŻONE (MOSTY / SZYNY) – WARIANT 2: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3008 – Uzupełnienie braków zębowych za pomocą złożonych na stałe umocowanych lub ruchomych mostów i/lub złożonych stałych /ruchomych uzupełnień - dodatkowo przy zastosowaniu zatrzasków, zawiasów, zasuw lub zakotwiczeń - za każdy element (matrycę i stempel należy traktować jako całość)
+
+`PROC-23.3008` · **Uzupełnienie złożone (mosty / szyny) – wariant 3** · protetyka – mosty · status: **requires_expert_review**
+
+Uzupełnienie złożone (mosty / szyny) – wariant 3.
+
+**Na czym polega.** Uzupełnienie złożone (mosty / szyny) – wariant 3: uzupełnienie braków konstrukcją złożoną. **Cel:** uzupełnienie braków konstrukcją złożoną.
+
+Wskazania: złożone braki zębowe – wg planu specjalistycznego
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Szlifowanie zęba pod koronę** – Preparacja z zachowaniem grubości materiału, zbieżności ścian i kształtu granicy (stopień / zaokrąglony stopień) adekwatnie do rodzaju korony; ochrona miazgi zębów żywych (chłodzenie).
+3. **Retrakcja dziąsła i wycisk precyzyjny** – Retrakcja (nić / pasta), wycisk dwuwarstwowy / jednoczasowy silikonem lub polieterem albo skan wewnątrzustny; kontrola granicy preparacji.
+4. **Ustalenie zwarcia** – Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.
+5. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+6. **Przymiarka konstrukcji** – Ocena dopasowania brzeżnego, punktów stycznych, zwarcia, koloru; ewentualnie RTG dopasowania.
+7. **Osadzenie (cementowanie)** – Przygotowanie zęba i uzupełnienia wg materiału (cement konwencjonalny / adhezyjny), osadzenie, usunięcie nadmiaru cementu (szczególnie poddziąsłowo), kontrola zwarcia.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Strzykawka, igła, środek znieczulający miejscowo (sytuacyjne); Wiertła i końcówki (turbina, kątnica), ekskawator (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masy silikonowe / polieterowe (precyzyjne) (typowe); Skaner wewnątrzustny (alternatywa); Nici / pasty retrakcyjne (typowe); Materiał na uzupełnienia tymczasowe (typowe); Cementy (tymczasowe, konwencjonalne, adhezyjne) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** szczelność brzeżna; punkty styczne; zwarcie i ruchy; usunięcie nadmiaru cementu. Nieprawidłowości: nadmiar cementu poddziąsłowo; kontakt przedwczesny; szpara brzeżna. Dalej: korekta / ponowne wykonanie
+
+**Zalecenia pozabiegowe:** Pacjent: Unikać twardych / lepkich pokarmów na uzupełnieniu tymczasowym.. Higiena: Oczyszczanie przestrzeni pod przęsłem / przy koronie (nici z usztywnieniem, szczoteczki międzyzębowe).. Kontakt z gabinetem, gdy: odcementowanie, ból, pęknięcie. Kontrola: Kontrola po osadzeniu i okresowo (co najmniej raz w roku).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | nie |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Uzupełnienie złożone (mosty / szyny) – wariant 3: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Uzupełnienie złożone (mosty / szyny) – wariant 3 {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> UZUPEŁNIENIE ZŁOŻONE (MOSTY / SZYNY) – WARIANT 3: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3009 – Czynności dla odtworzenia funkcji mostów lub mocowanych na stałe szyn -powtórne osadzenie mostu lub stałej szyny z dwoma zakotwiczeniami
+
+`PROC-23.3009` · **Powtórne osadzenie mostu / szyny stałej** · protetyka – mosty · status: **draft**
+
+Powtórne osadzenie mostu / szyny stałej.
+
+**Na czym polega.** Powtórne osadzenie mostu / szyny stałej: przywrócenie funkcji mostu. **Cel:** przywrócenie funkcji mostu.
+
+Wskazania: odcementowany most przy zachowanych filarach
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Osadzenie (cementowanie)** – Przygotowanie zęba i uzupełnienia wg materiału (cement konwencjonalny / adhezyjny), osadzenie, usunięcie nadmiaru cementu (szczególnie poddziąsłowo), kontrola zwarcia.
+2. **Przekazanie zaleceń** – Przekaż zalecenia pozabiegowe (ustnie lub ustnie i pisemnie) i ustal termin kontroli.
+
+**Materiały i narzędzia:** Cementy (tymczasowe, konwencjonalne, adhezyjne) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** szczelność brzeżna; punkty styczne; zwarcie i ruchy; usunięcie nadmiaru cementu. Nieprawidłowości: nadmiar cementu poddziąsłowo; kontakt przedwczesny; szpara brzeżna. Dalej: korekta / ponowne wykonanie
+
+**Zalecenia pozabiegowe:** Pacjent: Unikać twardych / lepkich pokarmów na uzupełnieniu tymczasowym.. Higiena: Oczyszczanie przestrzeni pod przęsłem / przy koronie (nici z usztywnieniem, szczoteczki międzyzębowe).. Kontakt z gabinetem, gdy: odcementowanie, ból, pęknięcie. Kontrola: Kontrola po osadzeniu i okresowo (co najmniej raz w roku).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | nie |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Powtórne osadzenie mostu / szyny stałej: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Powtórne osadzenie mostu / szyny stałej {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> POWTÓRNE OSADZENIE MOSTU / SZYNY STAŁEJ: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3010 – Czynności dla odtworzenia funkcji mostów lub mocowanych na stałe szyn- powtórne osadzenie mostu lub stałej szyny z więcej niż dwoma zakotwiczeniami
+
+`PROC-23.3010` · **Powtórne osadzenie mostu / szyny (wariant)** · protetyka – mosty · status: **draft**
+
+Powtórne osadzenie mostu / szyny (wariant).
+
+**Na czym polega.** Powtórne osadzenie mostu / szyny (wariant): przywrócenie funkcji mostu. **Cel:** przywrócenie funkcji mostu.
+
+Wskazania: odcementowany most przy zachowanych filarach
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Osadzenie (cementowanie)** – Przygotowanie zęba i uzupełnienia wg materiału (cement konwencjonalny / adhezyjny), osadzenie, usunięcie nadmiaru cementu (szczególnie poddziąsłowo), kontrola zwarcia.
+2. **Przekazanie zaleceń** – Przekaż zalecenia pozabiegowe (ustnie lub ustnie i pisemnie) i ustal termin kontroli.
+
+**Materiały i narzędzia:** Cementy (tymczasowe, konwencjonalne, adhezyjne) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** szczelność brzeżna; punkty styczne; zwarcie i ruchy; usunięcie nadmiaru cementu. Nieprawidłowości: nadmiar cementu poddziąsłowo; kontakt przedwczesny; szpara brzeżna. Dalej: korekta / ponowne wykonanie
+
+**Zalecenia pozabiegowe:** Pacjent: Unikać twardych / lepkich pokarmów na uzupełnieniu tymczasowym.. Higiena: Oczyszczanie przestrzeni pod przęsłem / przy koronie (nici z usztywnieniem, szczoteczki międzyzębowe).. Kontakt z gabinetem, gdy: odcementowanie, ból, pęknięcie. Kontrola: Kontrola po osadzeniu i okresowo (co najmniej raz w roku).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | nie |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Powtórne osadzenie mostu / szyny (wariant): {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Powtórne osadzenie mostu / szyny (wariant) {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> POWTÓRNE OSADZENIE MOSTU / SZYNY (WARIANT): zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3011 – Czynności dla odtworzenia funkcji mostu - odnowienie licówki, licowania korony filarowej
+
+`PROC-23.3011` · **Odnowienie licówki korony filarowej mostu** · protetyka – mosty · status: **draft**
+
+Odnowienie licówki korony filarowej mostu.
+
+**Na czym polega.** Odnowienie licówki / licowania korony filarowej mostu. **Cel:** Odnowienie licówki / licowania korony filarowej mostu.
+
+Wskazania: uszkodzone licowanie mostu
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Naprawa licowania** – Ocena uszkodzenia licówki / licowania, naprawa wewnątrzustna (system naprawczy) albo odnowienie w laboratorium.
+
+**Materiały i narzędzia:** System do naprawy ceramiki / licowania (konieczne)
+
+**Kontrola efektu:** szczelność brzeżna; punkty styczne; zwarcie i ruchy; usunięcie nadmiaru cementu. Nieprawidłowości: nadmiar cementu poddziąsłowo; kontakt przedwczesny; szpara brzeżna. Dalej: korekta / ponowne wykonanie
+
+**Zalecenia pozabiegowe:** Pacjent: Unikać twardych / lepkich pokarmów na uzupełnieniu tymczasowym.. Higiena: Oczyszczanie przestrzeni pod przęsłem / przy koronie (nici z usztywnieniem, szczoteczki międzyzębowe).. Kontakt z gabinetem, gdy: odcementowanie, ból, pęknięcie. Kontrola: Kontrola po osadzeniu i okresowo (co najmniej raz w roku).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Odnowienie licówki korony filarowej mostu: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Odnowienie licówki korony filarowej mostu {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> ODNOWIENIE LICÓWKI KORONY FILAROWEJ MOSTU: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3101 – Uzupełnienie braków zębowych przy pomocy protezy częściowej włącznie z prostymi doginanymi klamrami w zakresie 1-4 brakujących zębów
+
+`PROC-23.3101` · **Proteza częściowa – wariant 1** · protetyka – protezy ruchome · status: **draft**
+
+Proteza częściowa – wariant 1.
+
+**Na czym polega.** Uzupełnienie braków zębowych protezą częściową z klamrami doginanymi (zakres wg nazwy kodu ICD-9). **Cel:** Uzupełnienie braków zębowych protezą częściową z klamrami doginanymi (zakres wg nazwy kodu ICD-9).
+
+Wskazania: częściowe braki zębowe
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Wycisk anatomiczny / sytuacyjny** – Dobór łyżki standardowej, wycisk (alginat / silikon) lub skan wewnątrzustny, kontrola odwzorowania, dezynfekcja wycisku.
+3. **Ustalenie zwarcia** – Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.
+4. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+5. **Próba ustawienia zębów / konstrukcji** – Przymiarka (zęby w wosku, szkielet, podbudowa): estetyka, fonetyka, zwarcie, dopasowanie; akceptacja pacjenta.
+6. **Oddanie uzupełnienia ruchomego** – Kontrola wewnętrznej powierzchni i brzegów, zwarcia (kalka), korekta; instruktaż zakładania, higieny i użytkowania.
+7. **Kontrola po oddaniu** – Ocena podłoża (odleżyny), zwarcia, retencji; korekty.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (typowe); Masy silikonowe / polieterowe (precyzyjne) (typowe); Wosk, wzorniki zwarciowe, kolornik, linijka (VDO) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** dopasowanie, brzegi, retencja i stabilizacja; zwarcie; estetyka i fonetyka. Nieprawidłowości: odleżyny; brak retencji; kontakty przedwczesne. Dalej: korekty na kontrolach; podścielenie przy utracie dopasowania
+
+**Zalecenia pozabiegowe:** Pacjent: Okres adaptacji – możliwe ucisk, ślinienie, trudności w mowie.. Higiena: Codzienne mycie protezy szczoteczką do protez, wyjmowanie na noc (wg zaleceń), przechowywanie na sucho / w pojemniku.. Kontakt z gabinetem, gdy: odleżyna, ból, pęknięcie protezy. Kontrola: Kontrola po 24–48 h i wg potrzeb; okresowo podłoże (zanik wyrostka).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | nie |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Braki zębowe (FDI) i elementy retencyjne — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Proteza częściowa – wariant 1: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Proteza częściowa – wariant 1 {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> PROTEZA CZĘŚCIOWA – WARIANT 1: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3102 – Uzupełnienie braków zębowych przy pomocy protezy częściowej włącznie z prostymi doginanymi klamrami w zakresie 5-8 brakujących zębów
+
+`PROC-23.3102` · **Proteza częściowa – wariant 2** · protetyka – protezy ruchome · status: **draft**
+
+Proteza częściowa – wariant 2.
+
+**Na czym polega.** Uzupełnienie braków zębowych protezą częściową z klamrami doginanymi (zakres wg nazwy kodu ICD-9). **Cel:** Uzupełnienie braków zębowych protezą częściową z klamrami doginanymi (zakres wg nazwy kodu ICD-9).
+
+Wskazania: częściowe braki zębowe
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Wycisk anatomiczny / sytuacyjny** – Dobór łyżki standardowej, wycisk (alginat / silikon) lub skan wewnątrzustny, kontrola odwzorowania, dezynfekcja wycisku.
+3. **Ustalenie zwarcia** – Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.
+4. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+5. **Próba ustawienia zębów / konstrukcji** – Przymiarka (zęby w wosku, szkielet, podbudowa): estetyka, fonetyka, zwarcie, dopasowanie; akceptacja pacjenta.
+6. **Oddanie uzupełnienia ruchomego** – Kontrola wewnętrznej powierzchni i brzegów, zwarcia (kalka), korekta; instruktaż zakładania, higieny i użytkowania.
+7. **Kontrola po oddaniu** – Ocena podłoża (odleżyny), zwarcia, retencji; korekty.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (typowe); Masy silikonowe / polieterowe (precyzyjne) (typowe); Wosk, wzorniki zwarciowe, kolornik, linijka (VDO) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** dopasowanie, brzegi, retencja i stabilizacja; zwarcie; estetyka i fonetyka. Nieprawidłowości: odleżyny; brak retencji; kontakty przedwczesne. Dalej: korekty na kontrolach; podścielenie przy utracie dopasowania
+
+**Zalecenia pozabiegowe:** Pacjent: Okres adaptacji – możliwe ucisk, ślinienie, trudności w mowie.. Higiena: Codzienne mycie protezy szczoteczką do protez, wyjmowanie na noc (wg zaleceń), przechowywanie na sucho / w pojemniku.. Kontakt z gabinetem, gdy: odleżyna, ból, pęknięcie protezy. Kontrola: Kontrola po 24–48 h i wg potrzeb; okresowo podłoże (zanik wyrostka).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: 5.13.00.2331020 – 470 pkt (zał. 1b)
+
+- zał. 1 (wszyscy): Świadczenie obejmuje uzupełnienie za pomocą ruchomej protezy akrylowej częściowej z zastosowaniem elementów doginanych utrzymujących lub podpierających w liczbie według wskazań indywidualnych 1 raz na 5 lat w zakresie 5–8 brakujących zębów w 1 łuku zębowym (ograniczenie nie dotyczy osób po operacyjnym usunięciu nowotworów w obrębie twarzoczaszki).
+
+Reguły: R-PROT-03
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych.*
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | tak |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Braki zębowe (FDI) i elementy retencyjne — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Proteza częściowa – wariant 2: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Proteza częściowa – wariant 2 {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> PROTEZA CZĘŚCIOWA – WARIANT 2: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3103 – Uzupełnienie braków zębowych przy pomocy protezy częściowej włącznie z prostymi doginanymi klamrami w zakresie więcej niż 8 zębów
+
+`PROC-23.3103` · **Proteza częściowa – wariant 3** · protetyka – protezy ruchome · status: **draft**
+
+Proteza częściowa – wariant 3.
+
+**Na czym polega.** Uzupełnienie braków zębowych protezą częściową z klamrami doginanymi (zakres wg nazwy kodu ICD-9). **Cel:** Uzupełnienie braków zębowych protezą częściową z klamrami doginanymi (zakres wg nazwy kodu ICD-9).
+
+Wskazania: częściowe braki zębowe
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Wycisk anatomiczny / sytuacyjny** – Dobór łyżki standardowej, wycisk (alginat / silikon) lub skan wewnątrzustny, kontrola odwzorowania, dezynfekcja wycisku.
+3. **Ustalenie zwarcia** – Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.
+4. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+5. **Próba ustawienia zębów / konstrukcji** – Przymiarka (zęby w wosku, szkielet, podbudowa): estetyka, fonetyka, zwarcie, dopasowanie; akceptacja pacjenta.
+6. **Oddanie uzupełnienia ruchomego** – Kontrola wewnętrznej powierzchni i brzegów, zwarcia (kalka), korekta; instruktaż zakładania, higieny i użytkowania.
+7. **Kontrola po oddaniu** – Ocena podłoża (odleżyny), zwarcia, retencji; korekty.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (typowe); Masy silikonowe / polieterowe (precyzyjne) (typowe); Wosk, wzorniki zwarciowe, kolornik, linijka (VDO) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** dopasowanie, brzegi, retencja i stabilizacja; zwarcie; estetyka i fonetyka. Nieprawidłowości: odleżyny; brak retencji; kontakty przedwczesne. Dalej: korekty na kontrolach; podścielenie przy utracie dopasowania
+
+**Zalecenia pozabiegowe:** Pacjent: Okres adaptacji – możliwe ucisk, ślinienie, trudności w mowie.. Higiena: Codzienne mycie protezy szczoteczką do protez, wyjmowanie na noc (wg zaleceń), przechowywanie na sucho / w pojemniku.. Kontakt z gabinetem, gdy: odleżyna, ból, pęknięcie protezy. Kontrola: Kontrola po 24–48 h i wg potrzeb; okresowo podłoże (zanik wyrostka).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **tak**; produkty: 5.13.00.2331030 – 470 pkt (zał. 1b)
+
+- zał. 1 (wszyscy): Świadczenie obejmuje uzupełnienie za pomocą ruchomej protezy akrylowej częściowej z zastosowaniem elementów doginanych utrzymujących lub podpierających w liczbie według wskazań indywidualnych 1 raz na 5 lat w zakresie większym niż 8 brakujących zębów w 1 łuku zębowym (ograniczenie nie dotyczy osób po operacyjnym usunięciu nowotworów w obrębie twarzoczaszki).
+
+Reguły: R-PROT-03
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych.*
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | tak |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Braki zębowe (FDI) i elementy retencyjne — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Proteza częściowa – wariant 3: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Proteza częściowa – wariant 3 {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> PROTEZA CZĘŚCIOWA – WARIANT 3: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3104 – Zaopatrzenie bezzębnej szczęki protezą całkowitą w szczęce
+
+`PROC-23.3104` · **Proteza całkowita górna** · protetyka – protezy ruchome · status: **draft**
+
+Proteza całkowita górna.
+
+**Na czym polega.** Zaopatrzenie bezzębnej szczęki protezą całkowitą w szczęce. **Cel:** Zaopatrzenie bezzębnej szczęki protezą całkowitą w szczęce.
+
+Wskazania: bezzębie
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Wycisk anatomiczny / sytuacyjny** – Dobór łyżki standardowej, wycisk (alginat / silikon) lub skan wewnątrzustny, kontrola odwzorowania, dezynfekcja wycisku.
+3. **Wycisk czynnościowy łyżką indywidualną** – Przymiarka łyżki indywidualnej, opracowanie brzegów (czynnościowe ukształtowanie), wycisk właściwy materiałem o odpowiedniej płynności.
+4. **Ustalenie zwarcia** – Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.
+5. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+6. **Próba ustawienia zębów / konstrukcji** – Przymiarka (zęby w wosku, szkielet, podbudowa): estetyka, fonetyka, zwarcie, dopasowanie; akceptacja pacjenta.
+7. **Oddanie uzupełnienia ruchomego** – Kontrola wewnętrznej powierzchni i brzegów, zwarcia (kalka), korekta; instruktaż zakładania, higieny i użytkowania.
+8. **Kontrola po oddaniu** – Ocena podłoża (odleżyny), zwarcia, retencji; korekty.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (typowe); Masy silikonowe / polieterowe (precyzyjne) (typowe); Wosk, wzorniki zwarciowe, kolornik, linijka (VDO) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** dopasowanie, brzegi, retencja i stabilizacja; zwarcie; estetyka i fonetyka. Nieprawidłowości: odleżyny; brak retencji; kontakty przedwczesne. Dalej: korekty na kontrolach; podścielenie przy utracie dopasowania
+
+**Zalecenia pozabiegowe:** Pacjent: Okres adaptacji – możliwe ucisk, ślinienie, trudności w mowie.. Higiena: Codzienne mycie protezy szczoteczką do protez, wyjmowanie na noc (wg zaleceń), przechowywanie na sucho / w pojemniku.. Kontakt z gabinetem, gdy: odleżyna, ból, pęknięcie protezy. Kontrola: Kontrola po 24–48 h i wg potrzeb; okresowo podłoże (zanik wyrostka).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **tak**
+
+- zał. 1 (wszyscy): Świadczenie obejmuje zaopatrzenie za pomocą protezy akrylowej całkowitej w szczęce łącznie z pobraniem wycisku czynnościowego na łyżce indywidualnej 1 raz na 5 lat (ograniczenie nie dotyczy osób po operacyjnym usunięciu nowotworów w obrębie twarzoczaszki).
+
+Reguły: R-PROT-01, R-PROT-03
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych.*
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | bezzębie (utrata zębów) | ocena_kliniczna | tak |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Wysokość zwarcia (VDO) i ustawienie zębów zaakceptowane — *zalecenie kliniczne*
+- [rozliczeniowe] Limit NFZ: 1× na 5 lat (R-PROT-01) — *NFZ*, rozliczenie NFZ – informacja (D7=B)
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Proteza całkowita górna: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Proteza całkowita górna {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> PROTEZA CAŁKOWITA GÓRNA: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.31041 – Proteza całkowita górna o charakterze overdenture oparta na zabezpieczonych korzeniach
+
+`PROC-23.31041` · **Proteza całkowita górna overdenture** · protetyka – protezy ruchome · status: **requires_expert_review**
+
+Proteza całkowita górna overdenture.
+
+**Na czym polega.** Proteza całkowita górna overdenture oparta na zabezpieczonych korzeniach. **Cel:** Proteza całkowita górna overdenture oparta na zabezpieczonych korzeniach.
+
+Wskazania: bezzębie z korzeniami do zachowania (po leczeniu kanałowym, zabezpieczone)
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Wycisk czynnościowy łyżką indywidualną** – Przymiarka łyżki indywidualnej, opracowanie brzegów (czynnościowe ukształtowanie), wycisk właściwy materiałem o odpowiedniej płynności.
+3. **Ustalenie zwarcia** – Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.
+4. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+5. **Próba ustawienia zębów / konstrukcji** – Przymiarka (zęby w wosku, szkielet, podbudowa): estetyka, fonetyka, zwarcie, dopasowanie; akceptacja pacjenta.
+6. **Oddanie uzupełnienia ruchomego** – Kontrola wewnętrznej powierzchni i brzegów, zwarcia (kalka), korekta; instruktaż zakładania, higieny i użytkowania.
+7. **Kontrola po oddaniu** – Ocena podłoża (odleżyny), zwarcia, retencji; korekty.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (typowe); Masy silikonowe / polieterowe (precyzyjne) (typowe); Wosk, wzorniki zwarciowe, kolornik, linijka (VDO) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** dopasowanie, brzegi, retencja i stabilizacja; zwarcie; estetyka i fonetyka. Nieprawidłowości: odleżyny; brak retencji; kontakty przedwczesne. Dalej: korekty na kontrolach; podścielenie przy utracie dopasowania
+
+**Zalecenia pozabiegowe:** Pacjent: Okres adaptacji – możliwe ucisk, ślinienie, trudności w mowie.. Higiena: Codzienne mycie protezy szczoteczką do protez, wyjmowanie na noc (wg zaleceń), przechowywanie na sucho / w pojemniku.. Kontakt z gabinetem, gdy: odleżyna, ból, pęknięcie protezy. Kontrola: Kontrola po 24–48 h i wg potrzeb; okresowo podłoże (zanik wyrostka).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów | ocena_kliniczna | nie |
+| K08.3 | Pozostawiony korzeń zęba | pozostawione korzenie – zabezpieczone | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Proteza całkowita górna overdenture: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Proteza całkowita górna overdenture {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> PROTEZA CAŁKOWITA GÓRNA OVERDENTURE: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3105 – Zaopatrzenie bezzębnej szczęki protezą całkowitą w żuchwie
+
+`PROC-23.3105` · **Proteza całkowita dolna** · protetyka – protezy ruchome · status: **draft**
+
+Proteza całkowita dolna.
+
+**Na czym polega.** Zaopatrzenie bezzębnej szczęki protezą całkowitą w żuchwie. **Cel:** Zaopatrzenie bezzębnej szczęki protezą całkowitą w żuchwie.
+
+Wskazania: bezzębie
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Wycisk anatomiczny / sytuacyjny** – Dobór łyżki standardowej, wycisk (alginat / silikon) lub skan wewnątrzustny, kontrola odwzorowania, dezynfekcja wycisku.
+3. **Wycisk czynnościowy łyżką indywidualną** – Przymiarka łyżki indywidualnej, opracowanie brzegów (czynnościowe ukształtowanie), wycisk właściwy materiałem o odpowiedniej płynności.
+4. **Ustalenie zwarcia** – Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.
+5. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+6. **Próba ustawienia zębów / konstrukcji** – Przymiarka (zęby w wosku, szkielet, podbudowa): estetyka, fonetyka, zwarcie, dopasowanie; akceptacja pacjenta.
+7. **Oddanie uzupełnienia ruchomego** – Kontrola wewnętrznej powierzchni i brzegów, zwarcia (kalka), korekta; instruktaż zakładania, higieny i użytkowania.
+8. **Kontrola po oddaniu** – Ocena podłoża (odleżyny), zwarcia, retencji; korekty.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (typowe); Masy silikonowe / polieterowe (precyzyjne) (typowe); Wosk, wzorniki zwarciowe, kolornik, linijka (VDO) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** dopasowanie, brzegi, retencja i stabilizacja; zwarcie; estetyka i fonetyka. Nieprawidłowości: odleżyny; brak retencji; kontakty przedwczesne. Dalej: korekty na kontrolach; podścielenie przy utracie dopasowania
+
+**Zalecenia pozabiegowe:** Pacjent: Okres adaptacji – możliwe ucisk, ślinienie, trudności w mowie.. Higiena: Codzienne mycie protezy szczoteczką do protez, wyjmowanie na noc (wg zaleceń), przechowywanie na sucho / w pojemniku.. Kontakt z gabinetem, gdy: odleżyna, ból, pęknięcie protezy. Kontrola: Kontrola po 24–48 h i wg potrzeb; okresowo podłoże (zanik wyrostka).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **tak**
+
+- zał. 1 (wszyscy): Świadczenie obejmuje zaopatrzenie za pomocą protezy akrylowej całkowitej w żuchwie łącznie z pobraniem wycisku czynnościowego na łyżce indywidualnej 1 raz na 5 lat (ograniczenie nie dotyczy osób po operacyjnym usunięciu nowotworów w obrębie twarzoczaszki).
+
+Reguły: R-PROT-01, R-PROT-03
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych.*
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | bezzębie (utrata zębów) | ocena_kliniczna | tak |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Wysokość zwarcia (VDO) i ustawienie zębów zaakceptowane — *zalecenie kliniczne*
+- [rozliczeniowe] Limit NFZ: 1× na 5 lat (R-PROT-01) — *NFZ*, rozliczenie NFZ – informacja (D7=B)
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Proteza całkowita dolna: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Proteza całkowita dolna {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> PROTEZA CAŁKOWITA DOLNA: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.31051 – Proteza całkowita dolna o charakterze overdenture oparta na zabezpieczonych korzeniach
+
+`PROC-23.31051` · **Proteza całkowita dolna overdenture** · protetyka – protezy ruchome · status: **requires_expert_review**
+
+Proteza całkowita dolna overdenture.
+
+**Na czym polega.** Proteza całkowita dolna overdenture oparta na zabezpieczonych korzeniach. **Cel:** Proteza całkowita dolna overdenture oparta na zabezpieczonych korzeniach.
+
+Wskazania: bezzębie z korzeniami do zachowania (po leczeniu kanałowym, zabezpieczone)
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Wycisk czynnościowy łyżką indywidualną** – Przymiarka łyżki indywidualnej, opracowanie brzegów (czynnościowe ukształtowanie), wycisk właściwy materiałem o odpowiedniej płynności.
+3. **Ustalenie zwarcia** – Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.
+4. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+5. **Próba ustawienia zębów / konstrukcji** – Przymiarka (zęby w wosku, szkielet, podbudowa): estetyka, fonetyka, zwarcie, dopasowanie; akceptacja pacjenta.
+6. **Oddanie uzupełnienia ruchomego** – Kontrola wewnętrznej powierzchni i brzegów, zwarcia (kalka), korekta; instruktaż zakładania, higieny i użytkowania.
+7. **Kontrola po oddaniu** – Ocena podłoża (odleżyny), zwarcia, retencji; korekty.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (typowe); Masy silikonowe / polieterowe (precyzyjne) (typowe); Wosk, wzorniki zwarciowe, kolornik, linijka (VDO) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** dopasowanie, brzegi, retencja i stabilizacja; zwarcie; estetyka i fonetyka. Nieprawidłowości: odleżyny; brak retencji; kontakty przedwczesne. Dalej: korekty na kontrolach; podścielenie przy utracie dopasowania
+
+**Zalecenia pozabiegowe:** Pacjent: Okres adaptacji – możliwe ucisk, ślinienie, trudności w mowie.. Higiena: Codzienne mycie protezy szczoteczką do protez, wyjmowanie na noc (wg zaleceń), przechowywanie na sucho / w pojemniku.. Kontakt z gabinetem, gdy: odleżyna, ból, pęknięcie protezy. Kontrola: Kontrola po 24–48 h i wg potrzeb; okresowo podłoże (zanik wyrostka).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów | ocena_kliniczna | nie |
+| K08.3 | Pozostawiony korzeń zęba | pozostawione korzenie – zabezpieczone | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Proteza całkowita dolna overdenture: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Proteza całkowita dolna overdenture {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> PROTEZA CAŁKOWITA DOLNA OVERDENTURE: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3106 – Zastosowanie metalowej podstawy przy bezzębnej szczęce
+
+`PROC-23.3106` · **Metalowa podstawa protezy całkowitej** · protetyka – protezy ruchome · status: **requires_expert_review**
+
+Metalowa podstawa protezy całkowitej.
+
+**Na czym polega.** Metalowa podstawa protezy całkowitej – element uzupełnienia ruchomego. **Cel:** Metalowa podstawa protezy całkowitej – element uzupełnienia ruchomego.
+
+Wskazania: wg planu protetycznego
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Elementy utrzymujące i podpierające** – Projekt klamer / zasuw / zatrzasków i podpór wg przebiegu linii przetrwania i warunków zgryzowych; przygotowanie zębów (miejsca na podpory).
+3. **Wycisk czynnościowy łyżką indywidualną** – Przymiarka łyżki indywidualnej, opracowanie brzegów (czynnościowe ukształtowanie), wycisk właściwy materiałem o odpowiedniej płynności.
+4. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+5. **Próba ustawienia zębów / konstrukcji** – Przymiarka (zęby w wosku, szkielet, podbudowa): estetyka, fonetyka, zwarcie, dopasowanie; akceptacja pacjenta.
+6. **Oddanie uzupełnienia ruchomego** – Kontrola wewnętrznej powierzchni i brzegów, zwarcia (kalka), korekta; instruktaż zakładania, higieny i użytkowania.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (typowe); Masy silikonowe / polieterowe (precyzyjne) (typowe); Wosk, wzorniki zwarciowe, kolornik, linijka (VDO) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** dopasowanie, brzegi, retencja i stabilizacja; zwarcie; estetyka i fonetyka. Nieprawidłowości: odleżyny; brak retencji; kontakty przedwczesne. Dalej: korekty na kontrolach; podścielenie przy utracie dopasowania
+
+**Zalecenia pozabiegowe:** Pacjent: Okres adaptacji – możliwe ucisk, ślinienie, trudności w mowie.. Higiena: Codzienne mycie protezy szczoteczką do protez, wyjmowanie na noc (wg zaleceń), przechowywanie na sucho / w pojemniku.. Kontakt z gabinetem, gdy: odleżyna, ból, pęknięcie protezy. Kontrola: Kontrola po 24–48 h i wg potrzeb; okresowo podłoże (zanik wyrostka).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | nie |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Metalowa podstawa protezy całkowitej: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Metalowa podstawa protezy całkowitej {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> METALOWA PODSTAWA PROTEZY CAŁKOWITEJ: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3107 – Zastosowanie prostych dwuramiennych elementów utrzymujących lub podpierających lub wieloramiennych elementów doginanych o podobnym działaniu dodatkowo do każdej protezy- przy prowizorycznych protezach jedynie w szczególnych przypadkach, za element
+
+`PROC-23.3107` · **Elementy utrzymujące / podpierające (proste)** · protetyka – protezy ruchome · status: **draft**
+
+Elementy utrzymujące / podpierające (proste).
+
+**Na czym polega.** Elementy utrzymujące / podpierające (proste) – element uzupełnienia ruchomego. **Cel:** Elementy utrzymujące / podpierające (proste) – element uzupełnienia ruchomego.
+
+Wskazania: wg planu protetycznego
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Elementy utrzymujące i podpierające** – Projekt klamer / zasuw / zatrzasków i podpór wg przebiegu linii przetrwania i warunków zgryzowych; przygotowanie zębów (miejsca na podpory).
+3. **Wycisk czynnościowy łyżką indywidualną** – Przymiarka łyżki indywidualnej, opracowanie brzegów (czynnościowe ukształtowanie), wycisk właściwy materiałem o odpowiedniej płynności.
+4. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+5. **Próba ustawienia zębów / konstrukcji** – Przymiarka (zęby w wosku, szkielet, podbudowa): estetyka, fonetyka, zwarcie, dopasowanie; akceptacja pacjenta.
+6. **Oddanie uzupełnienia ruchomego** – Kontrola wewnętrznej powierzchni i brzegów, zwarcia (kalka), korekta; instruktaż zakładania, higieny i użytkowania.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (typowe); Masy silikonowe / polieterowe (precyzyjne) (typowe); Wosk, wzorniki zwarciowe, kolornik, linijka (VDO) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** dopasowanie, brzegi, retencja i stabilizacja; zwarcie; estetyka i fonetyka. Nieprawidłowości: odleżyny; brak retencji; kontakty przedwczesne. Dalej: korekty na kontrolach; podścielenie przy utracie dopasowania
+
+**Zalecenia pozabiegowe:** Pacjent: Okres adaptacji – możliwe ucisk, ślinienie, trudności w mowie.. Higiena: Codzienne mycie protezy szczoteczką do protez, wyjmowanie na noc (wg zaleceń), przechowywanie na sucho / w pojemniku.. Kontakt z gabinetem, gdy: odleżyna, ból, pęknięcie protezy. Kontrola: Kontrola po 24–48 h i wg potrzeb; okresowo podłoże (zanik wyrostka).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | nie |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Elementy utrzymujące / podpierające (proste): {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Elementy utrzymujące / podpierające (proste) {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> ELEMENTY UTRZYMUJĄCE / PODPIERAJĄCE (PROSTE): zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3108 – Zastosowanie płyty metalowej z elementami utrzymującymi i podporami
+
+`PROC-23.3108` · **Płyta metalowa z elementami utrzymującymi (szkielet)** · protetyka – protezy ruchome · status: **draft**
+
+Płyta metalowa z elementami utrzymującymi (szkielet).
+
+**Na czym polega.** Płyta metalowa z elementami utrzymującymi (szkielet) – element uzupełnienia ruchomego. **Cel:** Płyta metalowa z elementami utrzymującymi (szkielet) – element uzupełnienia ruchomego.
+
+Wskazania: wg planu protetycznego
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Elementy utrzymujące i podpierające** – Projekt klamer / zasuw / zatrzasków i podpór wg przebiegu linii przetrwania i warunków zgryzowych; przygotowanie zębów (miejsca na podpory).
+3. **Wycisk czynnościowy łyżką indywidualną** – Przymiarka łyżki indywidualnej, opracowanie brzegów (czynnościowe ukształtowanie), wycisk właściwy materiałem o odpowiedniej płynności.
+4. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+5. **Próba ustawienia zębów / konstrukcji** – Przymiarka (zęby w wosku, szkielet, podbudowa): estetyka, fonetyka, zwarcie, dopasowanie; akceptacja pacjenta.
+6. **Oddanie uzupełnienia ruchomego** – Kontrola wewnętrznej powierzchni i brzegów, zwarcia (kalka), korekta; instruktaż zakładania, higieny i użytkowania.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (typowe); Masy silikonowe / polieterowe (precyzyjne) (typowe); Wosk, wzorniki zwarciowe, kolornik, linijka (VDO) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** dopasowanie, brzegi, retencja i stabilizacja; zwarcie; estetyka i fonetyka. Nieprawidłowości: odleżyny; brak retencji; kontakty przedwczesne. Dalej: korekty na kontrolach; podścielenie przy utracie dopasowania
+
+**Zalecenia pozabiegowe:** Pacjent: Okres adaptacji – możliwe ucisk, ślinienie, trudności w mowie.. Higiena: Codzienne mycie protezy szczoteczką do protez, wyjmowanie na noc (wg zaleceń), przechowywanie na sucho / w pojemniku.. Kontakt z gabinetem, gdy: odleżyna, ból, pęknięcie protezy. Kontrola: Kontrola po 24–48 h i wg potrzeb; okresowo podłoże (zanik wyrostka).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | nie |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Płyta metalowa z elementami utrzymującymi (szkielet): {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Płyta metalowa z elementami utrzymującymi (szkielet) {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> PŁYTA METALOWA Z ELEMENTAMI UTRZYMUJĄCYMI (SZKIELET): zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3109 – Zastosowanie odlewanych skomplikowanych elementów utrzymujących i podpierających przy zastosowaniu jednego elementu utrzymującego i podpierającego - nie przy protezach prowizorycznych
+
+`PROC-23.3109` · **Odlewane elementy złożone – 1 element** · protetyka – protezy ruchome · status: **requires_expert_review**
+
+Odlewane elementy złożone – 1 element.
+
+**Na czym polega.** Odlewane elementy złożone – 1 element – element uzupełnienia ruchomego. **Cel:** Odlewane elementy złożone – 1 element – element uzupełnienia ruchomego.
+
+Wskazania: wg planu protetycznego
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Elementy utrzymujące i podpierające** – Projekt klamer / zasuw / zatrzasków i podpór wg przebiegu linii przetrwania i warunków zgryzowych; przygotowanie zębów (miejsca na podpory).
+3. **Wycisk czynnościowy łyżką indywidualną** – Przymiarka łyżki indywidualnej, opracowanie brzegów (czynnościowe ukształtowanie), wycisk właściwy materiałem o odpowiedniej płynności.
+4. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+5. **Próba ustawienia zębów / konstrukcji** – Przymiarka (zęby w wosku, szkielet, podbudowa): estetyka, fonetyka, zwarcie, dopasowanie; akceptacja pacjenta.
+6. **Oddanie uzupełnienia ruchomego** – Kontrola wewnętrznej powierzchni i brzegów, zwarcia (kalka), korekta; instruktaż zakładania, higieny i użytkowania.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (typowe); Masy silikonowe / polieterowe (precyzyjne) (typowe); Wosk, wzorniki zwarciowe, kolornik, linijka (VDO) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** dopasowanie, brzegi, retencja i stabilizacja; zwarcie; estetyka i fonetyka. Nieprawidłowości: odleżyny; brak retencji; kontakty przedwczesne. Dalej: korekty na kontrolach; podścielenie przy utracie dopasowania
+
+**Zalecenia pozabiegowe:** Pacjent: Okres adaptacji – możliwe ucisk, ślinienie, trudności w mowie.. Higiena: Codzienne mycie protezy szczoteczką do protez, wyjmowanie na noc (wg zaleceń), przechowywanie na sucho / w pojemniku.. Kontakt z gabinetem, gdy: odleżyna, ból, pęknięcie protezy. Kontrola: Kontrola po 24–48 h i wg potrzeb; okresowo podłoże (zanik wyrostka).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | nie |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Odlewane elementy złożone – 1 element: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Odlewane elementy złożone – 1 element {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> ODLEWANE ELEMENTY ZŁOŻONE – 1 ELEMENT: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3110 – Zastosowanie odlewanych skomplikowanych elementów utrzymujących i podpierających przy zastosowaniu przynajmniej dwóch elementów utrzymujących i podpierającychnie przy protezach prowizorycznych
+
+`PROC-23.3110` · **Odlewane elementy złożone – co najmniej 2 elementy** · protetyka – protezy ruchome · status: **requires_expert_review**
+
+Odlewane elementy złożone – co najmniej 2 elementy.
+
+**Na czym polega.** Odlewane elementy złożone – co najmniej 2 elementy – element uzupełnienia ruchomego. **Cel:** Odlewane elementy złożone – co najmniej 2 elementy – element uzupełnienia ruchomego.
+
+Wskazania: wg planu protetycznego
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Plan leczenia protetycznego** – Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.
+2. **Elementy utrzymujące i podpierające** – Projekt klamer / zasuw / zatrzasków i podpór wg przebiegu linii przetrwania i warunków zgryzowych; przygotowanie zębów (miejsca na podpory).
+3. **Wycisk czynnościowy łyżką indywidualną** – Przymiarka łyżki indywidualnej, opracowanie brzegów (czynnościowe ukształtowanie), wycisk właściwy materiałem o odpowiedniej płynności.
+4. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+5. **Próba ustawienia zębów / konstrukcji** – Przymiarka (zęby w wosku, szkielet, podbudowa): estetyka, fonetyka, zwarcie, dopasowanie; akceptacja pacjenta.
+6. **Oddanie uzupełnienia ruchomego** – Kontrola wewnętrznej powierzchni i brzegów, zwarcia (kalka), korekta; instruktaż zakładania, higieny i użytkowania.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (typowe); Masy silikonowe / polieterowe (precyzyjne) (typowe); Wosk, wzorniki zwarciowe, kolornik, linijka (VDO) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** dopasowanie, brzegi, retencja i stabilizacja; zwarcie; estetyka i fonetyka. Nieprawidłowości: odleżyny; brak retencji; kontakty przedwczesne. Dalej: korekty na kontrolach; podścielenie przy utracie dopasowania
+
+**Zalecenia pozabiegowe:** Pacjent: Okres adaptacji – możliwe ucisk, ślinienie, trudności w mowie.. Higiena: Codzienne mycie protezy szczoteczką do protez, wyjmowanie na noc (wg zaleceń), przechowywanie na sucho / w pojemniku.. Kontakt z gabinetem, gdy: odleżyna, ból, pęknięcie protezy. Kontrola: Kontrola po 24–48 h i wg potrzeb; okresowo podłoże (zanik wyrostka).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | nie |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Odlewane elementy złożone – co najmniej 2 elementy: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Odlewane elementy złożone – co najmniej 2 elementy {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> ODLEWANE ELEMENTY ZŁOŻONE – CO NAJMNIEJ 2 ELEMENTY: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3111 – Czynności dla odtworzenia funkcji lub poszerzenia zakresu ruchomej protezy (naprawy) w małym zakresie bez wycisku
+
+`PROC-23.3111` · **Naprawa protezy bez wycisku (mały zakres)** · protetyka – protezy ruchome · status: **draft**
+
+Naprawa protezy bez wycisku (mały zakres).
+
+**Na czym polega.** Naprawa protezy bez wycisku (mały zakres): przywrócenie funkcji / dopasowania protezy. **Cel:** przywrócenie funkcji / dopasowania protezy.
+
+Wskazania: uszkodzenie protezy
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Naprawa protezy** – Ocena uszkodzenia; naprawa przy fotelu (mała) lub wycisk z protezą do laboratorium; kontrola po naprawie.
+2. **Kontrola po oddaniu** – Ocena podłoża (odleżyny), zwarcia, retencji; korekty.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (typowe); Masy silikonowe / polieterowe (precyzyjne) (typowe); Wosk, wzorniki zwarciowe, kolornik, linijka (VDO) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne); Materiał do podścielania (twardy / miękki) (sytuacyjne)
+
+**Kontrola efektu:** dopasowanie, brzegi, retencja i stabilizacja; zwarcie; estetyka i fonetyka. Nieprawidłowości: odleżyny; brak retencji; kontakty przedwczesne. Dalej: korekty na kontrolach; podścielenie przy utracie dopasowania
+
+**Zalecenia pozabiegowe:** Pacjent: Okres adaptacji – możliwe ucisk, ślinienie, trudności w mowie.. Higiena: Codzienne mycie protezy szczoteczką do protez, wyjmowanie na noc (wg zaleceń), przechowywanie na sucho / w pojemniku.. Kontakt z gabinetem, gdy: odleżyna, ból, pęknięcie protezy. Kontrola: Kontrola po 24–48 h i wg potrzeb; okresowo podłoże (zanik wyrostka).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów – użytkownik protezy | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Naprawa protezy bez wycisku (mały zakres): {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Naprawa protezy bez wycisku (mały zakres) {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> NAPRAWA PROTEZY BEZ WYCISKU (MAŁY ZAKRES): zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3112 – Czynności dla odtworzenia funkcji lub poszerzenia zakresu ruchomej protezy (naprawy) w większym zakresie z wyciskiem
+
+`PROC-23.3112` · **Naprawa protezy z wyciskiem** · protetyka – protezy ruchome · status: **draft**
+
+Naprawa protezy z wyciskiem.
+
+**Na czym polega.** Naprawa protezy z wyciskiem: przywrócenie funkcji / dopasowania protezy. **Cel:** przywrócenie funkcji / dopasowania protezy.
+
+Wskazania: uszkodzenie protezy
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Wycisk anatomiczny / sytuacyjny** – Dobór łyżki standardowej, wycisk (alginat / silikon) lub skan wewnątrzustny, kontrola odwzorowania, dezynfekcja wycisku.
+2. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+3. **Naprawa protezy** – Ocena uszkodzenia; naprawa przy fotelu (mała) lub wycisk z protezą do laboratorium; kontrola po naprawie.
+4. **Kontrola po oddaniu** – Ocena podłoża (odleżyny), zwarcia, retencji; korekty.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (typowe); Masy silikonowe / polieterowe (precyzyjne) (typowe); Wosk, wzorniki zwarciowe, kolornik, linijka (VDO) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne); Materiał do podścielania (twardy / miękki) (sytuacyjne)
+
+**Kontrola efektu:** dopasowanie, brzegi, retencja i stabilizacja; zwarcie; estetyka i fonetyka. Nieprawidłowości: odleżyny; brak retencji; kontakty przedwczesne. Dalej: korekty na kontrolach; podścielenie przy utracie dopasowania
+
+**Zalecenia pozabiegowe:** Pacjent: Okres adaptacji – możliwe ucisk, ślinienie, trudności w mowie.. Higiena: Codzienne mycie protezy szczoteczką do protez, wyjmowanie na noc (wg zaleceń), przechowywanie na sucho / w pojemniku.. Kontakt z gabinetem, gdy: odleżyna, ból, pęknięcie protezy. Kontrola: Kontrola po 24–48 h i wg potrzeb; okresowo podłoże (zanik wyrostka).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **tak**
+
+- zał. 1 (wszyscy): Świadczenie obejmuje odtworzenie funkcji żucia przez naprawę protez ruchomych w większym zakresie z wyciskiem, 1 raz na 2 lata.
+
+Reguły: R-PROT-02
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych.*
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów – użytkownik protezy | ocena_kliniczna | tak |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [rozliczeniowe] Limit NFZ: naprawa z wyciskiem / podścielenie 1× na 2 lata (R-PROT-02) — *NFZ*, rozliczenie NFZ – informacja (D7=B)
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Naprawa protezy z wyciskiem: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Naprawa protezy z wyciskiem {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> NAPRAWA PROTEZY Z WYCISKIEM: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3113 – Czynności dla odtworzenia funkcji lub poszerzenia zakresu ruchomej protezy (naprawy) - częściowe podścielenie jednej protezy
+
+`PROC-23.3113` · **Częściowe podścielenie protezy** · protetyka – protezy ruchome · status: **draft**
+
+Częściowe podścielenie protezy.
+
+**Na czym polega.** Częściowe podścielenie protezy: przywrócenie funkcji / dopasowania protezy. **Cel:** przywrócenie funkcji / dopasowania protezy.
+
+Wskazania: utrata dopasowania protezy (zanik podłoża)
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Podścielenie protezy** – Bezpośrednie (materiał przy fotelu) lub pośrednie (wycisk w protezie, praca laboratorium), z ewentualnym ukształtowaniem brzegów; kontrola zwarcia po podścieleniu.
+2. **Kontrola po oddaniu** – Ocena podłoża (odleżyny), zwarcia, retencji; korekty.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (typowe); Masy silikonowe / polieterowe (precyzyjne) (typowe); Wosk, wzorniki zwarciowe, kolornik, linijka (VDO) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne); Materiał do podścielania (twardy / miękki) (sytuacyjne)
+
+**Kontrola efektu:** dopasowanie, brzegi, retencja i stabilizacja; zwarcie; estetyka i fonetyka. Nieprawidłowości: odleżyny; brak retencji; kontakty przedwczesne. Dalej: korekty na kontrolach; podścielenie przy utracie dopasowania
+
+**Zalecenia pozabiegowe:** Pacjent: Okres adaptacji – możliwe ucisk, ślinienie, trudności w mowie.. Higiena: Codzienne mycie protezy szczoteczką do protez, wyjmowanie na noc (wg zaleceń), przechowywanie na sucho / w pojemniku.. Kontakt z gabinetem, gdy: odleżyna, ból, pęknięcie protezy. Kontrola: Kontrola po 24–48 h i wg potrzeb; okresowo podłoże (zanik wyrostka).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów – użytkownik protezy | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Częściowe podścielenie protezy: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Częściowe podścielenie protezy {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> CZĘŚCIOWE PODŚCIELENIE PROTEZY: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3114 – Całkowite bezpośrednie podścielenie jednej protezy
+
+`PROC-23.3114` · **Podścielenie bezpośrednie protezy** · protetyka – protezy ruchome · status: **draft**
+
+Podścielenie bezpośrednie protezy.
+
+**Na czym polega.** Podścielenie bezpośrednie protezy: przywrócenie funkcji / dopasowania protezy. **Cel:** przywrócenie funkcji / dopasowania protezy.
+
+Wskazania: utrata dopasowania protezy (zanik podłoża)
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Podścielenie protezy** – Bezpośrednie (materiał przy fotelu) lub pośrednie (wycisk w protezie, praca laboratorium), z ewentualnym ukształtowaniem brzegów; kontrola zwarcia po podścieleniu.
+2. **Kontrola po oddaniu** – Ocena podłoża (odleżyny), zwarcia, retencji; korekty.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (typowe); Masy silikonowe / polieterowe (precyzyjne) (typowe); Wosk, wzorniki zwarciowe, kolornik, linijka (VDO) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne); Materiał do podścielania (twardy / miękki) (sytuacyjne)
+
+**Kontrola efektu:** dopasowanie, brzegi, retencja i stabilizacja; zwarcie; estetyka i fonetyka. Nieprawidłowości: odleżyny; brak retencji; kontakty przedwczesne. Dalej: korekty na kontrolach; podścielenie przy utracie dopasowania
+
+**Zalecenia pozabiegowe:** Pacjent: Okres adaptacji – możliwe ucisk, ślinienie, trudności w mowie.. Higiena: Codzienne mycie protezy szczoteczką do protez, wyjmowanie na noc (wg zaleceń), przechowywanie na sucho / w pojemniku.. Kontakt z gabinetem, gdy: odleżyna, ból, pęknięcie protezy. Kontrola: Kontrola po 24–48 h i wg potrzeb; okresowo podłoże (zanik wyrostka).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów – użytkownik protezy | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Podścielenie bezpośrednie protezy: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Podścielenie bezpośrednie protezy {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> PODŚCIELENIE BEZPOŚREDNIE PROTEZY: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3115 – Całkowite podścielenie jednej protezy w sposób pośredni
+
+`PROC-23.3115` · **Podścielenie pośrednie protezy** · protetyka – protezy ruchome · status: **draft**
+
+Podścielenie pośrednie protezy.
+
+**Na czym polega.** Podścielenie pośrednie protezy: przywrócenie funkcji / dopasowania protezy. **Cel:** przywrócenie funkcji / dopasowania protezy.
+
+Wskazania: utrata dopasowania protezy (zanik podłoża)
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Wycisk czynnościowy łyżką indywidualną** – Przymiarka łyżki indywidualnej, opracowanie brzegów (czynnościowe ukształtowanie), wycisk właściwy materiałem o odpowiedniej płynności.
+2. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+3. **Podścielenie protezy** – Bezpośrednie (materiał przy fotelu) lub pośrednie (wycisk w protezie, praca laboratorium), z ewentualnym ukształtowaniem brzegów; kontrola zwarcia po podścieleniu.
+4. **Kontrola po oddaniu** – Ocena podłoża (odleżyny), zwarcia, retencji; korekty.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (typowe); Masy silikonowe / polieterowe (precyzyjne) (typowe); Wosk, wzorniki zwarciowe, kolornik, linijka (VDO) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne); Materiał do podścielania (twardy / miękki) (sytuacyjne)
+
+**Kontrola efektu:** dopasowanie, brzegi, retencja i stabilizacja; zwarcie; estetyka i fonetyka. Nieprawidłowości: odleżyny; brak retencji; kontakty przedwczesne. Dalej: korekty na kontrolach; podścielenie przy utracie dopasowania
+
+**Zalecenia pozabiegowe:** Pacjent: Okres adaptacji – możliwe ucisk, ślinienie, trudności w mowie.. Higiena: Codzienne mycie protezy szczoteczką do protez, wyjmowanie na noc (wg zaleceń), przechowywanie na sucho / w pojemniku.. Kontakt z gabinetem, gdy: odleżyna, ból, pęknięcie protezy. Kontrola: Kontrola po 24–48 h i wg potrzeb; okresowo podłoże (zanik wyrostka).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów – użytkownik protezy | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Podścielenie pośrednie protezy: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Podścielenie pośrednie protezy {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> PODŚCIELENIE POŚREDNIE PROTEZY: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3116 – Całkowite podścielenie jednej protezy w sposób pośredni, włącznie z ukształtowaniem obrzeża - dla szczęki
+
+`PROC-23.3116` · **Podścielenie pośrednie z ukształtowaniem obrzeża – szczęka** · protetyka – protezy ruchome · status: **draft**
+
+Podścielenie pośrednie z ukształtowaniem obrzeża – szczęka.
+
+**Na czym polega.** Podścielenie pośrednie z ukształtowaniem obrzeża – szczęka: przywrócenie funkcji / dopasowania protezy. **Cel:** przywrócenie funkcji / dopasowania protezy.
+
+Wskazania: utrata dopasowania protezy (zanik podłoża)
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Wycisk czynnościowy łyżką indywidualną** – Przymiarka łyżki indywidualnej, opracowanie brzegów (czynnościowe ukształtowanie), wycisk właściwy materiałem o odpowiedniej płynności.
+2. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+3. **Podścielenie protezy** – Bezpośrednie (materiał przy fotelu) lub pośrednie (wycisk w protezie, praca laboratorium), z ewentualnym ukształtowaniem brzegów; kontrola zwarcia po podścieleniu.
+4. **Kontrola po oddaniu** – Ocena podłoża (odleżyny), zwarcia, retencji; korekty.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (typowe); Masy silikonowe / polieterowe (precyzyjne) (typowe); Wosk, wzorniki zwarciowe, kolornik, linijka (VDO) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne); Materiał do podścielania (twardy / miękki) (sytuacyjne)
+
+**Kontrola efektu:** dopasowanie, brzegi, retencja i stabilizacja; zwarcie; estetyka i fonetyka. Nieprawidłowości: odleżyny; brak retencji; kontakty przedwczesne. Dalej: korekty na kontrolach; podścielenie przy utracie dopasowania
+
+**Zalecenia pozabiegowe:** Pacjent: Okres adaptacji – możliwe ucisk, ślinienie, trudności w mowie.. Higiena: Codzienne mycie protezy szczoteczką do protez, wyjmowanie na noc (wg zaleceń), przechowywanie na sucho / w pojemniku.. Kontakt z gabinetem, gdy: odleżyna, ból, pęknięcie protezy. Kontrola: Kontrola po 24–48 h i wg potrzeb; okresowo podłoże (zanik wyrostka).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **tak**
+
+- zał. 1 (wszyscy): Świadczenie jest udzielane 1 raz na 2 lata.
+
+Reguły: R-PROT-02
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych.*
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów – użytkownik protezy | ocena_kliniczna | tak |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [rozliczeniowe] Limit NFZ: naprawa z wyciskiem / podścielenie 1× na 2 lata (R-PROT-02) — *NFZ*, rozliczenie NFZ – informacja (D7=B)
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Podścielenie pośrednie z ukształtowaniem obrzeża – szczęka: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Podścielenie pośrednie z ukształtowaniem obrzeża – szczęka {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> PODŚCIELENIE POŚREDNIE Z UKSZTAŁTOWANIEM OBRZEŻA – SZCZĘKA: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3117 – Całkowite podścielenie jednej protezy w sposób pośredni włącznie z czynnościowym ukształtowaniem obrzeża -dla żuchwy
+
+`PROC-23.3117` · **Podścielenie pośrednie z czynnościowym ukształtowaniem obrzeża – żuchwa** · protetyka – protezy ruchome · status: **draft**
+
+Podścielenie pośrednie z czynnościowym ukształtowaniem obrzeża – żuchwa.
+
+**Na czym polega.** Podścielenie pośrednie z czynnościowym ukształtowaniem obrzeża – żuchwa: przywrócenie funkcji / dopasowania protezy. **Cel:** przywrócenie funkcji / dopasowania protezy.
+
+Wskazania: utrata dopasowania protezy (zanik podłoża)
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Wycisk czynnościowy łyżką indywidualną** – Przymiarka łyżki indywidualnej, opracowanie brzegów (czynnościowe ukształtowanie), wycisk właściwy materiałem o odpowiedniej płynności.
+2. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+3. **Podścielenie protezy** – Bezpośrednie (materiał przy fotelu) lub pośrednie (wycisk w protezie, praca laboratorium), z ewentualnym ukształtowaniem brzegów; kontrola zwarcia po podścieleniu.
+4. **Kontrola po oddaniu** – Ocena podłoża (odleżyny), zwarcia, retencji; korekty.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (typowe); Masy silikonowe / polieterowe (precyzyjne) (typowe); Wosk, wzorniki zwarciowe, kolornik, linijka (VDO) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne); Materiał do podścielania (twardy / miękki) (sytuacyjne)
+
+**Kontrola efektu:** dopasowanie, brzegi, retencja i stabilizacja; zwarcie; estetyka i fonetyka. Nieprawidłowości: odleżyny; brak retencji; kontakty przedwczesne. Dalej: korekty na kontrolach; podścielenie przy utracie dopasowania
+
+**Zalecenia pozabiegowe:** Pacjent: Okres adaptacji – możliwe ucisk, ślinienie, trudności w mowie.. Higiena: Codzienne mycie protezy szczoteczką do protez, wyjmowanie na noc (wg zaleceń), przechowywanie na sucho / w pojemniku.. Kontakt z gabinetem, gdy: odleżyna, ból, pęknięcie protezy. Kontrola: Kontrola po 24–48 h i wg potrzeb; okresowo podłoże (zanik wyrostka).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **tak**
+
+- zał. 1 (wszyscy): Świadczenie jest udzielane 1 raz na 2 lata.
+
+Reguły: R-PROT-02
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych.*
+
+Źródła NFZ: `SRC-DU-2025-615`; `SRC-ZARZ-60-2023-TJ`
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów – użytkownik protezy | ocena_kliniczna | tak |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [rozliczeniowe] Limit NFZ: naprawa z wyciskiem / podścielenie 1× na 2 lata (R-PROT-02) — *NFZ*, rozliczenie NFZ – informacja (D7=B)
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Podścielenie pośrednie z czynnościowym ukształtowaniem obrzeża – żuchwa: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Podścielenie pośrednie z czynnościowym ukształtowaniem obrzeża – żuchwa {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> PODŚCIELENIE POŚREDNIE Z CZYNNOŚCIOWYM UKSZTAŁTOWANIEM OBRZEŻA – ŻUCHWA: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3125 – Czynności związane z odtwarzaniem funkcji koron i mostów - zdjęcie korony lanej
+
+`PROC-23.3125` · **Zdjęcie korony lanej** · protetyka – protezy ruchome · status: **draft**
+
+Zdjęcie korony lanej.
+
+**Na czym polega.** Zdjęcie korony lanej (odtwarzanie funkcji koron i mostów). **Cel:** Zdjęcie korony lanej (odtwarzanie funkcji koron i mostów).
+
+Wskazania: wymiana korony, leczenie filara
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Znieczulenie miejscowe** – Dobierz metodę (nasiękowe / przewodowe / śródwięzadłowe) do zęba i zabiegu; znieczulenie powierzchniowe miejsca wkłucia (opcjonalnie); aspiracja przed podaniem; podawaj powoli; odnotuj preparat, dawkę i miejsce. *Uwaga: Sprawdź maksymalną dawkę dla masy ciała i choroby ogólne (środek obkurczający naczynia).* Warianty: bez znieczulenia – przy zabiegach nieinwazyjnych lub na życzenie pacjenta, jeśli nie powoduje bólu.
+2. **Zdjęcie korony / mostu** – Rozcięcie lub zdjęcie uzupełnienia (narzędzia do zdejmowania), ochrona zęba filarowego, ocena filara.
+
+**Materiały i narzędzia:** Narzędzia do zdejmowania koron (konieczne); Wiertła i końcówki (turbina, kątnica), ekskawator (konieczne)
+
+**Kontrola efektu:** szczelność brzeżna; punkty styczne; zwarcie i ruchy; usunięcie nadmiaru cementu. Nieprawidłowości: nadmiar cementu poddziąsłowo; kontakt przedwczesny; szpara brzeżna. Dalej: korekta / ponowne wykonanie
+
+**Zalecenia pozabiegowe:** Pacjent: Unikać twardych / lepkich pokarmów na uzupełnieniu tymczasowym.. Higiena: Oczyszczanie przestrzeni pod przęsłem / przy koronie (nici z usztywnieniem, szczoteczki międzyzębowe).. Kontakt z gabinetem, gdy: odcementowanie, ból, pęknięcie. Kontrola: Kontrola po osadzeniu i okresowo (co najmniej raz w roku).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K02.1 | Próchnica zębiny | zniszczenie korony przez próchnicę | ocena_kliniczna | nie |
+| K03.0 | Nadmierne ścieranie zębów | nadmierne starcie | ocena_kliniczna | nie |
+| S02.5 | Złamanie zęba | złamanie korony | ocena_kliniczna | nie |
+| K08.8 | Inne określone zaburzenia zębów i tkanek podporowych | stan po leczeniu kanałowym – osłabiony ząb (do weryfikacji kodu) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Zdjęcie korony lanej: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Zdjęcie korony lanej {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> ZDJĘCIE KORONY LANEJ: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`
+
+## 23.3126 – Czynności odtwarzające wysokość zwarcia poprzez zastosowanie elementów nakładowych w protezie
+
+`PROC-23.3126` · **Odtworzenie wysokości zwarcia (nakłady w protezie)** · protetyka – protezy ruchome · status: **requires_expert_review**
+
+Odtworzenie wysokości zwarcia (nakłady w protezie).
+
+**Na czym polega.** Odtworzenie wysokości zwarcia elementami nakładowymi w protezie. **Cel:** Odtworzenie wysokości zwarcia elementami nakładowymi w protezie.
+
+Wskazania: obniżona wysokość zwarcia u użytkownika protezy
+
+**Kwalifikacja** – ocenić: stan zębów filarowych (żywotność, leczenie kanałowe – RTG), przyzębie; warunki zgryzowe, VDO; podłoże protetyczne (błona śluzowa, wyrostek). Wywiad: oczekiwania pacjenta, dotychczasowe uzupełnienia; alergie na materiały (metale, akryl); parafunkcje.
+
+- przeciwwskazanie *wzgledne*: nieleczona próchnica / zapalenie przyzębia filarów – najpierw leczenie
+- przeciwwskazanie *wzgledne*: zmiany błony śluzowej podłoża – leczenie przed wyciskiem
+- rozważ inne postępowanie: alternatywy: most / proteza / implanty – omówione z pacjentem
+
+**Przygotowanie** – konieczne: plan leczenia i zgoda; zestaw protetyczny; zależne od sytuacji: znieczulenie (szlifowanie zębów żywych)
+
+**Przebieg krok po kroku**
+
+1. **Ustalenie zwarcia** – Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.
+2. **Zlecenie dla pracowni** – Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.
+3. **Oddanie uzupełnienia ruchomego** – Kontrola wewnętrznej powierzchni i brzegów, zwarcia (kalka), korekta; instruktaż zakładania, higieny i użytkowania.
+
+**Materiały i narzędzia:** Lusterko, zgłębnik, pęseta, sonda periodontologiczna (konieczne); Łyżki wyciskowe (standardowe, indywidualne) (konieczne); Masa alginatowa (typowe); Masy silikonowe / polieterowe (precyzyjne) (typowe); Wosk, wzorniki zwarciowe, kolornik, linijka (VDO) (konieczne); Kalka zgryzowa, nić dentystyczna (konieczne)
+
+**Kontrola efektu:** dopasowanie, brzegi, retencja i stabilizacja; zwarcie; estetyka i fonetyka. Nieprawidłowości: odleżyny; brak retencji; kontakty przedwczesne. Dalej: korekty na kontrolach; podścielenie przy utracie dopasowania
+
+**Zalecenia pozabiegowe:** Pacjent: Okres adaptacji – możliwe ucisk, ślinienie, trudności w mowie.. Higiena: Codzienne mycie protezy szczoteczką do protez, wyjmowanie na noc (wg zaleceń), przechowywanie na sucho / w pojemniku.. Kontakt z gabinetem, gdy: odleżyna, ból, pęknięcie protezy. Kontrola: Kontrola po 24–48 h i wg potrzeb; okresowo podłoże (zanik wyrostka).
+
+**Dokumentacja**
+
+- Rozpoznanie / wskazanie, zęby (FDI) / łuk — *prawne* (`SRC-DU-2026-1391`)
+- Etap i zakres wykonanych czynności — *prawne* (`SRC-DU-2026-1391`)
+- Zlecenie dla pracowni (rodzaj pracy, materiał, kolor, terminy) – moduł „Zlecenia protetyczne” — *propozycja aplikacji* (`SRC-APP-SZABLONY`)
+- Kolor, materiał, zalecenia — *zalecenie kliniczne* (`SRC-PRAKTYKA`)
+
+**NFZ** – świadczenie gwarantowane: **nie**
+
+*Zał. 6 rozporządzenia (protetyka) nie był czytany w audycie (decyzja Patryka: niepotrzebny) – warunki NFZ tylko z odczytanych danych. Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| K08.1 | Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia | utrata zębów (wypadek, ekstrakcja, choroba przyzębia) | ocena_kliniczna | nie |
+| K00.0 | Brak zębów (anodontia) | braki wrodzone (anodoncja / hipodoncja) | ocena_kliniczna | nie |
+
+**Checklista kompletności**
+
+- [obowiazkowe] Data udzielenia świadczenia — *prawne*
+- [obowiazkowe] Opis udzielonego świadczenia (co wykonano, gdzie) — *prawne*
+- [obowiazkowe] Rozpoznanie (ICD-10) lub wskazanie do świadczenia — *prawne*
+- [obowiazkowe] Oznaczenie lekarza udzielającego świadczenia — *prawne*
+- [rozliczeniowe] Świadczenie przekazane do rozliczenia zgodne z dokumentacją — *NFZ*
+- [rozliczeniowe] Lokalizacja zęba wg PN-EN ISO 3950 (FDI) — *NFZ*
+- [zalecane] Zalecenia przekazane pacjentowi (i forma) — *zalecenie kliniczne*
+- [zalecane] Zlecenie dla pracowni — *propozycja aplikacji*
+
+**Szablony opisu**
+
+**standardowy**
+
+> Odtworzenie wysokości zwarcia (nakłady w protezie): {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+
+**skrocony**
+
+> Odtworzenie wysokości zwarcia (nakłady w protezie) {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.
+
+**rozszerzony**
+
+> ODTWORZENIE WYSOKOŚCI ZWARCIA (NAKŁADY W PROTEZIE): zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.
+
+**Źródła kliniczne:** `SRC-PRAKTYKA`

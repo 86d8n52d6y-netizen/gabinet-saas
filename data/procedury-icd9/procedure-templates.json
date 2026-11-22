@@ -7006,6 +7006,2027 @@
     "POLE-ZNIECZ-MIEJSCE",
     "POLE-POWIKLANIA"
    ]
+  },
+  {
+   "id": "SZAB-PROC-23.2701-STD",
+   "dotyczy": "PROC-23.2701",
+   "wariant": "standardowy",
+   "tekst": "Plan leczenia protetycznego z kosztorysem: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2701-SKR",
+   "dotyczy": "PROC-23.2701",
+   "wariant": "skrocony",
+   "tekst": "Plan leczenia protetycznego z kosztorysem {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2701-ROZ",
+   "dotyczy": "PROC-23.2701",
+   "wariant": "rozszerzony",
+   "tekst": "PLAN LECZENIA PROTETYCZNEGO Z KOSZTORYSEM: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2702-STD",
+   "dotyczy": "PROC-23.2702",
+   "wariant": "standardowy",
+   "tekst": "Wycisk do modelu sytuacyjnego: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2702-SKR",
+   "dotyczy": "PROC-23.2702",
+   "wariant": "skrocony",
+   "tekst": "Wycisk do modelu sytuacyjnego {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2702-ROZ",
+   "dotyczy": "PROC-23.2702",
+   "wariant": "rozszerzony",
+   "tekst": "WYCISK DO MODELU SYTUACYJNEGO: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2703-STD",
+   "dotyczy": "PROC-23.2703",
+   "wariant": "standardowy",
+   "tekst": "Wyciski i ustalenie zgryzu (modele obu szczęk): {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2703-SKR",
+   "dotyczy": "PROC-23.2703",
+   "wariant": "skrocony",
+   "tekst": "Wyciski i ustalenie zgryzu (modele obu szczęk) {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2703-ROZ",
+   "dotyczy": "PROC-23.2703",
+   "wariant": "rozszerzony",
+   "tekst": "WYCISKI I USTALENIE ZGRYZU (MODELE OBU SZCZĘK): zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2704-STD",
+   "dotyczy": "PROC-23.2704",
+   "wariant": "standardowy",
+   "tekst": "Wkład koronowo-korzeniowy (odbudowa kikuta): {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2704-SKR",
+   "dotyczy": "PROC-23.2704",
+   "wariant": "skrocony",
+   "tekst": "Wkład koronowo-korzeniowy (odbudowa kikuta) {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2704-ROZ",
+   "dotyczy": "PROC-23.2704",
+   "wariant": "rozszerzony",
+   "tekst": "WKŁAD KORONOWO-KORZENIOWY (ODBUDOWA KIKUTA): zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2705-STD",
+   "dotyczy": "PROC-23.2705",
+   "wariant": "standardowy",
+   "tekst": "Ochrona oszlifowanego zęba (kształtka, formówka): {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2705-SKR",
+   "dotyczy": "PROC-23.2705",
+   "wariant": "skrocony",
+   "tekst": "Ochrona oszlifowanego zęba (kształtka, formówka) {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2705-ROZ",
+   "dotyczy": "PROC-23.2705",
+   "wariant": "rozszerzony",
+   "tekst": "OCHRONA OSZLIFOWANEGO ZĘBA (KSZTAŁTKA, FORMÓWKA): zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2706-STD",
+   "dotyczy": "PROC-23.2706",
+   "wariant": "standardowy",
+   "tekst": "Korona / most tymczasowy: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2706-SKR",
+   "dotyczy": "PROC-23.2706",
+   "wariant": "skrocony",
+   "tekst": "Korona / most tymczasowy {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2706-ROZ",
+   "dotyczy": "PROC-23.2706",
+   "wariant": "rozszerzony",
+   "tekst": "KORONA / MOST TYMCZASOWY: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2801-STD",
+   "dotyczy": "PROC-23.2801",
+   "wariant": "standardowy",
+   "tekst": "Korona lana: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2801-SKR",
+   "dotyczy": "PROC-23.2801",
+   "wariant": "skrocony",
+   "tekst": "Korona lana {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2801-ROZ",
+   "dotyczy": "PROC-23.2801",
+   "wariant": "rozszerzony",
+   "tekst": "KORONA LANA: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2802-STD",
+   "dotyczy": "PROC-23.2802",
+   "wariant": "standardowy",
+   "tekst": "Korona licowana: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2802-SKR",
+   "dotyczy": "PROC-23.2802",
+   "wariant": "skrocony",
+   "tekst": "Korona licowana {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2802-ROZ",
+   "dotyczy": "PROC-23.2802",
+   "wariant": "rozszerzony",
+   "tekst": "KORONA LICOWANA: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2803-STD",
+   "dotyczy": "PROC-23.2803",
+   "wariant": "standardowy",
+   "tekst": "Korona częściowa / pochewkowa: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2803-SKR",
+   "dotyczy": "PROC-23.2803",
+   "wariant": "skrocony",
+   "tekst": "Korona częściowa / pochewkowa {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2803-ROZ",
+   "dotyczy": "PROC-23.2803",
+   "wariant": "rozszerzony",
+   "tekst": "KORONA CZĘŚCIOWA / POCHEWKOWA: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2804-STD",
+   "dotyczy": "PROC-23.2804",
+   "wariant": "standardowy",
+   "tekst": "Ponowne osadzenie korony / zęba ćwiekowego: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2804-SKR",
+   "dotyczy": "PROC-23.2804",
+   "wariant": "skrocony",
+   "tekst": "Ponowne osadzenie korony / zęba ćwiekowego {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2804-ROZ",
+   "dotyczy": "PROC-23.2804",
+   "wariant": "rozszerzony",
+   "tekst": "PONOWNE OSADZENIE KORONY / ZĘBA ĆWIEKOWEGO: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2806-STD",
+   "dotyczy": "PROC-23.2806",
+   "wariant": "standardowy",
+   "tekst": "Ponowne umocowanie uzupełnienia tymczasowego: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2806-SKR",
+   "dotyczy": "PROC-23.2806",
+   "wariant": "skrocony",
+   "tekst": "Ponowne umocowanie uzupełnienia tymczasowego {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2806-ROZ",
+   "dotyczy": "PROC-23.2806",
+   "wariant": "rozszerzony",
+   "tekst": "PONOWNE UMOCOWANIE UZUPEŁNIENIA TYMCZASOWEGO: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2805-STD",
+   "dotyczy": "PROC-23.2805",
+   "wariant": "standardowy",
+   "tekst": "Odnowienie licówki / licowania korony: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2805-SKR",
+   "dotyczy": "PROC-23.2805",
+   "wariant": "skrocony",
+   "tekst": "Odnowienie licówki / licowania korony {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2805-ROZ",
+   "dotyczy": "PROC-23.2805",
+   "wariant": "rozszerzony",
+   "tekst": "ODNOWIENIE LICÓWKI / LICOWANIA KORONY: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2901-STD",
+   "dotyczy": "PROC-23.2901",
+   "wariant": "standardowy",
+   "tekst": "Likwidacja dużych zaburzeń zgryzowych przed protezowaniem: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2901-SKR",
+   "dotyczy": "PROC-23.2901",
+   "wariant": "skrocony",
+   "tekst": "Likwidacja dużych zaburzeń zgryzowych przed protezowaniem {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2901-ROZ",
+   "dotyczy": "PROC-23.2901",
+   "wariant": "rozszerzony",
+   "tekst": "LIKWIDACJA DUŻYCH ZABURZEŃ ZGRYZOWYCH PRZED PROTEZOWANIEM: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2902-STD",
+   "dotyczy": "PROC-23.2902",
+   "wariant": "standardowy",
+   "tekst": "Szyna zgryzowa (płytka relaksacyjna / prowadząca): {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2902-SKR",
+   "dotyczy": "PROC-23.2902",
+   "wariant": "skrocony",
+   "tekst": "Szyna zgryzowa (płytka relaksacyjna / prowadząca) {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2902-ROZ",
+   "dotyczy": "PROC-23.2902",
+   "wariant": "rozszerzony",
+   "tekst": "SZYNA ZGRYZOWA (PŁYTKA RELAKSACYJNA / PROWADZĄCA): zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2903-STD",
+   "dotyczy": "PROC-23.2903",
+   "wariant": "standardowy",
+   "tekst": "Wycisk czynnościowy łyżką indywidualną: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2903-SKR",
+   "dotyczy": "PROC-23.2903",
+   "wariant": "skrocony",
+   "tekst": "Wycisk czynnościowy łyżką indywidualną {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2903-ROZ",
+   "dotyczy": "PROC-23.2903",
+   "wariant": "rozszerzony",
+   "tekst": "WYCISK CZYNNOŚCIOWY ŁYŻKĄ INDYWIDUALNĄ: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3001-STD",
+   "dotyczy": "PROC-23.3001",
+   "wariant": "standardowy",
+   "tekst": "Most – filar z koroną laną: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3001-SKR",
+   "dotyczy": "PROC-23.3001",
+   "wariant": "skrocony",
+   "tekst": "Most – filar z koroną laną {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3001-ROZ",
+   "dotyczy": "PROC-23.3001",
+   "wariant": "rozszerzony",
+   "tekst": "MOST – FILAR Z KORONĄ LANĄ: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3002-STD",
+   "dotyczy": "PROC-23.3002",
+   "wariant": "standardowy",
+   "tekst": "Most – filar z koroną licowaną: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3002-SKR",
+   "dotyczy": "PROC-23.3002",
+   "wariant": "skrocony",
+   "tekst": "Most – filar z koroną licowaną {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3002-ROZ",
+   "dotyczy": "PROC-23.3002",
+   "wariant": "rozszerzony",
+   "tekst": "MOST – FILAR Z KORONĄ LICOWANĄ: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3003-STD",
+   "dotyczy": "PROC-23.3003",
+   "wariant": "standardowy",
+   "tekst": "Most – filar z koroną częściową: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3003-SKR",
+   "dotyczy": "PROC-23.3003",
+   "wariant": "skrocony",
+   "tekst": "Most – filar z koroną częściową {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3003-ROZ",
+   "dotyczy": "PROC-23.3003",
+   "wariant": "rozszerzony",
+   "tekst": "MOST – FILAR Z KORONĄ CZĘŚCIOWĄ: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3005-STD",
+   "dotyczy": "PROC-23.3005",
+   "wariant": "standardowy",
+   "tekst": "Most – dalszy element (przęsło): {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3005-SKR",
+   "dotyczy": "PROC-23.3005",
+   "wariant": "skrocony",
+   "tekst": "Most – dalszy element (przęsło) {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3005-ROZ",
+   "dotyczy": "PROC-23.3005",
+   "wariant": "rozszerzony",
+   "tekst": "MOST – DALSZY ELEMENT (PRZĘSŁO): zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3004-STD",
+   "dotyczy": "PROC-23.3004",
+   "wariant": "standardowy",
+   "tekst": "Most – filar z koroną teleskopową: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3004-SKR",
+   "dotyczy": "PROC-23.3004",
+   "wariant": "skrocony",
+   "tekst": "Most – filar z koroną teleskopową {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3004-ROZ",
+   "dotyczy": "PROC-23.3004",
+   "wariant": "rozszerzony",
+   "tekst": "MOST – FILAR Z KORONĄ TELESKOPOWĄ: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3006-STD",
+   "dotyczy": "PROC-23.3006",
+   "wariant": "standardowy",
+   "tekst": "Uzupełnienie złożone (mosty / szyny) – wariant 1: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3006-SKR",
+   "dotyczy": "PROC-23.3006",
+   "wariant": "skrocony",
+   "tekst": "Uzupełnienie złożone (mosty / szyny) – wariant 1 {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3006-ROZ",
+   "dotyczy": "PROC-23.3006",
+   "wariant": "rozszerzony",
+   "tekst": "UZUPEŁNIENIE ZŁOŻONE (MOSTY / SZYNY) – WARIANT 1: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3007-STD",
+   "dotyczy": "PROC-23.3007",
+   "wariant": "standardowy",
+   "tekst": "Uzupełnienie złożone (mosty / szyny) – wariant 2: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3007-SKR",
+   "dotyczy": "PROC-23.3007",
+   "wariant": "skrocony",
+   "tekst": "Uzupełnienie złożone (mosty / szyny) – wariant 2 {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3007-ROZ",
+   "dotyczy": "PROC-23.3007",
+   "wariant": "rozszerzony",
+   "tekst": "UZUPEŁNIENIE ZŁOŻONE (MOSTY / SZYNY) – WARIANT 2: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3008-STD",
+   "dotyczy": "PROC-23.3008",
+   "wariant": "standardowy",
+   "tekst": "Uzupełnienie złożone (mosty / szyny) – wariant 3: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3008-SKR",
+   "dotyczy": "PROC-23.3008",
+   "wariant": "skrocony",
+   "tekst": "Uzupełnienie złożone (mosty / szyny) – wariant 3 {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3008-ROZ",
+   "dotyczy": "PROC-23.3008",
+   "wariant": "rozszerzony",
+   "tekst": "UZUPEŁNIENIE ZŁOŻONE (MOSTY / SZYNY) – WARIANT 3: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3009-STD",
+   "dotyczy": "PROC-23.3009",
+   "wariant": "standardowy",
+   "tekst": "Powtórne osadzenie mostu / szyny stałej: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3009-SKR",
+   "dotyczy": "PROC-23.3009",
+   "wariant": "skrocony",
+   "tekst": "Powtórne osadzenie mostu / szyny stałej {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3009-ROZ",
+   "dotyczy": "PROC-23.3009",
+   "wariant": "rozszerzony",
+   "tekst": "POWTÓRNE OSADZENIE MOSTU / SZYNY STAŁEJ: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3010-STD",
+   "dotyczy": "PROC-23.3010",
+   "wariant": "standardowy",
+   "tekst": "Powtórne osadzenie mostu / szyny (wariant): {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3010-SKR",
+   "dotyczy": "PROC-23.3010",
+   "wariant": "skrocony",
+   "tekst": "Powtórne osadzenie mostu / szyny (wariant) {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3010-ROZ",
+   "dotyczy": "PROC-23.3010",
+   "wariant": "rozszerzony",
+   "tekst": "POWTÓRNE OSADZENIE MOSTU / SZYNY (WARIANT): zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3011-STD",
+   "dotyczy": "PROC-23.3011",
+   "wariant": "standardowy",
+   "tekst": "Odnowienie licówki korony filarowej mostu: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3011-SKR",
+   "dotyczy": "PROC-23.3011",
+   "wariant": "skrocony",
+   "tekst": "Odnowienie licówki korony filarowej mostu {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3011-ROZ",
+   "dotyczy": "PROC-23.3011",
+   "wariant": "rozszerzony",
+   "tekst": "ODNOWIENIE LICÓWKI KORONY FILAROWEJ MOSTU: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3101-STD",
+   "dotyczy": "PROC-23.3101",
+   "wariant": "standardowy",
+   "tekst": "Proteza częściowa – wariant 1: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3101-SKR",
+   "dotyczy": "PROC-23.3101",
+   "wariant": "skrocony",
+   "tekst": "Proteza częściowa – wariant 1 {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3101-ROZ",
+   "dotyczy": "PROC-23.3101",
+   "wariant": "rozszerzony",
+   "tekst": "PROTEZA CZĘŚCIOWA – WARIANT 1: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3102-STD",
+   "dotyczy": "PROC-23.3102",
+   "wariant": "standardowy",
+   "tekst": "Proteza częściowa – wariant 2: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3102-SKR",
+   "dotyczy": "PROC-23.3102",
+   "wariant": "skrocony",
+   "tekst": "Proteza częściowa – wariant 2 {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3102-ROZ",
+   "dotyczy": "PROC-23.3102",
+   "wariant": "rozszerzony",
+   "tekst": "PROTEZA CZĘŚCIOWA – WARIANT 2: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3103-STD",
+   "dotyczy": "PROC-23.3103",
+   "wariant": "standardowy",
+   "tekst": "Proteza częściowa – wariant 3: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3103-SKR",
+   "dotyczy": "PROC-23.3103",
+   "wariant": "skrocony",
+   "tekst": "Proteza częściowa – wariant 3 {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3103-ROZ",
+   "dotyczy": "PROC-23.3103",
+   "wariant": "rozszerzony",
+   "tekst": "PROTEZA CZĘŚCIOWA – WARIANT 3: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3104-STD",
+   "dotyczy": "PROC-23.3104",
+   "wariant": "standardowy",
+   "tekst": "Proteza całkowita górna: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3104-SKR",
+   "dotyczy": "PROC-23.3104",
+   "wariant": "skrocony",
+   "tekst": "Proteza całkowita górna {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3104-ROZ",
+   "dotyczy": "PROC-23.3104",
+   "wariant": "rozszerzony",
+   "tekst": "PROTEZA CAŁKOWITA GÓRNA: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3105-STD",
+   "dotyczy": "PROC-23.3105",
+   "wariant": "standardowy",
+   "tekst": "Proteza całkowita dolna: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3105-SKR",
+   "dotyczy": "PROC-23.3105",
+   "wariant": "skrocony",
+   "tekst": "Proteza całkowita dolna {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3105-ROZ",
+   "dotyczy": "PROC-23.3105",
+   "wariant": "rozszerzony",
+   "tekst": "PROTEZA CAŁKOWITA DOLNA: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.31041-STD",
+   "dotyczy": "PROC-23.31041",
+   "wariant": "standardowy",
+   "tekst": "Proteza całkowita górna overdenture: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.31041-SKR",
+   "dotyczy": "PROC-23.31041",
+   "wariant": "skrocony",
+   "tekst": "Proteza całkowita górna overdenture {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.31041-ROZ",
+   "dotyczy": "PROC-23.31041",
+   "wariant": "rozszerzony",
+   "tekst": "PROTEZA CAŁKOWITA GÓRNA OVERDENTURE: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.31051-STD",
+   "dotyczy": "PROC-23.31051",
+   "wariant": "standardowy",
+   "tekst": "Proteza całkowita dolna overdenture: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.31051-SKR",
+   "dotyczy": "PROC-23.31051",
+   "wariant": "skrocony",
+   "tekst": "Proteza całkowita dolna overdenture {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.31051-ROZ",
+   "dotyczy": "PROC-23.31051",
+   "wariant": "rozszerzony",
+   "tekst": "PROTEZA CAŁKOWITA DOLNA OVERDENTURE: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3106-STD",
+   "dotyczy": "PROC-23.3106",
+   "wariant": "standardowy",
+   "tekst": "Metalowa podstawa protezy całkowitej: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3106-SKR",
+   "dotyczy": "PROC-23.3106",
+   "wariant": "skrocony",
+   "tekst": "Metalowa podstawa protezy całkowitej {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3106-ROZ",
+   "dotyczy": "PROC-23.3106",
+   "wariant": "rozszerzony",
+   "tekst": "METALOWA PODSTAWA PROTEZY CAŁKOWITEJ: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3107-STD",
+   "dotyczy": "PROC-23.3107",
+   "wariant": "standardowy",
+   "tekst": "Elementy utrzymujące / podpierające (proste): {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3107-SKR",
+   "dotyczy": "PROC-23.3107",
+   "wariant": "skrocony",
+   "tekst": "Elementy utrzymujące / podpierające (proste) {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3107-ROZ",
+   "dotyczy": "PROC-23.3107",
+   "wariant": "rozszerzony",
+   "tekst": "ELEMENTY UTRZYMUJĄCE / PODPIERAJĄCE (PROSTE): zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3108-STD",
+   "dotyczy": "PROC-23.3108",
+   "wariant": "standardowy",
+   "tekst": "Płyta metalowa z elementami utrzymującymi (szkielet): {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3108-SKR",
+   "dotyczy": "PROC-23.3108",
+   "wariant": "skrocony",
+   "tekst": "Płyta metalowa z elementami utrzymującymi (szkielet) {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3108-ROZ",
+   "dotyczy": "PROC-23.3108",
+   "wariant": "rozszerzony",
+   "tekst": "PŁYTA METALOWA Z ELEMENTAMI UTRZYMUJĄCYMI (SZKIELET): zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3109-STD",
+   "dotyczy": "PROC-23.3109",
+   "wariant": "standardowy",
+   "tekst": "Odlewane elementy złożone – 1 element: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3109-SKR",
+   "dotyczy": "PROC-23.3109",
+   "wariant": "skrocony",
+   "tekst": "Odlewane elementy złożone – 1 element {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3109-ROZ",
+   "dotyczy": "PROC-23.3109",
+   "wariant": "rozszerzony",
+   "tekst": "ODLEWANE ELEMENTY ZŁOŻONE – 1 ELEMENT: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3110-STD",
+   "dotyczy": "PROC-23.3110",
+   "wariant": "standardowy",
+   "tekst": "Odlewane elementy złożone – co najmniej 2 elementy: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3110-SKR",
+   "dotyczy": "PROC-23.3110",
+   "wariant": "skrocony",
+   "tekst": "Odlewane elementy złożone – co najmniej 2 elementy {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3110-ROZ",
+   "dotyczy": "PROC-23.3110",
+   "wariant": "rozszerzony",
+   "tekst": "ODLEWANE ELEMENTY ZŁOŻONE – CO NAJMNIEJ 2 ELEMENTY: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3111-STD",
+   "dotyczy": "PROC-23.3111",
+   "wariant": "standardowy",
+   "tekst": "Naprawa protezy bez wycisku (mały zakres): {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3111-SKR",
+   "dotyczy": "PROC-23.3111",
+   "wariant": "skrocony",
+   "tekst": "Naprawa protezy bez wycisku (mały zakres) {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3111-ROZ",
+   "dotyczy": "PROC-23.3111",
+   "wariant": "rozszerzony",
+   "tekst": "NAPRAWA PROTEZY BEZ WYCISKU (MAŁY ZAKRES): zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3112-STD",
+   "dotyczy": "PROC-23.3112",
+   "wariant": "standardowy",
+   "tekst": "Naprawa protezy z wyciskiem: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3112-SKR",
+   "dotyczy": "PROC-23.3112",
+   "wariant": "skrocony",
+   "tekst": "Naprawa protezy z wyciskiem {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3112-ROZ",
+   "dotyczy": "PROC-23.3112",
+   "wariant": "rozszerzony",
+   "tekst": "NAPRAWA PROTEZY Z WYCISKIEM: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3113-STD",
+   "dotyczy": "PROC-23.3113",
+   "wariant": "standardowy",
+   "tekst": "Częściowe podścielenie protezy: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3113-SKR",
+   "dotyczy": "PROC-23.3113",
+   "wariant": "skrocony",
+   "tekst": "Częściowe podścielenie protezy {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3113-ROZ",
+   "dotyczy": "PROC-23.3113",
+   "wariant": "rozszerzony",
+   "tekst": "CZĘŚCIOWE PODŚCIELENIE PROTEZY: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3114-STD",
+   "dotyczy": "PROC-23.3114",
+   "wariant": "standardowy",
+   "tekst": "Podścielenie bezpośrednie protezy: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3114-SKR",
+   "dotyczy": "PROC-23.3114",
+   "wariant": "skrocony",
+   "tekst": "Podścielenie bezpośrednie protezy {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3114-ROZ",
+   "dotyczy": "PROC-23.3114",
+   "wariant": "rozszerzony",
+   "tekst": "PODŚCIELENIE BEZPOŚREDNIE PROTEZY: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3115-STD",
+   "dotyczy": "PROC-23.3115",
+   "wariant": "standardowy",
+   "tekst": "Podścielenie pośrednie protezy: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3115-SKR",
+   "dotyczy": "PROC-23.3115",
+   "wariant": "skrocony",
+   "tekst": "Podścielenie pośrednie protezy {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3115-ROZ",
+   "dotyczy": "PROC-23.3115",
+   "wariant": "rozszerzony",
+   "tekst": "PODŚCIELENIE POŚREDNIE PROTEZY: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3116-STD",
+   "dotyczy": "PROC-23.3116",
+   "wariant": "standardowy",
+   "tekst": "Podścielenie pośrednie z ukształtowaniem obrzeża – szczęka: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3116-SKR",
+   "dotyczy": "PROC-23.3116",
+   "wariant": "skrocony",
+   "tekst": "Podścielenie pośrednie z ukształtowaniem obrzeża – szczęka {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3116-ROZ",
+   "dotyczy": "PROC-23.3116",
+   "wariant": "rozszerzony",
+   "tekst": "PODŚCIELENIE POŚREDNIE Z UKSZTAŁTOWANIEM OBRZEŻA – SZCZĘKA: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3117-STD",
+   "dotyczy": "PROC-23.3117",
+   "wariant": "standardowy",
+   "tekst": "Podścielenie pośrednie z czynnościowym ukształtowaniem obrzeża – żuchwa: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3117-SKR",
+   "dotyczy": "PROC-23.3117",
+   "wariant": "skrocony",
+   "tekst": "Podścielenie pośrednie z czynnościowym ukształtowaniem obrzeża – żuchwa {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3117-ROZ",
+   "dotyczy": "PROC-23.3117",
+   "wariant": "rozszerzony",
+   "tekst": "PODŚCIELENIE POŚREDNIE Z CZYNNOŚCIOWYM UKSZTAŁTOWANIEM OBRZEŻA – ŻUCHWA: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3125-STD",
+   "dotyczy": "PROC-23.3125",
+   "wariant": "standardowy",
+   "tekst": "Zdjęcie korony lanej: {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3125-SKR",
+   "dotyczy": "PROC-23.3125",
+   "wariant": "skrocony",
+   "tekst": "Zdjęcie korony lanej {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3125-ROZ",
+   "dotyczy": "PROC-23.3125",
+   "wariant": "rozszerzony",
+   "tekst": "ZDJĘCIE KORONY LANEJ: zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3126-STD",
+   "dotyczy": "PROC-23.3126",
+   "wariant": "standardowy",
+   "tekst": "Odtworzenie wysokości zwarcia (nakłady w protezie): {{POLE-ZEBY}}. Etap: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3126-SKR",
+   "dotyczy": "PROC-23.3126",
+   "wariant": "skrocony",
+   "tekst": "Odtworzenie wysokości zwarcia (nakłady w protezie) {{POLE-ZEBY}} – {{POLE-PRZEBIEG}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-PRZEBIEG"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.3126-ROZ",
+   "dotyczy": "PROC-23.3126",
+   "wariant": "rozszerzony",
+   "tekst": "ODTWORZENIE WYSOKOŚCI ZWARCIA (NAKŁADY W PROTEZIE): zęby / łuk {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Etap i czynności: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}, kolor {{POLE-KOLOR}}. Wynik (dopasowanie, zwarcie): {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kolejny etap / kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-KOLOR",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
   }
  ]
 }

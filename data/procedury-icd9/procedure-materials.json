@@ -305,6 +305,69 @@
    "id": "MAT-WYPELN-WSTECZNE",
    "nazwa": "Materiał do wstecznego wypełnienia (krzemianowo-wapniowy)",
    "kategoria": "material"
+  },
+  {
+   "id": "MAT-LYZKI",
+   "nazwa": "Łyżki wyciskowe (standardowe, indywidualne)",
+   "kategoria": "srodek_pomocniczy"
+  },
+  {
+   "id": "MAT-ALGINAT",
+   "nazwa": "Masa alginatowa",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-SILIKON",
+   "nazwa": "Masy silikonowe / polieterowe (precyzyjne)",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-SKANER",
+   "nazwa": "Skaner wewnątrzustny",
+   "kategoria": "aparatura",
+   "alternatywy": [
+    "wycisk konwencjonalny"
+   ]
+  },
+  {
+   "id": "MAT-RETRAKCJA",
+   "nazwa": "Nici / pasty retrakcyjne",
+   "kategoria": "srodek_pomocniczy"
+  },
+  {
+   "id": "MAT-TYMCZ-AKRYL",
+   "nazwa": "Materiał na uzupełnienia tymczasowe",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-CEMENT",
+   "nazwa": "Cementy (tymczasowe, konwencjonalne, adhezyjne)",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-WOSK",
+   "nazwa": "Wosk, wzorniki zwarciowe, kolornik, linijka (VDO)",
+   "kategoria": "srodek_pomocniczy"
+  },
+  {
+   "id": "MAT-WKLAD",
+   "nazwa": "Wkłady standardowe (np. z włókna) / materiał na wkład indywidualny",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-PODSCIELAJACY",
+   "nazwa": "Materiał do podścielania (twardy / miękki)",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-ZDEJMOWACZ",
+   "nazwa": "Narzędzia do zdejmowania koron",
+   "kategoria": "narzedzie"
+  },
+  {
+   "id": "MAT-SYSTEM-NAPRAW",
+   "nazwa": "System do naprawy ceramiki / licowania",
+   "kategoria": "material"
   }
  ]
 }
