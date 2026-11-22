@@ -1,14 +1,14 @@
 {
   "nazwa": "nfz-stomatologia-audyt",
-  "wersja": "2026.11.22-2",
+  "wersja": "2026.11.22-4",
   "audyt_rozpoczety": "2026-11-21T17:28+01:00",
   "stan_prawny_na": "2026-11-21",
   "autor": "Claude (czat), do zatwierdzenia przez Patryka",
   "pliki": [
     {
       "plik": "sources.json",
-      "sha256": "ba3589acfa6ec1a3249b79bce5035b11070b97e46217900064720f09498c9e96",
-      "bajty": 14531
+      "sha256": "ce14d6e10c41003f64b03f3afe5d60fd3431a21aa663a76d06d26a0d7c50e5c7",
+      "bajty": 14592
     },
     {
       "plik": "procedures.json",
@@ -22,13 +22,13 @@
     },
     {
       "plik": "diagnoses.json",
-      "sha256": "9b6b305966c8cc601d84c69439046ce8ed180e235c895be843a00a29001ea621",
-      "bajty": 51103
+      "sha256": "aa10aa0bfee49fa6beabc12ef9e14bea1f0374ea9764d2985b37b0f53a27cad5",
+      "bajty": 70145
     },
     {
       "plik": "procedure-diagnosis-mappings.json",
-      "sha256": "e8ba3585faa33266224ace782f560c9de10c6d3ab7415d728449978fa2b981a1",
-      "bajty": 137033
+      "sha256": "d317059c4b720687c3b13e8cd3b03e9d9fa555baea99be7d67e145779fb9e93c",
+      "bajty": 132639
     },
     {
       "plik": "billing-rules.json",
@@ -52,8 +52,8 @@
     "slownik_icd9": 290,
     "produkty_1b": 84,
     "pakiety": 43,
-    "diagnozy": 131,
-    "mapowania": 429,
+    "diagnozy": 132,
+    "mapowania": 416,
     "reguly": 47,
     "pary_laczenia": 77,
     "materialy": 17
@@ -62,7 +62,6 @@
     "Rozporządzenie: zał. 2a, 3–9, 10a nieprzeczytane (plik 57/118 stron)",
     "Zakresy (maska 12 zakresów) dla wierszy zał. 1b nie przeniesione",
     "Skład pakietów ST06–ST13, ST15–ST17, ST19–ST25, ST31, ST32 – niepełny",
-    "Polskie urzędowe nazwy ICD-10 – robocze",
     "OWU (kary umowne) i rozporządzenie o dokumentacji – paragrafy do odczytu",
     "Komunikat NFZ nr 627276 (kiretaż < 15 r.ż.) – treść znana z Gazety Lekarskiej 9/2026; oryginału nie odczytano"
   ]

@@ -189,6 +189,12 @@ Wskazania: dolegliwość wymagająca oceny; pytania pacjenta o leczenie
 
 *Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
 
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| Z01.2 | Badanie dentystyczne | porada lekarska – badanie stomatologiczne | ocena_kliniczna | nie |
+
 **Checklista kompletności**
 
 - [obowiazkowe] Data udzielenia świadczenia — *prawne*
@@ -247,6 +253,12 @@ Wskazania: prośba pacjenta / instytucji
 **NFZ** – świadczenie gwarantowane: **nie**
 
 *Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| Z02.7 | Wydanie zaświadczenia lekarskiego | wydanie orzeczenia lekarskiego | ocena_kliniczna | nie |
 
 **Checklista kompletności**
 
@@ -307,6 +319,12 @@ Wskazania: prośba pacjenta / instytucji
 **NFZ** – świadczenie gwarantowane: **nie**
 
 *Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany.*
+
+**ICD-10 (podpowiedzi, wybiera lekarz)**
+
+| Kod | Nazwa robocza | Kiedy | Potwierdzenie | W audycie NFZ |
+|---|---|---|---|---|
+| Z02.7 | Wydanie zaświadczenia lekarskiego | wydanie zaświadczenia lub świadectwa | ocena_kliniczna | nie |
 
 **Checklista kompletności**
 

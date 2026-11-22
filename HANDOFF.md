@@ -147,7 +147,7 @@ Funkcje: konta i bezpieczeństwo, Gabinety, Ustawienia NFZ, Katalog NFZ, Opisy N
 |---|---|---|
 | 2 | **Dawać dostęp** przy ponownej rejestracji | zrobione: każde nowe konto dostaje wersję testową; rejestr HMAC nadal zapisywany (na ewentualny powrót licencji). Konta zarejestrowane ponownie przed poprawką nadal nie mają subskrypcji. |
 | 3 | Fikcyjne „Gabinet 1–4” – **ręcznie** | Patryk usuwa w „Gabinety” |
-| 4 | Własne kody NFZ – **zostają ukryte** | bez zmian |
+| 4 | Własne kody NFZ – **zostają ukryte** (potwierdzone ponownie 22.11.2026) | bez zmian |
 | 5 | Dyktowanie – **odłożone** | przed etapem 2 porównanie (koszt, jakość PL, prywatność) |
 | 6 | Licencje – **bez terminu** | jak decyzja 9 |
 | 7 | Porządki – **wszystko** | zrobione: 3 instrukcje zaktualizowane, `__pycache__` usunięty z repo i w `.gitignore`, skrypty Windows usunięte |

@@ -8,269 +8,289 @@
       "poziom": 3,
       "nazwa_who_en": "Disorders of tooth development and eruption",
       "nazwa_pl_robocza": "Zaburzenia rozwoju i wyrzynania zębów",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zaburzenia rozwoju i wyrzynania się zębów"
     },
     {
       "kod": "K00.0",
       "poziom": 4,
       "nazwa_who_en": "Anodontia",
       "nazwa_pl_robocza": "Brak zębów (anodontia)",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Brak zębów"
     },
     {
       "kod": "K00.1",
       "poziom": 4,
       "nazwa_who_en": "Supernumerary teeth",
       "nazwa_pl_robocza": "Zęby nadliczbowe",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zęby nadliczbowe"
     },
     {
       "kod": "K00.2",
       "poziom": 4,
       "nazwa_who_en": "Abnormalities of size and form of teeth",
       "nazwa_pl_robocza": "Nieprawidłowości wielkości i kształtu zębów",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Nieprawidłowości wielkości i kształtu zębów"
     },
     {
       "kod": "K00.3",
       "poziom": 4,
       "nazwa_who_en": "Mottled teeth",
       "nazwa_pl_robocza": "Zęby plamiste",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zęby ze szkliwem plamkowym"
     },
     {
       "kod": "K00.4",
       "poziom": 4,
       "nazwa_who_en": "Disturbances in tooth formation",
       "nazwa_pl_robocza": "Zaburzenia tworzenia się zębów",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zaburzenia rozwoju zębów"
     },
     {
       "kod": "K00.5",
       "poziom": 4,
       "nazwa_who_en": "Hereditary disturbances in tooth structure, not elsewhere classified",
       "nazwa_pl_robocza": "Dziedziczne zaburzenia struktury zębów, gdzie indziej niesklasyfikowane",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Dziedziczne zaburzenia struktury zęba, niesklasyfikowane gdzie indziej"
     },
     {
       "kod": "K00.6",
       "poziom": 4,
       "nazwa_who_en": "Disturbances in tooth eruption",
       "nazwa_pl_robocza": "Zaburzenia wyrzynania się zębów",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zaburzenia w wyrzynaniu się zębów"
     },
     {
       "kod": "K00.7",
       "poziom": 4,
       "nazwa_who_en": "Teething syndrome",
       "nazwa_pl_robocza": "Zespół ząbkowania",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zespół ząbkowania"
     },
     {
       "kod": "K00.8",
       "poziom": 4,
       "nazwa_who_en": "Other disorders of tooth development",
       "nazwa_pl_robocza": "Inne zaburzenia rozwoju zębów",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Inne zaburzenia rozwoju zębów"
     },
     {
       "kod": "K00.9",
       "poziom": 4,
       "nazwa_who_en": "Disorder of tooth development, unspecified",
       "nazwa_pl_robocza": "Zaburzenie rozwoju zębów, nieokreślone",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zaburzenia rozwoju zębów, nieokreślone"
     },
     {
       "kod": "K01",
       "poziom": 3,
       "nazwa_who_en": "Embedded and impacted teeth",
       "nazwa_pl_robocza": "Zęby zatrzymane i zaklinowane",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zęby wtopione lub zaklinowane"
     },
     {
       "kod": "K01.0",
       "poziom": 4,
       "nazwa_who_en": "Embedded teeth",
       "nazwa_pl_robocza": "Zęby zatrzymane",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zęby wtopione"
     },
     {
       "kod": "K01.1",
       "poziom": 4,
       "nazwa_who_en": "Impacted teeth",
       "nazwa_pl_robocza": "Zęby zaklinowane",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Ząb zaklinowany"
     },
     {
       "kod": "K02",
       "poziom": 3,
       "nazwa_who_en": "Dental caries",
       "nazwa_pl_robocza": "Próchnica zębów",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Próchnica zębów"
     },
     {
       "kod": "K02.0",
       "poziom": 4,
       "nazwa_who_en": "Caries limited to enamel",
       "nazwa_pl_robocza": "Próchnica ograniczona do szkliwa",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Próchnica ograniczona do szkliwa"
     },
     {
       "kod": "K02.1",
       "poziom": 4,
       "nazwa_who_en": "Caries of dentine",
       "nazwa_pl_robocza": "Próchnica zębiny",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Próchnica zębiny"
     },
     {
       "kod": "K02.2",
       "poziom": 4,
       "nazwa_who_en": "Caries of cementum",
       "nazwa_pl_robocza": "Próchnica cementu",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Próchnica cementu"
     },
     {
       "kod": "K02.3",
       "poziom": 4,
       "nazwa_who_en": "Arrested dental caries",
       "nazwa_pl_robocza": "Zatrzymana próchnica zębów",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zatrzymana próchnica zębów"
     },
     {
       "kod": "K02.4",
       "poziom": 4,
       "nazwa_who_en": "Odontoclasia",
       "nazwa_pl_robocza": "Odontoklazja",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Odontoklazja"
     },
     {
       "kod": "K02.5",
       "poziom": 4,
       "nazwa_who_en": "Caries with pulp exposure",
       "nazwa_pl_robocza": "Próchnica z obnażeniem miazgi",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "brak w polskim wydaniu ICD-10 (Tom I, CSIOZ 2008) – usunięte z podpowiedzi (decyzja Patryka 22.11.2026)",
       "status": "WYMAGA WERYFIKACJI",
-      "uwagi": "Kod dodany w aktualizacjach WHO po 2008 – może NIE istnieć w polskim wydaniu ICD-10 (CeZ 2008)",
+      "uwagi": "Kod dodany w aktualizacjach WHO po 2008 – może NIE istnieć w polskim wydaniu ICD-10 (CeZ 2008) Sprawdzone 22.11.2026: kodu nie ma w Tomie I wydania polskiego.",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
@@ -281,1088 +301,1171 @@
       "poziom": 4,
       "nazwa_who_en": "Other dental caries",
       "nazwa_pl_robocza": "Inna próchnica zębów",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Inne postacie próchnicy zębów"
     },
     {
       "kod": "K02.9",
       "poziom": 4,
       "nazwa_who_en": "Dental caries, unspecified",
       "nazwa_pl_robocza": "Próchnica zębów, nieokreślona",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Próchnica zębów, nieokreślona"
     },
     {
       "kod": "K03",
       "poziom": 3,
       "nazwa_who_en": "Other diseases of hard tissues of teeth",
       "nazwa_pl_robocza": "Inne choroby tkanek twardych zębów",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Inne choroby twardych tkanek zębów"
     },
     {
       "kod": "K03.0",
       "poziom": 4,
       "nazwa_who_en": "Excessive attrition of teeth",
       "nazwa_pl_robocza": "Nadmierne ścieranie zębów",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Nadmierne starcie zębów"
     },
     {
       "kod": "K03.1",
       "poziom": 4,
       "nazwa_who_en": "Abrasion of teeth",
       "nazwa_pl_robocza": "Abrazja (starcie mechaniczne) zębów",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Starcie zębów"
     },
     {
       "kod": "K03.2",
       "poziom": 4,
       "nazwa_who_en": "Erosion of teeth",
       "nazwa_pl_robocza": "Erozja zębów",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Nadżerka zębów"
     },
     {
       "kod": "K03.3",
       "poziom": 4,
       "nazwa_who_en": "Pathological resorption of teeth",
       "nazwa_pl_robocza": "Patologiczna resorpcja zębów",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Patologiczna resorpcja zębów"
     },
     {
       "kod": "K03.4",
       "poziom": 4,
       "nazwa_who_en": "Hypercementosis",
       "nazwa_pl_robocza": "Hipercementoza",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Hipercementoza"
     },
     {
       "kod": "K03.5",
       "poziom": 4,
       "nazwa_who_en": "Ankylosis of teeth",
       "nazwa_pl_robocza": "Ankyloza zębów",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zrośnięcie zęba z kością"
     },
     {
       "kod": "K03.6",
       "poziom": 4,
       "nazwa_who_en": "Deposits [accretions] on teeth",
       "nazwa_pl_robocza": "Osady na zębach (złogi)",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Złogi nazębne"
     },
     {
       "kod": "K03.7",
       "poziom": 4,
       "nazwa_who_en": "Posteruptive colour changes of dental hard tissues",
       "nazwa_pl_robocza": "Pozębowe zmiany zabarwienia tkanek twardych zębów",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zmiany zabarwienia tkanek twardych zęba po jego wyrżnięciu się"
     },
     {
       "kod": "K03.8",
       "poziom": 4,
       "nazwa_who_en": "Other specified diseases of hard tissues of teeth",
       "nazwa_pl_robocza": "Inne określone choroby tkanek twardych zębów",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Inne określone choroby twardych tkanek zębów"
     },
     {
       "kod": "K03.9",
       "poziom": 4,
       "nazwa_who_en": "Disease of hard tissues of teeth, unspecified",
       "nazwa_pl_robocza": "Choroba tkanek twardych zębów, nieokreślona",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Choroby twardych tkanek zębów, nieokreślone"
     },
     {
       "kod": "K04",
       "poziom": 3,
       "nazwa_who_en": "Diseases of pulp and periapical tissues",
       "nazwa_pl_robocza": "Choroby miazgi i tkanek okołowierzchołkowych",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Choroby miazgi i tkanek okołowierzchołkowych"
     },
     {
       "kod": "K04.0",
       "poziom": 4,
       "nazwa_who_en": "Pulpitis",
       "nazwa_pl_robocza": "Zapalenie miazgi",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zapalenie miazgi"
     },
     {
       "kod": "K04.1",
       "poziom": 4,
       "nazwa_who_en": "Necrosis of pulp",
       "nazwa_pl_robocza": "Martwica miazgi",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Martwica miazgi"
     },
     {
       "kod": "K04.2",
       "poziom": 4,
       "nazwa_who_en": "Pulp degeneration",
       "nazwa_pl_robocza": "Zwyrodnienie miazgi",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zwyrodnienie miazgi"
     },
     {
       "kod": "K04.3",
       "poziom": 4,
       "nazwa_who_en": "Abnormal hard tissue formation in pulp",
       "nazwa_pl_robocza": "Nieprawidłowe tworzenie tkanek twardych w miazdze",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Patologiczne powstawanie twardych tkanek w obrębie miazgi"
     },
     {
       "kod": "K04.4",
       "poziom": 4,
       "nazwa_who_en": "Acute apical periodontitis of pulpal origin",
       "nazwa_pl_robocza": "Ostre zapalenie tkanek okołowierzchołkowych pochodzenia miazgowego",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Ostre przywierzchołkowe zapalenie ozębnej, pochodzenia miazgowego"
     },
     {
       "kod": "K04.5",
       "poziom": 4,
       "nazwa_who_en": "Chronic apical periodontitis",
       "nazwa_pl_robocza": "Przewlekłe zapalenie tkanek okołowierzchołkowych",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Przewlekłe przywierzchołkowe zapalenie ozębnej"
     },
     {
       "kod": "K04.6",
       "poziom": 4,
       "nazwa_who_en": "Periapical abscess with sinus",
       "nazwa_pl_robocza": "Ropień okołowierzchołkowy z przetoką",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Ropień przywierzchołkowy z zajęciem zatoki"
     },
     {
       "kod": "K04.7",
       "poziom": 4,
       "nazwa_who_en": "Periapical abscess without sinus",
       "nazwa_pl_robocza": "Ropień okołowierzchołkowy bez przetoki",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Ropień przywierzchołkowy bez zajęcia zatoki"
     },
     {
       "kod": "K04.8",
       "poziom": 4,
       "nazwa_who_en": "Radicular cyst",
       "nazwa_pl_robocza": "Torbiel korzeniowa",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Torbiel korzeniowa"
     },
     {
       "kod": "K04.9",
       "poziom": 4,
       "nazwa_who_en": "Other and unspecified diseases of pulp and periapical tissues",
       "nazwa_pl_robocza": "Inne i nieokreślone choroby miazgi i tkanek okołowierzchołkowych",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Inne nieokreślone choroby miazgi i tkanek przywierzchołkowych"
     },
     {
       "kod": "K05",
       "poziom": 3,
       "nazwa_who_en": "Gingivitis and periodontal diseases",
       "nazwa_pl_robocza": "Zapalenie dziąseł i choroby przyzębia",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zapalenie dziąsła i choroby przyzębia"
     },
     {
       "kod": "K05.0",
       "poziom": 4,
       "nazwa_who_en": "Acute gingivitis",
       "nazwa_pl_robocza": "Ostre zapalenie dziąseł",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Ostre zapalenie dziąseł"
     },
     {
       "kod": "K05.1",
       "poziom": 4,
       "nazwa_who_en": "Chronic gingivitis",
       "nazwa_pl_robocza": "Przewlekłe zapalenie dziąseł",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Przewlekłe zapalenie dziąseł"
     },
     {
       "kod": "K05.2",
       "poziom": 4,
       "nazwa_who_en": "Acute periodontitis",
       "nazwa_pl_robocza": "Ostre zapalenie przyzębia",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Ostre zapalenie przyzębia"
     },
     {
       "kod": "K05.3",
       "poziom": 4,
       "nazwa_who_en": "Chronic periodontitis",
       "nazwa_pl_robocza": "Przewlekłe zapalenie przyzębia",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Przewlekłe zapalenie przyzębia"
     },
     {
       "kod": "K05.4",
       "poziom": 4,
       "nazwa_who_en": "Periodontosis",
       "nazwa_pl_robocza": "Paradontoza",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Desmodontoza"
     },
     {
       "kod": "K05.5",
       "poziom": 4,
       "nazwa_who_en": "Other periodontal diseases",
       "nazwa_pl_robocza": "Inne choroby przyzębia",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Inne choroby przyzębia"
     },
     {
       "kod": "K05.6",
       "poziom": 4,
       "nazwa_who_en": "Periodontal disease, unspecified",
       "nazwa_pl_robocza": "Choroba przyzębia, nieokreślona",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Choroba przyzębia, nieokreślona"
     },
     {
       "kod": "K06",
       "poziom": 3,
       "nazwa_who_en": "Other disorders of gingiva and edentulous alveolar ridge",
       "nazwa_pl_robocza": "Inne zaburzenia dziąseł i bezzębnego wyrostka zębodołowego",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Inne choroby dziąseł i bezzębnego wyrostka zębodołowego"
     },
     {
       "kod": "K06.0",
       "poziom": 4,
       "nazwa_who_en": "Gingival recession",
       "nazwa_pl_robocza": "Recesja dziąseł",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zanik dziąseł"
     },
     {
       "kod": "K06.1",
       "poziom": 4,
       "nazwa_who_en": "Gingival enlargement",
       "nazwa_pl_robocza": "Przerost dziąseł",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Przerost dziąseł"
     },
     {
       "kod": "K06.2",
       "poziom": 4,
       "nazwa_who_en": "Gingival and edentulous alveolar ridge lesions associated with trauma",
       "nazwa_pl_robocza": "Zmiany dziąseł i bezzębnego wyrostka związane z urazem",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Uszkodzenie dziąseł i bezzębnego wyrostka zębodołowego związane z urazem"
     },
     {
       "kod": "K06.8",
       "poziom": 4,
       "nazwa_who_en": "Other specified disorders of gingiva and edentulous alveolar ridge",
       "nazwa_pl_robocza": "Inne określone zaburzenia dziąseł i bezzębnego wyrostka",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Inne określone zaburzenia dziąseł i bezzębnego wyrostka zębodołowego"
     },
     {
       "kod": "K06.9",
       "poziom": 4,
       "nazwa_who_en": "Disorder of gingiva and edentulous alveolar ridge, unspecified",
       "nazwa_pl_robocza": "Zaburzenie dziąseł i bezzębnego wyrostka, nieokreślone",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Choroba dziąsła i bezzębnego wyrostka zębodołowego, nieokreślone"
     },
     {
       "kod": "K07",
       "poziom": 3,
       "nazwa_who_en": "Dentofacial anomalies [including malocclusion]",
       "nazwa_pl_robocza": "Anomalie zębowo-twarzowe (włącznie z wadami zgryzu)",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zaburzenia w zakresie zębów i twarzy [obejmujące nieprawidłowości zgryzu]"
     },
     {
       "kod": "K07.0",
       "poziom": 4,
       "nazwa_who_en": "Major anomalies of jaw size",
       "nazwa_pl_robocza": "Duże anomalie wielkości szczęk",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Znaczne nieprawidłowości wymiaru szczęk"
     },
     {
       "kod": "K07.1",
       "poziom": 4,
       "nazwa_who_en": "Anomalies of jaw-cranial base relationship",
       "nazwa_pl_robocza": "Anomalie relacji szczęka–podstawa czaszki",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Nieprawidłowości stosunku szczęk do podstawy czaszki"
     },
     {
       "kod": "K07.2",
       "poziom": 4,
       "nazwa_who_en": "Anomalies of dental arch relationship",
       "nazwa_pl_robocza": "Anomalie relacji łuków zębowych",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Nieprawidłowości stosunku łuków zębowych"
     },
     {
       "kod": "K07.3",
       "poziom": 4,
       "nazwa_who_en": "Anomalies of tooth position",
       "nazwa_pl_robocza": "Anomalie położenia zębów",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zaburzenia pozycji zębów"
     },
     {
       "kod": "K07.4",
       "poziom": 4,
       "nazwa_who_en": "Malocclusion, unspecified",
       "nazwa_pl_robocza": "Wada zgryzu, nieokreślona",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Wady zgryzu, nieokreślone"
     },
     {
       "kod": "K07.5",
       "poziom": 4,
       "nazwa_who_en": "Dentofacial functional abnormalities",
       "nazwa_pl_robocza": "Czynnościowe nieprawidłowości zębowo-twarzowe",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Nieprawidłowości czynnościowe zębowo-twarzowe"
     },
     {
       "kod": "K07.6",
       "poziom": 4,
       "nazwa_who_en": "Temporomandibular joint disorders",
       "nazwa_pl_robocza": "Zaburzenia stawu skroniowo-żuchwowego",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zaburzenia stawu skroniowo-żuchwowego"
     },
     {
       "kod": "K07.8",
       "poziom": 4,
       "nazwa_who_en": "Other dentofacial anomalies",
       "nazwa_pl_robocza": "Inne anomalie zębowo-twarzowe",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Inne nieprawidłowości zębowo-twarzowe"
     },
     {
       "kod": "K07.9",
       "poziom": 4,
       "nazwa_who_en": "Dentofacial anomaly, unspecified",
       "nazwa_pl_robocza": "Anomalia zębowo-twarzowa, nieokreślona",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Nieprawidłowości zębowo-twarzowe, nieokreślone"
     },
     {
       "kod": "K08",
       "poziom": 3,
       "nazwa_who_en": "Other disorders of teeth and supporting structures",
       "nazwa_pl_robocza": "Inne zaburzenia zębów i ich tkanek podporowych",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Inne zaburzenia zębów i struktur podtrzymujących"
     },
     {
       "kod": "K08.0",
       "poziom": 4,
       "nazwa_who_en": "Exfoliation of teeth due to systemic causes",
       "nazwa_pl_robocza": "Wypadanie zębów z przyczyn ogólnoustrojowych",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Eksfoliacja zębów w wyniku przyczyn układowych"
     },
     {
       "kod": "K08.1",
       "poziom": 4,
       "nazwa_who_en": "Loss of teeth due to accident, extraction or local periodontal disease",
       "nazwa_pl_robocza": "Utrata zębów wskutek wypadku, ekstrakcji lub miejscowej choroby przyzębia",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Utrata zębów z powodu wypadku, usunięcia lub miejscowych chorób przyzębia"
     },
     {
       "kod": "K08.2",
       "poziom": 4,
       "nazwa_who_en": "Atrophy of edentulous alveolar ridge",
       "nazwa_pl_robocza": "Zanik bezzębnego wyrostka zębodołowego",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zanik bezzębnego wyrostka zębodołowego"
     },
     {
       "kod": "K08.3",
       "poziom": 4,
       "nazwa_who_en": "Retained dental root",
       "nazwa_pl_robocza": "Pozostawiony korzeń zęba",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zatrzymany korzeń zęba"
     },
     {
       "kod": "K08.8",
       "poziom": 4,
       "nazwa_who_en": "Other specified disorders of teeth and supporting structures",
       "nazwa_pl_robocza": "Inne określone zaburzenia zębów i tkanek podporowych",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Inne określone zaburzenia zębów i struktur podtrzymujących"
     },
     {
       "kod": "K08.9",
       "poziom": 4,
       "nazwa_who_en": "Disorder of teeth and supporting structures, unspecified",
       "nazwa_pl_robocza": "Zaburzenie zębów i tkanek podporowych, nieokreślone",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zaburzenia zębów i struktur podtrzymujących, nieokreślone"
     },
     {
       "kod": "K09",
       "poziom": 3,
       "nazwa_who_en": "Cysts of oral region, not elsewhere classified",
       "nazwa_pl_robocza": "Torbiele okolicy jamy ustnej, gdzie indziej niesklasyfikowane",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Torbiele okolicy jamy ustnej, niesklasyfikowane gdzie indziej"
     },
     {
       "kod": "K09.0",
       "poziom": 4,
       "nazwa_who_en": "Developmental odontogenic cysts",
       "nazwa_pl_robocza": "Rozwojowe torbiele zębopochodne",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Torbiele rozwojowe zębopochodne"
     },
     {
       "kod": "K09.1",
       "poziom": 4,
       "nazwa_who_en": "Developmental (nonodontogenic) cysts of oral region",
       "nazwa_pl_robocza": "Rozwojowe (niezębopochodne) torbiele okolicy jamy ustnej",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Torbiele rozwojowe (niezębopochodne) okolicy jamy ustnej"
     },
     {
       "kod": "K09.2",
       "poziom": 4,
       "nazwa_who_en": "Other cysts of jaw",
       "nazwa_pl_robocza": "Inne torbiele szczęk",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Inne torbiele szczęk"
     },
     {
       "kod": "K09.8",
       "poziom": 4,
       "nazwa_who_en": "Other cysts of oral region, not elsewhere classified",
       "nazwa_pl_robocza": "Inne torbiele okolicy jamy ustnej",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Inne torbiele okolicy jamy ustnej niesklasyfikowane gdzie indziej"
     },
     {
       "kod": "K09.9",
       "poziom": 4,
       "nazwa_who_en": "Cyst of oral region, unspecified",
       "nazwa_pl_robocza": "Torbiel okolicy jamy ustnej, nieokreślona",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Torbiel okolicy jamy ustnej, nieokreślona"
     },
     {
       "kod": "K10",
       "poziom": 3,
       "nazwa_who_en": "Other diseases of jaws",
       "nazwa_pl_robocza": "Inne choroby szczęk",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Inne choroby szczęki i żuchwy"
     },
     {
       "kod": "K10.0",
       "poziom": 4,
       "nazwa_who_en": "Developmental disorders of jaws",
       "nazwa_pl_robocza": "Zaburzenia rozwojowe szczęk",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zaburzenia rozwojowe szczęki i żuchwy"
     },
     {
       "kod": "K10.1",
       "poziom": 4,
       "nazwa_who_en": "Giant cell granuloma, central",
       "nazwa_pl_robocza": "Ziarniniak olbrzymiokomórkowy centralny",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Ziarniniak olbrzymiokomórkowy, centralny"
     },
     {
       "kod": "K10.2",
       "poziom": 4,
       "nazwa_who_en": "Inflammatory conditions of jaws",
       "nazwa_pl_robocza": "Stany zapalne szczęk",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Stany zapalne szczęki i żuchwy"
     },
     {
       "kod": "K10.3",
       "poziom": 4,
       "nazwa_who_en": "Alveolitis of jaws",
       "nazwa_pl_robocza": "Zapalenie zębodołu (suchy zębodół)",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zapalenie zębodołu szczęki i żuchwy"
     },
     {
       "kod": "K10.8",
       "poziom": 4,
       "nazwa_who_en": "Other specified diseases of jaws",
       "nazwa_pl_robocza": "Inne określone choroby szczęk",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Inne określone choroby szczęki i żuchwy"
     },
     {
       "kod": "K10.9",
       "poziom": 4,
       "nazwa_who_en": "Disease of jaws, unspecified",
       "nazwa_pl_robocza": "Choroba szczęk, nieokreślona",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Choroba szczęki lub żuchwy, nieokreślona"
     },
     {
       "kod": "K11",
       "poziom": 3,
       "nazwa_who_en": "Diseases of salivary glands",
       "nazwa_pl_robocza": "Choroby gruczołów ślinowych",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Choroby gruczołów ślinowych"
     },
     {
       "kod": "K11.0",
       "poziom": 4,
       "nazwa_who_en": "Atrophy of salivary gland",
       "nazwa_pl_robocza": "Zanik gruczołu ślinowego",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zanik gruczołu ślinowego"
     },
     {
       "kod": "K11.1",
       "poziom": 4,
       "nazwa_who_en": "Hypertrophy of salivary gland",
       "nazwa_pl_robocza": "Przerost gruczołu ślinowego",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Przerost gruczołu ślinowego"
     },
     {
       "kod": "K11.2",
       "poziom": 4,
       "nazwa_who_en": "Sialoadenitis",
       "nazwa_pl_robocza": "Zapalenie gruczołu ślinowego",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zapalenie gruczołu ślinowego"
     },
     {
       "kod": "K11.3",
       "poziom": 4,
       "nazwa_who_en": "Abscess of salivary gland",
       "nazwa_pl_robocza": "Ropień gruczołu ślinowego",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Ropień gruczołu ślinowego"
     },
     {
       "kod": "K11.4",
       "poziom": 4,
       "nazwa_who_en": "Fistula of salivary gland",
       "nazwa_pl_robocza": "Przetoka gruczołu ślinowego",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Przetoka gruczołu ślinowego"
     },
     {
       "kod": "K11.5",
       "poziom": 4,
       "nazwa_who_en": "Sialolithiasis",
       "nazwa_pl_robocza": "Kamica ślinianek",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Kamica ślinianek"
     },
     {
       "kod": "K11.6",
       "poziom": 4,
       "nazwa_who_en": "Mucocele of salivary gland",
       "nazwa_pl_robocza": "Torbiel śluzowa gruczołu ślinowego",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Torbiel śluzowa"
     },
     {
       "kod": "K11.7",
       "poziom": 4,
       "nazwa_who_en": "Disturbances of salivary secretion",
       "nazwa_pl_robocza": "Zaburzenia wydzielania śliny",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zaburzenia wydzielania śliny"
     },
     {
       "kod": "K11.8",
       "poziom": 4,
       "nazwa_who_en": "Other diseases of salivary glands",
       "nazwa_pl_robocza": "Inne choroby gruczołów ślinowych",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Inne choroby gruczołów ślinowych"
     },
     {
       "kod": "K11.9",
       "poziom": 4,
       "nazwa_who_en": "Disease of salivary gland, unspecified",
       "nazwa_pl_robocza": "Choroba gruczołu ślinowego, nieokreślona",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Choroby ślinianki, nieokreślone"
     },
     {
       "kod": "K12",
       "poziom": 3,
       "nazwa_who_en": "Stomatitis and related lesions",
       "nazwa_pl_robocza": "Zapalenie jamy ustnej i zmiany pokrewne",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zapalenie jamy ustnej i choroby pokrewne"
     },
     {
       "kod": "K12.0",
       "poziom": 4,
       "nazwa_who_en": "Recurrent oral aphthae",
       "nazwa_pl_robocza": "Nawracające afty jamy ustnej",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Nawracające afty jamy ustnej"
     },
     {
       "kod": "K12.1",
       "poziom": 4,
       "nazwa_who_en": "Other forms of stomatitis",
       "nazwa_pl_robocza": "Inne postacie zapalenia jamy ustnej",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Inne postacie zapalenia jamy ustnej"
     },
     {
       "kod": "K12.2",
       "poziom": 4,
       "nazwa_who_en": "Cellulitis and abscess of mouth",
       "nazwa_pl_robocza": "Zapalenie tkanki łącznej i ropień jamy ustnej",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zapalenie tkanki łącznej i ropień jamy ustnej"
     },
     {
       "kod": "K12.3",
       "poziom": 4,
       "nazwa_who_en": "Oral mucositis (ulcerative)",
       "nazwa_pl_robocza": "Zapalenie błony śluzowej jamy ustnej (wrzodziejące)",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "brak w polskim wydaniu ICD-10 (Tom I, CSIOZ 2008) – usunięte z podpowiedzi (decyzja Patryka 22.11.2026)",
       "status": "WYMAGA WERYFIKACJI",
-      "uwagi": "Kod dodany w aktualizacjach WHO – sprawdzić obecność w wydaniu PL",
+      "uwagi": "Kod dodany w aktualizacjach WHO – sprawdzić obecność w wydaniu PL Sprawdzone 22.11.2026: kodu nie ma w Tomie I wydania polskiego.",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
@@ -1373,338 +1476,377 @@
       "poziom": 3,
       "nazwa_who_en": "Other diseases of lip and oral mucosa",
       "nazwa_pl_robocza": "Inne choroby warg i błony śluzowej jamy ustnej",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Inne choroby śluzówki warg i jamy ustnej"
     },
     {
       "kod": "K13.0",
       "poziom": 4,
       "nazwa_who_en": "Diseases of lips",
       "nazwa_pl_robocza": "Choroby warg",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Choroby warg"
     },
     {
       "kod": "K13.1",
       "poziom": 4,
       "nazwa_who_en": "Cheek and lip biting",
       "nazwa_pl_robocza": "Przygryzanie policzka i wargi",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Nagryzanie policzka i wargi"
     },
     {
       "kod": "K13.2",
       "poziom": 4,
       "nazwa_who_en": "Leukoplakia and other disturbances of oral epithelium, including tongue",
       "nazwa_pl_robocza": "Leukoplakia i inne zaburzenia nabłonka jamy ustnej, w tym języka",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Rogowacenie białe i inne choroby nabłonka jamy ustnej, w tym języka"
     },
     {
       "kod": "K13.3",
       "poziom": 4,
       "nazwa_who_en": "Hairy leukoplakia",
       "nazwa_pl_robocza": "Leukoplakia włochata",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Włochate rogowacenie białe"
     },
     {
       "kod": "K13.4",
       "poziom": 4,
       "nazwa_who_en": "Granuloma and granuloma-like lesions of oral mucosa",
       "nazwa_pl_robocza": "Ziarniniak i zmiany ziarniniakopodobne błony śluzowej jamy ustnej",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Ziarniniak i ziarniniakopodobne choroby śluzówki jamy ustnej"
     },
     {
       "kod": "K13.5",
       "poziom": 4,
       "nazwa_who_en": "Oral submucous fibrosis",
       "nazwa_pl_robocza": "Włóknienie podśluzówkowe jamy ustnej",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zwłóknienie podśluzowe jamy ustnej"
     },
     {
       "kod": "K13.6",
       "poziom": 4,
       "nazwa_who_en": "Irritative hyperplasia of oral mucosa",
       "nazwa_pl_robocza": "Rozrost z podrażnienia błony śluzowej jamy ustnej",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Rozrost z podrażnienia śluzówki jamy ustnej"
     },
     {
       "kod": "K13.7",
       "poziom": 4,
       "nazwa_who_en": "Other and unspecified lesions of oral mucosa",
       "nazwa_pl_robocza": "Inne i nieokreślone zmiany błony śluzowej jamy ustnej",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Inne i nieokreślone choroby śluzówki jamy ustnej"
     },
     {
       "kod": "K14",
       "poziom": 3,
       "nazwa_who_en": "Diseases of tongue",
       "nazwa_pl_robocza": "Choroby języka",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Choroby języka"
     },
     {
       "kod": "K14.0",
       "poziom": 4,
       "nazwa_who_en": "Glossitis",
       "nazwa_pl_robocza": "Zapalenie języka",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zapalenie języka"
     },
     {
       "kod": "K14.1",
       "poziom": 4,
       "nazwa_who_en": "Geographic tongue",
       "nazwa_pl_robocza": "Język geograficzny",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Język geograficzny"
     },
     {
       "kod": "K14.2",
       "poziom": 4,
       "nazwa_who_en": "Median rhomboid glossitis",
       "nazwa_pl_robocza": "Romboidalne pośrodkowe zapalenie języka",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zapalenie języka pośrodkowe romboidalne"
     },
     {
       "kod": "K14.3",
       "poziom": 4,
       "nazwa_who_en": "Hypertrophy of tongue papillae",
       "nazwa_pl_robocza": "Przerost brodawek języka",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Przerost brodawek języka"
     },
     {
       "kod": "K14.4",
       "poziom": 4,
       "nazwa_who_en": "Atrophy of tongue papillae",
       "nazwa_pl_robocza": "Zanik brodawek języka",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zanik brodawek języka"
     },
     {
       "kod": "K14.5",
       "poziom": 4,
       "nazwa_who_en": "Plicated tongue",
       "nazwa_pl_robocza": "Język pobruzdżony",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Język pofałdowany"
     },
     {
       "kod": "K14.6",
       "poziom": 4,
       "nazwa_who_en": "Glossodynia",
       "nazwa_pl_robocza": "Glossodynia (ból języka)",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Ból języka"
     },
     {
       "kod": "K14.8",
       "poziom": 4,
       "nazwa_who_en": "Other diseases of tongue",
       "nazwa_pl_robocza": "Inne choroby języka",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Inne choroby języka"
     },
     {
       "kod": "K14.9",
       "poziom": 4,
       "nazwa_who_en": "Disease of tongue, unspecified",
       "nazwa_pl_robocza": "Choroba języka, nieokreślona",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Choroba języka, nieokreślona"
     },
     {
       "kod": "S02.5",
       "poziom": 4,
       "nazwa_who_en": "Fracture of tooth",
       "nazwa_pl_robocza": "Złamanie zęba",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Złamanie zęba"
     },
     {
       "kod": "S02.6",
       "poziom": 4,
       "nazwa_who_en": "Fracture of mandible",
       "nazwa_pl_robocza": "Złamanie żuchwy",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Złamanie żuchwy"
     },
     {
       "kod": "S03.2",
       "poziom": 4,
       "nazwa_who_en": "Dislocation of tooth",
       "nazwa_pl_robocza": "Zwichnięcie zęba",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Zwichnięcie zęba"
     },
     {
       "kod": "Z01.2",
       "poziom": 4,
       "nazwa_who_en": "Dental examination",
       "nazwa_pl_robocza": "Badanie dentystyczne",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – zgodna",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Badanie dentystyczne"
+    },
+    {
+      "kod": "Z02.7",
+      "poziom": 4,
+      "nazwa_who_en": "Issue of medical certificate",
+      "nazwa_pl_robocza": "Wydanie zaświadczenia lekarskiego",
+      "nazwa_pl_status": "urzędowa (Tom I CeZ) = wyświetlana",
+      "status": "POTWIERDZONA",
+      "uwagi": "Dodane 22.11.2026 dla kart 23.0104 i 23.0106 (decyzja Patryka).",
+      "zrodla": [
+        "SRC-ICD10-CEZ"
+      ],
+      "nazwa_pl_urzedowa": "Wydanie zaświadczenia lekarskiego"
     },
     {
       "kod": "Z29.8",
       "poziom": 4,
       "nazwa_who_en": "Other specified prophylactic measures",
       "nazwa_pl_robocza": "Inne określone środki zapobiegawcze",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Inne określone środki profilaktyczne"
     },
     {
       "kod": "Z46.3",
       "poziom": 4,
       "nazwa_who_en": "Fitting and adjustment of dental prosthetic device",
       "nazwa_pl_robocza": "Dopasowanie i regulacja protezy zębowej",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Założenie i dopasowanie zewnętrznych protez dentystycznych"
     },
     {
       "kod": "Z46.4",
       "poziom": 4,
       "nazwa_who_en": "Fitting and adjustment of orthodontic device",
       "nazwa_pl_robocza": "Dopasowanie i regulacja aparatu ortodontycznego",
-      "nazwa_pl_status": "robocza – porównać z ICD-10 Tom I CeZ",
+      "nazwa_pl_status": "robocza (wyświetlana – decyzja Patryka 22.11.2026); urzędowa z Tomu I CeZ w polu nazwa_pl_urzedowa – różni się",
       "status": "CZĘŚCIOWO POTWIERDZONA",
       "uwagi": "",
       "zrodla": [
         "SRC-ICD10-WHO-2016",
         "SRC-ICD10-CEZ"
-      ]
+      ],
+      "nazwa_pl_urzedowa": "Założenie i dopasowanie aparatów ortodontycznych"
     }
   ]
 }

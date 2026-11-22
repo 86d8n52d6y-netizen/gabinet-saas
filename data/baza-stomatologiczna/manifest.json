@@ -65,9 +65,9 @@
   },
   {
    "plik": "data/procedury-icd9/procedure-diagnosis-mappings.json",
-   "sha256": "7a3cbe160c2f7b7961da62c0f45f596d9945c337656cc194fc4f973d137f9d6e",
+   "sha256": "4956198cdba114e1cf843cd7beae7f920e65215f9c4b635b87587df25e7db683",
    "schemat": "data/baza-stomatologiczna/schemas/procedure-diagnosis-mappings.schema.json",
-   "rekordy": 401
+   "rekordy": 404
   }
  ],
  "liczniki": {
@@ -81,6 +81,6 @@
   "pola": 135,
   "kroki": 114,
   "materialy": 70,
-  "mapowania_icd10": 401
+  "mapowania_icd10": 404
  }
 }

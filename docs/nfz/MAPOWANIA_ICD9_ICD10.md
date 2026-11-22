@@ -1,3 +1,5 @@
+> **Aktualizacja 22.11.2026 (decyzja Patryka):** mapowania na K02.5 i K12.3 usunięte z danych – kodów nie ma w polskim wydaniu ICD-10 (Tom I, CSIOZ 2008). Wiersze z tymi kodami poniżej są nieaktualne.
+
 # Mapowania ICD-9 → ICD-10 (sugestie kliniczne)
 
 > Stan prawny na **21.11.2026**. Dokument generowany z `data/nfz/*.json` (`scripts` w paczce audytu) – nie edytuj ręcznie, popraw dane i wygeneruj ponownie.
