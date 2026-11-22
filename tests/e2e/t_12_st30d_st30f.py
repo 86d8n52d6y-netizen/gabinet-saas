@@ -52,9 +52,9 @@ with sync_playwright() as p:
 
     # wiek
     r = wiz(pg, ['ST30D'], '18', {'ST30D': ['1']})
-    chk('ST30D u 18-latka: ostrzeżenie – tylko do 18 r.ż.', has(r['warn'], 'do 18 r.ż.'), r['warn'])
+    chk('ST30D u 18-latka: ostrzeżenie – tylko do 18 r.ż.', has(r['warn'], 'przeznaczone dla dzieci'), r['warn'])
     r = wiz(pg, ['ST30F'], '17')
-    chk('ST30F u 17-latka: bez ostrzeżenia o wieku', not has(r['warn'], 'do 18 r.ż.'), r['warn'])
+    chk('ST30F u 17-latka: bez ostrzeżenia o wieku', not has(r['warn'], 'przeznaczone dla dzieci'), r['warn'])
 
     # ST30G bez instruktażu + podpowiedź ST30F; ST30E bez ST30D – podpowiedź
     r = wiz(pg, ['ST30G'], '10')
