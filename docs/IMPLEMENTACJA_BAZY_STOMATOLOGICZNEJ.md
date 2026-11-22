@@ -97,4 +97,4 @@ Zasady importu: upsert po id; rekordy usunięte z JSON **nie są kasowane automa
 
 ## 8. Elementy aplikacji, które mogą korzystać z bazy
 
-Katalog badań i procedur (strona), dynamiczne formularze w Opisach NFZ / prywatnych, generowanie opisów z szablonów, podpowiedzi przebiegu (kroki), checklisty kompletności przed zapisem, podpowiedzi ICD-10, moduł kontroli rozliczeń NFZ (reguły z audytu). Zaimplementowane: I1 – katalog (strona) i checklisty kompletności (Opisy NFZ); I2 – generowanie opisów z szablonów kart (Opisy prywatne i NFZ). Pozostałe – wymagają Twojego zlecenia.
+Katalog badań i procedur (strona), dynamiczne formularze w Opisach NFZ / prywatnych, generowanie opisów z szablonów, podpowiedzi przebiegu (kroki), checklisty kompletności przed zapisem, podpowiedzi ICD-10, moduł kontroli rozliczeń NFZ (reguły z audytu). Zaimplementowane: I1 – katalog (strona) i checklisty kompletności (Opisy NFZ); I2 – generowanie opisów z szablonów kart (Opisy prywatne i NFZ); D – opis badania z wyborem elementów (zakładka „Badanie”, „w normie” tylko po kliknięciu). Pozostałe – wymagają Twojego zlecenia.

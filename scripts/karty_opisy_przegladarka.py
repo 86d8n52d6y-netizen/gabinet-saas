@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Opis z karty procedury (etap I2, decyzja Patryka 22.11.2026): dane dla przeglądarki → generator/karty-opisy.js.
 
-Tylko karty zweryfikowane przez Patryka (status `verified`) – szablony opisów (standardowy / skrócony / rozszerzony),
+Tylko karty i badania zweryfikowane przez Patryka (status `verified`) – szablony opisów (standardowy / skrócony / rozszerzony),
 definicje pól użytych w szablonach i podpowiedzi ICD-10 (wybiera lekarz, nigdy automatycznie). Bez danych pacjentów.
 Plik ładowany po zalogowaniu (ASSETS w src/lib/nfz/generator.ts); składanie opisu: generator/opis-z-karty.js.
 
@@ -36,11 +36,24 @@ def zbuduj():
         karty.append({'id': p['id'], 'kod': p['kod'], 'nazwa': p.get('nazwa_krotka') or p['nazwa_oficjalna'], 'kategoria': p['kategoria'],
                       'nfz': (p.get('nfz') or {}).get('swiadczenie_gwarantowane') == 'tak',
                       'szablony': {w: sz[w]['tekst'] for w in WARIANTY}, 'icd10': rozp})
+    # badania (etap D – wybór elementów badania, decyzja Patryka 22.11.2026): zweryfikowane, z szablonami i przykładem wyniku prawidłowego
+    sb = J('badania', 'examination-templates.json')['szablony']
+    badania = []
+    for b in J('badania', 'examinations.json')['badania']:
+        if b['status'] != 'verified':
+            continue
+        sz = {s['wariant']: s for s in sb if s['dotyczy'] == b['id']}
+        if not all(w in sz for w in WARIANTY):
+            continue
+        for s in sz.values():
+            uzyte.update(s['pola'])
+        badania.append({'id': b['id'], 'nazwa': b['nazwa_krotka'], 'pelna': b['nazwa'], 'szablony': {w: sz[w]['tekst'] for w in WARIANTY},
+                        'norma': b.get('wynik_prawidlowy') or ''})
     brak = sorted(f for f in uzyte if f not in pola)
     if brak:
         raise SystemExit(f'Pola użyte w szablonach bez definicji: {brak}')
     defs = {f: {'e': pola[f]['etykieta'], 't': pola[f]['typ'], **({'o': pola[f]['opcje']} if pola[f].get('opcje') else {})} for f in sorted(uzyte)}
-    return {'wersja': str(man['wersja']), 'karty': karty, 'pola': defs}
+    return {'wersja': str(man['wersja']), 'karty': karty, 'badania': badania, 'pola': defs}
 
 
 def zapisz():
@@ -53,4 +66,4 @@ def zapisz():
 
 if __name__ == '__main__':
     d = zapisz()
-    print(f'karty-opisy.js: wersja {d["wersja"]}, kart {len(d["karty"])}, pól {len(d["pola"])}, {OUT.stat().st_size // 1024} KB')
+    print(f'karty-opisy.js: wersja {d["wersja"]}, kart {len(d["karty"])}, badań {len(d["badania"])}, pól {len(d["pola"])}, {OUT.stat().st_size // 1024} KB')
