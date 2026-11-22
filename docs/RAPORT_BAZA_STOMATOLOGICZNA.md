@@ -85,3 +85,12 @@ Odrzucone – nie umieszczać: 23.08 (instruktaż), 23.1001 (fluoryzacja indywid
 Uwagi pozostawione bez zmian (decyzja: zatwierdzone bez poprawek): szablony 23.1009–23.1011 i 23.1021 zawierają zdania puw/PUW lub „Fluorki” nieobowiązkowe w danym wieku – puste pole usuwa całe zdanie. Kod produktu przy 23.1003 (`5.13.00.2310090`) nadal „WYMAGA WERYFIKACJI” w audycie NFZ.
 
 Stan: 75 verified, 64 draft, 0 requires_expert_review, 67 odrzucone, 57 pominięte, 3 nadrzędne (razem 266).
+
+### Weryfikacja endodoncji (22.11.2026)
+
+Zatwierdzone (`verified`), każda karta pojedynczo: 21 kart – 23.1201, 23.1203–23.1205, 23.1301–23.1309, 23.1311–23.1314, 23.13141, 23.13142, 23.13143, 23.13149.
+Poprawka na polecenie Patryka: szablony 23.1203 i 23.1204 (amputacja przyżyciowa) – usunięte pola „Kanały” i „Płukanie” (przy pulpotomii zbędne).
+23.1314 (kod nadrzędny MTA) – karta zatwierdzona decyzją Patryka (rozlicza się podkody 23.13141–23.13149).
+**Uwagi do audytu NFZ (nie zmienione w tym etapie):** 23.1313 (3 kanały ze zgorzelą) – brak w wykazie zał. 1b odczytanym w audycie, choć 23.1312 jest – sprawdzić w zarządzeniu; kod produktu 23.13142 `5.13.00.2314142` – „WYMAGA WERYFIKACJI”; kody produktów 23.1203–23.1205, 23.1308, 23.1309, 23.1312 – nieodczytane.
+
+Stan: 96 verified, 43 draft, 67 odrzucone, 57 pominięte, 3 nadrzędne (razem 266).

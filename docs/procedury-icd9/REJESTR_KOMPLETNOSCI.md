@@ -8,9 +8,9 @@ Wersja danych: 2026.11.22-1.
 
 | Status | Procedury |
 |---|---|
-| draft | 64 |
+| draft | 43 |
 | not_started | 127 |
-| verified | 75 |
+| verified | 96 |
 | **razem** | **266** |
 
 Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: draft, BAD-BLONA: draft, BAD-UZEBIENIE: draft, BAD-PRZYZEBIE: draft, BAD-HIGIENA: draft, BAD-ZGRYZ: draft, BAD-SSZ: draft, BAD-ZYWOTNOSC: draft, BAD-RTG: draft, BAD-PO-URAZIE: draft, BAD-DZIECKO: draft, BAD-STOMATOLOGICZNE: draft, BAD-KONTROLNE: draft, BAD-PRZED-LECZENIEM: draft, BAD-PO-LECZENIU: draft).
@@ -82,34 +82,34 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.1110 | Wypełnienie ubytku korony zęba na 2 powierzchniach | leczenie próchnicy | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1111 | Wypełnienie ubytku korony zęba na 3 powierzchniach | leczenie próchnicy | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1112 | Wypełnienie ubytku korony zęba na więcej niż 3 powierzchniach | leczenie próchnicy | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1201 | Trepanacja martwego zęba z zaopatrzeniem ubytku opatrunkiem | endodoncja – leczenie miazgi | draft |  |
+| 23.1201 | Trepanacja martwego zęba z zaopatrzeniem ubytku opatrunkiem | endodoncja – leczenie miazgi | verified |  |
 | 23.1202 | Dewitalizacja miazgi zęba z zaopatrzeniem ubytku opatrunkiem | endodoncja – leczenie miazgi | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1203 | Amputacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem | endodoncja – leczenie miazgi | draft |  |
-| 23.1204 | Amputacja przyżyciowa miazgi | endodoncja – leczenie miazgi | draft |  |
-| 23.1205 | Ekstyrpacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem | endodoncja – leczenie miazgi | draft |  |
+| 23.1203 | Amputacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem | endodoncja – leczenie miazgi | verified |  |
+| 23.1204 | Amputacja przyżyciowa miazgi | endodoncja – leczenie miazgi | verified |  |
+| 23.1205 | Ekstyrpacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem | endodoncja – leczenie miazgi | verified |  |
 | 23.1206 | Ekstyrpacja przyżyciowa miazgi | endodoncja – leczenie miazgi | verified |  |
 | 23.1207 | Amputacja zdewitalizowanej miazgi zęba | endodoncja – leczenie miazgi | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1208 | Ekstyrpacja zdewitalizowanej miazgi zęba z nieuformowanym korzeniem | endodoncja – leczenie miazgi | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1209 | Ekstyrpacja zdewitalizowanej miazgi zęba | endodoncja – leczenie miazgi | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
 | 23.1210 | Amputacja zdewitalizowanej miazgi zęba mlecznego | endodoncja – leczenie miazgi | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1301 | Całkowite opracowanie i dezynfekcja kanału | endodoncja – leczenie kanałowe | draft |  |
-| 23.1302 | Leczenie zgorzeli | endodoncja – leczenie kanałowe | draft |  |
-| 23.1303 | Leczenie zgorzeli całkowitej niepowikłanej zęba z nieuformowanym korzeniem | endodoncja – leczenie kanałowe | draft |  |
-| 23.1304 | Dodatkowe fizykochemiczne metody udrażniania i opracowywania kanału | endodoncja – leczenie kanałowe | draft |  |
-| 23.1305 | Ponowne udrożnienie wypełnionego kanału | endodoncja – leczenie kanałowe | draft |  |
-| 23.1306 | Czasowe wypełnienie kanału | endodoncja – leczenie kanałowe | draft |  |
-| 23.1307 | Wypełnienie kanału | endodoncja – leczenie kanałowe | draft |  |
-| 23.1308 | Leczenie endodontyczne z wypełnieniem 2 kanałów | endodoncja – leczenie kanałowe | draft |  |
-| 23.1309 | Leczenie endodontyczne z wypełnieniem 3 kanałów | endodoncja – leczenie kanałowe | draft |  |
+| 23.1301 | Całkowite opracowanie i dezynfekcja kanału | endodoncja – leczenie kanałowe | verified |  |
+| 23.1302 | Leczenie zgorzeli | endodoncja – leczenie kanałowe | verified |  |
+| 23.1303 | Leczenie zgorzeli całkowitej niepowikłanej zęba z nieuformowanym korzeniem | endodoncja – leczenie kanałowe | verified |  |
+| 23.1304 | Dodatkowe fizykochemiczne metody udrażniania i opracowywania kanału | endodoncja – leczenie kanałowe | verified |  |
+| 23.1305 | Ponowne udrożnienie wypełnionego kanału | endodoncja – leczenie kanałowe | verified |  |
+| 23.1306 | Czasowe wypełnienie kanału | endodoncja – leczenie kanałowe | verified |  |
+| 23.1307 | Wypełnienie kanału | endodoncja – leczenie kanałowe | verified |  |
+| 23.1308 | Leczenie endodontyczne z wypełnieniem 2 kanałów | endodoncja – leczenie kanałowe | verified |  |
+| 23.1309 | Leczenie endodontyczne z wypełnieniem 3 kanałów | endodoncja – leczenie kanałowe | verified |  |
 | 23.1310 | Leczenie endodontyczne metodą amputacyjno-ekstyrpacyjną | endodoncja – leczenie kanałowe | not_started | Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji – zabieg specjalistyczny / metoda historyczna. Treść karty zachowana w danych; przywrócenie = status requires_expert_review. |
-| 23.1311 | Leczenie endodontyczne zęba z wypełnieniem 1 kanału ze zgorzelą miazgi | endodoncja – leczenie kanałowe | draft |  |
-| 23.1312 | Leczenie endodontyczne zęba z wypełnieniem 2 kanałów ze zgorzelą miazgi | endodoncja – leczenie kanałowe | draft |  |
-| 23.1313 | Leczenie endodontyczne zęba z wypełnieniem 3 kanałów ze zgorzelą miazgi | endodoncja – leczenie kanałowe | draft |  |
-| 23.1314 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA | endodoncja – leczenie kanałowe | draft |  |
-| 23.13141 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 1 kanału | endodoncja – leczenie kanałowe | draft |  |
-| 23.13142 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 2 kanałów | endodoncja – leczenie kanałowe | draft |  |
-| 23.13143 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 3 kanałów | endodoncja – leczenie kanałowe | draft |  |
-| 23.13149 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA - inne | endodoncja – leczenie kanałowe | draft |  |
+| 23.1311 | Leczenie endodontyczne zęba z wypełnieniem 1 kanału ze zgorzelą miazgi | endodoncja – leczenie kanałowe | verified |  |
+| 23.1312 | Leczenie endodontyczne zęba z wypełnieniem 2 kanałów ze zgorzelą miazgi | endodoncja – leczenie kanałowe | verified |  |
+| 23.1313 | Leczenie endodontyczne zęba z wypełnieniem 3 kanałów ze zgorzelą miazgi | endodoncja – leczenie kanałowe | verified |  |
+| 23.1314 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA | endodoncja – leczenie kanałowe | verified |  |
+| 23.13141 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 1 kanału | endodoncja – leczenie kanałowe | verified |  |
+| 23.13142 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 2 kanałów | endodoncja – leczenie kanałowe | verified |  |
+| 23.13143 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 3 kanałów | endodoncja – leczenie kanałowe | verified |  |
+| 23.13149 | Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA - inne | endodoncja – leczenie kanałowe | verified |  |
 | 23.14 | Szczególne trudności w preparowaniu/ wypełnianiu zębów - usunięcie przerośniętej brodawki międzyzębowej, zatamowanie krwawienia z brodawki, separowanie zębów itp. | stomatologia zachowawcza | draft |  |
 | 23.1501 | Odbudowa zniszczonego, złamanego kąta w zębach siecznych | odbudowa i estetyka | draft |  |
 | 23.1502 | Całkowite opracowanie i odbudowa ubytku zęba na 1 powierzchni | odbudowa i estetyka | verified |  |
