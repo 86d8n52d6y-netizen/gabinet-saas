@@ -56,7 +56,10 @@
       return lab + '<input id="' + id + '" data-f="' + f + '" list="ozk-icd" value="' + esc(v) + '" placeholder="wybierz z podpowiedzi albo wpisz">' +
         '<datalist id="ozk-icd">' + k.icd10.map(r => '<option value="' + esc(r[0] + (r[1] ? ' ' + r[1] : '')) + '">' + esc(r[2] || '') + '</option>').join('') + '</datalist>';
     switch (d.t) {
-      case 'wybor': return lab + '<select id="' + id + '" data-f="' + f + '"><option value="">— (pomiń zdanie)</option>' + (d.o || []).map(o => '<option' + (o === v ? ' selected' : '') + '>' + esc(o) + '</option>').join('') + '</select>';
+      case 'wybor': {   // lista podpowiedzi + własny tekst (np. zamiast „zmiana – opis” wpisz opis zmiany); puste = zdanie pominięte
+        const lid = 'ozk-l-' + f;
+        return lab + '<input id="' + id + '" data-f="' + f + '" list="' + lid + '" value="' + esc(v) + '" placeholder="wybierz z listy albo wpisz" autocomplete="off">' +
+          '<datalist id="' + lid + '">' + (d.o || []).map(o => '<option value="' + esc(o) + '">').join('') + '</datalist>'; }
       case 'wybor_wielokrotny': { const sel = String(v).split(', ').filter(Boolean);
         return '<label>' + esc(d.e) + '</label><div class="ozk-chk">' + (d.o || []).map((o, i) => '<label><input type="checkbox" data-fm="' + f + '" value="' + esc(o) + '"' + (sel.includes(o) ? ' checked' : '') + ' id="' + id + '-' + i + '">' + esc(o) + '</label>').join('') + '</div>'; }
       case 'powierzchnie': { const sel = String(v);
@@ -84,7 +87,7 @@
   function rysuj() {
     const box = document.getElementById('ozk-box'); if (!box) return;
     const k = st.k;
-    let h = '<h2><span>Opis z karty procedury</span><button type="button" class="ozk-no" data-ozk-x aria-label="Zamknij" style="border:0;background:none;font-size:20px;cursor:pointer;color:inherit">×</button></h2>' +
+    let h = '<h2><span>' + (st.tab === 'badanie' ? 'Opis badania' : 'Opis z karty procedury') + '</span><button type="button" class="ozk-no" data-ozk-x aria-label="Zamknij" style="border:0;background:none;font-size:20px;cursor:pointer;color:inherit">×</button></h2>' +
       '<p class="ozk-n">Tylko karty zatwierdzone przez Ciebie. Zdanie bez wartości jest pomijane; brak w częściowo wypełnionym zdaniu = [UZUPEŁNIJ]. Tekst trafi do opisu – możesz go poprawić przed zapisem.</p>';
     h += '<div class="ozk-seg" role="tablist" aria-label="Rodzaj opisu" style="margin-bottom:8px">' + [['karta', 'Karta procedury'], ['badanie', 'Badanie']].map(([t, n]) => '<button type="button" role="tab" data-ozk-tab="' + t + '" data-testid="ozk-tab-' + t + '" aria-pressed="' + (st.tab === t) + '" aria-selected="' + (st.tab === t) + '">' + n + '</button>').join('') + '</div>';
     if (st.tab === 'badanie') {
@@ -94,7 +97,7 @@
         '<label>Wariant opisu</label><div class="ozk-seg" role="group" aria-label="Wariant opisu" data-testid="ozk-warianty">' + WAR.map(([w, n]) => '<button type="button" data-war="' + w + '" aria-pressed="' + (w === st.war) + '">' + n + '</button>').join('') + '</div>' +
         wyb.map(b => { const n = st.norma.includes(b.id), P = [...new Set([...b.szablony[st.war].matchAll(PL)].map(m => m[1]))];
           return '<section style="border-top:1px solid var(--g-line,var(--line,#ddd));margin-top:12px;padding-top:8px" data-testid="ozk-el-' + b.id + '"><h3 style="margin:0;font-size:15px;display:flex;justify-content:space-between;align-items:center;gap:8px">' + esc(b.pelna) +
-            '<span class="ozk-seg"><button type="button" data-norma="' + b.id + '" aria-pressed="' + n + '" title="Wstawia przykład wyniku prawidłowego z karty badania">w normie' + (n ? ' ✓' : '') + '</button></span></h3>' +
+            (b.norma ? '<span class="ozk-seg"><button type="button" data-norma="' + b.id + '" aria-pressed="' + n + '" title="Wstawia przykład wyniku prawidłowego z karty badania">w normie' + (n ? ' ✓' : '') + '</button></span>' : '') + '</h3>' +
             (n ? '<p style="margin:6px 0 0;opacity:.85">' + esc(b.norma) + '</p>' : '<div class="ozk-g">' + P.map(f => '<div>' + poleHTML(f, { icd10: [] }) + '</div>').join('') + '</div>') + '</section>'; }).join('') +
         (wyb.length ? '' : '<p style="opacity:.75">Zaznacz co najmniej jeden element badania.</p>') +
         '<label>Podgląd</label><div class="ozk-pv" data-testid="ozk-podglad" id="ozk-pv">' + esc(tekst()) + '</div>' +
@@ -124,7 +127,7 @@
     if (ok !== true) { alert(typeof ok === 'string' ? ok : 'Nie można teraz wstawić opisu.'); return; }
     css(); st = { tab: 'karta', k: null, war: 'standardowy', w: {}, q: '', bsel: zestaw(), norma: [], focus: document.activeElement };
     const bg = document.createElement('div'); bg.className = 'ozk-bg'; bg.id = 'ozk-bg';
-    bg.innerHTML = '<div class="ozk" id="ozk-box" role="dialog" aria-modal="true" aria-label="Opis z karty procedury" data-testid="ozk"></div>';
+    bg.innerHTML = '<div class="ozk" id="ozk-box" role="dialog" aria-modal="true" aria-label="Opis z karty procedury lub badania" data-testid="ozk"></div>';
     document.body.appendChild(bg); rysuj(); document.addEventListener('keydown', klaw);
     const q = document.getElementById('ozk-q'); if (q) q.focus();
     bg.addEventListener('click', e => {

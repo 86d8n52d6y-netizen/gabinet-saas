@@ -8,12 +8,20 @@ Plik ładowany po zalogowaniu (ASSETS w src/lib/nfz/generator.ts); składanie op
     python3 scripts/karty_opisy_przegladarka.py
 """
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'generator' / 'karty-opisy.js'
 J = lambda *p: json.loads((ROOT / 'data').joinpath(*p).read_text(encoding='utf-8'))
 WARIANTY = ('standardowy', 'skrocony', 'rozszerzony')
+
+
+def norma(t):
+    """Przykład wyniku prawidłowego do przycisku „w normie”: bez dopisków redakcyjnych w nawiasie („(Przykład – wpisuje lekarz.)”),
+    a dla badań bez wyniku prawidłowego („Nie dotyczy…”, zestawienie badań składowych) – pusty (przycisk ukryty)."""
+    t = re.sub(r'\s*\((Przykład|Wpisuje)[^()]*\)\s*$', '', t.strip())
+    return '' if t.startswith(('Nie dotyczy', 'Zestawienie')) else t
 
 
 def zbuduj():
@@ -48,7 +56,7 @@ def zbuduj():
         for s in sz.values():
             uzyte.update(s['pola'])
         badania.append({'id': b['id'], 'nazwa': b['nazwa_krotka'], 'pelna': b['nazwa'], 'szablony': {w: sz[w]['tekst'] for w in WARIANTY},
-                        'norma': b.get('wynik_prawidlowy') or ''})
+                        'norma': norma(b.get('wynik_prawidlowy') or '')})
     brak = sorted(f for f in uzyte if f not in pola)
     if brak:
         raise SystemExit(f'Pola użyte w szablonach bez definicji: {brak}')
