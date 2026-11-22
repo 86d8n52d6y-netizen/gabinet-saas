@@ -118,3 +118,8 @@ Przywrócone i zatwierdzone (25): 23.0103, 23.0104, 23.0106, 23.02, 23.0404, 23.
 Pozostają odrzucone: 62. Pominięte kody (57: ortodoncja, chirurgia szczękowo-twarzowa, znieczulenie ogólne, epitezy) – bez zmian, decyzja: nie opracowywać.
 
 **Stan:** 144 verified, 0 draft, 62 odrzucone, 57 pominięte, 3 nadrzędne (razem 266).
+
+### Weryfikacja badań (22.11.2026)
+
+Patryk zatwierdził wszystkie 17 badań (`verified`, z osobą i datą – schemat badań rozszerzony o `zweryfikowal`, `zweryfikowano`, `uzasadnienie_statusu`; walidator wymaga osoby i daty przy `verified`). Dodany mechanizm odrzucania badań (status `not_started` + „Odrzucone…” → ukryte w katalogu, jak karty procedur) – obecnie nieużywany.
+**Prośba Patryka – nowa funkcja (do zaplanowania):** w aplikacji wybór, które części badania mają się pojawić w opisie (np. bez wywiadu i bez oceny zmian na błonie, ale z badaniem wewnątrz- i zewnątrzustnym).

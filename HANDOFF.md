@@ -260,7 +260,8 @@ Commit + PR + **scalenie przez Claude bez pytania** dla gotowych, przetestowanyc
 
 **Karty procedur (266 kodów):** 144 `verified`, 0 `draft`, 62 odrzucone (status `not_started` + uzasadnienie „Odrzucone decyzją Patryka…”, ukryte, treść zachowana), 57 pominiętych, 3 nadrzędne.
 **Sposób pokazywania do akceptacji (prośba Patryka 22.11.2026):** po 10 kart naraz – tabela 10 kart + pytania wielokrotnego wyboru (zaznaczone = wyjątek od domyślnej decyzji).
-Weryfikacja kart procedur zakończona 22.11.2026 (zostały do weryfikacji tylko badania – 17, draft).
+Weryfikacja kart procedur i 17 badań zakończona 22.11.2026 – nic nie zostało do weryfikacji.
+**Nowa funkcja do zaplanowania (prośba Patryka):** w aplikacji wybór, które części badania pojawiają się w opisie (np. odznaczam wywiad i zmiany na błonie, zostaje badanie wewn./zewn.). Uwagi do audytu NFZ: patrz `docs/RAPORT_BAZA_STOMATOLOGICZNA.md` (23.1313, kody produktów 23.13142, 23.1003 i nieodczytane).
 Sposób weryfikacji: grupy w pytaniach do klikania („Zatwierdzam” / pojedynczo / „Nie umieszczać”); verified = `zweryfikowal: "Patryk Barysz"`, `zweryfikowano: RRRR-MM-DD`; potem `python3 -I scripts/waliduj_baze.py --manifest`, `buduj_docs_bazy.py`, `baza_dane_przegladarka.py`, sekcja 7 w `docs/RAPORT_BAZA_STOMATOLOGICZNA.md`, wiersz w `POSTEP.md`, build, `t_10`, pełna regresja, PR, merge.
 
 **Opisy NFZ (generator) a baza stomatologiczna – rozdzielone:** generator Opisów NFZ to nadal przeniesienie 1:1 ze starej aplikacji (teksty opisów i schematy bez zmian, test `genTxt` identyczny). Baza dodała tylko panel „Kontrola kompletności” (P41–P42a, nie trafia do opisu) i osobną stronę Katalogu procedur. Stara aplikacja `opisy-nfz` – nietknięta.

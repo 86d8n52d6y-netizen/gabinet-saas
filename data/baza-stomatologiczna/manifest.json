@@ -17,7 +17,7 @@
   },
   {
    "plik": "data/badania/examinations.json",
-   "sha256": "83f17718b9fe05989a0b8df15acaee1d91d231fb286a9765a6cbe658ff574711",
+   "sha256": "328ca28db11a05f18ab226b3b71ed8666e7ee11285897ef64800386d01b42ba7",
    "schemat": "data/baza-stomatologiczna/schemas/examinations.schema.json",
    "rekordy": 17
   },

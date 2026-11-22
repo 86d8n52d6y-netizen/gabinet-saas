@@ -13,7 +13,7 @@ export default async function KatalogProcedur({ searchParams }: { searchParams: 
   const opracowane = b.procedury.filter(p => p.status !== 'not_started');
   const proc = opracowane.filter(p => (!status || p.status === status) && pasuje(`${p.kod} ${p.nazwa_oficjalna} ${p.nazwa_krotka ?? ''} ${(p.kody_aplikacji ?? []).join(' ')}`));
   const grupy = [...new Set(proc.map(p => p.kategoria))];
-  const bad = b.badania.filter(x => pasuje(`${x.nazwa} ${x.nazwa_krotka}`));
+  const bad = b.badania.filter(x => x.status !== 'not_started' && pasuje(`${x.nazwa} ${x.nazwa_krotka}`));
   const pominiete = b.procedury.filter(p => p.status === 'not_started').length;
   return (
     <main className="wrap">

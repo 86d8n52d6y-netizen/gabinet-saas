@@ -6,7 +6,7 @@ Wersja danych: 2026.11.22-1. Badań: 17. Status każdego badania – w nagłówk
 
 ## Badanie podmiotowe (wywiad lekarski stomatologiczny) (`BAD-WYWIAD`)
 
-Krótko: **Wywiad** · kategoria: podmiotowe · status: **draft**
+Krótko: **Wywiad** · kategoria: podmiotowe · status: **verified**
 
 **Cel.** Stan zdrowia ogólnego i jamy ustnej z perspektywy pacjenta, czynniki ryzyka i przeciwwskazania do leczenia.
 
@@ -76,7 +76,7 @@ Krótko: **Wywiad** · kategoria: podmiotowe · status: **draft**
 
 ## Badanie przedmiotowe zewnątrzustne (`BAD-ZEWNATRZUSTNE`)
 
-Krótko: **Zewnątrzustne** · kategoria: przedmiotowe · status: **draft**
+Krótko: **Zewnątrzustne** · kategoria: przedmiotowe · status: **verified**
 
 **Cel.** Twarz, skóra, wargi, węzły chłonne, stawy skroniowo-żuchwowe i mięśnie żucia.
 
@@ -141,7 +141,7 @@ Krótko: **Zewnątrzustne** · kategoria: przedmiotowe · status: **draft**
 
 ## Badanie przedmiotowe wewnątrzustne (tkanki miękkie) (`BAD-WEWNATRZUSTNE`)
 
-Krótko: **Wewnątrzustne** · kategoria: przedmiotowe · status: **draft**
+Krótko: **Wewnątrzustne** · kategoria: przedmiotowe · status: **verified**
 
 **Cel.** Błona śluzowa przedsionka, policzków, języka, dna jamy ustnej, podniebienia, cieśni gardła; ślinianki i wędzidełka.
 
@@ -208,7 +208,7 @@ Krótko: **Wewnątrzustne** · kategoria: przedmiotowe · status: **draft**
 
 ## Ocena zmiany na błonie śluzowej jamy ustnej (`BAD-BLONA`)
 
-Krótko: **Błona śluzowa – zmiana** · kategoria: specjalistyczne · status: **draft**
+Krótko: **Błona śluzowa – zmiana** · kategoria: specjalistyczne · status: **verified**
 
 **Cel.** Opis morfologiczny stwierdzonej zmiany i ocena jej charakteru.
 
@@ -275,7 +275,7 @@ Krótko: **Błona śluzowa – zmiana** · kategoria: specjalistyczne · status:
 
 ## Badanie uzębienia (stan zębów stałych i mlecznych) (`BAD-UZEBIENIE`)
 
-Krótko: **Uzębienie** · kategoria: przedmiotowe · status: **draft**
+Krótko: **Uzębienie** · kategoria: przedmiotowe · status: **verified**
 
 **Cel.** Każdy ząb: obecność, próchnica (aktywność, głębokość), wypełnienia i ich szczelność, uzupełnienia protetyczne, leczenie kanałowe, zmiany niepróchnicowe.
 
@@ -343,7 +343,7 @@ Krótko: **Uzębienie** · kategoria: przedmiotowe · status: **draft**
 
 ## Ocena stanu przyzębia (`BAD-PRZYZEBIE`)
 
-Krótko: **Przyzębie** · kategoria: przedmiotowe · status: **draft**
+Krótko: **Przyzębie** · kategoria: przedmiotowe · status: **verified**
 
 **Cel.** Dziąsło i tkanki przyzębia: krwawienie, kieszonki, utrata przyczepu, recesje, ruchomość, furkacje.
 
@@ -410,7 +410,7 @@ Krótko: **Przyzębie** · kategoria: przedmiotowe · status: **draft**
 
 ## Ocena higieny jamy ustnej (wskaźniki płytki i stanu dziąseł) (`BAD-HIGIENA`)
 
-Krótko: **Higiena** · kategoria: przedmiotowe · status: **draft**
+Krótko: **Higiena** · kategoria: przedmiotowe · status: **verified**
 
 **Cel.** Ilość i rozmieszczenie płytki nazębnej, złogi, stan zapalny dziąseł.
 
@@ -471,7 +471,7 @@ Krótko: **Higiena** · kategoria: przedmiotowe · status: **draft**
 
 ## Badanie zgryzu i warunków zwarciowych (`BAD-ZGRYZ`)
 
-Krótko: **Zgryz** · kategoria: przedmiotowe · status: **draft**
+Krótko: **Zgryz** · kategoria: przedmiotowe · status: **verified**
 
 **Cel.** Relacje łuków zębowych w zwarciu i ruchach żuchwy.
 
@@ -532,7 +532,7 @@ Krótko: **Zgryz** · kategoria: przedmiotowe · status: **draft**
 
 ## Badanie stawów skroniowo-żuchwowych i mięśni żucia (`BAD-SSZ`)
 
-Krótko: **SSŻ** · kategoria: specjalistyczne · status: **draft**
+Krótko: **SSŻ** · kategoria: specjalistyczne · status: **verified**
 
 **Cel.** Funkcja i dolegliwości stawów skroniowo-żuchwowych oraz mięśni żucia.
 
@@ -596,7 +596,7 @@ Krótko: **SSŻ** · kategoria: specjalistyczne · status: **draft**
 
 ## Badanie żywotności zęba (testy miazgowe i okołowierzchołkowe) (`BAD-ZYWOTNOSC`)
 
-Krótko: **Żywotność zęba** · kategoria: specjalistyczne · status: **draft**
+Krótko: **Żywotność zęba** · kategoria: specjalistyczne · status: **verified**
 
 **Cel.** Reakcja miazgi na bodźce i stan tkanek okołowierzchołkowych.
 
@@ -661,7 +661,7 @@ Krótko: **Żywotność zęba** · kategoria: specjalistyczne · status: **draft
 
 ## Ocena radiologiczna (opis zdjęcia RTG) (`BAD-RTG`)
 
-Krótko: **Opis RTG** · kategoria: specjalistyczne · status: **draft**
+Krótko: **Opis RTG** · kategoria: specjalistyczne · status: **verified**
 
 **Cel.** Struktury niewidoczne klinicznie: przestrzenie styczne, korzenie, ozębna, kość wyrostka, zęby zatrzymane.
 
@@ -725,7 +725,7 @@ Krótko: **Opis RTG** · kategoria: specjalistyczne · status: **draft**
 
 ## Badanie stomatologiczne i kontrolne po urazie zęba (`BAD-PO-URAZIE`)
 
-Krótko: **Po urazie** · kategoria: specjalistyczne · status: **draft**
+Krótko: **Po urazie** · kategoria: specjalistyczne · status: **verified**
 
 **Cel.** Rodzaj i zakres urazu zębów i tkanek przyzębia, stan miazgi, tkanki miękkie.
 
@@ -790,7 +790,7 @@ Krótko: **Po urazie** · kategoria: specjalistyczne · status: **draft**
 
 ## Badanie stomatologiczne dziecka (`BAD-DZIECKO`)
 
-Krótko: **Badanie dziecka** · kategoria: dziecko · status: **draft**
+Krótko: **Badanie dziecka** · kategoria: dziecko · status: **verified**
 
 **Cel.** Uzębienie mleczne / mieszane, rozwój zgryzu, ryzyko próchnicy, nawyki, współpraca.
 
@@ -855,7 +855,7 @@ Krótko: **Badanie dziecka** · kategoria: dziecko · status: **draft**
 
 ## Badanie lekarskie stomatologiczne z instruktażem higieny jamy ustnej (23.0101) (`BAD-STOMATOLOGICZNE`)
 
-Krótko: **Badanie stomatologiczne** · kategoria: kontrolne · status: **draft**
+Krótko: **Badanie stomatologiczne** · kategoria: kontrolne · status: **verified**
 
 **Cel.** Pełna ocena stanu jamy ustnej: wywiad, badanie zewnątrz- i wewnątrzustne, uzębienie, przyzębie, higiena, zgryz; plan leczenia; instruktaż higieny.
 
@@ -921,7 +921,7 @@ Krótko: **Badanie stomatologiczne** · kategoria: kontrolne · status: **draft*
 
 ## Badanie lekarskie kontrolne (23.0102) (`BAD-KONTROLNE`)
 
-Krótko: **Badanie kontrolne** · kategoria: kontrolne · status: **draft**
+Krótko: **Badanie kontrolne** · kategoria: kontrolne · status: **verified**
 
 **Cel.** Zmiany od ostatniego badania, efekty leczenia, nowe ogniska chorobowe.
 
@@ -980,7 +980,7 @@ Krótko: **Badanie kontrolne** · kategoria: kontrolne · status: **draft**
 
 ## Kwalifikacja do leczenia (badanie przed zabiegiem) (`BAD-PRZED-LECZENIEM`)
 
-Krótko: **Przed leczeniem** · kategoria: kwalifikacja · status: **draft**
+Krótko: **Przed leczeniem** · kategoria: kwalifikacja · status: **verified**
 
 **Cel.** Wskazania, przeciwwskazania i ryzyko planowanego leczenia; świadoma zgoda.
 
@@ -1045,7 +1045,7 @@ Krótko: **Przed leczeniem** · kategoria: kwalifikacja · status: **draft**
 
 ## Badanie po zakończonym leczeniu (ocena wyniku) (`BAD-PO-LECZENIU`)
 
-Krótko: **Po leczeniu** · kategoria: kontrolne · status: **draft**
+Krótko: **Po leczeniu** · kategoria: kontrolne · status: **verified**
 
 **Cel.** Wynik zakończonego leczenia: objawy, funkcja, gojenie, obraz RTG.
 

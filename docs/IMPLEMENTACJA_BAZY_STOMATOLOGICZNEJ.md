@@ -89,7 +89,7 @@ Zasady importu: upsert po id; rekordy usunięte z JSON **nie są kasowane automa
 | Kody i nazwy ICD-9 | zgodne z ICD-9 PL 5.91 (walidator porównuje nazwę z plikiem Patryka) |
 | Warunki NFZ w kartach | wyliczone z audytu NFZ (statusy źródeł jak w audycie) |
 | Źródła kliniczne | 21 publikacji sprawdzonych w PubMed (PMID; DOI gdy zwrócony) |
-| Treść kart i badań | 144 kart `verified` (Patryk, 22.11.2026), pozostałe odrzucone lub pominięte; badania – draft |
+| Treść kart i badań | 144 kart `verified` (Patryk, 22.11.2026), pozostałe odrzucone lub pominięte; badania – 17 `verified` |
 | Wymagania prawne dokumentacji | oparte na `SRC-DU-2026-1391` – **akt nieodczytany w audycie (wymaga weryfikacji)** |
 | Nazwy ICD-10 | robocze (audyt, N8) – do porównania z wydaniem CeZ |
 

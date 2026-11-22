@@ -6,6 +6,8 @@ t = T(); chk = t.chk
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..')
 PROC = json.load(open(os.path.join(ROOT, 'data', 'procedury-icd9', 'procedures.json')))['procedury']
 OPR = [p for p in PROC if p['status'] != 'not_started']
+BAD = json.load(open(os.path.join(ROOT, 'data', 'badania', 'examinations.json')))['badania']
+BAD_WID = [b for b in BAD if b['status'] != 'not_started']
 REJ = next(p for p in PROC if p.get('uzasadnienie_statusu', '').startswith('Odrzucone'))   # przykład karty odrzuconej
 DRAFT = next((p for p in PROC if p['status'] == 'draft'), None)   # przykład karty niezatwierdzonej (po pełnej weryfikacji 22.11.2026 – brak)
 
@@ -28,7 +30,7 @@ with sync_playwright() as p:
     txt = pg.inner_text('main')
     n_ver = sum(p['status'] == 'verified' for p in PROC)
     chk('Katalog procedur: strona z liczbą kart zweryfikowanych i informacją o wersji roboczej', '/katalog-procedur' in pg.url and 'wersja robocza do weryfikacji' in txt and f'Zweryfikowane przez Patryka: {n_ver}' in txt, txt[:300])
-    chk('Katalog: 17 badań', pg.locator('[data-testid="kp-badania"] li').count() == 17)
+    chk(f'Katalog: {len(BAD_WID)} badań (bez odrzuconych)', pg.locator('[data-testid="kp-badania"] li').count() == len(BAD_WID), pg.locator('[data-testid="kp-badania"] li').count())
     chk(f'Katalog: {len(OPR)} kart procedur (opracowane)', pg.locator('[data-testid="kp-procedury"] li').count() == len(OPR), pg.locator('[data-testid="kp-procedury"] li').count())
     pg.goto(URL + '/katalog-procedur?q=23.1502')
     chk('Szukaj „23.1502” → jedna karta', pg.locator('[data-testid="kp-procedury"] li').count() == 1 and 'Odbudowa – 1 powierzchnia' in pg.inner_text('[data-testid="kp-procedury"]'))
@@ -57,6 +59,8 @@ with sync_playwright() as p:
     chk('Karta: sekcja NFZ z danych audytu', 'Świadczenie gwarantowane' in pg.inner_text('main') and 'tak' in pg.inner_text('main'))
     pg.goto(URL + '/katalog-procedur/BAD-PRZYZEBIE')
     chk('Badanie „Ocena stanu przyzębia”: przebieg, dokumentacja, szablony', 'Ocena stanu przyzębia' in pg.inner_text('h1') and 'Przebieg' in pg.inner_text('main') and pg.locator('[data-testid="szablon-rozszerzony"]').count() == 1)
+    pg.goto(URL + '/katalog-procedur/BAD-PRZYZEBIE')
+    chk('Badanie zatwierdzone: „zweryfikował: Patryk Barysz”', 'zweryfikował: Patryk Barysz' in pg.inner_text('main'))
     pg.goto(URL + '/katalog-procedur/PROC-23.2401')
     chk('Kod pominięty (ortodoncja) – status i uzasadnienie, bez karty', 'Pominięte decyzją Patryka' in pg.inner_text('main') and 'nie jest opracowana' in pg.inner_text('main'))
     r = pg.goto(URL + '/katalog-procedur/PROC-99.99')
