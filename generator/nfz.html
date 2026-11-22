@@ -619,13 +619,18 @@ function nfzIssues(){
     if(!isNaN(v)&&v<mn)err.push({codes:[c],msg:`${c}: czas ${num(v)} min jest krótszy niż minimum NFZ ${mn} min${nfzPackages(c)>1?` (${nfzPackages(c)} pakiety × ${NFZ_MIN[c]} min)`:''}.`});});
   ['ST01','ST02'].forEach(c=>{if(!has(c))return;const nowy=(str(state.a[c+'.wer'])||'nowy')==='nowy';teethOf(c).forEach(t=>{const an=getVal('T|'+c+'|'+t+'|'+(nowy?'an2':'an'))||[];
     if(!an.length)err.push({codes:[c],msg:`${c}, ząb ${t}: NFZ wymaga wskazania co najmniej jednego znieczulenia (lista procedur ST1) – inaczej pakiet nie zostanie rozliczony.`});});});
-  ['ST30E','ST30G'].forEach(c=>{if(has(c)&&a!==null&&a>=18)err.push({codes:[c],msg:`${c}: pakiety profesjonalnej higienizacji (ST30D–ST30G) są przeznaczone dla dzieci i młodzieży do 18 r.ż.`});});
+  ['ST30E','ST30G'].forEach(c=>{if(!has(c))return;if(a!==null&&a>=18)warn.push({codes:[c],msg:`${c}: pakiety profesjonalnej higienizacji (ST30D–ST30G) są przeznaczone dla dzieci i młodzieży do 18 r.ż. (Zarządzenie 60/2023/DSOZ t.j. od 1.09.2026, 95/2026/DSOZ). U dorosłych rozlicz ST30 (złogi twarde).`});
+    else if(a===null)warn.push({codes:[c],msg:`${c}: wpisz wiek pacjenta – pakiety ST30D–ST30G tylko do 18 r.ż. (Zarządzenie 60/2023/DSOZ t.j. od 1.09.2026, 95/2026/DSOZ).`});});
+  if(has('1006')){if(a!==null&&a>=18)warn.push({codes:['1006'],msg:'1006: lakierowanie zębów jest świadczeniem gwarantowanym tylko dla dzieci i młodzieży do 18 r.ż. (rozporządzenie MZ, t.j. Dz.U. 2025 poz. 615).'});
+    else if(a===null)warn.push({codes:['1006'],msg:'1006: wpisz wiek pacjenta – lakierowanie tylko do 18 r.ż. (Dz.U. 2025 poz. 615).'});}
   const vt=visitTime(),tot=vt.nfz;
   if(vt.decl>SLOT_MIN)warn.push({codes:[],msg:`Pakiety higienizacyjne zajmują ${num(vt.decl)} min – więcej niż standardowa wizyta ${SLOT_MIN} min${vt.extra?`; z doliczeniem 10 min za ekstrakcję / leczenie zachowawcze wizyta trwa ${vt.sug} min`:''}.`});
   if(vt.manual&&vt.hyg.length&&vt.val<vt.nfz)err.push({codes:[],msg:`Czas wizyty ${vt.val} min jest krótszy niż suma minimalnych czasów pakietów NFZ (${vt.nfz} min).`});
   else if(vt.manual&&vt.extra&&vt.val<vt.sug)warn.push({codes:[],msg:`Czas wizyty ${vt.val} min nie zawiera doliczenia 10 min za ekstrakcję / leczenie zachowawcze przy pakiecie higienizacyjnym – wg zasady powinno być ${vt.sug} min.`});
   else if(vt.manual&&vt.hyg.length&&vt.val<vt.decl)warn.push({codes:[],msg:`Czas wizyty ${vt.val} min jest krótszy niż czas pakietów higienizacyjnych wpisany w opisie (${num(vt.decl)} min).`});
   if(cs.some(c=>NFZ_MIN[c])&&(a===null||a<18))warn.push({codes:[],msg:'U dzieci i młodzieży do 18 r.ż. usuwanie złogów – nie częściej niż 1× na 6 miesięcy (komunikat NFZ). Sprawdź datę poprzedniego zabiegu.'});
+  if(['ST01','ST02','ST04'].some(has)&&Object.keys(PTS_AN).some(k=>parseInt(str(state.a['pt.an'+k]),10)>0))warn.push({codes:['ST01','ST02','ST04'].filter(has),msg:'Znieczulenie przy ekstrakcji i kiretażu jest wliczone w pakiet (Zarządzenie 60/2023/DSOZ t.j. od 1.09.2026, lista ST1). W „znieczulenia rozliczane osobno” wpisz tylko znieczulenia do wypełnień, 1105 lub 1206.'});
+  if(has('ST04')&&a!==null&&a<18)warn.push({codes:['ST04'],info:true,msg:'Informacja (wymaga weryfikacji): kiretaż u dzieci i młodzieży – komunikat NFZ z 22.07.2026 i stanowisko NIL są sprzeczne; stan prawny nieustalony. Sprawdź w OW NFZ przed rozliczeniem.'});
   cs.forEach(c=>{if(NFZ_LIMIT[c])warn.push({codes:[c],msg:`${c}: limit NFZ – ${NFZ_LIMIT[c]}.`,soft:true});});
   return {err,warn,tot,vt};
 }
@@ -635,7 +640,7 @@ function nfzBox(){
   if(!state.codes.length) return '<div id="nfz-box"></div>';
   const timeLine=tot?`<div class="note">Minimalny czas wg NFZ dla wybranych pakietów: <b>${tot} min</b> (pozostałe kody – zarządzenie nie określa minimum).${vt.extra?` Do czasu wizyty doliczono <b>10 min</b>: pakiet higienizacyjny i ${esc(vt.extraCodes.join(', '))} na jednej wizycie – raz, niezależnie od liczby zębów i procedur. Czas wizyty: <b>${vt.sug} min</b> (${vt.base} + 10).`:''}</div>`:'';
   if(!err.length&&!hard.length&&!timeLine) return '<div id="nfz-box"></div>';
-  return `<div id="nfz-box" class="nfz">${err.map(e=>`<div class="err" role="alert"><b>Błąd NFZ:</b> ${esc(e.msg)}</div>`).join('')}${hard.map(w=>`<div class="warn">${esc(w.msg)}</div>`).join('')}${timeLine}${err.length||hard.length?`<div class="nfz-src">${esc(NFZ_SRC)}</div>`:''}</div>`;
+  return `<div id="nfz-box" class="nfz">${err.map(e=>`<div class="err" role="alert"><b>Błąd NFZ:</b> ${esc(e.msg)}</div>`).join('')}${hard.map(w=>`<div class="${w.info?'note':'warn'}">${esc(w.msg)}</div>`).join('')}${timeLine}${err.length||hard.length?`<div class="nfz-src">${esc(NFZ_SRC)}</div>`:''}</div>`;
 }
 function refreshNfz(){const el=document.getElementById('nfz-box');if(el){const t=document.createElement('div');t.innerHTML=nfzBox();el.replaceWith(t.firstElementChild);}}
 

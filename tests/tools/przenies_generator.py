@@ -176,6 +176,21 @@ PATCHES = [
   ('P40c obsługa wyłącznika podsumowania',
    "  if(a==='basis'){",
    "  if(a==='sumopt'){cfg.sum=el.dataset.v!=='off';cfgSave();render();return;}\n  if(a==='basis'){"),
+  ('P30 audyt NFZ R-ST30DG-WIEK (decyzja Patryka D1=B, 22.11.2026): ST30E/ST30G u pacjenta ≥ 18 lat – ostrzeżenie zamiast błędu; bez wpisanego wieku – przypomnienie (źródło: Zarządzenie 60/2023/DSOZ t.j. od 1.09.2026, 95/2026/DSOZ)',
+   "  ['ST30E','ST30G'].forEach(c=>{if(has(c)&&a!==null&&a>=18)err.push({codes:[c],msg:`${c}: pakiety profesjonalnej higienizacji (ST30D–ST30G) są przeznaczone dla dzieci i młodzieży do 18 r.ż.`});});",
+   "  ['ST30E','ST30G'].forEach(c=>{if(!has(c))return;if(a!==null&&a>=18)warn.push({codes:[c],msg:`${c}: pakiety profesjonalnej higienizacji (ST30D–ST30G) są przeznaczone dla dzieci i młodzieży do 18 r.ż. (Zarządzenie 60/2023/DSOZ t.j. od 1.09.2026, 95/2026/DSOZ). U dorosłych rozlicz ST30 (złogi twarde).`});\n    else if(a===null)warn.push({codes:[c],msg:`${c}: wpisz wiek pacjenta – pakiety ST30D–ST30G tylko do 18 r.ż. (Zarządzenie 60/2023/DSOZ t.j. od 1.09.2026, 95/2026/DSOZ).`});});"),
+  ('P31 audyt NFZ R-LAKIER-01: lakierowanie 1006 u pacjenta ≥ 18 lat – ostrzeżenie; bez wieku – przypomnienie (źródło: rozporządzenie koszykowe, t.j. Dz.U. 2025 poz. 615)',
+   "  const vt=visitTime(),tot=vt.nfz;",
+   "  if(has('1006')){if(a!==null&&a>=18)warn.push({codes:['1006'],msg:'1006: lakierowanie zębów jest świadczeniem gwarantowanym tylko dla dzieci i młodzieży do 18 r.ż. (rozporządzenie MZ, t.j. Dz.U. 2025 poz. 615).'});\n    else if(a===null)warn.push({codes:['1006'],msg:'1006: wpisz wiek pacjenta – lakierowanie tylko do 18 r.ż. (Dz.U. 2025 poz. 615).'});}\n  const vt=visitTime(),tot=vt.nfz;"),
+  ('P32 audyt NFZ R-KIR-DZ (decyzja D4=A): kiretaż ST04 u dziecka – INFORMACJA „wymaga weryfikacji” (komunikat NFZ z 22.07.2026, stan prawny nieustalony)',
+   "  cs.forEach(c=>{if(NFZ_LIMIT[c])warn.push(",
+   "  if(has('ST04')&&a!==null&&a<18)warn.push({codes:['ST04'],info:true,msg:'Informacja (wymaga weryfikacji): kiretaż u dzieci i młodzieży – komunikat NFZ z 22.07.2026 i stanowisko NIL są sprzeczne; stan prawny nieustalony. Sprawdź w OW NFZ przed rozliczeniem.'});\n  cs.forEach(c=>{if(NFZ_LIMIT[c])warn.push("),
+  ('P33 audyt NFZ R-ZNI-02 (decyzja Patryka 22.11.2026 – ostrzeżenie): znieczulenie wpisane osobno przy ekstrakcji (ST01/ST02) lub kiretażu (ST04) – jest wliczone w pakiet; osobno tylko do wypełnienia, 1105 lub 1206 (źródło: Zarządzenie 60/2023/DSOZ t.j., zał. 1c/1d – lista ST1)',
+   "  if(has('ST04')&&a!==null&&a<18)warn.push(",
+   "  if(['ST01','ST02','ST04'].some(has)&&Object.keys(PTS_AN).some(k=>parseInt(str(state.a['pt.an'+k]),10)>0))warn.push({codes:['ST01','ST02','ST04'].filter(has),msg:'Znieczulenie przy ekstrakcji i kiretażu jest wliczone w pakiet (Zarządzenie 60/2023/DSOZ t.j. od 1.09.2026, lista ST1). W „znieczulenia rozliczane osobno” wpisz tylko znieczulenia do wypełnień, 1105 lub 1206.'});\n  if(has('ST04')&&a!==null&&a<18)warn.push("),
+  ('P34 komunikaty NFZ: INFORMACJA (reguły „wymaga weryfikacji”) wyświetlana jako notatka, nie ostrzeżenie (D4=A)',
+   "${hard.map(w=>`<div class=\"warn\">${esc(w.msg)}</div>`).join('')}",
+   "${hard.map(w=>`<div class=\"${w.info?'note':'warn'}\">${esc(w.msg)}</div>`).join('')}"),
 ]
 
 PATCHES_PRYW = [
