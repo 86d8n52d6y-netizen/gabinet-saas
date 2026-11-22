@@ -94,3 +94,11 @@ Poprawka na polecenie Patryka: szablony 23.1203 i 23.1204 (amputacja przyżyciow
 **Uwagi do audytu NFZ (nie zmienione w tym etapie):** 23.1313 (3 kanały ze zgorzelą) – brak w wykazie zał. 1b odczytanym w audycie, choć 23.1312 jest – sprawdzić w zarządzeniu; kod produktu 23.13142 `5.13.00.2314142` – „WYMAGA WERYFIKACJI”; kody produktów 23.1203–23.1205, 23.1308, 23.1309, 23.1312 – nieodczytane.
 
 Stan: 96 verified, 43 draft, 67 odrzucone, 57 pominięte, 3 nadrzędne (razem 266).
+
+### Weryfikacja periodontologii, odbudowy i chirurgii (22.11.2026)
+
+Zatwierdzone pojedynczo (14): perio 23.16022, 23.1604, 23.1609, 23.1611, 23.1615; odbudowa 23.1501, 23.1506, 23.1507, 23.1511, 23.1512; chirurgia 23.1703, 23.1704, 23.1806, 23.1815.
+Odrzucone – nie umieszczać (11): 23.1603, 23.1612, 23.1616, 23.1617, 23.1620, 23.1508, 23.1509, 23.1510, 23.1809, 23.1810, 23.1813.
+Uwagi: 23.1501 i 23.1507 opisują podobny zabieg (w NFZ rozliczana 23.1507) – obie zatwierdzone decyzją Patryka; 23.1615 – świadczenie gwarantowane bez odczytanego kodu produktu (audyt NFZ).
+
+Stan: 110 verified, 18 draft, 78 odrzucone, 57 pominięte, 3 nadrzędne (razem 266).

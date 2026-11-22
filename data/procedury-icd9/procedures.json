@@ -13159,7 +13159,7 @@
    "kod": "23.1501",
    "nazwa_oficjalna": "Odbudowa zniszczonego, złamanego kąta w zębach siecznych",
    "kategoria": "odbudowa i estetyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -13396,7 +13396,9 @@
     "SRC-PRAKTYKA",
     "SRC-KLIN-IADT-ZLAM-2020"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1502",
@@ -14467,7 +14469,7 @@
    "kod": "23.1506",
    "nazwa_oficjalna": "Całkowite opracowanie i odbudowa rozległego ubytku na więcej niż 3 powierzchniach",
    "kategoria": "odbudowa i estetyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -14706,14 +14708,16 @@
     "SRC-KLIN-ICDAS-2007",
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1507",
    "kod": "23.1507",
    "nazwa_oficjalna": "Całkowite opracowanie i odbudowa zniszczonego kąta w zębach siecznych",
    "kategoria": "odbudowa i estetyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -14952,14 +14956,16 @@
     "SRC-KLIN-ICDAS-2007",
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1508",
    "kod": "23.1508",
    "nazwa_oficjalna": "Kosmetyczne pokrycie niedorozwoju szkliwa",
    "kategoria": "odbudowa i estetyka",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -15105,14 +15111,15 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1509",
    "kod": "23.1509",
    "nazwa_oficjalna": "Kosmetyczna korekta przebarwienia zębiny w zębach przednich",
    "kategoria": "odbudowa i estetyka",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -15246,14 +15253,15 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1510",
    "kod": "23.1510",
    "nazwa_oficjalna": "Likwidacja diastemy",
    "kategoria": "odbudowa i estetyka",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -15387,14 +15395,15 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1511",
    "kod": "23.1511",
    "nazwa_oficjalna": "Wybielanie zęba metodą wewnętrzną",
    "kategoria": "odbudowa i estetyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -15514,14 +15523,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1512",
    "kod": "23.1512",
    "nazwa_oficjalna": "Wybielanie grupy zębów metodą zewnętrzną",
    "kategoria": "odbudowa i estetyka",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -15638,7 +15649,9 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1601",
@@ -16100,7 +16113,7 @@
    "kod": "23.16022",
    "nazwa_oficjalna": "Usunięcie złogów nazębnych twardych ze wszystkich zębów",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -16235,14 +16248,16 @@
     "SRC-KLIN-EFP-S3-2020",
     "SRC-NFZ-KOM-9017"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1603",
    "kod": "23.1603",
    "nazwa_oficjalna": "Polerowanie zębów",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -16308,14 +16323,15 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1604",
    "kod": "23.1604",
    "nazwa_oficjalna": "Płukanie kieszonki dziąsłowej i aplikacja leku",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -16484,7 +16500,9 @@
    "zrodla": [
     "SRC-KLIN-EFP-S3-2020"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1605",
@@ -17112,7 +17130,7 @@
    "kod": "23.1609",
    "nazwa_oficjalna": "Gingwoplastyka",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -17280,7 +17298,9 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1610",
@@ -17463,7 +17483,7 @@
    "kod": "23.1611",
    "nazwa_oficjalna": "Podcięcie wędzidełka, wargi, języka, policzka",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -17624,14 +17644,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1612",
    "kod": "23.1612",
    "nazwa_oficjalna": "Plastyka wędzidełka ,wargi ,policzka",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -17792,7 +17814,8 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1613",
@@ -18147,7 +18170,7 @@
    "kod": "23.1615",
    "nazwa_oficjalna": "Unieruchomienie zębów ligaturą drucianą",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -18323,14 +18346,16 @@
     "SRC-KLIN-IADT-ZLAM-2020",
     "SRC-KLIN-EFP-S3-2020"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1616",
    "kod": "23.1616",
    "nazwa_oficjalna": "Unieruchomienie zębów materiałem złożonym (kompozytowym)",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -18507,14 +18532,15 @@
     "SRC-KLIN-IADT-ZLAM-2020",
     "SRC-KLIN-EFP-S3-2020"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1617",
    "kod": "23.1617",
    "nazwa_oficjalna": "Unieruchomienie zębów szyną z materiału złożonego z dodatkowymi wzmocnieniami",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -18691,7 +18717,8 @@
     "SRC-KLIN-IADT-ZLAM-2020",
     "SRC-KLIN-EFP-S3-2020"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1618",
@@ -19041,7 +19068,7 @@
    "kod": "23.1620",
    "nazwa_oficjalna": "Założenie opatrunku parodontologicznego",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -19208,7 +19235,8 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.17",
@@ -19656,7 +19684,7 @@
    "kod": "23.1703",
    "nazwa_oficjalna": "Usunięcie głęboko złamanego zęba poprzez dłutowanie wewnątrzzębodołowe przy zastosowaniu wierteł, dźwigni",
    "kategoria": "chirurgia – ekstrakcje",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -19846,14 +19874,16 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1704",
    "kod": "23.1704",
    "nazwa_oficjalna": "Usunięcie zęba przez dłutowanie zewnątrzzębodołowe z wytworzeniem płata śluzówkowo-okostnowego",
    "kategoria": "chirurgia – ekstrakcje",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -20061,7 +20091,9 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1705",
@@ -21538,7 +21570,7 @@
    "kod": "23.1806",
    "nazwa_oficjalna": "Reimplantacja zęba",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -21702,7 +21734,9 @@
    "zrodla": [
     "SRC-KLIN-IADT-AWUL-2020"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1807",
@@ -22059,7 +22093,7 @@
    "kod": "23.1809",
    "nazwa_oficjalna": "Chirurgiczne zaopatrzenie małej rany obejmującej do 3 zębodołów włącznie ze szwem",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -22211,14 +22245,15 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1810",
    "kod": "23.1810",
    "nazwa_oficjalna": "Chirurgiczne zaopatrzenie małej rany obejmującej do 2-3 zębodołów włącznie z opracowaniem i szwami",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -22384,7 +22419,8 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1811",
@@ -22739,7 +22775,7 @@
    "kod": "23.1813",
    "nazwa_oficjalna": "Zatamowanie krwawienia w obrębie jamy ustnej - nie zaliczane w bezpośrednim połączeniu z zabiegiem chirurgicznym, chyba że zajmuje niewspółmiernie dużo czasu",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "draft",
+   "status": "not_started",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -22880,7 +22916,8 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Odrzucone decyzją Patryka (22.11.2026): nie umieszczać w aplikacji. Treść karty zachowana w danych; przywrócenie = status requires_expert_review."
   },
   {
    "id": "PROC-23.1814",
@@ -23059,7 +23096,7 @@
    "kod": "23.1815",
    "nazwa_oficjalna": "Założenie opatrunku chirurgicznego",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -23204,7 +23241,9 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1816",
