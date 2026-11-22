@@ -1,0 +1,58 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "type": "object",
+ "required": [
+  "nazwa",
+  "wersja",
+  "pliki"
+ ],
+ "properties": {
+  "nazwa": {
+   "type": "string",
+   "minLength": 1
+  },
+  "wersja": {
+   "type": "string",
+   "pattern": "^[0-9]{4}\\.[0-9]{2}\\.[0-9]{2}-[0-9]+$"
+  },
+  "opis": {
+   "type": "string",
+   "minLength": 1
+  },
+  "zalezy_od": {
+   "type": "string",
+   "minLength": 1
+  },
+  "pliki": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "plik",
+     "sha256",
+     "schemat"
+    ],
+    "properties": {
+     "plik": {
+      "type": "string",
+      "minLength": 1
+     },
+     "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+     },
+     "schemat": {
+      "type": "string",
+      "minLength": 1
+     },
+     "rekordy": {
+      "type": "integer"
+     }
+    }
+   }
+  },
+  "liczniki": {
+   "type": "object"
+  }
+ }
+}

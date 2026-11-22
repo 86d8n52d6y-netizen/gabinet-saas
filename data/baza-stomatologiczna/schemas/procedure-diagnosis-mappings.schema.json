@@ -1,0 +1,62 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "type": "object",
+ "required": [
+  "opis",
+  "mapowania"
+ ],
+ "properties": {
+  "opis": {
+   "type": "string",
+   "minLength": 1
+  },
+  "mapowania": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "procedura",
+     "icd10",
+     "okolicznosci",
+     "potwierdzenie"
+    ],
+    "properties": {
+     "procedura": {
+      "type": "string",
+      "pattern": "^PROC-"
+     },
+     "icd10": {
+      "type": "string",
+      "pattern": "^[A-Z][0-9]{2}(\\.[0-9])?$"
+     },
+     "okolicznosci": {
+      "type": "string",
+      "minLength": 1
+     },
+     "uzasadnienie": {
+      "type": "string",
+      "minLength": 1
+     },
+     "potwierdzenie": {
+      "enum": [
+       "zrodlo",
+       "ocena_kliniczna"
+      ]
+     },
+     "w_audycie_nfz": {
+      "type": "boolean"
+     },
+     "zrodla": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^SRC-[A-Z0-9-]+$"
+      },
+      "uniqueItems": true
+     }
+    }
+   }
+  }
+ }
+}

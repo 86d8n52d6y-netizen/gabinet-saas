@@ -1,0 +1,984 @@
+{
+ "opis": "Kroki procedur – wspólne rekordy wielokrotnego użytku (karta procedury odwołuje się do nich i może dodać uwagę).",
+ "kroki": [
+  {
+   "id": "KROK-KWALIFIKACJA",
+   "nazwa": "Aktualizacja wywiadu, informacja i zgoda",
+   "opis": "Sprawdź aktualny wywiad (leki, alergie, ciąża), przedstaw rozpoznanie, plan, alternatywy i ryzyka; uzyskaj zgodę pacjenta.",
+   "uwaga": "Szczegóły: badanie BAD-PRZED-LECZENIEM.",
+   "zrodla": [
+    "SRC-PRAWA-PACJENTA"
+   ]
+  },
+  {
+   "id": "KROK-DIAGNOSTYKA-ZEBA",
+   "nazwa": "Diagnostyka zęba",
+   "opis": "Badanie kliniczne zęba, testy żywotności, opukiwanie; RTG wg wskazań (zgryzowo-skrzydłowe / okołowierzchołkowe).",
+   "uwaga": "Szczegóły: BAD-ZYWOTNOSC, BAD-RTG.",
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023"
+   ]
+  },
+  {
+   "id": "KROK-ZNIECZULENIE",
+   "nazwa": "Znieczulenie miejscowe",
+   "opis": "Dobierz metodę (nasiękowe / przewodowe / śródwięzadłowe) do zęba i zabiegu; znieczulenie powierzchniowe miejsca wkłucia (opcjonalnie); aspiracja przed podaniem; podawaj powoli; odnotuj preparat, dawkę i miejsce.",
+   "uwaga": "Sprawdź maksymalną dawkę dla masy ciała i choroby ogólne (środek obkurczający naczynia).",
+   "warianty": [
+    "bez znieczulenia – przy zabiegach nieinwazyjnych lub na życzenie pacjenta, jeśli nie powoduje bólu"
+   ],
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-IZOLACJA",
+   "nazwa": "Izolacja pola zabiegowego",
+   "opis": "Koferdam (izolacja bezwzględna) albo izolacja względna (wałki ligninowe, ślinociąg) – zależnie od zabiegu.",
+   "uwaga": "W leczeniu endodontycznym koferdam jest standardem (ESE).",
+   "warianty": [
+    "izolacja względna, gdy założenie koferdamu nie jest możliwe – uzasadnij w dokumentacji"
+   ],
+   "zrodla": [
+    "SRC-KLIN-ESE-2006"
+   ]
+  },
+  {
+   "id": "KROK-KOLOR",
+   "nazwa": "Dobór koloru",
+   "opis": "Dobór koloru materiału przed izolacją, przy nawilżonych zębach, w świetle dziennym / lampie z dobrym odwzorowaniem barw.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-OPRACOWANIE-UBYTKU",
+   "nazwa": "Opracowanie ubytku i usunięcie próchnicy",
+   "opis": "Dostęp do zmiany, usunięcie zdemineralizowanej zębiny do twardej przy granicy szkliwno-zębinowej; w ubytkach głębokich (ząb żywy, bez objawów nieodwracalnego zapalenia) – selektywne usunięcie próchnicy przy miazdze.",
+   "uwaga": "Unikaj obnażenia miazgi; oceń grubość zębiny nad miazgą.",
+   "warianty": [
+    "usunięcie etapowe (stepwise) – w bardzo głębokich zmianach"
+   ],
+   "zrodla": [
+    "SRC-KLIN-ESE-VPT-2019"
+   ]
+  },
+  {
+   "id": "KROK-OCHRONA-MIAZGI",
+   "nazwa": "Ochrona miazgi / podkład",
+   "opis": "W ubytkach głębokich – podkład lub pokrycie pośrednie (np. materiał krzemianowo-wapniowy, glasjonomer) zgodnie z głębokością ubytku i stosowanym systemem adhezyjnym.",
+   "uwaga": "Dobór materiału zależy od przypadku.",
+   "zrodla": [
+    "SRC-KLIN-ESE-VPT-2019"
+   ]
+  },
+  {
+   "id": "KROK-POKRYCIE-BEZPOSREDNIE",
+   "nazwa": "Bezpośrednie pokrycie miazgi",
+   "opis": "Przy niewielkim obnażeniu żywej miazgi w warunkach izolacji: hemostaza (np. podchloryn sodu), pokrycie materiałem krzemianowo-wapniowym (MTA / bioceramika) lub wodorotlenkiem wapnia, szczelne zamknięcie.",
+   "uwaga": "Rokowanie zależy od kontroli krwawienia i szczelności; konieczna kontrola żywotności.",
+   "warianty": [
+    "przy braku kontroli krwawienia – rozważ pulpotomię częściową"
+   ],
+   "zrodla": [
+    "SRC-KLIN-ESE-VPT-2019",
+    "SRC-KLIN-ESE-S3-2023"
+   ]
+  },
+  {
+   "id": "KROK-MATRYCA",
+   "nazwa": "Formówka i klin",
+   "opis": "Odtworzenie ściany stycznej: formówka (sekcyjna / okrężna) i klin; kontrola dopasowania do brzegu przydziąsłowego.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ADHEZJA",
+   "nazwa": "Przygotowanie powierzchni i system wiążący",
+   "opis": "Wytrawianie (total-etch / selektywne szkliwa / self-etch – zgodnie z instrukcją systemu), aplikacja systemu wiążącego, polimeryzacja.",
+   "uwaga": "Przestrzegaj instrukcji producenta materiału.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-KOMPOZYT",
+   "nazwa": "Odbudowa materiałem złożonym",
+   "opis": "Nakładanie kompozytu warstwami (zwykle ≤ 2 mm) z polimeryzacją; odtworzenie anatomii i punktu stycznego.",
+   "uwaga": "Technika zależy od materiału (np. bulk-fill wg instrukcji).",
+   "warianty": [
+    "glasjonomer / kompomer – np. zęby mleczne, ograniczona izolacja"
+   ],
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-WYKONCZENIE",
+   "nazwa": "Kontrola zwarcia, wykończenie i polerowanie",
+   "opis": "Usunięcie nadmiarów, kontrola zwarcia i ruchów (kalka), kontrola punktu stycznego (nić), polerowanie.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-OPATRUNEK",
+   "nazwa": "Opatrunek czasowy",
+   "opis": "Szczelne zamknięcie ubytku materiałem tymczasowym (np. cement tlenkowo-cynkowy, glasjonomer) do kolejnej wizyty.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-LECZ-NIEINWAZYJNE",
+   "nazwa": "Leczenie nieinwazyjne zmian w szkliwie",
+   "opis": "Oczyszczenie powierzchni, osuszenie, aplikacja preparatu remineralizującego / fluorkowego; instruktaż i kontrola aktywności zmiany.",
+   "uwaga": "Dotyczy zmian bez ubytku (ICDAS 1–2).",
+   "warianty": [
+    "infiltracja żywicą (prywatnie)"
+   ],
+   "zrodla": [
+    "SRC-KLIN-ICDAS-2007",
+    "SRC-KLIN-EAPD-F-2019"
+   ]
+  },
+  {
+   "id": "KROK-DOSTEP-ENDO",
+   "nazwa": "Dostęp do komory",
+   "opis": "Usunięcie próchnicy i nieszczelnych wypełnień, otwarcie komory z usunięciem stropu, lokalizacja ujść kanałów.",
+   "uwaga": "Przed rozpoczęciem – ocena możliwości szczelnej odbudowy.",
+   "zrodla": [
+    "SRC-KLIN-ESE-2006"
+   ]
+  },
+  {
+   "id": "KROK-AMPUTACJA",
+   "nazwa": "Amputacja miazgi (pulpotomia)",
+   "opis": "Usunięcie miazgi koronowej (częściowe lub całkowite), hemostaza, ocena miazgi korzeniowej, pokrycie materiałem krzemianowo-wapniowym, szczelne zamknięcie.",
+   "uwaga": "Brak kontroli krwawienia w kilka minut – wskazanie do ekstyrpacji.",
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023",
+    "SRC-KLIN-ESE-VPT-2019",
+    "SRC-KLIN-AAPD-VPT-2017"
+   ]
+  },
+  {
+   "id": "KROK-EKSTYRPACJA",
+   "nazwa": "Usunięcie miazgi z kanałów",
+   "opis": "Usunięcie miazgi z komory i kanałów narzędziami ręcznymi / maszynowymi przy płukaniu.",
+   "zrodla": [
+    "SRC-KLIN-ESE-2006"
+   ]
+  },
+  {
+   "id": "KROK-DLUGOSC-ROBOCZA",
+   "nazwa": "Ustalenie długości roboczej",
+   "opis": "Endometr i/lub RTG z narzędziem w kanale; zapis długości i punktu odniesienia dla każdego kanału.",
+   "uwaga": "Opracowanie i wypełnienie zwykle kończy się 0,5–2 mm od wierzchołka radiologicznego.",
+   "zrodla": [
+    "SRC-KLIN-ESE-2006"
+   ]
+  },
+  {
+   "id": "KROK-OPRACOWANIE-KANALU",
+   "nazwa": "Opracowanie chemomechaniczne kanału",
+   "opis": "Udrożnienie, opracowanie kanału do ustalonej długości i rozmiaru z obfitym płukaniem.",
+   "uwaga": "Zachowanie przebiegu kanału; kontrola drożności.",
+   "zrodla": [
+    "SRC-KLIN-ESE-2006",
+    "SRC-KLIN-ESE-S3-2023"
+   ]
+  },
+  {
+   "id": "KROK-IRYGACJA",
+   "nazwa": "Płukanie kanałów",
+   "opis": "Podchloryn sodu w trakcie opracowania; na końcu usunięcie warstwy mazistej (np. EDTA) i płukanie końcowe; aktywacja płynu – opcjonalnie.",
+   "uwaga": "Unikaj wtłoczenia podchlorynu poza otwór wierzchołkowy.",
+   "zrodla": [
+    "SRC-KLIN-ESE-2006",
+    "SRC-KLIN-ESE-S3-2023"
+   ]
+  },
+  {
+   "id": "KROK-WKLADKA",
+   "nazwa": "Wkładka do kanałów i zamknięcie czasowe",
+   "opis": "Wodorotlenek wapnia w kanałach między wizytami; szczelny opatrunek czasowy.",
+   "zrodla": [
+    "SRC-KLIN-ESE-2006"
+   ]
+  },
+  {
+   "id": "KROK-OBTURACJA",
+   "nazwa": "Wypełnienie kanałów",
+   "opis": "Osuszenie, wypełnienie gutaperką z uszczelniaczem (technika zależna od przypadku) do długości roboczej; usunięcie nadmiaru z komory.",
+   "uwaga": "Wypełnienie szczelne, bez pustek, na pełnej długości.",
+   "zrodla": [
+    "SRC-KLIN-ESE-2006"
+   ]
+  },
+  {
+   "id": "KROK-RTG-KONTROLA",
+   "nazwa": "RTG kontrolne",
+   "opis": "Zdjęcie po wypełnieniu kanałów – ocena długości, szczelności i kształtu wypełnienia.",
+   "zrodla": [
+    "SRC-KLIN-ESE-2006"
+   ]
+  },
+  {
+   "id": "KROK-ODBUDOWA-PO-ENDO",
+   "nazwa": "Szczelna odbudowa po leczeniu kanałowym",
+   "opis": "Jak najszybciej szczelna odbudowa korony (ostatecznie albo trwałe zamknięcie i plan protetyczny – korona przy rozległej utracie tkanek).",
+   "zrodla": [
+    "SRC-KLIN-ESE-2006",
+    "SRC-KLIN-ESE-S3-2023"
+   ]
+  },
+  {
+   "id": "KROK-ZALECENIA",
+   "nazwa": "Przekazanie zaleceń",
+   "opis": "Przekaż zalecenia pozabiegowe (ustnie lub ustnie i pisemnie) i ustal termin kontroli.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-BADANIE",
+   "nazwa": "Badanie wg katalogu badań",
+   "opis": "Wykonaj badania składowe z katalogu A odpowiednie do świadczenia (formularze i szablony BAD-…).",
+   "uwaga": "Wynik każdego elementu wpisuje lekarz."
+  },
+  {
+   "id": "KROK-INSTRUKTAZ",
+   "nazwa": "Instruktaż higieny jamy ustnej",
+   "opis": "Pokaż i omów technikę szczotkowania i oczyszczania przestrzeni międzyzębowych, przybory, stosowanie fluorków; dostosuj do wieku i potrzeb (aparat, protezy).",
+   "zrodla": [
+    "SRC-KLIN-EAPD-F-2019"
+   ]
+  },
+  {
+   "id": "KROK-PLAN",
+   "nazwa": "Omówienie wyników i planu",
+   "opis": "Przedstaw pacjentowi wyniki, rozpoznanie i plan leczenia z alternatywami; ustal termin kolejnej wizyty.",
+   "zrodla": [
+    "SRC-PRAWA-PACJENTA"
+   ]
+  },
+  {
+   "id": "KROK-RTG-WYKONANIE",
+   "nazwa": "Wykonanie zdjęcia RTG",
+   "opis": "Uzasadnienie, ochrona pacjenta wg procedur pracowni, ustawienie czujnika / kliszy z pozycjonerem, ekspozycja.",
+   "uwaga": "Wywiad w kierunku ciąży u kobiet w wieku rozrodczym.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-RTG-OPIS",
+   "nazwa": "Opis zdjęcia RTG",
+   "opis": "Opis zdjęcia w dokumentacji (warunek rozliczenia NFZ) – wg badania BAD-RTG.",
+   "zrodla": [
+    "SRC-DU-2025-615"
+   ]
+  },
+  {
+   "id": "KROK-ZNIECZ-POWIERZCHNIOWE",
+   "nazwa": "Znieczulenie powierzchniowe",
+   "opis": "Osuszenie błony śluzowej, aplikacja preparatu (żel / aerozol) na ograniczony obszar, odczekanie czasu działania.",
+   "uwaga": "Uwaga na dawkę i połknięcie preparatu u dzieci.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ZNIECZ-NASIEKOWE",
+   "nazwa": "Znieczulenie nasiękowe",
+   "opis": "Wkłucie w fałd przejściowy w okolicy wierzchołka zęba, aspiracja, powolne podanie; ewentualnie uzupełniająco od strony podniebiennej / językowej.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ZNIECZ-PRZEWODOWE",
+   "nazwa": "Znieczulenie przewodowe wewnątrzustne",
+   "opis": "Np. blokada nerwu zębodołowego dolnego: lokalizacja punktów orientacyjnych, wkłucie, aspiracja (obowiązkowo), powolne podanie, ocena objawów znieczulenia.",
+   "uwaga": "Ryzyko podania donaczyniowego i uszkodzenia nerwu – aspiracja, powolne podawanie.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-OBSERWACJA-ZNIECZ",
+   "nazwa": "Obserwacja po znieczuleniu",
+   "opis": "Obserwacja pacjenta (bladość, kołatanie, reakcja alergiczna); ocena skuteczności przed zabiegiem.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-OCZYSZCZENIE-ZEBOW",
+   "nazwa": "Oczyszczenie powierzchni zębów",
+   "opis": "Usunięcie płytki (szczoteczka, pasta profilaktyczna lub piaskowanie) przed aplikacją preparatu.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-LAKOWANIE",
+   "nazwa": "Lakowanie bruzd",
+   "opis": "Izolacja, oczyszczenie bruzd, wytrawienie (lak żywiczny) lub przygotowanie wg instrukcji (glasjonomer), aplikacja laku bez pęcherzyków, polimeryzacja, kontrola retencji i zwarcia.",
+   "uwaga": "Ząb musi być całkowicie wyrznięty i suchy.",
+   "zrodla": [
+    "SRC-KLIN-ADA-LAK-2016"
+   ]
+  },
+  {
+   "id": "KROK-LAKIEROWANIE",
+   "nazwa": "Lakierowanie fluorkowe",
+   "opis": "Oczyszczenie i osuszenie zębów, cienka warstwa lakieru fluorkowego na wszystkie powierzchnie zębów ¼ łuku.",
+   "uwaga": "Ilość lakieru u małych dzieci wg zaleceń dla wieku.",
+   "zrodla": [
+    "SRC-KLIN-EAPD-F-2019",
+    "SRC-KLIN-ADA-F-2013"
+   ]
+  },
+  {
+   "id": "KROK-SKALING-NADDZIASLOWY",
+   "nazwa": "Usunięcie złogów naddziąsłowych",
+   "opis": "Skaler ultradźwiękowy i / lub narzędzia ręczne: usunięcie kamienia naddziąsłowego z zębów objętych zabiegiem.",
+   "uwaga": "U pacjentów z rozrusznikiem – ocenić rodzaj skalera wg zaleceń producenta.",
+   "zrodla": [
+    "SRC-KLIN-EFP-S3-2020"
+   ]
+  },
+  {
+   "id": "KROK-USUNIECIE-PLYTKI",
+   "nazwa": "Usunięcie złogów miękkich",
+   "opis": "Usunięcie płytki i osadów (szczoteczka / gumka z pastą, piaskarka z proszkiem o niskiej ścieralności).",
+   "zrodla": [
+    "SRC-KLIN-EFP-S3-2020"
+   ]
+  },
+  {
+   "id": "KROK-POLEROWANIE",
+   "nazwa": "Polerowanie zębów",
+   "opis": "Polerowanie powierzchni gumką / szczoteczką z pastą, paski polerskie w przestrzeniach międzyzębowych.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-KIRETAZ",
+   "nazwa": "Kiretaż zamknięty / oczyszczanie kieszonek",
+   "opis": "Pod znieczuleniem: usunięcie złogów poddziąsłowych i oczyszczenie powierzchni korzeni kiretami / końcówkami ultradźwiękowymi w kieszonkach ¼ uzębienia; płukanie.",
+   "uwaga": "Instrumentacja poddziąsłowa wg EFP – etap 2 leczenia zapalenia przyzębia.",
+   "zrodla": [
+    "SRC-KLIN-EFP-S3-2020"
+   ]
+  },
+  {
+   "id": "KROK-LECZENIE-BLONY",
+   "nazwa": "Leczenie zmian na błonie śluzowej",
+   "opis": "Oczyszczenie zmiany, usunięcie czynnika drażniącego, aplikacja leku miejscowego (np. preparat ochronny, przeciwzapalny, przeciwgrzybiczy – wg rozpoznania).",
+   "uwaga": "Zmiana niepokojąca – skierowanie (BAD-BLONA).",
+   "zrodla": [
+    "SRC-KLIN-OPMD-2021"
+   ]
+  },
+  {
+   "id": "KROK-EKSTRAKCJA",
+   "nazwa": "Usunięcie zęba",
+   "opis": "Oddzielenie dziąsła (syndesmotomia), zwichnięcie i usunięcie zęba kleszczami / dźwignią z kontrolą siły; kontrola kompletności korzeni.",
+   "uwaga": "Przy zębach wielokorzeniowych rozważ separację korzeni.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-DLUTOWANIE-WEWN",
+   "nazwa": "Dłutowanie wewnątrzzębodołowe",
+   "opis": "Separacja korzeni wiertłem chirurgicznym w obrębie zębodołu i usunięcie fragmentów dźwigniami bez odwarstwienia płata.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-PLAT",
+   "nazwa": "Wytworzenie płata śluzówkowo-okostnowego",
+   "opis": "Cięcie (np. brzeżne z cięciem pionowym), odwarstwienie płata śluzówkowo-okostnowego, ochrona tkanek miękkich.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-OSTEOTOMIA",
+   "nazwa": "Usunięcie kości (dłutowanie zewnątrzzębodołowe)",
+   "opis": "Usunięcie fragmentu kości wiertłem z chłodzeniem w celu dostępu do korzenia / zęba; separacja i usunięcie.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ZEBODOL",
+   "nazwa": "Opracowanie zębodołu",
+   "opis": "Kontrola zębodołu, usunięcie ziarniny i odłamów, wygładzenie ostrych brzegów kostnych, kontrola połączenia z zatoką (zęby boczne szczęki).",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-HEMOSTAZA",
+   "nazwa": "Zatamowanie krwawienia",
+   "opis": "Ucisk gazikiem, w razie potrzeby środki hemostatyczne miejscowe i szwy; ocena skuteczności.",
+   "uwaga": "U pacjentów na lekach przeciwkrzepliwych – postępowanie wg zaleceń, bez samodzielnego odstawiania leków.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-SZYCIE",
+   "nazwa": "Szycie rany",
+   "opis": "Ułożenie płata / brzegów rany i założenie szwów (rodzaj nici wg przypadku); termin zdjęcia szwów.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-OPATRUNEK-CHIR",
+   "nazwa": "Opatrunek chirurgiczny",
+   "opis": "Założenie opatrunku do zębodołu / na ranę (np. opatrunek resorbowalny, sączek z preparatem) zależnie od wskazania.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-NACIECIE",
+   "nazwa": "Nacięcie ropnia i drenaż",
+   "opis": "Znieczulenie (miejscowo, poza naciekiem), nacięcie w najbardziej chełbocącym miejscu, rozwarstwienie, ewakuacja ropy, założenie sączka, płukanie.",
+   "uwaga": "Rozważ antybiotyk przy objawach ogólnych / szerzeniu się zakażenia; usuń przyczynę (ząb).",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ZALECENIA-CHIR",
+   "nazwa": "Zalecenia po zabiegu chirurgicznym",
+   "opis": "Ucisk gazika 20–30 min, zimne okłady, bez płukania i ssania rany w pierwszej dobie, dieta miękka i chłodna, leki przeciwbólowe wg zaleceń, termin kontroli / zdjęcia szwów; ustnie i pisemnie.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-DEWITALIZACJA",
+   "nazwa": "Założenie preparatu dewitalizującego",
+   "opis": "Po odsłonięciu miazgi: niewielka ilość preparatu dewitalizującego na miazgę, szczelne zamknięcie opatrunkiem; termin kolejnej wizyty zgodny z instrukcją preparatu.",
+   "uwaga": "Metoda historyczna – ryzyko martwicy tkanek przy nieszczelności; obecnie preferowane leczenie w znieczuleniu (ESE). Szczelność opatrunku krytyczna.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-APEKSYFIKACJA",
+   "nazwa": "Zamknięcie otwartego wierzchołka (bariera MTA)",
+   "opis": "Po dezynfekcji kanału: wprowadzenie materiału krzemianowo-wapniowego w okolicę wierzchołka (bariera kilku mm), kontrola RTG, po związaniu – wypełnienie pozostałej części kanału.",
+   "uwaga": "Ząb z niedojrzałym korzeniem; alternatywa – procedury regeneracyjne (poza zakresem karty).",
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023"
+   ]
+  },
+  {
+   "id": "KROK-REWIZJA",
+   "nazwa": "Usunięcie dotychczasowego wypełnienia kanału",
+   "opis": "Usunięcie odbudowy / wkładu, usunięcie gutaperki (narzędzia maszynowe / ręczne, rozpuszczalnik wg potrzeby), odnalezienie pominiętych kanałów, ponowne opracowanie do długości roboczej.",
+   "uwaga": "Ocena przyczyny niepowodzenia; przy wkładach, perforacjach, złamanych narzędziach – rozważ skierowanie do endodonty.",
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023",
+    "SRC-KLIN-ESE-2006"
+   ]
+  },
+  {
+   "id": "KROK-AKTYWACJA",
+   "nazwa": "Aktywacja płynów / dodatkowe metody opracowania",
+   "opis": "Aktywacja płynu płuczącego (ultradźwięki, aktywacja dźwiękowa lub ręczna), dodatkowe metody chemiczne udrażniania zwapniałych kanałów.",
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023"
+   ]
+  },
+  {
+   "id": "KROK-AMPUTACJA-MLECZ",
+   "nazwa": "Pulpotomia zęba mlecznego",
+   "opis": "Usunięcie miazgi koronowej, hemostaza, opatrunek na kikuty miazgi (materiał krzemianowo-wapniowy lub inny wg wytycznych), szczelna odbudowa (wypełnienie / korona stalowa).",
+   "zrodla": [
+    "SRC-KLIN-AAPD-VPT-2017"
+   ]
+  },
+  {
+   "id": "KROK-WYBIELANIE-WEWN",
+   "nazwa": "Wybielanie wewnętrzne",
+   "opis": "Po kontroli wypełnienia kanałowego: usunięcie materiału z komory, bariera szczelna 1–2 mm ponad połączeniem szkliwno-cementowym, preparat wybielający w komorze, szczelne zamknięcie; wymiana wg efektu.",
+   "uwaga": "Ryzyko resorpcji zewnętrznej przy braku bariery.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-WYBIELANIE-ZEWN",
+   "nazwa": "Wybielanie zewnętrzne",
+   "opis": "Ocena koloru wyjściowego, ochrona dziąseł, aplikacja preparatu (gabinetowo lub nakładki), kontrola nadwrażliwości; dokumentacja koloru przed i po.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-DIASTEMA",
+   "nazwa": "Zamknięcie diastemy materiałem złożonym",
+   "opis": "Planowanie proporcji (mock-up / klucz), przygotowanie szkliwa bez lub z minimalnym opracowaniem, odbudowa kompozytem z kontrolą profilu wyłaniania i brodawki.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-LICOWANIE-KOMPOZYT",
+   "nazwa": "Pokrycie powierzchni materiałem złożonym (licówka bezpośrednia)",
+   "opis": "Minimalne opracowanie lub bez opracowania, adhezja, warstwowe odtworzenie powierzchni wargowej, wykończenie.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-GINGIWEKTOMIA-BRODAWKI",
+   "nazwa": "Usunięcie przerośniętej brodawki",
+   "opis": "W znieczuleniu: wycięcie przerośniętej brodawki (skalpel / elektrochirurgia / laser) dla dostępu do ubytku, hemostaza.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-PLUKANIE-KIESZONKI",
+   "nazwa": "Płukanie kieszonki i aplikacja leku",
+   "opis": "Płukanie kieszonki dziąsłowej / przyzębnej roztworem antyseptycznym, aplikacja leku miejscowego do kieszonki.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-KOREKTA-ZGRYZU",
+   "nazwa": "Selektywne szlifowanie (korekta zgryzu)",
+   "opis": "Lokalizacja kontaktów przedwczesnych / urazowych kalką, selektywne szlifowanie, polerowanie, ponowna kontrola.",
+   "uwaga": "Zabieg nieodwracalny – tylko przy jasnym wskazaniu.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-PLAT-PERIO",
+   "nazwa": "Płat periodontologiczny i oczyszczenie",
+   "opis": "Cięcie śródrowkowe, odwarstwienie płata, usunięcie ziarniny i złogów z powierzchni korzeni pod kontrolą wzroku, ewentualnie korekta kości, repozycja i szycie płata.",
+   "zrodla": [
+    "SRC-KLIN-EFP-S3-2020"
+   ]
+  },
+  {
+   "id": "KROK-GINGIWOPLASTYKA",
+   "nazwa": "Gingiwektomia / gingiwoplastyka",
+   "opis": "Wycięcie przerośniętego dziąsła i nadanie mu fizjologicznego kształtu (skalpel / elektrochirurgia / laser), opatrunek.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-OSTEOPLASTYKA",
+   "nazwa": "Korekta kości wyrostka",
+   "opis": "Wygładzenie / remodelowanie kości wyrostka wiertłem z chłodzeniem lub narzędziami ręcznymi.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-FRENULOTOMIA",
+   "nazwa": "Podcięcie / plastyka wędzidełka",
+   "opis": "W znieczuleniu: nacięcie lub wycięcie wędzidełka z przemieszczeniem przyczepu (plastyka), szycie.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-PLASTYKA-PRZEDSIONKA",
+   "nazwa": "Pogłębienie przedsionka",
+   "opis": "Cięcie i przemieszczenie przyczepów mięśniowych / błony śluzowej w celu pogłębienia przedsionka (technika wg metody), stabilizacja, szycie.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-SZYNOWANIE",
+   "nazwa": "Szynowanie zębów",
+   "opis": "Połączenie ruchomych zębów z sąsiednimi (ligatura, kompozyt, kompozyt ze wzmocnieniem – włókno / drut) na powierzchniach językowych / podniebiennych; kontrola zwarcia i dostępu do higieny.",
+   "zrodla": [
+    "SRC-KLIN-IADT-ZLAM-2020"
+   ]
+  },
+  {
+   "id": "KROK-PRZESZCZEP-KOSCI",
+   "nazwa": "Wypełnienie ubytku kostnego materiałem",
+   "opis": "Po oczyszczeniu ubytku – wypełnienie materiałem kościozastępczym, ewentualnie membrana, szczelne zamknięcie płata.",
+   "zrodla": [
+    "SRC-KLIN-EFP-S3-2020"
+   ]
+  },
+  {
+   "id": "KROK-POKRYCIE-RECESJI",
+   "nazwa": "Pokrycie recesji płatem przesuniętym",
+   "opis": "Przygotowanie powierzchni korzenia, wytworzenie płata przesuniętego bocznie z okolicy dawczej, ułożenie bez napięcia, szycie.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-OPATRUNEK-PERIO",
+   "nazwa": "Opatrunek periodontologiczny",
+   "opis": "Założenie opatrunku periodontologicznego na ranę dziąsła; zdjęcie po kilku dniach.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ODSLONIECIE",
+   "nazwa": "Odsłonięcie zęba zatrzymanego",
+   "opis": "Płat, usunięcie kości nad koroną, umocowanie zaczepu ortodontycznego (zamek / pętla), repozycja płata.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ZAMKNIECIE-ZATOKI",
+   "nazwa": "Zamknięcie połączenia ustno-zatokowego",
+   "opis": "Ocena połączenia (próba Valsalvy – ostrożnie), płat (np. przedsionkowy przesunięty), szczelne zamknięcie bez napięcia, zalecenia „zatokowe”.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-RESEKCJA",
+   "nazwa": "Resekcja wierzchołka korzenia",
+   "opis": "Płat, osteotomia nad wierzchołkiem, usunięcie zmiany zapalnej, odcięcie ok. 3 mm wierzchołka, preparacja wsteczna i wsteczne wypełnienie materiałem biozgodnym, szycie.",
+   "uwaga": "Wymaga szczelnego wypełnienia kanałowego lub wstecznego.",
+   "zrodla": [
+    "SRC-KLIN-ENDOCHIR-2006",
+    "SRC-KLIN-ESE-S3-2023"
+   ]
+  },
+  {
+   "id": "KROK-HEMISEKCJA",
+   "nazwa": "Hemisekcja",
+   "opis": "Przecięcie zęba wielokorzeniowego (po leczeniu kanałowym) i usunięcie korzenia bez rokowania; wygładzenie i odbudowa pozostałej części.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-REIMPLANTACJA",
+   "nazwa": "Reimplantacja zęba",
+   "opis": "Postępowanie z zębem wybitym wg IADT (czas pozazębodołowy, medium), płukanie, oczyszczenie zębodołu, reimplantacja, szyna elastyczna, leczenie kanałowe wg wskazań.",
+   "zrodla": [
+    "SRC-KLIN-IADT-AWUL-2020"
+   ]
+  },
+  {
+   "id": "KROK-WYLUSZCZENIE",
+   "nazwa": "Wyłuszczenie torbieli / zmiany",
+   "opis": "Płat, dostęp kostny, wyłuszczenie torbieli w całości, kontrola jamy, materiał do badania histopatologicznego, szycie.",
+   "uwaga": "Badanie histopatologiczne usuniętej zmiany.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-WYCIECIE-ZMIANY",
+   "nazwa": "Wycięcie zmiany tkanek miękkich",
+   "opis": "Wycięcie zmiany z marginesem tkanek zdrowych, hemostaza, szycie; materiał do badania histopatologicznego.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-KRIOTERAPIA",
+   "nazwa": "Krioterapia zmiany",
+   "opis": "Zamrażanie zmiany (cykle zamrażania-rozmrażania) wg protokołu urządzenia, kontrola gojenia.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-PODWIAZANIE",
+   "nazwa": "Podwiązanie / przeszycie naczynia",
+   "opis": "Lokalizacja źródła krwawienia, podwiązanie lub przeszycie naczynia, kontrola hemostazy; ocena stanu ogólnego.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-REPOZYCJA-ZEBA",
+   "nazwa": "Repozycja i unieruchomienie zęba",
+   "opis": "W znieczuleniu: repozycja zwichniętego zęba / fragmentu wyrostka, kontrola RTG, szyna elastyczna (czas zależny od urazu wg IADT), plan kontroli żywotności.",
+   "zrodla": [
+    "SRC-KLIN-IADT-ZLAM-2020"
+   ]
+  },
+  {
+   "id": "KROK-PLASTYKA-WYROSTKA",
+   "nazwa": "Plastyka wyrostka zębodołowego",
+   "opis": "Płat, usunięcie nierówności / ostrych krawędzi kości (lub augmentacja z przeszczepem), szycie – przygotowanie do protezy.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-WIZYTA-ADAPTACYJNA",
+   "nazwa": "Wizyta adaptacyjna",
+   "opis": "Zapoznanie dziecka z gabinetem i lekarzem (pokaż–powiedz–zrób), oglądanie jamy ustnej bez zabiegów inwazyjnych, rozmowa z opiekunem.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-INDEKS-PUW",
+   "nazwa": "Ocena intensywności próchnicy (puw / PUW)",
+   "opis": "Policz zęby z próchnicą (p/P), usunięte z powodu próchnicy (u/U) i wypełnione (w/W) – osobno dla zębów mlecznych i stałych; zapisz składowe.",
+   "zrodla": [
+    "SRC-DU-2025-615"
+   ]
+  },
+  {
+   "id": "KROK-FLUOR-WIEK",
+   "nazwa": "Profilaktyka fluorkowa dostosowana do wieku",
+   "opis": "Dobór preparatu i ilości fluorku do wieku i ryzyka próchnicy (pasta 1000 ppm F – ilość wielkości ziarna ryżu do 2 lat, wielkości ziarna grochu 2–6 lat; od 6 lat 1450 ppm F; lakier fluorkowy wg ryzyka).",
+   "uwaga": "Wartości wg EAPD 2019 – zweryfikować z aktualnym dokumentem przed wdrożeniem.",
+   "zrodla": [
+    "SRC-KLIN-EAPD-F-2019"
+   ]
+  },
+  {
+   "id": "KROK-INSTRUKTAZ-OPIEKUNA",
+   "nazwa": "Instruktaż opiekuna",
+   "opis": "Instruktaż higieny i diety dla opiekuna (kto i jak szczotkuje, ilość pasty, nocne karmienie, słodkie napoje), pokaz techniki.",
+   "zrodla": [
+    "SRC-KLIN-EAPD-F-2019"
+   ]
+  },
+  {
+   "id": "KROK-FLUORYZACJA",
+   "nazwa": "Fluoryzacja kontaktowa",
+   "opis": "Oczyszczenie i osuszenie zębów, aplikacja preparatu fluorkowego (żel w łyżce / pędzelkiem / lakier) na czas wg producenta, usunięcie nadmiaru.",
+   "uwaga": "Ryzyko połknięcia żelu u małych dzieci – preferowany lakier.",
+   "zrodla": [
+    "SRC-KLIN-EAPD-F-2019",
+    "SRC-KLIN-ADA-F-2013"
+   ]
+  },
+  {
+   "id": "KROK-IMPREGNACJA",
+   "nazwa": "Impregnacja zębiny",
+   "opis": "Oczyszczenie i osuszenie zmiany, aplikacja preparatu impregnującego (np. fluorek diaminy srebra – wg wskazań i zgody opiekuna na przebarwienie), ochrona tkanek miękkich.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-FIZYKOTERAPIA",
+   "nazwa": "Zabieg fizykoterapeutyczny",
+   "opis": "Zabieg wg protokołu urządzenia (parametry, czas, ochrona oczu przy laserze / promienniku), dokumentacja parametrów.",
+   "uwaga": "Ograniczone dowody skuteczności – karta do weryfikacji.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-POMOC-DORAZNA",
+   "nazwa": "Postępowanie w nagłym przypadku",
+   "opis": "Ocena stanu (ból, obrzęk, krwawienie, uraz, stan ogólny), leczenie doraźne usuwające przyczynę lub łagodzące objawy, skierowanie / plan dalszego leczenia.",
+   "uwaga": "Stany zagrożenia życia – postępowanie wg procedur gabinetu (resuscytacja, wezwanie ZRM).",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ORZECZENIE",
+   "nazwa": "Wystawienie dokumentu",
+   "opis": "Ocena stanu jamy ustnej w zakresie potrzebnym do dokumentu, wystawienie orzeczenia / zaświadczenia, kopia w dokumentacji.",
+   "zrodla": [
+    "SRC-DU-2026-1391"
+   ]
+  },
+  {
+   "id": "KROK-ZNIECZ-ZEWNATRZUSTNE",
+   "nazwa": "Znieczulenie przewodowe zewnątrzustne",
+   "opis": "Blokada nerwu z dostępu zewnątrzustnego (np. przy szczękościsku) – lokalizacja punktów orientacyjnych, aspiracja, powolne podanie.",
+   "uwaga": "Technika specjalistyczna.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-PLAN-PROTETYCZNY",
+   "nazwa": "Plan leczenia protetycznego",
+   "opis": "Analiza braków i zgryzu, warunków podłoża, RTG filarów, przyzębia i leczenia kanałowego; warianty z kosztami i rokowaniem; zgoda pacjenta.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-WYCISK-ANATOMICZNY",
+   "nazwa": "Wycisk anatomiczny / sytuacyjny",
+   "opis": "Dobór łyżki standardowej, wycisk (alginat / silikon) lub skan wewnątrzustny, kontrola odwzorowania, dezynfekcja wycisku.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-WYCISK-CZYNNOSCIOWY",
+   "nazwa": "Wycisk czynnościowy łyżką indywidualną",
+   "opis": "Przymiarka łyżki indywidualnej, opracowanie brzegów (czynnościowe ukształtowanie), wycisk właściwy materiałem o odpowiedniej płynności.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-REJESTRACJA-ZWARCIA",
+   "nazwa": "Ustalenie zwarcia",
+   "opis": "Wzorniki zwarciowe / rejestrat: wysokość zwarcia (VDO), płaszczyzna zwarcia, linia pośrodkowa, relacja centralna; dobór koloru i kształtu zębów.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-PROBA-USTAWIENIA",
+   "nazwa": "Próba ustawienia zębów / konstrukcji",
+   "opis": "Przymiarka (zęby w wosku, szkielet, podbudowa): estetyka, fonetyka, zwarcie, dopasowanie; akceptacja pacjenta.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ODDANIE-PROTEZY",
+   "nazwa": "Oddanie uzupełnienia ruchomego",
+   "opis": "Kontrola wewnętrznej powierzchni i brzegów, zwarcia (kalka), korekta; instruktaż zakładania, higieny i użytkowania.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-KONTROLA-PROTEZY",
+   "nazwa": "Kontrola po oddaniu",
+   "opis": "Ocena podłoża (odleżyny), zwarcia, retencji; korekty.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-PREPARACJA-KORONA",
+   "nazwa": "Szlifowanie zęba pod koronę",
+   "opis": "Preparacja z zachowaniem grubości materiału, zbieżności ścian i kształtu granicy (stopień / zaokrąglony stopień) adekwatnie do rodzaju korony; ochrona miazgi zębów żywych (chłodzenie).",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-WYCISK-PRECYZYJNY",
+   "nazwa": "Retrakcja dziąsła i wycisk precyzyjny",
+   "opis": "Retrakcja (nić / pasta), wycisk dwuwarstwowy / jednoczasowy silikonem lub polieterem albo skan wewnątrzustny; kontrola granicy preparacji.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-TYMCZASOWA",
+   "nazwa": "Uzupełnienie tymczasowe",
+   "opis": "Wykonanie korony / mostu tymczasowego (klucz silikonowy, materiał akrylowy / kompozytowy), cementowanie tymczasowe, kontrola zwarcia i brzegów.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-PROBA-KONSTRUKCJI",
+   "nazwa": "Przymiarka konstrukcji",
+   "opis": "Ocena dopasowania brzeżnego, punktów stycznych, zwarcia, koloru; ewentualnie RTG dopasowania.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-CEMENTOWANIE",
+   "nazwa": "Osadzenie (cementowanie)",
+   "opis": "Przygotowanie zęba i uzupełnienia wg materiału (cement konwencjonalny / adhezyjny), osadzenie, usunięcie nadmiaru cementu (szczególnie poddziąsłowo), kontrola zwarcia.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-WKLAD-KK",
+   "nazwa": "Wkład koronowo-korzeniowy",
+   "opis": "Ocena leczenia kanałowego (RTG), usunięcie gutaperki z pozostawieniem szczelnego wypełnienia przywierzchołkowego (zwykle 4–5 mm), opracowanie kanału, wkład standardowy (np. z włókna) z odbudową kikuta albo wycisk na wkład indywidualny.",
+   "uwaga": "Zachowanie efektu obręczy (ferrule) – ocena ilości tkanek koronowych.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ZDJECIE-KORONY",
+   "nazwa": "Zdjęcie korony / mostu",
+   "opis": "Rozcięcie lub zdjęcie uzupełnienia (narzędzia do zdejmowania), ochrona zęba filarowego, ocena filara.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-NAPRAWA-PROTEZY",
+   "nazwa": "Naprawa protezy",
+   "opis": "Ocena uszkodzenia; naprawa przy fotelu (mała) lub wycisk z protezą do laboratorium; kontrola po naprawie.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-PODSCIELENIE",
+   "nazwa": "Podścielenie protezy",
+   "opis": "Bezpośrednie (materiał przy fotelu) lub pośrednie (wycisk w protezie, praca laboratorium), z ewentualnym ukształtowaniem brzegów; kontrola zwarcia po podścieleniu.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-SZYNA-ZGRYZOWA",
+   "nazwa": "Szyna zgryzowa (płytka)",
+   "opis": "Wyciski obu łuków, rejestracja zwarcia, oddanie szyny z korektą kontaktów (równomierne kontakty, prowadzenie), instruktaż; kontrole.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ELEMENT-RETENCYJNY",
+   "nazwa": "Elementy utrzymujące i podpierające",
+   "opis": "Projekt klamer / zasuw / zatrzasków i podpór wg przebiegu linii przetrwania i warunków zgryzowych; przygotowanie zębów (miejsca na podpory).",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-LICOWANIE-NAPRAWA",
+   "nazwa": "Naprawa licowania",
+   "opis": "Ocena uszkodzenia licówki / licowania, naprawa wewnątrzustna (system naprawczy) albo odnowienie w laboratorium.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ZLECENIE-LAB",
+   "nazwa": "Zlecenie dla pracowni",
+   "opis": "Zlecenie protetyczne (rodzaj pracy, materiał, kolor, zęby, zgryz, terminy) – w aplikacji: moduł „Zlecenia protetyczne”.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  }
+ ]
+}

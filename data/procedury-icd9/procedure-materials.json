@@ -1,0 +1,373 @@
+{
+ "opis": "Materiały, preparaty i narzędzia – bez obowiązkowych marek.",
+ "materialy": [
+  {
+   "id": "MAT-ZESTAW-PODST",
+   "nazwa": "Lusterko, zgłębnik, pęseta, sonda periodontologiczna",
+   "kategoria": "narzedzie"
+  },
+  {
+   "id": "MAT-KOFERDAM",
+   "nazwa": "Koferdam (płachta, klamry, ramka)",
+   "kategoria": "srodek_pomocniczy"
+  },
+  {
+   "id": "MAT-IZOL-WZGL",
+   "nazwa": "Wałki ligninowe, ślinociąg",
+   "kategoria": "srodek_pomocniczy"
+  },
+  {
+   "id": "MAT-ZNIECZ",
+   "nazwa": "Strzykawka, igła, środek znieczulający miejscowo",
+   "kategoria": "preparat",
+   "uwagi": "Wybór preparatu i środka obkurczającego zależny od pacjenta."
+  },
+  {
+   "id": "MAT-ZNIECZ-POW",
+   "nazwa": "Środek do znieczulenia powierzchniowego",
+   "kategoria": "preparat"
+  },
+  {
+   "id": "MAT-WIERTLA",
+   "nazwa": "Wiertła i końcówki (turbina, kątnica), ekskawator",
+   "kategoria": "narzedzie"
+  },
+  {
+   "id": "MAT-MATRYCA",
+   "nazwa": "Formówki, kliny, pierścienie",
+   "kategoria": "srodek_pomocniczy"
+  },
+  {
+   "id": "MAT-WYTRAWIACZ",
+   "nazwa": "Wytrawiacz (kwas ortofosforowy)",
+   "kategoria": "preparat"
+  },
+  {
+   "id": "MAT-SYSTEM-WIAZ",
+   "nazwa": "System wiążący",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-KOMPOZYT",
+   "nazwa": "Materiał złożony (kompozyt)",
+   "kategoria": "material",
+   "uwagi": "Rodzaj i kolor wg przypadku.",
+   "alternatywy": [
+    "kompomer",
+    "glasjonomer modyfikowany żywicą"
+   ]
+  },
+  {
+   "id": "MAT-GLASJONOMER",
+   "nazwa": "Cement glasjonomerowy",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-KRZEM-WAPN",
+   "nazwa": "Materiał krzemianowo-wapniowy (MTA / bioceramika)",
+   "kategoria": "material",
+   "alternatywy": [
+    "wodorotlenek wapnia twardniejący"
+   ]
+  },
+  {
+   "id": "MAT-CAOH",
+   "nazwa": "Wodorotlenek wapnia (pasta / podkład)",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-LAMPA",
+   "nazwa": "Lampa polimeryzacyjna",
+   "kategoria": "aparatura"
+  },
+  {
+   "id": "MAT-POLERY",
+   "nazwa": "Gumki, krążki, pasty polerskie, paski",
+   "kategoria": "srodek_pomocniczy"
+  },
+  {
+   "id": "MAT-KALKA",
+   "nazwa": "Kalka zgryzowa, nić dentystyczna",
+   "kategoria": "srodek_pomocniczy"
+  },
+  {
+   "id": "MAT-OPATR-TYMCZ",
+   "nazwa": "Materiał do opatrunku tymczasowego",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-FLUOR",
+   "nazwa": "Preparat fluorkowy (lakier / żel)",
+   "kategoria": "preparat",
+   "uwagi": "Stężenie i preparat wg wieku i ryzyka."
+  },
+  {
+   "id": "MAT-ODCZULACZ",
+   "nazwa": "Preparat do leczenia nadwrażliwości zębiny",
+   "kategoria": "preparat"
+  },
+  {
+   "id": "MAT-PILNIKI",
+   "nazwa": "Narzędzia endodontyczne ręczne i maszynowe",
+   "kategoria": "narzedzie"
+  },
+  {
+   "id": "MAT-ENDOMETR",
+   "nazwa": "Endometr",
+   "kategoria": "aparatura"
+  },
+  {
+   "id": "MAT-NAOCL",
+   "nazwa": "Podchloryn sodu (płyn do płukania kanałów)",
+   "kategoria": "preparat",
+   "uwagi": "Stężenie wg protokołu lekarza."
+  },
+  {
+   "id": "MAT-EDTA",
+   "nazwa": "Roztwór EDTA",
+   "kategoria": "preparat"
+  },
+  {
+   "id": "MAT-SACZKI",
+   "nazwa": "Sączki papierowe",
+   "kategoria": "srodek_pomocniczy"
+  },
+  {
+   "id": "MAT-GUTAPERKA",
+   "nazwa": "Gutaperka (ćwieki)",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-USZCZELNIACZ",
+   "nazwa": "Uszczelniacz kanałowy",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-RTG",
+   "nazwa": "Aparat RTG / czujnik, pozycjoner",
+   "kategoria": "aparatura"
+  },
+  {
+   "id": "MAT-PREP-DEWIT",
+   "nazwa": "Pasta dewitalizacyjna",
+   "kategoria": "preparat",
+   "uwagi": "Metoda historyczna – obecnie rzadko wskazana (ryzyko martwicy tkanek)."
+  },
+  {
+   "id": "MAT-RTG-UPS",
+   "nazwa": "Pozycjoner, czujnik / klisza, osłony",
+   "kategoria": "srodek_pomocniczy"
+  },
+  {
+   "id": "MAT-PANTOMOGRAF",
+   "nazwa": "Pantomograf",
+   "kategoria": "aparatura"
+  },
+  {
+   "id": "MAT-LAK",
+   "nazwa": "Lak szczelinowy (żywiczny)",
+   "kategoria": "material",
+   "alternatywy": [
+    "lak glasjonomerowy – ząb częściowo wyrznięty / trudna izolacja"
+   ]
+  },
+  {
+   "id": "MAT-SZCZOTKA-PASTA",
+   "nazwa": "Szczoteczka / gumka profilaktyczna, pasta profilaktyczna",
+   "kategoria": "srodek_pomocniczy"
+  },
+  {
+   "id": "MAT-PIASKARKA",
+   "nazwa": "Piaskarka (proszek o niskiej ścieralności)",
+   "kategoria": "aparatura"
+  },
+  {
+   "id": "MAT-SKALER",
+   "nazwa": "Skaler ultradźwiękowy / piezoelektryczny i końcówki",
+   "kategoria": "aparatura"
+  },
+  {
+   "id": "MAT-NARZ-REKA",
+   "nazwa": "Skalery ręczne",
+   "kategoria": "narzedzie"
+  },
+  {
+   "id": "MAT-KIRETY",
+   "nazwa": "Kirety (np. typu Gracey)",
+   "kategoria": "narzedzie"
+  },
+  {
+   "id": "MAT-PLUKANKA",
+   "nazwa": "Płyn do płukania kieszonek (np. chlorheksydyna)",
+   "kategoria": "preparat"
+  },
+  {
+   "id": "MAT-LEK-BLONA",
+   "nazwa": "Lek miejscowy na błonę śluzową (wg rozpoznania)",
+   "kategoria": "preparat"
+  },
+  {
+   "id": "MAT-KLESZCZE",
+   "nazwa": "Kleszcze ekstrakcyjne",
+   "kategoria": "narzedzie"
+  },
+  {
+   "id": "MAT-DZWIGNIE",
+   "nazwa": "Dźwignie, syndesmotom, periotom",
+   "kategoria": "narzedzie"
+  },
+  {
+   "id": "MAT-LYZECZKA",
+   "nazwa": "Łyżeczka zębodołowa, kleszczyki",
+   "kategoria": "narzedzie"
+  },
+  {
+   "id": "MAT-WIERTLA-CHIR",
+   "nazwa": "Wiertła chirurgiczne, prostnica / kątnica chirurgiczna z chłodzeniem solą",
+   "kategoria": "narzedzie"
+  },
+  {
+   "id": "MAT-SKALPEL-RASP",
+   "nazwa": "Skalpel, raspator, haczyki",
+   "kategoria": "narzedzie"
+  },
+  {
+   "id": "MAT-IGLOTRZYMACZ",
+   "nazwa": "Igłotrzymacz, nożyczki, pęseta chirurgiczna",
+   "kategoria": "narzedzie"
+  },
+  {
+   "id": "MAT-NICI",
+   "nazwa": "Nici chirurgiczne (wchłanialne / niewchłanialne)",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-GAZIKI",
+   "nazwa": "Gaziki jałowe",
+   "kategoria": "srodek_pomocniczy"
+  },
+  {
+   "id": "MAT-HEMOSTATYK",
+   "nazwa": "Miejscowy środek hemostatyczny (np. gąbka żelatynowa, kolagen, kwas traneksamowy)",
+   "kategoria": "preparat"
+  },
+  {
+   "id": "MAT-OPATR-ZEBODOL",
+   "nazwa": "Opatrunek do zębodołu",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-SACZEK-DREN",
+   "nazwa": "Sączek gumowy (dren)",
+   "kategoria": "srodek_pomocniczy"
+  },
+  {
+   "id": "MAT-SOL",
+   "nazwa": "Sól fizjologiczna jałowa",
+   "kategoria": "preparat"
+  },
+  {
+   "id": "MAT-TESTER",
+   "nazwa": "Środek do testu na zimno, elektryczny tester miazgi",
+   "kategoria": "preparat"
+  },
+  {
+   "id": "MAT-KOSCIOZASTEPCZY",
+   "nazwa": "Materiał kościozastępczy, membrana",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-SZYNA-MAT",
+   "nazwa": "Materiał do szynowania (drut, włókno, kompozyt)",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-OPATR-PERIO",
+   "nazwa": "Opatrunek periodontologiczny",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-KRIO",
+   "nazwa": "Aparat do krioterapii",
+   "kategoria": "aparatura"
+  },
+  {
+   "id": "MAT-POJEMNIK-HP",
+   "nazwa": "Pojemnik z utrwalaczem na materiał do badania histopatologicznego",
+   "kategoria": "srodek_pomocniczy"
+  },
+  {
+   "id": "MAT-ZACZEP-ORTO",
+   "nazwa": "Zaczep ortodontyczny (zamek / pętla)",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-WYPELN-WSTECZNE",
+   "nazwa": "Materiał do wstecznego wypełnienia (krzemianowo-wapniowy)",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-LYZKI",
+   "nazwa": "Łyżki wyciskowe (standardowe, indywidualne)",
+   "kategoria": "srodek_pomocniczy"
+  },
+  {
+   "id": "MAT-ALGINAT",
+   "nazwa": "Masa alginatowa",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-SILIKON",
+   "nazwa": "Masy silikonowe / polieterowe (precyzyjne)",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-SKANER",
+   "nazwa": "Skaner wewnątrzustny",
+   "kategoria": "aparatura",
+   "alternatywy": [
+    "wycisk konwencjonalny"
+   ]
+  },
+  {
+   "id": "MAT-RETRAKCJA",
+   "nazwa": "Nici / pasty retrakcyjne",
+   "kategoria": "srodek_pomocniczy"
+  },
+  {
+   "id": "MAT-TYMCZ-AKRYL",
+   "nazwa": "Materiał na uzupełnienia tymczasowe",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-CEMENT",
+   "nazwa": "Cementy (tymczasowe, konwencjonalne, adhezyjne)",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-WOSK",
+   "nazwa": "Wosk, wzorniki zwarciowe, kolornik, linijka (VDO)",
+   "kategoria": "srodek_pomocniczy"
+  },
+  {
+   "id": "MAT-WKLAD",
+   "nazwa": "Wkłady standardowe (np. z włókna) / materiał na wkład indywidualny",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-PODSCIELAJACY",
+   "nazwa": "Materiał do podścielania (twardy / miękki)",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-ZDEJMOWACZ",
+   "nazwa": "Narzędzia do zdejmowania koron",
+   "kategoria": "narzedzie"
+  },
+  {
+   "id": "MAT-SYSTEM-NAPRAW",
+   "nazwa": "System do naprawy ceramiki / licowania",
+   "kategoria": "material"
+  }
+ ]
+}

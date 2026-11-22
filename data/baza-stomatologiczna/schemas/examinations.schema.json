@@ -1,0 +1,390 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "type": "object",
+ "required": [
+  "opis",
+  "badania"
+ ],
+ "properties": {
+  "opis": {
+   "type": "string",
+   "minLength": 1
+  },
+  "badania": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "id",
+     "nazwa",
+     "nazwa_krotka",
+     "kategoria",
+     "status",
+     "cel",
+     "wskazania",
+     "przebieg",
+     "elementy_oceny",
+     "wynik_prawidlowy",
+     "nieprawidlowosci",
+     "dokumentacja",
+     "powiazania",
+     "zrodla"
+    ],
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^BAD-[A-Z0-9-]+$"
+     },
+     "nazwa": {
+      "type": "string",
+      "minLength": 1
+     },
+     "nazwa_krotka": {
+      "type": "string",
+      "minLength": 1
+     },
+     "kategoria": {
+      "enum": [
+       "podmiotowe",
+       "przedmiotowe",
+       "specjalistyczne",
+       "dziecko",
+       "kontrolne",
+       "kwalifikacja"
+      ]
+     },
+     "status": {
+      "enum": [
+       "not_started",
+       "in_progress",
+       "draft",
+       "verified",
+       "requires_expert_review"
+      ]
+     },
+     "cel": {
+      "type": "object",
+      "required": [
+       "oceniane",
+       "informacje",
+       "wykrywa"
+      ],
+      "additionalProperties": false,
+      "properties": {
+       "oceniane": {
+        "type": "string",
+        "minLength": 1
+       },
+       "informacje": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        }
+       },
+       "wykrywa": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        }
+       }
+      }
+     },
+     "wskazania": {
+      "type": "object",
+      "required": [
+       "kiedy",
+       "charakter"
+      ],
+      "additionalProperties": false,
+      "properties": {
+       "kiedy": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        }
+       },
+       "szczegolnie": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "minLength": 1
+        }
+       },
+       "charakter": {
+        "type": "array",
+        "items": {
+         "enum": [
+          "rutynowe",
+          "kontrolne",
+          "diagnostyczne"
+         ]
+        },
+        "minItems": 1
+       }
+      }
+     },
+     "przebieg": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "krok",
+        "opis"
+       ],
+       "properties": {
+        "krok": {
+         "type": "string",
+         "minLength": 1
+        },
+        "opis": {
+         "type": "string",
+         "minLength": 1
+        }
+       }
+      }
+     },
+     "elementy_oceny": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "object",
+       "additionalProperties": false,
+       "required": [
+        "element",
+        "co"
+       ],
+       "properties": {
+        "element": {
+         "type": "string",
+         "minLength": 1
+        },
+        "co": {
+         "type": "string",
+         "minLength": 1
+        },
+        "pole": {
+         "type": "string",
+         "pattern": "^POLE-"
+        }
+       }
+      }
+     },
+     "wynik_prawidlowy": {
+      "type": "string",
+      "minLength": 1
+     },
+     "nieprawidlowosci": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "minLength": 1
+      }
+     },
+     "dokumentacja": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "niezbedne",
+       "zalecane",
+       "sytuacyjne"
+      ],
+      "properties": {
+       "niezbedne": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "additionalProperties": false,
+         "required": [
+          "tekst",
+          "podstawa"
+         ],
+         "properties": {
+          "tekst": {
+           "type": "string",
+           "minLength": 1
+          },
+          "podstawa": {
+           "enum": [
+            "wymaganie_prawne",
+            "wymaganie_nfz",
+            "zalecenie_kliniczne",
+            "propozycja_aplikacji"
+           ]
+          },
+          "zrodla": {
+           "type": "array",
+           "items": {
+            "type": "string",
+            "pattern": "^SRC-[A-Z0-9-]+$"
+           },
+           "uniqueItems": true
+          },
+          "warunek": {
+           "type": "string",
+           "minLength": 1
+          }
+         }
+        }
+       },
+       "zalecane": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "additionalProperties": false,
+         "required": [
+          "tekst",
+          "podstawa"
+         ],
+         "properties": {
+          "tekst": {
+           "type": "string",
+           "minLength": 1
+          },
+          "podstawa": {
+           "enum": [
+            "wymaganie_prawne",
+            "wymaganie_nfz",
+            "zalecenie_kliniczne",
+            "propozycja_aplikacji"
+           ]
+          },
+          "zrodla": {
+           "type": "array",
+           "items": {
+            "type": "string",
+            "pattern": "^SRC-[A-Z0-9-]+$"
+           },
+           "uniqueItems": true
+          },
+          "warunek": {
+           "type": "string",
+           "minLength": 1
+          }
+         }
+        }
+       },
+       "sytuacyjne": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "additionalProperties": false,
+         "required": [
+          "tekst",
+          "podstawa"
+         ],
+         "properties": {
+          "tekst": {
+           "type": "string",
+           "minLength": 1
+          },
+          "podstawa": {
+           "enum": [
+            "wymaganie_prawne",
+            "wymaganie_nfz",
+            "zalecenie_kliniczne",
+            "propozycja_aplikacji"
+           ]
+          },
+          "zrodla": {
+           "type": "array",
+           "items": {
+            "type": "string",
+            "pattern": "^SRC-[A-Z0-9-]+$"
+           },
+           "uniqueItems": true
+          },
+          "warunek": {
+           "type": "string",
+           "minLength": 1
+          }
+         }
+        }
+       }
+      }
+     },
+     "powiazania": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "icd9",
+       "icd10"
+      ],
+      "properties": {
+       "icd9": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "additionalProperties": false,
+         "required": [
+          "kod",
+          "kiedy"
+         ],
+         "properties": {
+          "kod": {
+           "type": "string",
+           "pattern": "^23\\.[0-9]{2,5}$"
+          },
+          "kiedy": {
+           "type": "string",
+           "minLength": 1
+          }
+         }
+        }
+       },
+       "icd10": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "additionalProperties": false,
+         "required": [
+          "kod",
+          "kiedy"
+         ],
+         "properties": {
+          "kod": {
+           "type": "string",
+           "pattern": "^[A-Z][0-9]{2}(\\.[0-9])?$"
+          },
+          "kiedy": {
+           "type": "string",
+           "minLength": 1
+          }
+         }
+        }
+       },
+       "uwaga": {
+        "type": "string",
+        "minLength": 1
+       },
+       "reguly_nfz": {
+        "type": "array",
+        "items": {
+         "type": "string",
+         "pattern": "^R-[A-Z0-9-]+$"
+        }
+       }
+      }
+     },
+     "zrodla": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^SRC-[A-Z0-9-]+$"
+      },
+      "uniqueItems": true
+     },
+     "uwagi": {
+      "type": "string",
+      "minLength": 1
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,1059 @@
+{
+ "opis": "Pola formularzy specyficzne dla badań (pole.badanie = BAD-…). Wspólne pola – data/baza-stomatologiczna/pola-wspolne.json. Żadne pole nie jest wymagane do zapisu; brak wartości domyślnych.",
+ "pola": [
+  {
+   "id": "POLE-WYW-POWOD",
+   "etykieta": "Powód zgłoszenia (słowami pacjenta)",
+   "typ": "tekst",
+   "badanie": "BAD-WYWIAD"
+  },
+  {
+   "id": "POLE-WYW-DOLEGLIWOSCI",
+   "etykieta": "Dolegliwości – charakter, czas trwania, czynniki wywołujące",
+   "typ": "tekst_dlugi",
+   "badanie": "BAD-WYWIAD"
+  },
+  {
+   "id": "POLE-WYW-CHOROBY",
+   "etykieta": "Choroby ogólne",
+   "typ": "wybor_wielokrotny",
+   "opcje": [
+    "brak – wg pacjenta",
+    "choroby układu krążenia",
+    "cukrzyca",
+    "choroby krwi / skazy krwotoczne",
+    "padaczka",
+    "astma / POChP",
+    "choroby tarczycy",
+    "choroba nowotworowa (leczenie onkologiczne, radioterapia głowy i szyi)",
+    "osteoporoza (leki antyresorpcyjne)",
+    "choroby zakaźne (HBV, HCV, HIV)",
+    "zaburzenia psychiczne"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-WYWIAD"
+  },
+  {
+   "id": "POLE-WYW-LEKI",
+   "etykieta": "Leki przyjmowane stale (w tym przeciwkrzepliwe, antyresorpcyjne)",
+   "typ": "tekst_dlugi",
+   "badanie": "BAD-WYWIAD"
+  },
+  {
+   "id": "POLE-WYW-ALERGIE",
+   "etykieta": "Alergie (leki, lateks, materiały, środki znieczulające)",
+   "typ": "tekst",
+   "badanie": "BAD-WYWIAD"
+  },
+  {
+   "id": "POLE-WYW-CIAZA",
+   "etykieta": "Ciąża / karmienie piersią",
+   "typ": "wybor",
+   "opcje": [
+    "nie dotyczy",
+    "nie",
+    "ciąża – tydzień:",
+    "karmienie piersią"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-WYWIAD"
+  },
+  {
+   "id": "POLE-WYW-NALOGI",
+   "etykieta": "Używki",
+   "typ": "wybor_wielokrotny",
+   "opcje": [
+    "nie pali",
+    "palenie tytoniu",
+    "e-papierosy",
+    "alkohol",
+    "inne"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-WYWIAD"
+  },
+  {
+   "id": "POLE-WYW-STOMAT",
+   "etykieta": "Wywiad stomatologiczny (dotychczasowe leczenie, powikłania po znieczuleniu / ekstrakcji, częstość wizyt)",
+   "typ": "tekst_dlugi",
+   "badanie": "BAD-WYWIAD"
+  },
+  {
+   "id": "POLE-WYW-HIGIENA",
+   "etykieta": "Nawyki higieniczne i dietetyczne (szczotkowanie, nici, fluor, cukry)",
+   "typ": "tekst_dlugi",
+   "badanie": "BAD-WYWIAD"
+  },
+  {
+   "id": "POLE-WYW-PARAFUNKCJE",
+   "etykieta": "Parafunkcje",
+   "typ": "wybor_wielokrotny",
+   "opcje": [
+    "nie zgłasza",
+    "zaciskanie / zgrzytanie zębami",
+    "obgryzanie paznokci / przedmiotów",
+    "ssanie palca / smoczka",
+    "oddychanie przez usta"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-WYWIAD"
+  },
+  {
+   "id": "POLE-ZEW-TWARZ",
+   "etykieta": "Symetria i obrys twarzy",
+   "typ": "wybor",
+   "opcje": [
+    "symetryczna",
+    "asymetria – opis",
+    "obrzęk – lokalizacja"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-ZEWNATRZUSTNE"
+  },
+  {
+   "id": "POLE-ZEW-SKORA",
+   "etykieta": "Skóra twarzy",
+   "typ": "wybor",
+   "opcje": [
+    "bez zmian chorobowych",
+    "zmiana – opis"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-ZEWNATRZUSTNE"
+  },
+  {
+   "id": "POLE-ZEW-WARGI",
+   "etykieta": "Czerwień wargowa i kąciki ust",
+   "typ": "wybor",
+   "opcje": [
+    "bez zmian chorobowych",
+    "zajady",
+    "opryszczka",
+    "zmiana – opis"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-ZEWNATRZUSTNE"
+  },
+  {
+   "id": "POLE-ZEW-WEZLY",
+   "etykieta": "Węzły chłonne (podżuchwowe, podbródkowe, szyjne)",
+   "typ": "wybor",
+   "opcje": [
+    "niewyczuwalne",
+    "powiększone – opis (wielkość, bolesność, ruchomość)"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-ZEWNATRZUSTNE"
+  },
+  {
+   "id": "POLE-ZEW-SSZ",
+   "etykieta": "Stawy skroniowo-żuchwowe (przesiewowo)",
+   "typ": "wybor",
+   "opcje": [
+    "bez objawów",
+    "objawy – patrz badanie SSŻ"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-ZEWNATRZUSTNE"
+  },
+  {
+   "id": "POLE-ZEW-MIESNIE",
+   "etykieta": "Mięśnie żucia (palpacja przesiewowa)",
+   "typ": "wybor",
+   "opcje": [
+    "niebolesne",
+    "bolesność – lokalizacja"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-ZEWNATRZUSTNE"
+  },
+  {
+   "id": "POLE-ZEW-OPIS",
+   "etykieta": "Opis stwierdzonych odchyleń",
+   "typ": "tekst_dlugi",
+   "badanie": "BAD-ZEWNATRZUSTNE"
+  },
+  {
+   "id": "POLE-WEW-PRZEDSIONEK",
+   "etykieta": "Przedsionek, wargi i policzki (strona śluzówkowa)",
+   "typ": "wybor",
+   "opcje": [
+    "bez zmian chorobowych",
+    "zmiana – opis"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-WEWNATRZUSTNE"
+  },
+  {
+   "id": "POLE-WEW-JEZYK",
+   "etykieta": "Język",
+   "typ": "wybor",
+   "opcje": [
+    "bez zmian chorobowych",
+    "nalot",
+    "język geograficzny",
+    "zmiana – opis"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-WEWNATRZUSTNE"
+  },
+  {
+   "id": "POLE-WEW-DNO",
+   "etykieta": "Dno jamy ustnej",
+   "typ": "wybor",
+   "opcje": [
+    "bez zmian chorobowych",
+    "zmiana – opis"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-WEWNATRZUSTNE"
+  },
+  {
+   "id": "POLE-WEW-PODNIEBIENIE",
+   "etykieta": "Podniebienie twarde i miękkie",
+   "typ": "wybor",
+   "opcje": [
+    "bez zmian chorobowych",
+    "zmiana – opis"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-WEWNATRZUSTNE"
+  },
+  {
+   "id": "POLE-WEW-GARDLO",
+   "etykieta": "Cieśń gardła / migdałki",
+   "typ": "wybor",
+   "opcje": [
+    "bez zmian chorobowych",
+    "przerost migdałków",
+    "zmiana – opis"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-WEWNATRZUSTNE"
+  },
+  {
+   "id": "POLE-WEW-SLINIANKI",
+   "etykieta": "Ujścia ślinianek, ślina",
+   "typ": "wybor",
+   "opcje": [
+    "ślina wypływa, przejrzysta",
+    "suchość błony śluzowej",
+    "zmiana – opis"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-WEWNATRZUSTNE"
+  },
+  {
+   "id": "POLE-WEW-WEDZIDELKA",
+   "etykieta": "Wędzidełka warg i języka",
+   "typ": "wybor",
+   "opcje": [
+    "przyczep bez zaburzeń",
+    "przyczep wysoki / skrócone – opis"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-WEWNATRZUSTNE"
+  },
+  {
+   "id": "POLE-WEW-OPIS",
+   "etykieta": "Opis stwierdzonych zmian",
+   "typ": "tekst_dlugi",
+   "badanie": "BAD-WEWNATRZUSTNE"
+  },
+  {
+   "id": "POLE-BL-LOK",
+   "etykieta": "Lokalizacja zmiany",
+   "typ": "tekst",
+   "badanie": "BAD-BLONA"
+  },
+  {
+   "id": "POLE-BL-WYM",
+   "etykieta": "Największy wymiar zmiany",
+   "typ": "liczba",
+   "badanie": "BAD-BLONA",
+   "jednostka": "mm",
+   "min": 0,
+   "max": 100
+  },
+  {
+   "id": "POLE-BL-WYKWIT",
+   "etykieta": "Rodzaj wykwitu",
+   "typ": "wybor_wielokrotny",
+   "opcje": [
+    "plama biała",
+    "plama czerwona",
+    "nadżerka",
+    "owrzodzenie",
+    "pęcherz / pęcherzyk",
+    "grudka / guzek",
+    "rogowacenie siateczkowate"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-BLONA"
+  },
+  {
+   "id": "POLE-BL-POW",
+   "etykieta": "Powierzchnia",
+   "typ": "wybor",
+   "opcje": [
+    "gładka",
+    "nierówna / brodawkowata",
+    "pokryta nalotem dającym się zetrzeć",
+    "pokryta nalotem niedającym się zetrzeć"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-BLONA"
+  },
+  {
+   "id": "POLE-BL-KONS",
+   "etykieta": "Konsystencja (palpacja)",
+   "typ": "wybor",
+   "opcje": [
+    "miękka",
+    "elastyczna",
+    "twarda / naciek"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-BLONA"
+  },
+  {
+   "id": "POLE-BL-BOL",
+   "etykieta": "Bolesność",
+   "typ": "wybor",
+   "opcje": [
+    "niebolesna",
+    "bolesna"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-BLONA"
+  },
+  {
+   "id": "POLE-BL-CZAS",
+   "etykieta": "Czas trwania (wg pacjenta)",
+   "typ": "tekst",
+   "badanie": "BAD-BLONA"
+  },
+  {
+   "id": "POLE-BL-CZYNNIK",
+   "etykieta": "Prawdopodobny czynnik miejscowy (np. ostra krawędź, proteza)",
+   "typ": "tekst",
+   "badanie": "BAD-BLONA"
+  },
+  {
+   "id": "POLE-BL-DECYZJA",
+   "etykieta": "Postępowanie",
+   "typ": "wybor",
+   "opcje": [
+    "usunięcie czynnika i kontrola za 2 tygodnie",
+    "leczenie miejscowe",
+    "skierowanie do chirurga stomatologa / specjalisty chorób błony śluzowej",
+    "pilne skierowanie onkologiczne"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-BLONA"
+  },
+  {
+   "id": "POLE-UZ-TYP",
+   "etykieta": "Uzębienie",
+   "typ": "wybor",
+   "opcje": [
+    "stałe",
+    "mieszane",
+    "mleczne"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-UZEBIENIE"
+  },
+  {
+   "id": "POLE-UZ-DIAGRAM",
+   "etykieta": "Stan zębów – diagram (próchnica, wypełnienia, braki, korony, leczenie kanałowe)",
+   "typ": "tekst_dlugi",
+   "badanie": "BAD-UZEBIENIE",
+   "opis": "W aplikacji: diagram zębów; tekst – wynik dla opisu"
+  },
+  {
+   "id": "POLE-UZ-SYSTEM",
+   "etykieta": "Kryteria oceny próchnicy",
+   "typ": "wybor",
+   "opcje": [
+    "ICDAS II",
+    "opisowo (powierzchniowa / średnia / głęboka)"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-UZEBIENIE",
+   "zrodla": [
+    "SRC-KLIN-ICDAS-2007"
+   ]
+  },
+  {
+   "id": "POLE-UZ-DMFT",
+   "etykieta": "DMFT / dmft",
+   "typ": "liczba",
+   "badanie": "BAD-UZEBIENIE",
+   "min": 0,
+   "max": 32
+  },
+  {
+   "id": "POLE-UZ-NIEPROCH",
+   "etykieta": "Zmiany niepróchnicowe",
+   "typ": "wybor_wielokrotny",
+   "opcje": [
+    "starcie",
+    "abfrakcje",
+    "erozje",
+    "hipomineralizacja (MIH)",
+    "pęknięcia",
+    "przebarwienia"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-UZEBIENIE"
+  },
+  {
+   "id": "POLE-UZ-RYZYKO",
+   "etykieta": "Ryzyko próchnicy (ocena lekarza)",
+   "typ": "wybor",
+   "opcje": [
+    "niskie",
+    "umiarkowane",
+    "wysokie"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-UZEBIENIE"
+  },
+  {
+   "id": "POLE-UZ-OPIS",
+   "etykieta": "Opis odchyleń",
+   "typ": "tekst_dlugi",
+   "badanie": "BAD-UZEBIENIE"
+  },
+  {
+   "id": "POLE-PZ-SKRINING",
+   "etykieta": "Badanie przesiewowe (BPE / PSR)",
+   "typ": "wybor",
+   "opcje": [
+    "wykonano – wyniki sekstantów",
+    "nie wykonano"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-PRZYZEBIE"
+  },
+  {
+   "id": "POLE-PZ-BPE",
+   "etykieta": "Wyniki BPE/PSR (sekstanty, 0–4, *)",
+   "typ": "tekst",
+   "badanie": "BAD-PRZYZEBIE"
+  },
+  {
+   "id": "POLE-PZ-BOP",
+   "etykieta": "Krwawienie przy zgłębnikowaniu (BOP)",
+   "typ": "liczba",
+   "badanie": "BAD-PRZYZEBIE",
+   "jednostka": "%",
+   "min": 0,
+   "max": 100,
+   "zrodla": [
+    "SRC-KLIN-GING-2018"
+   ]
+  },
+  {
+   "id": "POLE-PZ-PPD",
+   "etykieta": "Głębokość kieszonek (PPD) – miejsca ≥ 4 mm",
+   "typ": "tekst_dlugi",
+   "badanie": "BAD-PRZYZEBIE"
+  },
+  {
+   "id": "POLE-PZ-CAL",
+   "etykieta": "Utrata przyczepu (CAL) / recesje",
+   "typ": "tekst_dlugi",
+   "badanie": "BAD-PRZYZEBIE"
+  },
+  {
+   "id": "POLE-PZ-RUCH",
+   "etykieta": "Ruchomość zębów (stopień, zęby)",
+   "typ": "tekst",
+   "badanie": "BAD-PRZYZEBIE"
+  },
+  {
+   "id": "POLE-PZ-FURK",
+   "etykieta": "Zajęcie furkacji (stopień, zęby)",
+   "typ": "tekst",
+   "badanie": "BAD-PRZYZEBIE"
+  },
+  {
+   "id": "POLE-PZ-ROZPOZNANIE",
+   "etykieta": "Ocena stanu przyzębia (klasyfikacja 2017)",
+   "typ": "wybor",
+   "opcje": [
+    "zdrowe przyzębie",
+    "zapalenie dziąseł wywołane płytką",
+    "zapalenie przyzębia – stadium/stopień:",
+    "inne – opis"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-PRZYZEBIE",
+   "zrodla": [
+    "SRC-KLIN-PERIO-2018",
+    "SRC-KLIN-GING-2018"
+   ]
+  },
+  {
+   "id": "POLE-PZ-STADIUM",
+   "etykieta": "Stadium zapalenia przyzębia",
+   "typ": "wybor",
+   "opcje": [
+    "I",
+    "II",
+    "III",
+    "IV"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-PRZYZEBIE",
+   "zrodla": [
+    "SRC-KLIN-PERIO-2018"
+   ]
+  },
+  {
+   "id": "POLE-PZ-STOPIEN",
+   "etykieta": "Stopień (tempo progresji)",
+   "typ": "wybor",
+   "opcje": [
+    "A",
+    "B",
+    "C"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-PRZYZEBIE",
+   "zrodla": [
+    "SRC-KLIN-PERIO-2018"
+   ]
+  },
+  {
+   "id": "POLE-HG-WSKAZNIK",
+   "etykieta": "Wskaźnik płytki",
+   "typ": "wybor",
+   "opcje": [
+    "API (Lange)",
+    "PCR (O’Leary)",
+    "OHI-S",
+    "opisowo"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-HIGIENA"
+  },
+  {
+   "id": "POLE-HG-WARTOSC",
+   "etykieta": "Wartość wskaźnika płytki",
+   "typ": "liczba",
+   "badanie": "BAD-HIGIENA",
+   "jednostka": "%",
+   "min": 0,
+   "max": 100
+  },
+  {
+   "id": "POLE-HG-GI",
+   "etykieta": "GI (Löe–Silness) / SBI",
+   "typ": "liczba",
+   "badanie": "BAD-HIGIENA",
+   "min": 0,
+   "max": 3,
+   "zrodla": [
+    "SRC-KLIN-GI-1963"
+   ]
+  },
+  {
+   "id": "POLE-HG-ZLOGI",
+   "etykieta": "Złogi",
+   "typ": "wybor_wielokrotny",
+   "opcje": [
+    "brak",
+    "płytka (złogi miękkie)",
+    "kamień naddziąsłowy",
+    "kamień poddziąsłowy",
+    "przebarwienia"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-HIGIENA"
+  },
+  {
+   "id": "POLE-HG-OCENA",
+   "etykieta": "Ocena higieny (lekarz)",
+   "typ": "wybor",
+   "opcje": [
+    "dobra",
+    "dostateczna",
+    "zła"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-HIGIENA"
+  },
+  {
+   "id": "POLE-HG-INSTRUKTAZ",
+   "etykieta": "Przeprowadzono instruktaż higieny",
+   "typ": "przelacznik",
+   "badanie": "BAD-HIGIENA"
+  },
+  {
+   "id": "POLE-HG-INSTR-OPIS",
+   "etykieta": "Zakres instruktażu (technika, przybory, fluorki)",
+   "typ": "tekst_dlugi",
+   "badanie": "BAD-HIGIENA"
+  },
+  {
+   "id": "POLE-ZG-ANGLE",
+   "etykieta": "Klasa Angle’a (trzonowce)",
+   "typ": "wybor",
+   "opcje": [
+    "I",
+    "II",
+    "III",
+    "nie do oceny"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-ZGRYZ"
+  },
+  {
+   "id": "POLE-ZG-OJ",
+   "etykieta": "Nagryz poziomy (overjet)",
+   "typ": "liczba",
+   "badanie": "BAD-ZGRYZ",
+   "jednostka": "mm",
+   "min": -10,
+   "max": 20
+  },
+  {
+   "id": "POLE-ZG-OB",
+   "etykieta": "Nagryz pionowy (overbite)",
+   "typ": "liczba",
+   "badanie": "BAD-ZGRYZ",
+   "jednostka": "mm",
+   "min": -10,
+   "max": 15
+  },
+  {
+   "id": "POLE-ZG-WADY",
+   "etykieta": "Wady zgryzu",
+   "typ": "wybor_wielokrotny",
+   "opcje": [
+    "brak",
+    "zgryz krzyżowy",
+    "zgryz otwarty",
+    "zgryz głęboki",
+    "przodozgryz",
+    "stłoczenia",
+    "diastema"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-ZGRYZ"
+  },
+  {
+   "id": "POLE-ZG-LINIA",
+   "etykieta": "Linia pośrodkowa",
+   "typ": "wybor",
+   "opcje": [
+    "zgodna",
+    "przesunięta – mm i strona"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-ZGRYZ"
+  },
+  {
+   "id": "POLE-ZG-PROWADZENIE",
+   "etykieta": "Prowadzenie",
+   "typ": "wybor",
+   "opcje": [
+    "kłowe",
+    "grupowe",
+    "przednie",
+    "zaburzone – kontakty przedwczesne"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-ZGRYZ"
+  },
+  {
+   "id": "POLE-ZG-OPIS",
+   "etykieta": "Opis",
+   "typ": "tekst_dlugi",
+   "badanie": "BAD-ZGRYZ"
+  },
+  {
+   "id": "POLE-SSZ-BOL",
+   "etykieta": "Ból w okolicy SSŻ / mięśni (ostatnie 30 dni)",
+   "typ": "wybor",
+   "opcje": [
+    "nie",
+    "tak – lokalizacja"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-SSZ",
+   "zrodla": [
+    "SRC-KLIN-DCTMD-2014"
+   ]
+  },
+  {
+   "id": "POLE-SSZ-ODWODZENIE",
+   "etykieta": "Maksymalne odwodzenie bez bólu / z pomocą",
+   "typ": "liczba",
+   "badanie": "BAD-SSZ",
+   "jednostka": "mm",
+   "min": 0,
+   "max": 80
+  },
+  {
+   "id": "POLE-SSZ-TOR",
+   "etykieta": "Tor odwodzenia",
+   "typ": "wybor",
+   "opcje": [
+    "prosty",
+    "zbaczanie (deviation)",
+    "zbaczanie z powrotem (deflection)"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-SSZ"
+  },
+  {
+   "id": "POLE-SSZ-ODGLOSY",
+   "etykieta": "Odgłosy stawowe",
+   "typ": "wybor_wielokrotny",
+   "opcje": [
+    "brak",
+    "trzask przy otwieraniu",
+    "trzask przy zamykaniu",
+    "trzeszczenia"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-SSZ"
+  },
+  {
+   "id": "POLE-SSZ-PALPACJA",
+   "etykieta": "Palpacja (żwacze, skroniowe, staw) – ból znany pacjentowi",
+   "typ": "tekst",
+   "badanie": "BAD-SSZ"
+  },
+  {
+   "id": "POLE-SSZ-ZABLOK",
+   "etykieta": "Zablokowanie / ograniczenie otwierania",
+   "typ": "wybor",
+   "opcje": [
+    "nie",
+    "tak – opis"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-SSZ"
+  },
+  {
+   "id": "POLE-SSZ-OPIS",
+   "etykieta": "Opis i wstępna ocena",
+   "typ": "tekst_dlugi",
+   "badanie": "BAD-SSZ"
+  },
+  {
+   "id": "POLE-ZY-ZIMNO",
+   "etykieta": "Test na zimno",
+   "typ": "wybor",
+   "opcje": [
+    "dodatni – reakcja krótkotrwała",
+    "dodatni – reakcja przedłużona (> 10 s)",
+    "ujemny",
+    "niejednoznaczny"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-ZYWOTNOSC"
+  },
+  {
+   "id": "POLE-ZY-EPT",
+   "etykieta": "Elektryczny test żywotności (wartość / wynik)",
+   "typ": "tekst",
+   "badanie": "BAD-ZYWOTNOSC"
+  },
+  {
+   "id": "POLE-ZY-OPUK",
+   "etykieta": "Opukiwanie",
+   "typ": "wybor",
+   "opcje": [
+    "niebolesne",
+    "bolesne pionowo",
+    "bolesne poziomo"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-ZYWOTNOSC"
+  },
+  {
+   "id": "POLE-ZY-PALP",
+   "etykieta": "Palpacja okolicy wierzchołka",
+   "typ": "wybor",
+   "opcje": [
+    "niebolesna",
+    "bolesna",
+    "obrzęk / przetoka"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-ZYWOTNOSC"
+  },
+  {
+   "id": "POLE-ZY-NAGRYZ",
+   "etykieta": "Test nagryzania",
+   "typ": "wybor",
+   "opcje": [
+    "niebolesny",
+    "bolesny"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-ZYWOTNOSC"
+  },
+  {
+   "id": "POLE-ZY-KONTROLA",
+   "etykieta": "Ząb kontrolny (porównawczy) i jego wynik",
+   "typ": "tekst",
+   "badanie": "BAD-ZYWOTNOSC"
+  },
+  {
+   "id": "POLE-ZY-OCENA",
+   "etykieta": "Ocena stanu miazgi / tkanek okołowierzchołkowych",
+   "typ": "wybor",
+   "opcje": [
+    "miazga żywa – bez objawów",
+    "odwracalne zapalenie miazgi",
+    "nieodwracalne zapalenie miazgi",
+    "martwica miazgi",
+    "ząb leczony kanałowo",
+    "zmiana okołowierzchołkowa"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-ZYWOTNOSC",
+   "zrodla": [
+    "SRC-KLIN-ESE-S3-2023"
+   ]
+  },
+  {
+   "id": "POLE-RTG-RODZAJ",
+   "etykieta": "Rodzaj zdjęcia",
+   "typ": "wybor",
+   "opcje": [
+    "zdjęcie wewnątrzustne okołowierzchołkowe",
+    "zdjęcie zgryzowo-skrzydłowe",
+    "pantomogram",
+    "CBCT (poza gabinetem)"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-RTG"
+  },
+  {
+   "id": "POLE-RTG-WSKAZANIE",
+   "etykieta": "Uzasadnienie wykonania (wskazanie)",
+   "typ": "tekst",
+   "badanie": "BAD-RTG"
+  },
+  {
+   "id": "POLE-RTG-OPIS",
+   "etykieta": "Opis zdjęcia (zęby, ozębna, kość, zmiany)",
+   "typ": "tekst_dlugi",
+   "badanie": "BAD-RTG"
+  },
+  {
+   "id": "POLE-RTG-OPIS-OBOW",
+   "etykieta": "Opis zdjęcia wpisany do dokumentacji",
+   "typ": "przelacznik",
+   "badanie": "BAD-RTG"
+  },
+  {
+   "id": "POLE-UR-OKOLICZNOSCI",
+   "etykieta": "Okoliczności urazu (kiedy, gdzie, jak)",
+   "typ": "tekst_dlugi",
+   "badanie": "BAD-PO-URAZIE"
+  },
+  {
+   "id": "POLE-UR-RODZAJ",
+   "etykieta": "Rodzaj urazu (IADT)",
+   "typ": "wybor",
+   "opcje": [
+    "infrakcja szkliwa",
+    "złamanie korony bez obnażenia miazgi",
+    "złamanie korony z obnażeniem miazgi",
+    "złamanie korzenia",
+    "wstrząs",
+    "nadwichnięcie",
+    "zwichnięcie boczne",
+    "wtłoczenie",
+    "wysunięcie",
+    "zwichnięcie całkowite (awulsja)"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-PO-URAZIE",
+   "zrodla": [
+    "SRC-KLIN-IADT-ZLAM-2020"
+   ]
+  },
+  {
+   "id": "POLE-UR-TKANKI",
+   "etykieta": "Tkanki miękkie (rany, fragmenty w wardze)",
+   "typ": "tekst",
+   "badanie": "BAD-PO-URAZIE"
+  },
+  {
+   "id": "POLE-UR-RUCH",
+   "etykieta": "Ruchomość / przemieszczenie",
+   "typ": "wybor",
+   "opcje": [
+    "brak",
+    "ruchomość – stopień",
+    "przemieszczenie – kierunek"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-PO-URAZIE"
+  },
+  {
+   "id": "POLE-UR-SZCZEPIENIE",
+   "etykieta": "Zweryfikowano szczepienie przeciw tężcowi (przy ranach / awulsji)",
+   "typ": "przelacznik",
+   "badanie": "BAD-PO-URAZIE"
+  },
+  {
+   "id": "POLE-UR-PLAN",
+   "etykieta": "Plan kontroli (terminy wg IADT)",
+   "typ": "tekst",
+   "badanie": "BAD-PO-URAZIE"
+  },
+  {
+   "id": "POLE-DZ-WIEK",
+   "etykieta": "Wiek dziecka",
+   "typ": "liczba",
+   "badanie": "BAD-DZIECKO",
+   "jednostka": "lata",
+   "min": 0,
+   "max": 18
+  },
+  {
+   "id": "POLE-DZ-WSPOLPRACA",
+   "etykieta": "Współpraca (skala Franklla)",
+   "typ": "wybor",
+   "opcje": [
+    "1 – zdecydowanie negatywna",
+    "2 – negatywna",
+    "3 – pozytywna",
+    "4 – zdecydowanie pozytywna"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-DZIECKO"
+  },
+  {
+   "id": "POLE-DZ-FLUOR",
+   "etykieta": "Ekspozycja na fluorki",
+   "typ": "wybor",
+   "opcje": [
+    "pasta z fluorem odpowiednia do wieku",
+    "pasta bez fluoru",
+    "lakier fluorkowy w gabinecie",
+    "nie ustalono"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-DZIECKO",
+   "zrodla": [
+    "SRC-KLIN-EAPD-F-2019"
+   ]
+  },
+  {
+   "id": "POLE-DZ-NAWYKI",
+   "etykieta": "Nawyki",
+   "typ": "wybor_wielokrotny",
+   "opcje": [
+    "butelka / karmienie nocne",
+    "częste słodkie przekąski / napoje",
+    "ssanie smoczka / palca",
+    "oddychanie przez usta"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-DZIECKO"
+  },
+  {
+   "id": "POLE-DZ-ROZWOJ",
+   "etykieta": "Wyrzynanie i rozwój uzębienia (zgodność z wiekiem)",
+   "typ": "tekst",
+   "badanie": "BAD-DZIECKO"
+  },
+  {
+   "id": "POLE-DZ-OPIEKUN",
+   "etykieta": "Informacje przekazano opiekunowi",
+   "typ": "wybor",
+   "opcje": [
+    "tak",
+    "nie dotyczy (pacjent pełnoletni)"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-DZIECKO"
+  },
+  {
+   "id": "POLE-KO-ZMIANY",
+   "etykieta": "Zmiany od ostatniej wizyty (wywiad, nowe dolegliwości, leki)",
+   "typ": "tekst_dlugi",
+   "badanie": "BAD-KONTROLNE"
+  },
+  {
+   "id": "POLE-KO-OCENA",
+   "etykieta": "Ocena leczenia / stanu jamy ustnej na kontroli",
+   "typ": "tekst_dlugi",
+   "badanie": "BAD-KONTROLNE"
+  },
+  {
+   "id": "POLE-PL-ZABIEG",
+   "etykieta": "Planowany zabieg",
+   "typ": "tekst",
+   "badanie": "BAD-PRZED-LECZENIEM"
+  },
+  {
+   "id": "POLE-PL-RYZYKA",
+   "etykieta": "Czynniki ryzyka zabiegu",
+   "typ": "wybor_wielokrotny",
+   "opcje": [
+    "brak – wg wywiadu",
+    "leki przeciwkrzepliwe / antyagregacyjne",
+    "leki antyresorpcyjne",
+    "radioterapia głowy i szyi",
+    "cukrzyca niewyrównana",
+    "ciąża",
+    "alergia na środki znieczulające",
+    "choroby serca – profilaktyka antybiotykowa do rozważenia"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-PRZED-LECZENIEM"
+  },
+  {
+   "id": "POLE-PL-BADANIA",
+   "etykieta": "Wyniki badań dodatkowych (INR, RTG, konsultacje)",
+   "typ": "tekst_dlugi",
+   "badanie": "BAD-PRZED-LECZENIEM"
+  },
+  {
+   "id": "POLE-PL-ALTERNATYWY",
+   "etykieta": "Omówione alternatywy i ryzyka",
+   "typ": "tekst_dlugi",
+   "badanie": "BAD-PRZED-LECZENIEM"
+  },
+  {
+   "id": "POLE-PO-LECZENIE",
+   "etykieta": "Leczenie zakończone (rodzaj, zęby, data)",
+   "typ": "tekst",
+   "badanie": "BAD-PO-LECZENIU"
+  },
+  {
+   "id": "POLE-PO-OCENA",
+   "etykieta": "Ocena wyniku leczenia (klinicznie / RTG)",
+   "typ": "tekst_dlugi",
+   "badanie": "BAD-PO-LECZENIU"
+  },
+  {
+   "id": "POLE-PO-WYNIK",
+   "etykieta": "Wynik",
+   "typ": "wybor",
+   "opcje": [
+    "powodzenie",
+    "niepewny – dalsza obserwacja",
+    "niepowodzenie – plan"
+   ],
+   "wlasna_wartosc": true,
+   "badanie": "BAD-PO-LECZENIU",
+   "zrodla": [
+    "SRC-KLIN-ESE-2006"
+   ]
+  }
+ ]
+}
