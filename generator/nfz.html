@@ -277,6 +277,7 @@ table.stat td::first-letter{text-transform:none}
 <!--GABINET_DANE--><script src="/opisy-nfz/zasoby/gabinet-saas.js"></script>
 <script src="/opisy-nfz/zasoby/szablony.js"></script>
 <script src="/opisy-nfz/zasoby/nfz-dane.js"></script>
+<script src="/opisy-nfz/zasoby/baza-dane.js"></script>
 <script>
 /* ---------- użytkownik i jego przestrzeń danych (wspolne.js) ----------
    Dane każdego użytkownika są w osobnej bazie (opisyNFZ@<id>) i są szyfrowane jego kluczem; sesję i klucz sprawdza dbInit (G.ready). */
@@ -1877,6 +1878,28 @@ function edBoxHTML(outs,m){                            // cały opis: podgląd w
   const n=edMiss(),chg=genTxt()!==state.ed.gen;
   return `<div class="warn" id="ed-note">${chg?'Formularz zmienił się po edycji tekstu – Twój tekst nie został nadpisany.':'Tekst edytowany ręcznie – zmiany w formularzu go nie nadpiszą.'}${n?` W tekście ${n===1?'jest':'są'} ${n} ${plural(n,'pole','pola','pól')} [UZUPEŁNIJ].`:''}</div><textarea id="edTxt" class="edtxt" aria-label="Tekst opisu (edycja)">${esc(state.ed.txt)}</textarea><div class="row" style="margin-top:8px"><button type="button" class="btn ghost sm" data-act="regen" id="regenBtn">Wygeneruj tekst z formularza</button></div>`;
 }
+/* ---------- baza stomatologiczna (integracja I1): kontrola kompletności dokumentacji – ostrzeżenie, bez blokady (decyzja Patryka 22.11.2026) ----------
+   Elementy z checklist kart (data/procedury-icd9, generator/baza-dane.js). Automatycznie sprawdzane: zęby / ćwiartki na diagramie, wiek, data, opis,
+   rozpoznanie, lekarz; pozostałe – „do sprawdzenia” przez lekarza. Nie zmienia treści opisu ani wyceny. */
+function bazaAuto(e,c){
+  const id=e.id||'',pole=e.pole||'';
+  if(id==='CHK-W-DATA')return [true,'data wizyty: '+saveDate()];
+  if(id==='CHK-W-OPIS')return [true,'opis generowany z formularza'];
+  if(id==='CHK-W-LEKARZ')return [true,'z konta lekarza'];
+  if(id==='CHK-W-ROZPOZNANIE'){const t=str(icdOf(c));return t?[true,t]:[false,'brak rozpoznania'];}
+  if(id==='CHK-W-ZAB-ISO'||pole==='POLE-ZAB'||pole==='POLE-ZEBY'||pole==='POLE-LUK'||pole==='POLE-LOKALIZACJA'){
+    if(!D[c]||!D[c].diag)return [null,''];const n=teethOf(c).length+(state.quads[c]||[]).length;return n?[true,'zaznaczono na diagramie']:[false,'nie zaznaczono zębów / ćwiartek'];}
+  if(pole==='POLE-WIEK')return AGE()!==null?[true,'wiek: '+AGE()]:[false,'nie wpisano wieku'];
+  return [null,''];}
+function bazaChk(){
+  const B=window.BAZA_DANE;if(!B)return [];
+  return state.codes.filter(c=>B.kody[c]).map(c=>{const k=B.kody[c];
+    const el=k.wspolne.map(w=>Object.assign({id:w},B.wspolne[w])).concat(k.elementy).filter(e=>e&&e.tekst);
+    return {c,k,el:el.map(e=>{const [ok,info]=bazaAuto(e,c);return {e,ok,info,warn:ok===false&&(e.poziom==='obowiazkowe'||e.poziom==='rozliczeniowe')};})};});}
+function bazaChkHTML(){
+  const L=bazaChk();if(!L.length)return '';const n=L.reduce((s,x)=>s+x.el.filter(i=>i.warn).length,0);
+  const POZ={obowiazkowe:'obowiązkowe',zalecane:'zalecane',sytuacyjne:'zależne od sytuacji',rozliczeniowe:'rozliczenie NFZ'};
+  return `<details class="card baza-chk" data-testid="baza-chk"${n?' open':''}><summary><b>Kontrola kompletności dokumentacji</b> – ${n?`<span style="color:var(--warn)">${n} do uzupełnienia</span>`:'bez braków wykrytych automatycznie'} <span class="note">(baza wiedzy – wersja robocza, tylko ostrzeżenie)</span></summary>${L.map(x=>`<div style="margin:8px 0"><b class="code">${esc(x.c)}</b> ${esc(x.k.nazwa)} <span class="note">karta ${esc(x.k.kod)} – ${x.k.status==='verified'?'zweryfikowana':'do weryfikacji'}</span><ul style="margin:4px 0 0;padding-left:20px">${x.el.map(i=>`<li${i.warn?' class="warn-li" style="color:var(--warn)"':''}>${i.ok===true?'✓':i.ok===false?'⚠':'☐'} ${esc(i.e.tekst)} <span class="note">[${esc(POZ[i.e.poziom]||i.e.poziom)}${i.e.warunek?' – '+esc(i.e.warunek):''}]${i.info?' – '+esc(i.info):''}</span></li>`).join('')}</ul></div>`).join('')}<p class="note" style="margin:6px 0 0">✓ sprawdzone automatycznie · ⚠ brak (tylko ostrzeżenie – zapis możliwy) · ☐ do sprawdzenia przez lekarza. Pełne karty: <a href="/katalog-procedur" target="_blank" rel="noopener">Katalog procedur</a>.</p></details>`;}
 function renderStep3(){
   const outs=buildOut();
   const rows=state.codes.map(c=>{const d=D[c];let where='—';
@@ -1891,7 +1914,7 @@ function renderStep3(){
   const est=state.codes.reduce((n,c)=>n+(aotEst(c)||nfzMin(c)||0),0);
   const noData=state.codes.filter(c=>!aotEst(c)&&!nfzMin(c));
   const sum2=sum.replace('</table></div></section>',`</table></div><p class="note" style="margin:8px 0 0">„Min. czas NFZ” – wymóg z Zarządzenia 95/2026/DSOZ (tylko pakiety ST30–ST30G). „Orientacyjnie” – czas przyjęty przez ekspertów NIL do wyceny AOTMiT (WT.5403.33.2021), nie jest wymogiem. Szacunek całej wizyty wg AOTMiT: <b>~${est} min</b>${noData.length?` + ${noData.join(', ')} (brak danych o czasie)`:''}. Do ewidencji i statystyk trafia „Czas wizyty” z rozliczenia powyżej. NFZ weryfikuje czasy względem godzin pracy lekarza zgłoszonych do umowy.</p></section>`);
-  return nfzBox()+all+ptsCard()+sum2+each;
+  return nfzBox()+bazaChkHTML()+all+ptsCard()+sum2+each;
 }
 function prefetchBodies(){if(!DB.ready)return;document.querySelectorAll('[data-act="hcopy"]').forEach(b=>{const id=b.dataset.id;if(!DB.bodies.has(id))dbBody(id).catch(()=>{});});}
 function render(){

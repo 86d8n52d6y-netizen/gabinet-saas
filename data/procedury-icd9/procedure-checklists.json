@@ -1483,16 +1483,6 @@
    ],
    "elementy": [
     {
-     "id": "CHK-23.1701-1",
-     "tekst": "Zgoda pacjenta na zabieg",
-     "poziom": "zalecane",
-     "podstawa": "wymaganie_prawne",
-     "zrodla": [
-      "SRC-PRAWA-PACJENTA"
-     ],
-     "pole": "POLE-ZGODA"
-    },
-    {
      "id": "CHK-23.1701-2",
      "tekst": "Kompletność usuniętego zęba / korzeni",
      "poziom": "zalecane",
@@ -1529,16 +1519,6 @@
     "CHK-W-ZGODA"
    ],
    "elementy": [
-    {
-     "id": "CHK-23.1702-1",
-     "tekst": "Zgoda pacjenta na zabieg",
-     "poziom": "zalecane",
-     "podstawa": "wymaganie_prawne",
-     "zrodla": [
-      "SRC-PRAWA-PACJENTA"
-     ],
-     "pole": "POLE-ZGODA"
-    },
     {
      "id": "CHK-23.1702-2",
      "tekst": "Kompletność usuniętego zęba / korzeni",
@@ -1577,16 +1557,6 @@
    ],
    "elementy": [
     {
-     "id": "CHK-23.1703-1",
-     "tekst": "Zgoda pacjenta na zabieg",
-     "poziom": "zalecane",
-     "podstawa": "wymaganie_prawne",
-     "zrodla": [
-      "SRC-PRAWA-PACJENTA"
-     ],
-     "pole": "POLE-ZGODA"
-    },
-    {
      "id": "CHK-23.1703-2",
      "tekst": "Kompletność usuniętego zęba / korzeni",
      "poziom": "zalecane",
@@ -1623,16 +1593,6 @@
     "CHK-W-ZGODA"
    ],
    "elementy": [
-    {
-     "id": "CHK-23.1704-1",
-     "tekst": "Zgoda pacjenta na zabieg",
-     "poziom": "zalecane",
-     "podstawa": "wymaganie_prawne",
-     "zrodla": [
-      "SRC-PRAWA-PACJENTA"
-     ],
-     "pole": "POLE-ZGODA"
-    },
     {
      "id": "CHK-23.1704-2",
      "tekst": "Kompletność usuniętego zęba / korzeni",

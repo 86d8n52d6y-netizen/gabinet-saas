@@ -16,6 +16,7 @@ export default async function KatalogNfz() {
   return (
     <main className="wrap">
       <h1>Katalog NFZ</h1>
+      <p><a href="/katalog-procedur" data-testid="link-katalog-procedur">Katalog procedur i badań (baza wiedzy) →</a></p>
       <section className="card" aria-labelledby="kat">
         <h2 id="kat" style={{ marginTop: 0 }}>Kody z zarządzeń DSOZ ({rows.length})</h2>
         <div style={{ overflowX: 'auto' }}><table>

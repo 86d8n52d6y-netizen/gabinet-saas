@@ -17,7 +17,7 @@ const addDays = (n: number) => { const d = new Date(todayPL() + 'T12:00:00Z'); d
 
 const DIR = path.join(process.cwd(), 'generator');
 const TYPES: Record<string, string> = { js: 'text/javascript; charset=utf-8', css: 'text/css; charset=utf-8', woff2: 'font/woff2', html: 'text/html; charset=utf-8' };
-export const ASSETS = /^(gabinet-saas\.js|szablony\.js|nfz-dane\.js|prywatne-katalog\.js|wspolne\.css|fonts\.css|ibm-plex-(sans|mono)-latin(-ext)?-[4-7]00-normal\.woff2)$/;
+export const ASSETS = /^(gabinet-saas\.js|szablony\.js|nfz-dane\.js|baza-dane\.js|prywatne-katalog\.js|wspolne\.css|fonts\.css|ibm-plex-(sans|mono)-latin(-ext)?-[4-7]00-normal\.woff2)$/;
 
 const cache = new Map<string, { buf: Buffer; etag: string }>();
 async function file(name: string) {
