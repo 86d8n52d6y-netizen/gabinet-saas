@@ -1794,6 +1794,19 @@
       "nazwa_pl_urzedowa": "Badanie dentystyczne"
     },
     {
+      "kod": "Z02.7",
+      "poziom": 4,
+      "nazwa_who_en": "Issue of medical certificate",
+      "nazwa_pl_robocza": "Wydanie zaświadczenia lekarskiego",
+      "nazwa_pl_status": "urzędowa (Tom I CeZ) = wyświetlana",
+      "status": "POTWIERDZONA",
+      "uwagi": "Dodane 22.11.2026 dla kart 23.0104 i 23.0106 (decyzja Patryka).",
+      "zrodla": [
+        "SRC-ICD10-CEZ"
+      ],
+      "nazwa_pl_urzedowa": "Wydanie zaświadczenia lekarskiego"
+    },
+    {
       "kod": "Z29.8",
       "poziom": 4,
       "nazwa_who_en": "Other specified prophylactic measures",

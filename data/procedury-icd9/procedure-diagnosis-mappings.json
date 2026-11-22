@@ -3208,6 +3208,30 @@
    "potwierdzenie": "ocena_kliniczna",
    "w_audycie_nfz": false,
    "uzasadnienie": "Podpowiedź kliniczna – NFZ nie narzuca pary procedura–rozpoznanie (audyt NFZ, mapowania = INFORMACJA); wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.0103",
+   "icd10": "Z01.2",
+   "okolicznosci": "porada lekarska – badanie stomatologiczne",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Decyzja Patryka 22.11.2026; nazwa urzędowa z Tomu I ICD-10 (CeZ). Podpowiedź – wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.0104",
+   "icd10": "Z02.7",
+   "okolicznosci": "wydanie orzeczenia lekarskiego",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Decyzja Patryka 22.11.2026; nazwa urzędowa z Tomu I ICD-10 (CeZ). Podpowiedź – wybiera lekarz."
+  },
+  {
+   "procedura": "PROC-23.0106",
+   "icd10": "Z02.7",
+   "okolicznosci": "wydanie zaświadczenia lub świadectwa",
+   "potwierdzenie": "ocena_kliniczna",
+   "w_audycie_nfz": false,
+   "uzasadnienie": "Decyzja Patryka 22.11.2026; nazwa urzędowa z Tomu I ICD-10 (CeZ). Podpowiedź – wybiera lekarz."
   }
  ]
 }

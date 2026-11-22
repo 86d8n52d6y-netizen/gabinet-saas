@@ -1,6 +1,6 @@
 {
   "nazwa": "nfz-stomatologia-audyt",
-  "wersja": "2026.11.22-3",
+  "wersja": "2026.11.22-4",
   "audyt_rozpoczety": "2026-11-21T17:28+01:00",
   "stan_prawny_na": "2026-11-21",
   "autor": "Claude (czat), do zatwierdzenia przez Patryka",
@@ -22,8 +22,8 @@
     },
     {
       "plik": "diagnoses.json",
-      "sha256": "18af77fae4c9618c6942604bc5172f0bd5ae7740a0dc02378b68dd4bfb5ec60a",
-      "bajty": 69679
+      "sha256": "aa10aa0bfee49fa6beabc12ef9e14bea1f0374ea9764d2985b37b0f53a27cad5",
+      "bajty": 70145
     },
     {
       "plik": "procedure-diagnosis-mappings.json",
@@ -52,7 +52,7 @@
     "slownik_icd9": 290,
     "produkty_1b": 84,
     "pakiety": 43,
-    "diagnozy": 131,
+    "diagnozy": 132,
     "mapowania": 416,
     "reguly": 47,
     "pary_laczenia": 77,
