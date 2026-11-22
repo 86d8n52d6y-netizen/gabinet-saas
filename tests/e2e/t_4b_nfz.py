@@ -156,6 +156,8 @@ with sync_playwright() as p:
                 po.evaluate("['sh.wg','sh.wd'].forEach(k=>{if(state.a[k]===undefined)state.a[k]=WEDZ[0];})")
                 pg.evaluate("state.a['sh.zal']='ustnie i pisemnie'")   # P34: porównanie przy wariancie jak w starej aplikacji
                 pg.evaluate("cfg.sum=false")   # P40: podsumowanie wyłączone – reszta tekstu co do znaku jak w starej aplikacji
+                # P44a/P44b (decyzja Patryka 22.11.2026): ST30G bez sekcji instruktażu i z dopiskiem w nazwie – w starej aplikacji to samo, reszta co do znaku
+                po.evaluate("(n)=>{const r=D.ST30G.render;D.ST30G.render=()=>r().split('\\n'+SEG.INSTR_HEAD)[0];D.ST30G.name=n;delete D.ST30G.instr;}", pg.evaluate("D.ST30G.name"))
                 a, b = pg.evaluate("genTxt()"), po.evaluate("genTxt()")
                 ka, kb = pg.evaluate("JSON.stringify(nfzPoints())"), po.evaluate("JSON.stringify(nfzPoints())")
                 chk(f'tekst opisu = stara aplikacja (wiek {age}, plan {plan}, {len(a)} znaków)', a == b and len(a) > 200, (len(a), len(b)))

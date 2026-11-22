@@ -75,6 +75,16 @@ Plik `wspolne.js` (sejf z hasłem w przeglądarce) zastąpiony przez `gabinet-sa
 | P43a | przycisk „Opis z karty” obok „Edytuj tekst” (krok 3) – generator opisu NFZ bez zmian |
 | P43b | przycisk „Opis z karty” także w trybie edycji tekstu |
 | P43c | wstawienie: tekst z karty dopisany na końcu opisu jako edycja ręczna (state.ed) – zapis, szkic i historia jak przy „Edytuj tekst” |
+| P44 | ST30D i ST30F w Opisach NFZ (decyzja Patryka 22.11.2026, 1A): profesjonalna higienizacja z instruktażem – ½ łuku (66 pkt) i całe uzębienie (138 pkt); zał. 1c/1d – Zarządzenie 95/2026/DSOZ; komunikaty Centrali NFZ z 23.09.2026 i 9.11.2026 |
+| P44a | ST30G zgodnie z nazwą pakietu – BEZ instruktażu (decyzja Patryka 22.11.2026, 2A): usunięta sekcja instruktażu z opisu; z instruktażem = ST30F |
+| P44b | ST30G – opis bez sekcji instruktażu higieny |
+| P44c | ST30D i ST30F na liście kodów (Profilaktyka i higienizacja) i domyślny czas |
+| P44d | czas minimalny, „nie sumuje się” i „dosumować wyłącznie” dla ST30D / ST30F (zał. 1d – Zarządzenie 95/2026/DSOZ) |
+| P44e | limity roczne ST30D / ST30F / ST33 – badanie z instruktażem (23.0101) 1× w roku kalendarzowym (komunikat Centrali NFZ 9.11.2026) |
+| P44f | wycena: ST30D 66 pkt, ST30F 138 pkt (zał. 1c – Zarządzenie 95/2026/DSOZ) |
+| P44g | jednostka ST30D (½ łuku = 1 ćwiartka) |
+| P44h | ostrzeżenia ST30D / ST30F: wiek < 18, „dosumować wyłącznie”, ST30D = 1 ćwiartka, maks. 3 × ST30E przy ST30D, podpowiedź 1× ST30D + ST30E, ST30G bez instruktażu |
+| P44i | domyślny czas ST30D 16 min i ST30F 31 min (jak ST30E/ST30G: minimum NFZ + 1 min) |
 
 ## Opisy prywatne (`prywatne.html`)
 

@@ -292,7 +292,7 @@ G.bar('nfz');
 const state = { step:1, codes:[], a:{}, teeth:{}, quads:{}, unknown:[], plan:null, back:1,
   savedId:null, savedNo:null, savedCreated:null, savedSig:null, pendSig:null, saveInfo:null, skipSave:false, iniOk:null, diffOk:null, link:null, loadedTxt:null, ed:null,
   vPrice:null, vPct:null, vRev:null };
-function initDefaults(){ state.a['ST30.czas']='21'; state.a['ST30G.czas']='21'; state.a['ST30E.czas']='11'; state.a['ST01.wer']='nowy'; state.a['ST02.wer']='nowy'; state.a['1206.canals']=[{}]; }
+function initDefaults(){ state.a['ST30.czas']='21'; state.a['ST30G.czas']='21'; state.a['ST30E.czas']='11'; state.a['ST30D.czas']='16'; state.a['ST30F.czas']='31'; state.a['ST01.wer']='nowy'; state.a['ST02.wer']='nowy'; state.a['1206.canals']=[{}]; }
 initDefaults();
 
 /* ---------- helpers ---------- */
@@ -457,14 +457,22 @@ const D={
    render:()=>{const q=(state.quads.ST30||[]).slice().sort();return ['USUNIĘCIE ZŁOGÓW NAZĘBNYCH TWARDYCH Z 1/2 ŁUKU ZĘBOWEGO (ST30)',
      'W badaniu przedmiotowym stwierdzono obecność zmineralizowanych, twardych złogów nazębnych naddziąsłowych i poddziąsłowych (kamienia nazębnego) w kwadrantach jamy ustnej '+(q.length?q.join(', '):MISS('ćwiartki (diagram)'))+' – zgodnie z diagramem;',
      'Ocena stanu higieny jamy ustnej:',apiLine(),giLine(),SEG.ST30_A,SEG.ZAL_BODY,'Wskazano termin wizyty kontrolnej. Czas wykonania procedury '+V('ST30.czas','czas')+' min.'].join('\n');}},
- ST30G:{name:'Profesjonalna higienizacja – całe uzębienie',icd:'K03.6 + Z01.2',tips:['dokładny diagram','dla dzieci i młodzieży do 18 r.ż.'],exam:true,instr:true,
+ ST30G:{name:'Profesjonalna higienizacja – całe uzębienie (bez instruktażu)',icd:'K03.6 + Z01.2',tips:['bez instruktażu higieny – z instruktażem rozlicz ST30F (138 pkt)','dokładny diagram','dla dzieci i młodzieży do 18 r.ż.'],exam:true,
    fields:()=>[{k:'ST30G.czas',label:'Czas procedury (min. NFZ '+nfzMin('ST30G')+' min)',type:'num',unit:'min',w:'s'}],
-   render:()=>['PROFESJONALNA HIGIENIZACJA BEZ INSTRUKTAŻU HIGIENY CAŁE UZĘBIENIE (ST30G)',SEG.ST30G_HEAD,SEG.ST30G_EXAM_A,examMid(),SEG.EXAM_B,SEG.ST30G_REMOVAL,'Czas wykonania procedury '+V('ST30G.czas','czas')+' min.',SEG.INSTR_HEAD,instr()].join('\n')},
+   render:()=>['PROFESJONALNA HIGIENIZACJA BEZ INSTRUKTAŻU HIGIENY CAŁE UZĘBIENIE (ST30G)',SEG.ST30G_HEAD,SEG.ST30G_EXAM_A,examMid(),SEG.EXAM_B,SEG.ST30G_REMOVAL,'Czas wykonania procedury '+V('ST30G.czas','czas')+' min.'].join('\n')},
  ST30E:{name:'Profesjonalna higienizacja – ½ łuku',icd:'K03.6 + Z01.2',tips:['bez instruktażu higieny','szablon dla pacjentów poniżej 5 r.ż.','1 pakiet = ½ łuku = 1 ćwiartka; NFZ: max 4× w roku'],exam:true,
    diag:{mode:'quad',label:'Kliknij ząb w ćwiartce, z której usunięto złogi miękkie (zaznacza całą ćwiartkę)'},
    fields:()=>[{k:'ST30E.czas',label:'Czas procedury (min. NFZ '+nfzMin('ST30E')+' min)',type:'num',unit:'min',w:'s'}],
    render:()=>{const q=(state.quads.ST30E||[]).slice().sort();const rem=SEG.ST30G_REMOVAL.replace('w kwadrantach jamy ustnej – zgodnie z diagramem','w kwadrantach jamy ustnej '+(q.length?q.join(', '):MISS('ćwiartki (diagram)'))+' – zgodnie z diagramem');
      return ['PROFESJONALNA HIGIENIZACJA BEZ INSTRUKTAŻU HIGIENY ½ ŁUKU ZĘBOWEGO (ST30E)',SEG.ST30E_HEAD,SEG.ST30G_EXAM_A,examMid(),SEG.EXAM_B,rem,'Czas wykonania procedury '+V('ST30E.czas','czas')+' min.'].join('\n');}},
+ ST30D:{name:'Profesjonalna higienizacja z instruktażem – ½ łuku',icd:'K03.6 + Z01.2',tips:['z badaniem lekarskim i instruktażem higieny (23.0101)','NFZ: 1× w roku kalendarzowym – badanie z instruktażem 1× w roku (zamiast ST33)','1 pakiet = ½ łuku = 1 ćwiartka; pozostałe ćwiartki jako ST30E (przy ST30D maks. 3)','dla dzieci i młodzieży do 18 r.ż.'],exam:true,instr:true,
+   diag:{mode:'quad',label:'Kliknij ząb w ćwiartce, z której usunięto złogi miękkie (ST30D = 1 ćwiartka; pozostałe zaznacz w ST30E)'},
+   fields:()=>[{k:'ST30D.czas',label:'Czas procedury (min. NFZ '+nfzMin('ST30D')+' min)',type:'num',unit:'min',w:'s'}],
+   render:()=>{const q=(state.quads.ST30D||[]).slice().sort();const rem=SEG.ST30G_REMOVAL.replace('w kwadrantach jamy ustnej – zgodnie z diagramem','w kwadrancie jamy ustnej '+(q.length?q.join(', '):MISS('ćwiartka (diagram)'))+' – zgodnie z diagramem');
+     return ['PROFESJONALNA HIGIENIZACJA Z INSTRUKTAŻEM HIGIENY ½ ŁUKU ZĘBOWEGO (ST30D)','Badanie lekarskie stomatologiczne, które obejmuje również instruktaż higieny jamy ustnej;',SEG.ST30G_EXAM_A,examMid(),SEG.EXAM_B,rem,'Czas wykonania procedury '+V('ST30D.czas','czas')+' min.',SEG.INSTR_HEAD,instr()].join('\n');}},
+ ST30F:{name:'Profesjonalna higienizacja z instruktażem – całe uzębienie',icd:'K03.6 + Z01.2',tips:['z badaniem lekarskim i instruktażem higieny (23.0101)','NFZ: 1× w roku kalendarzowym – badanie z instruktażem 1× w roku (zamiast ST33)','do ST30F można dosumować tylko 1101','dla dzieci i młodzieży do 18 r.ż.'],exam:true,instr:true,
+   fields:()=>[{k:'ST30F.czas',label:'Czas procedury (min. NFZ '+nfzMin('ST30F')+' min)',type:'num',unit:'min',w:'s'}],
+   render:()=>['PROFESJONALNA HIGIENIZACJA Z INSTRUKTAŻEM HIGIENY CAŁE UZĘBIENIE (ST30F)','Usunięcie złogów nazębnych miękkich. Badanie lekarskie stomatologiczne, które obejmuje również instruktaż higieny jamy ustnej;',SEG.ST30G_EXAM_A,examMid(),SEG.EXAM_B,SEG.ST30G_REMOVAL,'Czas wykonania procedury '+V('ST30F.czas','czas')+' min.',SEG.INSTR_HEAD,instr()].join('\n')},
  ST26:{name:'Leczenie zmian na błonie śluzowej',icd:'wg wariantu',tips:['przy ST28 – opis urazu (S00.5), bez ST28 – zapalenie dziąseł','zapalenie dziąseł: K05.1 / K05','afta: K12.0','nagryzienie: K13.1','uraz: S00.5','zapalenie warg: K13.0'],
    diag:{mode:'mixed',label:'Okolica zmiany – zaznacz ćwiartkę i/lub ząb'},
    fields:()=>{const v=state.a['ST26.var']||[];const f=[{k:'ST26.var',label:'Wariant (można kilka)',type:'checks',full:true,rer:'ST26',opts:[{v:'zap',l:'Zapalenie dziąseł przy złogach (K05.1)'},{v:'uraz',l:'Uraz błony śluzowej / przy ST28 (S00.5)'},{v:'afta',l:'Afta (K12.0)'},{v:'nag',l:'Nagryzienie (K13.1)'},{v:'warg',l:'Zapalenie warg (K13.0)'}]}];
@@ -591,7 +599,7 @@ function plansHTML(){const a=AGE();const match=a===null?null:(a<5?'u5':'o5');
 const FLUOR_PREPS=['VOCO Profluorid Varnish','Duraphat (Colgate)','Fluor Protector (Ivoclar)','Elmex gelée (żel fluorkowy)'];
 const GROUPS=[
  ['Badania',['ST33','ST34','ST28']],
- ['Profilaktyka i higienizacja',['ST30','ST30G','ST30E','1101','1006']],
+ ['Profilaktyka i higienizacja',['ST30','ST30F','ST30G','ST30D','ST30E','1101','1006']],
  ['Błona śluzowa',['ST26']],
  ['Leczenie zachowawcze',['1108','1502','1503','1504','1505','1105','1206']],
  ['Chirurgia i przyzębie',['ST01','ST02','ST19','ST04']]];
@@ -600,7 +608,8 @@ const GROUPS=[
    Źródło: Zarządzenie Prezesa NFZ nr 95/2026/DSOZ z 31.08.2026, zał. 2 (nowy zał. 1d do zarz. 60/2023/DSOZ),
    rozliczanie od 1.09.2026; komunikat Centrali NFZ z 9.11.2026. */
 const NFZ_SRC='Źródło: Zarządzenie Prezesa NFZ nr 95/2026/DSOZ (zał. 2), rozliczanie od 1.09.2026; komunikat NFZ z 9.11.2026.';
-const NFZ_MIN={ST30:10,ST30E:5,ST30G:20};            // minuty na 1 pakiet
+const NFZ_MIN={ST30:10,ST30D:15,ST30E:5,ST30F:30,ST30G:20};
+const NFZ_ONLY={ST30D:['ST30E','1101'],ST30F:['1101']};   // zał. 1d: „do świadczenia można dosumować wyłącznie…”            // minuty na 1 pakiet
 const NFZ_NOSUM={                                      // „produkt nie sumuje się z…”
  ST30:['1006','ST30A','ST30B','ST30C','ST30D','ST30E','ST30F','ST30G'],
  ST30E:['1006','ST30','ST30A','ST30B','ST30C','ST30F','ST30G','ST33','ST33A','ST34','ST34A'],
@@ -612,7 +621,7 @@ function aotEst(c){const n=Math.max(1,teethOf(c).length);
   if(c==='ST01'||c==='ST02'||c==='ST19')return AOT_MIN[c]*n;
   if(c==='ST04'){const qs=new Set(teethOf('ST04').map(qd));return 45*Math.max(1,qs.size);}
   return AOT_MIN[c]||null;}
-const NFZ_LIMIT={ST30E:'max 4× w roku',ST30G:'max 1× w roku',ST33:'1× w roku kalendarzowym'};
+const NFZ_LIMIT={ST30D:'1× w roku kalendarzowym – zawiera badanie z instruktażem (23.0101); jeśli w tym roku był ST33 lub ST30F, NFZ nie zapłaci',ST30E:'max 4× w roku (3×, jeśli w tym roku był ST30D)',ST30F:'1× w roku kalendarzowym – zawiera badanie z instruktażem (23.0101); jeśli w tym roku był ST33 lub ST30D, NFZ nie zapłaci',ST30G:'max 1× w roku',ST33:'1× w roku kalendarzowym – jeśli w tym roku był ST30D lub ST30F (zawierają badanie z instruktażem), NFZ nie zapłaci'};
 function nfzPackages(c){if(c==='ST30'||c==='ST30E'){const q=(state.quads[c]||[]).length;return Math.max(1,q);}return 1;}
 function nfzMin(c){return NFZ_MIN[c]?NFZ_MIN[c]*nfzPackages(c):null;}
 /* ---------- audyt NFZ – etap N2: reguły z data/nfz (window.NFZ_DANE, docs/nfz/) liczone tylko na urządzeniu (D2=A) ----------
@@ -647,7 +656,14 @@ function nfzIssues(){
     if(!isNaN(v)&&v<mn)err.push({codes:[c],msg:`${c}: czas ${num(v)} min jest krótszy niż minimum NFZ ${mn} min${nfzPackages(c)>1?` (${nfzPackages(c)} pakiety × ${NFZ_MIN[c]} min)`:''}.`});});
   ['ST01','ST02'].forEach(c=>{if(!has(c))return;const nowy=(str(state.a[c+'.wer'])||'nowy')==='nowy';teethOf(c).forEach(t=>{const an=getVal('T|'+c+'|'+t+'|'+(nowy?'an2':'an'))||[];
     if(!an.length)err.push({codes:[c],msg:`${c}, ząb ${t}: NFZ wymaga wskazania co najmniej jednego znieczulenia (lista procedur ST1) – inaczej pakiet nie zostanie rozliczony.`});});});
-  ['ST30E','ST30G'].forEach(c=>{if(!has(c))return;if(a!==null&&a>=18)warn.push({codes:[c],msg:`${c}: pakiety profesjonalnej higienizacji (ST30D–ST30G) są przeznaczone dla dzieci i młodzieży do 18 r.ż. (Zarządzenie 60/2023/DSOZ t.j. od 1.09.2026, 95/2026/DSOZ). U dorosłych rozlicz ST30 (złogi twarde).`});
+  Object.keys(NFZ_ONLY).forEach(c=>{if(!has(c))return;const zle=cs.filter(o=>o!==c&&!NFZ_ONLY[c].includes(o)&&!((NFZ_NOSUM[c]||[]).includes(o)));
+    if(zle.length)err.push({codes:[c,...zle],msg:`${c}: NFZ nie zapłaci – do ${c} można dosumować wyłącznie ${NFZ_ONLY[c].join(' i ')} (zał. 1d, Zarządzenie 95/2026/DSOZ). Usuń: ${zle.join(', ')}.`});});
+  if(has('ST30D')){const q=(state.quads.ST30D||[]).length,qe=(state.quads.ST30E||[]).length;
+    if(q>1)warn.push({codes:['ST30D'],msg:'ST30D obejmuje ½ łuku (1 ćwiartkę) – pozostałe ćwiartki zaznacz w ST30E (komunikat Centrali NFZ 23.09.2026).'});
+    if(has('ST30E')&&qe>3)warn.push({codes:['ST30D','ST30E'],msg:`Przy ST30D NFZ zapłaci maks. za 3 × ST30E w roku – zaznaczono ${qe} ćwiartki ST30E.`});}
+  if(has('ST30E')&&!has('ST30D')&&!has('ST33'))warn.push({codes:['ST30E'],info:true,msg:'Jeśli na wizycie był instruktaż higieny: NFZ zaleca 1× ST30D (½ łuku z badaniem i instruktażem, 66 pkt) + pozostałe ćwiartki jako ST30E (komunikat Centrali NFZ 23.09.2026).'});
+  if(has('ST30G'))warn.push({codes:['ST30G'],info:true,msg:'ST30G jest bez instruktażu higieny – jeśli był instruktaż, rozlicz ST30F (138 pkt zamiast 96; zał. 1c, Zarządzenie 95/2026/DSOZ).'});
+  ['ST30D','ST30E','ST30F','ST30G'].forEach(c=>{if(!has(c))return;if(a!==null&&a>=18)warn.push({codes:[c],msg:`${c}: pakiety profesjonalnej higienizacji (ST30D–ST30G) są przeznaczone dla dzieci i młodzieży do 18 r.ż. (Zarządzenie 60/2023/DSOZ t.j. od 1.09.2026, 95/2026/DSOZ). U dorosłych rozlicz ST30 (złogi twarde).`});
     else if(a===null)warn.push({codes:[c],msg:`${c}: wpisz wiek pacjenta – pakiety ST30D–ST30G tylko do 18 r.ż. (Zarządzenie 60/2023/DSOZ t.j. od 1.09.2026, 95/2026/DSOZ).`});});
   if(has('1006')){if(a!==null&&a>=18)warn.push({codes:['1006'],msg:'1006: lakierowanie zębów jest świadczeniem gwarantowanym tylko dla dzieci i młodzieży do 18 r.ż. (rozporządzenie MZ, t.j. Dz.U. 2025 poz. 615).'});
     else if(a===null)warn.push({codes:['1006'],msg:'1006: wpisz wiek pacjenta – lakierowanie tylko do 18 r.ż. (Dz.U. 2025 poz. 615).'});}
@@ -689,10 +705,10 @@ function refreshNfz(){const el=document.getElementById('nfz-box');if(el){const t
    § 13 ust. 1 pkt 5 – kilka pakietów na wizycie: najwyżej wyceniony ×1,0, kolejne ×0,8,
    § 13 ust. 1 pkt 5a – zasady pkt 5 nie stosuje się do ST30E i ST30G (95/2026/DSOZ). */
 const PTS_SRC='Wycena: zał. 1c – Zarządzenie 95/2026/DSOZ (pakiety, od 1.09.2026); zał. 1b – Zarządzenie 44/2025/DSOZ (świadczenia jednostkowe). Współczynniki: § 12 ust. 2, 2a, 3 i § 13 ust. 1 pkt 5, 5a zarządzenia 60/2023/DSOZ z późn. zm.';
-const PTS={ST01:93,ST02:104,ST04:130,ST19:86,ST26:51,ST28:96,ST30:44,ST30E:24,ST30G:96,ST33:56,ST34:47,
+const PTS={ST01:93,ST02:104,ST04:130,ST19:86,ST26:51,ST28:96,ST30:44,ST30D:66,ST30E:24,ST30F:138,ST30G:96,ST33:56,ST34:47,
  '1101':6,'1006':5,'1105':40,'1108':52,'1206':70,'1502':45,'1503':54,'1504':71,'1505':74};
 const PTS_AN={'0401':{n:'Znieczulenie miejscowe powierzchniowe',p:3},'0402':{n:'Znieczulenie miejscowe nasiękowe',p:12},'0403':{n:'Znieczulenie przewodowe wewnątrzustne',p:20}};
-const PTS_UNIT={ST01:'ząb',ST02:'ząb',ST30:'ćwiartka',ST30E:'ćwiartka',ST04:'ćwiartka','1101':'ząb','1006':'¼ łuku','1105':'ząb','1108':'ząb','1206':'kanał','1502':'ząb','1503':'ząb','1504':'ząb','1505':'ząb'};
+const PTS_UNIT={ST01:'ząb',ST02:'ząb',ST30:'ćwiartka',ST30D:'ćwiartka',ST30E:'ćwiartka',ST04:'ćwiartka','1101':'ząb','1006':'¼ łuku','1105':'ząb','1108':'ząb','1206':'kanał','1502':'ząb','1503':'ząb','1504':'ząb','1505':'ząb'};
 const PTS_NO15=['ST30D','ST30E','ST30F','ST30G'];   // § 12 ust. 2a
 const PTS_NO08=['ST30E','ST30G'];                   // § 13 ust. 1 pkt 5a
 const ANES_CODES=['1105','1108','1206','1502','1503','1504','1505'];
