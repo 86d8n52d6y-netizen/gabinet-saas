@@ -70,3 +70,10 @@
 | Zostają „do oceny specjalisty” | protetyka specjalistyczna (teleskopy, overdenture, uzupełnienia złożone, metalowa podstawa, odlewane elementy, odtworzenie zwarcia, 23.2901) – przyda się przy implantoprotetyce | 11 |
 
 Stan po decyzjach: 23 verified, 121 draft, 11 requires_expert_review, 51 odrzucone, 57 pominięte, 3 nadrzędne (razem 266).
+
+### Weryfikacja protetyki (22.11.2026)
+
+Zatwierdzone (`verified`): 36 kart – przygotowanie i korony (23.2701–23.2706, 23.2801–23.2806, 23.2903, 23.3125), mosty i szyna (23.3001–23.3003, 23.3005, 23.3009–23.3011, 23.2902), protezy ruchome (23.3101–23.3105, 23.3107, 23.3108, 23.3111–23.3117).
+Odrzucone – nie umieszczać: 11 kart protetyki specjalistycznej (23.2901, 23.3004, 23.3006–23.3008, 23.31041, 23.31051, 23.3106, 23.3109, 23.3110, 23.3126) – decyzja po przeglądzie pojedynczych kart.
+
+Stan: 59 verified, 85 draft, 0 requires_expert_review, 62 odrzucone, 57 pominięte, 3 nadrzędne (razem 266).
