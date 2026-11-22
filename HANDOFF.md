@@ -259,6 +259,7 @@ Commit + PR + **scalenie przez Claude bez pytania** dla gotowych, przetestowanyc
 | #17 | Weryfikacja protetyki (36 zatwierdzonych, 11 specjalistycznych odrzuconych) |
 
 **Karty procedur (266 kodów):** 144 `verified`, 0 `draft`, 62 odrzucone (status `not_started` + uzasadnienie „Odrzucone decyzją Patryka…”, ukryte, treść zachowana), 57 pominiętych, 3 nadrzędne.
+**Sposób pokazywania do akceptacji (prośba Patryka 22.11.2026):** po 10 kart naraz – tabela 10 kart + pytania wielokrotnego wyboru (zaznaczone = wyjątek od domyślnej decyzji).
 Weryfikacja kart procedur zakończona 22.11.2026 (zostały do weryfikacji tylko badania – 17, draft).
 Sposób weryfikacji: grupy w pytaniach do klikania („Zatwierdzam” / pojedynczo / „Nie umieszczać”); verified = `zweryfikowal: "Patryk Barysz"`, `zweryfikowano: RRRR-MM-DD`; potem `python3 -I scripts/waliduj_baze.py --manifest`, `buduj_docs_bazy.py`, `baza_dane_przegladarka.py`, sekcja 7 w `docs/RAPORT_BAZA_STOMATOLOGICZNA.md`, wiersz w `POSTEP.md`, build, `t_10`, pełna regresja, PR, merge.
 
