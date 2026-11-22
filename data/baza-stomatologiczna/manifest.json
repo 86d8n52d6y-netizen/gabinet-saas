@@ -35,7 +35,7 @@
   },
   {
    "plik": "data/procedury-icd9/procedures.json",
-   "sha256": "20106a42a323c3050e3a6654d2adff1ef0b44fa50df59b81818664ff80bc9813",
+   "sha256": "57fffffc459049ac0abee0d6c227faa315f47a77ade73ddac25cd85ddad31899",
    "schemat": "data/baza-stomatologiczna/schemas/procedures.schema.json",
    "rekordy": 266
   },
@@ -53,7 +53,7 @@
   },
   {
    "plik": "data/procedury-icd9/procedure-templates.json",
-   "sha256": "9693a5237eeb20158be0b67746a00a1859272ab0f8071b0714a11cbacbf53e61",
+   "sha256": "670a1b5249334ac09c020ddfed945952d8f14d13a2f2d292393b367e8cf3f326",
    "schemat": "data/baza-stomatologiczna/schemas/szablony.schema.json",
    "rekordy": 618
   },
@@ -74,8 +74,8 @@
   "badania": 17,
   "procedury": 266,
   "procedury_wg_statusu": {
-   "verified": 75,
-   "draft": 64,
+   "verified": 96,
+   "draft": 43,
    "not_started": 127
   },
   "szablony": 669,

@@ -7358,7 +7358,7 @@
    "kod": "23.1201",
    "nazwa_oficjalna": "Trepanacja martwego zęba z zaopatrzeniem ubytku opatrunkiem",
    "kategoria": "endodoncja – leczenie miazgi",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -7564,7 +7564,9 @@
     "SRC-KLIN-ESE-S3-2023",
     "SRC-KLIN-ESE-2006"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1202",
@@ -7733,7 +7735,7 @@
    "kod": "23.1203",
    "nazwa_oficjalna": "Amputacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem",
    "kategoria": "endodoncja – leczenie miazgi",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -7890,14 +7892,16 @@
     "SRC-KLIN-ESE-VPT-2019",
     "SRC-KLIN-IADT-ZLAM-2020"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1204",
    "kod": "23.1204",
    "nazwa_oficjalna": "Amputacja przyżyciowa miazgi",
    "kategoria": "endodoncja – leczenie miazgi",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -8100,14 +8104,16 @@
     "SRC-KLIN-ESE-S3-2023",
     "SRC-KLIN-ESE-VPT-2019"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1205",
    "kod": "23.1205",
    "nazwa_oficjalna": "Ekstyrpacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem",
    "kategoria": "endodoncja – leczenie miazgi",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -8294,7 +8300,9 @@
    "zrodla": [
     "SRC-KLIN-ESE-S3-2023"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1206",
@@ -9278,7 +9286,7 @@
    "kod": "23.1301",
    "nazwa_oficjalna": "Całkowite opracowanie i dezynfekcja kanału",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -9481,14 +9489,16 @@
     "SRC-KLIN-ESE-2006",
     "SRC-KLIN-ESE-S3-2023"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1302",
    "kod": "23.1302",
    "nazwa_oficjalna": "Leczenie zgorzeli",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -9662,14 +9672,16 @@
     "SRC-KLIN-ESE-2006",
     "SRC-KLIN-ESE-S3-2023"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1303",
    "kod": "23.1303",
    "nazwa_oficjalna": "Leczenie zgorzeli całkowitej niepowikłanej zęba z nieuformowanym korzeniem",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -9847,14 +9859,16 @@
    "zrodla": [
     "SRC-KLIN-ESE-S3-2023"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1304",
    "kod": "23.1304",
    "nazwa_oficjalna": "Dodatkowe fizykochemiczne metody udrażniania i opracowywania kanału",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -9976,14 +9990,16 @@
    "zrodla": [
     "SRC-KLIN-ESE-S3-2023"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1305",
    "kod": "23.1305",
    "nazwa_oficjalna": "Ponowne udrożnienie wypełnionego kanału",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -10192,14 +10208,16 @@
     "SRC-KLIN-ESE-S3-2023",
     "SRC-KLIN-ESE-2006"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1306",
    "kod": "23.1306",
    "nazwa_oficjalna": "Czasowe wypełnienie kanału",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -10370,14 +10388,16 @@
    "zrodla": [
     "SRC-KLIN-ESE-2006"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1307",
    "kod": "23.1307",
    "nazwa_oficjalna": "Wypełnienie kanału",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -10590,14 +10610,16 @@
     "SRC-KLIN-ESE-2006",
     "SRC-KLIN-ESE-S3-2023"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1308",
    "kod": "23.1308",
    "nazwa_oficjalna": "Leczenie endodontyczne z wypełnieniem 2 kanałów",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -10813,14 +10835,16 @@
     "SRC-KLIN-ESE-2006",
     "SRC-KLIN-ESE-S3-2023"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1309",
    "kod": "23.1309",
    "nazwa_oficjalna": "Leczenie endodontyczne z wypełnieniem 3 kanałów",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -11036,7 +11060,9 @@
     "SRC-KLIN-ESE-2006",
     "SRC-KLIN-ESE-S3-2023"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1310",
@@ -11213,7 +11239,7 @@
    "kod": "23.1311",
    "nazwa_oficjalna": "Leczenie endodontyczne zęba z wypełnieniem 1 kanału ze zgorzelą miazgi",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -11452,14 +11478,16 @@
     "SRC-KLIN-ESE-2006",
     "SRC-KLIN-ESE-S3-2023"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1312",
    "kod": "23.1312",
    "nazwa_oficjalna": "Leczenie endodontyczne zęba z wypełnieniem 2 kanałów ze zgorzelą miazgi",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -11675,14 +11703,16 @@
     "SRC-KLIN-ESE-2006",
     "SRC-KLIN-ESE-S3-2023"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1313",
    "kod": "23.1313",
    "nazwa_oficjalna": "Leczenie endodontyczne zęba z wypełnieniem 3 kanałów ze zgorzelą miazgi",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -11887,14 +11917,16 @@
     "SRC-KLIN-ESE-2006",
     "SRC-KLIN-ESE-S3-2023"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1314",
    "kod": "23.1314",
    "nazwa_oficjalna": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -12101,14 +12133,16 @@
    "zrodla": [
     "SRC-KLIN-ESE-S3-2023"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.13141",
    "kod": "23.13141",
    "nazwa_oficjalna": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 1 kanału",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -12322,14 +12356,16 @@
    "zrodla": [
     "SRC-KLIN-ESE-S3-2023"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.13142",
    "kod": "23.13142",
    "nazwa_oficjalna": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 2 kanałów",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -12543,14 +12579,16 @@
    "zrodla": [
     "SRC-KLIN-ESE-S3-2023"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.13143",
    "kod": "23.13143",
    "nazwa_oficjalna": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 3 kanałów",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -12764,14 +12802,16 @@
    "zrodla": [
     "SRC-KLIN-ESE-S3-2023"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.13149",
    "kod": "23.13149",
    "nazwa_oficjalna": "Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA - inne",
    "kategoria": "endodoncja – leczenie kanałowe",
-   "status": "draft",
+   "status": "verified",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
@@ -12985,7 +13025,9 @@
    "zrodla": [
     "SRC-KLIN-ESE-S3-2023"
    ],
-   "opracowano": "2026-11-22"
+   "opracowano": "2026-11-22",
+   "zweryfikowal": "Patryk Barysz",
+   "zweryfikowano": "2026-11-22"
   },
   {
    "id": "PROC-23.14",

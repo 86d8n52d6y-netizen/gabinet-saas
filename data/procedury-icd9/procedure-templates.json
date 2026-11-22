@@ -705,7 +705,7 @@
    "id": "SZAB-PROC-23.1206-STD",
    "dotyczy": "PROC-23.1206",
    "wariant": "standardowy",
-   "tekst": "Ząb {{POLE-ZAB}}: ekstyrpacja przyżyciowa miazgi. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Wypełnienie / wkładka: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "tekst": "Ząb {{POLE-ZAB}}: ekstyrpacja przyżyciowa miazgi. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
    "pola": [
     "POLE-ZAB",
     "POLE-ROZPOZNANIE",
@@ -764,15 +764,13 @@
    "id": "SZAB-PROC-23.1204-STD",
    "dotyczy": "PROC-23.1204",
    "wariant": "standardowy",
-   "tekst": "Ząb {{POLE-ZAB}}: amputacja przyżyciowa miazgi. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Wypełnienie / wkładka: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "tekst": "Ząb {{POLE-ZAB}}: amputacja przyżyciowa miazgi. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
    "pola": [
     "POLE-ZAB",
     "POLE-ROZPOZNANIE",
     "POLE-ZNIECZ-RODZAJ",
     "POLE-ZNIECZ-PREPARAT",
     "POLE-IZOLACJA",
-    "POLE-ENDO-KANALY",
-    "POLE-ENDO-PLUKANIE",
     "POLE-MATERIAL",
     "POLE-RTG",
     "POLE-POWIKLANIA",
@@ -783,10 +781,9 @@
    "id": "SZAB-PROC-23.1204-SKR",
    "dotyczy": "PROC-23.1204",
    "wariant": "skrocony",
-   "tekst": "{{POLE-ZAB}}: amputacja przyżyciowa miazgi; kanały {{POLE-ENDO-KANALY}}; {{POLE-MATERIAL}}.",
+   "tekst": "{{POLE-ZAB}}: amputacja przyżyciowa miazgi; {{POLE-MATERIAL}}.",
    "pola": [
     "POLE-ZAB",
-    "POLE-ENDO-KANALY",
     "POLE-MATERIAL"
    ]
   },
@@ -794,7 +791,7 @@
    "id": "SZAB-PROC-23.1204-ROZ",
    "dotyczy": "PROC-23.1204",
    "wariant": "rozszerzony",
-   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Izolacja: {{POLE-IZOLACJA}}. amputacja przyżyciowa miazgi. Przebieg: {{POLE-PRZEBIEG}}. Kanały (nazwa, długość robocza, punkt odniesienia, rozmiar): {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie korony: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Izolacja: {{POLE-IZOLACJA}}. amputacja przyżyciowa miazgi. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie korony: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
    "pola": [
     "POLE-ZAB",
     "POLE-ROZPOZNANIE",
@@ -804,8 +801,6 @@
     "POLE-ZNIECZ-DAWKA",
     "POLE-IZOLACJA",
     "POLE-PRZEBIEG",
-    "POLE-ENDO-KANALY",
-    "POLE-ENDO-PLUKANIE",
     "POLE-MATERIAL",
     "POLE-MATERIAL-PODKLAD",
     "POLE-RTG",
@@ -820,7 +815,7 @@
    "id": "SZAB-PROC-23.1201-STD",
    "dotyczy": "PROC-23.1201",
    "wariant": "standardowy",
-   "tekst": "Ząb {{POLE-ZAB}}: trepanacja martwego zęba z opatrunkiem. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Wypełnienie / wkładka: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "tekst": "Ząb {{POLE-ZAB}}: trepanacja martwego zęba z opatrunkiem. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
    "pola": [
     "POLE-ZAB",
     "POLE-ROZPOZNANIE",
@@ -876,7 +871,7 @@
    "id": "SZAB-PROC-23.1301-STD",
    "dotyczy": "PROC-23.1301",
    "wariant": "standardowy",
-   "tekst": "Ząb {{POLE-ZAB}}: opracowanie i dezynfekcja kanałów. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Wypełnienie / wkładka: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "tekst": "Ząb {{POLE-ZAB}}: opracowanie i dezynfekcja kanałów. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
    "pola": [
     "POLE-ZAB",
     "POLE-ROZPOZNANIE",
@@ -932,7 +927,7 @@
    "id": "SZAB-PROC-23.1306-STD",
    "dotyczy": "PROC-23.1306",
    "wariant": "standardowy",
-   "tekst": "Ząb {{POLE-ZAB}}: czasowe wypełnienie kanałów. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Wypełnienie / wkładka: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "tekst": "Ząb {{POLE-ZAB}}: czasowe wypełnienie kanałów. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
    "pola": [
     "POLE-ZAB",
     "POLE-ROZPOZNANIE",
@@ -988,7 +983,7 @@
    "id": "SZAB-PROC-23.1307-STD",
    "dotyczy": "PROC-23.1307",
    "wariant": "standardowy",
-   "tekst": "Ząb {{POLE-ZAB}}: wypełnienie kanałów. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Wypełnienie / wkładka: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "tekst": "Ząb {{POLE-ZAB}}: wypełnienie kanałów. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
    "pola": [
     "POLE-ZAB",
     "POLE-ROZPOZNANIE",
@@ -1044,7 +1039,7 @@
    "id": "SZAB-PROC-23.1311-STD",
    "dotyczy": "PROC-23.1311",
    "wariant": "standardowy",
-   "tekst": "Ząb {{POLE-ZAB}}: leczenie kanałowe zęba ze zgorzelą miazgi. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Wypełnienie / wkładka: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "tekst": "Ząb {{POLE-ZAB}}: leczenie kanałowe zęba ze zgorzelą miazgi. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
    "pola": [
     "POLE-ZAB",
     "POLE-ROZPOZNANIE",
@@ -3263,14 +3258,12 @@
    "id": "SZAB-PROC-23.1203-STD",
    "dotyczy": "PROC-23.1203",
    "wariant": "standardowy",
-   "tekst": "Ząb {{POLE-ZAB}}: amputacja przyżyciowa miazgi (ząb niedojrzały). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
+   "tekst": "Ząb {{POLE-ZAB}}: amputacja przyżyciowa miazgi (ząb niedojrzały). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.",
    "pola": [
     "POLE-ZAB",
     "POLE-ROZPOZNANIE",
     "POLE-ZNIECZ-RODZAJ",
     "POLE-IZOLACJA",
-    "POLE-ENDO-KANALY",
-    "POLE-ENDO-PLUKANIE",
     "POLE-MATERIAL",
     "POLE-RTG",
     "POLE-POWIKLANIA"
@@ -3280,17 +3273,17 @@
    "id": "SZAB-PROC-23.1203-SKR",
    "dotyczy": "PROC-23.1203",
    "wariant": "skrocony",
-   "tekst": "{{POLE-ZAB}}: amputacja przyżyciowa miazgi (ząb niedojrzały); kanały {{POLE-ENDO-KANALY}}.",
+   "tekst": "{{POLE-ZAB}}: amputacja przyżyciowa miazgi (ząb niedojrzały); materiał {{POLE-MATERIAL}}.",
    "pola": [
     "POLE-ZAB",
-    "POLE-ENDO-KANALY"
+    "POLE-MATERIAL"
    ]
   },
   {
    "id": "SZAB-PROC-23.1203-ROZ",
    "dotyczy": "PROC-23.1203",
    "wariant": "rozszerzony",
-   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. amputacja przyżyciowa miazgi (ząb niedojrzały). Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "tekst": "Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. amputacja przyżyciowa miazgi (ząb niedojrzały). Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
    "pola": [
     "POLE-ZAB",
     "POLE-ROZPOZNANIE",
@@ -3299,8 +3292,6 @@
     "POLE-ZNIECZ-PREPARAT",
     "POLE-IZOLACJA",
     "POLE-PRZEBIEG",
-    "POLE-ENDO-KANALY",
-    "POLE-ENDO-PLUKANIE",
     "POLE-MATERIAL",
     "POLE-MATERIAL-PODKLAD",
     "POLE-RTG",

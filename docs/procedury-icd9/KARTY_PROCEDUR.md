@@ -3179,7 +3179,7 @@ Reguły: R-AMALG-01
 
 ## 23.1201 – Trepanacja martwego zęba z zaopatrzeniem ubytku opatrunkiem
 
-`PROC-23.1201` · **Trepanacja martwego zęba** · endodoncja – leczenie miazgi · status: **draft**
+`PROC-23.1201` · **Trepanacja martwego zęba** · endodoncja – leczenie miazgi · status: **verified**
 
 Trepanacja martwego zęba z zaopatrzeniem ubytku opatrunkiem.
 
@@ -3254,7 +3254,7 @@ Wskazania: martwica miazgi z dolegliwościami; ostre zapalenie tkanek okołowier
 
 **standardowy**
 
-> Ząb {{POLE-ZAB}}: trepanacja martwego zęba z opatrunkiem. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Wypełnienie / wkładka: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+> Ząb {{POLE-ZAB}}: trepanacja martwego zęba z opatrunkiem. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
 
 **skrocony**
 
@@ -3268,7 +3268,7 @@ Wskazania: martwica miazgi z dolegliwościami; ostre zapalenie tkanek okołowier
 
 ## 23.1203 – Amputacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem
 
-`PROC-23.1203` · **Amputacja przyżyciowa – ząb niedojrzały** · endodoncja – leczenie miazgi · status: **draft**
+`PROC-23.1203` · **Amputacja przyżyciowa – ząb niedojrzały** · endodoncja – leczenie miazgi · status: **verified**
 
 Amputacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem (apeksogeneza).
 
@@ -3338,21 +3338,21 @@ Wskazania: obnażenie miazgi (uraz / próchnica) w zębie niedojrzałym z kontro
 
 **standardowy**
 
-> Ząb {{POLE-ZAB}}: amputacja przyżyciowa miazgi (ząb niedojrzały). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.
+> Ząb {{POLE-ZAB}}: amputacja przyżyciowa miazgi (ząb niedojrzały). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Izolacja: {{POLE-IZOLACJA}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}.
 
 **skrocony**
 
-> {{POLE-ZAB}}: amputacja przyżyciowa miazgi (ząb niedojrzały); kanały {{POLE-ENDO-KANALY}}.
+> {{POLE-ZAB}}: amputacja przyżyciowa miazgi (ząb niedojrzały); materiał {{POLE-MATERIAL}}.
 
 **rozszerzony**
 
-> Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. amputacja przyżyciowa miazgi (ząb niedojrzały). Przebieg: {{POLE-PRZEBIEG}}. Kanały: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.
+> Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. amputacja przyżyciowa miazgi (ząb niedojrzały). Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia: {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.
 
 **Źródła kliniczne:** `SRC-KLIN-ESE-S3-2023` (PMID 37772327); `SRC-KLIN-ESE-VPT-2019` (PMID 30664240); `SRC-KLIN-IADT-ZLAM-2020` (PMID 32475015)
 
 ## 23.1204 – Amputacja przyżyciowa miazgi
 
-`PROC-23.1204` · **Amputacja przyżyciowa miazgi (pulpotomia)** · endodoncja – leczenie miazgi · status: **draft**
+`PROC-23.1204` · **Amputacja przyżyciowa miazgi (pulpotomia)** · endodoncja – leczenie miazgi · status: **verified**
 
 Amputacja przyżyciowa miazgi w zębie z uformowanym korzeniem.
 
@@ -3431,21 +3431,21 @@ Reguły: R-1204-DOK
 
 **standardowy**
 
-> Ząb {{POLE-ZAB}}: amputacja przyżyciowa miazgi. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Wypełnienie / wkładka: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+> Ząb {{POLE-ZAB}}: amputacja przyżyciowa miazgi. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
 
 **skrocony**
 
-> {{POLE-ZAB}}: amputacja przyżyciowa miazgi; kanały {{POLE-ENDO-KANALY}}; {{POLE-MATERIAL}}.
+> {{POLE-ZAB}}: amputacja przyżyciowa miazgi; {{POLE-MATERIAL}}.
 
 **rozszerzony**
 
-> Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Izolacja: {{POLE-IZOLACJA}}. amputacja przyżyciowa miazgi. Przebieg: {{POLE-PRZEBIEG}}. Kanały (nazwa, długość robocza, punkt odniesienia, rozmiar): {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie korony: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.
+> Ząb {{POLE-ZAB}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Izolacja: {{POLE-IZOLACJA}}. amputacja przyżyciowa miazgi. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Zamknięcie korony: {{POLE-MATERIAL-PODKLAD}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.
 
 **Źródła kliniczne:** `SRC-KLIN-ESE-S3-2023` (PMID 37772327); `SRC-KLIN-ESE-VPT-2019` (PMID 30664240)
 
 ## 23.1205 – Ekstyrpacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem
 
-`PROC-23.1205` · **Ekstyrpacja przyżyciowa – ząb niedojrzały** · endodoncja – leczenie miazgi · status: **draft**
+`PROC-23.1205` · **Ekstyrpacja przyżyciowa – ząb niedojrzały** · endodoncja – leczenie miazgi · status: **verified**
 
 Ekstyrpacja przyżyciowa miazgi w zębie z nieuformowanym korzeniem.
 
@@ -3617,7 +3617,7 @@ Reguły: R-ENDO-DZ
 
 **standardowy**
 
-> Ząb {{POLE-ZAB}}: ekstyrpacja przyżyciowa miazgi. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Wypełnienie / wkładka: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+> Ząb {{POLE-ZAB}}: ekstyrpacja przyżyciowa miazgi. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
 
 **skrocony**
 
@@ -3631,7 +3631,7 @@ Reguły: R-ENDO-DZ
 
 ## 23.1301 – Całkowite opracowanie i dezynfekcja kanału
 
-`PROC-23.1301` · **Opracowanie i dezynfekcja kanału** · endodoncja – leczenie kanałowe · status: **draft**
+`PROC-23.1301` · **Opracowanie i dezynfekcja kanału** · endodoncja – leczenie kanałowe · status: **verified**
 
 Całkowite opracowanie i dezynfekcja kanału.
 
@@ -3703,7 +3703,7 @@ Wskazania: martwica miazgi; zapalenie okołowierzchołkowe; etap leczenia kanał
 
 **standardowy**
 
-> Ząb {{POLE-ZAB}}: opracowanie i dezynfekcja kanałów. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Wypełnienie / wkładka: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+> Ząb {{POLE-ZAB}}: opracowanie i dezynfekcja kanałów. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
 
 **skrocony**
 
@@ -3717,7 +3717,7 @@ Wskazania: martwica miazgi; zapalenie okołowierzchołkowe; etap leczenia kanał
 
 ## 23.1302 – Leczenie zgorzeli
 
-`PROC-23.1302` · **Leczenie zgorzeli** · endodoncja – leczenie kanałowe · status: **draft**
+`PROC-23.1302` · **Leczenie zgorzeli** · endodoncja – leczenie kanałowe · status: **verified**
 
 Leczenie zgorzeli miazgi.
 
@@ -3797,7 +3797,7 @@ Wskazania: zgorzel miazgi
 
 ## 23.1303 – Leczenie zgorzeli całkowitej niepowikłanej zęba z nieuformowanym korzeniem
 
-`PROC-23.1303` · **Zgorzel – ząb z nieuformowanym korzeniem** · endodoncja – leczenie kanałowe · status: **draft**
+`PROC-23.1303` · **Zgorzel – ząb z nieuformowanym korzeniem** · endodoncja – leczenie kanałowe · status: **verified**
 
 Leczenie zgorzeli całkowitej niepowikłanej zęba z nieuformowanym korzeniem.
 
@@ -3877,7 +3877,7 @@ Wskazania: martwica miazgi w zębie z niezakończonym rozwojem korzenia
 
 ## 23.1304 – Dodatkowe fizykochemiczne metody udrażniania i opracowywania kanału
 
-`PROC-23.1304` · **Dodatkowe metody opracowania kanału** · endodoncja – leczenie kanałowe · status: **draft**
+`PROC-23.1304` · **Dodatkowe metody opracowania kanału** · endodoncja – leczenie kanałowe · status: **verified**
 
 Dodatkowe fizykochemiczne metody udrażniania i opracowywania kanału.
 
@@ -3952,7 +3952,7 @@ Wskazania: kanały zwapniałe, wąskie; złożona anatomia
 
 ## 23.1305 – Ponowne udrożnienie wypełnionego kanału
 
-`PROC-23.1305` · **Ponowne leczenie kanałowe (rewizja)** · endodoncja – leczenie kanałowe · status: **draft**
+`PROC-23.1305` · **Ponowne leczenie kanałowe (rewizja)** · endodoncja – leczenie kanałowe · status: **verified**
 
 Ponowne udrożnienie wypełnionego kanału.
 
@@ -4042,7 +4042,7 @@ Wskazania: zmiana okołowierzchołkowa po leczeniu kanałowym; nieszczelne / nie
 
 ## 23.1306 – Czasowe wypełnienie kanału
 
-`PROC-23.1306` · **Czasowe wypełnienie kanału** · endodoncja – leczenie kanałowe · status: **draft**
+`PROC-23.1306` · **Czasowe wypełnienie kanału** · endodoncja – leczenie kanałowe · status: **verified**
 
 Czasowe wypełnienie kanału (wkładka lecznicza).
 
@@ -4116,7 +4116,7 @@ Reguły: R-ENDO-DZ
 
 **standardowy**
 
-> Ząb {{POLE-ZAB}}: czasowe wypełnienie kanałów. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Wypełnienie / wkładka: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+> Ząb {{POLE-ZAB}}: czasowe wypełnienie kanałów. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
 
 **skrocony**
 
@@ -4130,7 +4130,7 @@ Reguły: R-ENDO-DZ
 
 ## 23.1307 – Wypełnienie kanału
 
-`PROC-23.1307` · **Wypełnienie kanału** · endodoncja – leczenie kanałowe · status: **draft**
+`PROC-23.1307` · **Wypełnienie kanału** · endodoncja – leczenie kanałowe · status: **verified**
 
 Ostateczne wypełnienie kanału (świadczenie za każdy kanał).
 
@@ -4213,7 +4213,7 @@ Reguły: R-ENDO-DZ
 
 **standardowy**
 
-> Ząb {{POLE-ZAB}}: wypełnienie kanałów. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Wypełnienie / wkładka: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+> Ząb {{POLE-ZAB}}: wypełnienie kanałów. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
 
 **skrocony**
 
@@ -4227,7 +4227,7 @@ Reguły: R-ENDO-DZ
 
 ## 23.1308 – Leczenie endodontyczne z wypełnieniem 2 kanałów
 
-`PROC-23.1308` · **Leczenie kanałowe – 2 kanałów** · endodoncja – leczenie kanałowe · status: **draft**
+`PROC-23.1308` · **Leczenie kanałowe – 2 kanałów** · endodoncja – leczenie kanałowe · status: **verified**
 
 Leczenie endodontyczne z wypełnieniem 2 kanałów.
 
@@ -4320,7 +4320,7 @@ Reguły: R-ENDO-DZ
 
 ## 23.1309 – Leczenie endodontyczne z wypełnieniem 3 kanałów
 
-`PROC-23.1309` · **Leczenie kanałowe – 3 kanałów** · endodoncja – leczenie kanałowe · status: **draft**
+`PROC-23.1309` · **Leczenie kanałowe – 3 kanałów** · endodoncja – leczenie kanałowe · status: **verified**
 
 Leczenie endodontyczne z wypełnieniem 3 kanałów.
 
@@ -4413,7 +4413,7 @@ Reguły: R-ENDO-DZ
 
 ## 23.1311 – Leczenie endodontyczne zęba z wypełnieniem 1 kanału ze zgorzelą miazgi
 
-`PROC-23.1311` · **Leczenie endodontyczne – 1 kanał, zgorzel** · endodoncja – leczenie kanałowe · status: **draft**
+`PROC-23.1311` · **Leczenie endodontyczne – 1 kanał, zgorzel** · endodoncja – leczenie kanałowe · status: **verified**
 
 Leczenie endodontyczne zęba z wypełnieniem 1 kanału ze zgorzelą miazgi.
 
@@ -4498,7 +4498,7 @@ Reguły: R-ENDO-DZ
 
 **standardowy**
 
-> Ząb {{POLE-ZAB}}: leczenie kanałowe zęba ze zgorzelą miazgi. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Wypełnienie / wkładka: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
+> Ząb {{POLE-ZAB}}: leczenie kanałowe zęba ze zgorzelą miazgi. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}} {{POLE-ZNIECZ-PREPARAT}}. Izolacja: {{POLE-IZOLACJA}}. Kanały i długości robocze: {{POLE-ENDO-KANALY}}. Płukanie: {{POLE-ENDO-PLUKANIE}}. Materiał: {{POLE-MATERIAL}}. RTG: {{POLE-RTG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.
 
 **skrocony**
 
@@ -4512,7 +4512,7 @@ Reguły: R-ENDO-DZ
 
 ## 23.1312 – Leczenie endodontyczne zęba z wypełnieniem 2 kanałów ze zgorzelą miazgi
 
-`PROC-23.1312` · **Leczenie kanałowe – 2 kanałów ze zgorzelą** · endodoncja – leczenie kanałowe · status: **draft**
+`PROC-23.1312` · **Leczenie kanałowe – 2 kanałów ze zgorzelą** · endodoncja – leczenie kanałowe · status: **verified**
 
 Leczenie endodontyczne z wypełnieniem 2 kanałów ze zgorzelą.
 
@@ -4608,7 +4608,7 @@ Reguły: R-ENDO-DZ
 
 ## 23.1313 – Leczenie endodontyczne zęba z wypełnieniem 3 kanałów ze zgorzelą miazgi
 
-`PROC-23.1313` · **Leczenie kanałowe – 3 kanałów ze zgorzelą** · endodoncja – leczenie kanałowe · status: **draft**
+`PROC-23.1313` · **Leczenie kanałowe – 3 kanałów ze zgorzelą** · endodoncja – leczenie kanałowe · status: **verified**
 
 Leczenie endodontyczne z wypełnieniem 3 kanałów ze zgorzelą.
 
@@ -4698,7 +4698,7 @@ Wskazania: martwica / zgorzel miazgi; przewlekłe zapalenie okołowierzchołkowe
 
 ## 23.1314 – Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA
 
-`PROC-23.1314` · **Leczenie zęba z nieuformowanym korzeniem – MTA (kod nadrzędny)** · endodoncja – leczenie kanałowe · status: **draft**
+`PROC-23.1314` · **Leczenie zęba z nieuformowanym korzeniem – MTA (kod nadrzędny)** · endodoncja – leczenie kanałowe · status: **verified**
 
 Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA – (kod nadrzędny).
 
@@ -4788,7 +4788,7 @@ Wskazania: martwica miazgi w zębie stałym z niezakończonym rozwojem korzenia
 
 ## 23.13141 – Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 1 kanału
 
-`PROC-23.13141` · **Leczenie zęba z nieuformowanym korzeniem – MTA 1 kanału** · endodoncja – leczenie kanałowe · status: **draft**
+`PROC-23.13141` · **Leczenie zęba z nieuformowanym korzeniem – MTA 1 kanału** · endodoncja – leczenie kanałowe · status: **verified**
 
 Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA – 1 kanału.
 
@@ -4880,7 +4880,7 @@ Reguły: R-MTA-01
 
 ## 23.13142 – Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 2 kanałów
 
-`PROC-23.13142` · **Leczenie zęba z nieuformowanym korzeniem – MTA 2 kanałów** · endodoncja – leczenie kanałowe · status: **draft**
+`PROC-23.13142` · **Leczenie zęba z nieuformowanym korzeniem – MTA 2 kanałów** · endodoncja – leczenie kanałowe · status: **verified**
 
 Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA – 2 kanałów.
 
@@ -4972,7 +4972,7 @@ Reguły: R-MTA-01
 
 ## 23.13143 – Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA 3 kanałów
 
-`PROC-23.13143` · **Leczenie zęba z nieuformowanym korzeniem – MTA 3 kanałów** · endodoncja – leczenie kanałowe · status: **draft**
+`PROC-23.13143` · **Leczenie zęba z nieuformowanym korzeniem – MTA 3 kanałów** · endodoncja – leczenie kanałowe · status: **verified**
 
 Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA – 3 kanałów.
 
@@ -5064,7 +5064,7 @@ Reguły: R-MTA-01
 
 ## 23.13149 – Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA - inne
 
-`PROC-23.13149` · **Leczenie zęba z nieuformowanym korzeniem – MTA innej liczby kanałów** · endodoncja – leczenie kanałowe · status: **draft**
+`PROC-23.13149` · **Leczenie zęba z nieuformowanym korzeniem – MTA innej liczby kanałów** · endodoncja – leczenie kanałowe · status: **verified**
 
 Leczenie endodontyczne zęba z nieuformowanym korzeniem z zastosowaniem materiału typu MTA – innej liczby kanałów.
 
