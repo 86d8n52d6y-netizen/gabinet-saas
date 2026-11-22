@@ -6,7 +6,7 @@ t = T(); chk = t.chk
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..')
 PROC = json.load(open(os.path.join(ROOT, 'data', 'procedury-icd9', 'procedures.json')))['procedury']
 OPR = [p for p in PROC if p['status'] != 'not_started']
-DRAFT = next(p for p in PROC if p['status'] == 'draft')   # przykład karty niezatwierdzonej (zmienia się wraz z weryfikacją)
+DRAFT = next((p for p in PROC if p['status'] == 'draft'), None)   # przykład karty niezatwierdzonej (po pełnej weryfikacji 22.11.2026 – brak)
 
 def ready(pg): pg.wait_for_function("typeof DB!=='undefined'&&DB.ready===true", timeout=20000); pg.wait_for_timeout(200)
 def wiz(pg, codes, a=None, teeth=None, quads=None):
@@ -39,8 +39,12 @@ with sync_playwright() as p:
 
     pg.goto(URL + '/katalog-procedur/PROC-23.1502')
     chk('Karta 23.1502: status „zweryfikowana” + kto i kiedy', 'zweryfikowana' in pg.inner_text('[data-testid="kp-status"]') and 'zweryfikował: Patryk Barysz' in pg.inner_text('main'))
-    pg.goto(URL + '/katalog-procedur/' + DRAFT['id'])
-    chk(f'Karta niezatwierdzona ({DRAFT["kod"]}): „wersja robocza – do weryfikacji”', 'wersja robocza' in pg.inner_text('[data-testid="kp-status"]'))
+    if DRAFT:
+        pg.goto(URL + '/katalog-procedur/' + DRAFT['id'])
+        chk(f'Karta niezatwierdzona ({DRAFT["kod"]}): „wersja robocza – do weryfikacji”', 'wersja robocza' in pg.inner_text('[data-testid="kp-status"]'))
+    else:
+        pg.goto(URL + '/katalog-procedur')
+        chk('Wszystkie widoczne karty zweryfikowane – brak „wersja robocza” na liście', not any('wersja robocza' in x for x in pg.locator('[data-testid="kp-procedury"]').all_inner_texts()))
     pg.goto(URL + '/katalog-procedur/PROC-23.1202')
     chk('Karta odrzucona (23.1202 dewitalizacja): informacja o odrzuceniu, bez treści karty', 'odrzucona' in pg.inner_text('main') and pg.locator('[data-testid="kp-kroki"]').count() == 0)
     pg.goto(URL + '/katalog-procedur?q=23.1202')
