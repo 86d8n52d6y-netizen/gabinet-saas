@@ -270,6 +270,41 @@
    "id": "MAT-TESTER",
    "nazwa": "Środek do testu na zimno, elektryczny tester miazgi",
    "kategoria": "preparat"
+  },
+  {
+   "id": "MAT-KOSCIOZASTEPCZY",
+   "nazwa": "Materiał kościozastępczy, membrana",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-SZYNA-MAT",
+   "nazwa": "Materiał do szynowania (drut, włókno, kompozyt)",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-OPATR-PERIO",
+   "nazwa": "Opatrunek periodontologiczny",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-KRIO",
+   "nazwa": "Aparat do krioterapii",
+   "kategoria": "aparatura"
+  },
+  {
+   "id": "MAT-POJEMNIK-HP",
+   "nazwa": "Pojemnik z utrwalaczem na materiał do badania histopatologicznego",
+   "kategoria": "srodek_pomocniczy"
+  },
+  {
+   "id": "MAT-ZACZEP-ORTO",
+   "nazwa": "Zaczep ortodontyczny (zamek / pętla)",
+   "kategoria": "material"
+  },
+  {
+   "id": "MAT-WYPELN-WSTECZNE",
+   "nazwa": "Materiał do wstecznego wypełnienia (krzemianowo-wapniowy)",
+   "kategoria": "material"
   }
  ]
 }

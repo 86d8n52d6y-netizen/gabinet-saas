@@ -552,6 +552,186 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ]
+  },
+  {
+   "id": "KROK-PLUKANIE-KIESZONKI",
+   "nazwa": "Płukanie kieszonki i aplikacja leku",
+   "opis": "Płukanie kieszonki dziąsłowej / przyzębnej roztworem antyseptycznym, aplikacja leku miejscowego do kieszonki.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-KOREKTA-ZGRYZU",
+   "nazwa": "Selektywne szlifowanie (korekta zgryzu)",
+   "opis": "Lokalizacja kontaktów przedwczesnych / urazowych kalką, selektywne szlifowanie, polerowanie, ponowna kontrola.",
+   "uwaga": "Zabieg nieodwracalny – tylko przy jasnym wskazaniu.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-PLAT-PERIO",
+   "nazwa": "Płat periodontologiczny i oczyszczenie",
+   "opis": "Cięcie śródrowkowe, odwarstwienie płata, usunięcie ziarniny i złogów z powierzchni korzeni pod kontrolą wzroku, ewentualnie korekta kości, repozycja i szycie płata.",
+   "zrodla": [
+    "SRC-KLIN-EFP-S3-2020"
+   ]
+  },
+  {
+   "id": "KROK-GINGIWOPLASTYKA",
+   "nazwa": "Gingiwektomia / gingiwoplastyka",
+   "opis": "Wycięcie przerośniętego dziąsła i nadanie mu fizjologicznego kształtu (skalpel / elektrochirurgia / laser), opatrunek.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-OSTEOPLASTYKA",
+   "nazwa": "Korekta kości wyrostka",
+   "opis": "Wygładzenie / remodelowanie kości wyrostka wiertłem z chłodzeniem lub narzędziami ręcznymi.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-FRENULOTOMIA",
+   "nazwa": "Podcięcie / plastyka wędzidełka",
+   "opis": "W znieczuleniu: nacięcie lub wycięcie wędzidełka z przemieszczeniem przyczepu (plastyka), szycie.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-PLASTYKA-PRZEDSIONKA",
+   "nazwa": "Pogłębienie przedsionka",
+   "opis": "Cięcie i przemieszczenie przyczepów mięśniowych / błony śluzowej w celu pogłębienia przedsionka (technika wg metody), stabilizacja, szycie.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-SZYNOWANIE",
+   "nazwa": "Szynowanie zębów",
+   "opis": "Połączenie ruchomych zębów z sąsiednimi (ligatura, kompozyt, kompozyt ze wzmocnieniem – włókno / drut) na powierzchniach językowych / podniebiennych; kontrola zwarcia i dostępu do higieny.",
+   "zrodla": [
+    "SRC-KLIN-IADT-ZLAM-2020"
+   ]
+  },
+  {
+   "id": "KROK-PRZESZCZEP-KOSCI",
+   "nazwa": "Wypełnienie ubytku kostnego materiałem",
+   "opis": "Po oczyszczeniu ubytku – wypełnienie materiałem kościozastępczym, ewentualnie membrana, szczelne zamknięcie płata.",
+   "zrodla": [
+    "SRC-KLIN-EFP-S3-2020"
+   ]
+  },
+  {
+   "id": "KROK-POKRYCIE-RECESJI",
+   "nazwa": "Pokrycie recesji płatem przesuniętym",
+   "opis": "Przygotowanie powierzchni korzenia, wytworzenie płata przesuniętego bocznie z okolicy dawczej, ułożenie bez napięcia, szycie.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-OPATRUNEK-PERIO",
+   "nazwa": "Opatrunek periodontologiczny",
+   "opis": "Założenie opatrunku periodontologicznego na ranę dziąsła; zdjęcie po kilku dniach.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ODSLONIECIE",
+   "nazwa": "Odsłonięcie zęba zatrzymanego",
+   "opis": "Płat, usunięcie kości nad koroną, umocowanie zaczepu ortodontycznego (zamek / pętla), repozycja płata.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ZAMKNIECIE-ZATOKI",
+   "nazwa": "Zamknięcie połączenia ustno-zatokowego",
+   "opis": "Ocena połączenia (próba Valsalvy – ostrożnie), płat (np. przedsionkowy przesunięty), szczelne zamknięcie bez napięcia, zalecenia „zatokowe”.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-RESEKCJA",
+   "nazwa": "Resekcja wierzchołka korzenia",
+   "opis": "Płat, osteotomia nad wierzchołkiem, usunięcie zmiany zapalnej, odcięcie ok. 3 mm wierzchołka, preparacja wsteczna i wsteczne wypełnienie materiałem biozgodnym, szycie.",
+   "uwaga": "Wymaga szczelnego wypełnienia kanałowego lub wstecznego.",
+   "zrodla": [
+    "SRC-KLIN-ENDOCHIR-2006",
+    "SRC-KLIN-ESE-S3-2023"
+   ]
+  },
+  {
+   "id": "KROK-HEMISEKCJA",
+   "nazwa": "Hemisekcja",
+   "opis": "Przecięcie zęba wielokorzeniowego (po leczeniu kanałowym) i usunięcie korzenia bez rokowania; wygładzenie i odbudowa pozostałej części.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-REIMPLANTACJA",
+   "nazwa": "Reimplantacja zęba",
+   "opis": "Postępowanie z zębem wybitym wg IADT (czas pozazębodołowy, medium), płukanie, oczyszczenie zębodołu, reimplantacja, szyna elastyczna, leczenie kanałowe wg wskazań.",
+   "zrodla": [
+    "SRC-KLIN-IADT-AWUL-2020"
+   ]
+  },
+  {
+   "id": "KROK-WYLUSZCZENIE",
+   "nazwa": "Wyłuszczenie torbieli / zmiany",
+   "opis": "Płat, dostęp kostny, wyłuszczenie torbieli w całości, kontrola jamy, materiał do badania histopatologicznego, szycie.",
+   "uwaga": "Badanie histopatologiczne usuniętej zmiany.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-WYCIECIE-ZMIANY",
+   "nazwa": "Wycięcie zmiany tkanek miękkich",
+   "opis": "Wycięcie zmiany z marginesem tkanek zdrowych, hemostaza, szycie; materiał do badania histopatologicznego.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-KRIOTERAPIA",
+   "nazwa": "Krioterapia zmiany",
+   "opis": "Zamrażanie zmiany (cykle zamrażania-rozmrażania) wg protokołu urządzenia, kontrola gojenia.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-PODWIAZANIE",
+   "nazwa": "Podwiązanie / przeszycie naczynia",
+   "opis": "Lokalizacja źródła krwawienia, podwiązanie lub przeszycie naczynia, kontrola hemostazy; ocena stanu ogólnego.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-REPOZYCJA-ZEBA",
+   "nazwa": "Repozycja i unieruchomienie zęba",
+   "opis": "W znieczuleniu: repozycja zwichniętego zęba / fragmentu wyrostka, kontrola RTG, szyna elastyczna (czas zależny od urazu wg IADT), plan kontroli żywotności.",
+   "zrodla": [
+    "SRC-KLIN-IADT-ZLAM-2020"
+   ]
+  },
+  {
+   "id": "KROK-PLASTYKA-WYROSTKA",
+   "nazwa": "Plastyka wyrostka zębodołowego",
+   "opis": "Płat, usunięcie nierówności / ostrych krawędzi kości (lub augmentacja z przeszczepem), szycie – przygotowanie do protezy.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
   }
  ]
 }

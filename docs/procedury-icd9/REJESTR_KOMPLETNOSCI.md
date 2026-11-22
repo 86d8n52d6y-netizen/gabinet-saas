@@ -8,9 +8,9 @@ Wersja danych: 2026.11.22-1.
 
 | Status | Procedury |
 |---|---|
-| draft | 74 |
-| not_started | 182 |
-| requires_expert_review | 10 |
+| draft | 85 |
+| not_started | 140 |
+| requires_expert_review | 41 |
 | **razem** | **266** |
 
 Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: draft, BAD-BLONA: draft, BAD-UZEBIENIE: draft, BAD-PRZYZEBIE: draft, BAD-HIGIENA: draft, BAD-ZGRYZ: draft, BAD-SSZ: draft, BAD-ZYWOTNOSC: draft, BAD-RTG: draft, BAD-PO-URAZIE: draft, BAD-DZIECKO: draft, BAD-STOMATOLOGICZNE: draft, BAD-KONTROLNE: draft, BAD-PRZED-LECZENIEM: draft, BAD-PO-LECZENIU: draft).
@@ -130,61 +130,61 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.16021 | Usunięcie złogów nazębnych miękkich ze wszystkich zębów | periodontologia i błona śluzowa | draft |  |
 | 23.16022 | Usunięcie złogów nazębnych twardych ze wszystkich zębów | periodontologia i błona śluzowa | draft |  |
 | 23.1603 | Polerowanie zębów | periodontologia i błona śluzowa | draft |  |
-| 23.1604 | Płukanie kieszonki dziąsłowej i aplikacja leku | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
+| 23.1604 | Płukanie kieszonki dziąsłowej i aplikacja leku | periodontologia i błona śluzowa | draft |  |
 | 23.1605 | Leczenie zmian na błonie śluzowej jamy ustnej | periodontologia i błona śluzowa | draft |  |
-| 23.1606 | Korekta zgryzu | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
+| 23.1606 | Korekta zgryzu | periodontologia i błona śluzowa | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
 | 23.1607 | Kiretaż zwykły w obrębie 1/4 uzębienia | periodontologia i błona śluzowa | draft |  |
-| 23.1608 | Kiretaż otwarty w obrębie 1/4 uzębienia | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
-| 23.1609 | Gingwoplastyka | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
-| 23.1610 | Gingwoosteoplastyka | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
-| 23.1611 | Podcięcie wędzidełka, wargi, języka, policzka | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
-| 23.1612 | Plastyka wędzidełka ,wargi ,policzka | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
-| 23.1613 | Plastyka przedsionka jamy ustnej met. Clarka, Kazanjana | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
-| 23.1614 | Plastyka przedsionka jamy ustnej met. Nabersa | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
-| 23.1615 | Unieruchomienie zębów ligaturą drucianą | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
-| 23.1616 | Unieruchomienie zębów materiałem złożonym (kompozytowym) | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
-| 23.1617 | Unieruchomienie zębów szyną z materiału złożonego z dodatkowymi wzmocnieniami | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
-| 23.1618 | Zabieg wszczepiania hydroksyapatytu, bioglassu lub tp. | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
-| 23.1619 | Zabieg pokrycia obnażonych korzeni zębów metodą bocznie przesuniętego płata | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
-| 23.1620 | Założenie opatrunku parodontologicznego | periodontologia i błona śluzowa | not_started | Do opracowania w kolejnej partii. |
-| 23.17 | Chirurgiczne usunięcie zęba | chirurgia – ekstrakcje | not_started | Do opracowania w kolejnej partii. |
+| 23.1608 | Kiretaż otwarty w obrębie 1/4 uzębienia | periodontologia i błona śluzowa | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1609 | Gingwoplastyka | periodontologia i błona śluzowa | draft |  |
+| 23.1610 | Gingwoosteoplastyka | periodontologia i błona śluzowa | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1611 | Podcięcie wędzidełka, wargi, języka, policzka | periodontologia i błona śluzowa | draft |  |
+| 23.1612 | Plastyka wędzidełka ,wargi ,policzka | periodontologia i błona śluzowa | draft |  |
+| 23.1613 | Plastyka przedsionka jamy ustnej met. Clarka, Kazanjana | periodontologia i błona śluzowa | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1614 | Plastyka przedsionka jamy ustnej met. Nabersa | periodontologia i błona śluzowa | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1615 | Unieruchomienie zębów ligaturą drucianą | periodontologia i błona śluzowa | draft |  |
+| 23.1616 | Unieruchomienie zębów materiałem złożonym (kompozytowym) | periodontologia i błona śluzowa | draft |  |
+| 23.1617 | Unieruchomienie zębów szyną z materiału złożonego z dodatkowymi wzmocnieniami | periodontologia i błona śluzowa | draft |  |
+| 23.1618 | Zabieg wszczepiania hydroksyapatytu, bioglassu lub tp. | periodontologia i błona śluzowa | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1619 | Zabieg pokrycia obnażonych korzeni zębów metodą bocznie przesuniętego płata | periodontologia i błona śluzowa | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1620 | Założenie opatrunku parodontologicznego | periodontologia i błona śluzowa | draft |  |
+| 23.17 | Chirurgiczne usunięcie zęba | chirurgia – ekstrakcje | not_started | Kod nadrzędny używany w składzie pakietów NFZ – karty w podkodach: 23.1701–23.1708. |
 | 23.1701 | Usunięcie zęba jednokorzeniowego | chirurgia – ekstrakcje | draft |  |
 | 23.1702 | Usunięcie zęba wielokorzeniowego | chirurgia – ekstrakcje | draft |  |
 | 23.1703 | Usunięcie głęboko złamanego zęba poprzez dłutowanie wewnątrzzębodołowe przy zastosowaniu wierteł, dźwigni | chirurgia – ekstrakcje | draft |  |
 | 23.1704 | Usunięcie zęba przez dłutowanie zewnątrzzębodołowe z wytworzeniem płata śluzówkowo-okostnowego | chirurgia – ekstrakcje | draft |  |
-| 23.1705 | Operacyjne usunięcie zęba zatrzymanego | chirurgia – ekstrakcje | not_started | Do opracowania w kolejnej partii. |
-| 23.1706 | Operacyjne odsłonięcie zatrzymanego zęba z założeniem pętli drucianej dla celów ortodontycznych | chirurgia – ekstrakcje | not_started | Do opracowania w kolejnej partii. |
-| 23.1707 | Operacyjne usunięcie zawiązków zębów ze wskazań ortodontycznych | chirurgia – ekstrakcje | not_started | Do opracowania w kolejnej partii. |
+| 23.1705 | Operacyjne usunięcie zęba zatrzymanego | chirurgia – ekstrakcje | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1706 | Operacyjne odsłonięcie zatrzymanego zęba z założeniem pętli drucianej dla celów ortodontycznych | chirurgia – ekstrakcje | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1707 | Operacyjne usunięcie zawiązków zębów ze wskazań ortodontycznych | chirurgia – ekstrakcje | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
 | 23.1708 | Usunięcie zębów w znieczuleniu ogólnym u pacjentów z niedorozwojem umysłowym | chirurgia – ekstrakcje | not_started | Pominięte decyzją Patryka (22.11.2026): usuwanie zębów w znieczuleniu ogólnym – warunki szpitalne/anestezjologiczne. |
-| 23.1801 | Zamknięcie zatoki otwartej w przebiegu chirurgicznego usuwania zęba | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
-| 23.1802 | Resekcja wierzchołka korzenia zęba przedniego | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
-| 23.1803 | Resekcja wierzchołka korzenia zęba bocznego | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
-| 23.1804 | Resekcja wierzchołka korzenia zęba każdego następnego zęba podczas tego samego zabiegu i dotyczy zębów | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
-| 23.1805 | Hemisekcja zęba | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
-| 23.1806 | Reimplantacja zęba | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
-| 23.1807 | Wyłuszczenie torbieli zębopochodnej | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
-| 23.1808 | Wyłuszczenie kamienia z przewodu ślinianki | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
+| 23.1801 | Zamknięcie zatoki otwartej w przebiegu chirurgicznego usuwania zęba | chirurgia stomatologiczna | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1802 | Resekcja wierzchołka korzenia zęba przedniego | chirurgia stomatologiczna | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1803 | Resekcja wierzchołka korzenia zęba bocznego | chirurgia stomatologiczna | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1804 | Resekcja wierzchołka korzenia zęba każdego następnego zęba podczas tego samego zabiegu i dotyczy zębów | chirurgia stomatologiczna | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1805 | Hemisekcja zęba | chirurgia stomatologiczna | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1806 | Reimplantacja zęba | chirurgia stomatologiczna | draft |  |
+| 23.1807 | Wyłuszczenie torbieli zębopochodnej | chirurgia stomatologiczna | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1808 | Wyłuszczenie kamienia z przewodu ślinianki | chirurgia stomatologiczna | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
 | 23.1809 | Chirurgiczne zaopatrzenie małej rany obejmującej do 3 zębodołów włącznie ze szwem | chirurgia stomatologiczna | draft |  |
-| 23.1810 | Chirurgiczne zaopatrzenie małej rany obejmującej do 2-3 zębodołów włącznie z opracowaniem i szwami | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
-| 23.1811 | Chirurgiczne zaopatrzenie dużej rany w obrębie połowy szczęki włącznie ze szwami | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
-| 23.1812 | Chirurgiczne zaopatrzenie dużej, albo znacznie zanieczyszczonej rany w obrębie połowy szczęki włącznie z opracowaniem i szwami | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
+| 23.1810 | Chirurgiczne zaopatrzenie małej rany obejmującej do 2-3 zębodołów włącznie z opracowaniem i szwami | chirurgia stomatologiczna | draft |  |
+| 23.1811 | Chirurgiczne zaopatrzenie dużej rany w obrębie połowy szczęki włącznie ze szwami | chirurgia stomatologiczna | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1812 | Chirurgiczne zaopatrzenie dużej, albo znacznie zanieczyszczonej rany w obrębie połowy szczęki włącznie z opracowaniem i szwami | chirurgia stomatologiczna | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
 | 23.1813 | Zatamowanie krwawienia w obrębie jamy ustnej - nie zaliczane w bezpośrednim połączeniu z zabiegiem chirurgicznym, chyba że zajmuje niewspółmiernie dużo czasu | chirurgia stomatologiczna | draft |  |
-| 23.1814 | Zatamowanie masywnego krwawienia w obrębie jamy ustnej przez podwiązanie, pokłucie naczyń bądź zatkanie kością | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
+| 23.1814 | Zatamowanie masywnego krwawienia w obrębie jamy ustnej przez podwiązanie, pokłucie naczyń bądź zatkanie kością | chirurgia stomatologiczna | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
 | 23.1815 | Założenie opatrunku chirurgicznego | chirurgia stomatologiczna | draft |  |
-| 23.1816 | Ograniczone, miejscowe wycięcie wargi, języka | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
-| 23.1817 | Krioterapia niewielkich zmian w obrębie tkanek miękkich jamy ustnej | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
-| 23.1819 | Ograniczone wycięcie, zniszczenie zmiany podniebienia twardego | chirurgia stomatologiczna | not_started | Do opracowania w kolejnej partii. |
-| 23.1901 | Wycięcie małego guzka lub zmiany guzopodobnej, włókniaka | chirurgia – wycięcia i plastyki | not_started | Do opracowania w kolejnej partii. |
-| 23.1902 | Wycięcie przerostu błony śluzowej (guzy łagodne, zmiany guzopodobnej, nadziąślaki) w obrębie połowy szczęki | chirurgia – wycięcia i plastyki | not_started | Do opracowania w kolejnej partii. |
-| 23.1903 | Plastyka wyrostka zębodołowego w obrębie połowy szczęki | chirurgia – wycięcia i plastyki | not_started | Do opracowania w kolejnej partii. |
-| 23.1904 | Plastyka wyrostka zębodołowego szczęki lub części zębodołowej żuchwy z użyciem przeszczepu lub wszczepu | chirurgia – wycięcia i plastyki | not_started | Do opracowania w kolejnej partii. |
-| 23.1905 | Plastyka guza szczęki | chirurgia – wycięcia i plastyki | not_started | Do opracowania w kolejnej partii. |
-| 23.1906 | Plastyka połączenia lub przetoki ustno-zatokowej - jako samodzielne postępowanie lub jako następstwo ekstrakcji | chirurgia – wycięcia i plastyki | not_started | Do opracowania w kolejnej partii. |
+| 23.1816 | Ograniczone, miejscowe wycięcie wargi, języka | chirurgia stomatologiczna | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1817 | Krioterapia niewielkich zmian w obrębie tkanek miękkich jamy ustnej | chirurgia stomatologiczna | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1819 | Ograniczone wycięcie, zniszczenie zmiany podniebienia twardego | chirurgia stomatologiczna | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1901 | Wycięcie małego guzka lub zmiany guzopodobnej, włókniaka | chirurgia – wycięcia i plastyki | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1902 | Wycięcie przerostu błony śluzowej (guzy łagodne, zmiany guzopodobnej, nadziąślaki) w obrębie połowy szczęki | chirurgia – wycięcia i plastyki | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1903 | Plastyka wyrostka zębodołowego w obrębie połowy szczęki | chirurgia – wycięcia i plastyki | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1904 | Plastyka wyrostka zębodołowego szczęki lub części zębodołowej żuchwy z użyciem przeszczepu lub wszczepu | chirurgia – wycięcia i plastyki | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1905 | Plastyka guza szczęki | chirurgia – wycięcia i plastyki | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
+| 23.1906 | Plastyka połączenia lub przetoki ustno-zatokowej - jako samodzielne postępowanie lub jako następstwo ekstrakcji | chirurgia – wycięcia i plastyki | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
 | 23.2001 | Nacięcie powierzchniowo, podśluzówkowo lub podskórnie leżącego ropnia włącznie z drenażem i opatrunkiem | chirurgia – zakażenia | draft |  |
-| 23.2002 | Nacięcie z dojścia wewnątrz lub zewnątrzustnego głęboko leżącego ropnia włącznie z drenażem i opatrunkiem | chirurgia – zakażenia | not_started | Do opracowania w kolejnej partii. |
+| 23.2002 | Nacięcie z dojścia wewnątrz lub zewnątrzustnego głęboko leżącego ropnia włącznie z drenażem i opatrunkiem | chirurgia – zakażenia | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
 | 23.2003 | Nacięcie ropowicy | chirurgia – zakażenia | not_started | Pominięte decyzją Patryka (22.11.2026): nacięcie ropowicy – chirurgia szczękowo-twarzowa (szpital). |
-| 23.2101 | Repozycja i unieruchomienie zwichniętego zęba lub grupy zębów | urazy zębów | not_started | Do opracowania w kolejnej partii. |
-| 23.2102 | Repozycja i unieruchomienie złamanego fragmentu wyrostka zębodołowego z zębem lub zębami | urazy zębów | not_started | Do opracowania w kolejnej partii. |
+| 23.2101 | Repozycja i unieruchomienie zwichniętego zęba lub grupy zębów | urazy zębów | draft |  |
+| 23.2102 | Repozycja i unieruchomienie złamanego fragmentu wyrostka zębodołowego z zębem lub zębami | urazy zębów | requires_expert_review | Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa. |
 | 23.2103 | Repozycja i unieruchomienie pośredniego, trudnego do repozycji lub wklinowanego fragmentu złamanego wyrostka zębodołowego | urazy zębów | not_started | Pominięte decyzją Patryka (22.11.2026): repozycja trudnego, wklinowanego fragmentu złamania – chirurgia szczękowo-twarzowa. |
 | 23.2201 | Repozycja i unieruchomienie pojedynczego złamania żuchwy | chirurgia szczękowo-twarzowa – złamania | not_started | Pominięte decyzją Patryka (22.11.2026): złamania szczęk – chirurgia szczękowo-twarzowa – poza zakresem gabinetu ogólnostomatologicznego. |
 | 23.2202 | Repozycja i unieruchomienie wielokrotnego, z odłamami pośrednimi złamania żuchwy | chirurgia szczękowo-twarzowa – złamania | not_started | Pominięte decyzją Patryka (22.11.2026): złamania szczęk – chirurgia szczękowo-twarzowa – poza zakresem gabinetu ogólnostomatologicznego. |
@@ -261,9 +261,9 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.3101 | Uzupełnienie braków zębowych przy pomocy protezy częściowej włącznie z prostymi doginanymi klamrami w zakresie 1-4 brakujących zębów | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
 | 23.3102 | Uzupełnienie braków zębowych przy pomocy protezy częściowej włącznie z prostymi doginanymi klamrami w zakresie 5-8 brakujących zębów | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
 | 23.3103 | Uzupełnienie braków zębowych przy pomocy protezy częściowej włącznie z prostymi doginanymi klamrami w zakresie więcej niż 8 zębów | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
-| 23.3104 | Zaopatrzenie bezzębnej szczęki protezą całkowitą w szczęce | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
+| 23.3104 | Zaopatrzenie bezzębnej szczęki protezą całkowitą w szczęce | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii (protetyka) – samodzielne świadczenie NFZ; podkod = wariant overdenture. |
 | 23.31041 | Proteza całkowita górna o charakterze overdenture oparta na zabezpieczonych korzeniach | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
-| 23.3105 | Zaopatrzenie bezzębnej szczęki protezą całkowitą w żuchwie | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
+| 23.3105 | Zaopatrzenie bezzębnej szczęki protezą całkowitą w żuchwie | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii (protetyka) – samodzielne świadczenie NFZ; podkod = wariant overdenture. |
 | 23.31051 | Proteza całkowita dolna o charakterze overdenture oparta na zabezpieczonych korzeniach | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
 | 23.3106 | Zastosowanie metalowej podstawy przy bezzębnej szczęce | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |
 | 23.3107 | Zastosowanie prostych dwuramiennych elementów utrzymujących lub podpierających lub wieloramiennych elementów doginanych o podobnym działaniu dodatkowo do każdej protezy- przy prowizorycznych protezach jedynie w szczególnych przypadkach, za element | protetyka – protezy ruchome | not_started | Do opracowania w kolejnej partii. |

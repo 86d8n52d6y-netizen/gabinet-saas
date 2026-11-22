@@ -3843,6 +3843,2064 @@
     "POLE-POWIKLANIA",
     "POLE-ZALECENIA"
    ]
+  },
+  {
+   "id": "SZAB-PROC-23.1604-STD",
+   "dotyczy": "PROC-23.1604",
+   "wariant": "standardowy",
+   "tekst": "Płukanie kieszonki i aplikacja leku: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1604-SKR",
+   "dotyczy": "PROC-23.1604",
+   "wariant": "skrocony",
+   "tekst": "Płukanie kieszonki i aplikacja leku {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1604-ROZ",
+   "dotyczy": "PROC-23.1604",
+   "wariant": "rozszerzony",
+   "tekst": "PŁUKANIE KIESZONKI I APLIKACJA LEKU: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1606-STD",
+   "dotyczy": "PROC-23.1606",
+   "wariant": "standardowy",
+   "tekst": "Korekta zgryzu (szlifowanie selektywne): {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1606-SKR",
+   "dotyczy": "PROC-23.1606",
+   "wariant": "skrocony",
+   "tekst": "Korekta zgryzu (szlifowanie selektywne) {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1606-ROZ",
+   "dotyczy": "PROC-23.1606",
+   "wariant": "rozszerzony",
+   "tekst": "KOREKTA ZGRYZU (SZLIFOWANIE SELEKTYWNE): lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1608-STD",
+   "dotyczy": "PROC-23.1608",
+   "wariant": "standardowy",
+   "tekst": "Kiretaż otwarty (¼ uzębienia): {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1608-SKR",
+   "dotyczy": "PROC-23.1608",
+   "wariant": "skrocony",
+   "tekst": "Kiretaż otwarty (¼ uzębienia) {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1608-ROZ",
+   "dotyczy": "PROC-23.1608",
+   "wariant": "rozszerzony",
+   "tekst": "KIRETAŻ OTWARTY (¼ UZĘBIENIA): lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1609-STD",
+   "dotyczy": "PROC-23.1609",
+   "wariant": "standardowy",
+   "tekst": "Gingiwoplastyka: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1609-SKR",
+   "dotyczy": "PROC-23.1609",
+   "wariant": "skrocony",
+   "tekst": "Gingiwoplastyka {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1609-ROZ",
+   "dotyczy": "PROC-23.1609",
+   "wariant": "rozszerzony",
+   "tekst": "GINGIWOPLASTYKA: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1610-STD",
+   "dotyczy": "PROC-23.1610",
+   "wariant": "standardowy",
+   "tekst": "Gingiwoosteoplastyka: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1610-SKR",
+   "dotyczy": "PROC-23.1610",
+   "wariant": "skrocony",
+   "tekst": "Gingiwoosteoplastyka {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1610-ROZ",
+   "dotyczy": "PROC-23.1610",
+   "wariant": "rozszerzony",
+   "tekst": "GINGIWOOSTEOPLASTYKA: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1611-STD",
+   "dotyczy": "PROC-23.1611",
+   "wariant": "standardowy",
+   "tekst": "Podcięcie wędzidełka: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1611-SKR",
+   "dotyczy": "PROC-23.1611",
+   "wariant": "skrocony",
+   "tekst": "Podcięcie wędzidełka {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1611-ROZ",
+   "dotyczy": "PROC-23.1611",
+   "wariant": "rozszerzony",
+   "tekst": "PODCIĘCIE WĘDZIDEŁKA: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1612-STD",
+   "dotyczy": "PROC-23.1612",
+   "wariant": "standardowy",
+   "tekst": "Plastyka wędzidełka: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1612-SKR",
+   "dotyczy": "PROC-23.1612",
+   "wariant": "skrocony",
+   "tekst": "Plastyka wędzidełka {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1612-ROZ",
+   "dotyczy": "PROC-23.1612",
+   "wariant": "rozszerzony",
+   "tekst": "PLASTYKA WĘDZIDEŁKA: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1613-STD",
+   "dotyczy": "PROC-23.1613",
+   "wariant": "standardowy",
+   "tekst": "Plastyka przedsionka metodą Clarka / Kazanjiana: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1613-SKR",
+   "dotyczy": "PROC-23.1613",
+   "wariant": "skrocony",
+   "tekst": "Plastyka przedsionka metodą Clarka / Kazanjiana {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1613-ROZ",
+   "dotyczy": "PROC-23.1613",
+   "wariant": "rozszerzony",
+   "tekst": "PLASTYKA PRZEDSIONKA METODĄ CLARKA / KAZANJIANA: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1614-STD",
+   "dotyczy": "PROC-23.1614",
+   "wariant": "standardowy",
+   "tekst": "Plastyka przedsionka metodą Nabersa: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1614-SKR",
+   "dotyczy": "PROC-23.1614",
+   "wariant": "skrocony",
+   "tekst": "Plastyka przedsionka metodą Nabersa {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1614-ROZ",
+   "dotyczy": "PROC-23.1614",
+   "wariant": "rozszerzony",
+   "tekst": "PLASTYKA PRZEDSIONKA METODĄ NABERSA: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1615-STD",
+   "dotyczy": "PROC-23.1615",
+   "wariant": "standardowy",
+   "tekst": "Unieruchomienie zębów ligaturą drucianą: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1615-SKR",
+   "dotyczy": "PROC-23.1615",
+   "wariant": "skrocony",
+   "tekst": "Unieruchomienie zębów ligaturą drucianą {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1615-ROZ",
+   "dotyczy": "PROC-23.1615",
+   "wariant": "rozszerzony",
+   "tekst": "UNIERUCHOMIENIE ZĘBÓW LIGATURĄ DRUCIANĄ: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1616-STD",
+   "dotyczy": "PROC-23.1616",
+   "wariant": "standardowy",
+   "tekst": "Unieruchomienie zębów kompozytem: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1616-SKR",
+   "dotyczy": "PROC-23.1616",
+   "wariant": "skrocony",
+   "tekst": "Unieruchomienie zębów kompozytem {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1616-ROZ",
+   "dotyczy": "PROC-23.1616",
+   "wariant": "rozszerzony",
+   "tekst": "UNIERUCHOMIENIE ZĘBÓW KOMPOZYTEM: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1617-STD",
+   "dotyczy": "PROC-23.1617",
+   "wariant": "standardowy",
+   "tekst": "Szyna kompozytowa ze wzmocnieniem: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1617-SKR",
+   "dotyczy": "PROC-23.1617",
+   "wariant": "skrocony",
+   "tekst": "Szyna kompozytowa ze wzmocnieniem {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1617-ROZ",
+   "dotyczy": "PROC-23.1617",
+   "wariant": "rozszerzony",
+   "tekst": "SZYNA KOMPOZYTOWA ZE WZMOCNIENIEM: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1618-STD",
+   "dotyczy": "PROC-23.1618",
+   "wariant": "standardowy",
+   "tekst": "Wszczepienie materiału kościozastępczego: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1618-SKR",
+   "dotyczy": "PROC-23.1618",
+   "wariant": "skrocony",
+   "tekst": "Wszczepienie materiału kościozastępczego {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1618-ROZ",
+   "dotyczy": "PROC-23.1618",
+   "wariant": "rozszerzony",
+   "tekst": "WSZCZEPIENIE MATERIAŁU KOŚCIOZASTĘPCZEGO: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1619-STD",
+   "dotyczy": "PROC-23.1619",
+   "wariant": "standardowy",
+   "tekst": "Pokrycie recesji płatem przesuniętym bocznie: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1619-SKR",
+   "dotyczy": "PROC-23.1619",
+   "wariant": "skrocony",
+   "tekst": "Pokrycie recesji płatem przesuniętym bocznie {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1619-ROZ",
+   "dotyczy": "PROC-23.1619",
+   "wariant": "rozszerzony",
+   "tekst": "POKRYCIE RECESJI PŁATEM PRZESUNIĘTYM BOCZNIE: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1620-STD",
+   "dotyczy": "PROC-23.1620",
+   "wariant": "standardowy",
+   "tekst": "Opatrunek periodontologiczny: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1620-SKR",
+   "dotyczy": "PROC-23.1620",
+   "wariant": "skrocony",
+   "tekst": "Opatrunek periodontologiczny {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1620-ROZ",
+   "dotyczy": "PROC-23.1620",
+   "wariant": "rozszerzony",
+   "tekst": "OPATRUNEK PERIODONTOLOGICZNY: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1705-STD",
+   "dotyczy": "PROC-23.1705",
+   "wariant": "standardowy",
+   "tekst": "Operacyjne usunięcie zęba zatrzymanego: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1705-SKR",
+   "dotyczy": "PROC-23.1705",
+   "wariant": "skrocony",
+   "tekst": "Operacyjne usunięcie zęba zatrzymanego {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1705-ROZ",
+   "dotyczy": "PROC-23.1705",
+   "wariant": "rozszerzony",
+   "tekst": "OPERACYJNE USUNIĘCIE ZĘBA ZATRZYMANEGO: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1706-STD",
+   "dotyczy": "PROC-23.1706",
+   "wariant": "standardowy",
+   "tekst": "Odsłonięcie zęba zatrzymanego (cele ortodontyczne): {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1706-SKR",
+   "dotyczy": "PROC-23.1706",
+   "wariant": "skrocony",
+   "tekst": "Odsłonięcie zęba zatrzymanego (cele ortodontyczne) {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1706-ROZ",
+   "dotyczy": "PROC-23.1706",
+   "wariant": "rozszerzony",
+   "tekst": "ODSŁONIĘCIE ZĘBA ZATRZYMANEGO (CELE ORTODONTYCZNE): lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1707-STD",
+   "dotyczy": "PROC-23.1707",
+   "wariant": "standardowy",
+   "tekst": "Usunięcie zawiązków zębów (wskazania ortodontyczne): {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1707-SKR",
+   "dotyczy": "PROC-23.1707",
+   "wariant": "skrocony",
+   "tekst": "Usunięcie zawiązków zębów (wskazania ortodontyczne) {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1707-ROZ",
+   "dotyczy": "PROC-23.1707",
+   "wariant": "rozszerzony",
+   "tekst": "USUNIĘCIE ZAWIĄZKÓW ZĘBÓW (WSKAZANIA ORTODONTYCZNE): lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1801-STD",
+   "dotyczy": "PROC-23.1801",
+   "wariant": "standardowy",
+   "tekst": "Zamknięcie połączenia z zatoką: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1801-SKR",
+   "dotyczy": "PROC-23.1801",
+   "wariant": "skrocony",
+   "tekst": "Zamknięcie połączenia z zatoką {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1801-ROZ",
+   "dotyczy": "PROC-23.1801",
+   "wariant": "rozszerzony",
+   "tekst": "ZAMKNIĘCIE POŁĄCZENIA Z ZATOKĄ: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1802-STD",
+   "dotyczy": "PROC-23.1802",
+   "wariant": "standardowy",
+   "tekst": "Resekcja wierzchołka – ząb przedni: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1802-SKR",
+   "dotyczy": "PROC-23.1802",
+   "wariant": "skrocony",
+   "tekst": "Resekcja wierzchołka – ząb przedni {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1802-ROZ",
+   "dotyczy": "PROC-23.1802",
+   "wariant": "rozszerzony",
+   "tekst": "RESEKCJA WIERZCHOŁKA – ZĄB PRZEDNI: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1803-STD",
+   "dotyczy": "PROC-23.1803",
+   "wariant": "standardowy",
+   "tekst": "Resekcja wierzchołka – ząb boczny: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1803-SKR",
+   "dotyczy": "PROC-23.1803",
+   "wariant": "skrocony",
+   "tekst": "Resekcja wierzchołka – ząb boczny {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1803-ROZ",
+   "dotyczy": "PROC-23.1803",
+   "wariant": "rozszerzony",
+   "tekst": "RESEKCJA WIERZCHOŁKA – ZĄB BOCZNY: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1804-STD",
+   "dotyczy": "PROC-23.1804",
+   "wariant": "standardowy",
+   "tekst": "Resekcja wierzchołka – każdy następny ząb: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1804-SKR",
+   "dotyczy": "PROC-23.1804",
+   "wariant": "skrocony",
+   "tekst": "Resekcja wierzchołka – każdy następny ząb {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1804-ROZ",
+   "dotyczy": "PROC-23.1804",
+   "wariant": "rozszerzony",
+   "tekst": "RESEKCJA WIERZCHOŁKA – KAŻDY NASTĘPNY ZĄB: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1805-STD",
+   "dotyczy": "PROC-23.1805",
+   "wariant": "standardowy",
+   "tekst": "Hemisekcja zęba: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1805-SKR",
+   "dotyczy": "PROC-23.1805",
+   "wariant": "skrocony",
+   "tekst": "Hemisekcja zęba {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1805-ROZ",
+   "dotyczy": "PROC-23.1805",
+   "wariant": "rozszerzony",
+   "tekst": "HEMISEKCJA ZĘBA: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1806-STD",
+   "dotyczy": "PROC-23.1806",
+   "wariant": "standardowy",
+   "tekst": "Reimplantacja zęba: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1806-SKR",
+   "dotyczy": "PROC-23.1806",
+   "wariant": "skrocony",
+   "tekst": "Reimplantacja zęba {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1806-ROZ",
+   "dotyczy": "PROC-23.1806",
+   "wariant": "rozszerzony",
+   "tekst": "REIMPLANTACJA ZĘBA: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1807-STD",
+   "dotyczy": "PROC-23.1807",
+   "wariant": "standardowy",
+   "tekst": "Wyłuszczenie torbieli zębopochodnej: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1807-SKR",
+   "dotyczy": "PROC-23.1807",
+   "wariant": "skrocony",
+   "tekst": "Wyłuszczenie torbieli zębopochodnej {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1807-ROZ",
+   "dotyczy": "PROC-23.1807",
+   "wariant": "rozszerzony",
+   "tekst": "WYŁUSZCZENIE TORBIELI ZĘBOPOCHODNEJ: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1808-STD",
+   "dotyczy": "PROC-23.1808",
+   "wariant": "standardowy",
+   "tekst": "Usunięcie kamienia z przewodu ślinianki: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1808-SKR",
+   "dotyczy": "PROC-23.1808",
+   "wariant": "skrocony",
+   "tekst": "Usunięcie kamienia z przewodu ślinianki {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1808-ROZ",
+   "dotyczy": "PROC-23.1808",
+   "wariant": "rozszerzony",
+   "tekst": "USUNIĘCIE KAMIENIA Z PRZEWODU ŚLINIANKI: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1810-STD",
+   "dotyczy": "PROC-23.1810",
+   "wariant": "standardowy",
+   "tekst": "Zaopatrzenie małej rany (2–3 zębodoły) z opracowaniem: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1810-SKR",
+   "dotyczy": "PROC-23.1810",
+   "wariant": "skrocony",
+   "tekst": "Zaopatrzenie małej rany (2–3 zębodoły) z opracowaniem {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1810-ROZ",
+   "dotyczy": "PROC-23.1810",
+   "wariant": "rozszerzony",
+   "tekst": "ZAOPATRZENIE MAŁEJ RANY (2–3 ZĘBODOŁY) Z OPRACOWANIEM: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1811-STD",
+   "dotyczy": "PROC-23.1811",
+   "wariant": "standardowy",
+   "tekst": "Zaopatrzenie dużej rany (połowa szczęki): {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1811-SKR",
+   "dotyczy": "PROC-23.1811",
+   "wariant": "skrocony",
+   "tekst": "Zaopatrzenie dużej rany (połowa szczęki) {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1811-ROZ",
+   "dotyczy": "PROC-23.1811",
+   "wariant": "rozszerzony",
+   "tekst": "ZAOPATRZENIE DUŻEJ RANY (POŁOWA SZCZĘKI): lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1812-STD",
+   "dotyczy": "PROC-23.1812",
+   "wariant": "standardowy",
+   "tekst": "Zaopatrzenie dużej, zanieczyszczonej rany: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1812-SKR",
+   "dotyczy": "PROC-23.1812",
+   "wariant": "skrocony",
+   "tekst": "Zaopatrzenie dużej, zanieczyszczonej rany {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1812-ROZ",
+   "dotyczy": "PROC-23.1812",
+   "wariant": "rozszerzony",
+   "tekst": "ZAOPATRZENIE DUŻEJ, ZANIECZYSZCZONEJ RANY: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1814-STD",
+   "dotyczy": "PROC-23.1814",
+   "wariant": "standardowy",
+   "tekst": "Zatamowanie masywnego krwawienia: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1814-SKR",
+   "dotyczy": "PROC-23.1814",
+   "wariant": "skrocony",
+   "tekst": "Zatamowanie masywnego krwawienia {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1814-ROZ",
+   "dotyczy": "PROC-23.1814",
+   "wariant": "rozszerzony",
+   "tekst": "ZATAMOWANIE MASYWNEGO KRWAWIENIA: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1816-STD",
+   "dotyczy": "PROC-23.1816",
+   "wariant": "standardowy",
+   "tekst": "Ograniczone wycięcie zmiany wargi / języka: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1816-SKR",
+   "dotyczy": "PROC-23.1816",
+   "wariant": "skrocony",
+   "tekst": "Ograniczone wycięcie zmiany wargi / języka {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1816-ROZ",
+   "dotyczy": "PROC-23.1816",
+   "wariant": "rozszerzony",
+   "tekst": "OGRANICZONE WYCIĘCIE ZMIANY WARGI / JĘZYKA: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1817-STD",
+   "dotyczy": "PROC-23.1817",
+   "wariant": "standardowy",
+   "tekst": "Krioterapia zmian tkanek miękkich: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1817-SKR",
+   "dotyczy": "PROC-23.1817",
+   "wariant": "skrocony",
+   "tekst": "Krioterapia zmian tkanek miękkich {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1817-ROZ",
+   "dotyczy": "PROC-23.1817",
+   "wariant": "rozszerzony",
+   "tekst": "KRIOTERAPIA ZMIAN TKANEK MIĘKKICH: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1819-STD",
+   "dotyczy": "PROC-23.1819",
+   "wariant": "standardowy",
+   "tekst": "Wycięcie zmiany podniebienia twardego: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1819-SKR",
+   "dotyczy": "PROC-23.1819",
+   "wariant": "skrocony",
+   "tekst": "Wycięcie zmiany podniebienia twardego {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1819-ROZ",
+   "dotyczy": "PROC-23.1819",
+   "wariant": "rozszerzony",
+   "tekst": "WYCIĘCIE ZMIANY PODNIEBIENIA TWARDEGO: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1901-STD",
+   "dotyczy": "PROC-23.1901",
+   "wariant": "standardowy",
+   "tekst": "Wycięcie małego guzka / włókniaka: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1901-SKR",
+   "dotyczy": "PROC-23.1901",
+   "wariant": "skrocony",
+   "tekst": "Wycięcie małego guzka / włókniaka {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1901-ROZ",
+   "dotyczy": "PROC-23.1901",
+   "wariant": "rozszerzony",
+   "tekst": "WYCIĘCIE MAŁEGO GUZKA / WŁÓKNIAKA: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1902-STD",
+   "dotyczy": "PROC-23.1902",
+   "wariant": "standardowy",
+   "tekst": "Wycięcie przerostu błony śluzowej: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1902-SKR",
+   "dotyczy": "PROC-23.1902",
+   "wariant": "skrocony",
+   "tekst": "Wycięcie przerostu błony śluzowej {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1902-ROZ",
+   "dotyczy": "PROC-23.1902",
+   "wariant": "rozszerzony",
+   "tekst": "WYCIĘCIE PRZEROSTU BŁONY ŚLUZOWEJ: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1903-STD",
+   "dotyczy": "PROC-23.1903",
+   "wariant": "standardowy",
+   "tekst": "Plastyka wyrostka (połowa szczęki): {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1903-SKR",
+   "dotyczy": "PROC-23.1903",
+   "wariant": "skrocony",
+   "tekst": "Plastyka wyrostka (połowa szczęki) {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1903-ROZ",
+   "dotyczy": "PROC-23.1903",
+   "wariant": "rozszerzony",
+   "tekst": "PLASTYKA WYROSTKA (POŁOWA SZCZĘKI): lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1904-STD",
+   "dotyczy": "PROC-23.1904",
+   "wariant": "standardowy",
+   "tekst": "Plastyka wyrostka z przeszczepem: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1904-SKR",
+   "dotyczy": "PROC-23.1904",
+   "wariant": "skrocony",
+   "tekst": "Plastyka wyrostka z przeszczepem {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1904-ROZ",
+   "dotyczy": "PROC-23.1904",
+   "wariant": "rozszerzony",
+   "tekst": "PLASTYKA WYROSTKA Z PRZESZCZEPEM: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1905-STD",
+   "dotyczy": "PROC-23.1905",
+   "wariant": "standardowy",
+   "tekst": "Plastyka guza szczęki: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1905-SKR",
+   "dotyczy": "PROC-23.1905",
+   "wariant": "skrocony",
+   "tekst": "Plastyka guza szczęki {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1905-ROZ",
+   "dotyczy": "PROC-23.1905",
+   "wariant": "rozszerzony",
+   "tekst": "PLASTYKA GUZA SZCZĘKI: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1906-STD",
+   "dotyczy": "PROC-23.1906",
+   "wariant": "standardowy",
+   "tekst": "Plastyka połączenia / przetoki ustno-zatokowej: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1906-SKR",
+   "dotyczy": "PROC-23.1906",
+   "wariant": "skrocony",
+   "tekst": "Plastyka połączenia / przetoki ustno-zatokowej {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.1906-ROZ",
+   "dotyczy": "PROC-23.1906",
+   "wariant": "rozszerzony",
+   "tekst": "PLASTYKA POŁĄCZENIA / PRZETOKI USTNO-ZATOKOWEJ: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2002-STD",
+   "dotyczy": "PROC-23.2002",
+   "wariant": "standardowy",
+   "tekst": "Nacięcie głębokiego ropnia: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2002-SKR",
+   "dotyczy": "PROC-23.2002",
+   "wariant": "skrocony",
+   "tekst": "Nacięcie głębokiego ropnia {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2002-ROZ",
+   "dotyczy": "PROC-23.2002",
+   "wariant": "rozszerzony",
+   "tekst": "NACIĘCIE GŁĘBOKIEGO ROPNIA: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2101-STD",
+   "dotyczy": "PROC-23.2101",
+   "wariant": "standardowy",
+   "tekst": "Repozycja i unieruchomienie zwichniętego zęba: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2101-SKR",
+   "dotyczy": "PROC-23.2101",
+   "wariant": "skrocony",
+   "tekst": "Repozycja i unieruchomienie zwichniętego zęba {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2101-ROZ",
+   "dotyczy": "PROC-23.2101",
+   "wariant": "rozszerzony",
+   "tekst": "REPOZYCJA I UNIERUCHOMIENIE ZWICHNIĘTEGO ZĘBA: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2102-STD",
+   "dotyczy": "PROC-23.2102",
+   "wariant": "standardowy",
+   "tekst": "Repozycja fragmentu wyrostka z zębami: {{POLE-LOKALIZACJA}} ({{POLE-ZEBY}}). Rozpoznanie: {{POLE-ROZPOZNANIE}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}. Przebieg: {{POLE-PRZEBIEG}}. Powikłania: {{POLE-POWIKLANIA}}. Zalecenia przekazano {{POLE-ZALECENIA-FORMA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-PRZEBIEG",
+    "POLE-POWIKLANIA",
+    "POLE-ZALECENIA-FORMA"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2102-SKR",
+   "dotyczy": "PROC-23.2102",
+   "wariant": "skrocony",
+   "tekst": "Repozycja fragmentu wyrostka z zębami {{POLE-LOKALIZACJA}}; znieczulenie {{POLE-ZNIECZ-RODZAJ}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZNIECZ-RODZAJ"
+   ]
+  },
+  {
+   "id": "SZAB-PROC-23.2102-ROZ",
+   "dotyczy": "PROC-23.2102",
+   "wariant": "rozszerzony",
+   "tekst": "REPOZYCJA FRAGMENTU WYROSTKA Z ZĘBAMI: lokalizacja {{POLE-LOKALIZACJA}}, zęby {{POLE-ZEBY}}. Rozpoznanie: {{POLE-ROZPOZNANIE}}. Wskazanie: {{POLE-WSKAZANIE}}. Zgoda pacjenta: {{POLE-ZGODA}}. Znieczulenie: {{POLE-ZNIECZ-RODZAJ}}, {{POLE-ZNIECZ-PREPARAT}} {{POLE-ZNIECZ-DAWKA}}. Przebieg: {{POLE-PRZEBIEG}}. Materiał: {{POLE-MATERIAL}}. Wynik: {{POLE-WYNIK}}. Powikłania: {{POLE-POWIKLANIA}} {{POLE-POWIKLANIA-OPIS}}. Zalecenia ({{POLE-ZALECENIA-FORMA}}): {{POLE-ZALECENIA}}. Kontrola: {{POLE-KONTROLA}}.",
+   "pola": [
+    "POLE-LOKALIZACJA",
+    "POLE-ZEBY",
+    "POLE-ROZPOZNANIE",
+    "POLE-WSKAZANIE",
+    "POLE-ZGODA",
+    "POLE-ZNIECZ-RODZAJ",
+    "POLE-ZNIECZ-PREPARAT",
+    "POLE-ZNIECZ-DAWKA",
+    "POLE-PRZEBIEG",
+    "POLE-MATERIAL",
+    "POLE-WYNIK",
+    "POLE-POWIKLANIA",
+    "POLE-POWIKLANIA-OPIS",
+    "POLE-ZALECENIA-FORMA",
+    "POLE-ZALECENIA",
+    "POLE-KONTROLA"
+   ]
   }
  ]
 }

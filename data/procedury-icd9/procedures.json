@@ -13569,11 +13569,176 @@
    "kod": "23.1604",
    "nazwa_oficjalna": "Płukanie kieszonki dziąsłowej i aplikacja leku",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Płukanie kieszonki i aplikacja leku",
+   "opis": "Płukanie kieszonki i aplikacja leku.",
+   "cel": {
+    "na_czym_polega": "Płukanie kieszonki dziąsłowej i aplikacja leku miejscowego: zmniejszenie stanu zapalnego.",
+    "cel_kliniczny": "Płukanie kieszonki dziąsłowej i aplikacja leku miejscowego",
+    "wskazania": [
+     "zaostrzenie stanu zapalnego w kieszonce",
+     "wspomagająco w leczeniu periodontologicznym"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-PLUKANIE-KIESZONKI"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-PLUKANKA",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie obejmuje każdą wizytę.",
+     "zał. 2 (<18): Świadczenie obejmuje każdą wizytę.",
+     "zał. 2b (<18 (szkoła)): Świadczenie obejmuje każdą wizytę."
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615"
+    ]
+   },
+   "zrodla": [
+    "SRC-KLIN-EFP-S3-2020"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1605",
@@ -13696,11 +13861,178 @@
    "kod": "23.1606",
    "nazwa_oficjalna": "Korekta zgryzu",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Korekta zgryzu (szlifowanie selektywne)",
+   "opis": "Korekta zgryzu (szlifowanie selektywne).",
+   "cel": {
+    "na_czym_polega": "Selektywne szlifowanie kontaktów urazowych: usunięcie urazu zgryzowego.",
+    "cel_kliniczny": "Selektywne szlifowanie kontaktów urazowych",
+    "wskazania": [
+     "uraz zgryzowy pierwotny / wtórny",
+     "kontakty przedwczesne"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-KOREKTA-ZGRYZU"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KALKA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WIERTLA",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-POLERY",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1607",
@@ -13856,143 +14188,2277 @@
    "kod": "23.1608",
    "nazwa_oficjalna": "Kiretaż otwarty w obrębie 1/4 uzębienia",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Kiretaż otwarty (¼ uzębienia)",
+   "opis": "Kiretaż otwarty (¼ uzębienia).",
+   "cel": {
+    "na_czym_polega": "Oczyszczenie kieszonek z dostępu płatowego: leczenie kieszonek rezydualnych.",
+    "cel_kliniczny": "Oczyszczenie kieszonek z dostępu płatowego",
+    "wskazania": [
+     "kieszonki ≥ 6 mm po leczeniu niechirurgicznym (etap 3 EFP)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-PLAT-PERIO"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "produkty": [
+     "pakiet ST05"
+    ],
+    "zrodla": [
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-EFP-S3-2020"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1609",
    "kod": "23.1609",
    "nazwa_oficjalna": "Gingwoplastyka",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Gingiwoplastyka",
+   "opis": "Gingiwoplastyka.",
+   "cel": {
+    "na_czym_polega": "Gingiwektomia / gingiwoplastyka: usunięcie przerostu i przywrócenie kształtu dziąsła.",
+    "cel_kliniczny": "Gingiwektomia / gingiwoplastyka",
+    "wskazania": [
+     "przerost dziąseł (polekowy, zapalny)",
+     "pseudokieszonki"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-GINGIWOPLASTYKA"
+    },
+    {
+     "krok": "KROK-HEMOSTAZA"
+    },
+    {
+     "krok": "KROK-OPATRUNEK-PERIO"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-OPATR-PERIO",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1610",
    "kod": "23.1610",
    "nazwa_oficjalna": "Gingwoosteoplastyka",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Gingiwoosteoplastyka",
+   "opis": "Gingiwoosteoplastyka.",
+   "cel": {
+    "na_czym_polega": "Gingiwoplastyka z korektą kości: przywrócenie fizjologicznego kształtu tkanek.",
+    "cel_kliniczny": "Gingiwoplastyka z korektą kości",
+    "wskazania": [
+     "przerost dziąsła z nieprawidłowym kształtem kości",
+     "wydłużenie korony klinicznej"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-PLAT-PERIO"
+    },
+    {
+     "krok": "KROK-OSTEOPLASTYKA"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-WIERTLA-CHIR",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1611",
    "kod": "23.1611",
    "nazwa_oficjalna": "Podcięcie wędzidełka, wargi, języka, policzka",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Podcięcie wędzidełka",
+   "opis": "Podcięcie wędzidełka.",
+   "cel": {
+    "na_czym_polega": "Podcięcie wędzidełka wargi, języka lub policzka: uwolnienie ruchomości.",
+    "cel_kliniczny": "Podcięcie wędzidełka wargi, języka lub policzka",
+    "wskazania": [
+     "skrócone wędzidełko języka (ankyloglosja) z zaburzeniami funkcji",
+     "wysoki przyczep wędzidełka wargi"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-FRENULOTOMIA"
+    },
+    {
+     "krok": "KROK-HEMOSTAZA"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1612",
    "kod": "23.1612",
    "nazwa_oficjalna": "Plastyka wędzidełka ,wargi ,policzka",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Plastyka wędzidełka",
+   "opis": "Plastyka wędzidełka.",
+   "cel": {
+    "na_czym_polega": "Plastyka wędzidełka wargi lub policzka: przemieszczenie przyczepu.",
+    "cel_kliniczny": "Plastyka wędzidełka wargi lub policzka",
+    "wskazania": [
+     "wysoki przyczep wędzidełka pociągający dziąsło brzeżne",
+     "diastema z przerostem wędzidełka (z ortodontą)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-FRENULOTOMIA"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1613",
    "kod": "23.1613",
    "nazwa_oficjalna": "Plastyka przedsionka jamy ustnej met. Clarka, Kazanjana",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Plastyka przedsionka metodą Clarka / Kazanjiana",
+   "opis": "Plastyka przedsionka metodą Clarka / Kazanjiana.",
+   "cel": {
+    "na_czym_polega": "Pogłębienie przedsionka jamy ustnej: poprawa warunków dla protezy / higieny.",
+    "cel_kliniczny": "Pogłębienie przedsionka jamy ustnej",
+    "wskazania": [
+     "płytki przedsionek utrudniający higienę lub utrzymanie protezy"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-PLASTYKA-PRZEDSIONKA"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "produkty": [
+     "pakiet ST18"
+    ],
+    "zrodla": [
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1614",
    "kod": "23.1614",
    "nazwa_oficjalna": "Plastyka przedsionka jamy ustnej met. Nabersa",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Plastyka przedsionka metodą Nabersa",
+   "opis": "Plastyka przedsionka metodą Nabersa.",
+   "cel": {
+    "na_czym_polega": "Pogłębienie przedsionka jamy ustnej: poprawa warunków dla protezy / higieny.",
+    "cel_kliniczny": "Pogłębienie przedsionka jamy ustnej",
+    "wskazania": [
+     "płytki przedsionek utrudniający higienę lub utrzymanie protezy"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-PLASTYKA-PRZEDSIONKA"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "produkty": [
+     "pakiet ST18"
+    ],
+    "zrodla": [
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1615",
    "kod": "23.1615",
    "nazwa_oficjalna": "Unieruchomienie zębów ligaturą drucianą",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Unieruchomienie zębów ligaturą drucianą",
+   "opis": "Unieruchomienie zębów ligaturą drucianą.",
+   "cel": {
+    "na_czym_polega": "Szynowanie zębów: stabilizacja ruchomych zębów.",
+    "cel_kliniczny": "Szynowanie zębów",
+    "wskazania": [
+     "ruchomość zębów po urazie / w chorobie przyzębia"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-SZYNOWANIE"
+    },
+    {
+     "krok": "KROK-KOREKTA-ZGRYZU"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SZYNA-MAT",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-KALKA",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "warunki": [
+     "zał. 1 (wszyscy)",
+     "zał. 2 (<18)",
+     "zał. 2b (<18 (szkoła))"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615"
+    ]
+   },
+   "zrodla": [
+    "SRC-KLIN-IADT-ZLAM-2020",
+    "SRC-KLIN-EFP-S3-2020"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1616",
    "kod": "23.1616",
    "nazwa_oficjalna": "Unieruchomienie zębów materiałem złożonym (kompozytowym)",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Unieruchomienie zębów kompozytem",
+   "opis": "Unieruchomienie zębów kompozytem.",
+   "cel": {
+    "na_czym_polega": "Szynowanie zębów: stabilizacja ruchomych zębów.",
+    "cel_kliniczny": "Szynowanie zębów",
+    "wskazania": [
+     "ruchomość zębów po urazie / w chorobie przyzębia"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-SZYNOWANIE"
+    },
+    {
+     "krok": "KROK-KOREKTA-ZGRYZU"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SZYNA-MAT",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-KOMPOZYT",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SYSTEM-WIAZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-KALKA",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-IADT-ZLAM-2020",
+    "SRC-KLIN-EFP-S3-2020"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1617",
    "kod": "23.1617",
    "nazwa_oficjalna": "Unieruchomienie zębów szyną z materiału złożonego z dodatkowymi wzmocnieniami",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Szyna kompozytowa ze wzmocnieniem",
+   "opis": "Szyna kompozytowa ze wzmocnieniem.",
+   "cel": {
+    "na_czym_polega": "Szynowanie zębów: stabilizacja ruchomych zębów.",
+    "cel_kliniczny": "Szynowanie zębów",
+    "wskazania": [
+     "ruchomość grupy zębów – szyna długotrwała"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-SZYNOWANIE"
+    },
+    {
+     "krok": "KROK-KOREKTA-ZGRYZU"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SZYNA-MAT",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-KOMPOZYT",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SYSTEM-WIAZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-KALKA",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-IADT-ZLAM-2020",
+    "SRC-KLIN-EFP-S3-2020"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1618",
    "kod": "23.1618",
    "nazwa_oficjalna": "Zabieg wszczepiania hydroksyapatytu, bioglassu lub tp.",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Wszczepienie materiału kościozastępczego",
+   "opis": "Wszczepienie materiału kościozastępczego.",
+   "cel": {
+    "na_czym_polega": "Wypełnienie ubytku kostnego materiałem (hydroksyapatyt, biozgodne szkło itp.): regeneracja tkanek przyzębia.",
+    "cel_kliniczny": "Wypełnienie ubytku kostnego materiałem (hydroksyapatyt, biozgodne szkło itp.)",
+    "wskazania": [
+     "śródkostne ubytki przyzębia (etap 3 EFP)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-PLAT-PERIO"
+    },
+    {
+     "krok": "KROK-PRZESZCZEP-KOSCI"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KOSCIOZASTEPCZY",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-EFP-S3-2020"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1619",
    "kod": "23.1619",
    "nazwa_oficjalna": "Zabieg pokrycia obnażonych korzeni zębów metodą bocznie przesuniętego płata",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Pokrycie recesji płatem przesuniętym bocznie",
+   "opis": "Pokrycie recesji płatem przesuniętym bocznie.",
+   "cel": {
+    "na_czym_polega": "Pokrycie odsłoniętych korzeni płatem przesuniętym bocznie: pokrycie recesji.",
+    "cel_kliniczny": "Pokrycie odsłoniętych korzeni płatem przesuniętym bocznie",
+    "wskazania": [
+     "recesja dziąsła z nadwrażliwością / wskazaniem estetycznym"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-POKRYCIE-RECESJI"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1620",
    "kod": "23.1620",
    "nazwa_oficjalna": "Założenie opatrunku parodontologicznego",
    "kategoria": "periodontologia i błona śluzowa",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Opatrunek periodontologiczny",
+   "opis": "Opatrunek periodontologiczny.",
+   "cel": {
+    "na_czym_polega": "Założenie opatrunku periodontologicznego: ochrona rany dziąsła.",
+    "cel_kliniczny": "Założenie opatrunku periodontologicznego",
+    "wskazania": [
+     "po zabiegach chirurgii przyzębia"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-OPATRUNEK-PERIO"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-OPATR-PERIO",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "produkty": [
+     "pakiet ST32"
+    ],
+    "zrodla": [
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.17",
@@ -14003,7 +16469,7 @@
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "uzasadnienie_statusu": "Kod nadrzędny używany w składzie pakietów NFZ – karty w podkodach: 23.1701–23.1708."
   },
   {
    "id": "PROC-23.1701",
@@ -14848,33 +17314,561 @@
    "kod": "23.1705",
    "nazwa_oficjalna": "Operacyjne usunięcie zęba zatrzymanego",
    "kategoria": "chirurgia – ekstrakcje",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Operacyjne usunięcie zęba zatrzymanego",
+   "opis": "Operacyjne usunięcie zęba zatrzymanego.",
+   "cel": {
+    "na_czym_polega": "Operacyjne usunięcie zęba zatrzymanego: usunięcie zęba niewyrzniętego.",
+    "cel_kliniczny": "Operacyjne usunięcie zęba zatrzymanego",
+    "wskazania": [
+     "ząb zatrzymany z powikłaniami (zapalenie okołokoronowe, resorpcja zębów sąsiednich, torbiel)",
+     "wskazania ortodontyczne / protetyczne"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ],
+    "dodatkowa_diagnostyka": [
+     "CBCT przy bliskości kanału żuchwy (poza gabinetem)"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-PLAT"
+    },
+    {
+     "krok": "KROK-OSTEOTOMIA"
+    },
+    {
+     "krok": "KROK-DLUTOWANIE-WEWN"
+    },
+    {
+     "krok": "KROK-ZEBODOL"
+    },
+    {
+     "krok": "KROK-HEMOSTAZA"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-WIERTLA-CHIR",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-DZWIGNIE",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "produkty": [
+     "pakiet ST14"
+    ],
+    "zrodla": [
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1706",
    "kod": "23.1706",
    "nazwa_oficjalna": "Operacyjne odsłonięcie zatrzymanego zęba z założeniem pętli drucianej dla celów ortodontycznych",
    "kategoria": "chirurgia – ekstrakcje",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Odsłonięcie zęba zatrzymanego (cele ortodontyczne)",
+   "opis": "Odsłonięcie zęba zatrzymanego (cele ortodontyczne).",
+   "cel": {
+    "na_czym_polega": "Operacyjne odsłonięcie zatrzymanego zęba z założeniem zaczepu: umożliwienie ortodontycznego sprowadzenia zęba.",
+    "cel_kliniczny": "Operacyjne odsłonięcie zatrzymanego zęba z założeniem zaczepu",
+    "wskazania": [
+     "ząb zatrzymany do sprowadzenia do łuku – na zlecenie ortodonty"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-PLAT"
+    },
+    {
+     "krok": "KROK-ODSLONIECIE"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-ZACZEP-ORTO",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WIERTLA-CHIR",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1707",
    "kod": "23.1707",
    "nazwa_oficjalna": "Operacyjne usunięcie zawiązków zębów ze wskazań ortodontycznych",
    "kategoria": "chirurgia – ekstrakcje",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Usunięcie zawiązków zębów (wskazania ortodontyczne)",
+   "opis": "Usunięcie zawiązków zębów (wskazania ortodontyczne).",
+   "cel": {
+    "na_czym_polega": "Operacyjne usunięcie zawiązków zębów ze wskazań ortodontycznych.",
+    "cel_kliniczny": "Operacyjne usunięcie zawiązków zębów ze wskazań ortodontycznych.",
+    "wskazania": [
+     "zlecenie ortodonty (np. zawiązki ósemek)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-PLAT"
+    },
+    {
+     "krok": "KROK-OSTEOTOMIA"
+    },
+    {
+     "krok": "KROK-ZEBODOL"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-WIERTLA-CHIR",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "produkty": [
+     "pakiet ST14"
+    ],
+    "zrodla": [
+     "SRC-ZARZ-60-2023-TJ"
+    ],
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1708",
@@ -14892,88 +17886,1419 @@
    "kod": "23.1801",
    "nazwa_oficjalna": "Zamknięcie zatoki otwartej w przebiegu chirurgicznego usuwania zęba",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Zamknięcie połączenia z zatoką",
+   "opis": "Zamknięcie połączenia z zatoką.",
+   "cel": {
+    "na_czym_polega": "Zamknięcie zatoki otwartej w przebiegu usuwania zęba: zapobieganie przetoce ustno-zatokowej.",
+    "cel_kliniczny": "Zamknięcie zatoki otwartej w przebiegu usuwania zęba",
+    "wskazania": [
+     "połączenie ustno-zatokowe po ekstrakcji"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-ZAMKNIECIE-ZATOKI"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1802",
    "kod": "23.1802",
    "nazwa_oficjalna": "Resekcja wierzchołka korzenia zęba przedniego",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Resekcja wierzchołka – ząb przedni",
+   "opis": "Resekcja wierzchołka – ząb przedni.",
+   "cel": {
+    "na_czym_polega": "Resekcja wierzchołka korzenia z wstecznym wypełnieniem: leczenie zmiany okołowierzchołkowej niepoddającej się leczeniu kanałowemu.",
+    "cel_kliniczny": "Resekcja wierzchołka korzenia z wstecznym wypełnieniem",
+    "wskazania": [
+     "przetrwała zmiana okołowierzchołkowa po prawidłowym leczeniu kanałowym, gdy rewizja jest niemożliwa / niewskazana"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-PLAT"
+    },
+    {
+     "krok": "KROK-RESEKCJA"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-WIERTLA-CHIR",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WYPELN-WSTECZNE",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-POJEMNIK-HP",
+     "rola": "sytuacyjne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-ENDOCHIR-2006",
+    "SRC-KLIN-ESE-S3-2023"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1803",
    "kod": "23.1803",
    "nazwa_oficjalna": "Resekcja wierzchołka korzenia zęba bocznego",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Resekcja wierzchołka – ząb boczny",
+   "opis": "Resekcja wierzchołka – ząb boczny.",
+   "cel": {
+    "na_czym_polega": "Resekcja wierzchołka korzenia z wstecznym wypełnieniem: leczenie zmiany okołowierzchołkowej niepoddającej się leczeniu kanałowemu.",
+    "cel_kliniczny": "Resekcja wierzchołka korzenia z wstecznym wypełnieniem",
+    "wskazania": [
+     "przetrwała zmiana okołowierzchołkowa po prawidłowym leczeniu kanałowym, gdy rewizja jest niemożliwa / niewskazana"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-PLAT"
+    },
+    {
+     "krok": "KROK-RESEKCJA"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-WIERTLA-CHIR",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WYPELN-WSTECZNE",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-POJEMNIK-HP",
+     "rola": "sytuacyjne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-ENDOCHIR-2006",
+    "SRC-KLIN-ESE-S3-2023"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1804",
    "kod": "23.1804",
    "nazwa_oficjalna": "Resekcja wierzchołka korzenia zęba każdego następnego zęba podczas tego samego zabiegu i dotyczy zębów",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Resekcja wierzchołka – każdy następny ząb",
+   "opis": "Resekcja wierzchołka – każdy następny ząb.",
+   "cel": {
+    "na_czym_polega": "Resekcja wierzchołka korzenia z wstecznym wypełnieniem: leczenie zmiany okołowierzchołkowej niepoddającej się leczeniu kanałowemu.",
+    "cel_kliniczny": "Resekcja wierzchołka korzenia z wstecznym wypełnieniem",
+    "wskazania": [
+     "przetrwała zmiana okołowierzchołkowa po prawidłowym leczeniu kanałowym, gdy rewizja jest niemożliwa / niewskazana"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-PLAT"
+    },
+    {
+     "krok": "KROK-RESEKCJA"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-WIERTLA-CHIR",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-WYPELN-WSTECZNE",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-POJEMNIK-HP",
+     "rola": "sytuacyjne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-ENDOCHIR-2006",
+    "SRC-KLIN-ESE-S3-2023"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1805",
    "kod": "23.1805",
    "nazwa_oficjalna": "Hemisekcja zęba",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Hemisekcja zęba",
+   "opis": "Hemisekcja zęba.",
+   "cel": {
+    "na_czym_polega": "Hemisekcja: zachowanie części zęba wielokorzeniowego.",
+    "cel_kliniczny": "Hemisekcja",
+    "wskazania": [
+     "zmiana w obrębie jednego korzenia (furkacja, złamanie, zmiana okołowierzchołkowa) przy rokowaniu dla pozostałej części"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-PLAT"
+    },
+    {
+     "krok": "KROK-HEMISEKCJA"
+    },
+    {
+     "krok": "KROK-ZEBODOL"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-WIERTLA-CHIR",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1806",
    "kod": "23.1806",
    "nazwa_oficjalna": "Reimplantacja zęba",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Reimplantacja zęba",
+   "opis": "Reimplantacja zęba.",
+   "cel": {
+    "na_czym_polega": "Reimplantacja zęba wybitego: zachowanie zęba po awulsji.",
+    "cel_kliniczny": "Reimplantacja zęba wybitego",
+    "wskazania": [
+     "zwichnięcie całkowite (awulsja) zęba stałego"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "zęby mleczne – nie reimplantować (IADT)",
+      "rodzaj": "bezwzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-REIMPLANTACJA"
+    },
+    {
+     "krok": "KROK-SZYNOWANIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SZYNA-MAT",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-KOMPOZYT",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-IADT-AWUL-2020"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1807",
    "kod": "23.1807",
    "nazwa_oficjalna": "Wyłuszczenie torbieli zębopochodnej",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Wyłuszczenie torbieli zębopochodnej",
+   "opis": "Wyłuszczenie torbieli zębopochodnej.",
+   "cel": {
+    "na_czym_polega": "Wyłuszczenie torbieli: usunięcie zmiany i diagnostyka histopatologiczna.",
+    "cel_kliniczny": "Wyłuszczenie torbieli",
+    "wskazania": [
+     "torbiel zębopochodna (RTG)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-PLAT"
+    },
+    {
+     "krok": "KROK-OSTEOTOMIA"
+    },
+    {
+     "krok": "KROK-WYLUSZCZENIE"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-WIERTLA-CHIR",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-POJEMNIK-HP",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1808",
    "kod": "23.1808",
    "nazwa_oficjalna": "Wyłuszczenie kamienia z przewodu ślinianki",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Usunięcie kamienia z przewodu ślinianki",
+   "opis": "Usunięcie kamienia z przewodu ślinianki.",
+   "cel": {
+    "na_czym_polega": "Wyłuszczenie kamienia z przewodu ślinianki: przywrócenie odpływu śliny.",
+    "cel_kliniczny": "Wyłuszczenie kamienia z przewodu ślinianki",
+    "wskazania": [
+     "kamica przewodu ślinianki (kamień wyczuwalny / w RTG)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-WYCIECIE-ZMIANY"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1809",
@@ -15139,33 +19464,521 @@
    "kod": "23.1810",
    "nazwa_oficjalna": "Chirurgiczne zaopatrzenie małej rany obejmującej do 2-3 zębodołów włącznie z opracowaniem i szwami",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Zaopatrzenie małej rany (2–3 zębodoły) z opracowaniem",
+   "opis": "Zaopatrzenie małej rany (2–3 zębodoły) z opracowaniem.",
+   "cel": {
+    "na_czym_polega": "Chirurgiczne zaopatrzenie rany do 3 zębodołów z opracowaniem: hemostaza i gojenie.",
+    "cel_kliniczny": "Chirurgiczne zaopatrzenie rany do 3 zębodołów z opracowaniem",
+    "wskazania": [
+     "rana urazowa / pozabiegowa do 3 zębodołów z opracowaniem"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ],
+    "dodatkowa_diagnostyka": [
+     "szczepienie p/tężcowi przy ranie zanieczyszczonej"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-ZEBODOL"
+    },
+    {
+     "krok": "KROK-HEMOSTAZA"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1811",
    "kod": "23.1811",
    "nazwa_oficjalna": "Chirurgiczne zaopatrzenie dużej rany w obrębie połowy szczęki włącznie ze szwami",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Zaopatrzenie dużej rany (połowa szczęki)",
+   "opis": "Zaopatrzenie dużej rany (połowa szczęki).",
+   "cel": {
+    "na_czym_polega": "Chirurgiczne zaopatrzenie rany w obrębie połowy szczęki: hemostaza i gojenie.",
+    "cel_kliniczny": "Chirurgiczne zaopatrzenie rany w obrębie połowy szczęki",
+    "wskazania": [
+     "rana urazowa / pozabiegowa w obrębie połowy szczęki"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ],
+    "dodatkowa_diagnostyka": [
+     "szczepienie p/tężcowi przy ranie zanieczyszczonej"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-ZEBODOL"
+    },
+    {
+     "krok": "KROK-HEMOSTAZA"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1812",
    "kod": "23.1812",
    "nazwa_oficjalna": "Chirurgiczne zaopatrzenie dużej, albo znacznie zanieczyszczonej rany w obrębie połowy szczęki włącznie z opracowaniem i szwami",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Zaopatrzenie dużej, zanieczyszczonej rany",
+   "opis": "Zaopatrzenie dużej, zanieczyszczonej rany.",
+   "cel": {
+    "na_czym_polega": "Chirurgiczne zaopatrzenie rany duża / zanieczyszczona w obrębie połowy szczęki: hemostaza i gojenie.",
+    "cel_kliniczny": "Chirurgiczne zaopatrzenie rany duża / zanieczyszczona w obrębie połowy szczęki",
+    "wskazania": [
+     "rana urazowa / pozabiegowa duża / zanieczyszczona w obrębie połowy szczęki"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ],
+    "dodatkowa_diagnostyka": [
+     "szczepienie p/tężcowi przy ranie zanieczyszczonej"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-ZEBODOL"
+    },
+    {
+     "krok": "KROK-HEMOSTAZA"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1813",
@@ -15320,11 +20133,172 @@
    "kod": "23.1814",
    "nazwa_oficjalna": "Zatamowanie masywnego krwawienia w obrębie jamy ustnej przez podwiązanie, pokłucie naczyń bądź zatkanie kością",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Zatamowanie masywnego krwawienia",
+   "opis": "Zatamowanie masywnego krwawienia.",
+   "cel": {
+    "na_czym_polega": "Zatamowanie masywnego krwawienia przez podwiązanie / przeszycie naczyń: opanowanie krwotoku.",
+    "cel_kliniczny": "Zatamowanie masywnego krwawienia przez podwiązanie / przeszycie naczyń",
+    "wskazania": [
+     "masywne krwawienie w jamie ustnej niepoddające się uciskowi"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "wezwanie pomocy / transport do szpitala przy niestabilności krążeniowej"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-PODWIAZANIE"
+    },
+    {
+     "krok": "KROK-HEMOSTAZA"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-HEMOSTATYK",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1815",
@@ -15483,99 +20457,1552 @@
    "kod": "23.1816",
    "nazwa_oficjalna": "Ograniczone, miejscowe wycięcie wargi, języka",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Ograniczone wycięcie zmiany wargi / języka",
+   "opis": "Ograniczone wycięcie zmiany wargi / języka.",
+   "cel": {
+    "na_czym_polega": "Ograniczone, miejscowe wycięcie zmiany wargi lub języka: usunięcie zmiany i badanie histopatologiczne.",
+    "cel_kliniczny": "Ograniczone, miejscowe wycięcie zmiany wargi lub języka",
+    "wskazania": [
+     "niewielka zmiana łagodna (np. włókniak, torbiel śluzowa)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-WYCIECIE-ZMIANY"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-POJEMNIK-HP",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-OPMD-2021"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1817",
    "kod": "23.1817",
    "nazwa_oficjalna": "Krioterapia niewielkich zmian w obrębie tkanek miękkich jamy ustnej",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Krioterapia zmian tkanek miękkich",
+   "opis": "Krioterapia zmian tkanek miękkich.",
+   "cel": {
+    "na_czym_polega": "Krioterapia niewielkich zmian tkanek miękkich jamy ustnej.",
+    "cel_kliniczny": "Krioterapia niewielkich zmian tkanek miękkich jamy ustnej.",
+    "wskazania": [
+     "niewielkie zmiany łagodne (po rozpoznaniu)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-KRIOTERAPIA"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KRIO",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1819",
    "kod": "23.1819",
    "nazwa_oficjalna": "Ograniczone wycięcie, zniszczenie zmiany podniebienia twardego",
    "kategoria": "chirurgia stomatologiczna",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Wycięcie zmiany podniebienia twardego",
+   "opis": "Wycięcie zmiany podniebienia twardego.",
+   "cel": {
+    "na_czym_polega": "Ograniczone wycięcie / zniszczenie zmiany podniebienia twardego.",
+    "cel_kliniczny": "Ograniczone wycięcie / zniszczenie zmiany podniebienia twardego.",
+    "wskazania": [
+     "niewielka zmiana podniebienia (po ocenie)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-WYCIECIE-ZMIANY"
+    },
+    {
+     "krok": "KROK-HEMOSTAZA"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-POJEMNIK-HP",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1901",
    "kod": "23.1901",
    "nazwa_oficjalna": "Wycięcie małego guzka lub zmiany guzopodobnej, włókniaka",
    "kategoria": "chirurgia – wycięcia i plastyki",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Wycięcie małego guzka / włókniaka",
+   "opis": "Wycięcie małego guzka / włókniaka.",
+   "cel": {
+    "na_czym_polega": "Wycięcie zmiany guzopodobnej: usunięcie i diagnostyka.",
+    "cel_kliniczny": "Wycięcie zmiany guzopodobnej",
+    "wskazania": [
+     "włókniak, brodawczak, zmiana guzopodobna"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-WYCIECIE-ZMIANY"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-POJEMNIK-HP",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1902",
    "kod": "23.1902",
    "nazwa_oficjalna": "Wycięcie przerostu błony śluzowej (guzy łagodne, zmiany guzopodobnej, nadziąślaki) w obrębie połowy szczęki",
    "kategoria": "chirurgia – wycięcia i plastyki",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Wycięcie przerostu błony śluzowej",
+   "opis": "Wycięcie przerostu błony śluzowej.",
+   "cel": {
+    "na_czym_polega": "Wycięcie przerostu błony śluzowej (np. nadziąślak, przerost protetyczny): usunięcie zmiany.",
+    "cel_kliniczny": "Wycięcie przerostu błony śluzowej (np. nadziąślak, przerost protetyczny)",
+    "wskazania": [
+     "nadziąślak, przerost włóknisty pod protezą"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-WYCIECIE-ZMIANY"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-POJEMNIK-HP",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1903",
    "kod": "23.1903",
    "nazwa_oficjalna": "Plastyka wyrostka zębodołowego w obrębie połowy szczęki",
    "kategoria": "chirurgia – wycięcia i plastyki",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Plastyka wyrostka (połowa szczęki)",
+   "opis": "Plastyka wyrostka (połowa szczęki).",
+   "cel": {
+    "na_czym_polega": "Plastyka wyrostka zębodołowego: przygotowanie podłoża protetycznego.",
+    "cel_kliniczny": "Plastyka wyrostka zębodołowego",
+    "wskazania": [
+     "ostre krawędzie / nierówności wyrostka utrudniające protezowanie"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-PLASTYKA-WYROSTKA"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-WIERTLA-CHIR",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1904",
    "kod": "23.1904",
    "nazwa_oficjalna": "Plastyka wyrostka zębodołowego szczęki lub części zębodołowej żuchwy z użyciem przeszczepu lub wszczepu",
    "kategoria": "chirurgia – wycięcia i plastyki",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Plastyka wyrostka z przeszczepem",
+   "opis": "Plastyka wyrostka z przeszczepem.",
+   "cel": {
+    "na_czym_polega": "Plastyka wyrostka z przeszczepem: odbudowa wyrostka.",
+    "cel_kliniczny": "Plastyka wyrostka z przeszczepem",
+    "wskazania": [
+     "zanik wyrostka – augmentacja"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-PLASTYKA-WYROSTKA"
+    },
+    {
+     "krok": "KROK-PRZESZCZEP-KOSCI"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-WIERTLA-CHIR",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-KOSCIOZASTEPCZY",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1905",
    "kod": "23.1905",
    "nazwa_oficjalna": "Plastyka guza szczęki",
    "kategoria": "chirurgia – wycięcia i plastyki",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Plastyka guza szczęki",
+   "opis": "Plastyka guza szczęki.",
+   "cel": {
+    "na_czym_polega": "Plastyka guza szczęki: przygotowanie podłoża protetycznego.",
+    "cel_kliniczny": "Plastyka guza szczęki",
+    "wskazania": [
+     "przerost guza szczęki utrudniający protezowanie"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-PLASTYKA-WYROSTKA"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-WIERTLA-CHIR",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.1906",
    "kod": "23.1906",
    "nazwa_oficjalna": "Plastyka połączenia lub przetoki ustno-zatokowej - jako samodzielne postępowanie lub jako następstwo ekstrakcji",
    "kategoria": "chirurgia – wycięcia i plastyki",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Plastyka połączenia / przetoki ustno-zatokowej",
+   "opis": "Plastyka połączenia / przetoki ustno-zatokowej.",
+   "cel": {
+    "na_czym_polega": "Zamknięcie przetoki ustno-zatokowej: przywrócenie szczelności.",
+    "cel_kliniczny": "Zamknięcie przetoki ustno-zatokowej",
+    "wskazania": [
+     "przetrwałe połączenie / przetoka ustno-zatokowa"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-ZAMKNIECIE-ZATOKI"
+    },
+    {
+     "krok": "KROK-SZYCIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-WIERTLA-CHIR",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.2001",
@@ -15724,11 +22151,165 @@
    "kod": "23.2002",
    "nazwa_oficjalna": "Nacięcie z dojścia wewnątrz lub zewnątrzustnego głęboko leżącego ropnia włącznie z drenażem i opatrunkiem",
    "kategoria": "chirurgia – zakażenia",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Nacięcie głębokiego ropnia",
+   "opis": "Nacięcie głębokiego ropnia.",
+   "cel": {
+    "na_czym_polega": "Nacięcie głęboko leżącego ropnia z dojścia wewnątrz- lub zewnątrzustnego z drenażem.",
+    "cel_kliniczny": "Nacięcie głęboko leżącego ropnia z dojścia wewnątrz- lub zewnątrzustnego z drenażem.",
+    "wskazania": [
+     "ropień głęboki (przestrzenie okołożuchwowe) – często wymaga leczenia szpitalnego"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "duszność, utrudnione połykanie, szerzenie się zakażenia – pilne leczenie szpitalne",
+      "rodzaj": "bezwzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-NACIECIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SACZEK-DREN",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.2003",
@@ -15746,22 +22327,358 @@
    "kod": "23.2101",
    "nazwa_oficjalna": "Repozycja i unieruchomienie zwichniętego zęba lub grupy zębów",
    "kategoria": "urazy zębów",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Repozycja i unieruchomienie zwichniętego zęba",
+   "opis": "Repozycja i unieruchomienie zwichniętego zęba.",
+   "cel": {
+    "na_czym_polega": "Repozycja i unieruchomienie zwichniętego zęba lub grupy zębów: przywrócenie położenia.",
+    "cel_kliniczny": "Repozycja i unieruchomienie zwichniętego zęba lub grupy zębów",
+    "wskazania": [
+     "zwichnięcie boczne, wysunięcie (IADT)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-REPOZYCJA-ZEBA"
+    },
+    {
+     "krok": "KROK-SZYNOWANIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SZYNA-MAT",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-KOMPOZYT",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "warunki": [
+     "zał. 1 (wszyscy)",
+     "zał. 2 (<18)",
+     "zał. 2b (<18 (szkoła))"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615"
+    ]
+   },
+   "zrodla": [
+    "SRC-KLIN-IADT-ZLAM-2020"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.2102",
    "kod": "23.2102",
    "nazwa_oficjalna": "Repozycja i unieruchomienie złamanego fragmentu wyrostka zębodołowego z zębem lub zębami",
    "kategoria": "urazy zębów",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Repozycja fragmentu wyrostka z zębami",
+   "opis": "Repozycja fragmentu wyrostka z zębami.",
+   "cel": {
+    "na_czym_polega": "Repozycja i unieruchomienie złamanego fragmentu wyrostka zębodołowego z zębami.",
+    "cel_kliniczny": "Repozycja i unieruchomienie złamanego fragmentu wyrostka zębodołowego z zębami.",
+    "wskazania": [
+     "złamanie wyrostka zębodołowego z przemieszczeniem fragmentu (IADT)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "RTG okolicy",
+     "stan ogólny"
+    ],
+    "wywiad": [
+     "leki przeciwkrzepliwe i antyresorpcyjne",
+     "radioterapia głowy i szyi",
+     "cukrzyca, palenie",
+     "alergie"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "niewyrównane choroby ogólne – odroczenie / konsultacja",
+      "rodzaj": "wzgledne"
+     },
+     {
+      "tekst": "leczenie antyresorpcyjne / radioterapia – ocena ryzyka martwicy kości",
+      "rodzaj": "wzgledne"
+     }
+    ],
+    "inne_postepowanie": [
+     "skierowanie do chirurga stomatologa / periodontologa"
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "RTG / ocena kliniczna",
+     "zgoda pacjenta",
+     "znieczulenie",
+     "zestaw chirurgiczny"
+    ],
+    "sytuacyjne": [
+     "płukanka antyseptyczna przed zabiegiem"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZULENIE"
+    },
+    {
+     "krok": "KROK-REPOZYCJA-ZEBA"
+    },
+    {
+     "krok": "KROK-SZYNOWANIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA-CHIR"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SKALPEL-RASP",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-NICI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IGLOTRZYMACZ",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-GAZIKI",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-SOL",
+     "rola": "typowe"
+    },
+    {
+     "mat": "MAT-SZYNA-MAT",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-KOMPOZYT",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "hemostaza",
+     "ułożenie tkanek / szwów"
+    ],
+    "nieprawidlowosci": [
+     "krwawienie",
+     "rozejście rany",
+     "zakażenie"
+    ],
+    "dalsze_postepowanie": [
+     "kontrola gojenia; przy powikłaniach – leczenie / skierowanie"
+    ]
+   },
+   "zalecenia": {
+    "dla_pacjenta": [
+     "Zimne okłady w pierwszej dobie, leki przeciwbólowe wg zaleceń."
+    ],
+    "ograniczenia": [
+     "Nie palić, nie płukać intensywnie w pierwszej dobie; dieta miękka."
+    ],
+    "higiena": [
+     "Delikatna higiena okolicy, płukanka wg zaleceń."
+    ],
+    "kontakt_gdy": [
+     "krwawienie, narastający obrzęk, gorączka"
+    ],
+    "kontrola": "Zdjęcie szwów / kontrola po 7–10 dniach."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Rozpoznanie / wskazanie, lokalizacja (zęby, okolica)",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Przebieg zabiegu",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Zgoda pacjenta",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-PRAWA-PACJENTA"
+      ]
+     },
+     {
+      "tekst": "Znieczulenie, szwy, powikłania, zalecenia",
+      "podstawa": "zalecenie_kliniczne",
+      "zrodla": [
+       "SRC-PRAKTYKA"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-IADT-ZLAM-2020"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zabieg specjalistyczny – treść karty do weryfikacji przez chirurga stomatologa / periodontologa."
   },
   {
    "id": "PROC-23.2103",
@@ -16608,7 +23525,7 @@
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii (protetyka) – samodzielne świadczenie NFZ; podkod = wariant overdenture."
   },
   {
    "id": "PROC-23.31041",
@@ -16630,7 +23547,7 @@
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "uzasadnienie_statusu": "Do opracowania w kolejnej partii (protetyka) – samodzielne świadczenie NFZ; podkod = wariant overdenture."
   },
   {
    "id": "PROC-23.31051",
