@@ -301,11 +301,74 @@
    "kod": "23.0104",
    "nazwa_oficjalna": "Wydanie orzeczenia lekarskiego",
    "kategoria": "badanie i porada",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Wydanie orzeczenia lekarskiego",
+   "opis": "Wydanie orzeczenia lekarskiego.",
+   "cel": {
+    "na_czym_polega": "Wydanie orzeczenia lekarskiego na podstawie badania.",
+    "cel_kliniczny": "Wydanie orzeczenia lekarskiego na podstawie badania.",
+    "wskazania": [
+     "prośba pacjenta / instytucji"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-ORZECZENIE"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-DU-2026-1391"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0105",
@@ -410,11 +473,74 @@
    "kod": "23.0106",
    "nazwa_oficjalna": "Wydanie krótkiego zaświadczenia lub świadectwa",
    "kategoria": "badanie i porada",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Wydanie zaświadczenia / świadectwa",
+   "opis": "Wydanie zaświadczenia / świadectwa.",
+   "cel": {
+    "na_czym_polega": "Wydanie zaświadczenia / świadectwa na podstawie badania.",
+    "cel_kliniczny": "Wydanie zaświadczenia / świadectwa na podstawie badania.",
+    "wskazania": [
+     "prośba pacjenta / instytucji"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-ORZECZENIE"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-DU-2026-1391"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0107",
@@ -840,11 +966,84 @@
    "kod": "23.0303",
    "nazwa_oficjalna": "Rentgenodiagnostyka do 8 zdjęć wewnątrzustnych",
    "kategoria": "radiologia",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "RTG – do 8 zdjęć wewnątrzustnych",
+   "opis": "RTG – do 8 zdjęć wewnątrzustnych.",
+   "cel": {
+    "na_czym_polega": "Rentgenodiagnostyka – do 8 zdjęć wewnątrzustnych z opisem.",
+    "cel_kliniczny": "Rentgenodiagnostyka – do 8 zdjęć wewnątrzustnych z opisem.",
+    "wskazania": [
+     "diagnostyka wielu okolic (np. przed leczeniem kompleksowym)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "uzasadnienie każdego zdjęcia"
+    ],
+    "wywiad": [
+     "ciąża"
+    ],
+    "przeciwwskazania": [
+     {
+      "tekst": "ciąża – tylko pilne wskazania",
+      "rodzaj": "wzgledne"
+     }
+    ]
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-RTG-WYKONANIE"
+    },
+    {
+     "krok": "KROK-RTG-OPIS"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-RTG",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-RTG-UPS",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-DU-2025-615",
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.0304",
@@ -1374,44 +1573,325 @@
    "kod": "23.0404",
    "nazwa_oficjalna": "Znieczulenie przewodowe zewnątrzustne",
    "kategoria": "znieczulenie",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Znieczulenie przewodowe zewnątrzustne",
+   "opis": "Znieczulenie przewodowe zewnątrzustne.",
+   "cel": {
+    "na_czym_polega": "Znieczulenie przewodowe z dostępu zewnątrzustnego.",
+    "cel_kliniczny": "Znieczulenie przewodowe z dostępu zewnątrzustnego.",
+    "wskazania": [
+     "szczękościsk / brak dostępu wewnątrzustnego"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-ZNIECZ-ZEWNATRZUSTNE"
+    },
+    {
+     "krok": "KROK-OBSERWACJA-ZNIECZ"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZNIECZ",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Technika specjalistyczna – do weryfikacji eksperckiej."
   },
   {
    "id": "PROC-23.05",
    "kod": "23.05",
    "nazwa_oficjalna": "Postępowanie w nagłych przypadkach",
    "kategoria": "pomoc doraźna",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Postępowanie w nagłych przypadkach",
+   "opis": "Postępowanie w nagłych przypadkach.",
+   "cel": {
+    "na_czym_polega": "Doraźna pomoc stomatologiczna w nagłym przypadku (ból, obrzęk, krwawienie, uraz).",
+    "cel_kliniczny": "Doraźna pomoc stomatologiczna w nagłym przypadku (ból, obrzęk, krwawienie, uraz).",
+    "wskazania": [
+     "ostry ból zęba",
+     "obrzęk / ropień",
+     "krwawienie",
+     "uraz"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-POMOC-DORAZNA"
+    },
+    {
+     "krok": "KROK-PLAN"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.06",
    "kod": "23.06",
    "nazwa_oficjalna": "Wizyta adaptacyjna -dotyczy pierwszych wizyt małych dzieci",
    "kategoria": "dziecko",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Wizyta adaptacyjna",
+   "opis": "Wizyta adaptacyjna.",
+   "cel": {
+    "na_czym_polega": "Wizyta adaptacyjna – pierwsze wizyty małych dzieci (oswojenie z gabinetem).",
+    "cel_kliniczny": "Wizyta adaptacyjna – pierwsze wizyty małych dzieci (oswojenie z gabinetem).",
+    "wskazania": [
+     "pierwsza wizyta małego dziecka",
+     "lęk przed leczeniem"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-WIZYTA-ADAPTACYJNA"
+    },
+    {
+     "krok": "KROK-INSTRUKTAZ-OPIEKUNA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.2306000 – 85 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie jest udzielane bez połączenia z innymi świadczeniami gwarantowanymi. Świadczenie dotyczy pierwszej wizyty małych dzieci (do ukończenia 6. roku życia).",
+     "zał. 2 (<18): Świadczenie jest udzielane bez połączenia z innymi świadczeniami gwarantowanymi. Świadczenie dotyczy pierwszej wizyty małych dzieci (do ukończenia 6. roku życia).",
+     "zał. 2b (<18 (szkoła)): Świadczenie jest udzielane bez połączenia z innymi świadczeniami gwarantowanymi. Świadczenie dotyczy pierwszej wizyty dzieci do ukończenia 6. roku życia."
+    ],
+    "reguly": [
+     "R-ADAPT-01"
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-DU-2025-615"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.07",
    "kod": "23.07",
    "nazwa_oficjalna": "Pilne zabiegi poza godzinami pracy w dni świąteczne lub w domu pacjenta",
    "kategoria": "pomoc doraźna",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Pilne zabiegi poza godzinami pracy / w domu pacjenta",
+   "opis": "Pilne zabiegi poza godzinami pracy / w domu pacjenta.",
+   "cel": {
+    "na_czym_polega": "Pilne zabiegi poza godzinami pracy, w dni świąteczne lub w domu pacjenta.",
+    "cel_kliniczny": "Pilne zabiegi poza godzinami pracy, w dni świąteczne lub w domu pacjenta.",
+    "wskazania": [
+     "stany nagłe wymagające pomocy poza godzinami pracy gabinetu"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-KWALIFIKACJA"
+    },
+    {
+     "krok": "KROK-POMOC-DORAZNA"
+    },
+    {
+     "krok": "KROK-PLAN"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Zasady organizacyjne i rozliczeniowe (pomoc doraźna – zał. nieodczytany w audycie) do weryfikacji."
   },
   {
    "id": "PROC-23.08",
@@ -1508,99 +1988,656 @@
    "kod": "23.0901",
    "nazwa_oficjalna": "Balneoterapia lub hydroterapia",
    "kategoria": "fizykoterapia",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Balneoterapia lub hydroterapia",
+   "opis": "Balneoterapia lub hydroterapia.",
+   "cel": {
+    "na_czym_polega": "Balneoterapia lub hydroterapia – zabieg fizykoterapeutyczny wspomagający.",
+    "cel_kliniczny": "Balneoterapia lub hydroterapia – zabieg fizykoterapeutyczny wspomagający.",
+    "wskazania": [
+     "wg decyzji lekarza (np. dolegliwości bólowe, gojenie)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-FIZYKOTERAPIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Fizykoterapia w stomatologii – ograniczone współczesne dowody skuteczności; karta do weryfikacji eksperckiej."
   },
   {
    "id": "PROC-23.0902",
    "kod": "23.0902",
    "nazwa_oficjalna": "Naświetlanie Sollux",
    "kategoria": "fizykoterapia",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Naświetlanie Sollux",
+   "opis": "Naświetlanie Sollux.",
+   "cel": {
+    "na_czym_polega": "Naświetlanie Sollux – zabieg fizykoterapeutyczny wspomagający.",
+    "cel_kliniczny": "Naświetlanie Sollux – zabieg fizykoterapeutyczny wspomagający.",
+    "wskazania": [
+     "wg decyzji lekarza (np. dolegliwości bólowe, gojenie)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-FIZYKOTERAPIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Fizykoterapia w stomatologii – ograniczone współczesne dowody skuteczności; karta do weryfikacji eksperckiej."
   },
   {
    "id": "PROC-23.0903",
    "kod": "23.0903",
    "nazwa_oficjalna": "Jonoforeza nadziąsłowa",
    "kategoria": "fizykoterapia",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Jonoforeza nadziąsłowa",
+   "opis": "Jonoforeza nadziąsłowa.",
+   "cel": {
+    "na_czym_polega": "Jonoforeza nadziąsłowa – zabieg fizykoterapeutyczny wspomagający.",
+    "cel_kliniczny": "Jonoforeza nadziąsłowa – zabieg fizykoterapeutyczny wspomagający.",
+    "wskazania": [
+     "wg decyzji lekarza (np. dolegliwości bólowe, gojenie)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-FIZYKOTERAPIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Fizykoterapia w stomatologii – ograniczone współczesne dowody skuteczności; karta do weryfikacji eksperckiej."
   },
   {
    "id": "PROC-23.0904",
    "kod": "23.0904",
    "nazwa_oficjalna": "Jonoforeza lub elektrosterylizacja kanału korzeniowego",
    "kategoria": "fizykoterapia",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Jonoforeza / elektrosterylizacja kanału",
+   "opis": "Jonoforeza / elektrosterylizacja kanału.",
+   "cel": {
+    "na_czym_polega": "Jonoforeza / elektrosterylizacja kanału – zabieg fizykoterapeutyczny wspomagający.",
+    "cel_kliniczny": "Jonoforeza / elektrosterylizacja kanału – zabieg fizykoterapeutyczny wspomagający.",
+    "wskazania": [
+     "wg decyzji lekarza (np. dolegliwości bólowe, gojenie)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-FIZYKOTERAPIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Fizykoterapia w stomatologii – ograniczone współczesne dowody skuteczności; karta do weryfikacji eksperckiej."
   },
   {
    "id": "PROC-23.0905",
    "kod": "23.0905",
    "nazwa_oficjalna": "Diadynamik 1/2 łuku zębowego",
    "kategoria": "fizykoterapia",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Diadynamik ½ łuku",
+   "opis": "Diadynamik ½ łuku.",
+   "cel": {
+    "na_czym_polega": "Diadynamik ½ łuku – zabieg fizykoterapeutyczny wspomagający.",
+    "cel_kliniczny": "Diadynamik ½ łuku – zabieg fizykoterapeutyczny wspomagający.",
+    "wskazania": [
+     "wg decyzji lekarza (np. dolegliwości bólowe, gojenie)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-FIZYKOTERAPIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Fizykoterapia w stomatologii – ograniczone współczesne dowody skuteczności; karta do weryfikacji eksperckiej."
   },
   {
    "id": "PROC-23.0906",
    "kod": "23.0906",
    "nazwa_oficjalna": "Hydroterapia",
    "kategoria": "fizykoterapia",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Hydroterapia",
+   "opis": "Hydroterapia.",
+   "cel": {
+    "na_czym_polega": "Hydroterapia – zabieg fizykoterapeutyczny wspomagający.",
+    "cel_kliniczny": "Hydroterapia – zabieg fizykoterapeutyczny wspomagający.",
+    "wskazania": [
+     "wg decyzji lekarza (np. dolegliwości bólowe, gojenie)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-FIZYKOTERAPIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Fizykoterapia w stomatologii – ograniczone współczesne dowody skuteczności; karta do weryfikacji eksperckiej."
   },
   {
    "id": "PROC-23.0907",
    "kod": "23.0907",
    "nazwa_oficjalna": "Laseroterapia biostymulacyjna",
    "kategoria": "fizykoterapia",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Laseroterapia biostymulacyjna",
+   "opis": "Laseroterapia biostymulacyjna.",
+   "cel": {
+    "na_czym_polega": "Laseroterapia biostymulacyjna – zabieg fizykoterapeutyczny wspomagający.",
+    "cel_kliniczny": "Laseroterapia biostymulacyjna – zabieg fizykoterapeutyczny wspomagający.",
+    "wskazania": [
+     "wg decyzji lekarza (np. dolegliwości bólowe, gojenie)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-FIZYKOTERAPIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Fizykoterapia w stomatologii – ograniczone współczesne dowody skuteczności; karta do weryfikacji eksperckiej."
   },
   {
    "id": "PROC-23.1001",
    "kod": "23.1001",
    "nazwa_oficjalna": "Indywidualna fluoryzacja metodą kontaktową - za każdy zabieg",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Fluoryzacja kontaktowa indywidualna",
+   "opis": "Fluoryzacja kontaktowa indywidualna.",
+   "cel": {
+    "na_czym_polega": "Fluoryzacja kontaktowa indywidualna: profilaktyka / zatrzymanie próchnicy.",
+    "cel_kliniczny": "Fluoryzacja kontaktowa indywidualna: profilaktyka / zatrzymanie próchnicy.",
+    "wskazania": [
+     "podwyższone ryzyko próchnicy"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-OCZYSZCZENIE-ZEBOW"
+    },
+    {
+     "krok": "KROK-FLUORYZACJA"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-FLUOR",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-EAPD-F-2019",
+    "SRC-KLIN-ADA-F-2013",
+    "SRC-KLIN-ADA-LAK-2016"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1002",
    "kod": "23.1002",
    "nazwa_oficjalna": "Fluoryzacja kontaktowa zbiorowa, 1 zabieg u każdego dziecka",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Fluoryzacja kontaktowa zbiorowa",
+   "opis": "Fluoryzacja kontaktowa zbiorowa.",
+   "cel": {
+    "na_czym_polega": "Fluoryzacja kontaktowa zbiorowa: profilaktyka / zatrzymanie próchnicy.",
+    "cel_kliniczny": "Fluoryzacja kontaktowa zbiorowa: profilaktyka / zatrzymanie próchnicy.",
+    "wskazania": [
+     "programy profilaktyczne w grupach dzieci"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-FLUORYZACJA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-FLUOR",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-KLIN-EAPD-F-2019",
+    "SRC-KLIN-ADA-F-2013",
+    "SRC-KLIN-ADA-LAK-2016"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1003",
@@ -1749,11 +2786,100 @@
    "kod": "23.1004",
    "nazwa_oficjalna": "Zabezpieczanie profilaktyczne bruzd innymi materiałami",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Lakowanie bruzd innymi materiałami",
+   "opis": "Lakowanie bruzd innymi materiałami.",
+   "cel": {
+    "na_czym_polega": "Lakowanie bruzd innymi materiałami: profilaktyka / zatrzymanie próchnicy.",
+    "cel_kliniczny": "Lakowanie bruzd innymi materiałami: profilaktyka / zatrzymanie próchnicy.",
+    "wskazania": [
+     "bruzdy zagrożone próchnicą, gdy lak żywiczny niewskazany (np. ząb częściowo wyrznięty)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-OCZYSZCZENIE-ZEBOW"
+    },
+    {
+     "krok": "KROK-IZOLACJA"
+    },
+    {
+     "krok": "KROK-LAKOWANIE"
+    },
+    {
+     "krok": "KROK-WYKONCZENIE"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-GLASJONOMER",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-IZOL-WZGL",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.2310040 – 42 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie dotyczy bruzd pierwszych i drugich trzonowców stałych.",
+     "zał. 2 (<18): Świadczenie dotyczy bruzd pierwszych i drugich trzonowców stałych.",
+     "zał. 2b (<18 (szkoła)): Świadczenie dotyczy bruzd pierwszych i drugich trzonowców stałych."
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-KLIN-EAPD-F-2019",
+    "SRC-KLIN-ADA-F-2013",
+    "SRC-KLIN-ADA-LAK-2016"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1006",
@@ -2025,176 +3151,1681 @@
    "kod": "23.1008",
    "nazwa_oficjalna": "Impregnacja zębiny",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "requires_expert_review",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Impregnacja zębiny",
+   "opis": "Impregnacja zębiny.",
+   "cel": {
+    "na_czym_polega": "Impregnacja zębiny: profilaktyka / zatrzymanie próchnicy.",
+    "cel_kliniczny": "Impregnacja zębiny: profilaktyka / zatrzymanie próchnicy.",
+    "wskazania": [
+     "zatrzymanie próchnicy u pacjentów niewspółpracujących (wg decyzji i zgody opiekuna)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-IMPREGNACJA"
+    },
+    {
+     "krok": "KROK-ZALECENIA"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-FLUOR",
+     "rola": "alternatywa"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.2310080 – 3 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 1 (wszyscy): Świadczenie dotyczy impregnacji zębiny zębów mlecznych – za każdy ząb. Świadczenie jest udzielane dzieciom i młodzieży do ukończenia 18. roku życia.",
+     "zał. 2 (<18): Świadczenie dotyczy impregnacji zębiny zębów mlecznych – za każdy ząb.",
+     "zał. 2b (<18 (szkoła)): Świadczenie dotyczy impregnacji zębiny zębów mlecznych – za każdy ząb."
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-KLIN-EAPD-F-2019",
+    "SRC-KLIN-ADA-F-2013",
+    "SRC-KLIN-ADA-LAK-2016"
+   ],
+   "opracowano": "2026-11-22",
+   "uzasadnienie_statusu": "Preparat i wskazania do weryfikacji (np. fluorek diaminy srebra – przebarwienia, zgoda)."
   },
   {
    "id": "PROC-23.1009",
    "kod": "23.1009",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 6. miesiącu życia",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Profilaktyka – 6. miesiąc życia",
+   "opis": "Profilaktyka – 6. miesiąc życia.",
+   "cel": {
+    "na_czym_polega": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 6. miesiąc życia – zakres określony w zał. 10 rozporządzenia.",
+    "cel_kliniczny": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 6. miesiąc życia – zakres określony w zał. 10 rozporządzenia.",
+    "wskazania": [
+     "dziecko / młodzież w 6. miesiąc życia (świadczenie profilaktyczne NFZ)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-INSTRUKTAZ-OPIEKUNA"
+    },
+    {
+     "krok": "KROK-PLAN"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-FLUOR",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-SZCZOTKA-PASTA",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Elementy świadczenia wymienione w zał. 10 (wykonane)",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-DU-2025-615"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.0000001 – 85 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 10 (<19): 1. Wizyta kontrolna z instruktażem matki w zakresie higieny jamy ustnej. 2. Badanie lekarskie stomatologiczne w zakresie początku ząbkowania i stanu jamy ustnej.",
+     "zał. 10b (<19 (szkoła)): 1. Wizyta kontrolna z instruktażem w zakresie higieny jamy ustnej. 2. Badanie lekarskie stomatologiczne w zakresie początku ząbkowania i stanu jamy ustnej."
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-DU-2025-615",
+    "SRC-KLIN-EAPD-F-2019"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1010",
    "kod": "23.1010",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 9. miesiącu życia",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Profilaktyka – 9. miesiąc życia",
+   "opis": "Profilaktyka – 9. miesiąc życia.",
+   "cel": {
+    "na_czym_polega": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 9. miesiąc życia – zakres określony w zał. 10 rozporządzenia.",
+    "cel_kliniczny": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 9. miesiąc życia – zakres określony w zał. 10 rozporządzenia.",
+    "wskazania": [
+     "dziecko / młodzież w 9. miesiąc życia (świadczenie profilaktyczne NFZ)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-INSTRUKTAZ-OPIEKUNA"
+    },
+    {
+     "krok": "KROK-FLUOR-WIEK"
+    },
+    {
+     "krok": "KROK-PLAN"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-FLUOR",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-SZCZOTKA-PASTA",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Elementy świadczenia wymienione w zał. 10 (wykonane)",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-DU-2025-615"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.0000002 – 115 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 10 (<19): 1. Ocena stanu uzębienia mlecznego z instruktażem matki w zakresie higieny jamy ustnej. 2. Profilaktyka fluorkowa przy braku przeciwwskazań.",
+     "zał. 10b (<19 (szkoła)): 1. Ocena stanu uzębienia mlecznego z instruktażem w zakresie higieny jamy ustnej. 2. Profilaktyka fluorkowa przy braku przeciwwskazań."
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-DU-2025-615",
+    "SRC-KLIN-EAPD-F-2019"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1011",
    "kod": "23.1011",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 12. miesiącu życia",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Profilaktyka – 12. miesiąc życia",
+   "opis": "Profilaktyka – 12. miesiąc życia.",
+   "cel": {
+    "na_czym_polega": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 12. miesiąc życia – zakres określony w zał. 10 rozporządzenia.",
+    "cel_kliniczny": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 12. miesiąc życia – zakres określony w zał. 10 rozporządzenia.",
+    "wskazania": [
+     "dziecko / młodzież w 12. miesiąc życia (świadczenie profilaktyczne NFZ)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-WIZYTA-ADAPTACYJNA"
+    },
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-INSTRUKTAZ-OPIEKUNA"
+    },
+    {
+     "krok": "KROK-FLUOR-WIEK"
+    },
+    {
+     "krok": "KROK-PLAN"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-FLUOR",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-SZCZOTKA-PASTA",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Elementy świadczenia wymienione w zał. 10 (wykonane)",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-DU-2025-615"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.0000003 – 115 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 10 (<19): 1. Wizyta adaptacyjna z oceną stanu uzębienia mlecznego. 2. Kontrola higieny jamy ustnej (badanie kontrolne wraz z instruktażem matki w zakresie higieny jamy ustnej). 3. Profilaktyka fluorkowa przy braku przeciwwskazań.",
+     "zał. 10b (<19 (szkoła)): 1. Wizyta adaptacyjna z oceną stanu uzębienia mlecznego. 2. Kontrola higieny jamy ustnej (badanie kontrolne wraz z instruktażem w zakresie higieny jamy ustnej). 3. Profilaktyka fluorkowa przy braku przeciwwskazań."
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-DU-2025-615",
+    "SRC-KLIN-EAPD-F-2019"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1012",
    "kod": "23.1012",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 2. roku życia",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Profilaktyka – 2. rok życia",
+   "opis": "Profilaktyka – 2. rok życia.",
+   "cel": {
+    "na_czym_polega": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 2. rok życia – zakres określony w zał. 10 rozporządzenia.",
+    "cel_kliniczny": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 2. rok życia – zakres określony w zał. 10 rozporządzenia.",
+    "wskazania": [
+     "dziecko / młodzież w 2. rok życia (świadczenie profilaktyczne NFZ)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-WIZYTA-ADAPTACYJNA"
+    },
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-INDEKS-PUW"
+    },
+    {
+     "krok": "KROK-INSTRUKTAZ-OPIEKUNA"
+    },
+    {
+     "krok": "KROK-FLUOR-WIEK"
+    },
+    {
+     "krok": "KROK-PLAN"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-FLUOR",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-SZCZOTKA-PASTA",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Elementy świadczenia wymienione w zał. 10 (wykonane)",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-DU-2025-615"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.0000004 – 144 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 10 (<19): 1. Wizyta adaptacyjna. 2. Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy puw* dla zębów mlecznych. 3. Kontrola higieny jamy ustnej (badanie kontrolne wraz z instruktażem matki w zakresie higieny jamy ustnej). 4. Ocena stanu morfologicznego i funkcji żucia oraz wyrzynania zębów obejmuje: 1) sprawdzenie liczby jednoimiennych górnych i dolnych siekaczy po prawej i lewej stronie łuku oraz przebiegu linii pośrodkowej; 2) sposób zwierania się siekaczy; 3) sprawdzenie toru oddychania; 4) sposób układania dziecka do snu; 5) sposób karmienia; 6) sprawdzenie występowania nawyków w postaci ssania smoczków lub palców. 5. Zastosowanie działań zapobiegających wadom zgryzu – profilaktyka ortodontyczna. Pouczenie o dbałości oddychania przez nos, o odpowiednich sposobach układania dziecka do snu, konieczności odzwyczajenia od nawyków. 6. Profilaktyka profesjonalna próchnicy, w tym profilaktyka fluorkowa przy braku przeciwwskazań.",
+     "zał. 10b (<19 (szkoła)): 1. Wizyta adaptacyjna. 2. Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy puw* dla zębów mlecznych. 3. Kontrola higieny jamy ustnej (badanie kontrolne wraz z instruktażem w zakresie higieny jamy ustnej). 4. Ocena stanu morfologicznego i funkcji żucia oraz wyrzynania zębów obejmująca sprawdzenie: 1) liczby jednoimiennych górnych i dolnych siekaczy po prawej i lewej stronie łuku oraz przebiegu linii pośrodkowej; 2) sposobu zwierania się siekaczy; 3) toru oddychania; 4) sposobu układania dziecka do snu; 5) sposobu karmienia; 6) występowania nawyków w postaci ssania smoczków lub palców. 5. Zastosowanie działań zapobiegających wadom zgryzu – profilaktyka ortodontyczna. Pouczenie o dbałości oddychania przez nos, o odpowiednich sposobach układania dziecka do snu, konieczności odzwyczajenia od nawyków. 6. Profilaktyka profesjonalna próchnicy, w tym profilaktyka fluorkowa przy braku przeciwwskazań."
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-DU-2025-615",
+    "SRC-KLIN-EAPD-F-2019"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1013",
    "kod": "23.1013",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 4. roku życia",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Profilaktyka – 4. rok życia",
+   "opis": "Profilaktyka – 4. rok życia.",
+   "cel": {
+    "na_czym_polega": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 4. rok życia – zakres określony w zał. 10 rozporządzenia.",
+    "cel_kliniczny": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 4. rok życia – zakres określony w zał. 10 rozporządzenia.",
+    "wskazania": [
+     "dziecko / młodzież w 4. rok życia (świadczenie profilaktyczne NFZ)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-WIZYTA-ADAPTACYJNA"
+    },
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-INDEKS-PUW"
+    },
+    {
+     "krok": "KROK-INSTRUKTAZ-OPIEKUNA"
+    },
+    {
+     "krok": "KROK-FLUOR-WIEK"
+    },
+    {
+     "krok": "KROK-PLAN"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-FLUOR",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-SZCZOTKA-PASTA",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Elementy świadczenia wymienione w zał. 10 (wykonane)",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-DU-2025-615"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.0000005 – 144 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 10 (<19): 1. Wizyta adaptacyjna – przysługuje w przypadku pierwszej wizyty dziecka (jeżeli nie wykorzystało świadczenia wcześniej). 2. Kontrola higieny jamy ustnej (badanie kontrolne wraz z instruktażem higieny jamy ustnej i oceną stanu uzębienia za pomocą wskaźnika intensywności próchnicy puw* dla zębów mlecznych). 3. Ocena stanu morfologicznego i funkcji żucia oraz wyrzynania zębów obejmuje: 1) sprawdzenie liczby zębów oraz przebiegu linii pośrodkowej; 2) sposób zwierania siekaczy; 3) sprawdzenie toru oddychania; 4) sprawdzenie występowania nawyków. 4. Zastosowanie działań zapobiegających wadom zgryzu – profilaktyka ortodontyczna. Pouczenie o dbałości oddychania przez nos, o wprowadzaniu pokarmów o stałej konsystencji, odzwyczajaniu od nawyków. 5. Profilaktyka profesjonalna próchnicy, w tym profilaktyka fluorkowa przy braku przeciwwskazań.",
+     "zał. 10b (<19 (szkoła)): 1. Wizyta adaptacyjna – przysługuje w przypadku pierwszej wizyty dziecka (jeżeli nie wykorzystało świadczenia wcześniej). 2. Kontrola higieny jamy ustnej (badanie kontrolne wraz z instruktażem higieny jamy ustnej i oceną stanu uzębienia za pomocą wskaźnika intensywności próchnicy puw* dla zębów mlecznych). 3. Ocena stanu morfologicznego i funkcji żucia oraz wyrzynania zębów obejmująca sprawdzenie: 1) liczby zębów oraz przebiegu linii pośrodkowej; 2) sposobu zwierania siekaczy; 3) toru oddychania; 4) występowania nawyków. 4. Zastosowanie działań zapobiegających wadom zgryzu – profilaktyka ortodontyczna. Pouczenie o dbałości oddychania przez nos, o wprowadzaniu pokarmów o stałej konsystencji, odzwyczajaniu od nawyków. 5. Profilaktyka profesjonalna próchnicy, w tym profilaktyka fluorkowa przy braku przeciwwskazań."
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-DU-2025-615",
+    "SRC-KLIN-EAPD-F-2019"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1014",
    "kod": "23.1014",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 5. roku życia",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Profilaktyka – 5. rok życia",
+   "opis": "Profilaktyka – 5. rok życia.",
+   "cel": {
+    "na_czym_polega": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 5. rok życia – zakres określony w zał. 10 rozporządzenia.",
+    "cel_kliniczny": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 5. rok życia – zakres określony w zał. 10 rozporządzenia.",
+    "wskazania": [
+     "dziecko / młodzież w 5. rok życia (świadczenie profilaktyczne NFZ)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-WIZYTA-ADAPTACYJNA"
+    },
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-INDEKS-PUW"
+    },
+    {
+     "krok": "KROK-INSTRUKTAZ-OPIEKUNA"
+    },
+    {
+     "krok": "KROK-FLUOR-WIEK"
+    },
+    {
+     "krok": "KROK-PLAN"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-FLUOR",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-SZCZOTKA-PASTA",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Elementy świadczenia wymienione w zał. 10 (wykonane)",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-DU-2025-615"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.0000006 – 144 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 10 (<19): 1. Wizyta adaptacyjna – przysługuje w przypadku pierwszej wizyty dziecka (jeżeli nie wykorzystało świadczenia wcześniej). 2. Kontrola higieny jamy ustnej (badanie kontrolne wraz z instruktażem higieny jamy ustnej i oceną stanu uzębienia za pomocą wskaźnika intensywności próchnicy puw* dla zębów mlecznych). 3. Ocena stanu morfologicznego i funkcji żucia oraz wyrzynania zębów obejmuje: 1) sprawdzenie liczby zębów; 2) sposób zwierania się siekaczy oraz przebieg linii pośrodkowej i linii za tylnymi powierzchniami drugich zębów trzonowych mlecznych; 3) występowanie nawyków; 4) starcie powierzchni żujących mlecznych trzonowców; 5) sposób kontaktu kłów. 4. Zastosowanie działań zapobiegających wadom zgryzu – profilaktyka ortodontyczna. Nauczenie sposobów działań prowadzących do eliminacji nawyków ssania smoczków i oddychania z otwartymi ustami. Zalecenie podawania pokarmów o stałej konsystencji. 5. Profilaktyka profesjonalna próchnicy, w tym profilaktyka fluorkowa przy braku przeciwwskazań. Dotyczy zębów mlecznych i stałych.",
+     "zał. 10b (<19 (szkoła)): 1. Wizyta adaptacyjna – przysługuje w przypadku pierwszej wizyty dziecka (jeżeli nie wykorzystało świadczenia wcześniej). 2. Kontrola higieny jamy ustnej (badanie kontrolne wraz z instruktażem higieny jamy ustnej i oceną stanu uzębienia za pomocą wskaźnika intensywności próchnicy puw* dla zębów mlecznych). 3. Ocena stanu morfologicznego i funkcji żucia oraz wyrzynania zębów obejmująca sprawdzenie: 1) liczby zębów; 2) sposobu zwierania się siekaczy oraz przebiegu linii pośrodkowej i linii za tylnymi powierzchniami drugich zębów trzonowych mlecznych; 3) występowania nawyków; 4) starcia powierzchni żujących mlecznych trzonowców; 5) sposobu kontaktu kłów. 4. Zastosowanie działań zapobiegających wadom zgryzu – profilaktyka ortodontyczna. Nauczenie sposobów działań prowadzących do eliminacji nawyków ssania smoczków i oddychania z otwartymi ustami. Zalecenie podawania pokarmów o stałej konsystencji. 5. Profilaktyka profesjonalna próchnicy, w tym profilaktyka fluorkowa przy braku przeciwwskazań. Dotyczy zębów mlecznych i stałych."
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-DU-2025-615",
+    "SRC-KLIN-EAPD-F-2019"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1015",
    "kod": "23.1015",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 6. roku życia",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Profilaktyka – 6. rok życia",
+   "opis": "Profilaktyka – 6. rok życia.",
+   "cel": {
+    "na_czym_polega": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 6. rok życia – zakres określony w zał. 10 rozporządzenia.",
+    "cel_kliniczny": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 6. rok życia – zakres określony w zał. 10 rozporządzenia.",
+    "wskazania": [
+     "dziecko / młodzież w 6. rok życia (świadczenie profilaktyczne NFZ)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-INDEKS-PUW"
+    },
+    {
+     "krok": "KROK-INSTRUKTAZ-OPIEKUNA"
+    },
+    {
+     "krok": "KROK-FLUOR-WIEK"
+    },
+    {
+     "krok": "KROK-PLAN"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-FLUOR",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-SZCZOTKA-PASTA",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Elementy świadczenia wymienione w zał. 10 (wykonane)",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-DU-2025-615"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.0000007 – 144 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 10 (<19): 1. Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy puw* dla zębów mlecznych i PUW* dla zębów stałych. 2. Kontrola higieny jamy ustnej (badanie kontrolne wraz z instruktażem higieny jamy ustnej). 3. Ocena stanu morfologicznego i funkcji żucia oraz wyrzynania zębów obejmuje: 1) sprawdzenie typu wyrzynania zębów stałych (siekaczowy lub trzonowcowy); 2) sposób zwierania się pierwszych stałych zębów trzonowych według zasad Angle'a; 3) występowanie nawyków ustnych; 4) starcie powierzchni żujących zębów mlecznych. 4. Zastosowanie działań zapobiegających wadom zgryzu – profilaktyka ortodontyczna. Nauczenie sposobów działań prowadzących do eliminacji nawyków ssania smoczków i oddychania z otwartymi ustami. Zalecenie podawania pokarmów o stałej konsystencji. W uzasadnianych przypadkach opiłowanie niestartych powierzchni mlecznych kłów prowadzących dolny łuk zębowy nadmiernie ku tyłowi. 5. Profilaktyka profesjonalna próchnicy, w tym profilaktyka fluorkowa przy braku przeciwwskazań. Dotyczy zębów mlecznych i stałych.",
+     "zał. 10b (<19 (szkoła)): 1. Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy puw* dla zębów mlecznych i PUW* dla zębów stałych. 2. Kontrola higieny jamy ustnej (badanie kontrolne wraz z instruktażem higieny jamy ustnej). 3. Ocena stanu morfologicznego i funkcji żucia oraz wyrzynania zębów obejmująca sprawdzenie: 1) typu wyrzynania zębów stałych (siekaczowy lub trzonowcowy); 2) sposobu zwierania się pierwszych stałych zębów trzonowych według zasad Angle'a; 3) występowania nawyków ustnych; 4) starcia powierzchni żujących zębów mlecznych. 4. Zastosowanie działań zapobiegających wadom zgryzu – profilaktyka ortodontyczna. Nauczenie sposobów działań prowadzących do eliminacji nawyków ssania smoczków i oddychania z otwartymi ustami. Zalecenie podawania pokarmów o stałej konsystencji. W uzasadnianych przypadkach opiłowanie niestartych powierzchni mlecznych kłów prowadzących dolny łuk zębowy nadmiernie ku tyłowi. 5. Profilaktyka profesjonalna próchnicy, w tym profilaktyka fluorkowa przy braku przeciwwskazań. Dotyczy zębów mlecznych i stałych."
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-DU-2025-615",
+    "SRC-KLIN-EAPD-F-2019"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1016",
    "kod": "23.1016",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 7. roku życia",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Profilaktyka – 7. rok życia",
+   "opis": "Profilaktyka – 7. rok życia.",
+   "cel": {
+    "na_czym_polega": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 7. rok życia – zakres określony w zał. 10 rozporządzenia.",
+    "cel_kliniczny": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 7. rok życia – zakres określony w zał. 10 rozporządzenia.",
+    "wskazania": [
+     "dziecko / młodzież w 7. rok życia (świadczenie profilaktyczne NFZ)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-INDEKS-PUW"
+    },
+    {
+     "krok": "KROK-INSTRUKTAZ"
+    },
+    {
+     "krok": "KROK-FLUOR-WIEK"
+    },
+    {
+     "krok": "KROK-PLAN"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-FLUOR",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-SZCZOTKA-PASTA",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Elementy świadczenia wymienione w zał. 10 (wykonane)",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-DU-2025-615"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.0000008 – 131 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 10 (<19): 1. Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy puw* dla zębów mlecznych i PUW* dla zębów stałych. 2. Oddzielne podanie poszczególnych składowych wskaźnika PUW* dla zębów stałych i wskaźnika puw* dla zębów mlecznych. 3. Kwalifikacja do szczególnej opieki stomatologicznej w zakresie podstawowego leczenia stomatologicznego lub specjalistycznego leczenia stomatologicznego. 4. Wykrywanie nieprawidłowości (wad) zgryzu według wskaźnika IOTN: 1) wyraźnego zniekształcenia lub 2) wyraźnego ograniczenia funkcji żucia lub gryzienia oraz wyrzynania zębów. 5. Profesjonalna profilaktyka fluorkowa. Dotyczy zębów mlecznych i stałych.",
+     "zał. 10b (<19 (szkoła)): 1. Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy puw* dla zębów mlecznych i PUW* dla zębów stałych. 2. Oddzielne podanie poszczególnych składowych wskaźnika PUW* dla zębów stałych i wskaźnika puw* dla zębów mlecznych. 3. Kwalifikacja do szczególnej opieki stomatologicznej w zakresie podstawowego leczenia stomatologicznego lub specjalistycznego leczenia stomatologicznego. 4. Wykrywanie nieprawidłowości (wad) zgryzu według wskaźnika IOTN**: 1) wyraźnego zniekształcenia lub 2) wyraźnego ograniczenia funkcji żucia lub gryzienia oraz wyrzynania zębów. 5. Profesjonalna profilaktyka fluorkowa. Dotyczy zębów mlecznych i stałych."
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-DU-2025-615",
+    "SRC-KLIN-EAPD-F-2019"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1017",
    "kod": "23.1017",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 10. roku życia",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Profilaktyka – 10. rok życia",
+   "opis": "Profilaktyka – 10. rok życia.",
+   "cel": {
+    "na_czym_polega": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 10. rok życia – zakres określony w zał. 10 rozporządzenia.",
+    "cel_kliniczny": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 10. rok życia – zakres określony w zał. 10 rozporządzenia.",
+    "wskazania": [
+     "dziecko / młodzież w 10. rok życia (świadczenie profilaktyczne NFZ)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-INDEKS-PUW"
+    },
+    {
+     "krok": "KROK-INSTRUKTAZ"
+    },
+    {
+     "krok": "KROK-FLUOR-WIEK"
+    },
+    {
+     "krok": "KROK-PLAN"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-FLUOR",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-SZCZOTKA-PASTA",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Elementy świadczenia wymienione w zał. 10 (wykonane)",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-DU-2025-615"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.0000009 – 131 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 10 (<19): 1. Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy PUW* dla zębów stałych i puw* dla zębów mlecznych oraz ocena stanu tkanek przyzębia przez oznaczenie głębokości kieszonek dziąsłowych (PD), utraty przyczepu łącznotkankowego (CAL) oraz wskaźnika krwawienia (BOP). 2. Oddzielne podanie poszczególnych składowych wskaźnika PUW* dla zębów stałych i wskaźnika puw* dla zębów mlecznych. 3. Kwalifikacja do szczególnej opieki stomatologicznej w zakresie podstawowego leczenia stomatologicznego lub specjalistycznego leczenia stomatologicznego. 4. Wykrywanie nieprawidłowości (wad) zgryzu według wskaźnika IOTN: 1) wyraźnego zniekształcenia lub 2) wyraźnego ograniczenia funkcji żucia lub gryzienia oraz wyrzynania zębów. 5. Profesjonalna profilaktyka fluorkowa. Dotyczy zębów mlecznych i stałych.",
+     "zał. 10b (<19 (szkoła)): 1. Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy PUW* dla zębów stałych i puw* dla zębów mlecznych oraz ocena stanu tkanek przyzębia przez oznaczenie głębokości kieszonek dziąsłowych (PD), utraty przyczepu łącznotkankowego (CAL) oraz wskaźnika krwawienia (BOP). 2. Oddzielne podanie poszczególnych składowych wskaźnika PUW* dla zębów stałych i wskaźnika puw* dla zębów mlecznych. 3. Kwalifikacja do szczególnej opieki stomatologicznej w zakresie podstawowego leczenia stomatologicznego lub specjalistycznego leczenia stomatologicznego. 4. Wykrywanie nieprawidłowości (wad) zgryzu według wskaźnika IOTN**: 1) wyraźnego zniekształcenia lub 2) wyraźnego ograniczenia funkcji żucia lub gryzienia oraz wyrzynania zębów. 5. Profesjonalna profilaktyka fluorkowa. Dotyczy zębów mlecznych i stałych."
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-DU-2025-615",
+    "SRC-KLIN-EAPD-F-2019"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1018",
    "kod": "23.1018",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla młodzieży w 12. roku życia",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Profilaktyka – 12. rok życia",
+   "opis": "Profilaktyka – 12. rok życia.",
+   "cel": {
+    "na_czym_polega": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 12. rok życia – zakres określony w zał. 10 rozporządzenia.",
+    "cel_kliniczny": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 12. rok życia – zakres określony w zał. 10 rozporządzenia.",
+    "wskazania": [
+     "dziecko / młodzież w 12. rok życia (świadczenie profilaktyczne NFZ)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-INDEKS-PUW"
+    },
+    {
+     "krok": "KROK-INSTRUKTAZ"
+    },
+    {
+     "krok": "KROK-FLUOR-WIEK"
+    },
+    {
+     "krok": "KROK-PLAN"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-FLUOR",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-SZCZOTKA-PASTA",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Elementy świadczenia wymienione w zał. 10 (wykonane)",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-DU-2025-615"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.0000010 – 131 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 10 (<19): 1. Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy PUW* dla zębów stałych i ocena stanu tkanek przyzębia przez oznaczenie głębokości kieszonek dziąsłowych (PD), utraty przyczepu łącznotkankowego (CAL) oraz wskaźnika krwawienia (BOP). 2. Oddzielne podanie poszczególnych składowych wskaźnika PUW* dla zębów stałych. 3. Kwalifikacja do szczególnej opieki stomatologicznej w zakresie podstawowego leczenia stomatologicznego lub specjalistycznego leczenia stomatologicznego. 4. Wykrywanie nieprawidłowości (wad) zgryzu według wskaźnika IOTN: 1) wyraźnego zniekształcenia lub 2) wyraźnego ograniczenia funkcji żucia lub gryzienia oraz wyrzynania zębów. 5. Profesjonalna profilaktyka fluorkowa. Dotyczy zębów mlecznych i stałych.",
+     "zał. 10b (<19 (szkoła)): 1. Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy PUW* dla zębów stałych i ocena stanu tkanek przyzębia przez oznaczenie głębokości kieszonek dziąsłowych (PD), utraty przyczepu łącznotkankowego (CAL) oraz wskaźnika krwawienia (BOP). 2. Oddzielne podanie poszczególnych składowych wskaźnika PUW* dla zębów stałych. 3. Kwalifikacja do szczególnej opieki stomatologicznej w zakresie podstawowego leczenia stomatologicznego lub specjalistycznego leczenia stomatologicznego. 4. Wykrywanie nieprawidłowości (wad) zgryzu według wskaźnika IOTN**: 1) wyraźnego zniekształcenia lub 2) wyraźnego ograniczenia funkcji żucia lub gryzienia oraz wyrzynania zębów. 5. Profesjonalna profilaktyka fluorkowa. Dotyczy zębów mlecznych i stałych."
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-DU-2025-615",
+    "SRC-KLIN-EAPD-F-2019"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1019",
    "kod": "23.1019",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla młodzieży w 13. roku życia",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Profilaktyka – 13. rok życia",
+   "opis": "Profilaktyka – 13. rok życia.",
+   "cel": {
+    "na_czym_polega": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 13. rok życia – zakres określony w zał. 10 rozporządzenia.",
+    "cel_kliniczny": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 13. rok życia – zakres określony w zał. 10 rozporządzenia.",
+    "wskazania": [
+     "dziecko / młodzież w 13. rok życia (świadczenie profilaktyczne NFZ)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-INDEKS-PUW"
+    },
+    {
+     "krok": "KROK-INSTRUKTAZ"
+    },
+    {
+     "krok": "KROK-FLUOR-WIEK"
+    },
+    {
+     "krok": "KROK-PLAN"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-FLUOR",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-SZCZOTKA-PASTA",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Elementy świadczenia wymienione w zał. 10 (wykonane)",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-DU-2025-615"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.0000011 – 131 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 10 (<19): 1. Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy PUW* dla zębów stałych i ocena stanu tkanek przyzębia przez oznaczenie głębokości kieszonek dziąsłowych (PD), utraty przyczepu łącznotkankowego (CAL) oraz wskaźnika krwawienia (BOP). 2. Oddzielne podanie poszczególnych składowych wskaźnika PUW* dla zębów stałych. 3. Kwalifikacja do szczególnej opieki stomatologicznej w zakresie podstawowego leczenia stomatologicznego lub specjalistycznego leczenia stomatologicznego. 4. Wykrywanie nieprawidłowości (wad) zgryzu według wskaźnika IOTN: 1) wyraźnego zniekształcenia lub 2) wyraźnego ograniczenia funkcji żucia lub gryzienia oraz wyrzynania zębów. 5. Profesjonalna profilaktyka fluorkowa. Dotyczy zębów mlecznych i stałych.",
+     "zał. 10b (<19 (szkoła)): 1. Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy PUW* dla zębów stałych i ocena stanu tkanek przyzębia przez oznaczenie głębokości kieszonek dziąsłowych (PD), utraty przyczepu łącznotkankowego (CAL) oraz wskaźnika krwawienia (BOP). 2. Oddzielne podanie poszczególnych składowych wskaźnika PUW* dla zębów stałych. 3. Kwalifikacja do szczególnej opieki stomatologicznej w zakresie podstawowego leczenia stomatologicznego lub specjalistycznego leczenia stomatologicznego. 4. Wykrywanie nieprawidłowości (wad) zgryzu według wskaźnika IOTN**: 1) wyraźnego zniekształcenia lub 2) wyraźnego ograniczenia funkcji żucia lub gryzienia oraz wyrzynania zębów. 5. Profesjonalna profilaktyka fluorkowa. Dotyczy zębów mlecznych i stałych."
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-DU-2025-615",
+    "SRC-KLIN-EAPD-F-2019"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1020",
    "kod": "23.1020",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla młodzieży w 16. roku życia",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Profilaktyka – 16. rok życia",
+   "opis": "Profilaktyka – 16. rok życia.",
+   "cel": {
+    "na_czym_polega": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 16. rok życia – zakres określony w zał. 10 rozporządzenia.",
+    "cel_kliniczny": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 16. rok życia – zakres określony w zał. 10 rozporządzenia.",
+    "wskazania": [
+     "dziecko / młodzież w 16. rok życia (świadczenie profilaktyczne NFZ)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-INDEKS-PUW"
+    },
+    {
+     "krok": "KROK-INSTRUKTAZ"
+    },
+    {
+     "krok": "KROK-FLUOR-WIEK"
+    },
+    {
+     "krok": "KROK-PLAN"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-FLUOR",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-SZCZOTKA-PASTA",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Elementy świadczenia wymienione w zał. 10 (wykonane)",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-DU-2025-615"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.0000012 – 131 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 10 (<19): 1. Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy PUW* dla zębów stałych i ocena stanu tkanek przyzębia przez oznaczenie głębokości kieszonek dziąsłowych (PD), utraty przyczepu łącznotkankowego (CAL) oraz wskaźnika krwawienia (BOP). 2. Oddzielne podanie poszczególnych składowych wskaźnika PUW* dla zębów stałych. 3. Kwalifikacja do szczególnej opieki stomatologicznej w zakresie podstawowego leczenia stomatologicznego lub specjalistycznego leczenia stomatologicznego. 4. Wykrywanie nieprawidłowości (wad) zgryzu według wskaźnika IOTN: 1) wyraźnego zniekształcenia lub 2) wyraźnego ograniczenia funkcji żucia lub gryzienia oraz wyrzynania zębów. 5. Profesjonalna profilaktyka fluorkowa. Dotyczy zębów mlecznych i stałych.",
+     "zał. 10b (<19 (szkoła)): 1. Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy PUW* dla zębów stałych i ocena stanu tkanek przyzębia przez oznaczenie głębokości kieszonek dziąsłowych (PD), utraty przyczepu łącznotkankowego (CAL) oraz wskaźnika krwawienia (BOP). 2. Oddzielne podanie poszczególnych składowych wskaźnika PUW* dla zębów stałych. 3. Kwalifikacja do szczególnej opieki stomatologicznej w zakresie podstawowego leczenia stomatologicznego lub specjalistycznego leczenia stomatologicznego. 4. Wykrywanie nieprawidłowości (wad) zgryzu według wskaźnika IOTN**: 1) wyraźnego zniekształcenia lub 2) wyraźnego ograniczenia funkcji żucia lub gryzienia oraz wyrzynania zębów. 5. Profesjonalna profilaktyka fluorkowa. Dotyczy zębów mlecznych i stałych."
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-DU-2025-615",
+    "SRC-KLIN-EAPD-F-2019"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1021",
    "kod": "23.1021",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla młodzieży w 19. roku życia",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Profilaktyka – 19. rok życia",
+   "opis": "Profilaktyka – 19. rok życia.",
+   "cel": {
+    "na_czym_polega": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 19. rok życia – zakres określony w zał. 10 rozporządzenia.",
+    "cel_kliniczny": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 19. rok życia – zakres określony w zał. 10 rozporządzenia.",
+    "wskazania": [
+     "dziecko / młodzież w 19. rok życia (świadczenie profilaktyczne NFZ)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-INDEKS-PUW"
+    },
+    {
+     "krok": "KROK-INSTRUKTAZ"
+    },
+    {
+     "krok": "KROK-PLAN"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-FLUOR",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-SZCZOTKA-PASTA",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Elementy świadczenia wymienione w zał. 10 (wykonane)",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-DU-2025-615"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "tak",
+    "produkty": [
+     "5.13.00.0000013 – 131 pkt (zał. 1b)"
+    ],
+    "warunki": [
+     "zał. 10 (<19): 1. Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy PUW* dla zębów stałych. 2. Oddzielne podanie poszczególnych składowych wskaźnika PUW*. 3. Ocena stanu zdrowia jamy ustnej z uwzględnieniem stanu uzębienia, przyzębia i błony śluzowej jamy ustnej. 4. Wykrywanie nieprawidłowości (wad) zgryzu według wskaźnika IOTN: 1) wyraźnego zniekształcenia lub 2) wyraźnego ograniczenia funkcji żucia lub gryzienia oraz wyrzynania zębów.",
+     "zał. 10b (<19 (szkoła)): 1. Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy PUW* dla zębów stałych. 2. Oddzielne podanie poszczególnych składowych wskaźnika PUW* dla zębów stałych. 3. Ocena stanu zdrowia jamy ustnej z uwzględnieniem stanu uzębienia, przyzębia i błony śluzowej jamy ustnej. 4. Wykrywanie nieprawidłowości (wad) zgryzu według wskaźnika IOTN**: 1) wyraźnego zniekształcenia lub 2) wyraźnego ograniczenia funkcji żucia lub gryzienia oraz wyrzynania zębów."
+    ],
+    "zrodla": [
+     "SRC-DU-2025-615",
+     "SRC-ZARZ-60-2023-TJ"
+    ]
+   },
+   "zrodla": [
+    "SRC-DU-2025-615",
+    "SRC-KLIN-EAPD-F-2019"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1022",
    "kod": "23.1022",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne zapobiegające wadom zgryzu",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Profilaktyka wad zgryzu",
+   "opis": "Profilaktyka wad zgryzu.",
+   "cel": {
+    "na_czym_polega": "Profilaktyczne świadczenie zapobiegające wadom zgryzu (ocena zgryzu, nawyków, zalecenia).",
+    "cel_kliniczny": "Profilaktyczne świadczenie zapobiegające wadom zgryzu (ocena zgryzu, nawyków, zalecenia).",
+    "wskazania": [
+     "dzieci – ocena rozwoju zgryzu i nawyków"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-INSTRUKTAZ-OPIEKUNA"
+    },
+    {
+     "krok": "KROK-PLAN"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-DU-2025-615"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1023",
    "kod": "23.1023",
    "nazwa_oficjalna": "Profilaktyczne świadczenie stomatologiczne dla dziecka w 3. roku życia",
    "kategoria": "profilaktyka",
-   "status": "not_started",
+   "status": "draft",
    "zrodla_kodu": [
     "SRC-ICD9-PL-591"
    ],
-   "uzasadnienie_statusu": "Do opracowania w kolejnej partii."
+   "nazwa_krotka": "Profilaktyka – 3. rok życia",
+   "opis": "Profilaktyka – 3. rok życia.",
+   "cel": {
+    "na_czym_polega": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 3. rok życia – zakres określony w zał. 10 rozporządzenia.",
+    "cel_kliniczny": "Profilaktyczne świadczenie stomatologiczne dla dziecka / młodzieży w 3. rok życia – zakres określony w zał. 10 rozporządzenia.",
+    "wskazania": [
+     "dziecko / młodzież w 3. rok życia (świadczenie profilaktyczne NFZ)"
+    ]
+   },
+   "kwalifikacja": {
+    "ocena_przed": [
+     "wiek, stan ogólny"
+    ],
+    "wywiad": [
+     "choroby, leki, alergie"
+    ],
+    "przeciwwskazania": []
+   },
+   "przygotowanie": {
+    "konieczne": [
+     "zestaw podstawowy"
+    ]
+   },
+   "kroki": [
+    {
+     "krok": "KROK-WIZYTA-ADAPTACYJNA"
+    },
+    {
+     "krok": "KROK-BADANIE"
+    },
+    {
+     "krok": "KROK-INDEKS-PUW"
+    },
+    {
+     "krok": "KROK-INSTRUKTAZ-OPIEKUNA"
+    },
+    {
+     "krok": "KROK-FLUOR-WIEK"
+    },
+    {
+     "krok": "KROK-PLAN"
+    }
+   ],
+   "materialy": [
+    {
+     "mat": "MAT-ZESTAW-PODST",
+     "rola": "konieczne"
+    },
+    {
+     "mat": "MAT-FLUOR",
+     "rola": "sytuacyjne"
+    },
+    {
+     "mat": "MAT-SZCZOTKA-PASTA",
+     "rola": "typowe"
+    }
+   ],
+   "kontrola_efektu": {
+    "sprawdzic": [
+     "wykonanie wszystkich elementów świadczenia"
+    ]
+   },
+   "zalecenia": {
+    "kontrola": "Wg wieku i ryzyka."
+   },
+   "dokumentacja": {
+    "elementy": [
+     {
+      "tekst": "Data, opis świadczenia, rozpoznanie / wskazanie",
+      "podstawa": "wymaganie_prawne",
+      "zrodla": [
+       "SRC-DU-2026-1391"
+      ]
+     },
+     {
+      "tekst": "Elementy świadczenia wymienione w zał. 10 (wykonane)",
+      "podstawa": "wymaganie_nfz",
+      "zrodla": [
+       "SRC-DU-2025-615"
+      ]
+     }
+    ]
+   },
+   "nfz": {
+    "swiadczenie_gwarantowane": "nie",
+    "uwagi": "Kod NFZ w zarządzeniu: 23.1012a (D5=B – eksport kodu ICD-9 23.1023). Brak w wykazie świadczeń gwarantowanych odczytanym w audycie (zał. 1, 2, 2b, 10, 10b, 10c) – leczenie prywatne albo zakres nieodczytany."
+   },
+   "zrodla": [
+    "SRC-DU-2025-615",
+    "SRC-KLIN-EAPD-F-2019"
+   ],
+   "opracowano": "2026-11-22"
   },
   {
    "id": "PROC-23.1101",

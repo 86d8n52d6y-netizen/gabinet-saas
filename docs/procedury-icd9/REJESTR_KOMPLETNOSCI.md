@@ -8,9 +8,9 @@ Wersja danych: 2026.11.22-1.
 
 | Status | Procedury |
 |---|---|
-| draft | 85 |
-| not_started | 140 |
-| requires_expert_review | 41 |
+| draft | 108 |
+| not_started | 107 |
+| requires_expert_review | 51 |
 | **razem** | **266** |
 
 Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: draft, BAD-BLONA: draft, BAD-UZEBIENIE: draft, BAD-PRZYZEBIE: draft, BAD-HIGIENA: draft, BAD-ZGRYZ: draft, BAD-SSZ: draft, BAD-ZYWOTNOSC: draft, BAD-RTG: draft, BAD-PO-URAZIE: draft, BAD-DZIECKO: draft, BAD-STOMATOLOGICZNE: draft, BAD-KONTROLNE: draft, BAD-PRZED-LECZENIEM: draft, BAD-PO-LECZENIU: draft).
@@ -24,52 +24,52 @@ Badania: 17 (BAD-WYWIAD: draft, BAD-ZEWNATRZUSTNE: draft, BAD-WEWNATRZUSTNE: dra
 | 23.0101 | Badanie lekarskie stomatologiczne, które obejmuje również instruktaż higieny jamy ustnej | badanie i porada | draft |  |
 | 23.0102 | Badanie lekarskie kontrolne | badanie i porada | draft |  |
 | 23.0103 | Porada lekarska | badanie i porada | draft |  |
-| 23.0104 | Wydanie orzeczenia lekarskiego | badanie i porada | not_started | Do opracowania w kolejnej partii. |
+| 23.0104 | Wydanie orzeczenia lekarskiego | badanie i porada | draft |  |
 | 23.0105 | Konsultacja specjalistyczna | badanie i porada | draft |  |
-| 23.0106 | Wydanie krótkiego zaświadczenia lub świadectwa | badanie i porada | not_started | Do opracowania w kolejnej partii. |
+| 23.0106 | Wydanie krótkiego zaświadczenia lub świadectwa | badanie i porada | draft |  |
 | 23.0107 | Badanie lekarskie stomatologiczne i kontrolne po urazie zęba | badanie i porada | draft |  |
 | 23.02 | Badanie żywotności zęba | diagnostyka | draft |  |
 | 23.0301 | Rentgenodiagnostyka do 2 zdjęć wewnątrzustnych | radiologia | draft |  |
 | 23.0302 | Rentgenodiagnostyka do 5 zdjęć wewnątrzustnych | radiologia | draft |  |
-| 23.0303 | Rentgenodiagnostyka do 8 zdjęć wewnątrzustnych | radiologia | not_started | Do opracowania w kolejnej partii. |
+| 23.0303 | Rentgenodiagnostyka do 8 zdjęć wewnątrzustnych | radiologia | draft |  |
 | 23.0304 | Rentgenodiagnostyka - zdjęcie pantomograficzne z opisem | radiologia | draft |  |
 | 23.0401 | Znieczulenie miejscowe powierzchniowe | znieczulenie | draft |  |
 | 23.0402 | Znieczulenie miejscowe nasiękowe | znieczulenie | draft |  |
 | 23.0403 | Znieczulenie przewodowe wewnątrzustne | znieczulenie | draft |  |
-| 23.0404 | Znieczulenie przewodowe zewnątrzustne | znieczulenie | not_started | Do opracowania w kolejnej partii. |
-| 23.05 | Postępowanie w nagłych przypadkach | pomoc doraźna | not_started | Do opracowania w kolejnej partii. |
-| 23.06 | Wizyta adaptacyjna -dotyczy pierwszych wizyt małych dzieci | dziecko | not_started | Do opracowania w kolejnej partii. |
-| 23.07 | Pilne zabiegi poza godzinami pracy w dni świąteczne lub w domu pacjenta | pomoc doraźna | not_started | Do opracowania w kolejnej partii. |
+| 23.0404 | Znieczulenie przewodowe zewnątrzustne | znieczulenie | requires_expert_review | Technika specjalistyczna – do weryfikacji eksperckiej. |
+| 23.05 | Postępowanie w nagłych przypadkach | pomoc doraźna | draft |  |
+| 23.06 | Wizyta adaptacyjna -dotyczy pierwszych wizyt małych dzieci | dziecko | draft |  |
+| 23.07 | Pilne zabiegi poza godzinami pracy w dni świąteczne lub w domu pacjenta | pomoc doraźna | requires_expert_review | Zasady organizacyjne i rozliczeniowe (pomoc doraźna – zał. nieodczytany w audycie) do weryfikacji. |
 | 23.08 | Instruktaż higieny jamy ustnej | profilaktyka | draft |  |
-| 23.0901 | Balneoterapia lub hydroterapia | fizykoterapia | not_started | Do opracowania w kolejnej partii. |
-| 23.0902 | Naświetlanie Sollux | fizykoterapia | not_started | Do opracowania w kolejnej partii. |
-| 23.0903 | Jonoforeza nadziąsłowa | fizykoterapia | not_started | Do opracowania w kolejnej partii. |
-| 23.0904 | Jonoforeza lub elektrosterylizacja kanału korzeniowego | fizykoterapia | not_started | Do opracowania w kolejnej partii. |
-| 23.0905 | Diadynamik 1/2 łuku zębowego | fizykoterapia | not_started | Do opracowania w kolejnej partii. |
-| 23.0906 | Hydroterapia | fizykoterapia | not_started | Do opracowania w kolejnej partii. |
-| 23.0907 | Laseroterapia biostymulacyjna | fizykoterapia | not_started | Do opracowania w kolejnej partii. |
-| 23.1001 | Indywidualna fluoryzacja metodą kontaktową - za każdy zabieg | profilaktyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1002 | Fluoryzacja kontaktowa zbiorowa, 1 zabieg u każdego dziecka | profilaktyka | not_started | Do opracowania w kolejnej partii. |
+| 23.0901 | Balneoterapia lub hydroterapia | fizykoterapia | requires_expert_review | Fizykoterapia w stomatologii – ograniczone współczesne dowody skuteczności; karta do weryfikacji eksperckiej. |
+| 23.0902 | Naświetlanie Sollux | fizykoterapia | requires_expert_review | Fizykoterapia w stomatologii – ograniczone współczesne dowody skuteczności; karta do weryfikacji eksperckiej. |
+| 23.0903 | Jonoforeza nadziąsłowa | fizykoterapia | requires_expert_review | Fizykoterapia w stomatologii – ograniczone współczesne dowody skuteczności; karta do weryfikacji eksperckiej. |
+| 23.0904 | Jonoforeza lub elektrosterylizacja kanału korzeniowego | fizykoterapia | requires_expert_review | Fizykoterapia w stomatologii – ograniczone współczesne dowody skuteczności; karta do weryfikacji eksperckiej. |
+| 23.0905 | Diadynamik 1/2 łuku zębowego | fizykoterapia | requires_expert_review | Fizykoterapia w stomatologii – ograniczone współczesne dowody skuteczności; karta do weryfikacji eksperckiej. |
+| 23.0906 | Hydroterapia | fizykoterapia | requires_expert_review | Fizykoterapia w stomatologii – ograniczone współczesne dowody skuteczności; karta do weryfikacji eksperckiej. |
+| 23.0907 | Laseroterapia biostymulacyjna | fizykoterapia | requires_expert_review | Fizykoterapia w stomatologii – ograniczone współczesne dowody skuteczności; karta do weryfikacji eksperckiej. |
+| 23.1001 | Indywidualna fluoryzacja metodą kontaktową - za każdy zabieg | profilaktyka | draft |  |
+| 23.1002 | Fluoryzacja kontaktowa zbiorowa, 1 zabieg u każdego dziecka | profilaktyka | draft |  |
 | 23.1003 | Zabezpieczenie profilaktyczne bruzd lakiem szczelinowym - za każdy ząb | profilaktyka | draft |  |
-| 23.1004 | Zabezpieczanie profilaktyczne bruzd innymi materiałami | profilaktyka | not_started | Do opracowania w kolejnej partii. |
+| 23.1004 | Zabezpieczanie profilaktyczne bruzd innymi materiałami | profilaktyka | draft |  |
 | 23.1006 | Lakierowanie zębów 1/4 łuku zębowego | profilaktyka | draft |  |
 | 23.1007 | Leczenie nadwrażliwości zębów w obrębie 1/4 łuku zębowego | profilaktyka | draft |  |
-| 23.1008 | Impregnacja zębiny | profilaktyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1009 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 6. miesiącu życia | profilaktyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1010 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 9. miesiącu życia | profilaktyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1011 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 12. miesiącu życia | profilaktyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1012 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 2. roku życia | profilaktyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1013 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 4. roku życia | profilaktyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1014 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 5. roku życia | profilaktyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1015 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 6. roku życia | profilaktyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1016 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 7. roku życia | profilaktyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1017 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 10. roku życia | profilaktyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1018 | Profilaktyczne świadczenie stomatologiczne dla młodzieży w 12. roku życia | profilaktyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1019 | Profilaktyczne świadczenie stomatologiczne dla młodzieży w 13. roku życia | profilaktyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1020 | Profilaktyczne świadczenie stomatologiczne dla młodzieży w 16. roku życia | profilaktyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1021 | Profilaktyczne świadczenie stomatologiczne dla młodzieży w 19. roku życia | profilaktyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1022 | Profilaktyczne świadczenie stomatologiczne zapobiegające wadom zgryzu | profilaktyka | not_started | Do opracowania w kolejnej partii. |
-| 23.1023 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 3. roku życia | profilaktyka | not_started | Do opracowania w kolejnej partii. |
+| 23.1008 | Impregnacja zębiny | profilaktyka | requires_expert_review | Preparat i wskazania do weryfikacji (np. fluorek diaminy srebra – przebarwienia, zgoda). |
+| 23.1009 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 6. miesiącu życia | profilaktyka | draft |  |
+| 23.1010 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 9. miesiącu życia | profilaktyka | draft |  |
+| 23.1011 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 12. miesiącu życia | profilaktyka | draft |  |
+| 23.1012 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 2. roku życia | profilaktyka | draft |  |
+| 23.1013 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 4. roku życia | profilaktyka | draft |  |
+| 23.1014 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 5. roku życia | profilaktyka | draft |  |
+| 23.1015 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 6. roku życia | profilaktyka | draft |  |
+| 23.1016 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 7. roku życia | profilaktyka | draft |  |
+| 23.1017 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 10. roku życia | profilaktyka | draft |  |
+| 23.1018 | Profilaktyczne świadczenie stomatologiczne dla młodzieży w 12. roku życia | profilaktyka | draft |  |
+| 23.1019 | Profilaktyczne świadczenie stomatologiczne dla młodzieży w 13. roku życia | profilaktyka | draft |  |
+| 23.1020 | Profilaktyczne świadczenie stomatologiczne dla młodzieży w 16. roku życia | profilaktyka | draft |  |
+| 23.1021 | Profilaktyczne świadczenie stomatologiczne dla młodzieży w 19. roku życia | profilaktyka | draft |  |
+| 23.1022 | Profilaktyczne świadczenie stomatologiczne zapobiegające wadom zgryzu | profilaktyka | draft |  |
+| 23.1023 | Profilaktyczne świadczenie stomatologiczne dla dziecka w 3. roku życia | profilaktyka | draft |  |
 | 23.1101 | Leczenie próchnicy powierzchniowej - za każdy ząb | leczenie próchnicy | draft |  |
 | 23.1102 | Całkowite opracowanie ubytku próchnicowego z założeniem podkładu | leczenie próchnicy | draft |  |
 | 23.1103 | Całkowite opracowanie rozległego ubytku próchnicowego z założeniem podwójnego podkładu | leczenie próchnicy | draft |  |

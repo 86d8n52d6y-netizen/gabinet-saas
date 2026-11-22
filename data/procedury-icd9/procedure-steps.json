@@ -732,6 +732,92 @@
    "zrodla": [
     "SRC-PRAKTYKA"
    ]
+  },
+  {
+   "id": "KROK-WIZYTA-ADAPTACYJNA",
+   "nazwa": "Wizyta adaptacyjna",
+   "opis": "Zapoznanie dziecka z gabinetem i lekarzem (pokaż–powiedz–zrób), oglądanie jamy ustnej bez zabiegów inwazyjnych, rozmowa z opiekunem.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-INDEKS-PUW",
+   "nazwa": "Ocena intensywności próchnicy (puw / PUW)",
+   "opis": "Policz zęby z próchnicą (p/P), usunięte z powodu próchnicy (u/U) i wypełnione (w/W) – osobno dla zębów mlecznych i stałych; zapisz składowe.",
+   "zrodla": [
+    "SRC-DU-2025-615"
+   ]
+  },
+  {
+   "id": "KROK-FLUOR-WIEK",
+   "nazwa": "Profilaktyka fluorkowa dostosowana do wieku",
+   "opis": "Dobór preparatu i ilości fluorku do wieku i ryzyka próchnicy (pasta 1000 ppm F – ilość wielkości ziarna ryżu do 2 lat, wielkości ziarna grochu 2–6 lat; od 6 lat 1450 ppm F; lakier fluorkowy wg ryzyka).",
+   "uwaga": "Wartości wg EAPD 2019 – zweryfikować z aktualnym dokumentem przed wdrożeniem.",
+   "zrodla": [
+    "SRC-KLIN-EAPD-F-2019"
+   ]
+  },
+  {
+   "id": "KROK-INSTRUKTAZ-OPIEKUNA",
+   "nazwa": "Instruktaż opiekuna",
+   "opis": "Instruktaż higieny i diety dla opiekuna (kto i jak szczotkuje, ilość pasty, nocne karmienie, słodkie napoje), pokaz techniki.",
+   "zrodla": [
+    "SRC-KLIN-EAPD-F-2019"
+   ]
+  },
+  {
+   "id": "KROK-FLUORYZACJA",
+   "nazwa": "Fluoryzacja kontaktowa",
+   "opis": "Oczyszczenie i osuszenie zębów, aplikacja preparatu fluorkowego (żel w łyżce / pędzelkiem / lakier) na czas wg producenta, usunięcie nadmiaru.",
+   "uwaga": "Ryzyko połknięcia żelu u małych dzieci – preferowany lakier.",
+   "zrodla": [
+    "SRC-KLIN-EAPD-F-2019",
+    "SRC-KLIN-ADA-F-2013"
+   ]
+  },
+  {
+   "id": "KROK-IMPREGNACJA",
+   "nazwa": "Impregnacja zębiny",
+   "opis": "Oczyszczenie i osuszenie zmiany, aplikacja preparatu impregnującego (np. fluorek diaminy srebra – wg wskazań i zgody opiekuna na przebarwienie), ochrona tkanek miękkich.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-FIZYKOTERAPIA",
+   "nazwa": "Zabieg fizykoterapeutyczny",
+   "opis": "Zabieg wg protokołu urządzenia (parametry, czas, ochrona oczu przy laserze / promienniku), dokumentacja parametrów.",
+   "uwaga": "Ograniczone dowody skuteczności – karta do weryfikacji.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-POMOC-DORAZNA",
+   "nazwa": "Postępowanie w nagłym przypadku",
+   "opis": "Ocena stanu (ból, obrzęk, krwawienie, uraz, stan ogólny), leczenie doraźne usuwające przyczynę lub łagodzące objawy, skierowanie / plan dalszego leczenia.",
+   "uwaga": "Stany zagrożenia życia – postępowanie wg procedur gabinetu (resuscytacja, wezwanie ZRM).",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
+  },
+  {
+   "id": "KROK-ORZECZENIE",
+   "nazwa": "Wystawienie dokumentu",
+   "opis": "Ocena stanu jamy ustnej w zakresie potrzebnym do dokumentu, wystawienie orzeczenia / zaświadczenia, kopia w dokumentacji.",
+   "zrodla": [
+    "SRC-DU-2026-1391"
+   ]
+  },
+  {
+   "id": "KROK-ZNIECZ-ZEWNATRZUSTNE",
+   "nazwa": "Znieczulenie przewodowe zewnątrzustne",
+   "opis": "Blokada nerwu z dostępu zewnątrzustnego (np. przy szczękościsku) – lokalizacja punktów orientacyjnych, aspiracja, powolne podanie.",
+   "uwaga": "Technika specjalistyczna.",
+   "zrodla": [
+    "SRC-PRAKTYKA"
+   ]
   }
  ]
 }

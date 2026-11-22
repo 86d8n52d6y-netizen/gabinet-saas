@@ -3597,6 +3597,1222 @@
     "CHK-W-ZGODA"
    ],
    "elementy": []
+  },
+  {
+   "procedura": "PROC-23.1009",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1009-1",
+     "tekst": "Wizyta kontrolna z instruktażem matki w zakresie higieny jamy ustnej",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1009-2",
+     "tekst": "Badanie lekarskie stomatologiczne w zakresie początku ząbkowania i stanu jamy ustnej",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1010",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1010-1",
+     "tekst": "Ocena stanu uzębienia mlecznego z instruktażem matki w zakresie higieny jamy ustnej",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1010-2",
+     "tekst": "Profilaktyka fluorkowa przy braku przeciwwskazań",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1011",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1011-1",
+     "tekst": "Wizyta adaptacyjna z oceną stanu uzębienia mlecznego",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1011-2",
+     "tekst": "Kontrola higieny jamy ustnej (badanie kontrolne wraz z instruktażem matki w zakresie higieny jamy ustnej)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1011-3",
+     "tekst": "Profilaktyka fluorkowa przy braku przeciwwskazań",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1012",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1012-1",
+     "tekst": "Wizyta adaptacyjna",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1012-2",
+     "tekst": "Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy puw* dla zębów mlecznych",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1012-3",
+     "tekst": "Kontrola higieny jamy ustnej (badanie kontrolne wraz z instruktażem matki w zakresie higieny jamy ustnej)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1012-4",
+     "tekst": "Ocena stanu morfologicznego i funkcji żucia oraz wyrzynania zębów obejmuje: 1) sprawdzenie liczby jednoimiennych górnych i dolnych siekaczy po prawej i lewej stronie łuku oraz przebiegu linii pośrodkowej; 2) sposób zwierania się siekaczy; 3) sprawdzenie toru oddychania; 4) sposób układania dziecka do snu; 5) sposób karmienia; 6) sprawdzenie występowania nawyków w postaci ssania smoczków lub palców",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1012-5",
+     "tekst": "Zastosowanie działań zapobiegających wadom zgryzu – profilaktyka ortodontyczna. Pouczenie o dbałości oddychania przez nos, o odpowiednich sposobach układania dziecka do snu, konieczności odzwyczajenia od nawyków",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1012-6",
+     "tekst": "Profilaktyka profesjonalna próchnicy, w tym profilaktyka fluorkowa przy braku przeciwwskazań",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1023",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1023-1",
+     "tekst": "Wizyta adaptacyjna przysługuje w przypadku pierwszej wizyty dziecka (jeżeli nie wykorzystano świadczenia wcześniej) albo w przypadku dzieci odczuwających lęk związany z zabiegiem stomatologicznym (co najmniej 2 wizyty adaptacyjne mające na celu zmniejszenie odczuwania lęku przez dzieci oraz ocenę stanu zdrowia uzębienia)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1023-2",
+     "tekst": "Kontrola higieny jamy ustnej (badanie kontrolne wraz z instruktażem higieny jamy ustnej i oceną stanu uzębienia za pomocą wskaźnika intensywności próchnicy puw* dla zębów mlecznych)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1023-3",
+     "tekst": "Ocena stanu morfologicznego i funkcji żucia oraz wyrzynania zębów obejmuje: 1) sprawdzenie liczby zębów oraz przebiegu linii pośrodkowej; 2) sprawdzenie sposobu zwierania siekaczy; 3) sprawdzenie toru oddychania; 4) sprawdzenie występowania nawyków w postaci ssania smoczków lub palców",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1023-4",
+     "tekst": "Zastosowanie działań zapobiegających wadom zgryzu – profilaktyka ortodontyczna. Pouczenie dotyczące: 1) dbałości o to, by dziecko oddychało przez nos; 2) wprowadzania pokarmów o stałej konsystencji; 3) oduczania nawyków",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1023-5",
+     "tekst": "Profilaktyka profesjonalna próchnicy, w tym profilaktyka fluorkowa przy braku przeciwwskazań",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1013",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1013-1",
+     "tekst": "Wizyta adaptacyjna – przysługuje w przypadku pierwszej wizyty dziecka (jeżeli nie wykorzystało świadczenia wcześniej)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1013-2",
+     "tekst": "Kontrola higieny jamy ustnej (badanie kontrolne wraz z instruktażem higieny jamy ustnej i oceną stanu uzębienia za pomocą wskaźnika intensywności próchnicy puw* dla zębów mlecznych)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1013-3",
+     "tekst": "Ocena stanu morfologicznego i funkcji żucia oraz wyrzynania zębów obejmuje: 1) sprawdzenie liczby zębów oraz przebiegu linii pośrodkowej; 2) sposób zwierania siekaczy; 3) sprawdzenie toru oddychania; 4) sprawdzenie występowania nawyków",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1013-4",
+     "tekst": "Zastosowanie działań zapobiegających wadom zgryzu – profilaktyka ortodontyczna. Pouczenie o dbałości oddychania przez nos, o wprowadzaniu pokarmów o stałej konsystencji, odzwyczajaniu od nawyków",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1013-5",
+     "tekst": "Profilaktyka profesjonalna próchnicy, w tym profilaktyka fluorkowa przy braku przeciwwskazań",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1014",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1014-1",
+     "tekst": "Wizyta adaptacyjna – przysługuje w przypadku pierwszej wizyty dziecka (jeżeli nie wykorzystało świadczenia wcześniej)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1014-2",
+     "tekst": "Kontrola higieny jamy ustnej (badanie kontrolne wraz z instruktażem higieny jamy ustnej i oceną stanu uzębienia za pomocą wskaźnika intensywności próchnicy puw* dla zębów mlecznych)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1014-3",
+     "tekst": "Ocena stanu morfologicznego i funkcji żucia oraz wyrzynania zębów obejmuje: 1) sprawdzenie liczby zębów; 2) sposób zwierania się siekaczy oraz przebieg linii pośrodkowej i linii za tylnymi powierzchniami drugich zębów trzonowych mlecznych; 3) występowanie nawyków; 4) starcie powierzchni żujących mlecznych trzonowców; 5) sposób kontaktu kłów",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1014-4",
+     "tekst": "Zastosowanie działań zapobiegających wadom zgryzu – profilaktyka ortodontyczna. Nauczenie sposobów działań prowadzących do eliminacji nawyków ssania smoczków i oddychania z otwartymi ustami. Zalecenie podawania pokarmów o stałej konsystencji",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1014-5",
+     "tekst": "Profilaktyka profesjonalna próchnicy, w tym profilaktyka fluorkowa przy braku przeciwwskazań. Dotyczy zębów mlecznych i stałych",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1015",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1015-1",
+     "tekst": "Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy puw* dla zębów mlecznych i PUW* dla zębów stałych",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1015-2",
+     "tekst": "Kontrola higieny jamy ustnej (badanie kontrolne wraz z instruktażem higieny jamy ustnej)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1015-3",
+     "tekst": "Ocena stanu morfologicznego i funkcji żucia oraz wyrzynania zębów obejmuje: 1) sprawdzenie typu wyrzynania zębów stałych (siekaczowy lub trzonowcowy); 2) sposób zwierania się pierwszych stałych zębów trzonowych według zasad Angle'a; 3) występowanie nawyków ustnych; 4) starcie powierzchni żujących zębów mlecznych",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1015-4",
+     "tekst": "Zastosowanie działań zapobiegających wadom zgryzu – profilaktyka ortodontyczna. Nauczenie sposobów działań prowadzących do eliminacji nawyków ssania smoczków i oddychania z otwartymi ustami. Zalecenie podawania pokarmów o stałej konsystencji. W uzasadnianych przypadkach opiłowanie niestartych powierzchni mlecznych kłów prowadzących dolny łuk zębowy nadmiernie ku tyłowi",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1015-5",
+     "tekst": "Profilaktyka profesjonalna próchnicy, w tym profilaktyka fluorkowa przy braku przeciwwskazań. Dotyczy zębów mlecznych i stałych",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1016",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1016-1",
+     "tekst": "Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy puw* dla zębów mlecznych i PUW* dla zębów stałych",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1016-2",
+     "tekst": "Oddzielne podanie poszczególnych składowych wskaźnika PUW* dla zębów stałych i wskaźnika puw* dla zębów mlecznych",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1016-3",
+     "tekst": "Kwalifikacja do szczególnej opieki stomatologicznej w zakresie podstawowego leczenia stomatologicznego lub specjalistycznego leczenia stomatologicznego",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1016-4",
+     "tekst": "Wykrywanie nieprawidłowości (wad) zgryzu według wskaźnika IOTN: 1) wyraźnego zniekształcenia lub 2) wyraźnego ograniczenia funkcji żucia lub gryzienia oraz wyrzynania zębów",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1016-5",
+     "tekst": "Profesjonalna profilaktyka fluorkowa. Dotyczy zębów mlecznych i stałych",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1017",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1017-1",
+     "tekst": "Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy PUW* dla zębów stałych i puw* dla zębów mlecznych oraz ocena stanu tkanek przyzębia przez oznaczenie głębokości kieszonek dziąsłowych (PD), utraty przyczepu łącznotkankowego (CAL) oraz wskaźnika krwawienia (BOP)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1017-2",
+     "tekst": "Oddzielne podanie poszczególnych składowych wskaźnika PUW* dla zębów stałych i wskaźnika puw* dla zębów mlecznych",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1017-3",
+     "tekst": "Kwalifikacja do szczególnej opieki stomatologicznej w zakresie podstawowego leczenia stomatologicznego lub specjalistycznego leczenia stomatologicznego",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1017-4",
+     "tekst": "Wykrywanie nieprawidłowości (wad) zgryzu według wskaźnika IOTN: 1) wyraźnego zniekształcenia lub 2) wyraźnego ograniczenia funkcji żucia lub gryzienia oraz wyrzynania zębów",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1017-5",
+     "tekst": "Profesjonalna profilaktyka fluorkowa. Dotyczy zębów mlecznych i stałych",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1018",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1018-1",
+     "tekst": "Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy PUW* dla zębów stałych i ocena stanu tkanek przyzębia przez oznaczenie głębokości kieszonek dziąsłowych (PD), utraty przyczepu łącznotkankowego (CAL) oraz wskaźnika krwawienia (BOP)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1018-2",
+     "tekst": "Oddzielne podanie poszczególnych składowych wskaźnika PUW* dla zębów stałych",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1018-3",
+     "tekst": "Kwalifikacja do szczególnej opieki stomatologicznej w zakresie podstawowego leczenia stomatologicznego lub specjalistycznego leczenia stomatologicznego",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1018-4",
+     "tekst": "Wykrywanie nieprawidłowości (wad) zgryzu według wskaźnika IOTN: 1) wyraźnego zniekształcenia lub 2) wyraźnego ograniczenia funkcji żucia lub gryzienia oraz wyrzynania zębów",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1018-5",
+     "tekst": "Profesjonalna profilaktyka fluorkowa. Dotyczy zębów mlecznych i stałych",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1019",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1019-1",
+     "tekst": "Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy PUW* dla zębów stałych i ocena stanu tkanek przyzębia przez oznaczenie głębokości kieszonek dziąsłowych (PD), utraty przyczepu łącznotkankowego (CAL) oraz wskaźnika krwawienia (BOP)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1019-2",
+     "tekst": "Oddzielne podanie poszczególnych składowych wskaźnika PUW* dla zębów stałych",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1019-3",
+     "tekst": "Kwalifikacja do szczególnej opieki stomatologicznej w zakresie podstawowego leczenia stomatologicznego lub specjalistycznego leczenia stomatologicznego",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1019-4",
+     "tekst": "Wykrywanie nieprawidłowości (wad) zgryzu według wskaźnika IOTN: 1) wyraźnego zniekształcenia lub 2) wyraźnego ograniczenia funkcji żucia lub gryzienia oraz wyrzynania zębów",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1019-5",
+     "tekst": "Profesjonalna profilaktyka fluorkowa. Dotyczy zębów mlecznych i stałych",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1020",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1020-1",
+     "tekst": "Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy PUW* dla zębów stałych i ocena stanu tkanek przyzębia przez oznaczenie głębokości kieszonek dziąsłowych (PD), utraty przyczepu łącznotkankowego (CAL) oraz wskaźnika krwawienia (BOP)",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1020-2",
+     "tekst": "Oddzielne podanie poszczególnych składowych wskaźnika PUW* dla zębów stałych",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1020-3",
+     "tekst": "Kwalifikacja do szczególnej opieki stomatologicznej w zakresie podstawowego leczenia stomatologicznego lub specjalistycznego leczenia stomatologicznego",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1020-4",
+     "tekst": "Wykrywanie nieprawidłowości (wad) zgryzu według wskaźnika IOTN: 1) wyraźnego zniekształcenia lub 2) wyraźnego ograniczenia funkcji żucia lub gryzienia oraz wyrzynania zębów",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1020-5",
+     "tekst": "Profesjonalna profilaktyka fluorkowa. Dotyczy zębów mlecznych i stałych",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1021",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1021-1",
+     "tekst": "Ocena stanu uzębienia za pomocą wskaźnika intensywności próchnicy PUW* dla zębów stałych",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1021-2",
+     "tekst": "Oddzielne podanie poszczególnych składowych wskaźnika PUW*",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1021-3",
+     "tekst": "Ocena stanu zdrowia jamy ustnej z uwzględnieniem stanu uzębienia, przyzębia i błony śluzowej jamy ustnej",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    },
+    {
+     "id": "CHK-23.1021-4",
+     "tekst": "Wykrywanie nieprawidłowości (wad) zgryzu według wskaźnika IOTN: 1) wyraźnego zniekształcenia lub 2) wyraźnego ograniczenia funkcji żucia lub gryzienia oraz wyrzynania zębów",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "warunek": "element świadczenia wg zał. 10"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1022",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1022-1",
+     "tekst": "Ocena zgryzu i nawyków",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-ZG-WADY"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.06",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.06-1",
+     "tekst": "Współpraca dziecka (skala Frankla)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-DZ-WSPOLPRACA"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1001",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1001-1",
+     "tekst": "Zęby / zakres i preparat",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-ZEBY"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1002",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1002-1",
+     "tekst": "Zęby / zakres i preparat",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-ZEBY"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1004",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1004-1",
+     "tekst": "Zęby / zakres i preparat",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-ZEBY"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.1008",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.1008-1",
+     "tekst": "Zęby / zakres i preparat",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-ZEBY"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.0901",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.0901-1",
+     "tekst": "Parametry zabiegu (czas, dawka / moc)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-UWAGI"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.0902",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.0902-1",
+     "tekst": "Parametry zabiegu (czas, dawka / moc)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-UWAGI"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.0903",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.0903-1",
+     "tekst": "Parametry zabiegu (czas, dawka / moc)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-UWAGI"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.0904",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.0904-1",
+     "tekst": "Parametry zabiegu (czas, dawka / moc)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-UWAGI"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.0905",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.0905-1",
+     "tekst": "Parametry zabiegu (czas, dawka / moc)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-UWAGI"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.0906",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.0906-1",
+     "tekst": "Parametry zabiegu (czas, dawka / moc)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-UWAGI"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.0907",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.0907-1",
+     "tekst": "Parametry zabiegu (czas, dawka / moc)",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-UWAGI"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.05",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.05-1",
+     "tekst": "Rozpoznanie i wykonane leczenie doraźne",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-PRZEBIEG"
+    },
+    {
+     "id": "CHK-23.05-2",
+     "tekst": "Plan dalszego leczenia / skierowanie",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-DECYZJA"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.07",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.07-1",
+     "tekst": "Miejsce i godzina udzielenia świadczenia",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-UWAGI"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.0104",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.0104-1",
+     "tekst": "Kopia / treść dokumentu w dokumentacji",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-DU-2026-1391"
+     ],
+     "pole": "POLE-UWAGI"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.0106",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.0106-1",
+     "tekst": "Kopia / treść dokumentu w dokumentacji",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-DU-2026-1391"
+     ],
+     "pole": "POLE-UWAGI"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.0303",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.0303-1",
+     "tekst": "Opis zdjęć",
+     "poziom": "rozliczeniowe",
+     "podstawa": "wymaganie_nfz",
+     "zrodla": [
+      "SRC-DU-2025-615"
+     ],
+     "pole": "POLE-RTG-OPIS"
+    }
+   ]
+  },
+  {
+   "procedura": "PROC-23.0404",
+   "wspolne": [
+    "CHK-W-DATA",
+    "CHK-W-OPIS",
+    "CHK-W-ROZPOZNANIE",
+    "CHK-W-LEKARZ",
+    "CHK-W-ZGODNOSC"
+   ],
+   "elementy": [
+    {
+     "id": "CHK-23.0404-1",
+     "tekst": "Preparat, dawka, miejsce",
+     "poziom": "zalecane",
+     "podstawa": "zalecenie_kliniczne",
+     "zrodla": [
+      "SRC-PRAKTYKA"
+     ],
+     "pole": "POLE-ZNIECZ-PREPARAT"
+    }
+   ]
   }
  ]
 }

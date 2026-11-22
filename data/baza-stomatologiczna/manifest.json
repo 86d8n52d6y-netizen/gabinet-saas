@@ -35,15 +35,15 @@
   },
   {
    "plik": "data/procedury-icd9/procedures.json",
-   "sha256": "ef22a4acea2539fe44f40b28068a3f3243e9fe24e04c3766013280ac13cfe402",
+   "sha256": "a75c5d33ec1bf2528a8337259fc8bffb93277f39688f2cbc2e2303a0c0a6c6f4",
    "schemat": "data/baza-stomatologiczna/schemas/procedures.schema.json",
    "rekordy": 266
   },
   {
    "plik": "data/procedury-icd9/procedure-steps.json",
-   "sha256": "b6aa9952365e20b8c4d7fd0c9b703497eda16efc98c12f61fc4818bb5218c173",
+   "sha256": "d3e110f1ce79a428c738fe60e88f61f75aa4529ba99c613b2a89f1fd5cf49667",
    "schemat": "data/baza-stomatologiczna/schemas/procedure-steps.schema.json",
-   "rekordy": 84
+   "rekordy": 94
   },
   {
    "plik": "data/procedury-icd9/procedure-materials.json",
@@ -53,35 +53,35 @@
   },
   {
    "plik": "data/procedury-icd9/procedure-templates.json",
-   "sha256": "bcaa859dc13ff8f20999acea7b6faea90fb8d7ddf835d0d12c60f63ebe7b8f8d",
+   "sha256": "88ee67e44927390ca215ced6f87d00ee4a0b20f298553a9434f2cb603d42a24f",
    "schemat": "data/baza-stomatologiczna/schemas/szablony.schema.json",
-   "rekordy": 378
+   "rekordy": 477
   },
   {
    "plik": "data/procedury-icd9/procedure-checklists.json",
-   "sha256": "defa1d0c85bd1849c490caf9d828e3e749429a45e1be96bcbfe4913fea544f70",
+   "sha256": "ae40645ae03622311d3b74c55edb682951d575da690b32cffbf3100fc438ef55",
    "schemat": "data/baza-stomatologiczna/schemas/procedure-checklists.schema.json",
-   "rekordy": 126
+   "rekordy": 159
   },
   {
    "plik": "data/procedury-icd9/procedure-diagnosis-mappings.json",
-   "sha256": "0d69d7963acbd8d280b08383220f2e76be8f10527daba69c2cf5fc79110cc2d8",
+   "sha256": "b9b32dd4463c3f2d89f8ccf6bd547d471eb3defd1d618ecfb539e54492a12833",
    "schemat": "data/baza-stomatologiczna/schemas/procedure-diagnosis-mappings.schema.json",
-   "rekordy": 263
+   "rekordy": 303
   }
  ],
  "liczniki": {
   "badania": 17,
   "procedury": 266,
   "procedury_wg_statusu": {
-   "draft": 85,
-   "not_started": 140,
-   "requires_expert_review": 41
+   "draft": 108,
+   "requires_expert_review": 51,
+   "not_started": 107
   },
-  "szablony": 429,
+  "szablony": 528,
   "pola": 135,
-  "kroki": 84,
+  "kroki": 94,
   "materialy": 58,
-  "mapowania_icd10": 263
+  "mapowania_icd10": 303
  }
 }
