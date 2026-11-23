@@ -473,12 +473,12 @@ function quickTop(k, list, pid) { const c = new Map(); for (const m of S.visits.
 function quickHTML(it, i, f) {
   const p = procOf(it), v = it.vals[f.k], b = (a, val, lab, on) => '<button type="button" class="pw-ib pw-qb' + (on ? ' on' : '') + '" data-a="' + a + '" data-i="' + i + '" data-k="' + esc(f.k) + '" data-v="' + esc(val) + '" aria-pressed="' + !!on + '">' + esc(lab) + '</button>';
   let q = [];
-  if (f.k === 'znprep' && p.karta && it.vals.zn && !['nie stosowano', 'powierzchniowe'].includes(it.vals.zn) && it.vals[f.k] === undefined) it.vals[f.k] = QBASE.znprep[0];
   if (f.k === 'wywiad' && ['zach', 'endo', 'diag'].includes(p.kat)) { const cur = String(v || '').split(',').map(x => x.trim()); q = DOLEGL.map(d => b('qtog', d, d, cur.includes(d))); }
   else if (f.k === 'zndawka') { const zn = it.vals.zn; if (!zn || zn === 'nie stosowano') return ''; if (v === undefined || v === '') it.vals[f.k] = '1,7'; q = ZN_DOSE.map(d => b('qset', d[0], d[1], String(it.vals[f.k]) === d[0])); }
   else if (f.t !== 'area' && f.t !== 'multi' && f.t !== 'select' && f.t !== 'bool' && f.t !== 'rows' && f.t !== 'num' && f.t !== 'date' && f.t !== 'tooth' && f.t !== 'teeth') { const l = qSug(f); if (l.length) q = quickTop(f.k, l, f.qloc ? it.pid : null).map(x => b('qset', x, x, v === x)); }
   return q.length ? '<div class="pw-q">' + q.join('') + '</div>' : ''; }
 function fieldHTML(it, i, f) {
+  if (f.k === 'znprep' && procOf(it).karta && it.vals.zn && !['nie stosowano', 'powierzchniowe'].includes(it.vals.zn) && it.vals[f.k] === undefined) it.vals[f.k] = QBASE.znprep[0];   // przed rysowaniem pola – widać od razu
   const id = 'f_' + it.u + '_' + f.k, v = it.vals[f.k], d = ' data-i="' + i + '" data-k="' + f.k + '"';
   const lab = '<label for="' + id + '">' + esc(f.l) + (f.req ? ' <span class="req" title="wymagane">*</span>' : '') + '</label>';
   const wide = ['area', 'multi', 'rows'].includes(f.t) ? ' w' : '';
