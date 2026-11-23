@@ -277,3 +277,14 @@ Sposób weryfikacji: grupy w pytaniach do klikania („Zatwierdzam” / pojedync
 - Zrobione: poprawki P44–P44i w `tests/tools/przenies_generator.py` (kody, teksty, punkty, NFZ_MIN, NFZ_ONLY „dosumować wyłącznie”, limity roczne ST30D/ST30F/ST33, ostrzeżenia, podpowiedź „1× ST30D + reszta ST30E”), test `tests/e2e/t_12_st30d_st30f.py`.
 - Do zrobienia: uruchomić t_12 (poprawić test/kod przy błędach), t_4b (ST30G zmienione celowo – porównanie ze starą aplikacją może wymagać wyjątku), pełna regresja, wiersz w POSTEP.md, PR i scalenie, potem testy Patryka na Macu (lista w rozmowie: aktualizacja ZIP + `bash zainstaluj-mac.command`, sprawdzić Opis z karty/badanie, kiretaż 14/15 lat, ST30D/ST30F).
 - Katalog NFZ (tabela `app.nfz_catalog`) nie ma ST30D/ST30F – serwer ich nie potrzebuje (punkty liczy przeglądarka); dopisanie wymaga migracji 0009 – tylko za zgodą Patryka.
+
+## 13. Stan na 23.11.2026 (noc) – karty procedur, zakładka „NFZ”, pakiety (zadanie Patryka z 22.11.2026, pkt 1–8)
+
+Decyzje Patryka: osobna pozycja menu „NFZ” (Opisy NFZ nietknięte), wszystkie 144 karty w Opisach prywatnych, wizyty z „NFZ” w tej samej historii / Zarobkach, opis w „NFZ” wyłącznie z kart (bez szablonów Opisów NFZ), blok dokumentacyjny (puste obowiązkowe → [UZUPEŁNIJ]), „tylko Dentocaine”, skład pakietów z zał. 1d zatwierdzony.
+- **K1 (PR #32, w main):** `generator/prywatne-karty.js` – 144 karty do klikania w Opisach prywatnych + blok dokumentacyjny (rozp. MZ Dz.U. 2026/1391; u.p.p. Dz.U. 2024/581 art. 9, 16–18; u.z.l. Dz.U. 2026/37 art. 31–34).
+- **E4a:** `generator/nfz-pakiety.js` (silnik pakietów, współczynniki jak `nfzPoints()` w nfz.html) + `scripts/nfz_pakiety_przegladarka.py` → `generator/nfz-pakiety-dane.js`; `tests/nfz-pakiety.test.ts`.
+- **E4b/c:** `generator/nfz-karty.html` (trasa `/nfz`, `page('nfzk')`), 83 karty rozliczane w NFZ, zapis: treść w kv „nfzk:w:…” (urządzenie), metadane przez `/api/nfz/wizyty` z id „k-…”; `listVisits(c, 'opisy'|'karty')` rozdziela listy (Opisy NFZ nie widzą „k-…”); ostrzeżenie o duplikacie; testy `t_14`.
+- **Pkt 5:** podpowiedzi „3 najczęstsze” – Opisy prywatne (karty), zakładka NFZ, Zlecenia (laboratorium, implant, kolor; `t_15`).
+- **Dane NFZ:** skład 16 pakietów i listy ST1–ST5 wszystkich 43 pakietów z zał. 2 do 95/2026/DSOZ w `data/nfz/products.json`.
+- **Otwarte (rano):** 46 świadczeń jednostkowych z zał. 1b – widoczne, NIE wliczane do sumy; do akceptacji grupami: `docs/nfz/DO_AKCEPTACJI_ZAL_1B.md` (przy zatwierdzeniu dodać wyłączenia ×1,5: 23.06, 23.0304, profilaktyka § 3 ust. 1 pkt 10). Testy Patryka na Macu (zakładka NFZ, Zlecenia).
+- Uwaga techniczna: nie przebudowywać (`next build`) w trakcie regresji e2e – serwer testowy korzysta z `.next/standalone`.
