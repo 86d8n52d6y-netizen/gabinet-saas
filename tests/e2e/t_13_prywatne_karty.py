@@ -38,7 +38,7 @@ with sync_playwright() as p:
     pg.click(f'.pw-qb[data-k="k_rozpoznanie"][data-v="{sug[0]}"]')
     pg.select_option(pole(pg, 0, 'zn'), 'nasiękowe'); pg.wait_for_timeout(150)
     prep = pg.evaluate("[...document.querySelectorAll('.pw-qb[data-k=\"znprep\"]')].map(b=>b.dataset.v)")
-    chk('Środek znieczulający: Dentocaine wpisane samo (decyzja Patryka) i pierwsze w podpowiedziach', pg.evaluate("V.items[0].vals.znprep").startswith('Dentocaine') and 'Dentocaine' in prep[0], prep)
+    chk('Środek znieczulający: Dentocaine wpisane samo (decyzja Patryka) i pierwsze w podpowiedziach', pg.evaluate("V.items[0].vals.znprep").startswith('Dentocaine') and 'Dentocaine' in prep[0] and pg.input_value(pole(pg, 0, 'znprep')).startswith('Dentocaine'), prep)
     chk('Znieczulenie w formularzu zaraz pod rozpoznaniem', pg.evaluate("(()=>{const k=PROC.get('karta-23_1502').fields.map(f=>f.k);return k.indexOf('zn')===k.indexOf('k_rozpoznanie')+1&&k.indexOf('znprep')===k.indexOf('zn')+1})()"))
     chk('Dawka: przyciski ½ / 1 / 2 amp., domyślnie 1,7 ml', pg.locator('.pw-qb[data-k="zndawka"]').count() == 3 and pg.evaluate("V.items[0].vals.zndawka") == '1,7')
     pg.click(f'.pw-qb[data-k="znprep"][data-v="{prep[0]}"]')

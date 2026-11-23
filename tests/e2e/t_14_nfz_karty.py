@@ -28,7 +28,7 @@ with sync_playwright() as p:
     w = W(pg)
     chk('ekstrakcja + znieczulenie przewodowe → ST02 104 pkt; znieczulenie w pakiecie (0 pkt)', [x['kod'] for x in w['wiersze']] == ['ST02'] and w['suma'] == 104 and w['skladowe'][0]['kod'] == '23.0403', w)
     chk('tabela wyceny i „W pakiecie” na ekranie', 'ST02' in pg.inner_text('[data-testid="nk-tab"]') and '23.0403' in pg.inner_text('[data-testid="nk-sklad"]'))
-    chk('Dentocaine wpisane samo przy znieczuleniu iniekcyjnym', pg.evaluate("S.items[0].vals.znprep").startswith('Dentocaine'))
+    chk('Dentocaine i 1,7 ml wpisane samo – widoczne w polach od razu', pg.evaluate("S.items[0].vals.znprep").startswith('Dentocaine') and pg.input_value(pole(0, 'znprep')).startswith('Dentocaine') and pg.input_value(pole(0, 'zndawka')) == '1,7')
     chk('kwota: 104 pkt × 1,84 zł = 191,36 zł', '191,36' in pg.inner_text('[data-testid="nk-zl"]'), pg.inner_text('[data-testid="nk-zl"]'))
 
     # wypełnienie 1 powierzchni 36

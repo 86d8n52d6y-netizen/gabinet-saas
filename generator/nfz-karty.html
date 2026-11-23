@@ -184,6 +184,8 @@ function histHTML() {
 
 /* ---------- widok ---------- */
 function fieldHTML(it, i, f) {
+  if (f.k === 'znprep' && it.vals.zn && !['nie stosowano', 'powierzchniowe'].includes(it.vals.zn) && it.vals[f.k] === undefined) it.vals[f.k] = DENTO;   // decyzja Patryka: „tylko Dentocaine” (przed rysowaniem pola – widać od razu)
+  if (f.k === 'zndawka' && (it.vals[f.k] === undefined || it.vals[f.k] === '')) it.vals[f.k] = '1,7';
   const id = 'f_' + it.u + '_' + f.k, v = it.vals[f.k], d = ' data-i="' + i + '" data-k="' + esc(f.k) + '"';
   const lab = '<label for="' + id + '">' + esc(f.l) + (f.req ? ' <span class="req" title="wymagane">*</span>' : '') + '</label>';
   let h, w = ['area', 'multi'].includes(f.t) ? ' w' : '';
@@ -197,8 +199,7 @@ function fieldHTML(it, i, f) {
     default: h = lab + '<input class="nk-in" id="' + id + '"' + d + ' autocomplete="off"' + (f.t === 'tooth' || f.t === 'teeth' ? ' inputmode="numeric" placeholder="' + (f.t === 'tooth' ? 'np. 36' : 'np. 33, 43') + '"' : '') + ' value="' + esc(v || '') + '">';
   }
   let q = [];
-  if (f.k === 'znprep' && it.vals.zn && !['nie stosowano', 'powierzchniowe'].includes(it.vals.zn) && v === undefined) it.vals[f.k] = DENTO;   // decyzja Patryka: „tylko Dentocaine”
-  if (f.k === 'zndawka') { if (v === undefined || v === '') it.vals[f.k] = '1,7'; q = ZN_DOSE.map(x => [x[0], x[1]]); }
+  if (f.k === 'zndawka') q = ZN_DOSE.map(x => [x[0], x[1]]);
   else if (f.t === 'text') q = qTop(it, f).map(x => [x, x]);
   if (q.length) h += '<div class="nk-q">' + q.map(([val, l]) => '<button type="button" data-a="qset"' + d + ' data-v="' + esc(val) + '" aria-pressed="' + (String(it.vals[f.k] || '') === val) + '">' + esc(l) + '</button>').join('') + '</div>';
   return '<div class="nk-f' + w + '">' + h + '</div>';
