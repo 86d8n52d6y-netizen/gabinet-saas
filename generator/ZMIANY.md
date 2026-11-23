@@ -124,6 +124,12 @@ Plik `wspolne.js` (sejf z hasłem w przeglądarce) zastąpiony przez `gabinet-sa
 | R14e | wywołanie podpowiedzi z identyfikatorem procedury (pola z kart) |
 | R14f | Szablony: karty procedur bez edycji i duplikowania (tekst z bazy kart zweryfikowanych) – ulubione i ukrywanie działają |
 | R14g | karty: Dentocaine wpisywane samo przy znieczuleniu iniekcyjnym (decyzja Patryka 22.11.2026: „tylko Dentocaine”), jak dawka 1,7 ml – do zmiany; przy powierzchniowym nic |
+| R15 | warianty leczenia zachowawczego (prompt Patryka 23.11.2026, pkt 4): 1, 2, 3 powierzchnie i nakład jako osobne procedury z ceną w Cenniku (generator/prywatne-warianty.js) |
+| R16 | błąd „0 zł lekarza” (prompt Patryka 23.11.2026, pkt 6): brak % w Cenniku → % gabinetu z „Gabinety” (modele procentowe); % zapisywany w pozycji wizyty (zmiana % później nie przelicza historii) |
+| R16a | komunikat o braku % – wskazuje oba miejsca ustawienia (Cennik albo Gabinety) i gabinety godzinowe/dzienne |
+| R17 | diagnostyka i odporność startu (prompt Patryka 23.11.2026, pkt 9): bezpiecznik po 15 s (jedno ponowne otwarcie bazy mieści się przed przeładowaniem), komunikat z etapem, na którym start stanął; etapy modułu w G.etap |
+| R17a | etapy startu modułu (dane modułu → gotowe) |
+| R17b | etap: gotowe |
 
 ## Kalendarz (`kalendarz.html`)
 
@@ -176,3 +182,8 @@ Plik `wspolne.js` (sejf z hasłem w przeglądarce) zastąpiony przez `gabinet-sa
 | K41c | start: w widoku Zarobków właściwa zakładka; stare adresy #podsumowanie / #rozliczenia prowadzą do Zarobków |
 | K41d | przejścia do zakładek z innych miejsc (podpowiedzi, terminy): Podsumowanie/Rozliczenia → Zarobki; z widoku Zarobków do pozostałych → Kalendarz |
 | K41e | Rozliczenia: kolumna „Zarobek lekarza (z dyżurów)” – ta sama nazwa i kwota co w Zarobkach |
+| K60 | obrót a opisy (prompt Patryka 23.11.2026, pkt 7.2): przy obrocie dyżuru wybór „obejmuje opisy z tego dnia” (domyślnie – jak dotąd) albo „dodatkowy (poza opisami)” – Zarobki nie liczą tego samego przychodu dwa razy |
+| K60a | obrót a opisy – wartość przy edycji dyżuru |
+| K60b | obrót a opisy – zapis w dyżurze |
+| K60c | obrót a opisy – przełącznik |
+| K61 | ustawienia gabinetu w Kalendarzu bez rozliczeń (prompt Patryka 23.11.2026, pkt 8): bez pól Rozliczenie, Twój %, Minimum za dzień, Spodziewany przychód, Termin płatności – ustawienia w Gabinety (app.clinics – źródło prawdy), dane zostają |

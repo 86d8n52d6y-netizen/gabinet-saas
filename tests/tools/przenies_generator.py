@@ -419,6 +419,26 @@ PATCHES_PRYW = [
   ('R14g karty: Dentocaine wpisywane samo przy znieczuleniu iniekcyjnym (decyzja Patryka 22.11.2026: „tylko Dentocaine”), jak dawka 1,7 ml – do zmiany; przy powierzchniowym nic',
    "function fieldHTML(it, i, f) {\n  const id = 'f_' + it.u + '_' + f.k, v = it.vals[f.k],",
    "function fieldHTML(it, i, f) {\n  if (f.k === 'znprep' && procOf(it).karta && it.vals.zn && !['nie stosowano', 'powierzchniowe'].includes(it.vals.zn) && it.vals[f.k] === undefined) it.vals[f.k] = QBASE.znprep[0];   // przed rysowaniem pola – widać od razu\n  const id = 'f_' + it.u + '_' + f.k, v = it.vals[f.k],"),
+  ('R15 warianty leczenia zachowawczego (prompt Patryka 23.11.2026, pkt 4): 1, 2, 3 powierzchnie i nakład jako osobne procedury z ceną w Cenniku (generator/prywatne-warianty.js)',
+   '<script src="/opisy-nfz/zasoby/prywatne-katalog.js"></script>\n<script src="/opisy-nfz/zasoby/karty-opisy.js"></script>',
+   '<script src="/opisy-nfz/zasoby/prywatne-katalog.js"></script>\n<script src="/opisy-nfz/zasoby/prywatne-warianty.js"></script>\n<script src="/opisy-nfz/zasoby/karty-opisy.js"></script>'),
+  ('R16 błąd „0 zł lekarza” (prompt Patryka 23.11.2026, pkt 6): brak % w Cenniku → % gabinetu z „Gabinety” (modele procentowe); % zapisywany w pozycji wizyty (zmiana % później nie przelicza historii)',
+   "  return { c: e.c != null ? e.c : null, m: own === 'kw' ? 'kw' : 'pct', p: own === 'kw' ? null : own === 'pct' ? e.p : (g.pct != null ? g.pct : null), kw: own === 'kw' ? (e.kw || 0) : null };\n}",
+   "  return { c: e.c != null ? e.c : null, m: own === 'kw' ? 'kw' : 'pct', p: own === 'kw' ? null : own === 'pct' ? e.p : (g.pct != null ? g.pct : clinicPct(gab)), kw: own === 'kw' ? (e.kw || 0) : null };\n}\n"
+   "function clinicPct(gab) {                                         // % gabinetu z „Gabinety” (model procentowy); godzinowy / dzienny / bez gabinetu – brak %\n"
+   "  const k = (S.clinics || []).find(x => x.id === gab); return k && /^pct/.test(k.model || '') && k.pct != null && !isNaN(+k.pct) ? +k.pct : null; }"),
+  ('R16a komunikat o braku % – wskazuje oba miejsca ustawienia (Cennik albo Gabinety) i gabinety godzinowe/dzienne',
+   "' – ustaw domyślny % gabinetu w zakładce Cennik.</div>'",
+   "' – ustaw % w zakładce Cennik albo model procentowy gabinetu w „Gabinety” (gabinet godzinowy / dzienny lub wizyta bez gabinetu: wynagrodzenie z dyżuru w Kalendarzu).</div>'"),
+  ('R17 diagnostyka i odporność startu (prompt Patryka 23.11.2026, pkt 9): bezpiecznik po 15 s (jedno ponowne otwarcie bazy mieści się przed przeładowaniem), komunikat z etapem, na którym start stanął; etapy modułu w G.etap',
+   " Dane są bezpieczne. <button type=\"button\" class=\"g-btn sm\" onclick=\"location.reload()\">Odśwież</button> – jeśli nie pomoże, zamknij inne karty z Gabinetem.</div>'; }, 8000);",
+   " Dane są bezpieczne. <button type=\"button\" class=\"g-btn sm\" onclick=\"location.reload()\">Odśwież</button> – jeśli nie pomoże, zamknij inne karty z Gabinetem.<br><span class=\"g-small\" data-testid=\"start-etap\">Etap: ' + esc(G.etapNow || 'start') + '</span></div>'; try { console.warn('[Gabinet] start Opisów prywatnych stanął', G.etapy); } catch (e) { } }, 15000);"),
+  ('R17a etapy startu modułu (dane modułu → gotowe)',
+   "  await G.ready('prywatne');\n  uiLoad();",
+   "  await G.ready('prywatne');\n  G.etap('dane Opisów prywatnych');\n  uiLoad();"),
+  ('R17b etap: gotowe',
+   "  await autoPurge();\n  S.ready = true;",
+   "  await autoPurge();\n  S.ready = true; G.etap('gotowe');"),
 ]
 
 PATCHES_KAL = [
@@ -563,6 +583,25 @@ PATCHES_KAL = [
   ('K41e Rozliczenia: kolumna „Zarobek lekarza (z dyżurów)” – ta sama nazwa i kwota co w Zarobkach',
    "<th class=\"r\">Z Twojego kalendarza</th>",
    "<th class=\"r\">Zarobek lekarza (z dyżurów)</th>"),
+  ('K60 obrót a opisy (prompt Patryka 23.11.2026, pkt 7.2): przy obrocie dyżuru wybór „obejmuje opisy z tego dnia” (domyślnie – jak dotąd) albo „dodatkowy (poza opisami)” – Zarobki nie liczą tego samego przychodu dwa razy',
+   "'<label class=\"f\">Lab / implanty<input type=\"text\" inputmode=\"decimal\" id=\"f-lab\" value=\"' + esc(d.lab) + '\" placeholder=\"0\"></label></div>' + hintHtml(d);",
+   "'<label class=\"f\">Lab / implanty<input type=\"text\" inputmode=\"decimal\" id=\"f-lab\" value=\"' + esc(d.lab) + '\" placeholder=\"0\"></label></div>' +\n"
+   "    '<div class=\"f\"><span class=\"small\"><b>Obrót a opisy z tego dnia</b></span><div class=\"seg\" role=\"group\" aria-label=\"Obrót a opisy\" data-testid=\"obrot-typ\">' +\n"
+   "    '<button type=\"button\" data-a=\"f-otyp\" data-v=\"opisy\" aria-pressed=\"' + (d.obrotTyp !== 'dodatkowy') + '\">Obejmuje opisy z tego dnia</button>' +\n"
+   "    '<button type=\"button\" data-a=\"f-otyp\" data-v=\"dodatkowy\" aria-pressed=\"' + (d.obrotTyp === 'dodatkowy') + '\">Dodatkowy (poza opisami)</button></div>' +\n"
+   "    '<span class=\"hint\">' + (d.obrotTyp === 'dodatkowy' ? 'Zarobki: opisy + ten obrót (usługi, których nie ma w opisach).' : 'Zarobki: przychód dnia = ten obrót; opisy z tego dnia nie są doliczane drugi raz.') + '</span></div>' + hintHtml(d);"),
+  ('K60a obrót a opisy – wartość przy edycji dyżuru',
+   "amount: inputNum(s.amount), override: inputNum(s.override), note: s.note || '', timesTouched: true };",
+   "amount: inputNum(s.amount), override: inputNum(s.override), note: s.note || '', timesTouched: true, obrotTyp: s.obrotTyp === 'dodatkowy' ? 'dodatkowy' : 'opisy' };"),
+  ('K60b obrót a opisy – zapis w dyżurze',
+   "amount: num(d.amount), override: num(d.override), note: (d.note || '').trim() };",
+   "amount: num(d.amount), override: num(d.override), note: (d.note || '').trim(), obrotTyp: d.obrotTyp === 'dodatkowy' ? 'dodatkowy' : 'opisy' };"),
+  ('K60c obrót a opisy – przełącznik',
+   "  'f-status': function (el) { UI.edit.draft.status = el.dataset.v; render(); },",
+   "  'f-status': function (el) { UI.edit.draft.status = el.dataset.v; render(); },\n  'f-otyp': function (el) { UI.edit.draft.obrotTyp = el.dataset.v === 'dodatkowy' ? 'dodatkowy' : 'opisy'; render(); },"),
+  ('K61 ustawienia gabinetu w Kalendarzu bez rozliczeń (prompt Patryka 23.11.2026, pkt 8): bez pól Rozliczenie, Twój %, Minimum za dzień, Spodziewany przychód, Termin płatności – ustawienia w Gabinety (app.clinics – źródło prawdy), dane zostają',
+   '      sel(\'Rozliczenie\', p + \'model\', b + \'model\', c.model, Object.keys(MODELS).map(function (k) { return [k, MODELS[k]]; })) +\n      \'<div class="frow">\' + modelFields + fld(\'Minimum za dzień (zł)\', p + \'min\', b + \'minDaily\', c.minDaily, { num: 1, hint: \'0 = brak\' }) + \'</div>\' +\n      \'<div class="frow">\' + fld(\'Spodziewany przychód z dyżuru\', p + \'exp\', b + \'expected\', c.expected, { num: 1, hint: \'do prognozy, zanim powstanie historia\' }) + fld(\'Termin płatności (dni)\', p + \'pay\', b + \'payDays\', c.payDays, { num: 1 }) + \'</div>\' +\n',
+   '      \'<p class="small muted" data-testid="rozl-w-gabinetach">Rozliczenie gabinetu (model, Twój %, stawki, minimum za dzień) ustawiasz w <a href="/gabinety">Gabinety</a>, a zarobki i rozliczenia widzisz w <a href="/zarobki">Zarobki</a>.</p>\' +\n'),
 ]
 
 def przenies(plik, patches):

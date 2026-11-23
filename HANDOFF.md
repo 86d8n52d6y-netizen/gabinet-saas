@@ -288,3 +288,11 @@ Decyzje Patryka: osobna pozycja menu „NFZ” (Opisy NFZ nietknięte), wszystki
 - **Dane NFZ:** skład 16 pakietów i listy ST1–ST5 wszystkich 43 pakietów z zał. 2 do 95/2026/DSOZ w `data/nfz/products.json`.
 - **Otwarte (rano):** 46 świadczeń jednostkowych z zał. 1b – widoczne, NIE wliczane do sumy; do akceptacji grupami: `docs/nfz/DO_AKCEPTACJI_ZAL_1B.md` (przy zatwierdzeniu dodać wyłączenia ×1,5: 23.06, 23.0304, profilaktyka § 3 ust. 1 pkt 10). Testy Patryka na Macu (zakładka NFZ, Zlecenia).
 - Uwaga techniczna: nie przebudowywać (`next build`) w trakcie regresji e2e – serwer testowy korzysta z `.next/standalone`.
+
+## 14. Stan na 23.11.2026 (rano) – porządki: katalog, opisy, Kalendarz, centralne Zarobki
+
+- Katalog procedur (`/katalog-procedur`, `src/lib/katalog.ts`): Tabela 1 – NFZ (83 karty, rozliczenie z `nfz-pakiety-dane.js`), Tabela 2 – prywatne (własne + warianty + 61 kart nie-NFZ, ceny z Cennika).
+- Opisy prywatne: `generator/prywatne-warianty.js` (R15), % z Gabinetów (R16), diagnostyka startu (R17, `G.etap` w gabinet-saas.js).
+- Zarobki: `src/lib/zarobki-zrodla.ts` – jedyne miejsce liczenia przychodu i wynagrodzenia; zasady i decyzje: `docs/ZAROBKI_ZRODLA.md`.
+- Kalendarz: `obrotTyp` przy dyżurze (K60), ustawienia rozliczeń tylko w Gabinety (K61).
+- Otwarte: Kalendarz (Podsumowanie, Podatki i ZUS) nadal liczy z dyżurów – przy dniach bez obrotu prognoza podatku nie widzi opisów; Safari nie do sprawdzenia w testach (diagnostyka etapów w komunikacie); przekierowanie logowania podaje host z serwera (localhost).

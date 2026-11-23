@@ -65,7 +65,7 @@ const REG: Record<string, string> = { skala: 'skala 12% / 32%', liniowy: 'liniow
  * Netto (grosze) odbytych dyżurów w okresie, per gabinet, z ustawień Kalendarza.
  * docs – dokumenty Kalendarza (settings z gabinetami z tabeli + miesiące mRRRR-MM), today – dziś (RRRR-MM-DD, Europe/Warsaw).
  */
-export async function kalNettoZ(docs: Record<string, unknown>, from: string, to: string, today: string): Promise<NettoWynik> {
+export async function kalNettoZ(docs: Record<string, unknown>, from: string, to: string, today: string, brutto?: Map<string, Map<string, number>>): Promise<NettoWynik> {
   const perClinic = new Map<string, number>();
   if (!docs.settings || typeof docs.settings !== 'object') return { info: { ok: false, zasady: [], zusNiepotwierdzony: false, szacunek: false }, perClinic };
   const E = await silnik();
@@ -93,7 +93,9 @@ export async function kalNettoZ(docs: Record<string, unknown>, from: string, to:
     return Math.min(0.95, Math.max(0, o.reserve / o.rev));
   };
   const clinics = new Map((settings.clinics as Doc[]).map(k => [String(k.id), k]));
-  for (const [mk, md] of months) {
+  if (brutto) {                                                                          // centralny mechanizm zarobków (23.11.2026): brutto z opisów i obrotu
+    for (const [mk, m] of brutto) { const r = ratio(mk); for (const [id, g] of m) perClinic.set(id, (perClinic.get(id) ?? 0) + Math.round(g * (1 - r))); }
+  } else for (const [mk, md] of months) {
     if (mk < from.slice(0, 7) || mk > to.slice(0, 7)) continue;
     const r = ratio(mk), month = new Map<string, number>();
     for (const sh of md.shifts) {

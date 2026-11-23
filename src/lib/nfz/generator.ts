@@ -17,7 +17,7 @@ const addDays = (n: number) => { const d = new Date(todayPL() + 'T12:00:00Z'); d
 
 const DIR = path.join(process.cwd(), 'generator');
 const TYPES: Record<string, string> = { js: 'text/javascript; charset=utf-8', css: 'text/css; charset=utf-8', woff2: 'font/woff2', html: 'text/html; charset=utf-8' };
-export const ASSETS = /^(gabinet-saas\.js|szablony\.js|nfz-dane\.js|baza-dane\.js|karty-opisy\.js|opis-z-karty\.js|prywatne-karty\.js|nfz-pakiety\.js|nfz-pakiety-dane\.js|prywatne-katalog\.js|wspolne\.css|fonts\.css|ibm-plex-(sans|mono)-latin(-ext)?-[4-7]00-normal\.woff2)$/;
+export const ASSETS = /^(gabinet-saas\.js|szablony\.js|nfz-dane\.js|baza-dane\.js|karty-opisy\.js|opis-z-karty\.js|prywatne-karty\.js|prywatne-warianty\.js|nfz-pakiety\.js|nfz-pakiety-dane\.js|prywatne-katalog\.js|wspolne\.css|fonts\.css|ibm-plex-(sans|mono)-latin(-ext)?-[4-7]00-normal\.woff2)$/;
 
 const cache = new Map<string, { buf: Buffer; etag: string }>();
 async function file(name: string) {
@@ -50,7 +50,7 @@ export async function asset(name: string, ifNoneMatch: string | null): Promise<R
 export async function page(uid: string, name: string, mod: 'nfz' | 'nfzk' | 'prywatne' | 'kalendarz' | 'import' | 'zlecenia' = 'nfz', widok: '' | 'rozliczenia' | 'podatki' = ''): Promise<Response> {
   const data = await withUser(uid, async c => {
     const st = (await c.query('SELECT settings FROM app.user_settings')).rows[0]?.settings ?? {};
-    const clinics = (await c.query(`SELECT id, name, short, color, active FROM app.clinics WHERE deleted_at IS NULL ORDER BY active DESC, sort, created_at`)).rows;
+    const clinics = (await c.query(`SELECT id, name, short, color, active, model, pct::float8 AS pct FROM app.clinics WHERE deleted_at IS NULL ORDER BY active DESC, sort, created_at`)).rows;   // model i % – wynagrodzenie w Opisach prywatnych
     if (mod === 'kalendarz') {
       const from = new Date(Date.now() - 400 * 864e5).toISOString().slice(0, 10);       // podpowiedzi z opisów: ostatnie ~13 miesięcy
       const { docs, ver } = await loadDocs(c);

@@ -1638,7 +1638,7 @@ function openEditor(id, date, pre) {
   if (id) {
     var s = allShifts().filter(function (x) { return x.id === id; })[0]; if (!s) return;
     d = { clinicId: s.clinicId, date: s.date, start: s.start, end: s.end, status: s.status, turnover: inputNum(s.turnover), lab: inputNum(s.lab),
-      amount: inputNum(s.amount), override: inputNum(s.override), note: s.note || '', timesTouched: true };
+      amount: inputNum(s.amount), override: inputNum(s.override), note: s.note || '', timesTouched: true, obrotTyp: s.obrotTyp === 'dodatkowy' ? 'dodatkowy' : 'opisy' };
     UI.sel = s.date; UI.mk = mkOf(s.date);
   } else {
     var c = activeClinics()[0] || clinics()[0];
@@ -1654,7 +1654,7 @@ function openEditor(id, date, pre) {
 }
 function draftShift(d) {
   return { date: d.date, clinicId: d.clinicId, start: d.start, end: d.end, status: d.status, turnover: num(d.turnover), lab: num(d.lab),
-    amount: num(d.amount), override: num(d.override), note: (d.note || '').trim() };
+    amount: num(d.amount), override: num(d.override), note: (d.note || '').trim(), obrotTyp: d.obrotTyp === 'dodatkowy' ? 'dodatkowy' : 'opisy' };
 }
 function formulaText(sh, c, inc) {
   if (num(sh.override) != null) return 'Kwota wpisana ręcznie';
@@ -1706,7 +1706,11 @@ function editorHtml() {
   }).join('') + '</div>';
   var money = '';
   if (/^pct/.test(c.model)) money = '<div class="frow"><label class="f">Obrót (wykonane zabiegi)<input type="text" inputmode="decimal" id="f-turnover" value="' + esc(d.turnover) + '" placeholder="np. 5200"></label>' +
-    '<label class="f">Lab / implanty<input type="text" inputmode="decimal" id="f-lab" value="' + esc(d.lab) + '" placeholder="0"></label></div>' + hintHtml(d);
+    '<label class="f">Lab / implanty<input type="text" inputmode="decimal" id="f-lab" value="' + esc(d.lab) + '" placeholder="0"></label></div>' +
+    '<div class="f"><span class="small"><b>Obrót a opisy z tego dnia</b></span><div class="seg" role="group" aria-label="Obrót a opisy" data-testid="obrot-typ">' +
+    '<button type="button" data-a="f-otyp" data-v="opisy" aria-pressed="' + (d.obrotTyp !== 'dodatkowy') + '">Obejmuje opisy z tego dnia</button>' +
+    '<button type="button" data-a="f-otyp" data-v="dodatkowy" aria-pressed="' + (d.obrotTyp === 'dodatkowy') + '">Dodatkowy (poza opisami)</button></div>' +
+    '<span class="hint">' + (d.obrotTyp === 'dodatkowy' ? 'Zarobki: opisy + ten obrót (usługi, których nie ma w opisach).' : 'Zarobki: przychód dnia = ten obrót; opisy z tego dnia nie są doliczane drugi raz.') + '</span></div>' + hintHtml(d);
   else if (c.model === 'manual') money = '<label class="f">Kwota dla Ciebie<input type="text" inputmode="decimal" id="f-amount" value="' + esc(d.amount) + '"></label>';
   else money = '<p class="small muted">' + (c.model === 'hourly' ? 'Stawka ' + zl(c.hourly) + '/h × godziny dyżuru' : 'Stawka ' + zl(c.daily) + ' za dzień') + ' – zmienisz ją w ustawieniach gabinetu.</p>';
   return '<form class="editor" id="shiftForm" autocomplete="off"><h4>' + (e.id ? 'Edytuj dyżur' : 'Nowy dyżur') + '</h4>' + cl + presetChips(c, d) +
@@ -2558,9 +2562,7 @@ function viewSettings() {
       '<div class="frow">' + fld('Nazwa', p + 'name', b + 'name', c.name, { max: 40 }) + fld('Skrót', p + 'short', b + 'short', c.short, { max: 4 }) + '</div>' +
       weekBlock(c, 's') + presetsEditor(c, i) +
       fld('Adres (trafi do kalendarza Apple/Google)', p + 'addr', b + 'address', c.address, { ph: 'ulica, miasto' }) +
-      sel('Rozliczenie', p + 'model', b + 'model', c.model, Object.keys(MODELS).map(function (k) { return [k, MODELS[k]]; })) +
-      '<div class="frow">' + modelFields + fld('Minimum za dzień (zł)', p + 'min', b + 'minDaily', c.minDaily, { num: 1, hint: '0 = brak' }) + '</div>' +
-      '<div class="frow">' + fld('Spodziewany przychód z dyżuru', p + 'exp', b + 'expected', c.expected, { num: 1, hint: 'do prognozy, zanim powstanie historia' }) + fld('Termin płatności (dni)', p + 'pay', b + 'payDays', c.payDays, { num: 1 }) + '</div>' +
+      '<p class="small muted" data-testid="rozl-w-gabinetach">Rozliczenie gabinetu (model, Twój %, stawki, minimum za dzień) ustawiasz w <a href="/gabinety">Gabinety</a>, a zarobki i rozliczenia widzisz w <a href="/zarobki">Zarobki</a>.</p>' +
       '<div class="row" style="justify-content:space-between"><label class="chk"><input type="checkbox" id="' + p + 'act" data-bind="' + b + 'active"' + (c.active !== false ? ' checked' : '') + '> Aktywny gabinet</label>' + del + '</div></div>';
   }).join('');
   var zus = s.zus.map(function (z, i) {
@@ -2797,6 +2799,7 @@ var ACT = {
   'edit-cancel': function () { UI.edit = null; UI.confirm = null; render(); },
   'f-clinic': function (el) { var d = UI.edit.draft, c = clinic(el.dataset.v); d.clinicId = c.id; if (!d.timesTouched) { d.start = c.defStart; d.end = c.defEnd; } render(); },
   'f-status': function (el) { UI.edit.draft.status = el.dataset.v; render(); },
+  'f-otyp': function (el) { UI.edit.draft.obrotTyp = el.dataset.v === 'dodatkowy' ? 'dodatkowy' : 'opisy'; render(); },
   'f-hint': function (el) {
     var d = UI.edit.draft, h = daySums(d.date, d.clinicId); if (!h) return; var v = el.dataset.v;
     var t = (v !== 'pr' && h.nfz ? h.nfz.val : 0) + (v !== 'nfz' && h.pr ? h.pr.val : 0);

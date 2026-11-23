@@ -92,10 +92,31 @@ export default async function Zarobki({ searchParams }: { searchParams: Promise<
         <div><span className="muted">Razem z wizyt</span><b data-testid="razem">{fmtC(T.sum)}</b><span className="hint">{T.nv + T.pv} wizyt</span></div>
         <div><span className="muted">Razem punktów</span><b data-testid="punkty">{fmtP(r.nfz.pts)} pkt</b><span className="hint">punkty NFZ z opisów</span></div>
         <div><span className="muted">Zarobek lekarza (%){nt}</span><b data-testid="zarobek">{r.kind ? '—' : fmtC(drT)}</b>
-          <span className="hint">{r.kind ? 'niedostępny przy filtrze rodzaju' : 'wg zasad rozliczenia gabinetów'}</span></div>
+          <span className="hint">{r.kind ? 'niedostępny przy filtrze rodzaju' : 'z opisów NFZ, prywatnych i obrotu z Kalendarza – bez podwójnego liczenia'}</span></div>
         <div><span className="muted">Poprzedni okres ({r.prev.label})</span><b data-testid="poprz">{fmtC(r.prev.sum)}</b>
           <span className="hint" data-testid="zmiana">{r.prev.sum ? `${T.sum >= r.prev.sum ? '+' : '−'}${fmtC(Math.abs(T.sum - r.prev.sum))} (${T.sum >= r.prev.sum ? '+' : '−'}${Math.abs(Math.round((T.sum - r.prev.sum) / r.prev.sum * 1000) / 10).toLocaleString('pl-PL')}%)` : 'brak zarobków w poprzednim okresie'} · {dd(r.prev.from)} – {dd(r.prev.to)}</span></div>
       </section>
+
+      {r.zr && <section className="card" aria-labelledby="zr" data-testid="zrodla">
+        <h2 id="zr" style={{ marginTop: 0 }}>Przychód i wynagrodzenie – wszystkie źródła</h2>
+        <div className="tiles">
+          <div><span className="muted">Przychód razem</span><b data-testid="zr-przychod">{fmtC(r.zr.przychod)}</b><span className="hint">każda kwota policzona raz</span></div>
+          <div><span className="muted">Opisy NFZ</span><b data-testid="zr-nfz">{fmtC(r.zr.nfz)}</b><span className="hint">punkty × stawka</span></div>
+          <div><span className="muted">Opisy prywatne</span><b data-testid="zr-pryw">{fmtC(r.zr.pryw)}</b><span className="hint">ceny procedur</span></div>
+          <div><span className="muted">Obrót z Kalendarza</span><b data-testid="zr-reczny">{fmtC(r.zr.reczny)}</b><span className="hint">wpisany przy dyżurze</span></div>
+          <div><span className="muted">Wynagrodzenie lekarza{nt}</span><b data-testid="zr-pay">{fmtC(N ? drT : r.zr.pay)}</b><span className="hint">NFZ: udział wg Ustawień · prywatne: % z Cennika / Gabinetów · obrót: zasady gabinetu</span></div>
+        </div>
+        {r.zr.bezPct > 0 && <p className="msg" role="status" data-testid="zr-bezpct">{r.zr.bezPct} {r.zr.bezPct === 1 ? 'pozycja prywatna zapisana' : 'pozycji prywatnych zapisanych'} bez % wynagrodzenia (przed poprawką z 23.11.2026) – liczone jako 0 zł. Otwórz wizytę w Opisach prywatnych i zapisz ponownie (weźmie % z Cennika albo z Gabinetów).</p>}
+        {r.zr.dni.length > 0 && <details open={r.zr.dni.length <= 31}><summary style={{ cursor: 'pointer', fontWeight: 600 }}>Dzień po dniu ({r.zr.dni.length})</summary>
+          <div style={{ overflowX: 'auto' }}><table className="num" data-testid="zr-dni"><thead><tr><th>Dzień</th><th>Gabinet</th><th>Opisy NFZ</th><th>Opisy prywatne</th><th>Obrót z Kalendarza</th><th>Przychód dnia</th><th>Wynagrodzenie</th></tr></thead><tbody>
+            {r.zr.dni.map(d => { const k = clinics.find(x => x.id === d.gab); const wObr = d.obrot !== null && d.obrotTyp === 'opisy';
+              return <tr key={d.date + d.gab} data-dzien={d.date} data-gab={d.gab}><td>{dd(d.date)}</td><td>{k ? k.name : d.gab ? 'Gabinet usunięty' : 'Bez gabinetu'}</td>
+                <td>{d.nfzVal ? <span className={wObr ? 'muted' : ''}>{fmtC(d.nfzVal)}</span> : '—'}</td><td>{d.prVal ? <span className={wObr ? 'muted' : ''}>{fmtC(d.prVal)}</span> : '—'}</td>
+                <td>{d.obrot === null ? '—' : <>{fmtC(d.obrot)}<br /><span className="hint">{wObr ? 'obejmuje opisy z tego dnia' : 'dodatkowy (poza opisami)'}</span></>}</td>
+                <td><b>{fmtC(d.przychod)}</b></td><td><b>{fmtC(d.pay)}</b></td></tr>; })}
+          </tbody></table></div>
+          <p className="hint">Gdy obrót z Kalendarza <b>obejmuje opisy</b> z tego dnia (domyślnie), przychód dnia to obrót, a kwoty z opisów (szare) są jego rozbiciem – nie dolicza się ich drugi raz. Gdy obrót jest <b>dodatkowy</b>, dolicza się go do opisów. Ustawiasz to przy dyżurze w Kalendarzu.</p></details>}
+      </section>}
 
       <section className="card" aria-labelledby="gab">
         <h2 id="gab" style={{ marginTop: 0 }}>Wszystkie gabinety</h2>

@@ -20,7 +20,7 @@ with sync_playwright() as p:
     pg.goto(URL + '/opisy-prywatne'); ready(pg)
 
     n = pg.evaluate("({all:KAT.proc.length,karty:KAT.proc.filter(p=>p.karta).length,wlasne:KAT.proc.filter(p=>!p.karta).length,uniq:new Set(KAT.proc.map(p=>p.id)).size})")
-    chk('Katalog: 19 własnych procedur + 144 karty zweryfikowane, bez duplikatów', n == {'all': 163, 'karty': 144, 'wlasne': 19, 'uniq': 163}, n)
+    chk('Katalog: 19 własnych procedur + 4 warianty zachowawcze + 144 karty zweryfikowane, bez duplikatów', n == {'all': 167, 'karty': 144, 'wlasne': 23, 'uniq': 167}, n)
     chk('Własne procedury bez zmian (np. „Opracowanie ubytku + odbudowa kompozytowa”)', pg.evaluate("PROC.get('zach-kompozyt').name") == 'Opracowanie ubytku + odbudowa kompozytowa')
     chk('Nowe kategorie: Protetyka i Znieczulenia', pg.evaluate("KAT.kat.map(k=>k.name).includes('Protetyka')&&KAT.kat.map(k=>k.name).includes('Znieczulenia')"))
     chk('Karty NFZ i prywatne – obie grupy dostępne (decyzja: wszystkie 144 w prywatnych)', pg.evaluate("KAT.proc.filter(p=>p.karta&&/gwarantowane NFZ/.test(p.desc)).length") == 73)
