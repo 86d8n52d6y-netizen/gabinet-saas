@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { logout } from '@/lib/auth/actions';
 
 const NAV: [string, string][] = [['/kalendarz', 'Kalendarz'], ['/opisy-nfz', 'Opisy NFZ'], ['/nfz', 'NFZ'], ['/opisy-prywatne', 'Opisy prywatne'], ['/zlecenia', 'Zlecenia'], ['/zarobki', 'Zarobki'],
-  ['/katalog-nfz', 'Katalog NFZ'], ['/gabinety', 'Gabinety'], ['/ustawienia', 'Ustawienia'], ['/konto', 'Konto']];
+  ['/katalog-nfz', 'Katalog NFZ'], ['/gabinety', 'Gabinety'], ['/ustawienia', 'Ustawienia']];
 
 export default function GBar() {
   const path = usePathname() ?? '';

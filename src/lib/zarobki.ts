@@ -5,7 +5,7 @@
 //   zarobek prywatny = wynagrodzenie lekarza (z cennika), wizyta NFZ = wpis z generatora albo z punktami / czasem wizyty.
 import 'server-only';
 import type { PoolClient } from 'pg';
-import { kalPraca } from './kal';
+import { zrodla, type Dzien } from './zarobki-zrodla';
 
 export type Range = { from: string; to: string; label: string; key: string };
 const TZ = 'Europe/Warsaw';
@@ -46,6 +46,8 @@ export type Report = {
   weekdays: { dow: number; days: number; nfz: number; pryw: number }[];
   avg: { days: number; perDay: number; perVisit: number; perMonth: number | null };
   prev: Range & { sum: number; nv: number; pv: number };
+  /** centralny mechanizm (src/lib/zarobki-zrodla.ts): przychód i wynagrodzenie z opisów NFZ, prywatnych i obrotu ręcznego – bez filtra rodzaju */
+  zr: { dni: Dzien[]; przychod: number; nfz: number; pryw: number; reczny: number; pay: number; bezPct: number } | null;
 };
 
 /** Poprzedni okres do porównania: poprzedni dzień / tydzień / miesiąc / rok; własny zakres – tyle samo dni bezpośrednio wcześniej. */
@@ -93,7 +95,10 @@ export async function report(c: PoolClient, r: Range, clinic: string | null, kin
   const byId = new Map(per.map(x => [x.id ?? '', x]));
   // Zarobek lekarza i czas pracy: odbyte dyżury w Kalendarzu wg zasad rozliczenia gabinetu (decyzja Patryka 21.11.2026, opcja A).
   // Kalendarz nie dzieli dyżuru na NFZ i prywatne – przy filtrze rodzaju (NFZ / prywatne / kategoria) tych wartości nie pokazujemy.
-  const praca = kind ? new Map<string, { gr: number; h: number; n: number; st: number }>() : await kalPraca(c, r.from, r.to);
+  // Wynagrodzenie lekarza i czas pracy – jeden centralny mechanizm (opisy NFZ + opisy prywatne + obrót ręczny z Kalendarza, bez podwójnego
+  // naliczania – src/lib/zarobki-zrodla.ts; prompt Patryka 23.11.2026). Przy filtrze rodzaju (NFZ / prywatne / kategoria) – nie pokazujemy.
+  const Z = kind ? null : await zrodla(c, r.from, r.to);
+  const praca = Z ? Z.perGab : new Map<string, { gr: number; h: number; n: number; st: number }>();
   const kal = new Map([...praca].filter(([id]) => !clinic || id === clinic));
   const known = new Set(clinics.map(k => k.id as string));
   const ids = [...clinics.filter(k => (!clinic || k.id === clinic) && (k.active || byId.has(k.id) || kal.has(k.id))).map(k => k.id as string),
@@ -164,6 +169,9 @@ export async function report(c: PoolClient, r: Range, clinic: string | null, kin
     basis, rows, total, stmt: [...kal.values()].reduce((a, x) => a + x.st, 0),
     nfz: { pc: Number(det.pc), sh: Number(det.sh), rv: Number(det.rv), ex: Number(det.ex), pts: Math.round(Number(det.pts) * 100) / 100, minutes },
     pryw: { val: Number(det.val), cost: Number(det.cost), pay: Number(det.pay) }, series, seriesBy, topNfz, topPryw,
+    zr: Z ? (() => { const dni = Z.dni.filter(d => !clinic || d.gab === clinic), g = [...Z.perGab].filter(([id]) => !clinic || id === clinic).map(([, v]) => v);
+      return { dni, przychod: g.reduce((a, x) => a + x.przychod, 0), nfz: g.reduce((a, x) => a + x.nfz, 0), pryw: g.reduce((a, x) => a + x.pryw, 0),
+        reczny: g.reduce((a, x) => a + x.reczny, 0), pay: g.reduce((a, x) => a + x.gr, 0), bezPct: dni.reduce((a, d) => a + d.prBezPct, 0) }; })() : null,
   };
 }
 

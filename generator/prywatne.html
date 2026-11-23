@@ -137,6 +137,7 @@ textarea.pw-txted{min-height:260px;font-size:14.5px}
 <div id="toast" class="pw-toast" role="status" aria-live="polite"></div>
 <!--GABINET_DANE--><script src="/opisy-nfz/zasoby/gabinet-saas.js"></script>
 <script src="/opisy-nfz/zasoby/prywatne-katalog.js"></script>
+<script src="/opisy-nfz/zasoby/prywatne-warianty.js"></script>
 <script src="/opisy-nfz/zasoby/karty-opisy.js"></script>
 <script src="/opisy-nfz/zasoby/opis-z-karty.js"></script>
 <script src="/opisy-nfz/zasoby/prywatne-karty.js"></script>
@@ -292,8 +293,10 @@ function gabName(id) { if (!id) return 'bez gabinetu'; const c = S.clinics.find(
 function priceFor(pid, gab) {
   const g = S.cennik.gab[gabKey(gab)] || {}, e = (g.items || {})[pid] || {};
   const own = e.m === 'kw' ? 'kw' : (e.p != null ? 'pct' : 'def');
-  return { c: e.c != null ? e.c : null, m: own === 'kw' ? 'kw' : 'pct', p: own === 'kw' ? null : own === 'pct' ? e.p : (g.pct != null ? g.pct : null), kw: own === 'kw' ? (e.kw || 0) : null };
+  return { c: e.c != null ? e.c : null, m: own === 'kw' ? 'kw' : 'pct', p: own === 'kw' ? null : own === 'pct' ? e.p : (g.pct != null ? g.pct : clinicPct(gab)), kw: own === 'kw' ? (e.kw || 0) : null };
 }
+function clinicPct(gab) {                                         // % gabinetu z „Gabinety” (model procentowy); godzinowy / dzienny / bez gabinetu – brak %
+  const k = (S.clinics || []).find(x => x.id === gab); return k && /^pct/.test(k.model || '') && k.pct != null && !isNaN(+k.pct) ? +k.pct : null; }
 function newItem(pid) {
   const p = PROC.get(pid), vals = {};
   (p.fields || []).forEach(f => { if (f.def !== undefined) vals[f.k] = JSON.parse(JSON.stringify(f.def)); });
@@ -430,7 +433,7 @@ function sideParts() {
   const t = totals(), txt = curText(), miss = countMiss(txt), gen = V.edited ? visitText() : null;
   const sum = '<div class="pw-sum" id="sum"><div><span>Wartość zabiegów</span><b>' + zl(t.val) + '</b></div><div class="pay"><span>Wynagrodzenie lekarza</span><b>' + zl(t.pay) + '</b></div></div>' +
     (t.noPrice ? '<div class="g-warn" style="margin:0 0 10px">' + t.noPrice + ' ' + plural(t.noPrice, 'procedura nie ma', 'procedury nie mają', 'procedur nie ma') + ' ceny w cenniku tego gabinetu – wpisz cenę przy procedurze albo w zakładce Cennik.</div>' : '') +
-    (t.noPay ? '<div class="g-warn" style="margin:0 0 10px">Brak % wynagrodzenia dla ' + t.noPay + ' ' + plural(t.noPay, 'procedury', 'procedur', 'procedur') + ' – ustaw domyślny % gabinetu w zakładce Cennik.</div>' : '');
+    (t.noPay ? '<div class="g-warn" style="margin:0 0 10px">Brak % wynagrodzenia dla ' + t.noPay + ' ' + plural(t.noPay, 'procedury', 'procedur', 'procedur') + ' – ustaw % w zakładce Cennik albo model procentowy gabinetu w „Gabinety” (gabinet godzinowy / dzienny lub wizyta bez gabinetu: wynagrodzenie z dyżuru w Kalendarzu).</div>' : '');
   const head = '<h2><span>Opis wizyty</span>' + (V.items.length ? '<span class="pw-badge' + (miss ? '' : ' ok') + '" id="miss">' + (miss ? miss + ' do uzupełnienia' : 'kompletny') + '</span>' : '') + '</h2>';
   let body;
   if (!V.items.length) body = '<p class="pw-note">Tu pojawi się opis do skopiowania do dokumentacji.</p>';
@@ -1027,11 +1030,12 @@ document.addEventListener('click', async e => {
 function startGuard() {
   setTimeout(() => { if (S.ready) return; let last = 0; try { last = +sessionStorage.getItem('pryw:odswiez') || 0; } catch (e) { }
     if (Date.now() - last > 60000) { try { sessionStorage.setItem('pryw:odswiez', String(Date.now())); } catch (e) { } location.reload(); return; }
-    $('#main').innerHTML = '<div class="g-err" role="alert">Wczytywanie Opisów prywatnych trwa dłużej niż zwykle (przeglądarka nie udostępnia lokalnej bazy). Dane są bezpieczne. <button type="button" class="g-btn sm" onclick="location.reload()">Odśwież</button> – jeśli nie pomoże, zamknij inne karty z Gabinetem.</div>'; }, 8000);
+    $('#main').innerHTML = '<div class="g-err" role="alert">Wczytywanie Opisów prywatnych trwa dłużej niż zwykle (przeglądarka nie udostępnia lokalnej bazy). Dane są bezpieczne. <button type="button" class="g-btn sm" onclick="location.reload()">Odśwież</button> – jeśli nie pomoże, zamknij inne karty z Gabinetem.<br><span class="g-small" data-testid="start-etap">Etap: ' + esc(G.etapNow || 'start') + '</span></div>'; try { console.warn('[Gabinet] start Opisów prywatnych stanął', G.etapy); } catch (e) { } }, 15000);
 }
 async function init() {
   startGuard();
   await G.ready('prywatne');
+  G.etap('dane Opisów prywatnych');
   uiLoad();
   const [vs, cen, ust, cls, uk, zes] = await Promise.all([G.store('wizyty').all().catch(() => []), G.store('kv').get('pryw:cennik').catch(() => null), G.store('kv').get('pryw:ust').catch(() => null), G.clinics(true).catch(() => []),
     G.store('kv').get('pryw:katalog').catch(() => null), G.store('kv').get('pryw:zestawy').catch(() => null)]);
@@ -1047,7 +1051,7 @@ async function init() {
   S.clinics = cls;
   S.gabAuto = await G.dayClinic(V.date, new Date().toTimeString().slice(0, 5)).catch(() => '') || '';
   await autoPurge();
-  S.ready = true;
+  S.ready = true; G.etap('gotowe');
   if (await draftRestore().catch(() => false)) { if (V.gab === 'auto' || V.date !== G.today()) S.gabAuto = await G.dayClinic(V.date, V.date === G.today() ? new Date().toTimeString().slice(0, 5) : '').catch(() => '') || ''; }
   render(); sumsPublish();
   G.onLock(() => { clearTimeout(sT); return Promise.all([draftSaveNow(), sumsPublish()]); });   // sumy dnia od razu przy wyjściu z modułu (Kalendarz, strona główna)

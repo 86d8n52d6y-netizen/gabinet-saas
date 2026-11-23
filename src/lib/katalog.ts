@@ -20,10 +20,10 @@ export type PozNfz = { kod: string; nazwa: string; kategoria: string; gwarantowa
 export type PozPryw = { id: string; nazwa: string; kat: string; kod?: string; wlasna: boolean };
 
 const G = (...p: string[]) => path.join(process.cwd(), 'generator', ...p);
-async function wczytajJs<T>(plik: string, nazwa: string, pre: Record<string, unknown> = {}): Promise<T> {
-  const ctx: { window: Record<string, unknown> } = { window: { ...pre } };
-  vm.runInNewContext(await readFile(G(plik), 'utf8'), ctx, { timeout: 2000 });
-  return ctx.window[nazwa] as T;
+async function wczytajJs<T>(plik: string | string[], nazwa: string): Promise<T> {
+  const ctx = vm.createContext({ window: {} as Record<string, unknown> });
+  for (const f of ([] as string[]).concat(plik)) vm.runInContext(await readFile(G(f), 'utf8'), ctx, { timeout: 2000 });
+  return (ctx.window as Record<string, unknown>)[nazwa] as T;
 }
 let cache: { nfz: PozNfz[]; pryw: PozPryw[]; kat: { id: string; name: string }[]; dane: NfzDane } | null = null;
 
@@ -43,7 +43,7 @@ export async function katalog() {
   if (cache && process.env.NODE_ENV === 'production') return cache;
   const [b, dane, karty, pk] = await Promise.all([baza(), wczytajJs<NfzDane>('nfz-pakiety-dane.js', 'NFZ_PAKIETY_DANE'),
     wczytajJs<{ karty: { kod: string; nfz: boolean }[] }>('karty-opisy.js', 'KARTY_OPISY'),
-    wczytajJs<{ kat: { id: string; name: string }[]; proc: { id: string; kat: string; name: string }[] }>('prywatne-katalog.js', 'PRYW_KATALOG')]);
+    wczytajJs<{ kat: { id: string; name: string }[]; proc: { id: string; kat: string; name: string }[] }>(['prywatne-katalog.js', 'prywatne-warianty.js'], 'PRYW_KATALOG')]);
   const wycena = new Set([...Object.values(dane.pakiety).flatMap(p => p.kier), ...Object.values(dane.listy).flat(), ...Object.keys(dane.jednostkowe)]);
   const proc = new Map(b.procedury.map(p => [p.kod, p] as [string, Procedura]));
   const nazwa = (p?: Procedura) => p ? (p.nazwa_krotka ?? p.nazwa_oficjalna) : '';

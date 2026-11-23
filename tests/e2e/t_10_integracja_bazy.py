@@ -32,7 +32,7 @@ with sync_playwright() as p:
     chk('Katalog procedur: dwie rozdzielone tabele (NFZ / prywatne) w jednym widoku, liczba kart zweryfikowanych', '/katalog-procedur' in pg.url and 'Tabela 1 – Procedury NFZ' in txt and 'Tabela 2 – Procedury prywatne' in txt and f'Karty zweryfikowane przez Patryka: {n_ver}' in txt, txt[:300])
     chk(f'Katalog: {len(BAD_WID)} badań (bez odrzuconych)', pg.locator('[data-testid="kp-badania"] li').count() == len(BAD_WID), pg.locator('[data-testid="kp-badania"] li').count())
     n_nfz, n_pryw = pg.locator('[data-testid="kp-nfz-tab"] tbody tr').count(), pg.locator('[data-testid="kp-pryw-tab"] tbody tr').count()
-    chk(f'Katalog: {n_ver} kart zweryfikowanych rozdzielonych – 83 w tabeli NFZ, 61 w prywatnej + 19 własnych procedur (bez powtórzeń)', (n_nfz, n_pryw) == (83, 80), (n_nfz, n_pryw))
+    chk(f'Katalog: {n_ver} kart zweryfikowanych rozdzielonych – 83 w tabeli NFZ, 61 w prywatnej + 19 własnych procedur i 4 warianty zachowawcze (bez powtórzeń)', (n_nfz, n_pryw) == (83, 84), (n_nfz, n_pryw))
     kody_nfz = set(pg.eval_on_selector_all('[data-testid="kp-nfz-tab"] tr[data-kod]', 'e=>e.map(x=>x.dataset.kod)'))
     kody_pryw = set(x.replace('karta-', '').replace('_', '.') for x in pg.eval_on_selector_all('[data-testid="kp-pryw-tab"] tr[data-pid^="karta-"]', 'e=>e.map(x=>x.dataset.pid)'))
     chk('Tabele się nie mieszają (żadna karta w obu)', not (kody_nfz & kody_pryw), kody_nfz & kody_pryw)

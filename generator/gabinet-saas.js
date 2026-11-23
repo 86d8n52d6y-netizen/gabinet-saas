@@ -34,7 +34,7 @@
       rq.onupgradeneeded = () => { const db = rq.result; stores.forEach(s => { if (!db.objectStoreNames.contains(s)) db.createObjectStore(s); }); };
       rq.onsuccess = () => { clearTimeout(to); const db = rq.result; db.onversionchange = () => { try { db.close(); } catch (e) { } }; res(db); };
       rq.onerror = () => { clearTimeout(to); rej(rq.error || new Error('baza niedostępna')); };
-      rq.onblocked = () => { clearTimeout(to); rej(new Error('baza zablokowana przez inną kartę')); };
+      rq.onblocked = () => { G.etap && G.etap('baza zajęta przez inną kartę – czekam na zwolnienie'); };   // nie przerywamy: druga karta zamyka połączenie (onversionchange), limit czasu zostaje
     });
   }
   // Limit czasu operacji na bazie przeglądarki (Safari potrafi zawiesić transakcję po przejściu między stronami):
@@ -59,11 +59,13 @@
   /* ---------- klucz urządzenia (niewyciągalny) i szyfrowanie ---------- */
   async function deviceKey() {
     const db = await idbOpen('gabinet-saas-urzadzenie', ['klucze']);
-    let k = await run(db, ['klucze'], 'readonly', t => t.objectStore('klucze').get(C.uid));
-    if (k) return k;
-    const nk = await crypto.subtle.generateKey({ name: 'AES-GCM', length: 256 }, false, ['encrypt', 'decrypt']);
-    try { await run(db, ['klucze'], 'readwrite', t => { t.objectStore('klucze').add(nk, C.uid); }); return nk; }
-    catch (e) { return run(db, ['klucze'], 'readonly', t => t.objectStore('klucze').get(C.uid)); }   // inna karta była szybsza – jej klucz
+    try {                                                                                 // połączenie zamykane po odczycie – nie zostaje w pamięci „wstecz” Safari (23.11.2026)
+      const k = await run(db, ['klucze'], 'readonly', t => t.objectStore('klucze').get(C.uid));
+      if (k) return k;
+      const nk = await crypto.subtle.generateKey({ name: 'AES-GCM', length: 256 }, false, ['encrypt', 'decrypt']);
+      try { await run(db, ['klucze'], 'readwrite', t => { t.objectStore('klucze').add(nk, C.uid); }); return nk; }
+      catch (e) { return run(db, ['klucze'], 'readonly', t => t.objectStore('klucze').get(C.uid)); }   // inna karta była szybsza – jej klucz
+    } finally { try { db.close(); } catch (e) { } }
   }
   async function enc(obj, aad) {
     const iv = rnd(12);
@@ -81,18 +83,28 @@
   G.hint = () => C.uid;
   G.goLogin = () => location.replace('/logowanie');
   const lockHooks = [];
+  // Diagnostyka startu (zgłoszenie Patryka 23.11.2026 – „czasem nie mogę wejść do Opisów prywatnych”): ostatni etap i czasy – w komunikacie
+  // modułu i w konsoli; bez danych pacjentów.
+  const T0 = Date.now(); G.etapy = [];
+  G.etap = n => { G.etapNow = n; G.etapy.push([n, Date.now() - T0]); try { console.info('[Gabinet] start: ' + n + ' (' + (Date.now() - T0) + ' ms)'); } catch (e) { } };
   G.onLock = fn => lockHooks.push(fn);
   addEventListener('pagehide', () => lockHooks.forEach(f => { try { f(); } catch (e) { } }));
   G.ready = function (mod) {
     if (G._ready) return G._ready;
     G.mod = mod;
     G._ready = (async () => {
-      G.key = await deviceKey();
+      G.etap('klucz urządzenia');
+      try { G.key = await deviceKey(); }
+      catch (e) { G.etap('klucz urządzenia – ponowna próba'); G.key = await deviceKey(); }   // zawieszone otwarcie bazy (Safari): jedno ponowienie przed przeładowaniem strony
+      G.etap('lokalna baza danych');
+      try { await userDb(); } catch (e) { udb = null; G.etap('lokalna baza danych – ponowna próba'); await userDb(); }
+      G.etap('dane konta');
       if (C.seg && typeof C.seg === 'object') await kvPutLocal('nfz:seg', C.seg);          // własne wersje tekstów – z konta
       if (MOD === 'kalendarz') await kalSeed();
       if (MOD === 'zlecenia') await zlSeed();
       await blobSeed();
       try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => { }); } catch (e) { }
+      G.etap('moduł');
       return G.user;
     })();
     return G._ready;
@@ -100,7 +112,7 @@
 
   /* ---------- pasek aplikacji ---------- */
   const LOGO = '<svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path d="M16 4c-3 0-4.4 1.6-7 1.6C5.8 5.6 4 8 4 11.6c0 5.6 2.3 15.4 5.6 15.4 2.3 0 2.2-6.6 6.4-6.6s4.1 6.6 6.4 6.6c3.3 0 5.6-9.8 5.6-15.4C28 8 26.2 5.6 23 5.6 20.4 5.6 19 4 16 4z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>';
-  const NAV = [['/kalendarz', 'Kalendarz', 'kalendarz'], ['/opisy-nfz', 'Opisy NFZ', 'nfz'], ['/nfz', 'NFZ', 'nfzk'], ['/opisy-prywatne', 'Opisy prywatne', 'prywatne'], ['/zlecenia', 'Zlecenia', 'zlecenia'], ['/zarobki', 'Zarobki', 'zarobki'], ['/katalog-nfz', 'Katalog NFZ'], ['/gabinety', 'Gabinety'], ['/ustawienia', 'Ustawienia'], ['/konto', 'Konto']];
+  const NAV = [['/kalendarz', 'Kalendarz', 'kalendarz'], ['/opisy-nfz', 'Opisy NFZ', 'nfz'], ['/nfz', 'NFZ', 'nfzk'], ['/opisy-prywatne', 'Opisy prywatne', 'prywatne'], ['/zlecenia', 'Zlecenia', 'zlecenia'], ['/zarobki', 'Zarobki', 'zarobki'], ['/katalog-nfz', 'Katalog NFZ'], ['/gabinety', 'Gabinety'], ['/ustawienia', 'Ustawienia']];
   G.bar = function (mod) {
     let el = document.getElementById('gbar');
     if (!el) { el = document.createElement('header'); el.id = 'gbar'; document.body.insertBefore(el, document.body.firstChild); }
@@ -126,7 +138,7 @@
   /* ---------- magazyn konta na urządzeniu (kv: ustawienia tekstów, sumy; szkice) ---------- */
   const STORES = ['kv', 'szkice', 'wizyty', 'opisy', 'zlecenia', 'zdjecia'];             // zlecenia/zdjecia – Zlecenia protetyczne (wersja 3 bazy; zlecenia też w chmurze od E7, zdjęcia tylko na urządzeniu)                                   // wizyty/opisy – Opisy prywatne (wersja 2 bazy)
   let udb = null;
-  async function userDb() { if (!udb) udb = await idbOpen('gabinet-saas@' + C.uid, STORES, 3); return udb; }
+  async function userDb() { if (!udb) { const db = await idbOpen('gabinet-saas@' + C.uid, STORES, 3); db.onclose = () => { if (udb === db) udb = null; }; db.onversionchange = () => { try { db.close(); } catch (e) { } if (udb === db) udb = null; }; udb = db; } return udb; }   // zamknięta przez przeglądarkę → otworzy się ponownie
   // Safari zachowuje poprzednią stronę w pamięci „wstecz/naprzód” razem z otwartym połączeniem do bazy, co potrafi
   // zablokować bazę na następnej stronie (np. Opisy NFZ → Opisy prywatne). Przy wyjściu zamykamy połączenie (po zapisach
   // z pagehide), a stronę przywróconą z tej pamięci przeładowujemy na świeżo. Zgłoszenie Patryka 21.11.2026.
@@ -370,7 +382,7 @@
     async write(ops) { const db = await userDb(); const e2 = await Promise.all(ops.map(o => o.del ? o : enc(o.val, 'g:' + o.s + ':' + o.key).then(x => ({ s: o.s, key: o.key, val: x }))));
       await run(db, [...new Set(e2.map(o => o.s))], 'readwrite', t => { e2.forEach(o => { const st = t.objectStore(o.s); if (o.del) st.delete(o.key); else st.put(o.val, o.key); }); }); }
   };
-  G.clinics = async (all) => (C.clinics || []).filter(c => all || c.active !== false).map(c => ({ id: c.id, name: c.name, short: c.short, color: c.color, active: c.active !== false }));
+  G.clinics = async (all) => (C.clinics || []).filter(c => all || c.active !== false).map(c => ({ id: c.id, name: c.name, short: c.short, color: c.color, active: c.active !== false, model: c.model || '', pct: c.pct == null ? null : +c.pct }));   // model i % – wynagrodzenie lekarza w Opisach prywatnych (23.11.2026)
   G.dayClinic = async (date, hhmm) => {                                                 // gabinet z dyżuru w Kalendarzu (jak w obecnej aplikacji)
     const sh = ((C.shifts || {})[date] || []).map(x => ({ c: x[0], s: x[1], e: x[2] }));
     if (!sh.length) return '';
