@@ -1369,7 +1369,15 @@
       "sklad": {
         "kierunkowa": [
           "23.1702"
-        ]
+        ],
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "opcjonalne_listy": [
+          "ST2"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zrodlo_list": "listy dodatkowe przepisane z zał. 1d (plik od Patryka; skład zatwierdzony 22.11.2026)"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": "WYMAGA WERYFIKACJI"
@@ -1384,7 +1392,15 @@
       "sklad": {
         "kierunkowa": [
           "23.17"
-        ]
+        ],
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "opcjonalne_listy": [
+          "ST2"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zrodlo_list": "listy dodatkowe przepisane z zał. 1d (plik od Patryka; skład zatwierdzony 22.11.2026)"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": "WYMAGA WERYFIKACJI"
@@ -1421,7 +1437,16 @@
       "sklad": {
         "kierunkowa": [
           "23.1608"
-        ]
+        ],
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "opcjonalne_listy": [
+          "ST2",
+          "ST3"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zrodlo_list": "listy dodatkowe przepisane z zał. 1d (plik od Patryka; skład zatwierdzony 22.11.2026)"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": [
@@ -1548,7 +1573,15 @@
       "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
       "punkty": 298,
       "sklad": {
-        "uwagi": "+ badanie histopatologiczne (Y90)"
+        "uwagi": "+ badanie histopatologiczne (Y90)",
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "opcjonalne_listy": [
+          "ST2"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zrodlo_list": "listy dodatkowe przepisane z zał. 1d (plik od Patryka; skład zatwierdzony 22.11.2026)"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": [
@@ -1565,7 +1598,15 @@
       "kod_produktu_status": "CZĘŚCIOWO POTWIERDZONA (wzorzec 5.13.00.70000NN z zał. 1c – sprawdzić znak po znaku)",
       "punkty": 269,
       "sklad": {
-        "uwagi": "+ badanie histopatologiczne (Y90)"
+        "uwagi": "+ badanie histopatologiczne (Y90)",
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "opcjonalne_listy": [
+          "ST2"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zrodlo_list": "listy dodatkowe przepisane z zał. 1d (plik od Patryka; skład zatwierdzony 22.11.2026)"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": [
@@ -1637,7 +1678,15 @@
           "23.1705",
           "23.1707"
         ],
-        "tryb": "jedna z"
+        "tryb": "jedna z",
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "opcjonalne_listy": [
+          "ST2"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zrodlo_list": "listy dodatkowe przepisane z zał. 1d (plik od Patryka; skład zatwierdzony 22.11.2026)"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": [
@@ -1742,7 +1791,15 @@
           "23.1613",
           "23.1614"
         ],
-        "tryb": "jedna z"
+        "tryb": "jedna z",
+        "wymagane_listy": [
+          "ST1"
+        ],
+        "opcjonalne_listy": [
+          "ST2"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zrodlo_list": "listy dodatkowe przepisane z zał. 1d (plik od Patryka; skład zatwierdzony 22.11.2026)"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": [
@@ -1928,7 +1985,15 @@
       "sklad": {
         "kierunkowa": [
           "23.1809"
-        ]
+        ],
+        "opcjonalne_listy": [
+          "ST1"
+        ],
+        "opcjonalne_kody": [
+          "23.1815"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zrodlo_list": "listy dodatkowe przepisane z zał. 1d (plik od Patryka; skład zatwierdzony 22.11.2026)"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": "WYMAGA WERYFIKACJI"
@@ -2017,7 +2082,13 @@
           "ST30G"
         ],
         "czas_min": 40,
-        "grupa": "złogi twarde"
+        "grupa": "złogi twarde",
+        "opcjonalne_listy": [
+          "ST1",
+          "ST4"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zrodlo_list": "listy dodatkowe przepisane z zał. 1d (plik od Patryka; skład zatwierdzony 22.11.2026)"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": "WYMAGA WERYFIKACJI"
@@ -2045,7 +2116,13 @@
         ],
         "czas_min": 10,
         "grupa": "złogi twarde",
-        "wykonawca": "lekarz periodontolog"
+        "wykonawca": "lekarz periodontolog",
+        "opcjonalne_listy": [
+          "ST1",
+          "ST4"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zrodlo_list": "listy dodatkowe przepisane z zał. 1d (plik od Patryka; skład zatwierdzony 22.11.2026)"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": "WYMAGA WERYFIKACJI"
@@ -2073,7 +2150,13 @@
         ],
         "czas_min": 10,
         "grupa": "złogi twarde",
-        "wykonawca": "WYMAGA WERYFIKACJI (wg przypisu – zakresy perio/chir-perio)"
+        "wykonawca": "WYMAGA WERYFIKACJI (wg przypisu – zakresy perio/chir-perio)",
+        "opcjonalne_listy": [
+          "ST1",
+          "ST4"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zrodlo_list": "listy dodatkowe przepisane z zał. 1d (plik od Patryka; skład zatwierdzony 22.11.2026)"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": "WYMAGA WERYFIKACJI"
@@ -2133,7 +2216,12 @@
         "czas_min": 5,
         "wiek_max_wylacznie": 18,
         "grupa": "higienizacja <18",
-        "bez_wspolczynnika_08": true
+        "bez_wspolczynnika_08": true,
+        "opcjonalne_listy": [
+          "ST5"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zrodlo_list": "listy dodatkowe przepisane z zał. 1d (plik od Patryka; skład zatwierdzony 22.11.2026)"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": "WYMAGA WERYFIKACJI"
@@ -2156,7 +2244,12 @@
         "limit": "1×/rok",
         "czas_min": 30,
         "wiek_max_wylacznie": 18,
-        "grupa": "higienizacja <18"
+        "grupa": "higienizacja <18",
+        "opcjonalne_listy": [
+          "ST5"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zrodlo_list": "listy dodatkowe przepisane z zał. 1d (plik od Patryka; skład zatwierdzony 22.11.2026)"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": "WYMAGA WERYFIKACJI"
@@ -2190,7 +2283,12 @@
         "czas_min": 20,
         "wiek_max_wylacznie": 18,
         "grupa": "higienizacja <18",
-        "bez_wspolczynnika_08": true
+        "bez_wspolczynnika_08": true,
+        "opcjonalne_listy": [
+          "ST5"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zrodlo_list": "listy dodatkowe przepisane z zał. 1d (plik od Patryka; skład zatwierdzony 22.11.2026)"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": "WYMAGA WERYFIKACJI"
@@ -2205,7 +2303,13 @@
       "sklad": {
         "kierunkowa": [
           "23.1815"
-        ]
+        ],
+        "opcjonalne_listy": [
+          "ST1",
+          "ST4"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zrodlo_list": "listy dodatkowe przepisane z zał. 1d (plik od Patryka; skład zatwierdzony 22.11.2026)"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": "WYMAGA WERYFIKACJI"
@@ -2220,7 +2324,13 @@
       "sklad": {
         "kierunkowa": [
           "23.1620"
-        ]
+        ],
+        "opcjonalne_listy": [
+          "ST1",
+          "ST4"
+        ],
+        "zrodlo_skladu": "SRC-ZARZ-95-2026 – zał. 2 (nowy zał. 1d do zarządzenia 60/2023/DSOZ)",
+        "zrodlo_list": "listy dodatkowe przepisane z zał. 1d (plik od Patryka; skład zatwierdzony 22.11.2026)"
       },
       "zrodlo": "SRC-ZARZ-60-2023-TJ",
       "zakresy": "WYMAGA WERYFIKACJI"

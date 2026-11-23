@@ -17,7 +17,7 @@ const addDays = (n: number) => { const d = new Date(todayPL() + 'T12:00:00Z'); d
 
 const DIR = path.join(process.cwd(), 'generator');
 const TYPES: Record<string, string> = { js: 'text/javascript; charset=utf-8', css: 'text/css; charset=utf-8', woff2: 'font/woff2', html: 'text/html; charset=utf-8' };
-export const ASSETS = /^(gabinet-saas\.js|szablony\.js|nfz-dane\.js|baza-dane\.js|karty-opisy\.js|opis-z-karty\.js|prywatne-karty\.js|prywatne-katalog\.js|wspolne\.css|fonts\.css|ibm-plex-(sans|mono)-latin(-ext)?-[4-7]00-normal\.woff2)$/;
+export const ASSETS = /^(gabinet-saas\.js|szablony\.js|nfz-dane\.js|baza-dane\.js|karty-opisy\.js|opis-z-karty\.js|prywatne-karty\.js|nfz-pakiety\.js|nfz-pakiety-dane\.js|prywatne-katalog\.js|wspolne\.css|fonts\.css|ibm-plex-(sans|mono)-latin(-ext)?-[4-7]00-normal\.woff2)$/;
 
 const cache = new Map<string, { buf: Buffer; etag: string }>();
 async function file(name: string) {
@@ -47,7 +47,7 @@ export async function asset(name: string, ifNoneMatch: string | null): Promise<R
 }
 
 /** Strona modułu z danymi startowymi konta (bez treści opisów – tych w chmurze nie ma). */
-export async function page(uid: string, name: string, mod: 'nfz' | 'prywatne' | 'kalendarz' | 'import' | 'zlecenia' = 'nfz', widok: '' | 'rozliczenia' | 'podatki' = ''): Promise<Response> {
+export async function page(uid: string, name: string, mod: 'nfz' | 'nfzk' | 'prywatne' | 'kalendarz' | 'import' | 'zlecenia' = 'nfz', widok: '' | 'rozliczenia' | 'podatki' = ''): Promise<Response> {
   const data = await withUser(uid, async c => {
     const st = (await c.query('SELECT settings FROM app.user_settings')).rows[0]?.settings ?? {};
     const clinics = (await c.query(`SELECT id, name, short, color, active FROM app.clinics WHERE deleted_at IS NULL ORDER BY active DESC, sort, created_at`)).rows;
@@ -62,13 +62,18 @@ export async function page(uid: string, name: string, mod: 'nfz' | 'prywatne' | 
       return { uid, name, mod, clinics: full, docs, ver, blobs: await getBlobs(c, BLOB_KEYS), blobVer: await getBlobVers(c, BLOB_KEYS),
         cfg: { ...cleanNfz(st.nfz), ...cleanUi(st.nfzUi) }, seg: st.nfzSeg ?? null };
     }
-    if (mod === 'zlecenia') return { uid, name, mod, clinics, mat: cleanMat(st.mat) };   // Zlecenia protetyczne: treść tylko na urządzeniu (zasada nr 1)
+    if (mod === 'zlecenia') return { uid, name, mod, clinics, mat: cleanMat(st.mat) };
+    if (mod === 'nfzk') {                                                                // zakładka „NFZ” (E4): stawki z Ustawień, własna historia (k-…);
+      const od = addDays(-60), op = (await listVisits(c, 'opisy')).live as { date: string; gab: string; codes: string[] }[];   // z Opisów NFZ tylko data, gabinet, kody – do ostrzeżenia o duplikacie
+      return { uid, name, mod, clinics, mat: cleanMat(st.mat), cfg: cleanNfz(st.nfz), visits: await listVisits(c, 'karty'),
+        opisy: op.filter(v => v.date >= od).map(v => ({ date: v.date, gab: v.gab, codes: v.codes })) };
+    }   // Zlecenia protetyczne: treść tylko na urządzeniu (zasada nr 1)
     const shifts = await shiftsByDay(c, addDays(-400), addDays(60));
     const mat = cleanMat(st.mat);                                                       // własne materiały (pkt 1.2) – nazwy preparatów, bez danych pacjentów
     if (mod === 'prywatne') return { uid, name, mod, clinics, shifts, mat, blobs: await getBlobs(c, BLOB_KEYS), blobVer: await getBlobVers(c, BLOB_KEYS), visits: await listPryw(c) };
     return { uid, name, mod, clinics, shifts, mat, cfg: { ...cleanNfz(st.nfz), ...cleanUi(st.nfzUi) }, seg: st.nfzSeg ?? null, visits: await listVisits(c) };
   });
   const json = JSON.stringify(data).replace(/</g, '\\u003c').replace(/\u2028/g, '\\u2028').replace(/\u2029/g, '\\u2029');
-  const html = (await file(mod === 'prywatne' ? 'prywatne.html' : mod === 'kalendarz' ? 'kalendarz.html' : mod === 'import' ? 'import.html' : mod === 'zlecenia' ? 'zlecenia.html' : 'nfz.html')).buf.toString('utf8').replace('<!--GABINET_DANE-->', `<script>window.__GABINET=${json};</script>`);
+  const html = (await file(mod === 'prywatne' ? 'prywatne.html' : mod === 'kalendarz' ? 'kalendarz.html' : mod === 'import' ? 'import.html' : mod === 'zlecenia' ? 'zlecenia.html' : mod === 'nfzk' ? 'nfz-karty.html' : 'nfz.html')).buf.toString('utf8').replace('<!--GABINET_DANE-->', `<script>window.__GABINET=${json};</script>`);
   return new Response(html, { headers: { 'Content-Type': TYPES.html, 'Cache-Control': 'no-store', 'Referrer-Policy': 'same-origin' } });
 }

@@ -1,0 +1,300 @@
+<!doctype html>
+<!-- Gabinet SaaS: zakładka „NFZ” (etap E4, decyzje Patryka 22.11.2026). Moduł napisany dla wersji SaaS – NIE korzysta z generatora
+     ani szablonów Opisów NFZ (generator/nfz.html zostaje bez zmian). Opis: wyłącznie z kart procedur zweryfikowanych (karty-opisy.js,
+     składanie jak w Opisach prywatnych – prywatne-karty.js); wycena: silnik pakietów nfz-pakiety.js (zał. 1b/1c/1d, 95/2026/DSOZ).
+     Treść opisu i pola formularza – tylko na urządzeniu. -->
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NFZ – Gabinet</title>
+<link rel="stylesheet" href="/opisy-nfz/zasoby/fonts.css">
+<link rel="stylesheet" href="/opisy-nfz/zasoby/wspolne.css">
+<style>
+  .nk-wrap{max-width:1240px;margin:0 auto;padding:20px 16px 80px}
+  .nk-grid{display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:16px;align-items:start}
+  @media (max-width:980px){.nk-grid{grid-template-columns:1fr}}
+  .nk-card{border:1px solid var(--g-line);border-radius:14px;background:var(--g-surface);padding:14px 16px;margin:0 0 12px}
+  .nk-card h2{margin:0 0 10px;font-size:17px}
+  .nk-row{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:end}
+  .nk-l{display:grid;gap:4px;font-size:13.5px;font-weight:600;min-width:150px}
+  .nk-in,select.nk-in,textarea.nk-in{font:inherit;font-size:15px;padding:8px 10px;border:1px solid var(--g-line);border-radius:9px;background:var(--g-surface);color:var(--g-ink);width:100%}
+  textarea.nk-in{min-height:56px;resize:vertical}
+  .nk-fields{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px 16px;align-items:start}
+  .nk-f{display:grid;gap:5px;min-width:0}.nk-f.w{grid-column:1/-1}
+  .nk-f>label,.nk-f>.lb{font-size:13.5px;font-weight:600}.req{color:var(--g-danger,#b3263b)}
+  .nk-q{display:flex;flex-wrap:wrap;gap:6px}
+  .nk-q button,.nk-chip{font:inherit;font-size:13px;border:1px solid var(--g-line);background:var(--g-surface);color:var(--g-ink);border-radius:999px;padding:5px 11px;cursor:pointer;min-height:32px;text-align:left}
+  .nk-q button[aria-pressed="true"],.nk-chip[aria-pressed="true"]{background:var(--g-accent);border-color:var(--g-accent);color:var(--g-accent-ink)}
+  .nk-ms{display:flex;flex-wrap:wrap;gap:6px}.nk-ms label{display:flex;gap:4px;align-items:center;border:1px solid var(--g-line);border-radius:999px;padding:4px 10px;font-size:13.5px}
+  .nk-plist{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px;margin-top:8px}
+  .nk-padd{font:inherit;text-align:left;border:1px solid var(--g-line);background:var(--g-surface);color:var(--g-ink);border-radius:10px;padding:8px 10px;cursor:pointer}
+  .nk-padd small{display:block;color:var(--g-muted);font-size:12px}
+  .nk-ih{display:flex;gap:8px;align-items:center;margin-bottom:10px}.nk-ih b{font-size:15.5px}.nk-ih .sp{flex:1}
+  .nk-kh{font-weight:700;margin:12px 0 2px;font-size:13.5px;color:var(--g-muted)}
+  table.nk-t{border-collapse:collapse;width:100%;font-size:13.5px}table.nk-t th,table.nk-t td{border-bottom:1px solid var(--g-line);padding:5px 6px;text-align:left;vertical-align:top}
+  table.nk-t .r{text-align:right;white-space:nowrap}table.nk-t tfoot td{font-weight:700}
+  .nk-msg{border-radius:10px;padding:8px 12px;margin:0 0 8px;font-size:13.5px}
+  .nk-msg.err{background:#fde8eb;color:#8a1c2c}.nk-msg.warn{background:var(--g-warn-soft);color:var(--g-warn)}.nk-msg.info{background:var(--g-accent-soft)}
+  .nk-out{white-space:pre-wrap;font-size:14.5px;line-height:1.5;border:1px solid var(--g-line);border-radius:10px;padding:10px 12px;background:var(--g-bg,transparent)}
+  .nk-out mark{background:#ffe7a3}
+  .nk-sum{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}.nk-sum div{border-radius:10px;padding:8px 10px;background:var(--g-accent-soft)}
+  .nk-sum b{display:block;font-size:19px}.nk-src{font-size:12px;color:var(--g-muted);margin-top:8px}
+  .nk-btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+</style>
+</head>
+<body class="gp">
+<!--GABINET_DANE--><script src="/opisy-nfz/zasoby/gabinet-saas.js"></script>
+<script src="/opisy-nfz/zasoby/karty-opisy.js"></script>
+<script>window.PRYW_KATALOG = { kat: [{ id: 'zach', name: 'Leczenie zachowawcze' }, { id: 'endo', name: 'Endodoncja' }, { id: 'chir', name: 'Chirurgia' }, { id: 'hig', name: 'Profilaktyka i przyzębie' }, { id: 'diag', name: 'Badania i diagnostyka' }], proc: [] };</script>
+<script src="/opisy-nfz/zasoby/prywatne-karty.js"></script>
+<script src="/opisy-nfz/zasoby/nfz-pakiety-dane.js"></script>
+<script src="/opisy-nfz/zasoby/nfz-pakiety.js"></script>
+<div class="nk-wrap"><main id="main" aria-live="polite"><p class="g-muted">Wczytuję…</p></main></div>
+<datalist id="nk-dl"></datalist>
+<script>
+'use strict';
+G.bar('nfzk');
+const $ = s => document.querySelector(s), esc = G.esc, C = window.__GABINET || {};
+const D = window.NFZ_PAKIETY_DANE, E = window.NfzPakiety, KP = window.KartyPryw;
+const CFG = Object.assign({ price: 1.84, pct: 40, basis: 'full' }, C.cfg || {});
+/* ---------- katalog: karty rozliczane w NFZ – świadczenie gwarantowane (rozporządzenie) ALBO wycena w zarządzeniu (pakiet ST –
+   procedura kierunkowa / lista dodatkowa zał. 1d, świadczenie jednostkowe zał. 1b); np. podkody 23.16011–23.16022 (ST30–ST30G) ---------- */
+const WYCENA = new Set([].concat(...Object.values(D.pakiety).map(p => p.kier), ...Object.values(D.listy), Object.keys(D.jednostkowe)));
+const NFZ_KODY = new Set((window.KARTY_OPISY.karty || []).filter(k => k.nfz || WYCENA.has(k.kod)).map(k => k.kod));
+const PROCS = window.PRYW_KATALOG.proc.filter(p => p.karta && NFZ_KODY.has(p.karta));
+const PROC = new Map(PROCS.map(p => [p.id, p]));
+const KATY = window.PRYW_KATALOG.kat.filter(k => PROCS.some(p => p.kat === k.id));
+/* pakiety do wyboru przy kartach wieloznacznych (zał. 1d) */
+const WARIANT = { '23.16012': ['ST30', 'ST30B', 'ST30C'], '23.0101': ['ST33', 'ST33A'], '23.0102': ['ST34', 'ST34A'], '23.1815': ['ST31', 'ST26'] };
+const WAR_OPIS = { ST30: 'ST30 – ogólnostomatologiczne', ST30B: 'ST30B – periodontolog, I–II stadium', ST30C: 'ST30C – III–IV stadium', ST33: 'ST33', ST33A: 'ST33A – specjalista perio / chir.-perio',
+  ST34: 'ST34', ST34A: 'ST34A – specjalista perio / chir.-perio', ST31: 'ST31 – opatrunek chirurgiczny', ST26: 'ST26 – leczenie zmian na błonie śluzowej' };
+const ZN_ICD = { 'powierzchniowe': '23.0401', 'nasiękowe': '23.0402', 'przewodowe wewnątrzustne': '23.0403' };   // lista ST1 (zał. 1d)
+const DENTO = 'Dentocaine (artykaina 4% z adrenaliną 1:100 000)', ZN_DOSE = [['0,85', '½ amp. (0,85 ml)'], ['1,7', '1 amp. (1,7 ml)'], ['3,4', '2 amp. (3,4 ml)']];
+const QBASE = { znprep: [DENTO, 'Mark3 20% benzokaina (żel)'] };
+/* podpowiedzi „3 najczęstsze” – liczniki wartości na urządzeniu (nazwy preparatów, materiałów, kody ICD-10 – bez danych pacjenta) */
+const QK = 'gabinet:nfzk:podpowiedzi';
+const qCounts = () => { try { return JSON.parse(localStorage.getItem(QK) || '{}') || {}; } catch (e) { return {}; } };
+function qLearn() { const c = qCounts(); S.items.forEach(it => { const p = PROC.get(it.pid); (p.fields || []).forEach(f => { const v = it.vals[f.k];
+  if (f.t !== 'text' || typeof v !== 'string' || !v.trim()) return; const k = f.qloc ? it.pid + '|' + f.k : f.k; c[k] = c[k] || {}; c[k][v.trim()] = (c[k][v.trim()] || 0) + 1; }); });
+  try { localStorage.setItem(QK, JSON.stringify(c)); } catch (e) { } }
+function qTop(it, f) { const base = (QBASE[f.k] || []).concat(G.mat(f.k === 'mat' ? ['kompozyt', 'inne'] : f.k === 'podklad' ? ['podklad'] : [], []), f.sug || []);
+  const c = qCounts()[f.qloc ? it.pid + '|' + f.k : f.k] || {};
+  return [...new Set(Object.keys(c).sort((a, b) => c[b] - c[a]).concat(base))].slice(0, 3); }
+
+const S = { date: G.today(), gab: '', wiek: '', ciaza: false, items: [], q: '', kat: '', ready: false, id: null, no: 0, created: null, savedSig: null };
+const H = new Map();                                                                   // historia: id → wpis (lokalny z treścią albo z chmury bez treści)
+const uid = () => Math.random().toString(36).slice(2, 10);
+const FDI = /^([1-4][1-8]|[5-8][1-5])$/;
+const teethOf = s => String(s || '').split(/[^0-9]+/).filter(Boolean);
+const isEmpty = v => v == null || v === '' || v === false || (Array.isArray(v) && !v.length);
+function visible(f, vals) { const s = f.show; if (!s) return true; const v = vals[s.k]; if (s.eq) return v === s.eq; if (isEmpty(v)) return false; return !(s.not && s.not.includes(v)); }
+function fmtVal(f, v) {
+  if (v == null) return '';
+  if (f.t === 'multi') return Array.isArray(v) ? v.filter(Boolean).sort((a, b) => (f.opts.indexOf(a) - f.opts.indexOf(b))).join(f.join != null ? f.join : ', ') : '';
+  if (f.t === 'bool') return v ? 'tak' : '';
+  if (f.t === 'tooth' || f.t === 'teeth') { const s = String(v).trim(); return /^[\d\s,;]+$/.test(s) ? teethOf(s).join(', ') : s; }
+  if (f.t === 'date') return /^\d{4}-\d{2}-\d{2}$/.test(v) ? v.split('-').reverse().join('.') : String(v);
+  return String(v).trim();
+}
+const fieldsOf = p => new Map((p.fields || []).map(f => [f.k, f]));
+function itemText(it) {
+  const p = PROC.get(it.pid), fm = fieldsOf(p), vals = it.vals;
+  const t = KP.tekst(p, k => { const f = fm.get(k); return f && visible(f, vals) ? fmtVal(f, vals[k]) : ''; }, k => (fm.get(k) || {}).l || k,
+    k => { const f = fm.get(k); return !!(f && f.req && visible(f, vals)); }, k => vals[k]);
+  return t.split('\n').map(l => l.replace(/\s+/g, ' ').replace(/ ([.,;:])/g, '$1').trim()).filter(Boolean).join('\n');
+}
+function ilosc(it) {                                                                   // 1 pakiet / świadczenie = 1 ząb (lub ćwiartka / ½ łuku – pole „Ilość”)
+  const p = PROC.get(it.pid), f = (p.fields || []).find(x => x.t === 'tooth' || x.t === 'teeth');
+  if (f) { const n = teethOf(it.vals[f.k]).filter(t => FDI.test(t)).length; return n || 1; }
+  return Math.max(1, parseInt(it.n, 10) || 1);
+}
+const wiek = () => { const n = parseInt(S.wiek, 10); return isNaN(n) ? null : n; };
+const grupaWieku = () => { const w = wiek(); return w === null || w >= 18 ? 'dorosły' : w < 16 ? 'poniżej 16 lat' : '16–17 lat'; };
+function wycena() {
+  return E.licz(D, S.items.map(it => ({ kod: PROC.get(it.pid).karta, n: ilosc(it), wariant: it.war || '', zn: ZN_ICD[it.vals.zn] || '' })), { wiek: wiek(), ciaza: S.ciaza });
+}
+const centsPts = (pts, price) => Math.round(Math.round((+pts || 0) * 100) * Math.round((+price || 0) * 10000) / 10000);   // jak engine.ts (serwer)
+const zl = c => G.zl(c);
+function nazwaKodu(r, W) { if (!r.pkg) return (D.jednostkowe[r.kod] || {}).nazwa || r.kod; const its = r.z.map(i => S.items[i]).filter(Boolean); return its.length ? its.map(it => PROC.get(it.pid).name).join(', ') : r.kod; }
+function visitText() {
+  if (!S.items.length) return '';
+  const W = wycena(), sum = S.items.map(it => { const p = PROC.get(it.pid), f = (p.fields || []).find(x => x.t === 'tooth' || x.t === 'teeth'); let s = p.name.charAt(0).toLowerCase() + p.name.slice(1);
+    if (f && it.vals[f.k]) s += ' – ' + (teethOf(it.vals[f.k]).length > 1 ? 'zęby ' : 'ząb ') + teethOf(it.vals[f.k]).join(', '); return s; });
+  const parts = KP.dedupe(S.items.map(itemText).filter(Boolean));
+  const kody = W.wiersze.map(r => r.kod + (r.q > 1 ? ' ×' + r.q : '')).join('; ');
+  return ['Wykonano: ' + sum.join('; ') + '.'].concat(parts).concat(kody ? ['Świadczenia NFZ: ' + kody + '.'] : []).join('\n\n');
+}
+
+/* ---------- zapis: treść na urządzeniu (zaszyfrowana, kv „nfzk:w:…”), do chmury tylko metadane jak w Opisach NFZ ---------- */
+const KV = G.store('kv'), WK = id => 'nfzk:w:' + id, QKEY = 'nfzk:kolejka', API = '/api/nfz/wizyty';
+const newId = () => 'k-' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);   // „k-” – serwer rozdziela listy (Opisy NFZ nie widzą tych wpisów)
+function metaOf() {
+  const W = wycena(), t = visitText(), now = new Date().toISOString();
+  return { id: S.id, v: 2, no: S.no, date: S.date, created: S.created || now, at: now, src: 'gen', codes: W.wiersze.map(r => r.kod), pts: W.suma,
+    price: CFG.price, pct: CFG.pct, revH: 0, revRate: CFG.rev || 350, ex: [], min: null, miss: (t.match(/\[UZUPEŁNIJ/g) || []).length, gab: S.gab || '' };
+}
+const cloudOf = m => { const o = Object.assign({}, m); delete o.body; delete o.cloud; return o; };      // bez treści, pól, wieku
+const sig = () => JSON.stringify([S.date, S.gab, S.wiek, S.ciaza, S.items.map(it => [it.pid, it.vals, it.n, it.war])]);
+async function kolejka(op) { const q = (await KV.get(QKEY).catch(() => null)) || []; if (op) q.push(op); await KV.put(QKEY, q); return q; }
+function syncInfo(t) { const el = document.getElementById('gsync'); if (el) el.textContent = t ? '⚠ ' + t : 'Historia zsynchronizowana'; }
+async function wyslij() {
+  const q = (await KV.get(QKEY).catch(() => null)) || []; if (!q.length) { syncInfo(''); return true; }
+  try { await G._post(API, { put: q.filter(o => o.put).map(o => o.put), del: q.filter(o => o.del).map(o => o.del) }); await KV.put(QKEY, []); syncInfo(''); return true; }
+  catch (e) { syncInfo(e && e.login ? 'sesja wygasła – zaloguj się ponownie (wizyta zapisana na tym urządzeniu)' : 'brak połączenia – wizyta zapisana na tym urządzeniu, wyślę później'); return false; }
+}
+async function zapisz() {
+  if (!S.items.length) return;
+  if (!S.id) { S.id = newId(); S.created = new Date().toISOString(); S.no = Math.max(0, ...[...H.values()].map(m => m.no || 0)) + 1; }
+  const m = metaOf(); m.body = { items: S.items.map(it => ({ pid: it.pid, vals: it.vals, n: it.n, war: it.war })), wiek: S.wiek, ciaza: S.ciaza, txt: visitText() };
+  await KV.put(WK(m.id), m); H.set(m.id, m); qLearn(); S.savedSig = sig();
+  await kolejka({ put: cloudOf(m) }); await wyslij(); render();
+}
+async function usun(id) {
+  const at = new Date().toISOString(); await KV.del(WK(id)).catch(() => { }); H.delete(id);
+  await kolejka({ del: { id, at } }); await wyslij(); if (S.id === id) Object.assign(S, { id: null, items: [], savedSig: null }); render();
+}
+function otworz(id) {
+  const m = H.get(id); if (!m || !m.body) return;
+  Object.assign(S, { id: m.id, no: m.no, created: m.created, date: m.date, gab: m.gab || '', wiek: m.body.wiek || '', ciaza: !!m.body.ciaza,
+    items: m.body.items.filter(x => PROC.has(x.pid)).map(x => ({ u: uid(), pid: x.pid, vals: JSON.parse(JSON.stringify(x.vals || {})), n: x.n || 1, war: x.war || '' })) });
+  S.savedSig = sig(); render(); scrollTo(0, 0);
+}
+async function wczytaj() {                                                               // urządzenie + chmura (stan z chwili otwarcia strony)
+  const loc = (await KV.all().catch(() => [])).filter(([k]) => String(k).startsWith('nfzk:w:')).map(([, v]) => v);
+  loc.forEach(m => H.set(m.id, m));
+  const live = (C.visits && C.visits.live) || [], gone = (C.visits && C.visits.gone) || [];
+  for (const g of gone) { const L = H.get(g.id); if (L && L.at <= g.at) { H.delete(g.id); await KV.del(WK(g.id)).catch(() => { }); } }
+  for (const m of live) { const L = H.get(m.id); if (!L) H.set(m.id, Object.assign({}, m, { cloud: true })); else if (m.at > L.at && L.body) H.set(m.id, Object.assign({}, m, { body: L.body })); }
+  const q = (await KV.get(QKEY).catch(() => null)) || [], czeka = new Set(q.filter(o => o.put).map(o => o.put.id));
+  for (const L of loc) if (!live.some(m => m.id === L.id) && !gone.some(g => g.id === L.id) && !czeka.has(L.id)) await kolejka({ put: cloudOf(L) });   // zapis sprzed utraty połączenia
+  await wyslij();
+}
+function duplikat(W) {                                                                    // ta sama wizyta opisana też w Opisach NFZ? (Zarobki policzyłyby obie)
+  const kody = W.wiersze.map(r => r.kod).concat(S.items.map(it => PROC.get(it.pid).karta.replace(/^23\./, '')));
+  return (C.opisy || []).filter(v => v.date === S.date && (v.gab || '') === (S.gab || '') && (v.codes || []).some(c => kody.includes(c)));
+}
+function histHTML() {
+  const L = [...H.values()].sort((a, b) => (b.date + b.created).localeCompare(a.date + a.created)).slice(0, 40);
+  const gab = id => ((C.clinics || []).find(c => c.id === id) || {}).name || 'bez gabinetu';
+  return '<section class="nk-card" data-testid="nk-hist"><h2>Historia wizyt (zakładka NFZ)</h2>' + (L.length ? L.map(m => '<div class="nk-ih" style="border-top:1px solid var(--g-line);padding-top:8px" data-hid="' + esc(m.id) + '"><span><b>' + esc(m.date.split('-').reverse().join('.')) + '</b> · ' + esc(gab(m.gab)) + ' · ' + esc((m.codes || []).join(', ')) + ' · <b>' + E.fmt(m.pts) + ' pkt</b>' + (m.miss ? ' · <span style="color:var(--g-warn)">do uzupełnienia: ' + m.miss + '</span>' : '') + (m.body ? '' : ' · <span class="g-muted">z innego urządzenia – bez treści</span>') + '</span><span class="sp"></span>' +
+    (m.body ? '<button type="button" class="nk-chip" data-a="hopen" data-id="' + esc(m.id) + '">Otwórz</button>' : '') + '<button type="button" class="nk-chip" data-a="hdel" data-id="' + esc(m.id) + '">Usuń</button></div>').join('') : '<p class="g-muted">Brak zapisanych wizyt.</p>') +
+    '<p class="nk-src">Treść opisu – tylko na tym urządzeniu (zaszyfrowana). Na konto trafiają: data, gabinet, kody, punkty i stawki – do Zarobków.</p></section>';
+}
+
+/* ---------- widok ---------- */
+function fieldHTML(it, i, f) {
+  const id = 'f_' + it.u + '_' + f.k, v = it.vals[f.k], d = ' data-i="' + i + '" data-k="' + esc(f.k) + '"';
+  const lab = '<label for="' + id + '">' + esc(f.l) + (f.req ? ' <span class="req" title="wymagane">*</span>' : '') + '</label>';
+  let h, w = ['area', 'multi'].includes(f.t) ? ' w' : '';
+  switch (f.t) {
+    case 'area': h = lab + '<textarea class="nk-in" id="' + id + '"' + d + ' rows="2">' + esc(v || '') + '</textarea>'; break;
+    case 'num': h = lab + '<input class="nk-in" id="' + id + '"' + d + ' inputmode="decimal" autocomplete="off" value="' + esc(v || '') + '">'; break;
+    case 'date': h = lab + '<input class="nk-in" type="date" id="' + id + '"' + d + ' value="' + esc(v || '') + '">'; break;
+    case 'select': h = lab + '<select class="nk-in" id="' + id + '"' + d + '><option value="">—</option>' + (f.opts || []).map(o => '<option' + (o === v ? ' selected' : '') + '>' + esc(o) + '</option>').join('') + '</select>'; break;
+    case 'bool': return '<div class="nk-f"><label><input type="checkbox" id="' + id + '"' + d + (v ? ' checked' : '') + '> ' + esc(f.l) + '</label></div>';
+    case 'multi': { const a = Array.isArray(v) ? v : []; h = '<span class="lb">' + esc(f.l) + '</span><div class="nk-ms">' + (f.opts || []).map((o, j) => '<label><input type="checkbox"' + d + ' data-o="' + j + '"' + (a.includes(o) ? ' checked' : '') + '>' + esc(o) + '</label>').join('') + '</div>'; break; }
+    default: h = lab + '<input class="nk-in" id="' + id + '"' + d + ' autocomplete="off"' + (f.t === 'tooth' || f.t === 'teeth' ? ' inputmode="numeric" placeholder="' + (f.t === 'tooth' ? 'np. 36' : 'np. 33, 43') + '"' : '') + ' value="' + esc(v || '') + '">';
+  }
+  let q = [];
+  if (f.k === 'znprep' && it.vals.zn && !['nie stosowano', 'powierzchniowe'].includes(it.vals.zn) && v === undefined) it.vals[f.k] = DENTO;   // decyzja Patryka: „tylko Dentocaine”
+  if (f.k === 'zndawka') { if (v === undefined || v === '') it.vals[f.k] = '1,7'; q = ZN_DOSE.map(x => [x[0], x[1]]); }
+  else if (f.t === 'text') q = qTop(it, f).map(x => [x, x]);
+  if (q.length) h += '<div class="nk-q">' + q.map(([val, l]) => '<button type="button" data-a="qset"' + d + ' data-v="' + esc(val) + '" aria-pressed="' + (String(it.vals[f.k] || '') === val) + '">' + esc(l) + '</button>').join('') + '</div>';
+  return '<div class="nk-f' + w + '">' + h + '</div>';
+}
+function itemHTML(it, i) {
+  const p = PROC.get(it.pid), vis = (p.fields || []).filter(f => f.k !== 'dok_wiek' && visible(f, it.vals)), war = WARIANT[p.karta], hasT = (p.fields || []).some(f => f.t === 'tooth' || f.t === 'teeth');
+  const extra = (war ? '<div class="nk-f"><label for="w_' + it.u + '">Pakiet NFZ</label><select class="nk-in" id="w_' + it.u + '" data-war="' + i + '">' + war.map(w => '<option value="' + w + '"' + ((it.war || war[0]) === w ? ' selected' : '') + '>' + esc(WAR_OPIS[w] || w) + '</option>').join('') + '</select></div>' : '') +
+    (hasT ? '' : '<div class="nk-f"><label for="n_' + it.u + '">Ilość (ćwiartki / ½ łuku / zabiegi)</label><input class="nk-in" id="n_' + it.u + '" data-n="' + i + '" inputmode="numeric" value="' + esc(String(it.n || 1)) + '"></div>');
+  const znw = it.vals.zn && it.vals.zn !== 'nie stosowano' && !ZN_ICD[it.vals.zn] ? '<div class="nk-msg warn">Znieczulenie „' + esc(it.vals.zn) + '” nie ma kodu na liście ST1 (zał. 1d: 23.0401, 23.0402, 23.0403) – sprawdź rozliczenie pakietu.</div>' : '';
+  return '<section class="nk-card" id="it-' + it.u + '" data-testid="nk-item"><div class="nk-ih"><b>' + esc(p.name) + '</b><span class="g-muted" style="font-size:12.5px">karta ' + esc(p.karta) + '</span><span class="sp"></span><button type="button" class="nk-chip" data-a="rm" data-i="' + i + '">Usuń</button></div>' +
+    znw + '<div class="nk-fields">' + extra + vis.map(f => fieldHTML(it, i, f)).join('') + '</div></section>';
+}
+function pickHTML() {
+  const q = S.q.trim().toLowerCase(), list = PROCS.filter(p => (!S.kat || p.kat === S.kat) && (!q || (p.name + ' ' + p.desc).toLowerCase().includes(q)));
+  const show = !S.items.length || q || S.kat || S.pick;
+  return '<section class="nk-card"><h2>' + (S.items.length ? 'Dodaj kolejną procedurę' : 'Dodaj procedurę') + '</h2><input class="nk-in" type="search" id="p_q" placeholder="Szukaj: nazwa lub kod karty, np. ekstrakcja, 23.1502…" value="' + esc(S.q) + '" autocomplete="off">' +
+    '<div class="nk-q" style="margin-top:8px"><button type="button" class="nk-chip" data-kat="" aria-pressed="' + !S.kat + '">Wszystkie (' + PROCS.length + ')</button>' + KATY.map(k => '<button type="button" class="nk-chip" data-kat="' + k.id + '" aria-pressed="' + (S.kat === k.id) + '">' + esc(k.name) + '</button>').join('') + '</div>' +
+    (show ? KATY.map(k => { const ps = list.filter(p => p.kat === k.id); return ps.length ? '<div class="nk-kh">' + esc(k.name) + '</div><div class="nk-plist">' + ps.map(p => '<button type="button" class="nk-padd" data-add="' + p.id + '">' + esc(p.name) + '<small>' + esc(p.karta) + '</small></button>').join('') + '</div>' : ''; }).join('') || '<p class="g-muted">Brak karty o tej nazwie.</p>'
+      : '<div style="margin-top:8px"><button type="button" class="nk-chip" data-a="pick">Pokaż wszystkie karty NFZ (' + PROCS.length + ')</button></div>') + '</section>';
+}
+function sideHTML() {
+  if (!S.items.length) return '<section class="nk-card"><h2>Wycena i opis</h2><p class="g-muted">Dodaj procedurę z karty – punkty NFZ, pakiety i opis pojawią się tutaj.</p><p class="nk-src">' + esc(D.zrodlo) + '</p></section>';
+  const W = wycena(), pc = centsPts(W.suma, CFG.price), sh = Math.round(pc * CFG.pct / 100);
+  const dup = duplikat(W);
+  const msg = (dup.length ? '<div class="nk-msg warn" data-testid="nk-dup">Tego dnia w tym gabinecie masz już wizytę w Opisach NFZ z tym samym kodem (' + esc(dup.map(v => v.codes.join(', ')).join('; ')) + '). Jeśli to ta sama wizyta – zapisz ją tylko w jednym miejscu, bo Zarobki policzą obie.</div>' : '') + W.bledy.map(m => '<div class="nk-msg err" data-testid="nk-err">' + esc(m) + '</div>').join('') + W.ostrz.map(m => '<div class="nk-msg warn" data-testid="nk-warn">' + esc(m) + '</div>').join('') + W.info.map(m => '<div class="nk-msg info">' + esc(m) + '</div>').join('');
+  const tr = W.wiersze.map(r => '<tr><td><b>' + esc(r.kod) + '</b><br><span class="g-muted" style="font-size:12px">' + esc(nazwaKodu(r)) + '</span></td><td class="r">' + r.q + '</td><td class="r">' + E.fmt(r.base) + '</td><td>' + esc(r.kn || '—') + '</td><td>' + esc(E.opisWiersza(r)) + '</td><td class="r"><b>' + E.fmt(r.pts) + '</b></td></tr>').join('');
+  const sk = W.skladowe.length ? '<div class="nk-msg info" data-testid="nk-sklad"><b>W pakiecie (0 pkt, bez osobnego rozliczenia):</b> ' + W.skladowe.map(s => esc(s.kod + (s.zn ? ' (znieczulenie z karty)' : '') + ' → ' + s.pakiet)).join('; ') + '</div>' : '';
+  const nl = W.nieliczone.length ? '<div class="nk-msg warn" data-testid="nk-nie"><b>Niewliczone do sumy:</b> ' + W.nieliczone.map(n => esc(n.kod + ' – ' + n.powod)).join('; ') + '</div>' : '';
+  const t = visitText(), miss = (t.match(/\[UZUPEŁNIJ/g) || []).length;
+  return '<section class="nk-card"><h2>Wycena punktowa (NFZ)</h2><div class="nk-sum"><div>Punkty<b data-testid="nk-pkt">' + E.fmt(W.suma) + '</b></div><div>Wartość · lekarz ' + E.fmt(CFG.pct) + '%<b data-testid="nk-zl">' + zl(pc) + '</b><span style="font-size:12.5px">lekarz: ' + zl(sh) + '</span></div></div>' + msg +
+    '<div style="overflow-x:auto"><table class="nk-t" data-testid="nk-tab"><thead><tr><th>Kod</th><th class="r">Ilość</th><th class="r">Pkt</th><th>Wiek / ciąża</th><th>Pakiety (§ 13)</th><th class="r">Punkty</th></tr></thead><tbody>' + tr + '</tbody><tfoot><tr><td colspan="5">Suma</td><td class="r">' + E.fmt(W.suma) + '</td></tr></tfoot></table></div>' + sk + nl +
+    '<p class="nk-src">' + esc(D.zrodlo) + '. Stawka: ' + String(CFG.price).replace('.', ',') + ' zł/pkt (Ustawienia).</p></section>' +
+    '<section class="nk-card"><h2>Opis wizyty ' + (miss ? '<span class="nk-msg warn" style="font-size:12px;padding:2px 8px">do uzupełnienia: ' + miss + '</span>' : '<span class="nk-msg info" style="font-size:12px;padding:2px 8px">kompletny</span>') + '</h2>' +
+    '<div class="nk-out" id="nk-opis" data-testid="nk-opis">' + esc(t).replace(/\[UZUPEŁNIJ: [^\]]*\]/g, m => '<mark>' + m + '</mark>') + '</div>' +
+    '<div class="nk-btns"><button type="button" class="g-btn" data-a="copy" id="b_copy">Kopiuj opis</button><button type="button" class="g-btn" data-a="save" id="b_save"' + (S.savedSig === sig() ? ' disabled' : '') + '>' + (S.id ? (S.savedSig === sig() ? 'Zapisano ✓' : 'Zapisz zmiany') : 'Zapisz wizytę') + '</button><button type="button" class="g-btn ghost" data-a="new">Nowa wizyta</button></div>' +
+    '<p class="nk-src">Aplikacja przygotowuje propozycję wpisu – sprawdź ją i wklej do dokumentacji w systemie gabinetu. Opis tylko z kart procedur zweryfikowanych; Opisy NFZ działają bez zmian.</p></section>';
+}
+function render() {
+  const head = '<section class="nk-card"><div class="nk-row">' +
+    '<label class="nk-l">Data wizyty<input class="nk-in" type="date" id="v_date" value="' + esc(S.date) + '"></label>' +
+    '<label class="nk-l">Gabinet<select class="nk-in" id="v_gab"><option value="">— bez gabinetu —</option>' + (C.clinics || []).filter(c => c.active !== false).map(c => '<option value="' + esc(c.id) + '"' + (S.gab === c.id ? ' selected' : '') + '>' + esc(c.name) + '</option>').join('') + '</select></label>' +
+    '<label class="nk-l" style="min-width:110px">Wiek pacjenta (lata)<input class="nk-in" id="v_wiek" inputmode="numeric" maxlength="3" value="' + esc(S.wiek) + '"></label>' +
+    '<label style="display:flex;gap:6px;align-items:center;font-size:13.5px"><input type="checkbox" id="v_ciaza"' + (S.ciaza ? ' checked' : '') + '> ciąża / połóg (×1,2)</label></div>' +
+    '<p class="g-muted" style="font-size:12.5px;margin:8px 0 0">Wiek liczy współczynnik ×1,5 i granice wiekowe NFZ; zostaje na tym urządzeniu (nie trafia na serwer).</p></section>';
+  $('#main').innerHTML = '<h1 style="margin:0 0 12px;font-size:24px">NFZ – opis i wycena z kart procedur</h1><div class="nk-grid"><div>' + head + S.items.map(itemHTML).join('') + pickHTML() + histHTML() + '</div><div id="side">' + sideHTML() + '</div></div>';
+}
+const refreshSide = () => { const s = $('#side'); if (s) s.innerHTML = sideHTML(); };
+function rerenderItem(i) { const el = document.getElementById('it-' + S.items[i].u); if (el) el.outerHTML = itemHTML(S.items[i], i); refreshSide(); }
+function addItem(pid) { const p = PROC.get(pid), vals = {}; (p.fields || []).forEach(f => { if (f.def !== undefined) vals[f.k] = JSON.parse(JSON.stringify(f.def)); });
+  if (S.items.length) ['dok_inf', 'dok_zg'].forEach(k => { if (S.items[0].vals[k] !== undefined) vals[k] = S.items[0].vals[k]; });   // informacja i zgoda – jak przy pierwszej procedurze
+  if ((p.fields || []).some(f => f.k === 'dok_wiek')) vals.dok_wiek = grupaWieku();   // wiek tylko w nagłówku wizyty (bez dublowania w karcie)
+  S.items.push({ u: uid(), pid, vals, n: 1, war: '' }); S.q = ''; S.kat = ''; S.pick = false; render(); }
+
+document.addEventListener('input', e => {
+  const t = e.target;
+  if (t.id === 'p_q') { S.q = t.value; const pos = t.selectionStart; render(); const n = $('#p_q'); n.focus(); n.setSelectionRange(pos, pos); return; }
+  if (t.id === 'v_wiek') { S.wiek = t.value.replace(/[^0-9]/g, ''); S.items.forEach(it => { if ('dok_wiek' in it.vals) it.vals.dok_wiek = grupaWieku(); }); refreshSide(); return; }
+  if (t.dataset.n) { S.items[+t.dataset.n].n = t.value; refreshSide(); return; }
+  if (t.dataset.k && t.dataset.i && t.type !== 'checkbox' && t.tagName !== 'SELECT') { S.items[+t.dataset.i].vals[t.dataset.k] = t.value; refreshSide(); }
+});
+document.addEventListener('change', e => {
+  const t = e.target;
+  if (t.id === 'v_date') { S.date = t.value; refreshSide(); return; }
+  if (t.id === 'v_gab') { S.gab = t.value; refreshSide(); return; }
+  if (t.id === 'v_ciaza') { S.ciaza = t.checked; refreshSide(); return; }
+  if (t.id === 'v_wiek') { render(); return; }
+  if (t.dataset.war) { S.items[+t.dataset.war].war = t.value; refreshSide(); return; }
+  if (t.dataset.k && t.dataset.i) {
+    const i = +t.dataset.i, it = S.items[i], f = fieldsOf(PROC.get(it.pid)).get(t.dataset.k);
+    if (f.t === 'multi') { const o = f.opts[+t.dataset.o], a = Array.isArray(it.vals[f.k]) ? it.vals[f.k].slice() : []; const j = a.indexOf(o); if (t.checked && j < 0) a.push(o); if (!t.checked && j >= 0) a.splice(j, 1); it.vals[f.k] = a; }
+    else if (f.t === 'bool') it.vals[f.k] = t.checked;
+    else it.vals[f.k] = t.value;
+    if (t.tagName === 'SELECT' || f.t === 'tooth' || f.t === 'teeth') rerenderItem(i); else refreshSide();
+  }
+});
+document.addEventListener('click', async e => {
+  const t = e.target.closest('button'); if (!t) return;
+  if (t.dataset.add) { addItem(t.dataset.add); return; }
+  if (t.dataset.kat !== undefined) { S.kat = t.dataset.kat; render(); return; }
+  const a = t.dataset.a;
+  if (a === 'pick') { S.pick = true; render(); return; }
+  if (a === 'rm') { S.items.splice(+t.dataset.i, 1); render(); return; }
+  if (a === 'qset') { const i = +t.dataset.i; S.items[i].vals[t.dataset.k] = t.dataset.v; rerenderItem(i); return; }
+  if (a === 'new') { if (S.items.length && S.savedSig !== sig() && !t.dataset.arm) { t.dataset.arm = '1'; t.textContent = 'Niezapisane zmiany – kliknij ponownie'; return; } Object.assign(S, { items: [], wiek: '', ciaza: false, q: '', kat: '', id: null, no: 0, created: null, savedSig: null, date: G.today() }); render(); return; }
+  if (a === 'save') { t.disabled = true; await zapisz(); return; }
+  if (a === 'hopen') { if (S.items.length && S.savedSig !== sig() && S.id !== t.dataset.id && !t.dataset.arm) { t.dataset.arm = '1'; t.textContent = 'Niezapisane zmiany – kliknij ponownie'; return; } otworz(t.dataset.id); return; }
+  if (a === 'hdel') { if (!t.dataset.arm) { t.dataset.arm = '1'; t.textContent = 'Na pewno usunąć?'; return; } await usun(t.dataset.id); return; }
+  if (a === 'copy') { const txt = visitText(); try { await navigator.clipboard.writeText(txt); } catch (err) { const r = document.createRange(); r.selectNodeContents($('#nk-opis')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); document.execCommand('copy'); }
+    qLearn(); t.textContent = 'Skopiowano ✓'; setTimeout(() => { t.textContent = 'Kopiuj opis'; }, 1500); }
+});
+(async function init() {
+  try { await G.ready('nfzk'); } catch (e) { }
+  if (!D || !E || !KP) { $('#main').innerHTML = '<div class="nk-msg err">Nie wczytano danych modułu – odśwież stronę.</div>'; return; }
+  await wczytaj().catch(() => { });
+  S.ready = true; render();
+})();
+</script>
+</body>
+</html>

@@ -86,9 +86,13 @@ export async function deleteVisit(c: PoolClient, key: string, at: string): Promi
 }
 
 /** Lista z chmury (do scalenia na urządzeniu): wpisy i znaczniki usunięć. */
-export async function listVisits(c: PoolClient) {
+/** Wizyty z zakładki „NFZ” (karty procedur, etap E4) mają identyfikator z przedrostkiem „k-”: ta sama tabela i Zarobki,
+ *  ale osobne listy – Opisy NFZ dostają tylko swoje wpisy (ich historia i scalanie bez zmian), zakładka „NFZ” – tylko swoje. */
+export const KARTY_PREFIX = 'k-';
+export async function listVisits(c: PoolClient, zrodlo: 'opisy' | 'karty' = 'opisy') {
   const r = await c.query(`SELECT client_key, client_at, deleted_at, visit_date::text, clinic_id, seq_no, minutes, review_hours::float8, rates, codes, meta
-                             FROM app.saved_descriptions WHERE module = 'nfz' AND client_key IS NOT NULL ORDER BY visit_date DESC`);
+                             FROM app.saved_descriptions WHERE module = 'nfz' AND client_key IS NOT NULL AND (left(client_key, 2) = $1) = $2 ORDER BY visit_date DESC`,
+    [KARTY_PREFIX, zrodlo === 'karty']);
   const live: Record<string, unknown>[] = [], gone: { id: string; at: string }[] = [];
   for (const x of r.rows) {
     if (x.deleted_at) { gone.push({ id: x.client_key, at: new Date(x.deleted_at).toISOString() }); continue; }
