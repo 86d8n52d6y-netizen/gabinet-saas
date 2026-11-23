@@ -251,9 +251,9 @@ with sync_playwright() as p:
     hp.goto(URL + '/logowanie'); fill(hp, email='p.7@example.com', password='zielony-kubek-na-biurku'); submit(hp, 'Zaloguj')
     hp.add_init_script("""IDBDatabase.prototype.transaction = function () { const req = () => ({}); const st = { get: req, getAll: req, getAllKeys: req, put: req, delete: req, clear: req };
       return { objectStore: () => st, abort() {} }; };""")
-    hp.goto(URL + '/opisy-prywatne'); hp.wait_for_timeout(18500)
+    hp.goto(URL + '/opisy-prywatne'); hp.wait_for_timeout(33000)   # 23.11.2026: bezpiecznik 15 s (mieści ponowne otwarcie bazy) × 2 (pierwszy raz samo odświeżenie)
     main = hp.inner_text('#main')
-    chk('prywatne: zawieszona baza → po próbie odświeżenia komunikat z „Odśwież” (nie „Wczytuję…” bez końca)', 'trwa dłużej niż zwykle' in main and hp.locator('#main button', has_text='Odśwież').count() == 1, main[:200])
+    chk('prywatne: zawieszona baza → po próbie odświeżenia komunikat z „Odśwież” i etapem startu (nie „Wczytuję…” bez końca)', 'trwa dłużej niż zwykle' in main and hp.locator('#main button', has_text='Odśwież').count() == 1 and 'Etap:' in main, main[:300])
     hc.close()
 
     chk('brak błędów JavaScript', not errs, errs)
