@@ -1,12 +1,29 @@
 {
-  "extraKnownMarketplaces": {
-    "taste-skill": { "source": { "source": "github", "repo": "Leonxlnx/taste-skill" } },
-    "impeccable": { "source": { "source": "github", "repo": "pbakaus/impeccable" } },
-    "ponytail": { "source": { "source": "github", "repo": "DietrichGebert/ponytail" } }
-  },
   "enabledPlugins": {
     "taste-skill@taste-skill": true,
     "impeccable@impeccable": true,
-    "ponytail@ponytail": true
+    "ponytail@ponytail": true,
+    "lot-map@lot-map": true,
+    "mattpocock-skills@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "taste-skill": {
+      "source": {
+        "source": "github",
+        "repo": "Leonxlnx/taste-skill"
+      }
+    },
+    "impeccable": {
+      "source": {
+        "source": "github",
+        "repo": "pbakaus/impeccable"
+      }
+    },
+    "ponytail": {
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      }
+    }
   }
 }

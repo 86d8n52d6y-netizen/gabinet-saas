@@ -91,3 +91,17 @@ npm audit --omit=dev
 - **Testy w przeglądarce:** `tests/e2e/t_<etap>_<temat>.py`, sprawdzenia `chk('opis po polsku', warunek, szczegóły)`, selektory `data-testid`, świeża baza na plik (`uruchom.sh`).
 - **Zależności:** wersje przypięte w `package.json`; nowych bibliotek nie dodawaj bez potrzeby (obecnie tylko Next, React, pg, Argon2, nodemailer, qrcode).
 - **Commity:** po polsku, opis co i dlaczego, na końcu linie współautorstwa wskazane przez środowisko.
+
+## Agent skills
+
+### Issue tracker
+
+Zadania są w GitHub Issues repo `86d8n52d6y-netizen/gabinet-saas` (narzędzie `gh`). Patrz `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Domyślne pięć etykiet (`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`). Patrz `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Jeden kontekst: `GLOSSARY.md` i `docs/adr/` w katalogu głównym. Patrz `docs/agents/domain.md`.
